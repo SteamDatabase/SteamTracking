@@ -43,11 +43,9 @@
         const _ = new _._({
             props: {
               handlePaste(_, _, _) {
-                var _;
-                const _ =
-                  (_ = _.clipboardData) == null
-                    ? void 0
-                    : _.getData("text/plain").replace(/\n/g, " ");
+                const _ = _.clipboardData
+                  ?.getData("text/plain")
+                  .replace(/\n/g, " ");
                 if (_) {
                   const _ = _.state._.insertText(_);
                   _.dispatch(_);
@@ -81,26 +79,28 @@
         __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         class _ {
+          m_ProseMirrorSchema;
+          m_mapBBCodeDictionary = new Map();
+          m_PMToBBCodeConfig = {
+            mapNodes: new Map(),
+            mapMarks: new Map(),
+          };
+          get pm_schema() {
+            return this.m_ProseMirrorSchema;
+          }
+          get bbcode_dictionary() {
+            return this.m_mapBBCodeDictionary;
+          }
+          get pm_to_bbcode_config() {
+            return this.m_PMToBBCodeConfig;
+          }
+          ConvertAttrToBBCodeArgs(_, _) {
+            const _ = this.m_PMToBBCodeConfig.mapNodes.get(_.type);
+            return _ && _.AttrsToBBArgs ? _.AttrsToBBArgs(_, _).args || {} : {};
+          }
           constructor(_, _) {
-            _(this, "m_ProseMirrorSchema"),
-              _(this, "m_mapBBCodeDictionary", new Map()),
-              _(this, "m_PMToBBCodeConfig", {
-                mapNodes: new Map(),
-                mapMarks: new Map(),
-              });
             const _ = {
                 doc: {
                   content: "block+",
@@ -141,16 +141,13 @@
               marks: _,
             })),
               _.forEach((_, _) => {
-                var _;
                 const _ = this.m_ProseMirrorSchema.nodes[_],
                   _ = _.nodes[_],
                   _ = Array.isArray(_) ? _ : [_];
                 let _;
                 _.content == "list_item+"
                   ? (_ = this.m_ProseMirrorSchema.nodes.list_item)
-                  : ((_ = _.content) == null
-                      ? void 0
-                      : _.indexOf("paragraph")) != -1 &&
+                  : _.content?.indexOf("paragraph") != -1 &&
                     (_ = this.m_ProseMirrorSchema.nodes.paragraph),
                   _.forEach(
                     ({
@@ -202,19 +199,6 @@
                     AttrsToBBArgs: _,
                   });
               });
-          }
-          get pm_schema() {
-            return this.m_ProseMirrorSchema;
-          }
-          get bbcode_dictionary() {
-            return this.m_mapBBCodeDictionary;
-          }
-          get pm_to_bbcode_config() {
-            return this.m_PMToBBCodeConfig;
-          }
-          ConvertAttrToBBCodeArgs(_, _) {
-            const _ = this.m_PMToBBCodeConfig.mapNodes.get(_.type);
-            return _ && _.AttrsToBBArgs ? _.AttrsToBBArgs(_, _).args || {} : {};
           }
         }
         function _(_, _) {
@@ -280,18 +264,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = _.memo(function (_) {
           const { specs: _ } = _,
             [_, _] = _.useState([]),
@@ -358,15 +331,15 @@
           );
         }
         class _ {
+          dom;
+          contentDOM;
+          onPropsChanged;
+          node;
+          selected;
+          reactHost;
+          destroy;
           constructor(_, _, _, _, _) {
-            _(this, "dom"),
-              _(this, "contentDOM"),
-              _(this, "onPropsChanged"),
-              _(this, "node"),
-              _(this, "selected"),
-              _(this, "reactHost"),
-              _(this, "destroy"),
-              (this.node = _);
+            this.node = _;
             const _ = _.dom.ownerDocument,
               _ = _.createElement(_.type.isInline ? "span" : "div");
             this.dom = _;
@@ -591,8 +564,7 @@
           }, [_, _]);
         }
         function _() {
-          var _;
-          return (_ = _.useContext(_)) == null ? void 0 : _.view;
+          return _.useContext(_)?.view;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -801,13 +773,10 @@
               },
               bbCode: {
                 tag: "img",
-                BBArgsToAttrs: (_) => {
-                  var _;
-                  return {
-                    src: _.src,
-                    style: (_ = _.style) != null ? _ : void 0,
-                  };
-                },
+                BBArgsToAttrs: (_) => ({
+                  src: _.src,
+                  style: _.style ?? void 0,
+                }),
                 AttrsToBBArgs: (_) => ({
                   args: {
                     src: _.src,
@@ -1074,11 +1043,8 @@
                 {
                   tag: "a[href]",
                   getAttrs(_) {
-                    var _;
                     return {
-                      href: (0, _._)(
-                        (_ = _.getAttribute("href")) != null ? _ : "",
-                      ),
+                      href: (0, _._)(_.getAttribute("href") ?? ""),
                       title: _.getAttribute("title"),
                     };
                   },
@@ -1204,32 +1170,17 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_nodes = [];
+          m_schema;
+          m_bConvertNewlinesToBR;
+          m_fnProcessText;
           constructor(_, _, _) {
-            _(this, "m_nodes", []),
-              _(this, "m_schema"),
-              _(this, "m_bConvertNewlinesToBR"),
-              _(this, "m_fnProcessText");
-            var _;
             (this.m_schema = _),
-              (this.m_bConvertNewlinesToBR =
-                (_ = _ == null ? void 0 : _.bConvertNewlinesToBR) != null
-                  ? _
-                  : !1);
+              (this.m_bConvertNewlinesToBR = _?.bConvertNewlinesToBR ?? !1);
             const _ = _ && "mark" in _;
-            this.m_fnProcessText = _ || _ == null ? void 0 : _.fnProcessText;
+            this.m_fnProcessText = _ ? void 0 : _?.fnProcessText;
           }
           AppendText(_, _) {
             _.length &&
@@ -1284,25 +1235,20 @@
           );
         }
         class _ extends _._ {
+          m_schemaConfig;
+          m_mapPMBBNodes = new Map();
+          m_bUseBackslashEscapes;
           constructor(_, _) {
-            var _;
             super(_.bbcode_dictionary, (_) => {
-              const _ =
-                (_ == null ? void 0 : _.tag) && _.bbcode_dictionary.get(_.tag);
+              const _ = _?.tag && _.bbcode_dictionary.get(_.tag);
               return new _(
                 _.pm_schema,
                 _,
                 _ && "Constructor" in _ ? _.Constructor : void 0,
               );
             }),
-              _(this, "m_schemaConfig"),
-              _(this, "m_mapPMBBNodes", new Map()),
-              _(this, "m_bUseBackslashEscapes"),
               (this.m_schemaConfig = _),
-              (this.m_bUseBackslashEscapes =
-                (_ = _ == null ? void 0 : _.bUseBackslashEscapes) != null
-                  ? _
-                  : !0),
+              (this.m_bUseBackslashEscapes = _?.bUseBackslashEscapes ?? !0),
               this.m_schemaConfig.bbcode_dictionary.forEach((_) => {
                 "node" in _.Constructor &&
                   this.m_mapPMBBNodes.set(
@@ -1352,7 +1298,7 @@
                 const _ = _.child(_),
                   _ = _._.from(_),
                   _ = _.node.validContent(_);
-                !_ && (_ || (_ != null && _.validContent(_)))
+                !_ && (_ || _?.validContent(_))
                   ? (_ || (_ = !0), _.push(_))
                   : ((_ = !0), _.push(_));
               }
@@ -1490,14 +1436,10 @@
           }
         }
         function _(_, _, _) {
-          var _;
           const _ = {
             schema: _.pm_schema,
             config: _.pm_to_bbcode_config,
-            bUseBackslashEscapes:
-              (_ = _ == null ? void 0 : _.bUseBackslashEscapes) != null
-                ? _
-                : !0,
+            bUseBackslashEscapes: _?.bUseBackslashEscapes ?? !0,
           };
           return _(_, _, [], !1);
         }
@@ -1509,8 +1451,8 @@
             { tag: _, args: _ } = _(_, _);
           _ == "emoticon"
             ? (_ += ":")
-            : _ && (_ += (0, _._)(_, _, _ == null ? void 0 : _.bVerbatimArgs));
-          const _ = _ || !!(_ != null && _.bVerbatimContent);
+            : _ && (_ += (0, _._)(_, _, _?.bVerbatimArgs));
+          const _ = _ || !!_?.bVerbatimContent;
           let _ = !1;
           return (
             _.content.forEach((_) => {
@@ -1575,7 +1517,7 @@
                 _ += (0, _._)(_, _);
               }
             }
-          return [_, _ != null ? _ : _];
+          return [_, _ ?? _];
         }
         function _(_, _) {
           if (_ && _.AttrsToBBArgs) {
@@ -1589,7 +1531,7 @@
             };
           }
           return {
-            tag: _ == null ? void 0 : _.tag,
+            tag: _?.tag,
             args: {},
           };
         }
@@ -1605,36 +1547,24 @@
             };
           }
           return {
-            tag: _ == null ? void 0 : _.tag,
+            tag: _?.tag,
             args: {},
           };
         }
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         const _ = new _._("CProseMirrorState - OnChange");
         class _ {
+          m_bbcode;
+          m_currentDoc;
+          m_bHasUncomittedChanges = !1;
+          m_schemaConfig;
+          m_bbcodeParser;
+          m_bUseBackslashEscapes;
+          m_onStateChangedCallbacks = new _._();
+          m_fnCommitChanges;
+          m_view;
+          m_state;
           constructor(_, _, _, _) {
-            _(this, "m_bbcode"),
-              _(this, "m_currentDoc"),
-              _(this, "m_bHasUncomittedChanges", !1),
-              _(this, "m_schemaConfig"),
-              _(this, "m_bbcodeParser"),
-              _(this, "m_bUseBackslashEscapes"),
-              _(this, "m_onStateChangedCallbacks", new _._()),
-              _(this, "m_fnCommitChanges"),
-              _(this, "m_view"),
-              _(this, "m_state");
-            const { parser: _, bUseBackslashEscapes: _ = !0 } =
-              _ != null ? _ : {};
+            const { parser: _, bUseBackslashEscapes: _ = !0 } = _ ?? {};
             (this.m_schemaConfig = _),
               (this.m_bUseBackslashEscapes = _),
               (this.m_bbcodeParser = new _(_, {
@@ -1658,11 +1588,7 @@
             return this.m_bHasUncomittedChanges;
           }
           UpdateState(_) {
-            var _;
-            const _ = _(
-              ((_ = this.m_view) == null ? void 0 : _.state._) ||
-                this.m_state._,
-            );
+            const _ = _(this.m_view?.state._ || this.m_state._);
             !_ ||
               !_.docChanged ||
               (this.m_view
@@ -1701,21 +1627,19 @@
             });
           }
           InstallPlugin(_) {
-            var _;
             const _ = this.m_view ? this.m_view.state : this.m_state;
             return (
               _.plugins.includes(_) ||
                 ((this.m_state = _.reconfigure({
                   plugins: [..._.plugins, _],
                 })),
-                (_ = this.m_view) == null || _.updateState(this.m_state)),
+                this.m_view?.updateState(this.m_state)),
               () => {
-                var _;
                 const _ = this.m_view ? this.m_view.state : this.m_state;
                 (this.m_state = _.reconfigure({
                   plugins: _.plugins.filter((_) => _ != _),
                 })),
-                  (_ = this.m_view) == null || _.updateState(this.m_state);
+                  this.m_view?.updateState(this.m_state);
               }
             );
           }
@@ -1747,7 +1671,7 @@
           }
         }
         function _(_, _) {
-          (0, _._)(_ == null ? void 0 : _.OnStateChangedCallbacks, _);
+          (0, _._)(_?.OnStateChangedCallbacks, _);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -1791,11 +1715,9 @@
             : _.doc.rangeHasMark(_, _, _);
         }
         function _(_, _, _) {
-          var _;
           const { parent: _ } = _,
             _ = _.childAfter(_.parentOffset),
-            _ =
-              (_ = _.node) == null ? void 0 : _.marks.find((_) => _.type == _);
+            _ = _.node?.marks.find((_) => _.type == _);
           if (!_) return;
           let _ = _.index() - 1,
             _ = _.start() + _.offset;
@@ -1909,7 +1831,7 @@
               top: _,
             },
             _ = _.posAtCoords(_);
-          if (_ != null && _.pos) {
+          if (_?.pos) {
             const _ = _.state.doc.resolve(_.pos);
             _.dispatch(_.state._.setSelection(_._.near(_)));
           }
@@ -2224,7 +2146,7 @@
             children: [
               !!_ &&
                 (0, _.jsx)(_._, {
-                  onClick: _ != null ? _ : _,
+                  onClick: _ ?? _,
                   children: _,
                 }),
               !!_ &&
@@ -2398,10 +2320,7 @@
               }
             }, [_, _, _, _, _, _.marks.bgcolor, _.marks.color, _, _]);
           _.useLayoutEffect(() => {
-            var _, _, _;
-            (_ = (_ = _.current) == null ? void 0 : _.value) != null && _.length
-              ? _.current.focus()
-              : (_ = _.current) == null || _.focus();
+            _.current?.value?.length ? _.current.focus() : _.current?.focus();
           }, []);
           const _ = (0, _._)(
               _ ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
@@ -2496,7 +2415,7 @@
               },
               [_.marks.link, _],
             ),
-            _ = _ == null ? void 0 : _.view,
+            _ = _?.view,
             _ = _.useCallback(() => {
               window.setTimeout(() => _.focus(), 1), _(void 0);
             }, [_]),
@@ -2531,13 +2450,12 @@
             _ = _.useRef(null),
             [_, _] = _.useState(_),
             _ = () => {
-              var _;
               let _ = _.state._;
               const _ = {
                 href: _,
               };
               for (const _ in _) _[_] = _[_];
-              const _ = (_ = _.marks.link) == null ? void 0 : _.create(_),
+              const _ = _.marks.link?.create(_),
                 _ = _.text(_ || _, [_]);
               try {
                 (_ = _.replaceRangeWith(_, _, _)),
@@ -2551,13 +2469,11 @@
               _();
             };
           _.useLayoutEffect(() => {
-            var _, _, _, _, _;
-            (_ = (_ = _.current) == null ? void 0 : _.value) != null && _.length
-              ? (_ = (_ = _.current) == null ? void 0 : _.value) != null &&
-                _.length
+            _.current?.value?.length
+              ? _.current?.value?.length
                 ? (_.current.Focus(), _.current.element.select())
                 : _.current.Focus()
-              : (_ = _.current) == null || _.Focus();
+              : _.current?.Focus();
           }, []);
           const _ = _
               ? (0, _._)("#FormattingToolbar_EditLink")
@@ -2652,7 +2568,7 @@
                       _ = _.map(_.mapping, _.doc);
                       const _ = _.getMeta(this) || [];
                       for (const _ of _)
-                        if (_ != null && _.add) {
+                        if (_?.add) {
                           const { _: _, data: _ } = _.add,
                             _ = (_, _) => {
                               const _ = document.createElement(_);
@@ -2677,8 +2593,7 @@
                             });
                           _ = _.add(_.doc, [_]);
                         } else
-                          _ != null &&
-                            _.remove &&
+                          _?.remove &&
                             (_ = _.remove(
                               _.find(void 0, void 0, (_) => _._ == _.remove._),
                             ));
@@ -2702,7 +2617,7 @@
                 _ === void 0 &&
                   (_.selection.empty || _.deleteSelection(),
                   (_ = _.selection.from));
-                const _ = (_ == null ? void 0 : _.getMeta(_)) || [];
+                const _ = _?.getMeta(_) || [];
                 return (
                   _.setMeta(_, [
                     ..._,
@@ -2722,12 +2637,12 @@
             ),
             _ = _.useCallback(
               (_) => {
-                const _ = _.getState(_.state),
-                  _ =
-                    _ == null
-                      ? void 0
-                      : _.find(void 0, void 0, (_) => _._ == _);
-                return _ != null && _.length ? _[0].from : void 0;
+                const _ = _.getState(_.state)?.find(
+                  void 0,
+                  void 0,
+                  (_) => _._ == _,
+                );
+                return _?.length ? _[0].from : void 0;
               },
               [_, _],
             ),
@@ -2774,18 +2689,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
               children: _,
@@ -2863,7 +2767,7 @@
             _ = "file" in _ ? _.file : void 0,
             _ = _.useMemo(() => _ && URL.createObjectURL(_), [_]),
             _ = "url" in _ ? _.url : _,
-            _ = _ == null ? void 0 : _.type.startsWith("video/");
+            _ = _?.type.startsWith("video/");
           return _.createPortal(
             (0, _.jsxs)("span", {
               className: _.FileUploadPlaceholder,
@@ -2904,15 +2808,15 @@
           );
         }
         class _ {
+          m_fnProcessFileUpload;
+          m_fnFetchImageURL;
+          m_bAllowImageHotLinking;
+          m_errors = (0, _._)([]);
+          m_view;
+          m_fnCreatePlaceholder;
+          m_fnReplacePlaceholder;
           constructor(_, _, _) {
-            _(this, "m_fnProcessFileUpload"),
-              _(this, "m_fnFetchImageURL"),
-              _(this, "m_bAllowImageHotLinking"),
-              _(this, "m_errors", (0, _._)([])),
-              _(this, "m_view"),
-              _(this, "m_fnCreatePlaceholder"),
-              _(this, "m_fnReplacePlaceholder"),
-              (this.m_fnProcessFileUpload = _),
+            (this.m_fnProcessFileUpload = _),
               (this.m_fnFetchImageURL = _),
               (this.m_bAllowImageHotLinking = _);
           }
@@ -2951,15 +2855,10 @@
             this.m_errors.Set([]);
           }
           GetViewPosition(_, _) {
-            var _;
-            const _ =
-              (_ = this.m_view) == null
-                ? void 0
-                : _.posAtCoords({
-                    left: _,
-                    top: _,
-                  });
-            return _ == null ? void 0 : _.pos;
+            return this.m_view?.posAtCoords({
+              left: _,
+              top: _,
+            })?.pos;
           }
           async UploadFile(_, _) {
             (!this.m_fnCreatePlaceholder || !this.m_fnReplacePlaceholder) &&
@@ -3019,7 +2918,7 @@
               this.AddError(`Unable to data URL, unexpected format: ${_}`);
               return;
             }
-            const _ = _ == null ? void 0 : _.groups.mimetype,
+            const _ = _?.groups.mimetype,
               _ = _(_);
             if (!_) {
               this.AddError(`Unsupported MIME type for image: ${_}`);
@@ -3035,16 +2934,13 @@
             await this.ProcessFile(_, _);
           }
           async FetchURLAndProcess(_, _) {
-            var _;
             try {
               const _ = new URL(_),
                 _ = await this.m_fnFetchImageURL(_),
                 _ = new File(
                   [_],
                   decodeURIComponent(
-                    ((_ = _.pathname) == null
-                      ? void 0
-                      : _.replace(/^.*\//, "")) || "image",
+                    _.pathname?.replace(/^.*\//, "") || "image",
                   ),
                   {
                     type: _.type,
@@ -3177,14 +3073,7 @@
                     },
                     handleDOMEvents: {
                       paste(_, _) {
-                        var _, _;
-                        if (
-                          ((_ =
-                            (_ = _.clipboardData) == null ? void 0 : _.files) ==
-                          null
-                            ? void 0
-                            : _.length) > 0
-                        ) {
+                        if (_.clipboardData?.files?.length > 0) {
                           _.preventDefault();
                           for (const _ of _.clipboardData.files)
                             _.UploadFile(_);
@@ -3279,7 +3168,7 @@
                 }),
               );
           }, [_, _]),
-            _.useEffect(() => () => (_ == null ? void 0 : _.destroy()), [_]),
+            _.useEffect(() => () => _?.destroy(), [_]),
             (0, _._)(_, _);
           const { refDiv: _, onActivate: _, onGamepadDirection: _ } = _(_),
             _ = (0, _._)(_, _);
@@ -3327,15 +3216,11 @@
           const _ = _.useRef(null),
             _ = (0, _._)(),
             _ = _.useCallback(() => {
-              var _, _;
               if ((_.ShowVirtualKeyboard(), !_)) return;
               if (!_.hasFocus()) {
                 _.focus();
                 let _ = _.dom.childNodes,
-                  _ =
-                    (_ = (_ = _.current) == null ? void 0 : _.scrollTop) != null
-                      ? _
-                      : 0;
+                  _ = _.current?.scrollTop ?? 0;
                 for (let _ = 0; _ < _.length; ++_) {
                   let _ = _[_],
                     _ = _.offsetTop;
@@ -3543,7 +3428,7 @@
             );
           useCallbackList(_, _);
           const _ = React.useMemo(
-              () => SetNodeAttributeCommand(_, _ != null ? _ : {}),
+              () => SetNodeAttributeCommand(_, _ ?? {}),
               [_, _],
             ),
             _ = !!_;
@@ -3928,10 +3813,9 @@
           });
         }
         function _(_) {
-          var _;
           const { keyboardShortcut: _ } = _,
             _ = _.split("-"),
-            _ = (_ = _.pop()) != null ? _ : "";
+            _ = _.pop() ?? "";
           return (0, _.jsxs)(_.Fragment, {
             children: [
               _.map((_, _) =>
@@ -4013,18 +3897,6 @@
           FileUploadDropFilesMessage: "I2CE9X_I0GBNYbJf7VYBg",
           TooltipWithShortcut: "zT2msZmm-jBeLe4Dt7smo",
           KeyCap: "_3mZEV9CXrIn4FITvJk3Xy-",
-          BackgroundAnimation: "_32I7Uh1ZWySd7VGW50f5IC",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3dzJEyM6opBkmIeARAGlYr",
-          "ItemFocusAnim-darkerGrey": "_2dbsn-sR5AlFKEgCU0FBbT",
-          "ItemFocusAnim-darkGreySettings": "_2gCU5HJBuDk1vxRMJhwFGE",
-          "ItemFocusAnim-darkGrey": "_39KmlfhlZwkINJt9fdyKbw",
-          "ItemFocusAnim-grey": "_1X5Siupo5N_ZVuGesoYV0t",
-          "ItemFocusAnim-translucent-white-10": "_3aZcpOjRI-YzMZmhCRiFjd",
-          "ItemFocusAnim-translucent-white-20": "_310j_Q-iB-at4-cmQSi1Mt",
-          "ItemFocusAnimBorder-darkGrey": "_38WlDUfHs-IiaRcWKFpWyA",
-          "ItemFocusAnim-green": "_3Hq7gKwAuHvmYuBWXBx8mC",
-          focusAnimation: "_1k4kLxHBHs5edlnWmN-Cos",
-          hoverAnimation: "_3OZh2Bm4JsNC3bNfskysCA",
         };
       },
     },

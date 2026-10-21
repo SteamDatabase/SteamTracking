@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Dit product is niet compatibel met macOS-systemen die Intel-processoren gebruiken. <1>Klik hier</1> voor meer informatie.",
     "AppPage_PurchaseNote_Mod_Title": "Community-mod",
     "AppPage_PurchaseNote_Mod_LearnMore": "Klik <1>hier</1> voor meer informatie over mods op Steam.",
+    "AppPage_Franchise_SeeAll": "Bekijk de volledige %1$s-collectie op Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Bekijk de volledige %1$s op Steam",
     "AppPage_Series_ContentTitle": "Serie-inhoud",
     "AppPage_Series_ExtraContent": "Extra inhoud",
     "AppPage_Series_SeasonName_Season": "Seizoen %1$s",

@@ -51,7 +51,7 @@
           }
           return n;
         }
-        function F(n, i) {
+        function B(n, i) {
           if (!(n instanceof i))
             throw new TypeError("Cannot call a class as a function");
         }
@@ -124,7 +124,7 @@
         }
         function ie() {
           if (
-            typeof Reflect == "undefined" ||
+            typeof Reflect > "u" ||
             !Reflect.construct ||
             Reflect.construct.sham
           )
@@ -201,7 +201,7 @@
         }
         function ce(n) {
           if (
-            (typeof Symbol != "undefined" && n[Symbol.iterator] != null) ||
+            (typeof Symbol < "u" && n[Symbol.iterator] != null) ||
             n["@@iterator"] != null
           )
             return Array.from(n);
@@ -302,15 +302,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function j(n) {
           return n.$$typeof === mt;
         }
-        function q(n) {
+        function F(n) {
           return Array.isArray(n) ? [] : {};
         }
-        function B(n, i) {
-          return i.clone !== !1 && i.isMergeableObject(n) ? he(q(n), n, i) : n;
+        function q(n, i) {
+          return i.clone !== !1 && i.isMergeableObject(n) ? he(F(n), n, i) : n;
         }
         function ee(n, i, s) {
           return n.concat(i).map(function (e) {
-            return B(e, s);
+            return q(e, s);
           });
         }
         function te(n, i) {
@@ -349,13 +349,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return (
             s.isMergeableObject(n) &&
               be(n).forEach(function (t) {
-                e[t] = B(n[t], s);
+                e[t] = q(n[t], s);
               }),
             be(i).forEach(function (t) {
               Ve(n, t) ||
                 (Te(n, t) && s.isMergeableObject(i[t])
                   ? (e[t] = te(t, s)(n[t], i[t], s))
-                  : (e[t] = B(i[t], s)));
+                  : (e[t] = q(i[t], s)));
             }),
             e
           );
@@ -363,13 +363,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function he(n, i, s) {
           ((s = s || {}).arrayMerge = s.arrayMerge || ee),
             (s.isMergeableObject = s.isMergeableObject || pt),
-            (s.cloneUnlessOtherwiseSpecified = B);
+            (s.cloneUnlessOtherwiseSpecified = q);
           var e = Array.isArray(i);
           return e === Array.isArray(n)
             ? e
               ? s.arrayMerge(n, i, s)
               : Ee(n, i, s)
-            : B(i, s);
+            : q(i, s);
         }
         function W(n) {
           var i =
@@ -382,7 +382,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function t(o, h) {
                 var S;
                 return (
-                  F(this, t),
+                  B(this, t),
                   (S = a.call(this, o, h)),
                   (S.state = i(G({}, h.state))),
                   (S.updateStateProps = S.updateStateProps.bind(v(S))),
@@ -581,7 +581,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function i(e) {
               var t;
               return (
-                F(this, i),
+                B(this, i),
                 (t = s.call(this, e)),
                 (t.handleOnClick = t.handleOnClick.bind(v(t))),
                 t
@@ -681,7 +681,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           });
         var Xe = ge(function (n, i) {
             var s = {}.toString,
-              e = typeof window != "undefined" ? window.Node : Function;
+              e = typeof window < "u" ? window.Node : Function;
             n.exports = i = function (a) {
               var o = typeof a;
               if (o != "object") return o;
@@ -789,7 +789,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           bt = { masterSpinnerFinished: !1 },
           vt = (function () {
             function n(i) {
-              F(this, n),
+              B(this, n),
                 (this.state = rt(Ne(bt, i, Pe))),
                 (this.subscriptions = []),
                 (this.masterSpinnerSubscriptions = {}),
@@ -950,7 +950,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 if (
-                  (F(this, i),
+                  (B(this, i),
                   (t = s.call(this, e)),
                   e.isIntrinsicHeight && e.orientation !== "horizontal")
                 )
@@ -1172,7 +1172,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i() {
                 var e;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (e = s.call(this)),
                   (e.handleOnClick = e.handleOnClick.bind(v(e))),
                   e
@@ -1258,7 +1258,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i() {
                 var e;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (e = s.call(this)),
                   (e.handleOnClick = e.handleOnClick.bind(v(e))),
                   e
@@ -1355,7 +1355,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.handleOnClick = t.handleOnClick.bind(v(t))),
                   t
@@ -1472,7 +1472,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.handleOnClick = t.handleOnClick.bind(v(t))),
                   t
@@ -1562,7 +1562,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.handleOnClick = t.handleOnClick.bind(v(t))),
                   t
@@ -1676,7 +1676,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           Ft =
             ((qe = (function (n) {
               function i() {
-                return F(this, i), s.apply(this, arguments);
+                return B(this, i), s.apply(this, arguments);
               }
               L(i, n);
               var s = I(i);
@@ -1796,7 +1796,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function i(e) {
               var t;
               return (
-                F(this, i),
+                B(this, i),
                 (t = s.call(this, e)),
                 (t.state = { imageStatus: Ke }),
                 (t.handleImageLoad = t.handleImageLoad.bind(v(t))),
@@ -2066,7 +2066,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           lt =
             ((Be = (function (n) {
               function i() {
-                return F(this, i), s.apply(this, arguments);
+                return B(this, i), s.apply(this, arguments);
               }
               L(i, n);
               var s = I(i);
@@ -2120,7 +2120,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.state = {
                     isImageLoading: !0,
@@ -2504,7 +2504,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.handleOnFocus = t.handleOnFocus.bind(v(t))),
                   (t.handleOnBlur = t.handleOnBlur.bind(v(t))),
@@ -2697,7 +2697,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           Jt = (function () {
             function n() {
-              F(this, n);
+              B(this, n);
             }
             return (
               M(
@@ -2842,7 +2842,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function i(e) {
                 var t;
                 return (
-                  F(this, i),
+                  B(this, i),
                   (t = s.call(this, e)),
                   (t.getSliderRef = t.getSliderRef.bind(v(t))),
                   (t.handleDocumentScroll = t.handleDocumentScroll.bind(v(t))),
@@ -3665,7 +3665,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var m = A(58584),
           u = A(81115),
           G = A(42891);
-        function F(C, x) {
+        function B(C, x) {
           return C.classList
             ? !!x && C.classList.contains(x)
             : (" " + (C.className.baseVal || C.className) + " ").indexOf(
@@ -3675,7 +3675,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         function ve(C, x) {
           C.classList
             ? C.classList.add(x)
-            : F(C, x) ||
+            : B(C, x) ||
               (typeof C.className == "string"
                 ? (C.className = C.className + " " + x)
                 : C.setAttribute(
@@ -3883,8 +3883,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   k = l.enter,
                   R = l.exit,
                   j = l.timeout,
-                  q = l.addEndListener,
-                  B = l.onEnter,
+                  F = l.addEndListener,
+                  q = l.onEnter,
                   ee = l.onEntering,
                   te = l.onEntered,
                   U = l.onExit,
@@ -4150,9 +4150,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               };
             }
           },
-          F = A(25081);
+          B = A(25081);
         function ve(M, E) {
-          return (0, F.t)(M, G, E);
+          return (0, B.t)(M, G, E);
         }
       },
       33861: (xe, Se, A) => {
@@ -4160,7 +4160,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var m = A(90626),
           u = A(86843),
           G = A(6561),
-          F = A(48767),
+          B = A(48767),
           ve = A(57152),
           M = A(57956);
         function E(b, k) {
@@ -4233,21 +4233,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (0, u.OV)(this, ie, k),
                 G.j.batch(() => {
                   const j = (0, u.S7)(this, z),
-                    q = (0, u.jq)(this, ue, se).call(this, (0, u.S7)(this, J));
-                  q.forEach((U) =>
+                    F = (0, u.jq)(this, ue, se).call(this, (0, u.S7)(this, J));
+                  F.forEach((U) =>
                     U.observer.setOptions(U.defaultedQueryOptions, R),
                   );
-                  const B = q.map((U) => U.observer),
-                    ee = B.map((U) => U.getCurrentResult()),
-                    te = B.some((U, be) => U !== j[be]);
-                  (j.length === B.length && !te) ||
-                    ((0, u.OV)(this, z, B),
+                  const q = F.map((U) => U.observer),
+                    ee = q.map((U) => U.getCurrentResult()),
+                    te = q.some((U, be) => U !== j[be]);
+                  (j.length === q.length && !te) ||
+                    ((0, u.OV)(this, z, q),
                     (0, u.OV)(this, H, ee),
                     this.hasListeners() &&
-                      (E(j, B).forEach((U) => {
+                      (E(j, q).forEach((U) => {
                         U.destroy();
                       }),
-                      E(B, j).forEach((U) => {
+                      E(q, j).forEach((U) => {
                         U.subscribe((be) => {
                           (0, u.jq)(this, de, ge).call(this, U, be);
                         });
@@ -4267,12 +4267,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             getOptimisticResult(b, k) {
               const j = (0, u.jq)(this, ue, se)
                 .call(this, b)
-                .map((q) =>
-                  q.observer.getOptimisticResult(q.defaultedQueryOptions),
+                .map((F) =>
+                  F.observer.getOptimisticResult(F.defaultedQueryOptions),
                 );
               return [
                 j,
-                (q) => (0, u.jq)(this, X, ce).call(this, q != null ? q : j, k),
+                (F) => (0, u.jq)(this, X, ce).call(this, F ?? j, k),
                 () => (0, u.jq)(this, I, $).call(this, j, b),
               ];
             }
@@ -4288,11 +4288,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (I = new WeakSet()),
           ($ = function (b, k) {
             const R = (0, u.jq)(this, ue, se).call(this, k);
-            return R.map((j, q) => {
-              const B = b[q];
+            return R.map((j, F) => {
+              const q = b[F];
               return j.defaultedQueryOptions.notifyOnChangeProps
-                ? B
-                : j.observer.trackResult(B, (ee) => {
+                ? q
+                : j.observer.trackResult(q, (ee) => {
                     R.forEach((te) => {
                       te.observer.trackProp(ee);
                     });
@@ -4319,13 +4319,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               R = [];
             return (
               b.forEach((j) => {
-                const q = (0, u.S7)(this, L).defaultQueryOptions(j),
-                  B = k.get(q.queryHash);
-                B
-                  ? R.push({ defaultedQueryOptions: q, observer: B })
+                const F = (0, u.S7)(this, L).defaultQueryOptions(j),
+                  q = k.get(F.queryHash);
+                q
+                  ? R.push({ defaultedQueryOptions: F, observer: q })
                   : R.push({
-                      defaultedQueryOptions: q,
-                      observer: new F.$((0, u.S7)(this, L), q),
+                      defaultedQueryOptions: F,
+                      observer: new B.$((0, u.S7)(this, L), F),
                     });
               }),
               R
@@ -4368,29 +4368,29 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           O = A(61314);
         function T({ queries: b, ...k }, R) {
           const j = (0, c.jE)(R),
-            q = (0, p.w)(),
-            B = (0, l.h)(),
+            F = (0, p.w)(),
+            q = (0, l.h)(),
             ee = m.useMemo(
               () =>
                 b.map((W) => {
                   const pe = j.defaultQueryOptions(W);
                   return (
-                    (pe._optimisticResults = q ? "isRestoring" : "optimistic"),
+                    (pe._optimisticResults = F ? "isRestoring" : "optimistic"),
                     pe
                   );
                 }),
-              [b, j, q],
+              [b, j, F],
             );
           ee.forEach((W) => {
-            (0, d.jv)(W), (0, f.LJ)(W, B);
+            (0, d.jv)(W), (0, f.LJ)(W, q);
           }),
-            (0, f.wZ)(B);
+            (0, f.wZ)(q);
           const [te] = m.useState(() => new y(j, ee, k)),
             [U, be, Te] = te.getOptimisticResult(ee, k.combine);
           m.useSyncExternalStore(
             m.useCallback(
-              (W) => (q ? O.l : te.subscribe(G.j.batchCalls(W))),
-              [te, q],
+              (W) => (F ? O.l : te.subscribe(G.j.batchCalls(W))),
+              [te, F],
             ),
             () => te.getCurrentResult(),
             () => te.getCurrentResult(),
@@ -4402,9 +4402,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             ? U.flatMap((W, pe) => {
                 const ae = ee[pe];
                 if (ae) {
-                  const Me = new F.$(j, ae);
-                  if ((0, d.EU)(ae, W)) return (0, d.iL)(ae, Me, B);
-                  (0, d.nE)(W, q) && (0, d.iL)(ae, Me, B);
+                  const Me = new B.$(j, ae);
+                  if ((0, d.EU)(ae, W)) return (0, d.iL)(ae, Me, q);
+                  (0, d.nE)(W, F) && (0, d.iL)(ae, Me, q);
                 }
                 return [];
               })
@@ -4416,13 +4416,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               ae &&
               (0, f.$1)({
                 result: W,
-                errorResetBoundary: B,
+                errorResetBoundary: q,
                 throwOnError: ae.throwOnError,
                 query: j.getQueryCache().get(ae.queryHash),
               })
             );
           });
-          if (he != null && he.error) throw he.error;
+          if (he?.error) throw he.error;
           return be(Te());
         }
       },

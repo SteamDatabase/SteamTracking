@@ -314,7 +314,44 @@
           }
         }
         const _ = _.memo(function (_) {
-          const {
+            const {
+                strAvatarURL: _,
+                size: _ = "Medium",
+                className: _,
+                statusStyle: _,
+                statusPosition: _,
+                children: _,
+                ..._
+              } = _,
+              _ = _.useMemo(() => {
+                const _ = [];
+                return _ && _.push(_), _.push(_(_)), _;
+              }, [_, _]);
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  rgSources: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
+          }),
+          _ = _.memo(function (_) {
+            const {
               strAvatarURL: _,
               size: _ = "Medium",
               className: _,
@@ -322,34 +359,30 @@
               statusPosition: _,
               children: _,
               ..._
-            } = _,
-            _ = _.useMemo(() => {
-              const _ = [];
-              return _ && _.push(_), _.push(_(_)), _;
-            }, [_, _]);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              _,
-              _,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-                style: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_().avatar, "avatar"),
-                rgSources: _,
-                draggable: !1,
-              }),
-              _,
-            ],
+            } = _;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  src: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
           });
-        });
         let _ = class extends _.Component {
           render() {
             const {
@@ -3924,7 +3957,6 @@
         }
         const _ = _.lazy(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),

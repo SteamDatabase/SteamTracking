@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Reabrir tópico (%1$s)",
     "moderation_actions_sustain": "Manter moderação",
     "moderation_actions_sustain_multiple": "Manter moderação (%1$s)",
+    "moderation_actions_sustain_short": "Manter",
     "moderation_actions_suspicious": "Marcar como suspeito",
     "moderation_actions_suspicious_multiple": "Marcar como suspeito (%1$s)",
     "moderation_actions_unknown": "Desconhecido",

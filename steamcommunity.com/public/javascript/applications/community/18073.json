@@ -594,6 +594,7 @@
     "Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason": "ไม่มีการตอบกลับต่อการโต้แย้งการแจ้ง เนื้อหาได้รับการกู้คืนแล้ว",
     "Workshop_ItemAdmin_Ban_Category_Malware": "มัลแวร์",
     "Workshop_ItemAdmin_Ban_Category_Other": "อื่น ๆ",
+    "Workshop_ItemAdmin_Ban_Category_MalwareDesc": "ผลงานนี้ยังจะถูกรายงานเพื่อให้ Valve ตรวจสอบด้วย",
     "Workshop_ItemAdmin_ClearContentCheckResults": "ล้างผลลัพธ์การตรวจสอบเนื้อหา",
     "Workshop_ItemAdmin_MarkAsSuspicious": "ทำเครื่องหมายเป็นน่าสงสัย",
     "Workshop_ItemAdmin_MarkAsSuspicious_Title": "ต้องการทำเครื่องหมายเป็นน่าสงสัยหรือไม่?",

@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Yếu tố tương tác",
     "GameRating_OnlineMusicNotice": "Nhạc trực tuyến không được ESRB phân loại",
     "GameRating_OnlineInteractionsNotice": "Tương tác trên mạng không được ESRB phân loại",
-    "GameRating_ContentCategoryDescriptor_64": "Trò chuyện đã lọc trong trò chơi"
+    "GameRating_ContentCategoryDescriptor_64": "Trò chuyện đã lọc trong trò chơi",
+    "GameRating_ContentCategories_Title": "Nội dung",
+    "GameRating_Ratings_Title": "Phân loại"
 }

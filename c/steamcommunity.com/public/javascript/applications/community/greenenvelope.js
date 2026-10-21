@@ -12,47 +12,15 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "m_observer", null),
-              _(this, "m_refElement", _.createRef()),
-              _(this, "m_elTracked", null),
-              _(this, "m_bPreviouslyIntersecting", !1),
-              _(this, "HandleRef", (_) => {
-                (0, _._)(this.m_refElement, _),
-                  this.props.containerRef &&
-                    (0, _._)(this.props.containerRef, _);
-              }),
-              _(this, "OnIntersection", (_) => {
-                let _ = !1;
-                for (const _ of _)
-                  if (_.isIntersecting) {
-                    _ = !0;
-                    break;
-                  }
-                this.m_bPreviouslyIntersecting != _ &&
-                  ((this.m_bPreviouslyIntersecting = _),
-                  this.props.onVisibilityChange &&
-                    this.props.onVisibilityChange(_),
-                  _ && this.BTriggerOnce() && this.DestroyObserver());
-              });
-          }
           static GetScrollableClassname() {
             return "vt-scrollable";
           }
+          m_observer = null;
+          m_refElement = _.createRef();
+          m_elTracked = null;
+          m_bPreviouslyIntersecting = !1;
           BTriggerOnce() {
             return (this.props.trigger || "once") == "once";
           }
@@ -116,6 +84,22 @@
               );
             });
           }
+          HandleRef = (_) => {
+            (0, _._)(this.m_refElement, _),
+              this.props.containerRef && (0, _._)(this.props.containerRef, _);
+          };
+          OnIntersection = (_) => {
+            let _ = !1;
+            for (const _ of _)
+              if (_.isIntersecting) {
+                _ = !0;
+                break;
+              }
+            this.m_bPreviouslyIntersecting != _ &&
+              ((this.m_bPreviouslyIntersecting = _),
+              this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+              _ && this.BTriggerOnce() && this.DestroyObserver());
+          };
           render() {
             let {
               onVisibilityChange: _,
@@ -194,7 +178,7 @@
             _ = (0, _._)(),
             { data: _ } = (0, _._)(_),
             _ = (0, _._)(),
-            _ = _ == null ? void 0 : _.settings;
+            _ = _?.settings;
           return _.notifications.filter(
             (_) => !(0, _._)(_.type, _, _) && !(0, _._)(_.item),
           );
@@ -223,16 +207,14 @@
               window.setTimeout(() => _(null), 2e3);
           }, []);
           const _ = () => {
-              var _, _;
-              ((_ = _.current) != null && _.visible) ||
-                ((_ = _.current) == null || _.Show(),
+              _.current?.visible ||
+                (_.current?.Show(),
                 _.findIndex((_) => !_.item.viewed) != -1 &&
                   _.MarkAllItemsViewed());
             },
             _ = _.useCallback(
               (_) => {
-                var _;
-                !_ && (_ = _.current) != null && _.visible && _.current.Hide();
+                !_ && _.current?.visible && _.current.Hide();
               },
               [_],
             );
@@ -255,27 +237,19 @@
           });
         }
         const _ = (_) => {
-            var _;
             const { popupRef: _ } = _,
               _ = _.useRef(null),
               [_, _] = _.useState(!1);
             _.useEffect(() => {
-              var _, _;
               _(
                 _.current != null &&
-                  ((_ = _.current) == null ? void 0 : _.scrollHeight) >
-                    ((_ = _.current) == null ? void 0 : _.clientHeight),
+                  _.current?.scrollHeight > _.current?.clientHeight,
               );
-            }, [(_ = _.current) == null ? void 0 : _.scrollHeight, _]);
+            }, [_.current?.scrollHeight, _]);
             const _ = _ ? void 0 : _().MenuScrollbarHidden;
             return (0, _.jsxs)("div", {
               className: _().NotificationsMenu,
-              onClick: () => {
-                var _;
-                return (_ = _ == null ? void 0 : _.current) == null
-                  ? void 0
-                  : _.Hide();
-              },
+              onClick: () => _?.current?.Hide(),
               children: [
                 (0, _.jsx)(_, {}),
                 (0, _.jsxs)("div", {

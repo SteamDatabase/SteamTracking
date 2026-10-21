@@ -47,30 +47,18 @@
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    _,
-                    (_ = (0, _._)(_.contrast, _)) != null ? _ : "body",
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
+              ],
             },
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    (_ = (0, _._)(_.color, _)) != null ? _ : "text-body",
-                    _,
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
+              ],
             },
             {
               prop: "truncate",
@@ -134,13 +122,9 @@
           },
         ];
         function _(_) {
-          var _;
           const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
             _ = (0, _._)(),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)("span", {
               role: "button",
               ...(0, _._)(
@@ -168,7 +152,7 @@
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          switch (_ == null ? void 0 : _.toUpperCase()) {
+          switch (_?.toUpperCase()) {
             case "AE":
               return _._;
             case "AU":
@@ -1117,7 +1101,7 @@
               noImpressionTracking: _,
               ..._
             } = _,
-            _ = _ == null ? void 0 : _.appid,
+            _ = _?.appid,
             _ = _(_);
           if (!_) return _;
           const _ = jsx(FocusableAnchor, {

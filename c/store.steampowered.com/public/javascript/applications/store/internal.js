@@ -5532,6 +5532,7 @@
                           children: (0, _.jsx)("img", {
                             className: _().CaptchaImage,
                             src: _.GetCaptchaURL(),
+                            alt: (0, _._)("#MobileLogin_CaptchaVerification"),
                           }),
                         }),
                         (0, _.jsx)(_._, {
@@ -5551,7 +5552,8 @@
                   ],
                 }),
                 (0, _.jsx)("div", {
-                  children: (0, _.jsx)("span", {
+                  children: (0, _.jsx)("button", {
+                    type: "button",
                     className: _().RefreshCaptchaText,
                     onClick: this.RefreshCaptcha,
                     children: (0, _._)("#Login_RefreshCaptcha"),

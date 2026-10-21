@@ -41,19 +41,14 @@
           });
         }
         function _(_) {
-          var _, _, _;
           const { subjectGroupQuery: _ } = _,
             _ = "floatingforumreportedsubjectslist",
             [_, _] = (0, _.useState)(() => localStorage[_] !== void 0);
           if (
             ((0, _.useMemo)(() => {
-              var _, _;
-              (_ = (_ = _.data) == null ? void 0 : _.subjects) == null ||
-                _.sort(_);
-            }, [(_ = _.data) == null ? void 0 : _.subjects]),
-            !_.isSuccess ||
-              !((_ = _.data) != null && _.subjects) ||
-              _.data.subjects.length === 0)
+              _.data?.subjects?.sort(_);
+            }, [_.data?.subjects]),
+            !_.isSuccess || !_.data?.subjects || _.data.subjects.length === 0)
           )
             return null;
           const _ = () => {
@@ -64,9 +59,7 @@
           return (0, _.jsx)("div", {
             className: _
               ? _.FloatingSubjectListCtn
-              : (_ = _.inlineClassNames) != null
-                ? _
-                : "",
+              : (_.inlineClassNames ?? ""),
             children: (0, _.jsx)("div", {
               className: "rightbox",
               children: (0, _.jsxs)("div", {
@@ -139,7 +132,6 @@
           return 0;
         }
         function _(_, _) {
-          var _, _, _, _;
           const _ =
             _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0;
           return (
@@ -147,14 +139,7 @@
               ? 1
               : 0) - _ ||
             _.required_moderator_level - _.required_moderator_level ||
-            _(
-              (_ = (_ = _.coordinates) == null ? void 0 : _.comment) != null
-                ? _
-                : "",
-              (_ = (_ = _.coordinates) == null ? void 0 : _.comment) != null
-                ? _
-                : "",
-            )
+            _(_.coordinates?.comment ?? "", _.coordinates?.comment ?? "")
           );
         }
         function _(_) {
@@ -166,15 +151,14 @@
           return _.slice(0, 35);
         }
         function _(_) {
-          var _, _, _, _;
           const { subject: _, commentThreadQuery: _ } = _,
-            _ = (_ = _.coordinates) == null ? void 0 : _.comment;
+            _ = _.coordinates?.comment;
           let _ = null;
           _ === _._ && (_ = "Topic");
           let _ = "#NA";
           if (_ === null && _.isSuccess) {
             let _ = 1;
-            for (const _ of (_ = _.data.comments) != null ? _ : []) {
+            for (const _ of _.data.comments ?? []) {
               if (_.gidcomment === _) {
                 (_ = _(_.text)), (_ = `#${_}`);
                 break;
@@ -185,7 +169,7 @@
           if (_ === null && _.isSuccess) {
             if (_.subject_type === _._) _ = "[Deleted]";
             else
-              for (const _ of (_ = _.data.deleted_comments) != null ? _ : [])
+              for (const _ of _.data.deleted_comments ?? [])
                 if (_.gidcomment === _) {
                   _ = _(_.text);
                   break;
@@ -194,10 +178,7 @@
           _ === null && (_ = "[Comment]");
           let _;
           _.subject_type === _._
-            ? (_ =
-                _ === _._
-                  ? `#forum_op_${((_ = _.coordinates)) == null ? void 0 : _.topic}`
-                  : `#c${_}`)
+            ? (_ = _ === _._ ? `#forum_op_${_.coordinates?.topic}` : `#c${_}`)
             : _.subject_type === _._ && (_ = `#comment_${_}`);
           const _ =
               _.unresolved_dispute_count > 0 || _.unresolved_report_count > 0,

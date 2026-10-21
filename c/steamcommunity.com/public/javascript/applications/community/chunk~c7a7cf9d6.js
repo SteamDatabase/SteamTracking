@@ -39,23 +39,19 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          return _ != null && _.length
+          return _?.length
             ? [
                 {
                   price: 0,
                   label: (0, _._)("#FacetedBrowse_Price_Free"),
                 },
-                ..._.map((_) => {
-                  var _, _;
-                  return {
-                    price:
-                      Number((_ = _.amount_in_cents) != null ? _ : 0) / 100,
-                    label: (0, _._)(
-                      "#FacetedBrowse_Price_Under",
-                      (_ = _.formatted_amount) != null ? _ : "",
-                    ),
-                  };
-                }),
+                ..._.map((_) => ({
+                  price: Number(_.amount_in_cents ?? 0) / 100,
+                  label: (0, _._)(
+                    "#FacetedBrowse_Price_Under",
+                    _.formatted_amount ?? "",
+                  ),
+                })),
                 {
                   price: void 0,
                   label: (0, _._)("#FacetedBrowse_Price_Any"),
@@ -70,7 +66,7 @@
               ..._(_, _),
               select: _,
             });
-          return _ != null ? _ : [];
+          return _ ?? [];
         }
         function _(_, _) {
           return _(_.getQueryData(_(_)));
@@ -87,13 +83,8 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _) {
-          var _;
           const _ = _.name;
-          if (
-            (_ == null ? void 0 : _.length) > 0 &&
-            (_ = _[0]) != null &&
-            _.startsWith("#tagid_")
-          ) {
+          if (_?.length > 0 && _[0]?.startsWith("#tagid_")) {
             const _ = parseInt(_[0].substring(7));
             if (_ > 0) return _ && _[_];
           }
@@ -131,18 +122,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = {
           include_assets: !0,
           include_release: !0,
@@ -156,9 +136,7 @@
           include_supported_languages: !0,
         };
         class _ {
-          constructor() {
-            _(this, "m_setAlreadyAdded", new Set());
-          }
+          m_setAlreadyAdded = new Set();
           Reset() {
             this.m_setAlreadyAdded = new Set();
           }
@@ -193,7 +171,6 @@
         }
         const _ = 4;
         function _(_, _, _, _, _, _) {
-          var _;
           const _ = new Array(),
             _ = new Array(),
             _ = new Array(),
@@ -210,11 +187,7 @@
             switch (_.item_type) {
               case "sub":
                 const _ = _._.Get().GetPackage(_);
-                if (
-                  ((_ = _ == null ? void 0 : _.GetIncludedAppIDs()) == null
-                    ? void 0
-                    : _.length) !== 1
-                ) {
+                if (_?.GetIncludedAppIDs()?.length !== 1) {
                   _ = _(_, _, _, !0);
                   break;
                 }
@@ -258,17 +231,14 @@
             });
         }
         function _(_, _) {
-          var _, _, _, _;
           const _ = _._.Get();
           if (
             _.only_current_platform &&
             _.BHasPlatformPreferenceSet() &&
             !(
-              (((_ = _.GetPlatforms()) == null ? void 0 : _.windows) &&
-                _.BIsPreferredPlatform("win")) ||
-              (((_ = _.GetPlatforms()) == null ? void 0 : _.mac) &&
-                _.BIsPreferredPlatform("mac")) ||
-              (((_ = _.GetPlatforms()) == null ? void 0 : _.steamos_linux) &&
+              (_.GetPlatforms()?.windows && _.BIsPreferredPlatform("win")) ||
+              (_.GetPlatforms()?.mac && _.BIsPreferredPlatform("mac")) ||
+              (_.GetPlatforms()?.steamos_linux &&
                 _.BIsPreferredPlatform("linux"))
             )
           )
@@ -281,21 +251,14 @@
             _.vr_support &&
             _.vr_support.vrhmd_only
             ? _._.k_RejectNoVR
-            : (_ = _.GetAllCreatorClanIDs()) != null &&
-                _.some((_) => _.BIsIgnoringCurator(_))
+            : _.GetAllCreatorClanIDs()?.some((_) => _.BIsIgnoringCurator(_))
               ? _._.k_RejectCreatorClan
               : _._.k_NotRejected;
         }
         function _(_, _) {
-          var _;
           if (_.localized) {
             const _ = (0, _.sfN)(_._.LANGUAGE);
-            if (
-              !(
-                (_ = _.GetAllLanguagesWithSomeSupport()) != null &&
-                _.includes(_)
-              )
-            )
+            if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
               return _._.k_RejectSupportedLanguage;
           }
           return _._.k_NotRejected;
@@ -397,21 +360,25 @@
         function _(_) {
           (0, _._)(!0, "Unexpected code running in SSR Server: " + _);
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
+        var _ = __webpack_require__("chunkid");
+        class _ {
+          m_HomeView = void 0;
+          BHasHomeView() {
+            return !!this.m_HomeView;
+          }
+          GetHomeView() {
+            return this.m_HomeView?.home;
+          }
+          static s_globalSingletonStore;
+          static Get() {
+            return (
+              _.s_globalSingletonStore ||
+                (_("CHomeViewStore.s_globalSingletonStore"),
+                (_.s_globalSingletonStore = new _())),
+              _.s_globalSingletonStore
+            );
+          }
           constructor() {
-            _(this, "m_HomeView");
             const _ = (0, _._)("home_view_setting", "application_config");
             this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
             const _ = (0, _._)(
@@ -420,21 +387,6 @@
             );
             this.ValidateHomeViewDataOverride(_) &&
               this.SetHomeViewSettingOverride(_);
-          }
-          BHasHomeView() {
-            return !!this.m_HomeView;
-          }
-          GetHomeView() {
-            var _;
-            return (_ = this.m_HomeView) == null ? void 0 : _.home;
-          }
-          static Get() {
-            return (
-              _.s_globalSingletonStore ||
-                (_("CHomeViewStore.s_globalSingletonStore"),
-                (_.s_globalSingletonStore = new _())),
-              _.s_globalSingletonStore
-            );
           }
           ValidateHomeViewData(_) {
             const _ = _;
@@ -459,19 +411,17 @@
             this.m_HomeView
               ? (this.m_HomeView.home = {
                   ...this.m_HomeView.home,
-                  ...(_ == null ? void 0 : _.all),
-                  ...(_ == null ? void 0 : _.maincap),
+                  ..._?.all,
+                  ..._?.maincap,
                 })
               : (this.m_HomeView = {
                   home: {
-                    ...(_ == null ? void 0 : _.all),
-                    ...(_ == null ? void 0 : _.maincap),
+                    ..._?.all,
+                    ..._?.maincap,
                   },
                 });
           }
-        };
-        _(_, "s_globalSingletonStore");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -483,19 +433,8 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _._ {
+          _ = __webpack_require__("chunkid");
+        class _ extends _._ {
           async DeleteOldAnnouncement(_, _) {
             let _ = new URLSearchParams();
             _.append("sessionid", (0, _._)());
@@ -509,6 +448,8 @@
             if (_.data.success != _._) throw _.data;
             return this.RemoveGIDFromList(_, _._ + _), _.data;
           }
+          static sm_Instance;
+          static sm_SummaryInstance;
           static Get() {
             return (
               _.sm_Instance ||
@@ -524,9 +465,7 @@
               _.sm_SummaryInstance
             );
           }
-        };
-        _(_, "sm_Instance"), _(_, "sm_SummaryInstance");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -536,6 +475,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -555,15 +495,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -572,8 +503,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = (_) => {
           let { bShowOnlyInitialEvent: _ } = _;
           const _ = (0, _._)(),
@@ -587,15 +517,12 @@
           });
         };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                bLoading: !1,
-                eventModel: this.props.eventModel,
-              }),
-              _(this, "m_refParent", _.createRef()),
-              _(this, "m_cancelSignal", _().CancelToken.source());
-          }
+          state = {
+            bLoading: !1,
+            eventModel: this.props.eventModel,
+          };
+          m_refParent = _.createRef();
+          m_cancelSignal = _().CancelToken.source();
           componentDidMount() {
             this.state.eventModel ||
               this.setState(
@@ -666,7 +593,9 @@
           async HandleReadEvent() {
             const { eventModel: _ } = this.state,
               { trackingLocation: _, tracker: _ } = this.props;
-            _ && _.BIsPartnerEvent() && (_.RecordEventRead(_, _), _.Flush());
+            _ &&
+              _.BIsPartnerEvent() &&
+              (_.RecordEventRead(_, _ ?? _._._), _.Flush());
           }
           render() {
             const { bShowOnlyInitialEvent: _ } = this.props,
@@ -695,8 +624,7 @@
             } = this.props;
             let _;
             _._.IN_CLIENT &&
-              _ != null &&
-              _.appid &&
+              _?.appid &&
               (_._.Get().HintLoad(),
               _._.Get().BOwnsApp(_.appid) &&
                 (_ = (_) =>
@@ -709,7 +637,7 @@
                   clanSteamID: _,
                   partnerEventStore: _,
                   emoticonStore: _,
-                  closeModal: !_ && _,
+                  closeModal: _ ? void 0 : _,
                   showAppHeader: _,
                   bShowOnlyInitialEvent: _,
                   additionalParams: _,
@@ -744,6 +672,7 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -766,46 +695,36 @@
         function _(_, _, _) {
           const _ = new Array();
           return (
-            _ == null ||
-              _.forEach((_) =>
-                _.push({
-                  _: _,
-                  type: "game",
-                }),
-              ),
-            _ == null ||
-              _.forEach((_) =>
-                _.push({
-                  _: _,
-                  type: "sub",
-                }),
-              ),
-            _ == null ||
-              _.forEach((_) =>
-                _.push({
-                  _: _,
-                  type: "bundle",
-                }),
-              ),
+            _?.forEach((_) =>
+              _.push({
+                _: _,
+                type: "game",
+              }),
+            ),
+            _?.forEach((_) =>
+              _.push({
+                _: _,
+                type: "sub",
+              }),
+            ),
+            _?.forEach((_) =>
+              _.push({
+                _: _,
+                type: "bundle",
+              }),
+            ),
             _
           );
         }
         function _(_) {
-          var _, _;
-          const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
           return (
-            ((_ =
-              (_ = _ == null ? void 0 : _.GetBestPurchaseOption()) == null
-                ? void 0
-                : _.discount_pct) != null
-              ? _
-              : 0) > 0
+            (_._.Get()
+              .GetStoreItem(_._, (0, _._)(_.type))
+              ?.GetBestPurchaseOption()?.discount_pct ?? 0) > 0
           );
         }
         function _(_) {
-          var _;
-          if (!((_ = _._.Get().GetHomeView()) != null && _.localized))
-            return !0;
+          if (!_._.Get().GetHomeView()?.localized) return !0;
           const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
           return _
             ? _._.Get().BIsAnyLanguageEnabled(
@@ -830,16 +749,18 @@
               ]));
           }
           const _ = new Set();
-          _ == null ||
-            _.forEach((_) => {
-              const _ = _._.Get().GetBundle(_);
-              _ == null || _.GetIncludedAppIDs().forEach((_) => _.add(_));
-            }),
-            _ == null ||
-              _.forEach((_) => {
-                const _ = _._.Get().GetPackage(_);
-                _ == null || _.GetIncludedAppIDs().forEach((_) => _.add(_));
-              });
+          _?.forEach((_) => {
+            _._.Get()
+              .GetBundle(_)
+              ?.GetIncludedAppIDs()
+              .forEach((_) => _.add(_));
+          }),
+            _?.forEach((_) => {
+              _._.Get()
+                .GetPackage(_)
+                ?.GetIncludedAppIDs()
+                .forEach((_) => _.add(_));
+            });
           const _ = Array.from(_).filter((_) => !_._.Get().BHasApp(_, _));
           if (
             (_.length > 0 && (await _._.Get().QueueMultipleAppRequests(_, _)),
@@ -848,8 +769,7 @@
           ) {
             const _ = Array.from(_)
               .map((_) => {
-                const _ = _._.Get().GetApp(_),
-                  _ = _ == null ? void 0 : _.GetParentAppID();
+                const _ = _._.Get().GetApp(_)?.GetParentAppID();
                 return _ ? (_.add(_), _) : null;
               })
               .filter((_) => _ !== null)
@@ -866,13 +786,12 @@
           include_basic_info: !0,
           include_supported_languages: !0,
         };
-        function _(_) {
-          var _;
+        function _(_, _ = !1) {
           if (!_) return !0;
           const _ = _._.Get();
           if (
             ((0, _._)(_.BIsLoaded(), "Dynamic Store not loaded"),
-            _.GetStoreItemType() == _._._)
+            !_ && _.GetStoreItemType() == _._._)
           ) {
             const _ = _.GetParentAppID();
             if (
@@ -887,7 +806,7 @@
             _.GetAllCreatorClanIDs().some((_) => _.BIsIgnoringCurator(_))
           )
             return !0;
-          if ((_ = _._.Get().GetHomeView()) == null ? void 0 : _.localized) {
+          if (_._.Get().GetHomeView()?.localized) {
             const _ = _.GetAllLanguagesWithSomeSupport();
             if (
               _.length > 0 &&
@@ -921,7 +840,7 @@
                   .filter((_) => !!_);
               _ && _.push(..._);
             }
-            _.some(_ || _)
+            _.some((_) => (_ || _)(_))
               ? (_++, _ && (_._.Get().BIsStoreItemOwned(_) || _.push(_)))
               : _.push(_);
           }
@@ -945,7 +864,7 @@
           for (const _ of _) {
             const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type));
             if (!_) continue;
-            const _ = _ == null ? void 0 : _.GetIncludedAppIDsOrSelf();
+            const _ = _?.GetIncludedAppIDsOrSelf();
             let _ = !1;
             _ && (_ = _ || _.every((_) => _._.Get().BIsGameOwned(_))),
               _ && (_ = _ || _.every((_) => _._.Get().BIsGameWishlisted(_))),
@@ -969,6 +888,12 @@
         function _() {
           return (0, _._)(_._, _._.COUNTRY);
         }
+        function _(_) {
+          return !!(
+            _?.BHasHideIgnoredItemsFacetValue() &&
+            !_.BIsUserPreferenceEnabled(_._.k_EHideIgnoredItems)
+          );
+        }
         async function _(_, _, _, _) {
           const _ = _.BHasHideIgnoredItemsFacetValue(),
             _ = _.BIsUserPreferenceEnabled(_._.k_EHideOwnedItems),
@@ -980,7 +905,7 @@
             (0, _._)(() => {
               _.SetCapsulesRemovedByUserPreferenceFilters(new Set(_.map(_._)));
             }),
-            _ == null || _.push(..._),
+            _?.push(..._),
             _
           );
         }

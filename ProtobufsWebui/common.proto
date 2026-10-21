@@ -520,7 +520,7 @@ message CClientNotificationTimedTrialRemaining {
 message CClientNotificationTimerExpired {
 }
 
-// Used by: common.proto
+// Used by: Cloud, common.proto
 message CCloud_PendingRemoteOperation {
 	optional int32 operation = 1 [(.description) = "enum"];
 	optional string machine_name = 2;
@@ -3382,6 +3382,16 @@ message CMsgIPAddress {
 message CMsgIPAddressBucket {
 	optional .CMsgIPAddress original_ip_address = 1;
 	optional fixed64 bucket = 2;
+}
+
+// Used by: common.proto
+message CMsgKeyValuePair {
+	optional string name = 1;
+	optional string value = 2;
+}
+
+message CMsgKeyValueSet {
+	repeated .CMsgKeyValuePair pairs = 1;
 }
 
 message CMsgKubeRPCPacket {
@@ -7423,6 +7433,7 @@ message StoreItem_ExtraDetails {
 	optional .StoreItem_ExtraDetails_Episode episode = 30;
 	repeated .StoreItem_ExtraDetails_Season seasons = 31;
 	optional int32 video_extras_note = 32 [(.description) = "enum"];
+	optional bool has_community_hub = 33;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

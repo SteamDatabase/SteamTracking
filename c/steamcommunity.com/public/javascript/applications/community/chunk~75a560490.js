@@ -13,17 +13,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_.k_eLibrary = 1)] = "k_eLibrary"),
             (_[(_.k_eWishlist = 2)] = "k_eWishlist"),
@@ -37,61 +26,47 @@
             _
           ))(_ || {});
         class _ {
-          constructor() {
-            _(this, "clanid"),
-              _(this, "unique_id"),
-              _(this, "event_type"),
-              _(this, "appid"),
-              _(this, "start_time"),
-              _(this, "appInfo"),
-              _(this, "clanInfo"),
-              _(this, "score");
-          }
+          clanid;
+          unique_id;
+          event_type;
+          appid;
+          start_time;
+          appInfo;
+          clanInfo;
+          score;
           GetSource() {
-            var _, _;
             return this.appInfo
               ? this.appInfo.source
-              : (_ = (_ = this.clanInfo) == null ? void 0 : _.source) != null
-                ? _
-                : 0;
+              : (this.clanInfo?.source ?? 0);
           }
           static GetEntityNameForID(_, _) {
-            var _, _;
             if (_)
-              return (_ =
-                (_ = _._.Get().GetApp(_)) == null ? void 0 : _.GetName()) !=
-                null
-                ? _
-                : (0, _._)("#EventCalendar_MuteApp_Unknown");
+              return (
+                _._.Get().GetApp(_)?.GetName() ??
+                (0, _._)("#EventCalendar_MuteApp_Unknown")
+              );
             if (_) {
               const _ = _._.GetClanInfoByClanAccountID(_);
-              if (_ != null && _.group_name) return _.group_name;
+              if (_?.group_name) return _.group_name;
             }
             return (0, _._)("#EventCalendar_MuteApp_Unknown");
           }
           static BHasEntityNameForID(_, _) {
-            var _, _;
             return _
-              ? !!((_ = _._.Get().GetApp(_)) != null && _.GetName())
+              ? !!_._.Get().GetApp(_)?.GetName()
               : _
-                ? !!(
-                    (_ = _._.GetClanInfoByClanAccountID(_)) != null &&
-                    _.group_name
-                  )
+                ? !!_._.GetClanInfoByClanAccountID(_)?.group_name
                 : !1;
           }
           GetEntityName() {
             return _.GetEntityNameForID(this.appid, this.clanid);
           }
           GetGameCapsule() {
-            var _, _;
             if (this.appInfo)
-              return (_ =
-                (_ = _._.Get().GetApp(this.appInfo.appid)) == null
-                  ? void 0
-                  : _.GetAssets()) == null
-                ? void 0
-                : _.GetMainCapsuleURL();
+              return _._.Get()
+                .GetApp(this.appInfo.appid)
+                ?.GetAssets()
+                ?.GetMainCapsuleURL();
             if (this.clanInfo) {
               let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
               if (_) return _.avatar_full_url;
@@ -99,14 +74,11 @@
             return (0, _._)("#EventCalendar_MuteApp_Unknown");
           }
           GetGameIcon() {
-            var _, _;
             if (this.appInfo)
-              return (_ =
-                (_ = _._.Get().GetApp(this.appInfo.appid)) == null
-                  ? void 0
-                  : _.GetAssets()) == null
-                ? void 0
-                : _.GetCommunityIconURL();
+              return _._.Get()
+                .GetApp(this.appInfo.appid)
+                ?.GetAssets()
+                ?.GetCommunityIconURL();
             if (this.clanInfo) {
               let _ = _._.GetClanInfoByClanAccountID(this.clanInfo.clanid);
               if (_) return _.avatar_full_url;
@@ -115,18 +87,15 @@
           }
         }
         class _ {
-          constructor() {
-            _(this, "appid"),
-              _(this, "source"),
-              _(this, "playtime"),
-              _(this, "last_played"),
-              _(this, "wishlist_added");
-          }
+          appid;
+          source;
+          playtime;
+          last_played;
+          wishlist_added;
         }
         class _ {
-          constructor() {
-            _(this, "clanid"), _(this, "source");
-          }
+          clanid;
+          source;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -257,15 +226,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -274,8 +234,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 2500;
         function _(_, _, _, _) {
           const _ = "section-" + _,
@@ -291,25 +250,25 @@
           };
         }
         class _ {
+          m_nForwardStuckCount = 0;
+          m_nBackwardStuckCount = 0;
+          m_mapCalendarAppsByID = new Map();
+          m_mapCalendarClansByID = new Map();
+          m_mapCalendarEventsByGid = new Map();
+          m_rgSortedCalendarEvents = new Array();
+          m_visibilityStore;
+          m_currentView = _._.box(void 0);
+          m_bFinishedSearchingForward = !1;
+          m_bFinishedSearchingBackward = !1;
+          m_rgCalendarSections = [];
+          m_rgFutureSections = [];
+          m_dtInitTime;
+          m_forwardRequestInFlight = null;
+          m_backwardRequestInFlight = null;
+          m_key;
+          m_collectionMetaData = void 0;
           constructor(_, _) {
-            _(this, "m_nForwardStuckCount", 0),
-              _(this, "m_nBackwardStuckCount", 0),
-              _(this, "m_mapCalendarAppsByID", new Map()),
-              _(this, "m_mapCalendarClansByID", new Map()),
-              _(this, "m_mapCalendarEventsByGid", new Map()),
-              _(this, "m_rgSortedCalendarEvents", new Array()),
-              _(this, "m_visibilityStore"),
-              _(this, "m_currentView", _._.box(void 0)),
-              _(this, "m_bFinishedSearchingForward", !1),
-              _(this, "m_bFinishedSearchingBackward", !1),
-              _(this, "m_rgCalendarSections", []),
-              _(this, "m_rgFutureSections", []),
-              _(this, "m_dtInitTime"),
-              _(this, "m_forwardRequestInFlight", null),
-              _(this, "m_backwardRequestInFlight", null),
-              _(this, "m_key"),
-              _(this, "m_collectionMetaData"),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_key = _),
               (this.m_visibilityStore = new _._(_)),
               _._.Get().HintLoad();
@@ -340,13 +299,11 @@
             return this.m_key;
           }
           BEventMatchCalendarSingleSource(_) {
-            var _, _;
             return (
               (this.BIsSingleAppCalendar() &&
-                ((_ = this.m_key.appids) == null ? void 0 : _[0]) == _.appid) ||
+                this.m_key.appids?.[0] == _.appid) ||
               (this.BIsSingleGroupCalendar() &&
-                ((_ = this.m_key.clanaccountids) == null ? void 0 : _[0]) ==
-                  _.clanid)
+                this.m_key.clanaccountids?.[0] == _.clanid)
             );
           }
           BIsSingleSourceMuted() {
@@ -364,15 +321,13 @@
             );
           }
           GetSingleGroupID() {
-            var _;
-            return (_ = this.m_key.clanaccountids) == null ? void 0 : _[0];
+            return this.m_key.clanaccountids?.[0];
           }
           BIsSingleAppCalendar() {
             return !!(this.m_key.appids && this.m_key.appids.length == 1);
           }
           GetSingleAppID() {
-            var _;
-            return (_ = this.m_key.appids) == null ? void 0 : _[0];
+            return this.m_key.appids?.[0];
           }
           BIsCollectionCalendar() {
             return !!this.m_key.collectionid;
@@ -428,10 +383,7 @@
             this.m_currentView.set(_);
           }
           BIsFilteredViewEmpty() {
-            var _;
-            return !!(
-              (_ = this.m_currentView.get()) != null && _.BIsViewEmpty()
-            );
+            return !!this.m_currentView.get()?.BIsViewEmpty();
           }
           GetCalendarItemsInTimeRange(_, _) {
             const _ = this.m_currentView.get();
@@ -450,24 +402,15 @@
               : (console.error("calendar view not yet initialized"), []);
           }
           GetCurrentlyLoadedEventCount(_, _) {
-            var _, _;
-            return (_ =
-              (_ = this.m_currentView.get()) == null
-                ? void 0
-                : _.GetCurrentlyLoadedEventCount(_, _)) != null
-              ? _
-              : {
-                  nCount: 0,
-                  bIsComplete: !1,
-                };
+            return (
+              this.m_currentView.get()?.GetCurrentlyLoadedEventCount(_, _) ?? {
+                nCount: 0,
+                bIsComplete: !1,
+              }
+            );
           }
           GetCurrentlyLoadedItemsForStats() {
-            var _;
-            return (
-              ((_ = this.m_currentView.get()) == null
-                ? void 0
-                : _.GetCurrentlyLoadedEvents()) || []
-            );
+            return this.m_currentView.get()?.GetCurrentlyLoadedEvents() || [];
           }
           GetCalendarSections(_) {
             return _ ? this.m_rgFutureSections : this.m_rgCalendarSections;
@@ -615,15 +558,12 @@
           async RegisterCalendarEventsAndModels(_) {
             await _._.Get().HintLoad(),
               (0, _._)(() => {
-                var _, _, _, _, _, _;
-                this.RegisterCalendarApps((_ = _.apps) != null ? _ : []),
-                  this.RegisterCalendarClans((_ = _.clans) != null ? _ : []),
-                  this.RegisterCalendarEvents(
-                    (_ = _.documents) != null ? _ : [],
-                  ),
-                  _._.RegisterClanEvents((_ = _.events) != null ? _ : []),
-                  this.RegisterReadEvents((_ = _.events_read) != null ? _ : []),
-                  this.RegisterEventVotes((_ = _.event_votes) != null ? _ : []),
+                this.RegisterCalendarApps(_.apps ?? []),
+                  this.RegisterCalendarClans(_.clans ?? []),
+                  this.RegisterCalendarEvents(_.documents ?? []),
+                  _._.RegisterClanEvents(_.events ?? []),
+                  this.RegisterReadEvents(_.events_read ?? []),
+                  this.RegisterEventVotes(_.event_votes ?? []),
                   _.forwardComplete && (this.m_bFinishedSearchingForward = !0),
                   _.backwardComplete &&
                     (this.m_bFinishedSearchingBackward = !0),
@@ -732,7 +672,6 @@
                 : (this.m_backwardRequestInFlight = _);
           }
           async LoadAdditionalEvents(_, _) {
-            var _, _, _;
             if (this.BHitEventHorizon(_)) return _._;
             let _ = this.GetRequestInFlight(_);
             if (_) return _;
@@ -747,7 +686,7 @@
               _ = 250 + 50 * _,
               _ = 15,
               _ = _._.GetTimeNowWithOverride(),
-              _ = (_ = this.GetTimeEdgeForDirection(_, _)) != null ? _ : _,
+              _ = this.GetTimeEdgeForDirection(_, _) ?? _,
               _ = {
                 minTime: 0,
                 maxTime: 0,
@@ -758,14 +697,12 @@
                 eventTypes: Array.from(
                   this.m_visibilityStore.enabledEventTypeSet,
                 ).join(","),
-                appIdFilter:
-                  (_ = this.m_key.appids) != null && _.length
-                    ? this.m_key.appids.sort().join(",")
-                    : void 0,
-                clanIdFilter:
-                  (_ = this.m_key.clanaccountids) != null && _.length
-                    ? this.m_key.clanaccountids.sort().join(",")
-                    : void 0,
+                appIdFilter: this.m_key.appids?.length
+                  ? this.m_key.appids.sort().join(",")
+                  : void 0,
+                clanIdFilter: this.m_key.clanaccountids?.length
+                  ? this.m_key.clanaccountids.sort().join(",")
+                  : void 0,
                 collectionID: this.m_key.collectionid,
                 saleID: this.m_key.saleid,
                 hubtype: this.m_key.hubtype,
@@ -896,17 +833,17 @@
           _([_._.bound], _.prototype, "LoadAdditionalEvents", 1),
           _([_._], _.prototype, "UpdateEventBlockFromCalendarEvent", 1);
         class _ {
+          m_rgLoadedEventsBox = _._.box([]);
+          m_lastLoadLatch = null;
+          m_fnGetUnfilteredEvents;
+          m_fnLoadAdditionalEvents;
+          m_fnBHitEventHorizon;
+          m_fnBIsEventInView;
+          m_bSkipStorePreferenceCheck;
+          m_bAllowMutedAndIgnoredSources;
+          m_rgAutorunDisposer;
           constructor(_, _, _, _, _, _) {
-            _(this, "m_rgLoadedEventsBox", _._.box([])),
-              _(this, "m_lastLoadLatch", null),
-              _(this, "m_fnGetUnfilteredEvents"),
-              _(this, "m_fnLoadAdditionalEvents"),
-              _(this, "m_fnBHitEventHorizon"),
-              _(this, "m_fnBIsEventInView"),
-              _(this, "m_bSkipStorePreferenceCheck"),
-              _(this, "m_bAllowMutedAndIgnoredSources"),
-              _(this, "m_rgAutorunDisposer"),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_fnGetUnfilteredEvents = _),
               (this.m_fnLoadAdditionalEvents = _),
               (this.m_fnBHitEventHorizon = _),
@@ -1080,15 +1017,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1098,7 +1026,6 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_.k_ERecent = "recent"),
             (_.k_ELibrary = "library"),
@@ -1150,24 +1077,22 @@
           return new Map(_.map((_) => [_, !0]));
         }
         class _ {
+          m_mapEventTypeGroupsAllowed = new Map();
+          m_mapGameSources = new Map();
+          m_bCuratorUnhideOnFollowDialogDismissed = !1;
+          m_mapHiddenApps = new Map();
+          m_mapHiddenClans = new Map();
+          m_bInitializedForUpdatesOnly = !1;
+          m_eStorageType = "session";
+          m_strStorageKey;
           constructor(_) {
-            _(this, "m_mapEventTypeGroupsAllowed", new Map()),
-              _(this, "m_mapGameSources", new Map()),
-              _(this, "m_bCuratorUnhideOnFollowDialogDismissed", !1),
-              _(this, "m_mapHiddenApps", new Map()),
-              _(this, "m_mapHiddenClans", new Map()),
-              _(this, "m_bInitializedForUpdatesOnly", !1),
-              _(this, "m_eStorageType", "session"),
-              _(this, "m_strStorageKey"),
-              (0, _._)(this),
+            (0, _._)(this),
               (0, _._)(() => {
-                _ != null &&
-                  _.rgHiddenApps &&
+                _?.rgHiddenApps &&
                   _.rgHiddenApps.forEach((_) =>
                     this.m_mapHiddenApps.set(_, !0),
                   ),
-                  _ != null &&
-                    _.rgHiddenClans &&
+                  _?.rgHiddenClans &&
                     _.rgHiddenClans.forEach((_) =>
                       this.m_mapHiddenClans.set(_, !0),
                     );
@@ -1187,10 +1112,9 @@
             return `${this.m_strStorageKey}-event-calendar-prefs`;
           }
           get enabledEventTypeSet() {
-            var _;
             const _ = new Set();
             for (const _ of Array.from(this.m_mapEventTypeGroupsAllowed.keys()))
-              (_ = _.get(_)) == null || _.forEach((_) => _.add(_));
+              _.get(_)?.forEach((_) => _.add(_));
             return _;
           }
           MapClanEventTypeToGroup(_) {
@@ -1398,15 +1322,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1415,14 +1330,14 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
           constructor() {
-            _(this, "m_mapBlockedAppIds", new Map()),
-              _(this, "m_mapBlockedClanIds", new Map()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapBlockedAppIds = new Map();
+          m_mapBlockedClanIds = new Map();
+          static s_globalSingletonStore;
           static Get() {
             return (
               _.s_globalSingletonStore ||
@@ -1509,8 +1424,7 @@
             }
           }
         };
-        _(_, "s_globalSingletonStore"),
-          _([_._], _.prototype, "m_mapBlockedAppIds", 2),
+        _([_._], _.prototype, "m_mapBlockedAppIds", 2),
           _([_._], _.prototype, "m_mapBlockedClanIds", 2);
         let _ = _;
       },
@@ -1532,15 +1446,6 @@
           _ = __webpack_require__._(_),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1549,8 +1454,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           const { event: _, closeModal: _ } = _,
             _ = (0, _._)();
@@ -1572,9 +1476,7 @@
           );
         }
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments), _(this, "m_refFocus", _.createRef());
-          }
+          m_refFocus = _.createRef();
           componentDidMount() {
             this.props.fnClose &&
               (document.addEventListener("keydown", this.escFunction, !1),
@@ -1630,28 +1532,12 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_bHasBeenTracked", !1), _(this, "m_fnSubmit", null);
-          }
+          m_bHasBeenTracked = !1;
+          m_fnSubmit = null;
         }
         class _ {
-          constructor() {
-            _(this, "m_nImpressionDelayMS", 500),
-              _(this, "m_mapEvents", new Map());
-          }
           ShouldTrack(_) {
             if (_.bOldAnnouncement) return !1;
             const _ = this.m_mapEvents.get(_.GID);
@@ -1688,6 +1574,8 @@
               _.m_fnSubmit.Cancel(),
               (_.m_fnSubmit = null));
           }
+          m_nImpressionDelayMS = 500;
+          m_mapEvents = new Map();
         }
         const _ = new _(),
           _ = (_) => {

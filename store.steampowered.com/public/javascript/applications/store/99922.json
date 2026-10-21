@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktivní prvky",
     "GameRating_OnlineMusicNotice": "Online hudba nebyla zrevidována organizací ESRB",
     "GameRating_OnlineInteractionsNotice": "Online interakce nebyla zrevidována organizací ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Filtrované konverzace ve hře"
+    "GameRating_ContentCategoryDescriptor_64": "Filtrované konverzace ve hře",
+    "GameRating_ContentCategories_Title": "Obsah",
+    "GameRating_Ratings_Title": "Ratingy"
 }

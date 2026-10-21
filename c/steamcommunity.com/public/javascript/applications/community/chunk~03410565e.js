@@ -19,15 +19,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -36,8 +27,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = [
             "mousemove",
             "keypress",
@@ -49,14 +39,14 @@
           ],
           _ = 2e3,
           _ = class _ {
-            constructor() {
-              _(this, "m_callbackList", new _._()),
-                _(this, "m_timer", null),
-                _(this, "m_bAreEventListenersRegistered", !1);
-            }
+            m_callbackList = new _._();
+            m_timer = null;
+            m_bAreEventListenersRegistered = !1;
+            static s_Singleton;
             static Get() {
               return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
             }
+            constructor() {}
             ResetFidgetTimer(_) {
               this.m_timer && window.clearTimeout(this.m_timer);
               const _ = () => {
@@ -84,7 +74,7 @@
               return (this.m_bAreEventListenersRegistered = !1), !1;
             }
           };
-        _(_, "s_Singleton"), _([_._], _.prototype, "ResetFidgetTimer", 1);
+        _([_._], _.prototype, "ResetFidgetTimer", 1);
         let _ = _;
         function _() {
           _.useEffect(() => {
@@ -118,675 +108,494 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = 0,
           _ = 1,
           _ = 2,
           _ = 3,
-          _ = 4,
-          _ = class _ {
-            constructor() {
-              _(this, "m_mapQAndASessions", new Map()),
-                _(this, "m_mapQAndAChangeCallbackList", new Map()),
-                _(this, "m_dashboardCallbackList", new _._()),
-                _(this, "m_mapQuestions", new Map()),
-                _(this, "m_mapQuestionCallbackList", new Map()),
-                _(this, "m_rgPendingQuestionGIDs", []);
-            }
-            static Get() {
-              return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-            }
-            GetQAndACallbackList(_) {
-              return (
-                this.m_mapQAndAChangeCallbackList.has(_) ||
-                  this.m_mapQAndAChangeCallbackList.set(_, new _._()),
-                this.m_mapQAndAChangeCallbackList.get(_)
-              );
-            }
-            GetQuestionCallbackList(_) {
-              return (
-                this.m_mapQuestionCallbackList.has(_) ||
-                  this.m_mapQuestionCallbackList.set(_, new _._()),
-                this.m_mapQuestionCallbackList.get(_)
-              );
-            }
-            GetDashboardCallbackList() {
-              return this.m_dashboardCallbackList;
-            }
-            GetSession(_) {
-              return this.m_mapQAndASessions.get(_);
-            }
-            GetAllSessions() {
-              return Array.from(this.m_mapQAndASessions.values());
-            }
-            GetQuestion(_) {
-              return this.m_mapQuestions.get(_);
-            }
-            async LoadAllSessions(_) {
-              var _, _, _, _;
-              if (!_._.logged_in || !(0, _._)()) return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxgetqandasforgroup",
-                _ = {};
-              let _ = null;
-              try {
-                const _ = await _().get(_, {
-                  params: _,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (console.log(_),
-                  (_ == null ? void 0 : _.status) == 200 &&
-                    ((_ = _.data) == null ? void 0 : _.success) == _._ &&
-                    _.data.qandas)
-                ) {
-                  for (const _ of _.data.qandas)
-                    this.m_mapQAndASessions.set(_.gidSession, _);
-                  return (
-                    this.m_dashboardCallbackList.Dispatch(
-                      this.GetAllSessions(),
-                    ),
-                    _._
-                  );
-                }
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
+          _ = 4;
+        class _ {
+          m_mapQAndASessions = new Map();
+          m_mapQAndAChangeCallbackList = new Map();
+          m_dashboardCallbackList = new _._();
+          m_mapQuestions = new Map();
+          m_mapQuestionCallbackList = new Map();
+          m_rgPendingQuestionGIDs = [];
+          static s_Singleton;
+          static Get() {
+            return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+          }
+          constructor() {}
+          GetQAndACallbackList(_) {
+            return (
+              this.m_mapQAndAChangeCallbackList.has(_) ||
+                this.m_mapQAndAChangeCallbackList.set(_, new _._()),
+              this.m_mapQAndAChangeCallbackList.get(_)
+            );
+          }
+          GetQuestionCallbackList(_) {
+            return (
+              this.m_mapQuestionCallbackList.has(_) ||
+                this.m_mapQuestionCallbackList.set(_, new _._()),
+              this.m_mapQuestionCallbackList.get(_)
+            );
+          }
+          GetDashboardCallbackList() {
+            return this.m_dashboardCallbackList;
+          }
+          GetSession(_) {
+            return this.m_mapQAndASessions.get(_);
+          }
+          GetAllSessions() {
+            return Array.from(this.m_mapQAndASessions.values());
+          }
+          GetQuestion(_) {
+            return this.m_mapQuestions.get(_);
+          }
+          async LoadAllSessions(_) {
+            if (!_._.logged_in || !(0, _._)()) return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxgetqandasforgroup",
+              _ = {};
+            let _ = null;
+            try {
+              const _ = await _().get(_, {
+                params: _,
+                cancelToken: _?.token,
+              });
+              if (
+                (console.log(_),
+                _?.status == 200 && _.data?.success == _._ && _.data.qandas)
+              ) {
+                for (const _ of _.data.qandas)
+                  this.m_mapQAndASessions.set(_.gidSession, _);
+                return (
+                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                  _._
+                );
               }
-              const _ = (0, _._)(_);
-              return (
-                console.error(
-                  "Could not load question and answer sessions for group",
-                  _.strErrorMsg,
-                  _,
-                ),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async CreateNewSession(_, _) {
-              var _, _, _, _;
-              if (!_._.logged_in || !(0, _._)()) return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxcreateqanda",
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()), _.append("name", _);
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._ &&
-                  _.data.qanda
-                )
-                  return (
-                    this.m_mapQAndASessions.set(
-                      _.data.qanda.gidSession,
-                      _.data.qanda,
-                    ),
-                    this.m_dashboardCallbackList.Dispatch(
-                      this.GetAllSessions(),
-                    ),
-                    _._
-                  );
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error("Could not create Q&A", _, _.strErrorMsg, _),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            const _ = (0, _._)(_);
+            return (
+              console.error(
+                "Could not load question and answer sessions for group",
+                _.strErrorMsg,
+                _,
+              ),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async CreateNewSession(_, _) {
+            if (!_._.logged_in || !(0, _._)()) return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxcreateqanda",
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()), _.append("name", _);
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._ && _.data.qanda)
+                return (
+                  this.m_mapQAndASessions.set(
+                    _.data.qanda.gidSession,
+                    _.data.qanda,
+                  ),
+                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                  _._
+                );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async RenameSession(_, _, _) {
-              var _, _, _, _;
-              if (!_._.logged_in || !(0, _._)()) return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxrenameqanda/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()), _.append("name", _);
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return (
-                    (this.m_mapQAndASessions.get(_).strName = _),
-                    this.GetQAndACallbackList(_).Dispatch(
-                      this.m_mapQAndASessions.get(_),
-                    ),
-                    this.m_dashboardCallbackList.Dispatch(
-                      this.GetAllSessions(),
-                    ),
-                    _._
-                  );
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error("Could not rename Q&A", _, _, _.strErrorMsg, _),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            const _ = (0, _._)(_);
+            return (
+              console.error("Could not create Q&A", _, _.strErrorMsg, _),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async RenameSession(_, _, _) {
+            if (!_._.logged_in || !(0, _._)()) return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxrenameqanda/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()), _.append("name", _);
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._)
+                return (
+                  (this.m_mapQAndASessions.get(_).strName = _),
+                  this.GetQAndACallbackList(_).Dispatch(
+                    this.m_mapQAndASessions.get(_),
+                  ),
+                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                  _._
+                );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async DeleteSession(_, _) {
-              var _, _, _, _;
-              if (!_._.logged_in || !(0, _._)()) return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxdeleteqanda/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)());
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return (
-                    this.m_mapQAndASessions.delete(_),
-                    this.m_dashboardCallbackList.Dispatch(
-                      this.GetAllSessions(),
-                    ),
-                    _._
-                  );
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error("Could not delete Q&A", _, _.strErrorMsg, _),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            const _ = (0, _._)(_);
+            return (
+              console.error("Could not rename Q&A", _, _, _.strErrorMsg, _),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async DeleteSession(_, _) {
+            if (!_._.logged_in || !(0, _._)()) return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxdeleteqanda/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)());
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._)
+                return (
+                  this.m_mapQAndASessions.delete(_),
+                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                  _._
+                );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async LoadSession(_, _, _) {
-              var _, _, _, _, _, _, _, _, _, _;
-              const _ =
-                  _._.logged_in &&
-                  (!this.m_mapQAndASessions.has(_) ||
-                    this.m_mapQAndASessions.get(_).bUserCanModerate ||
-                    this.m_rgPendingQuestionGIDs.length > 0 ||
-                    _)
-                    ? "/ajaxgetqandasessionforuser/"
-                    : "/ajaxgetqandasession/",
-                _ =
-                  _._.COMMUNITY_BASE_URL + "questions/" + _._.VANITY_ID + _ + _,
-                _ = {};
-              let _ = null;
-              try {
-                const _ = await _().get(_, {
-                  params: _,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._ &&
-                  _.data.qanda &&
-                  _.data.questions
-                ) {
-                  for (const _ of _.data.questions) {
-                    const _ = _.gidQuestion,
-                      _ =
-                        (_ =
-                          (_ = this.m_mapQuestions.get(_)) == null
-                            ? void 0
-                            : _.bUserUpVoted) != null
-                          ? _
-                          : _.bUserUpVoted,
-                      _ = {
-                        ..._,
-                        bUserUpVoted: _,
-                      };
-                    this.m_mapQuestions.set(_, _),
-                      this.GetQuestionCallbackList(_).Dispatch(_);
-                  }
-                  const _ =
-                      (_ =
-                        (_ = this.m_mapQAndASessions.get(_)) == null
-                          ? void 0
-                          : _.bUserCanModerate) != null
-                        ? _
-                        : _.data.qanda.bUserCanModerate,
+            const _ = (0, _._)(_);
+            return (
+              console.error("Could not delete Q&A", _, _.strErrorMsg, _),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async LoadSession(_, _, _) {
+            const _ =
+                _._.logged_in &&
+                (!this.m_mapQAndASessions.has(_) ||
+                  this.m_mapQAndASessions.get(_).bUserCanModerate ||
+                  this.m_rgPendingQuestionGIDs.length > 0 ||
+                  _)
+                  ? "/ajaxgetqandasessionforuser/"
+                  : "/ajaxgetqandasession/",
+              _ = _._.COMMUNITY_BASE_URL + "questions/" + _._.VANITY_ID + _ + _,
+              _ = {};
+            let _ = null;
+            try {
+              const _ = await _().get(_, {
+                params: _,
+                cancelToken: _?.token,
+              });
+              if (
+                _?.status == 200 &&
+                _.data?.success == _._ &&
+                _.data.qanda &&
+                _.data.questions
+              ) {
+                for (const _ of _.data.questions) {
+                  const _ = _.gidQuestion,
                     _ =
-                      (_ =
-                        (_ = this.m_mapQAndASessions.get(_)) == null
-                          ? void 0
-                          : _.bUserCanAskQuestions) != null
-                        ? _
-                        : _.data.qanda.bUserCanAskQuestions,
+                      this.m_mapQuestions.get(_)?.bUserUpVoted ??
+                      _.bUserUpVoted,
                     _ = {
-                      ..._.data.qanda,
-                      bUserCanModerate: _,
-                      bUserCanAskQuestions: _,
+                      ..._,
+                      bUserUpVoted: _,
                     };
-                  return (
-                    this.m_mapQAndASessions.set(_, _),
-                    this.GetQAndACallbackList(_).Dispatch(_),
-                    this.UpdatePendingQuestionList(_.data.qanda.rgQuestionGIDs),
-                    _._
-                  );
+                  this.m_mapQuestions.set(_, _),
+                    this.GetQuestionCallbackList(_).Dispatch(_);
                 }
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
+                const _ =
+                    this.m_mapQAndASessions.get(_)?.bUserCanModerate ??
+                    _.data.qanda.bUserCanModerate,
+                  _ =
+                    this.m_mapQAndASessions.get(_)?.bUserCanAskQuestions ??
+                    _.data.qanda.bUserCanAskQuestions,
+                  _ = {
+                    ..._.data.qanda,
+                    bUserCanModerate: _,
+                    bUserCanAskQuestions: _,
+                  };
+                return (
+                  this.m_mapQAndASessions.set(_, _),
+                  this.GetQAndACallbackList(_).Dispatch(_),
+                  this.UpdatePendingQuestionList(_.data.qanda.rgQuestionGIDs),
+                  _._
+                );
               }
-              const _ = (0, _._)(_);
-              return (
-                console.error("Could not load Q&A", _, _.strErrorMsg, _),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            UpdatePendingQuestionList(_) {
-              var _;
-              const _ = new Set();
-              for (const _ of _) {
-                const _ = this.m_mapQuestions.get(_);
-                _.posterAccountID == _._.accountid &&
-                  _.eState == _ &&
-                  _.add(_.gidQuestion);
-              }
-              if (this.m_rgPendingQuestionGIDs.length > 0) {
-                const _ = new Set(_);
-                for (const _ of this.m_rgPendingQuestionGIDs)
-                  _.has(_) &&
-                    ((_ = this.m_mapQuestions.get(_)) == null
-                      ? void 0
-                      : _.eState) == _ &&
-                    _.add(_);
-              }
-              this.m_rgPendingQuestionGIDs = Array.from(_);
+            const _ = (0, _._)(_);
+            return (
+              console.error("Could not load Q&A", _, _.strErrorMsg, _),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          UpdatePendingQuestionList(_) {
+            const _ = new Set();
+            for (const _ of _) {
+              const _ = this.m_mapQuestions.get(_);
+              _.posterAccountID == _._.accountid &&
+                _.eState == _ &&
+                _.add(_.gidQuestion);
             }
-            async AskNewQuestion(_, _, _) {
-              var _, _, _, _, _;
-              if (
-                !_._.logged_in ||
-                !(0, _._)() ||
-                !(
-                  (_ = this.m_mapQAndASessions.get(_)) != null &&
-                  _.bUserCanAskQuestions
-                )
-              )
-                return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxaskquestion/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()), _.append("question", _);
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return (
-                    this.m_rgPendingQuestionGIDs.push(_.data.gidQuestion),
-                    this.LoadSession(_, !0, _),
-                    _._
-                  );
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error(
-                  "Could not upload question",
-                  _,
-                  _,
-                  _.strErrorMsg,
-                  _,
-                ),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            if (this.m_rgPendingQuestionGIDs.length > 0) {
+              const _ = new Set(_);
+              for (const _ of this.m_rgPendingQuestionGIDs)
+                _.has(_) && this.m_mapQuestions.get(_)?.eState == _ && _.add(_);
             }
-            async ModerateQuestion(_, _, _, _) {
-              var _, _, _, _, _;
-              if (
-                !_._.logged_in ||
-                !(0, _._)() ||
-                !(
-                  (_ = this.m_mapQAndASessions.get(_)) != null &&
-                  _.bUserCanModerate
-                )
-              )
-                return _._;
-              if (_ != _ && _ != _) return _._;
-              if (this.m_mapQuestions.get(_).eState == _) return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxmoderatequestion/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()),
-                _.append("gidquestion", _),
-                _.append("action", _ == _ ? "show" : "hide");
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return this.LoadSession(_, !0, _), _._;
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error(
-                  "Could not moderate question",
-                  _,
-                  _,
-                  _,
-                  _.strErrorMsg,
-                  _,
-                ),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            this.m_rgPendingQuestionGIDs = Array.from(_);
+          }
+          async AskNewQuestion(_, _, _) {
+            if (
+              !_._.logged_in ||
+              !(0, _._)() ||
+              !this.m_mapQAndASessions.get(_)?.bUserCanAskQuestions
+            )
+              return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxaskquestion/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()), _.append("question", _);
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._)
+                return (
+                  this.m_rgPendingQuestionGIDs.push(_.data.gidQuestion),
+                  this.LoadSession(_, !0, _),
+                  _._
+                );
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async AnswerQuestion(_, _, _, _) {
-              var _, _, _, _, _;
-              if (
-                !_._.logged_in ||
-                !(0, _._)() ||
-                !(
-                  (_ = this.m_mapQAndASessions.get(_)) != null &&
-                  _.bUserCanAskQuestions
-                )
-              )
-                return _._;
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxanswerquestion/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()),
-                _.append("gidquestion", _),
-                _.append("answer", _);
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return this.LoadSession(_, !0, _), _._;
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              const _ = (0, _._)(_);
-              return (
-                console.error(
-                  "Could not upload answer",
-                  _,
-                  _,
-                  _,
-                  _.strErrorMsg,
-                  _,
-                ),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            const _ = (0, _._)(_);
+            return (
+              console.error(
+                "Could not upload question",
+                _,
+                _,
+                _.strErrorMsg,
+                _,
+              ),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async ModerateQuestion(_, _, _, _) {
+            if (
+              !_._.logged_in ||
+              !(0, _._)() ||
+              !this.m_mapQAndASessions.get(_)?.bUserCanModerate
+            )
+              return _._;
+            if (_ != _ && _ != _) return _._;
+            if (this.m_mapQuestions.get(_).eState == _) return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxmoderatequestion/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()),
+              _.append("gidquestion", _),
+              _.append("action", _ == _ ? "show" : "hide");
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._)
+                return this.LoadSession(_, !0, _), _._;
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-            async VoteOnQuestion(_, _, _, _) {
-              var _, _, _, _, _;
-              if (
-                !_._.logged_in ||
-                !(0, _._)() ||
-                !(
-                  (_ = this.m_mapQAndASessions.get(_)) != null &&
-                  _.bUserCanAskQuestions
-                )
-              )
-                return _._;
-              if (_ === this.m_mapQuestions.get(_).bUserUpVoted) return _._;
-              let _ = this.m_mapQuestions.get(_);
-              const _ = _.nVoteCount,
-                _ = _ + (_ ? 1 : -1);
-              (_ = {
-                ..._,
-                nVoteCount: _,
-                bUserUpVoted: _,
-              }),
-                this.m_mapQuestions.set(_, _),
-                this.GetQuestionCallbackList(_).Dispatch(_);
-              const _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "questions/" +
-                  _._.VANITY_ID +
-                  "/ajaxvoteforquestion/" +
-                  _,
-                _ = new FormData();
-              _.append("sessionid", (0, _._)()),
-                _.append("gidquestion", _),
-                _.append("up", _ ? "1" : "0");
-              let _ = null;
-              try {
-                const _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
-                });
-                if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _.data) == null ? void 0 : _.success) == _._
-                )
-                  return _._;
-                _ = {
-                  response: _,
-                };
-              } catch (_) {
-                _ = _;
-              }
-              (_ = {
-                ..._,
-                nVoteCount: _,
-                bUserUpVoted: !_,
-              }),
-                this.m_mapQuestions.set(_, _),
-                this.GetQuestionCallbackList(_).Dispatch(_);
-              const _ = (0, _._)(_);
-              return (
-                console.error(
-                  "Could not upload vote",
-                  _,
-                  _,
-                  _,
-                  _.strErrorMsg,
-                  _,
-                ),
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _.response) == null
-                      ? void 0
-                      : _.data) == null
-                    ? void 0
-                    : _.success) != null
-                  ? _
-                  : _._
-              );
+            const _ = (0, _._)(_);
+            return (
+              console.error(
+                "Could not moderate question",
+                _,
+                _,
+                _,
+                _.strErrorMsg,
+                _,
+              ),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async AnswerQuestion(_, _, _, _) {
+            if (
+              !_._.logged_in ||
+              !(0, _._)() ||
+              !this.m_mapQAndASessions.get(_)?.bUserCanAskQuestions
+            )
+              return _._;
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxanswerquestion/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()),
+              _.append("gidquestion", _),
+              _.append("answer", _);
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._)
+                return this.LoadSession(_, !0, _), _._;
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
             }
-          };
-        _(_, "s_Singleton");
-        let _ = _;
+            const _ = (0, _._)(_);
+            return (
+              console.error(
+                "Could not upload answer",
+                _,
+                _,
+                _,
+                _.strErrorMsg,
+                _,
+              ),
+              _?.response?.data?.success ?? _._
+            );
+          }
+          async VoteOnQuestion(_, _, _, _) {
+            if (
+              !_._.logged_in ||
+              !(0, _._)() ||
+              !this.m_mapQAndASessions.get(_)?.bUserCanAskQuestions
+            )
+              return _._;
+            if (_ === this.m_mapQuestions.get(_).bUserUpVoted) return _._;
+            let _ = this.m_mapQuestions.get(_);
+            const _ = _.nVoteCount,
+              _ = _ + (_ ? 1 : -1);
+            (_ = {
+              ..._,
+              nVoteCount: _,
+              bUserUpVoted: _,
+            }),
+              this.m_mapQuestions.set(_, _),
+              this.GetQuestionCallbackList(_).Dispatch(_);
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                "questions/" +
+                _._.VANITY_ID +
+                "/ajaxvoteforquestion/" +
+                _,
+              _ = new FormData();
+            _.append("sessionid", (0, _._)()),
+              _.append("gidquestion", _),
+              _.append("up", _ ? "1" : "0");
+            let _ = null;
+            try {
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                cancelToken: _?.token,
+              });
+              if (_?.status == 200 && _.data?.success == _._) return _._;
+              _ = {
+                response: _,
+              };
+            } catch (_) {
+              _ = _;
+            }
+            (_ = {
+              ..._,
+              nVoteCount: _,
+              bUserUpVoted: !_,
+            }),
+              this.m_mapQuestions.set(_, _),
+              this.GetQuestionCallbackList(_).Dispatch(_);
+            const _ = (0, _._)(_);
+            return (
+              console.error("Could not upload vote", _, _, _, _.strErrorMsg, _),
+              _?.response?.data?.success ?? _._
+            );
+          }
+        }
         function _(_) {
           const _ = (0, _._)("useQAndASession"),
             _ = _.useCallback(
-              async (_) => {
-                var _;
-                return (
-                  ((_ = _.Get().GetSession(_)) == null
-                    ? void 0
-                    : _.bUserCanAskQuestions) &&
-                  (await _.Get().AskNewQuestion(_, _, _))
-                );
-              },
+              async (_) =>
+                _.Get().GetSession(_)?.bUserCanAskQuestions &&
+                (await _.Get().AskNewQuestion(_, _, _)),
               [_, _],
             ),
             _ = _.useCallback(
-              (_, _) => {
-                var _;
-                return (
-                  ((_ = _.Get().GetSession(_)) == null
-                    ? void 0
-                    : _.bUserCanAskQuestions) &&
-                  _.Get().VoteOnQuestion(_, _, _, _)
-                );
-              },
+              (_, _) =>
+                _.Get().GetSession(_)?.bUserCanAskQuestions &&
+                _.Get().VoteOnQuestion(_, _, _, _),
               [_, _],
             ),
             _ = _.useCallback(
               (_) => {
-                var _;
                 const _ = !!_,
-                  _ = _ == null ? void 0 : _.strName,
-                  _ = _ == null ? void 0 : _.bUserCanModerate,
-                  _ = _ == null ? void 0 : _.bUserCanAskQuestions,
+                  _ = _?.strName,
+                  _ = _?.bUserCanModerate,
+                  _ = _?.bUserCanAskQuestions,
                   _ = [],
                   _ = [],
                   _ = [],
                   _ = [];
-                for (const _ of (_ = _ == null ? void 0 : _.rgQuestionGIDs) !=
-                null
-                  ? _
-                  : []) {
-                  const _ = _.Get().GetQuestion(_);
-                  switch (_ == null ? void 0 : _.eState) {
+                for (const _ of _?.rgQuestionGIDs ?? [])
+                  switch (_.Get().GetQuestion(_)?.eState) {
                     case _:
                       _.push(_);
                       break;
@@ -800,7 +609,6 @@
                       _.push(_);
                       break;
                   }
-                }
                 return (
                   _.sort(
                     (_, _) =>
@@ -885,26 +693,15 @@
         function _(_) {
           const _ = (0, _._)("useQuestionModeratorActions"),
             _ = _.useCallback(
-              (_, _) => {
-                var _;
-                return (
-                  ((_ = _.Get().GetSession(_)) == null
-                    ? void 0
-                    : _.bUserCanModerate) && _.Get().AnswerQuestion(_, _, _, _)
-                );
-              },
+              (_, _) =>
+                _.Get().GetSession(_)?.bUserCanModerate &&
+                _.Get().AnswerQuestion(_, _, _, _),
               [_, _],
             ),
             _ = _.useCallback(
-              (_, _) => {
-                var _;
-                return (
-                  ((_ = _.Get().GetSession(_)) == null
-                    ? void 0
-                    : _.bUserCanModerate) &&
-                  _.Get().ModerateQuestion(_, _, _, _)
-                );
-              },
+              (_, _) =>
+                _.Get().GetSession(_)?.bUserCanModerate &&
+                _.Get().ModerateQuestion(_, _, _, _),
               [_, _],
             );
           return _.useMemo(
@@ -1257,7 +1054,7 @@
                 (0, _.jsx)(_, {
                   gidSession: _,
                   gidQuestion: _,
-                  eState: _ == null ? void 0 : _.eState,
+                  eState: _?.eState,
                 }),
             ],
           });
@@ -1326,7 +1123,6 @@
           });
         }
         function _(_) {
-          var _;
           const _ = _._.InitFromAccountID(_.accountID).ConvertTo64BitString(),
             { isLoading: _, data: _ } = (0, _._)(_.accountID);
           return _
@@ -1335,8 +1131,7 @@
                 href: _.GetCommunityProfileURL(),
                 className: _().PersonaName,
                 "data-miniprofile": "s" + _,
-                children:
-                  (_ = _ == null ? void 0 : _.m_strPlayerName) != null ? _ : _,
+                children: _?.m_strPlayerName ?? _,
               });
         }
         function _(_) {
@@ -1407,8 +1202,7 @@
               (0, _.jsx)("div", {
                 className: _().QAName,
                 children:
-                  (0, _._)("#QAndA_Header") +
-                  ((_ == null ? void 0 : _.length) > 0 ? ": " + _ : ""),
+                  (0, _._)("#QAndA_Header") + (_?.length > 0 ? ": " + _ : ""),
               }),
               (0, _.jsxs)("div", {
                 className: _().QAColumns,

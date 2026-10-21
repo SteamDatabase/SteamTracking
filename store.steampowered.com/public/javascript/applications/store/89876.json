@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "この製品はIntelプロセッサーを使用するmacOSと互換性がありません。詳細は<1>こちら</1>をクリックしてください。",
     "AppPage_PurchaseNote_Mod_Title": "コミュニティにより制作されたMOD",
     "AppPage_PurchaseNote_Mod_LearnMore": "Steam上のMODの詳細については、<1>こちら</1>をクリックしてください。",
+    "AppPage_Franchise_SeeAll": "Steamで「%1$s」コレクションのすべての作品をチェック",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Steamで「%1$s」の全作品をチェック",
     "AppPage_Series_ContentTitle": "シリーズコンテンツ",
     "AppPage_Series_ExtraContent": "特典コンテンツ",
     "AppPage_Series_SeasonName_Season": "シーズン %1$s",

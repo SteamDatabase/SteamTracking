@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Открыть тему (%1$s)",
     "moderation_actions_sustain": "Подтвердить решение модератора",
     "moderation_actions_sustain_multiple": "Подтвердить решения модератора (%1$s)",
+    "moderation_actions_sustain_short": "Подтвердить",
     "moderation_actions_suspicious": "Пометить как подозрительное",
     "moderation_actions_suspicious_multiple": "Пометить как подозрительное (%1$s)",
     "moderation_actions_unknown": "Неизвестно",

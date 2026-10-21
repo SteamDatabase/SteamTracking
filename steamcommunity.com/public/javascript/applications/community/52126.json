@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Buka Utas (%1$s)",
     "moderation_actions_sustain": "Moderasi Awal Dipertahankan",
     "moderation_actions_sustain_multiple": "Moderasi Awal Dipertahankan (%1$s)",
+    "moderation_actions_sustain_short": "Dipertahankan",
     "moderation_actions_suspicious": "Tandai sebagai Mencurigakan",
     "moderation_actions_suspicious_multiple": "Tandai sebagai Mencurigakan (%1$s)",
     "moderation_actions_unknown": "Tidak diketahui",

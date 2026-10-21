@@ -1709,7 +1709,7 @@
               (a = c[o]) && (s = (r ? a(e, t, s) : a(s)) || s);
             return r && s && Se(e, t, s), s;
           };
-        const xe = "localhost",
+        const xe = "127.0.0.1",
           k = new ue.wd("WebUITransport");
         class Y {
           m_iMsgSeq = 1;

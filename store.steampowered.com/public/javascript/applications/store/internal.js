@@ -10,7 +10,7 @@
         var t = s(7850),
           B = s(68031),
           S = s(31857);
-        function D(j) {
+        function C(j) {
           return (0, t.jsx)(S.I, {
             ...j,
             viewBox: 16,
@@ -34,11 +34,11 @@
               variant: K,
               color: v,
               align: l = "center",
-              icon: C,
+              icon: D,
               ...u
             } = j,
             r = U === "indeterminate",
-            n = C ?? (r ? T : D),
+            n = D ?? (r ? T : C),
             o = () => {
               G || (M && M(r ? !0 : !U));
             },
@@ -92,8 +92,8 @@
         var t = s(7850),
           B = s(64238),
           S = s.n(B),
-          D = s(38878),
-          E = s.n(D),
+          C = s(38878),
+          E = s.n(C),
           p = s(60351),
           N = s(68031),
           $ = s(8928),
@@ -129,7 +129,7 @@
               clickable: K = !0,
               disabled: v,
               className: l,
-              status: C,
+              status: D,
               color: u,
               ...r
             } = j,
@@ -138,16 +138,16 @@
             {
               ...r,
               radius: n,
-              "data-status": C,
+              "data-status": D,
               "data-dull-color": u && u !== "dull" ? u : void 0,
               className: S()(
-                D.ControlBox,
-                A && !v && D.Focusable,
-                Z && !v && D.Hoverable,
-                K && !v && D.Clickable,
-                v && D.Disabled,
-                D[`Variant-${U}`],
-                D[`Size-${M}`],
+                C.ControlBox,
+                A && !v && C.Focusable,
+                Z && !v && C.Hoverable,
+                K && !v && C.Clickable,
+                v && C.Disabled,
+                C[`Variant-${U}`],
+                C[`Size-${M}`],
                 l,
               ),
             },
@@ -161,7 +161,7 @@
         var t = s(7850),
           B = s(90626),
           S = s(73788),
-          D = s(8083),
+          C = s(8083),
           E = s(94621),
           p = s(18938),
           N = s(24660),
@@ -229,10 +229,10 @@
         }
         function l(c) {
           return (0, M.Qn)()
-            ? (0, t.jsx)(C, { ...c })
+            ? (0, t.jsx)(D, { ...c })
             : (0, t.jsx)(u, { ...c });
         }
-        function C(c) {
+        function D(c) {
           const { children: x } = c,
             f = (0, B.useContext)(A);
           (0, q.wT)(
@@ -315,11 +315,11 @@
             open: x,
             onOpenChange: _,
             middleware: O ? o(c) : [],
-            whileElementsMounted: O ? D.ll : void 0,
+            whileElementsMounted: O ? C.ll : void 0,
             placement: I && typeof I == "object" ? I.initial : I,
             strategy: "fixed",
             platform: {
-              ...D.iD,
+              ...C.iD,
               getOffsetParent: (y) => y?.ownerDocument?.defaultView ?? window,
             },
           });
@@ -398,7 +398,7 @@
         var t = s(7850),
           B = s(90626),
           S = s(86946),
-          D = s(60351),
+          C = s(60351),
           E = s(71742),
           p = s(64238),
           N = s.n(p),
@@ -411,7 +411,7 @@
           const {
               variant: v,
               radius: l,
-              size: C,
+              size: D,
               status: u,
               color: r,
               children: n,
@@ -468,9 +468,9 @@
                 register: f,
                 unregister: _,
                 radius: l,
-                size: C,
+                size: D,
               }),
-              [o, i, f, _, l, C],
+              [o, i, f, _, l, D],
             );
           return (0, t.jsx)(S.j, {
             clickable: !1,
@@ -478,14 +478,14 @@
             focusable: !1,
             variant: O,
             radius: l,
-            size: C,
+            size: D,
             status: u,
             className: N()($.SegmentedControlBox, $[`Variant-${O}`]),
             tabIndex: 0,
             onKeyDown: I,
             children: (0, t.jsx)(j.Provider, {
               value: y,
-              children: (0, t.jsxs)(D.az, {
+              children: (0, t.jsxs)(C.az, {
                 className: $.SegmentedControl,
                 style: { "--outer-radius": `var(--radius-${l})` },
                 children: [
@@ -497,7 +497,7 @@
           });
         }
         function M(K) {
-          const { value: v, children: l, disabled: C } = K,
+          const { value: v, children: l, disabled: D } = K,
             u = (0, B.useContext)(j),
             [r, n] = (0, B.useState)(),
             { register: o, unregister: i } = u || {};
@@ -512,7 +512,7 @@
           const { value: c, onValueChange: x, radius: f, size: _ } = u,
             I = v === c,
             O = (F) => {
-              F.stopPropagation(), F.preventDefault(), !(I || C) && x(v);
+              F.stopPropagation(), F.preventDefault(), !(I || D) && x(v);
             },
             y = l === void 0 ? v : l;
           return (0, t.jsx)(q.s, {
@@ -521,14 +521,14 @@
             ref: n,
             onClick: O,
             "data-selected": I ? "true" : "false",
-            className: N()($.Item, _ && $[`Size-${_}`], C ? $.disabled : ""),
+            className: N()($.Item, _ && $[`Size-${_}`], D ? $.disabled : ""),
             children: y,
           });
         }
         function G(K) {
-          const { options: v, getOptionLabel: l = (u) => u, ...C } = K;
+          const { options: v, getOptionLabel: l = (u) => u, ...D } = K;
           return (0, t.jsx)(G.Root, {
-            ...C,
+            ...D,
             children: v.map((u) =>
               (0, t.jsx)(G.Item, { value: u, children: l(u) }, u),
             ),
@@ -537,7 +537,7 @@
         (G.Item = M), (G.Root = U);
         function A(K) {
           const { radius: v, color: l } = K;
-          return (0, t.jsx)(D.az, {
+          return (0, t.jsx)(C.az, {
             className: $.IndicatorPosition,
             children: (0, t.jsx)("div", {
               className: $.Indicator,
@@ -560,20 +560,20 @@
         var t = s(7850),
           B = s(90626),
           S = s(71742),
-          D = s(13854),
+          C = s(13854),
           E = s(75),
           p = s.n(E),
           N = s(76854);
         const $ = Object.assign(ce, { Root: j, Track: M, Range: G, Handle: A });
         function ce(l) {
           const {
-              value: C,
+              value: D,
               onValueChange: u,
               onValueSettled: r,
               min: n,
               ...o
             } = l,
-            i = [C],
+            i = [D],
             c = (0, B.useCallback)((f) => u(f[0]), [u]),
             x = (0, B.useCallback)((f) => r?.(f[0]), [r]);
           return (0, t.jsxs)(j, {
@@ -583,18 +583,18 @@
             onValueSettled: x,
             value: i,
             children: [
-              (0, t.jsx)(M, { children: (0, t.jsx)(G, { start: n, end: C }) }),
+              (0, t.jsx)(M, { children: (0, t.jsx)(G, { start: n, end: D }) }),
               (0, t.jsx)(A, {}),
             ],
           });
         }
         function q(l) {
-          const { value: C } = l;
+          const { value: D } = l;
           return (0, t.jsxs)(j, {
             ...l,
             children: [
               (0, t.jsx)(M, {
-                children: (0, t.jsx)(G, { start: C[0], end: C[1] }),
+                children: (0, t.jsx)(G, { start: D[0], end: D[1] }),
               }),
               (0, t.jsx)(A, {}),
               (0, t.jsx)(A, {}),
@@ -603,7 +603,7 @@
         }
         const T = (0, B.createContext)(null);
         function j(l) {
-          const { children: C, color: u, ...r } = l,
+          const { children: D, color: u, ...r } = l,
             {
               min: n,
               max: o,
@@ -668,35 +668,35 @@
                   m = [...c];
                 (m[w] = k), i(m), f && f(m);
               },
-              children: (0, t.jsx)("div", { className: E.Inner, children: C }),
+              children: (0, t.jsx)("div", { className: E.Inner, children: D }),
             }),
           });
         }
-        function U(l, C) {
+        function U(l, D) {
           if (l.length <= 1) return l.length - 1;
           let u = 0,
-            r = Math.abs(C - l[0]);
+            r = Math.abs(D - l[0]);
           for (let n = 1; n < l.length; n++) {
-            const o = Math.abs(l[n] - C);
+            const o = Math.abs(l[n] - D);
             o < r && ((u = n), (r = o));
           }
           return u;
         }
         function M(l) {
-          const { render: C, ...u } = l;
+          const { render: D, ...u } = l;
           return (0, N.Q)(
-            C,
+            D,
             (0, t.jsx)("div", { className: E.SliderTrack }),
             u,
             void 0,
           );
         }
         function G(l) {
-          const { start: C, end: u, render: r } = l,
+          const { start: D, end: u, render: r } = l,
             n = (0, B.useContext)(T);
           (0, S.wT)(n, "SliderRange must be used within a SliderRoot!");
           const { min: o, max: i } = n,
-            c = v(C, o, i),
+            c = v(D, o, i),
             x = 100 - v(u, o, i);
           return (0, N.Q)(
             r,
@@ -709,7 +709,7 @@
           );
         }
         function A(l) {
-          const { render: C } = l,
+          const { render: D } = l,
             u = (0, B.useContext)(T);
           (0, S.wT)(u, "SliderHandle must be used within a SliderRoot!");
           const {
@@ -772,24 +772,24 @@
             onKeyDown: J,
           };
           return (0, N.Q)(
-            C,
+            D,
             (0, t.jsx)("span", { className: E.SliderHandle, style: W }),
             k,
             { value: i[O], bDragActive: u.bDragActive },
           );
         }
-        function Z(l, C, u) {
-          if (C[0] === C[1] || u[0] === u[1]) return u[0];
-          const n = ((u[1] - u[0]) / (C[1] - C[0])) * (l - C[0]) + u[0];
-          return D.OQ(n, u[0], u[1]);
+        function Z(l, D, u) {
+          if (D[0] === D[1] || u[0] === u[1]) return u[0];
+          const n = ((u[1] - u[0]) / (D[1] - D[0])) * (l - D[0]) + u[0];
+          return C.OQ(n, u[0], u[1]);
         }
         function K(l) {
-          const { value: C, min: u, max: r, step: n } = l,
-            i = Math.round((C - u) / n) / (1 / n);
-          return D.OQ(i + u, u, r);
+          const { value: D, min: u, max: r, step: n } = l,
+            i = Math.round((D - u) / n) / (1 / n);
+          return C.OQ(i + u, u, r);
         }
-        function v(l, C, u) {
-          return ((l - C) / (u - C)) * 100;
+        function v(l, D, u) {
+          return ((l - D) / (u - D)) * 100;
         }
       },
       31857: (te, se, s) => {
@@ -798,8 +798,8 @@
         var t = s(7850),
           B = s(69289),
           S = s(8928),
-          D = s(16619),
-          E = s.n(D);
+          C = s(16619),
+          E = s.n(C);
         function p(T) {
           return (0, t.jsx)("svg", { ...ce(T) });
         }
@@ -808,16 +808,16 @@
           {
             prop: "size",
             responsive: !0,
-            className: (T) => D[`IconSize-${T}`],
+            className: (T) => C[`IconSize-${T}`],
           },
           {
             prop: "color",
-            className: D.Color,
+            className: C.Color,
             cssProperty: (T) => ["--icon-color", $(T)],
           },
           {
             prop: "hitSlop",
-            className: D.HitSlop,
+            className: C.HitSlop,
             cssProperty: (T) => [
               "--hit-slop-custom",
               typeof T == "string" ? T : "",
@@ -830,7 +830,7 @@
         }
         function ce(T) {
           const { viewBox: j, ...U } = T,
-            G = { className: U.size ? void 0 : D.IconSizeDefault, ...U };
+            G = { className: U.size ? void 0 : C.IconSizeDefault, ...U };
           return j && (G.viewBox = q(j)), (0, B.mz)(G, N);
         }
         function q(T) {
@@ -844,7 +844,7 @@
       },
       12204: (te, se, s) => {
         "use strict";
-        s.d(se, { V: () => D });
+        s.d(se, { V: () => C });
         var t = s(7850),
           B = s(31857);
         const S = {
@@ -852,7 +852,7 @@
           left: "rotate( 90, 10, 10 )",
           right: "rotate( 270, 10, 10 )",
         };
-        function D(E) {
+        function C(E) {
           const { direction: p = "down" } = E,
             N = S[p];
           return (0, t.jsx)(B.I, {
@@ -870,11 +870,11 @@
         "use strict";
         s.d(se, { Q: () => S });
         var t = s(90626);
-        function B(D, E, p) {
-          return typeof D == "function" ? D(E, p) : t.cloneElement(D, E);
+        function B(C, E, p) {
+          return typeof C == "function" ? C(E, p) : t.cloneElement(C, E);
         }
-        function S(D, E, p, N) {
-          return B(D || E, p, N);
+        function S(C, E, p, N) {
+          return B(C || E, p, N);
         }
       },
       15252: (te, se, s) => {
@@ -883,7 +883,7 @@
         var t = s(7850),
           B = s(1039),
           S = s(69289),
-          D = s(8928),
+          C = s(8928),
           E = s(64238),
           p = s.n(E),
           N = s(65274),
@@ -940,7 +940,7 @@
           ],
           T = [
             ...q,
-            ...D.L,
+            ...C.L,
             {
               prop: "size",
               responsive: !0,
@@ -954,7 +954,7 @@
         var t = s(99412),
           B = s(18735),
           S = s(48156),
-          D = s(6469),
+          C = s(6469),
           E = s(10142),
           p = s(10349),
           N = s(3166);
@@ -1005,7 +1005,7 @@
           }
         }
         const q = 4;
-        function T(v, l, C, u, r, n) {
+        function T(v, l, D, u, r, n) {
           const o = new Array(),
             i = new Array(),
             c = new Array(),
@@ -1028,7 +1028,7 @@
                 }
                 I = y.GetIncludedAppIDs()[0];
               case "app":
-                O = G(I, l, C, u, !0);
+                O = G(I, l, D, u, !0);
                 break;
               case "bundle":
                 O = K(I, l, u, !0);
@@ -1055,20 +1055,20 @@
             o
           );
         }
-        function j(v, l, C, u) {
-          for (let r = 0; v.length < C && r < l.length; ++r)
+        function j(v, l, D, u) {
+          for (let r = 0; v.length < D && r < l.length; ++r)
             v.push({ ...l[r], priority: u });
         }
         function U(v, l) {
-          const C = D.Fm.Get();
+          const D = C.Fm.Get();
           if (
             l.only_current_platform &&
-            C.BHasPlatformPreferenceSet() &&
+            D.BHasPlatformPreferenceSet() &&
             !(
-              (v.GetPlatforms()?.windows && C.BIsPreferredPlatform("win")) ||
-              (v.GetPlatforms()?.mac && C.BIsPreferredPlatform("mac")) ||
+              (v.GetPlatforms()?.windows && D.BIsPreferredPlatform("win")) ||
+              (v.GetPlatforms()?.mac && D.BIsPreferredPlatform("mac")) ||
               (v.GetPlatforms()?.steamos_linux &&
-                C.BIsPreferredPlatform("linux"))
+                D.BIsPreferredPlatform("linux"))
             )
           )
             return p.by.k_RejectWrongPlatform;
@@ -1080,24 +1080,24 @@
             u.vr_support &&
             u.vr_support.vrhmd_only
             ? p.by.k_RejectNoVR
-            : v.GetAllCreatorClanIDs()?.some((r) => C.BIsIgnoringCurator(r))
+            : v.GetAllCreatorClanIDs()?.some((r) => D.BIsIgnoringCurator(r))
               ? p.by.k_RejectCreatorClan
               : p.by.k_NotRejected;
         }
         function M(v, l) {
           if (l.localized) {
-            const C = (0, t.sfN)(N.TS.LANGUAGE);
-            if (!v.GetAllLanguagesWithSomeSupport()?.includes(C))
+            const D = (0, t.sfN)(N.TS.LANGUAGE);
+            if (!v.GetAllLanguagesWithSomeSupport()?.includes(D))
               return p.by.k_RejectSupportedLanguage;
           }
           return p.by.k_NotRejected;
         }
-        function G(v, l, C, u, r) {
+        function G(v, l, D, u, r) {
           const n = E.A.Get().GetApp(v);
           if (!n) return p.by.k_RejectNotLoaded;
           const o = U(n, l);
           if (o != p.by.k_NotRejected) return o;
-          const i = D.Fm.Get();
+          const i = C.Fm.Get();
           if (i.BIsGameIgnored(v)) return p.by.k_RejectIgnoredGame;
           if (i.BExcludeTagIDs(n.GetTagIDs()))
             return p.by.k_RejectIgnoreGameTags;
@@ -1117,7 +1117,7 @@
             const x = n.GetBestPurchaseOption();
             if (!x || !x.discount_pct) return p.by.k_RejectNoDiscount;
           }
-          return C != "adultonly" &&
+          return D != "adultonly" &&
             l.no_ao_content &&
             (n.HasContentDescriptorID(B.u7) || n.HasContentDescriptorID(B.T4))
             ? p.by.k_RejectAO
@@ -1135,11 +1135,11 @@
                 : p.by.k_NotRejected;
         }
         function A(v, l) {
-          const C = D.Fm.Get();
+          const D = C.Fm.Get();
           let u = !1;
           for (let r of v) {
-            if (C.BIsGameIgnored(r)) return p.by.k_RejectIgnoredGame;
-            C.BIsGameOwned(r) && (u = !0);
+            if (D.BIsGameIgnored(r)) return p.by.k_RejectIgnoredGame;
+            D.BIsGameOwned(r) && (u = !0);
           }
           return l.games_not_in_library && u
             ? p.by.k_RejectInLibrary
@@ -1147,25 +1147,25 @@
               ? p.by.k_RejectNotInLibrary
               : p.by.k_NotRejected;
         }
-        function Z(v, l, C, u) {
+        function Z(v, l, D, u) {
           const r = E.A.Get().GetPackage(v);
           if (!r) return p.by.k_RejectNotLoaded;
           const n = U(r, l);
           if (n != p.by.k_NotRejected) return n;
           const o = A(r.GetIncludedAppIDs(), l);
           if (o != p.by.k_NotRejected) return o;
-          const i = D.Fm.Get();
+          const i = C.Fm.Get();
           return l.games_already_in_library && i.BOwnsPackage(v)
             ? p.by.k_RejectInLibrary
             : i.BIsPackageIgnored(v)
               ? p.by.k_RejectIgnoredGame
               : u
-                ? C.BHasPackageID(v)
+                ? D.BHasPackageID(v)
                   ? p.by.k_RejectAlreadyDisplayed
                   : M(r, l)
                 : p.by.k_NotRejected;
         }
-        function K(v, l, C, u) {
+        function K(v, l, D, u) {
           const r = E.A.Get().GetBundle(v);
           if (!r) return p.by.k_RejectNotLoaded;
           const n = U(r, l);
@@ -1174,7 +1174,7 @@
           return o != p.by.k_NotRejected
             ? o
             : u
-              ? C.BHasBundleID(v)
+              ? D.BHasBundleID(v)
                 ? p.by.k_RejectAlreadyDisplayed
                 : M(r, l)
               : p.by.k_NotRejected;
@@ -1182,11 +1182,11 @@
       },
       85528: (te, se, s) => {
         "use strict";
-        s.d(se, { Vw: () => C });
+        s.d(se, { Vw: () => D });
         var t = s(14947),
           B = s(99412),
           S = s(72604),
-          D = s(35038),
+          C = s(35038),
           E = s(67529),
           p = s(3166);
         class N {
@@ -1297,10 +1297,10 @@
             return o && i && M(r, n, i), i;
           };
         function Z(u) {
-          return useObserver(() => C.GetAppInfo(u));
+          return useObserver(() => D.GetAppInfo(u));
         }
         function K(u) {
-          return useObserver(() => u.map((r) => C.GetAppInfo(r)));
+          return useObserver(() => u.map((r) => D.GetAppInfo(r)));
         }
         const v = 3600 * 24 * 7 * 2;
         class l {
@@ -1381,7 +1381,7 @@
             if (n.length) {
               console.log("Loading batch of App Info from Steam: ", n),
                 await this.m_CMInterface?.WaitUntilLoggedOn();
-              let o = D.w.Init(T._z);
+              let o = C.w.Init(T._z);
               o.Body().set_language((0, B.sfN)(p.TS.LANGUAGE));
               const i = 50;
               for (; n.length > 0; ) {
@@ -1552,7 +1552,7 @@
                 ((r.m_fetching = this.m_CMInterface
                   .WaitUntilLoggedOn()
                   .then(() => {
-                    let n = D.w.Init(T.zQ);
+                    let n = C.w.Init(T.zQ);
                     return (
                       n.Body().set_appid(r.GetAppID()),
                       n.Body().set_language(p.TS.LANGUAGE),
@@ -1583,7 +1583,7 @@
         }
         A([t.XI], l.prototype, "OnGetAppsResponse", 1),
           A([t.XI], l.prototype, "OnRichPresenceLocUpdate", 1);
-        const C = new l();
+        const D = new l();
       },
       84676: (te, se, s) => {
         "use strict";
@@ -1592,7 +1592,7 @@
           Gg: () => G,
           Ow: () => M,
           Sq: () => ce,
-          YM: () => C,
+          YM: () => D,
           eR: () => q,
           ik: () => T,
           mZ: () => A,
@@ -1602,7 +1602,7 @@
         var t = s(41735),
           B = s.n(t),
           S = s(90626),
-          D = s(72604),
+          C = s(72604),
           E = s(48156),
           p = s(30096),
           N = s(10142);
@@ -1691,7 +1691,7 @@
                   N.A.Get()
                     .QueueStoreItemRequest(u, r, oe)
                     .then((be) => {
-                      !Se?.token.reason && i.current === u && _(be == D.R), x();
+                      !Se?.token.reason && i.current === u && _(be == C.R), x();
                     })),
                 () => Se?.cancel("useStoreItemCache: unmounting")
               );
@@ -1857,7 +1857,7 @@
         function l(u, r, n) {
           return Z(u, EStoreItemType.k_EStoreItemType_Package, r, n);
         }
-        function C() {
+        function D() {
           S.useEffect(
             () => (
               N.A.Get().SetReturnUnavailableItems(!0),
@@ -1871,12 +1871,12 @@
         "use strict";
         s.d(se, { l: () => B });
         var t = s(98609);
-        function B(S, D) {
-          if (!(!S?.asset_url_format || typeof S[D] != "string"))
+        function B(S, C) {
+          if (!(!S?.asset_url_format || typeof S[C] != "string"))
             return (
               t.TS.BASE_URL_SHARED_CDN +
               "/store_item_assets/" +
-              S.asset_url_format.replace("${FILENAME}", S[D])
+              S.asset_url_format.replace("${FILENAME}", S[C])
             );
         }
       },
@@ -1886,7 +1886,7 @@
         var t = s(7850),
           B = s(90626),
           S = s(88003),
-          D = s(18210),
+          C = s(18210),
           E = s(3166),
           p = s(87242),
           N = s(74974),
@@ -1918,14 +1918,14 @@
               redirectURL: window.location.href,
             }),
             window,
-            { strTitle: (0, D.we)("#Login_SignInTitle") },
+            { strTitle: (0, C.we)("#Login_SignInTitle") },
           );
         }
         function G(Z, K) {
           (0, S.pg)(
             (0, t.jsx)(j, { ownerWin: window, redirectURL: Z, guestOption: K }),
             window,
-            { strTitle: (0, D.we)("#Login_SignInTitle") },
+            { strTitle: (0, C.we)("#Login_SignInTitle") },
           );
         }
         function A(Z) {
@@ -1935,12 +1935,12 @@
                 new q.D(E.TS.WEBAPI_BASE_URL),
               ).GetAnonymousServiceTransport(),
             ),
-            [C, u] = (0, B.useState)(!1),
+            [D, u] = (0, B.useState)(!1),
             r = (n) => {
               n == p.wI.k_PrimaryDomainFail ? u(!0) : window.location.assign(K);
             };
           return (0, t.jsx)("div", {
-            children: C
+            children: D
               ? (0, t.jsx)(N.Fn, {})
               : (0, t.jsx)(N.YN, {
                   autoFocus: !0,
@@ -1960,7 +1960,7 @@
         var t = s(7850),
           B = s(41735),
           S = s.n(B),
-          D = s(3166),
+          C = s(3166),
           E = s(80902);
         function p(b, R, Q, z, Y) {
           return (0, E.I)(N(b, R, Q, z, Y));
@@ -1972,7 +1972,7 @@
               let oe = {
                 appids: b.join(","),
                 appweights: R.join(","),
-                sessionid: (0, D.KC)(),
+                sessionid: (0, C.KC)(),
                 selffactor: Q,
                 popularity: Y ? 0 : z,
                 scoperange: Y ? 100 : 0,
@@ -1980,7 +1980,7 @@
                 scopedecaystrength: Y ? 20 : 0,
               };
               const Se = await S().get(
-                `${D.TS.STORE_BASE_URL}gameexplorer/exploreapplist`,
+                `${C.TS.STORE_BASE_URL}gameexplorer/exploreapplist`,
                 { params: oe, withCredentials: !0, timeout: 1e4 },
               );
               if (Se.data)
@@ -2003,9 +2003,9 @@
           return {
             queryKey: ["gamemixerplayed"],
             queryFn: async () => {
-              let b = { sessionid: (0, D.KC)() };
+              let b = { sessionid: (0, C.KC)() };
               const R = await S().get(
-                `${D.TS.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+                `${C.TS.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
                 { params: b, withCredentials: !0, timeout: 1e4 },
               );
               if (R.data) return R.data;
@@ -2025,7 +2025,7 @@
           K = s(36707),
           v = s(18210),
           l = s(41526),
-          C = s(19298),
+          D = s(19298),
           u = s(84676),
           r = s(47385),
           n = s(96117),
@@ -2090,16 +2090,16 @@
             method: "default",
             feature: "capsule",
             children: (0, t.jsx)(q.Y, {
-              children: (0, t.jsx)(C.Z, {
+              children: (0, t.jsx)(D.Z, {
                 className: (0, K.A)(
                   l.GameExplorerApp,
                   be.isFetching && l.Refreshing,
                 ),
-                children: (0, t.jsxs)(C.Z, {
+                children: (0, t.jsxs)(D.Z, {
                   className: l.GameExplorerContainer,
                   children: [
                     (0, t.jsx)(O, {}),
-                    !D.iA.steamid && (0, t.jsx)(w, {}),
+                    !C.iA.steamid && (0, t.jsx)(w, {}),
                     (0, t.jsx)(W, { state: Q, onChange: Pe }),
                     be.data &&
                       (0, t.jsx)(k, {
@@ -2114,14 +2114,14 @@
           });
         }
         function O() {
-          return (0, t.jsxs)(C.Z, {
+          return (0, t.jsxs)(D.Z, {
             className: l.GameExplorerHeader,
             children: [
-              (0, t.jsx)(C.Z, {
+              (0, t.jsx)(D.Z, {
                 className: l.GameExplorerTitle,
                 children: "Game Explorer",
               }),
-              (0, t.jsx)(C.Z, {
+              (0, t.jsx)(D.Z, {
                 className: l.GameExplorerDescription,
                 children: "Explore and Mix Games",
               }),
@@ -2203,23 +2203,23 @@
                 ee.length > 1)
               ) {
                 const X = ee
-                    .map((De) => (De.nAppID != V ? De.nWeight : null))
-                    .filter((De) => De != null),
-                  He = X.reduce((De, Re) => De + Re, 0);
+                    .map((Ce) => (Ce.nAppID != V ? Ce.nWeight : null))
+                    .filter((Ce) => Ce != null),
+                  He = X.reduce((Ce, Re) => Ce + Re, 0);
                 let we = (100 - le - He) / (ee.length - (ue ? 0 : 1));
                 const Fe = X.reduce(
-                    (De, Re) => De + Math.max(0, Re + we - 100),
+                    (Ce, Re) => Ce + Math.max(0, Re + we - 100),
                     0,
                   ),
-                  ke = X.reduce((De, Re) => De + Math.min(0, Re + we), 0);
+                  ke = X.reduce((Ce, Re) => Ce + Math.min(0, Re + we), 0);
                 (we += Math.floor(Fe / (ee.length - 1))),
                   (we += Math.floor(ke / (ee.length - 1))),
-                  (ee = ee.map((De) => ({
-                    nAppID: De.nAppID,
+                  (ee = ee.map((Ce) => ({
+                    nAppID: Ce.nAppID,
                     nWeight:
-                      De.nAppID == V
+                      Ce.nAppID == V
                         ? le
-                        : Math.max(0, Math.min(100, De.nWeight + we)),
+                        : Math.max(0, Math.min(100, Ce.nWeight + we)),
                   }))),
                   b.onChange({ ...b.state, arrSelectedAppInfos: ee }, me);
               } else b.onChange({ ...b.state, arrSelectedAppInfos: ee }, me);
@@ -2431,7 +2431,7 @@
               });
         }
         function w() {
-          return (0, t.jsxs)(C.Z, {
+          return (0, t.jsxs)(D.Z, {
             className: l.PersonalCalendarLoginPrompt,
             children: [
               (0, v.we)("#PersonalCalendar_LoginPrompt"),
@@ -2569,7 +2569,7 @@
         var t = s(7850),
           B = s(58732),
           S = s(85528),
-          D = s(3166),
+          C = s(3166),
           E = s(14947),
           p = s(30096),
           N = s(41735),
@@ -2592,7 +2592,7 @@
           }
           Init(e) {
             S.Vw.Init(e);
-            const a = `${D.TS.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
+            const a = `${C.TS.STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames`;
             $()
               .get(a)
               .then((g) => {
@@ -2606,10 +2606,10 @@
           async ComputePathBetweenApps(e, a, g, h, L, P, ae) {
             const ge = Math.acos(g);
             let fe = async (Oe) => {
-                let _e = await this.GetNeighbors(Oe),
+                let Ee = await this.GetNeighbors(Oe),
                   je = [];
-                for (let Ie = 0; Ie < _e.length; Ie++) {
-                  const pe = _e[Ie];
+                for (let Ie = 0; Ie < Ee.length; Ie++) {
+                  const pe = Ee[Ie];
                   if (
                     (!h || je.length > h) &&
                     (pe.cost > ge || (L && je.length >= L))
@@ -2619,26 +2619,26 @@
                 }
                 return je;
               },
-              Ce = await new M(
+              De = await new M(
                 fe,
                 this.EstimateCosts,
-                (Oe, _e) => Oe == _e,
+                (Oe, Ee) => Oe == Ee,
                 ae,
               ).FindPath(e, a, P || 10);
-            if (Ce.path) {
+            if (De.path) {
               let Oe = [],
-                _e = 0;
-              for (let je = 0; je < Ce.path.length; je++) {
-                const Ie = Ce.path[je],
-                  pe = Ie.cost - _e;
-                (_e = Ie.cost),
+                Ee = 0;
+              for (let je = 0; je < De.path.length; je++) {
+                const Ie = De.path[je],
+                  pe = Ie.cost - Ee;
+                (Ee = Ie.cost),
                   Oe.push({ appid: Ie.node, similarity: Math.cos(pe) });
               }
               return Oe;
             } else throw new Error("Unable to compute path.");
           }
           async GetNeighbors(e) {
-            const a = `${D.TS.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`;
+            const a = `${C.TS.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`;
             let g = await $().get(a),
               h = [];
             if (g.data && g.data.appid == e)
@@ -2650,7 +2650,7 @@
             return h;
           }
           async EstimateCosts(e, a) {
-            const g = `${D.TS.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${a}&${e.map((L) => "appid[]=" + L.toString()).join("&")}`;
+            const g = `${C.TS.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${a}&${e.map((L) => "appid[]=" + L.toString()).join("&")}`;
             let h = await $().get(g);
             if (h.data && h.data.similarity_scores)
               return h.data.similarity_scores.map((L) =>
@@ -2751,7 +2751,7 @@
               (this.m_fnIterationCallback = h);
           }
           async FindPath(e, a, g) {
-            let h = new U((Ce, Oe) => Ce.cost - Oe.cost),
+            let h = new U((De, Oe) => De.cost - Oe.cost),
               L = new Set();
             h.Push({ node: e, cost: 0 });
             let P = new Map(),
@@ -2761,42 +2761,42 @@
             P.set(e, fe), ae.set(e, 0);
             let Ne = 0;
             for (; h.length > 0 && Ne < g; ) {
-              let Ce = h.Pop();
-              if (this.m_fnEquality(Ce.node, a)) {
-                let _e = [],
-                  je = Ce.node;
-                for (; ge.has(je); ) _e.push(je), (je = ge.get(je));
+              let De = h.Pop();
+              if (this.m_fnEquality(De.node, a)) {
+                let Ee = [],
+                  je = De.node;
+                for (; ge.has(je); ) Ee.push(je), (je = ge.get(je));
                 let Ie = [];
-                for (let pe = _e.length - 1; pe >= 0; pe--)
-                  Ie.push({ node: _e[pe], cost: ae.get(_e[pe]) });
+                for (let pe = Ee.length - 1; pe >= 0; pe--)
+                  Ie.push({ node: Ee[pe], cost: ae.get(Ee[pe]) });
                 return { path: Ie };
               }
-              L.add(Ce.node);
-              let Oe = await this.m_fnGetNeighbors(Ce.node);
+              L.add(De.node);
+              let Oe = await this.m_fnGetNeighbors(De.node);
               if (Oe.length > 0) {
-                let _e = await this.m_fnEstimateCosts(
+                let Ee = await this.m_fnEstimateCosts(
                   Oe.map((Ie) => Ie.node),
                   a,
                 );
-                if (_e.length != Oe.length)
+                if (Ee.length != Oe.length)
                   return (
                     console.warn(
                       "Failed to fetch expected number of cost estimates. Failing pathfinding.",
                     ),
                     {}
                   );
-                let je = ae.get(Ce.node);
+                let je = ae.get(De.node);
                 for (let Ie = 0; Ie < Oe.length; Ie++) {
                   const pe = Oe[Ie];
                   let Be = je + pe.cost;
                   if (
                     (!ae.has(pe.node) || Be < ae.get(pe.node)) &&
-                    (ge.set(pe.node, Ce.node),
+                    (ge.set(pe.node, De.node),
                     ae.set(pe.node, Be),
-                    P.set(pe.node, pe.cost + _e[Ie]),
+                    P.set(pe.node, pe.cost + Ee[Ie]),
                     !L.has(pe.node))
                   ) {
-                    const Ke = pe.cost + _e[Ie];
+                    const Ke = pe.cost + Ee[Ie];
                     let Je = h.FindElement((It) => It.node == pe.node);
                     Je
                       ? Je.element.cost > Ke &&
@@ -2820,7 +2820,7 @@
           K = s(92757),
           v = s(62139),
           l = s(16412),
-          C = s(32093),
+          D = s(32093),
           u = s(75844),
           r = s(36707),
           n = Object.defineProperty,
@@ -2869,9 +2869,9 @@
             window.clearTimeout(this.m_currentRequest),
               (this.m_currentRequest = window.setTimeout(async () => {
                 const g = {
-                    cc: D.TS.COUNTRY,
-                    l: D.TS.LANGUAGE,
-                    realm: C.TU.k_ESteamRealmGlobal,
+                    cc: C.TS.COUNTRY,
+                    l: C.TS.LANGUAGE,
+                    realm: D.TU.k_ESteamRealmGlobal,
                     origin: self.origin,
                     f: "jsonfull",
                     term: a.replace(" ", "+"),
@@ -2879,7 +2879,7 @@
                     excluded_tags: [],
                     excluded_content_descriptors: [],
                   },
-                  h = `${D.TS.STORE_BASE_URL}search/suggest`,
+                  h = `${C.TS.STORE_BASE_URL}search/suggest`,
                   L = await $().get(h, { params: g, withCredentials: !0 });
                 let P;
                 L?.data?.length
@@ -3024,7 +3024,7 @@
             ) {
               const e = this.ref_app_a.current.state.appid,
                 a = this.ref_app_b.current.state.appid,
-                g = `${D.TS.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${a}`;
+                g = `${C.TS.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${e}&appid[]=${a}`;
               $()
                 .get(g)
                 .then((h) => {
@@ -3093,7 +3093,7 @@
                 (this.selected_app = d),
                 this.app_selector_ref.current &&
                   this.app_selector_ref.current.SetSelectedApp(d);
-              const a = `${D.TS.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${d}&model=${this.similarity_model}`;
+              const a = `${C.TS.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${d}&model=${this.similarity_model}`;
               $()
                 .get(a)
                 .then((g) => {
@@ -3249,7 +3249,7 @@
           RecomputeExpression() {
             if (this.operands.length == 0) return;
             const d = this.operands.map((a) => "appid[]=" + a.app.toString()),
-              e = `${D.TS.STORE_BASE_URL}labs/ajaxgetappvectors?${d.join("&")}&model=${this.similarity_model}`;
+              e = `${C.TS.STORE_BASE_URL}labs/ajaxgetappvectors?${d.join("&")}&model=${this.similarity_model}`;
             $()
               .get(e)
               .then((a) => {
@@ -3276,7 +3276,7 @@
                         .map((fe) => fe / L)
                         .map((fe) => "x[]=" + fe)
                         .join("&"),
-                      ge = `${D.TS.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${ae}&model=${this.similarity_model}`;
+                      ge = `${C.TS.STORE_BASE_URL}labs/ajaxgetmostsimilarappstovector?${ae}&model=${this.similarity_model}`;
                     $()
                       .get(ge)
                       .then((fe) => {
@@ -4228,17 +4228,17 @@
             this.m_SteamInterface = e;
           }
           LoadPlaytimeClusters(e, a, g, h) {
-            return new De(this.m_SteamInterface, e, a, g, h);
+            return new Ce(this.m_SteamInterface, e, a, g, h);
           }
         }
-        class De {
+        class Ce {
           m_callbacksLoaded = new W.lu();
           m_rgClusters;
           constructor(e, a, g, h, L) {
             const P = J.w.Init(ee);
             (0, we.rV)(P),
               L && (0, we.Bn)(P, L),
-              P.Body().set_steamid(a || D.iA.steamid),
+              P.Body().set_steamid(a || C.iA.steamid),
               h && P.Body().set_clusters_to_return(h),
               P.Body().set_sort(g),
               He.IdentifyClustersFromPlaytime(e.GetServiceTransport(), P).then(
@@ -4295,7 +4295,7 @@
           );
         }
         var Qe = s(85599),
-          Ee = s(18210),
+          _e = s(18210),
           Ge = s(21082),
           st = s(84676),
           Ve = s(25792),
@@ -4338,19 +4338,19 @@
         };
         function rt(d) {
           const { SimilarityStore: e } = d,
-            [a, g] = A.useState(D.iA.steamid),
+            [a, g] = A.useState(C.iA.steamid),
             [h, L] = A.useState("10"),
             [P, ae] = A.useState(Y),
             ge = A.useCallback((Be) => g(Be.currentTarget.value), [g]),
             fe = A.useCallback((Be) => L(Be.currentTarget.value), [L]),
             Ne = A.useCallback((Be) => ae(Be.data), [ae]);
-          let Ce = !1;
-          const Oe = A.useRef(D.iA.steamid),
-            _e = a && new H.b(a);
-          _e &&
-            _e.BIsValid() &&
-            _e.BIsIndividualAccount() &&
-            ((Oe.current = _e.ConvertTo64BitString()), (Ce = !0));
+          let De = !1;
+          const Oe = A.useRef(C.iA.steamid),
+            Ee = a && new H.b(a);
+          Ee &&
+            Ee.BIsValid() &&
+            Ee.BIsIndividualAccount() &&
+            ((Oe.current = Ee.ConvertTo64BitString()), (De = !0));
           let je;
           h && !isNaN(parseInt(h)) && (je = parseInt(h));
           const Ie = A.useMemo(() => {
@@ -4375,7 +4375,7 @@
                     type: "text",
                     value: a,
                     onChange: ge,
-                    description: !Ce && "Invalid SteamID",
+                    description: !De && "Invalid SteamID",
                   }),
                   (0, t.jsx)(l.pd, {
                     label: "Clusters to return (Set to blank for all clusters)",
@@ -4391,7 +4391,7 @@
                   }),
                 ],
               }),
-              Ce && !pe && (0, t.jsx)(Qe.t, {}),
+              De && !pe && (0, t.jsx)(Qe.t, {}),
               pe && (0, t.jsx)(ot, { rgPlaytimeClusters: pe }),
             ],
           });
@@ -4439,7 +4439,7 @@
                           children: [
                             (0, t.jsx)("b", { children: "Last Played:" }),
                             " ",
-                            (0, Ee.$z)(e.rtLastPlayed),
+                            (0, _e.$z)(e.rtLastPlayed),
                             " ",
                           ],
                         }),
@@ -4537,7 +4537,7 @@
         var Ye = s(36118),
           ut = s(6336),
           ne = s.n(ut),
-          $e = s(73011),
+          $e = s(30178),
           mt = s(27066),
           ht = Object.defineProperty,
           pt = Object.getOwnPropertyDescriptor,
@@ -4669,7 +4669,7 @@
           UpdateLoginResult(e) {
             if (!e) {
               console.log("Login timeout"),
-                (this.m_strErrorMessage = (0, Ee.we)(
+                (this.m_strErrorMessage = (0, _e.we)(
                   "#ConnectionTrouble_FailedToConnect",
                 ));
               return;
@@ -4691,7 +4691,7 @@
                 ? (this.UpdateCaptchaURL(qe),
                   this.m_eCurrentStep == 3 &&
                     !this.m_strErrorMessage &&
-                    ((this.m_strErrorMessage = (0, Ee.we)(
+                    ((this.m_strErrorMessage = (0, _e.we)(
                       "#MobileLogin_IncorrectSteamGuard",
                     )),
                     (this.m_eSteamGuardCodeError = 1),
@@ -4706,7 +4706,7 @@
                         (this.m_userFields.emailSteamID = e.emailsteamid),
                       this.m_eCurrentStep == 2 &&
                         !this.m_strErrorMessage &&
-                        ((this.m_strErrorMessage = (0, Ee.we)(
+                        ((this.m_strErrorMessage = (0, _e.we)(
                           "#MobileLogin_IncorrectSteamGuard",
                         )),
                         (this.m_eSteamGuardCodeError = 1),
@@ -4878,7 +4878,7 @@
                 children: [
                   (0, t.jsx)("div", {
                     className: ne().SigninTitle,
-                    children: (0, Ee.we)("#Login_SignInTitle"),
+                    children: (0, _e.we)("#Login_SignInTitle"),
                   }),
                   (0, t.jsxs)("form", {
                     className: ne().AccountPasswordForm,
@@ -4887,7 +4887,7 @@
                       (0, t.jsx)(l.pd, {
                         autoFocus: this.props.autoFocus,
                         className: (0, r.A)(ne().AccountNameLabel, e),
-                        label: (0, Ee.we)("#Login_AccountName"),
+                        label: (0, _e.we)("#Login_AccountName"),
                         type: "text",
                         value: d.GetUserName(),
                         focusOnMount: !0,
@@ -4896,7 +4896,7 @@
                       }),
                       (0, t.jsx)(l.pd, {
                         className: (0, r.A)(ne().PasswordDots, a),
-                        label: (0, Ee.we)("#Login_Password"),
+                        label: (0, _e.we)("#Login_Password"),
                         type: "password",
                         autoComplete: "off",
                         maxLength: 64,
@@ -4906,7 +4906,7 @@
                       }),
                       (0, t.jsx)(l.Yh, {
                         className: ne().RememberMeCheck,
-                        label: (0, Ee.we)("#Login_RememberMe"),
+                        label: (0, _e.we)("#Login_RememberMe"),
                         disabled: !1,
                         onChange: () => this.OnChangeRememberPass,
                         checked: d.GetRememberPassword(),
@@ -4914,7 +4914,7 @@
                       d.GetCaptchaURL() && (0, t.jsx)(ze, { manager: d }),
                       (0, t.jsx)(l.jn, {
                         disabled: this.props.manager.IsRequestInFlight(),
-                        children: (0, Ee.we)(
+                        children: (0, _e.we)(
                           "#Login_SignIn",
                         ).toLocaleUpperCase(),
                       }),
@@ -4922,8 +4922,8 @@
                   }),
                   (0, t.jsx)("a", {
                     className: ne().NeedHelpLink,
-                    href: D.TS.HELP_BASE_URL,
-                    children: (0, Ee.we)("#Login_ForgotPassword"),
+                    href: C.TS.HELP_BASE_URL,
+                    children: (0, _e.we)("#Login_ForgotPassword"),
                   }),
                   (0, t.jsx)("div", { className: ne().LoginCreateSeperator }),
                   (0, t.jsxs)("div", {
@@ -4931,13 +4931,13 @@
                     children: [
                       (0, t.jsx)("div", {
                         className: ne().SteamUpsell,
-                        children: (0, Ee.we)("#Login_NoSteamAccount"),
+                        children: (0, _e.we)("#Login_NoSteamAccount"),
                       }),
                       (0, t.jsx)("div", {
                         className: ne().CreateAccountLink,
                         children: (0, t.jsx)("a", {
-                          href: `${D.TS.STORE_BASE_URL}join/`,
-                          children: (0, Ee.we)("#Login_CreateAccount"),
+                          href: `${C.TS.STORE_BASE_URL}join/`,
+                          children: (0, _e.we)("#Login_CreateAccount"),
                         }),
                       }),
                     ],
@@ -4975,6 +4975,7 @@
                           children: (0, t.jsx)("img", {
                             className: ne().CaptchaImage,
                             src: d.GetCaptchaURL(),
+                            alt: (0, _e.we)("#MobileLogin_CaptchaVerification"),
                           }),
                         }),
                         (0, t.jsx)(l.pd, {
@@ -4989,15 +4990,16 @@
                     }),
                     (0, t.jsx)("div", {
                       className: ne().ErrorMessage,
-                      children: (0, Ee.we)("#Login_CaptchaVerification"),
+                      children: (0, _e.we)("#Login_CaptchaVerification"),
                     }),
                   ],
                 }),
                 (0, t.jsx)("div", {
-                  children: (0, t.jsx)("span", {
+                  children: (0, t.jsx)("button", {
+                    type: "button",
                     className: ne().RefreshCaptchaText,
                     onClick: this.RefreshCaptcha,
-                    children: (0, Ee.we)("#Login_RefreshCaptcha"),
+                    children: (0, _e.we)("#Login_RefreshCaptcha"),
                   }),
                 }),
               ],
@@ -5026,20 +5028,20 @@
             switch (this.props.authtype) {
               case Ae.TwoFactorCode:
                 (e = d.GetTwoFactorCode()),
-                  (a = (0, Ee.we)("#Login_Enter2FA")),
+                  (a = (0, _e.we)("#Login_Enter2FA")),
                   (h = (0, t.jsx)(Ye.kaY, {})),
-                  (g = (0, Ee.we)("#Login_Enter2FAHelp"));
+                  (g = (0, _e.we)("#Login_Enter2FAHelp"));
                 break;
               case Ae.EmailCode:
                 (e = d.GetEmailAuthCode()),
-                  (a = (0, Ee.PP)(
+                  (a = (0, _e.PP)(
                     "#Login_SentSteamguard",
                     (0, t.jsxs)("span", {
                       className: ne().Highlight,
                       children: ["@", d.GetEmailDomain()],
                     }),
                   )),
-                  (g = (0, Ee.we)("#Login_EnterSteamguard")),
+                  (g = (0, _e.we)("#Login_EnterSteamguard")),
                   (h = (0, t.jsx)(Ye.Lh2, {}));
                 break;
               default:
@@ -5048,7 +5050,7 @@
             return (0, t.jsxs)("div", {
               className: ne().AuthenticationPanel,
               children: [
-                (0, t.jsx)(l.JU, { children: (0, Ee.we)("#Login_SigningIn") }),
+                (0, t.jsx)(l.JU, { children: (0, _e.we)("#Login_SigningIn") }),
                 (0, t.jsx)("div", {
                   className: ne().SigningInAccountName,
                   children: d.GetUserName(),
@@ -5074,7 +5076,7 @@
                         }),
                         (0, t.jsx)(l.jn, {
                           disabled: this.props.manager.IsRequestInFlight(),
-                          children: (0, Ee.we)(
+                          children: (0, _e.we)(
                             "#Login_SteamguardSubmit",
                           ).toLocaleUpperCase(),
                         }),
@@ -5113,7 +5115,7 @@
         ];
         function _t(d) {
           const [e, a] = A.useState(!1),
-            g = D.iA.logged_in,
+            g = C.iA.logged_in,
             h = (0, xt.TR)();
           if (
             ((0, A.useEffect)(() => {
@@ -5186,7 +5188,7 @@
             children: [
               (0, t.jsx)("h3", { children: "Please login to view this page." }),
               (0, t.jsx)(Ze, {
-                baseURL: D.TS.STORE_BASE_URL,
+                baseURL: C.TS.STORE_BASE_URL,
                 onLoginComplete: () => window.location.reload(),
               }),
             ],
@@ -5199,8 +5201,8 @@
         var t = s(7850),
           B = s(29522),
           S = s(40358),
-          D = s(41735),
-          E = s.n(D),
+          C = s(41735),
+          E = s.n(C),
           p = s(90626),
           N = s(19681),
           $ = s(86390),
@@ -5357,7 +5359,7 @@
               })
             );
           },
-          C = (o) => {
+          D = (o) => {
             const { sale: i } = o;
             return (0, t.jsxs)("div", {
               className: M.RecommenderList,
@@ -5425,7 +5427,7 @@
                     (0, t.jsx)("div", { className: M.SubTitle, children: x }),
                   (0, t.jsx)("div", {
                     className: M.CreatorSales,
-                    children: i?.map((_) => (0, t.jsx)(C, { sale: _ }, _.url)),
+                    children: i?.map((_) => (0, t.jsx)(D, { sale: _ }, _.url)),
                   }),
                 ],
               })
@@ -5836,7 +5838,7 @@
         var t = s(92757),
           B = s(42891),
           S = s(90626),
-          D = s(29248),
+          C = s(29248),
           E = s(58584),
           p = s(81115),
           N = s(68841),
@@ -5851,7 +5853,7 @@
                 f[_] = arguments[_];
               return (
                 (c = n.call.apply(n, [this].concat(f)) || this),
-                (c.history = (0, D.zR)(c.props)),
+                (c.history = (0, C.zR)(c.props)),
                 c
               );
             }
@@ -5877,7 +5879,7 @@
                 f[_] = arguments[_];
               return (
                 (c = n.call.apply(n, [this].concat(f)) || this),
-                (c.history = (0, D.TM)(c.props)),
+                (c.history = (0, C.TM)(c.props)),
                 c
               );
             }
@@ -5896,7 +5898,7 @@
             return typeof o == "function" ? o(i) : o;
           },
           T = function (o, i) {
-            return typeof o == "string" ? (0, D.yJ)(o, null, null, i) : o;
+            return typeof o == "string" ? (0, C.yJ)(o, null, null, i) : o;
           },
           j = function (o) {
             return o;
@@ -5946,7 +5948,7 @@
                   href: H,
                   navigate: function () {
                     var k = q(f, O.location),
-                      w = (0, D.AO)(O.location) === (0, D.AO)(T(k)),
+                      w = (0, C.AO)(O.location) === (0, C.AO)(T(k)),
                       m = x || w ? y.replace : y.push;
                     m(k);
                   },
@@ -5963,7 +5965,7 @@
           },
           l = S.forwardRef;
         typeof l > "u" && (l = v);
-        function C() {
+        function D() {
           for (var n = arguments.length, o = new Array(n), i = 0; i < n; i++)
             o[i] = arguments[i];
           return o
@@ -6018,7 +6020,7 @@
               Q = !!(y ? y(R, ve) : R),
               z = typeof I == "function" ? I(Q) : I,
               Y = typeof J == "function" ? J(Q) : J;
-            Q && ((z = C(z, f)), (Y = (0, E.A)({}, Y, _)));
+            Q && ((z = D(z, f)), (Y = (0, E.A)({}, Y, _)));
             var oe = (0, E.A)(
               {
                 "aria-current": (Q && c) || null,

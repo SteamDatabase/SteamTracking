@@ -1511,11 +1511,11 @@
         (function (_) {
           const _ = Object.prototype.toString;
           function _(_) {
-            return typeof _ != "undefined";
+            return typeof _ < "u";
           }
           _.defined = _;
           function _(_) {
-            return typeof _ == "undefined";
+            return typeof _ > "u";
           }
           _.undefined = _;
           function _(_) {
@@ -1738,9 +1738,7 @@
             );
         }
         function _(_) {
-          return (
-            typeof _.insert != "undefined" && typeof _.replace != "undefined"
-          );
+          return typeof _.insert < "u" && typeof _.replace < "u";
         }
         function _(_) {
           const _ = _.languages.CompletionItemKind;
@@ -1966,15 +1964,14 @@
           return "children" in _;
         }
         function _(_) {
-          var _, _, _;
           return {
             name: _.name,
-            detail: (_ = _.detail) != null ? _ : "",
+            detail: _.detail ?? "",
             kind: _(_.kind),
             range: _(_.range),
             selectionRange: _(_.selectionRange),
-            tags: (_ = _.tags) != null ? _ : [],
-            children: ((_ = _.children) != null ? _ : []).map((_) => _(_)),
+            tags: _.tags ?? [],
+            children: (_.children ?? []).map((_) => _(_)),
           };
         }
         function _(_) {
@@ -2124,9 +2121,7 @@
                         start: _.startLine + 1,
                         end: _.endLine + 1,
                       };
-                      return (
-                        typeof _.kind != "undefined" && (_.kind = _(_.kind)), _
-                      );
+                      return typeof _.kind < "u" && (_.kind = _(_.kind)), _;
                     });
                 });
             }

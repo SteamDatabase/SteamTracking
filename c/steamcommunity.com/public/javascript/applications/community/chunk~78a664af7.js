@@ -28,18 +28,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EHelpRequestType ( " + _ + " )";
         }
@@ -97,13 +86,15 @@
         function _(_) {
           return "unknown ERefundSupportAction ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.quicktext_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 10, 11], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -224,16 +215,16 @@
           getClassName() {
             return "CSupportData_QuickText";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.content || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -311,16 +302,16 @@
           getClassName() {
             return "CSupportData_QuickTextContent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.quicktext_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -383,16 +374,16 @@
           getClassName() {
             return "CSupportAgents_GetQuickText_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.quicktext || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -448,16 +439,16 @@
           getClassName() {
             return "CSupportAgents_GetQuickText_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -530,16 +521,16 @@
           getClassName() {
             return "CHelpRequestLogs_UploadUserApplicationLog_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -592,16 +583,16 @@
           getClassName() {
             return "CHelpRequestLogs_UploadUserApplicationLog_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -654,16 +645,16 @@
           getClassName() {
             return "CHelpRequestLogs_GetApplicationLogDemand_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.request_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -716,9 +707,7 @@
           getClassName() {
             return "CHelpRequestLogs_GetApplicationLogDemand_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -775,7 +764,6 @@
           [_._]: [_._, _._, _._, _._, _._],
         };
         function _(_) {
-          var _;
           const [_, _] = (0, _.useState)(null),
             [_, _] = (0, _.useState)("main"),
             [_, _] = (0, _.useState)(!1),
@@ -792,11 +780,8 @@
                 ? (Date.now() / 1e3 - _.rtContentCreatedAt) / (30 * 86400)
                 : !1,
             _ =
-              (_ = _.subject.subject_type
-                ? _[_.subject.subject_type]
-                : void 0) != null
-                ? _
-                : [],
+              (_.subject.subject_type ? _[_.subject.subject_type] : void 0) ??
+              [],
             _ = _ || _ || _ || _ || _ || _ || _,
             _ = _(_.authorSteamID);
           let _ = _.Bhc;
@@ -811,23 +796,10 @@
           const _ = (0, _._)(_),
             _ = _(_, _);
           (0, _.useEffect)(() => {
-            var _, _, _, _, _, _, _;
             _(
-              (_ =
-                (_ =
-                  (_ =
-                    (_ = (_ = _.data) == null ? void 0 : _.quicktext) == null
-                      ? void 0
-                      : _.content) == null
-                    ? void 0
-                    : _.content) != null
-                  ? _
-                  : (_ = (_ = _.data) == null ? void 0 : _.english_reference) ==
-                      null
-                    ? void 0
-                    : _.content) != null
-                ? _
-                : "",
+              _.data?.quicktext?.content?.content ??
+                _.data?.english_reference?.content ??
+                "",
             );
           }, [_.data, _.data]);
           const _ = !1,
@@ -997,7 +969,7 @@
                                         ? null
                                         : parseInt(_.target.value),
                                     ),
-                                  value: _ != null ? _ : 0,
+                                  value: _ ?? 0,
                                   children: [
                                     (0, _.jsx)("option", {
                                       value: "0",
@@ -1069,7 +1041,7 @@
                                   ? null
                                   : parseInt(_.target.value),
                               ),
-                            value: _ != null ? _ : 0,
+                            value: _ ?? 0,
                             children: [
                               (0, _.jsx)("option", {
                                 value: "0",
@@ -1127,7 +1099,7 @@
                                 ? null
                                 : parseInt(_.target.value),
                             ),
-                          value: _ != null ? _ : -1,
+                          value: _ ?? -1,
                           children: [
                             (0, _.jsx)("option", {
                               value: "-1",
@@ -1351,11 +1323,7 @@
         function _(_) {
           const { subject: _ } = _,
             _ = (0, _.useMemo)(() => {
-              var _;
-              const _ = (0, _._)(
-                (_ = _ == null ? void 0 : _.reports) != null ? _ : [],
-                (_) => _.report_reason,
-              );
+              const _ = (0, _._)(_?.reports ?? [], (_) => _.report_reason);
               return _.sort((_, _) => _[1] - _[1]), _;
             }, [_.reports]);
           return _.length === 0
@@ -1382,7 +1350,6 @@
               });
         }
         function _(_) {
-          var _, _, _;
           const {
               sanctionMutation: _,
               acquitMutation: _,
@@ -1393,7 +1360,7 @@
               authorSteamID: _,
               onClose: _,
             } = _,
-            _ = _ == null ? void 0 : _.reported_content_id,
+            _ = _?.reported_content_id,
             [_, _] = (0, _.useState)("main"),
             _ = [
               {
@@ -1436,7 +1403,7 @@
               _.time_resolved && !_.time_disputed && _++,
                 _.time_dispute_resolved && _++;
           const _ =
-              !!(_ != null && _.reported_content_id) &&
+              !!_?.reported_content_id &&
               !_.owner_dispute_time &&
               _.resolved === _._,
             _ = _ !== void 0 && !!_.owner_dispute_time;
@@ -1468,21 +1435,11 @@
                                   size: "3",
                                   contrast: "description",
                                   children: [
-                                    (_ =
-                                      _ == null
-                                        ? void 0
-                                        : _.unresolved_report_count) != null
-                                      ? _
-                                      : 0,
+                                    _?.unresolved_report_count ?? 0,
                                     " unresolved / ",
                                     _,
                                     " resolved / ",
-                                    (_ =
-                                      _ == null
-                                        ? void 0
-                                        : _.unresolved_dispute_count) != null
-                                      ? _
-                                      : 0,
+                                    _?.unresolved_dispute_count ?? 0,
                                     " disputed / ",
                                     _,
                                     " disputes resolved",
@@ -1563,18 +1520,14 @@
                         !!_ &&
                         (0, _.jsx)(_._, {
                           reportedContentID: _,
-                          eCurrentLevel:
-                            _ == null ? void 0 : _.required_moderator_level,
+                          eCurrentLevel: _?.required_moderator_level,
                           onClose: () => _("main"),
                         }),
                       _ === "sanction" &&
                         (0, _.jsx)(_, {
-                          subject:
-                            _ != null
-                              ? _
-                              : {
-                                  subject_type: _,
-                                },
+                          subject: _ ?? {
+                            subject_type: _,
+                          },
                           clanSteamID: _,
                           authorSteamID: _,
                           sanctionMutation: _,
@@ -1592,12 +1545,7 @@
                         (0, _.jsx)(_, {
                           reportedContentID: _,
                           onClose: () => _("main"),
-                          currentDetails:
-                            (_ =
-                              _ == null ? void 0 : _.owner_dispute_details) !=
-                            null
-                              ? _
-                              : "",
+                          currentDetails: _?.owner_dispute_details ?? "",
                         }),
                     ],
                   }),
@@ -1726,13 +1674,12 @@
         function _(_) {
           const { subject: _, onClose: _ } = _,
             _ =
-              !!(_ != null && _.reported_content_id) &&
+              !!_?.reported_content_id &&
               _.resolved !== _._ &&
               (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
             _ = (0, _._)(),
             _ = async () => {
-              _ != null &&
-                _.reported_content_id &&
+              _?.reported_content_id &&
                 (await _.mutateAsync({
                   reportedContentID: _.reported_content_id,
                 }),
@@ -1956,15 +1903,11 @@
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
-            [_, _] = (0, _.useState)(() => {
-              var _;
-              return (
+            [_, _] = (0, _.useState)(
+              () =>
                 _ ||
-                (!_ && (0, _._)(_, "tab") && (_ = (0, _._)(_, "tab")) != null
-                  ? _
-                  : "")
-              );
-            });
+                (!_ && (0, _._)(_, "tab") ? ((0, _._)(_, "tab") ?? "") : ""),
+            );
           (0, _.useEffect)(() => {
             if (!_.bDisableRouting && _) {
               const _ = (0, _._)(_, "tab");
@@ -1975,16 +1918,16 @@
               (_) => {
                 _(_.key),
                   _ || (0, _._)(_, "tab", _.key),
-                  _ == null || _(_.key),
+                  _?.(_.key),
                   _.onClick && _.onClick(_);
               },
               [_, _, _],
             ),
             _ = _.filter((_) => !_.hidden);
           if (!_.length) return null;
-          const _ = _ != null ? _ : _,
+          const _ = _ ?? _,
             _ = _.find((_) => _.key === _) || _[0],
-            _ = _ ? (_ != null ? _ : _[0].key) : void 0,
+            _ = _ ? (_ ?? _[0].key) : void 0,
             _ = (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {

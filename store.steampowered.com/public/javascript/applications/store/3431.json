@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "互动元素",
     "GameRating_OnlineMusicNotice": "未经 ESRB 分级的在线音乐",
     "GameRating_OnlineInteractionsNotice": "未经 ESRB 分级的在线互动",
-    "GameRating_ContentCategoryDescriptor_64": "带过滤的游戏内聊天"
+    "GameRating_ContentCategoryDescriptor_64": "带过滤的游戏内聊天",
+    "GameRating_ContentCategories_Title": "内容",
+    "GameRating_Ratings_Title": "分级"
 }

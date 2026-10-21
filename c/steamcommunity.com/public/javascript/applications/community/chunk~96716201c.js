@@ -4,24 +4,24 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.module(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = (0, _._)();
           return (0, _._)({
@@ -46,7 +46,6 @@
           return (0, _._)({
             queryKey: ["UserPointBalance"],
             queryFn: async () => {
-              var _, _;
               if (!_._.logged_in) throw _._;
               const _ = _._.steamid,
                 _ = _._.Init(_._);
@@ -54,12 +53,7 @@
               let _ = await _._.GetSummary(_, _);
               if (_.GetEResult() == _._)
                 return _._.fromString(
-                  (_ =
-                    (_ = _.Body().toObject().summary) == null
-                      ? void 0
-                      : _.points) != null
-                    ? _
-                    : "0",
+                  _.Body().toObject().summary?.points ?? "0",
                 );
               throw _.GetEResult();
             },
@@ -70,13 +64,12 @@
           return (0, _._)({
             queryKey: ["AwardsConfiguration"],
             queryFn: async () => {
-              var _;
               const _ = _._.Init(_._);
               _.Body().set_elanguage((0, _.sfN)(_._.LANGUAGE));
               let _ = await _._.GetReactionConfig(_, _);
               if (_.GetEResult() == _._) {
                 const _ = new Map();
-                let _ = (_ = _.Body().toObject().reactions) != null ? _ : [];
+                let _ = _.Body().toObject().reactions ?? [];
                 for (const _ of _) _.reactionid && _.set(_.reactionid, _);
                 return _;
               } else throw _.GetEResult();
@@ -98,18 +91,18 @@
             enabled: _,
           });
         }
-        var module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid");
-        const module = 8e3,
-          module = 200;
-        var module = ((_) => (
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 8e3,
+          _ = 200;
+        var _ = ((_) => (
           (_[(_.Default = 0)] = "Default"),
           (_[(_.Gold = 1)] = "Gold"),
           (_[(_.LNY2020 = 2)] = "LNY2020"),
@@ -210,7 +203,7 @@
             }),
           };
         }
-        const module = (_, _) => {
+        const _ = (_, _) => {
             const { anim: _ } = (0, _._)({
               anim: 1,
               from: {
@@ -230,19 +223,19 @@
               };
             }, [_, _, _]);
           },
-          module = {
+          _ = {
             position: "absolute",
             left: "50%",
             top: 0,
           },
-          module = {
+          _ = {
             ..._,
             width: 10,
             height: 5,
             borderWidth: 1,
             borderColor: "black",
           },
-          module = ({ eType: _ }) => {
+          _ = ({ eType: _ }) => {
             const _ = _ == 1,
               _ = _ == 2,
               [_, _] = _();
@@ -323,14 +316,14 @@
               ],
             });
           },
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.div, {
               style: {
                 ..._,
                 ..._,
               },
             }),
-          module = ({ style: _ }) => {
+          _ = ({ style: _ }) => {
             const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
               _ = _[_];
             return (0, _.jsx)(_, {
@@ -341,7 +334,7 @@
               },
             });
           },
-          module = ({ style: _ }) => {
+          _ = ({ style: _ }) => {
             const [_] = (0, _.useState)(Math.floor(Math.random() * _.length)),
               _ = _[_];
             return (0, _.jsx)(_, {
@@ -352,7 +345,7 @@
               },
             });
           },
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 48 102",
               fill: "none",
@@ -369,7 +362,7 @@
                 fill: "#F7D51E",
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsxs)(_._.svg, {
               viewBox: "0 0 50 39",
               fill: "none",
@@ -390,7 +383,7 @@
                 }),
               ],
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 68 69",
               fill: "none",
@@ -408,7 +401,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 48 48",
               fill: "none",
@@ -425,7 +418,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
@@ -443,7 +436,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
@@ -461,7 +454,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
@@ -479,7 +472,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 80 620",
               fill: "none",
@@ -496,7 +489,7 @@
                 fill: _.fill,
               }),
             }),
-          module = ({ style: _ }) =>
+          _ = ({ style: _ }) =>
             (0, _.jsx)(_._.svg, {
               viewBox: "0 0 203 295",
               fill: "none",
@@ -513,7 +506,7 @@
                 fill: _.fill,
               }),
             }),
-          module = [
+          _ = [
             _,
             _,
             _,
@@ -554,7 +547,7 @@
                 }),
               }),
           ],
-          module = [
+          _ = [
             ({ style: _ }) =>
               (0, _.jsxs)(_._.svg, {
                 xmlns: "http://www.w3.org/2000/svg",
@@ -620,31 +613,22 @@
             }, []);
           return [_, _];
         }
-        var module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid");
-        const module = (_) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_) => {
           const { className: _, ..._ } = _;
           return (0, _.jsx)(_._, {
             className: (0, _._)(_, _.UnstyledButton),
             ..._,
           });
         };
-        var module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = Object.defineProperty,
-          module = Object.getOwnPropertyDescriptor,
-          module = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          module = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -653,8 +637,7 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          module = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          module = ((_) => (
+          _ = ((_) => (
             (_[(_.SELECTING = 0)] = "SELECTING"),
             (_[(_.CONFIRM = 1)] = "CONFIRM"),
             (_[(_.SUBMITTING = 2)] = "SUBMITTING"),
@@ -663,7 +646,7 @@
             (_[(_.LOADING_ERROR = 5)] = "LOADING_ERROR"),
             _
           ))(_ || {});
-        const module = (_) =>
+        const _ = (_) =>
           (0, _.jsx)("svg", {
             viewBox: "0 0 24 24",
             fill: "none",
@@ -707,16 +690,14 @@
             });
           }
         }
-        _([_.module], _.prototype, "handleMouseOver", 1),
-          _([_.module], _.prototype, "handleMouseOut", 1);
+        _([_._], _.prototype, "handleMouseOver", 1),
+          _([_._], _.prototype, "handleMouseOut", 1);
         function _(_, _, _) {
           let _ = [];
           return (
             _.forEach(function (_) {
-              var _, _;
               if (
-                (_ = _.valid_target_types) != null &&
-                _.includes(_) &&
+                _.valid_target_types?.includes(_) &&
                 !(!_.purchaseable || !_.reactionid)
               )
                 switch (_) {
@@ -725,8 +706,7 @@
                     break;
                   case _._._:
                     _ !== void 0 &&
-                      (_ = _.valid_ugc_types) != null &&
-                      _.includes(_) &&
+                      _.valid_ugc_types?.includes(_) &&
                       _.push(_.reactionid);
                     break;
                   case _._._:
@@ -744,6 +724,9 @@
           );
         }
         class _ extends _.Component {
+          static defaultProps = {
+            targetType: _._._,
+          };
           constructor(_) {
             super(_),
               (window.fnLoyalty_ShowAwardModal = (_, _, _, _, _) => {
@@ -778,7 +761,7 @@
                   {
                     targetid: _,
                     active: _,
-                    targetType: _ != null ? _ : _._._,
+                    targetType: _ ?? _._._,
                     ugcType: _,
                     onDismiss: () =>
                       this.setState({
@@ -792,9 +775,6 @@
               : null;
           }
         }
-        _(_, "defaultProps", {
-          targetType: _.module.module,
-        });
         function _(_) {
           const {
             targetType: _,
@@ -820,7 +800,6 @@
           );
         }
         function _(_) {
-          var _, _, _, _, _;
           const {
               active: _,
               targetid: _,
@@ -872,8 +851,8 @@
             !_)
           )
             return null;
-          const _ = (_ = _.data) != null ? _ : new Map(),
-            _ = (_ = _.data) != null ? _ : new _._(0),
+          const _ = _.data ?? new Map(),
+            _ = _.data ?? new _._(0),
             _ = _(_, _, _),
             _ = _ === _._._ ? null : _.get(_),
             _ = _ ? _.points_cost : 0,
@@ -900,8 +879,7 @@
           switch (_) {
             case 0:
               {
-                const _ =
-                    _ === _._._ || ((_ = _.data) == null ? void 0 : _.has(_)),
+                const _ = _ === _._._ || _.data?.has(_),
                   _ = !_ || _.greaterThanOrEqual(_),
                   _ = (0, _.jsx)(_._, {
                     onClick: () => _(1),
@@ -936,31 +914,25 @@
                       "flow-children": "grid",
                       children:
                         !_ &&
-                        _.map((_, _) => {
-                          var _, _, _;
-                          return (0, _.jsx)(
+                        _.map((_, _) =>
+                          (0, _.jsx)(
                             _,
                             {
                               autoFocus:
                                 (_ === void 0 && _ == 0) ||
-                                (_ === _ &&
-                                  !((_ = _.data) != null && _.has(_))),
+                                (_ === _ && !_.data?.has(_)),
                               reaction: _,
-                              selected:
-                                _ === _ && !((_ = _.data) != null && _.has(_)),
+                              selected: _ === _ && !_.data?.has(_),
                               cost: _.get(_).points_cost,
-                              alreadyAwarded:
-                                (_ = _.data) == null ? void 0 : _.has(_),
+                              alreadyAwarded: _.data?.has(_),
                               awardConfig: _.get(_),
                               onClick: () => {
-                                var _;
-                                ((_ = _.data) != null && _.has(_)) ||
-                                  _(_ === _ ? _._._ : _);
+                                _.data?.has(_) || _(_ === _ ? _._._ : _);
                               },
                             },
                             _,
-                          );
-                        }),
+                          ),
+                        ),
                     }),
                     (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {
@@ -1064,12 +1036,7 @@
                                       (0, _.jsx)("span", {
                                         className: _.AwardName,
                                         children:
-                                          (_ =
-                                            (_ = _.data) == null
-                                              ? void 0
-                                              : _.get(_)) == null
-                                            ? void 0
-                                            : _.localized_title,
+                                          _.data?.get(_)?.localized_title,
                                       }),
                                     ),
                                   }),
@@ -1238,7 +1205,7 @@
             ],
           });
         }
-        const module = ({ description: _ }) =>
+        const _ = ({ description: _ }) =>
           (0, _.jsxs)("div", {
             className: _.Header,
             children: [
@@ -1308,7 +1275,7 @@
             ],
           });
         }
-        const module = () =>
+        const _ = () =>
           (0, _.jsx)("div", {
             className: _.Divider,
           });
@@ -1360,11 +1327,11 @@
                   children: [
                     (0, _.jsx)("div", {
                       className: _.Label,
-                      children: _ == null ? void 0 : _.localized_title,
+                      children: _?.localized_title,
                     }),
                     (0, _.jsx)(_, {
                       className: _.Points,
-                      children: (0, _._)(_ != null ? _ : 0),
+                      children: (0, _._)(_ ?? 0),
                     }),
                   ],
                 }),
@@ -1376,14 +1343,14 @@
             });
           }
         }
-        _([_.module], _.prototype, "handleMouseOver", 1),
-          _([_.module], _.prototype, "handleMouseOut", 1);
-        const module = () =>
+        _([_._], _.prototype, "handleMouseOver", 1),
+          _([_._], _.prototype, "handleMouseOut", 1);
+        const _ = () =>
             (0, _.jsx)(_._, {
               size: "large",
               className: _.Loading,
             }),
-          module = (_) => {
+          _ = (_) => {
             const { children: _, className: _, ..._ } = _;
             return (0, _.jsxs)("span", {
               ..._,
@@ -1399,19 +1366,19 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.module(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        var module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid"),
-          module = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_, _) {
           return `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${_}.png`;
         }
@@ -1435,12 +1402,10 @@
         }
         function _(_) {
           const _ = _();
-          return (0, _.useMemo)(() => {
-            var _;
-            return (_ = _ == null ? void 0 : _.data) == null
-              ? void 0
-              : _.find((_) => _.reactionid === _);
-          }, [_, _]);
+          return (0, _.useMemo)(
+            () => _?.data?.find((_) => _.reactionid === _),
+            [_, _],
+          );
         }
       },
       chunkid: (module) => {
@@ -1489,18 +1454,6 @@
           PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
           PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
           NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
-          BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
-          "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
-          "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
-          "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
-          "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
-          "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
-          "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
-          "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
-          "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
-          focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
-          hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
         };
       },
       chunkid: (module) => {

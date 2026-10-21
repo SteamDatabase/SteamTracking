@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Отключване на темата (%1$s)",
     "moderation_actions_sustain": "Устояване на модерацията",
     "moderation_actions_sustain_multiple": "Устояване на модерацията (%1$s)",
+    "moderation_actions_sustain_short": "Потвърждаване",
     "moderation_actions_suspicious": "Маркиране като подозрително",
     "moderation_actions_suspicious_multiple": "Маркиране като подозрително (%1$s)",
     "moderation_actions_unknown": "Неизвестно",

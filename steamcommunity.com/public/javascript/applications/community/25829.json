@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Deblochează discuția (%1$s)",
     "moderation_actions_sustain": "Menține decizia",
     "moderation_actions_sustain_multiple": "Menține decizia (%1$s)",
+    "moderation_actions_sustain_short": "Menține",
     "moderation_actions_suspicious": "Marchează ca suspect",
     "moderation_actions_suspicious_multiple": "Marchează ca suspect (%1$s)",
     "moderation_actions_unknown": "Necunoscut",

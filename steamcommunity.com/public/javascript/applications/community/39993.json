@@ -135,6 +135,7 @@
     "Listing_NotAvailable_Short": "Tidak Tersedia",
     "Listing_NotAvailable_Long": "Penyenaraian ini sudah tidak tersedia untuk pembelian.",
     "Listing_MyListing": "(Penyenaraian Saya)",
+    "Listing_Sold": "Dijual",
     "BuyOrderDialog_Header": "Beli - %1$s",
     "BuyOrderDialog_Header_NoItem": "Buat Pesanan Pembelian",
     "BuyOrderDialog_BucketPicker_Label": "Apakah jenis item yang anda ingin beli?",

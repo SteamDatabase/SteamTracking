@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Dette produkt er ikke kompatibelt med macOS-systemer, som bruger Intel-processorer. <1>Klik her</1> for flere oplysninger.",
     "AppPage_PurchaseNote_Mod_Title": "Fællesskabsskabt modifikation",
     "AppPage_PurchaseNote_Mod_LearnMore": "Klik <1>her</1> for at lære mere om modifikationer på Steam.",
+    "AppPage_Franchise_SeeAll": "Se hele %1$s-samlingen på Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Se hele %1$s på Steam",
     "AppPage_Series_ContentTitle": "Serieindhold",
     "AppPage_Series_ExtraContent": "Ekstra indhold",
     "AppPage_Series_SeasonName_Season": "Sæson %1$s",

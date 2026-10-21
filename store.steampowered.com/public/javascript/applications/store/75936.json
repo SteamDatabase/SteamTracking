@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Този продукт не е съвместим с macOS системите, използващи Intel процесори. <1>Кликнете тук</1> за още информация.",
     "AppPage_PurchaseNote_Mod_Title": "Създадена от общността модификация",
     "AppPage_PurchaseNote_Mod_LearnMore": "Кликнете <1>тук</1>, за да научите още относно модификациите в Steam.",
+    "AppPage_Franchise_SeeAll": "Разгледайте цялата %1$s колекция в Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Разгледайте всичко за %1$s в Steam",
     "AppPage_Series_ContentTitle": "Серийно съдържание",
     "AppPage_Series_ExtraContent": "Екстра съдържание",
     "AppPage_Series_SeasonName_Season": "Сезон %1$s",

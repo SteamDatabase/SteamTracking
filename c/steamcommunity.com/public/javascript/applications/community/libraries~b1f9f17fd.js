@@ -58,7 +58,7 @@
         function _(_) {
           function _(_) {
             var _ = this.constructor.getDerivedStateFromProps(_, _);
-            return _ != null ? _ : null;
+            return _ ?? null;
           }
           this.setState(_.bind(this));
         }
@@ -398,14 +398,14 @@ https://fb.me/react-async-component-lifecycle-hooks`,
         const _ = null;
         function _(_, _) {
           var _;
-          typeof _ != "undefined"
+          typeof _ < "u"
             ? (_ = _)
-            : typeof window != "undefined"
+            : typeof window < "u"
               ? (_ = window)
-              : typeof self != "undefined"
+              : typeof self < "u"
                 ? (_ = self)
                 : (_ = _._);
-          var _ = typeof _.document != "undefined" && _.document.attachEvent;
+          var _ = typeof _.document < "u" && _.document.attachEvent;
           if (!_) {
             var _ = (function () {
                 var _ =
@@ -976,7 +976,7 @@ https://fb.me/react-async-component-lifecycle-hooks`,
           };
         }
         const _ = !!(
-          typeof window != "undefined" &&
+          typeof window < "u" &&
           window.document &&
           window.document.createElement
         );
@@ -2216,7 +2216,7 @@ https://fb.me/react-async-component-lifecycle-hooks`,
           _ = 15e5,
           _ = 16777100,
           _ = function () {
-            return typeof window != "undefined";
+            return typeof window < "u";
           },
           _ = function () {
             return !!window.chrome;
@@ -2517,9 +2517,9 @@ https://fb.me/react-async-component-lifecycle-hooks`,
         }
         function _(_, _) {}
         var _;
-        typeof window != "undefined"
+        typeof window < "u"
           ? (_ = window)
-          : typeof self != "undefined"
+          : typeof self < "u"
             ? (_ = self)
             : (_ = {});
         var _ =
@@ -4922,7 +4922,7 @@ https://fb.me/react-async-component-lifecycle-hooks`,
                           Math.max(0, _ - _),
                           _ + _ * 2,
                           function (_, _, _) {
-                            typeof _ == "undefined"
+                            typeof _ > "u"
                               ? ((_ = _), (_ = _))
                               : ((_ = Math.min(_, _)), (_ = Math.max(_, _))),
                               _.push(
@@ -7286,7 +7286,7 @@ https://fb.me/react-async-component-lifecycle-hooks`,
         }
         var _ = 150,
           _ = function () {
-            return typeof window != "undefined" ? window : void 0;
+            return typeof window < "u" ? window : void 0;
           },
           _ = (function (_) {
             function _() {

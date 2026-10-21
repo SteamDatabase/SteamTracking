@@ -52,15 +52,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -69,8 +60,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new RegExp("\u02D0([^\u02D0]*)\u02D0", "g"),
           _ = null,
           _ = new RegExp(
@@ -88,13 +78,13 @@
         }
         const _ = (_) => {
             const { userType: _, msg: _, presenterInfo: _ } = _;
-            if (_ === "presenter")
+            if (_ === "presenter" && _)
               return (0, _.jsx)("span", {
                 children: (0, _.jsx)(_._, {
-                  name: _.name,
+                  name: _.name ?? "",
                   title: _.title,
                   photo: _.photo,
-                  company: _.company,
+                  company: _.company ?? "",
                   bioString: _.bio,
                   children: (0, _.jsx)("a", {
                     className: (0, _._)(_().MessageName, _().MessagePresenter),
@@ -106,7 +96,7 @@
                 }),
               });
             {
-              let _ = null;
+              let _;
               return (
                 _ === "broadcaster"
                   ? (_ = _().MessageBroadcaster)
@@ -162,11 +152,10 @@
           };
         let _ = class extends _.Component {
           constructor(_) {
-            super(_),
-              _(this, "m_chat", null),
-              _(this, "messagesContainer", _.createRef()),
-              (0, _._)(this);
+            super(_), (0, _._)(this);
           }
+          m_chat = void 0;
+          messagesContainer = _.createRef();
           componentDidMount() {
             this.StartChat();
           }
@@ -183,22 +172,20 @@
             this.m_chat && this.m_chat.Stop();
           }
           StartChat() {
-            if (
-              (this.m_chat && this.m_chat.Stop(),
-              (this.m_chat = _._.Get().GetOrCreateChat(
-                this.props.broadcastChannelID,
-                this.props.steamID,
-              )),
-              this.props.broadcastChannelID)
-            )
-              this.m_chat.StartForChannel(this.props.broadcastChannelID);
+            this.m_chat && this.m_chat.Stop();
+            const _ = _._.Get().GetOrCreateChat(
+              this.props.broadcastChannelID ?? "",
+              this.props.steamID ?? "",
+            );
+            if (((this.m_chat = _), this.props.broadcastChannelID))
+              _.StartForChannel(this.props.broadcastChannelID);
             else if (
               this.props.steamID &&
               this.props.steamID &&
               (this.props.broadcastID || this.props.globalChat)
             ) {
               let _ = this.props.broadcastID || "0";
-              this.m_chat.StartForSteamID(this.props.steamID, _),
+              _.StartForSteamID(this.props.steamID, _),
                 this.ScrollToNewestMessages();
             }
           }
@@ -207,7 +194,7 @@
           }
           AddLinksEmoticons(_, _) {
             let _ = _;
-            _ && (_ = this.m_chat.GetUserEmoticons());
+            _ && (_ = this.m_chat?.GetUserEmoticons());
             let _ = _.split(_);
             const _ = [];
             for (let _ = 0; _ < _.length; _ += 1)
@@ -241,12 +228,11 @@
                 : this.messagesContainer.current.scrollHeight);
           }
           OnContextMenu(_, _) {
-            if (_.type !== _._.Chat) return null;
+            const _ = this.m_chat;
+            if (!_ || _.type !== _._.Chat) return null;
             const _ = [],
-              _ = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
-              _ = this.m_chat.BIsUserBroadcastModerator(
-                this.m_chat.GetUserSteamID(),
-              );
+              _ = _.IsUserBroadcaster(_.GetUserSteamID()),
+              _ = _.BIsUserBroadcastModerator(_.GetUserSteamID());
             return (
               (_._ && _._.is_support) || _ || _
                 ? _.push(
@@ -254,10 +240,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.RemoveUserMessagesServer(
-                            _.steamid,
-                            _.persona_name,
-                          ),
+                          _.RemoveUserMessagesServer(_.steamid, _.persona_name),
                         children: (0, _._)("#BroadcastChat_RemoveMessages"),
                       },
                       "remove",
@@ -266,7 +249,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             12,
@@ -281,7 +264,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             24,
@@ -296,7 +279,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             168,
@@ -311,7 +294,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             0,
@@ -326,7 +309,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             0,
@@ -339,16 +322,13 @@
                       "removeban",
                     ),
                   )
-                : this.m_chat.IsUserMutedLocally(_.steamid)
+                : _.IsUserMutedLocally(_.steamid)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UnmuteUserForSession(
-                              _.steamid,
-                              _.persona_name,
-                            ),
+                            _.UnmuteUserForSession(_.steamid, _.persona_name),
                           children: (0, _._)("#BroadcastChat_UnmuteLocal"),
                         },
                         "unmuteuser",
@@ -359,25 +339,22 @@
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.MuteUserForSession(
-                              _.steamid,
-                              _.persona_name,
-                            ),
+                            _.MuteUserForSession(_.steamid, _.persona_name),
                           children: (0, _._)("#BroadcastChat_MuteLocal"),
                         },
                         "muteuser",
                       ),
                     ),
               ((_._ && _._.is_support) ||
-                this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
+                _.IsUserBroadcaster(_.GetUserSteamID())) &&
                 _.steamid &&
-                (this.m_chat.BIsUserBroadcastModerator(_.steamid)
+                (_.BIsUserBroadcastModerator(_.steamid)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UpdateBroadcastChatModerator(
+                            _.UpdateBroadcastChatModerator(
                               _.steamid,
                               !1,
                               _.persona_name,
@@ -392,7 +369,7 @@
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UpdateBroadcastChatModerator(
+                            _.UpdateBroadcastChatModerator(
                               _.steamid,
                               !0,
                               _.persona_name,
@@ -438,9 +415,9 @@
               return this.AddLinksEmoticons(_, !1);
             } else return _.msg;
           }
-          RenderUserChatLine(_, _, _) {
-            let _ = _ ? _.get(_.steamid) : void 0;
-            const _ = _.type === _._.Chat ? _(_.steamid, this.m_chat, _) : "";
+          RenderUserChatLine(_, _, _, _) {
+            let _ = _?.get(_.steamid);
+            const _ = _.type === _._.Chat ? _(_.steamid, _, _) : "";
             return (0, _.jsxs)(
               "div",
               {
@@ -463,13 +440,13 @@
                       presenterInfo: _,
                     }),
                   _.type === _._.Chat &&
-                    this.m_chat.GetBroadcastSteamID() === _.steamid &&
+                    _.GetBroadcastSteamID() === _.steamid &&
                     (0, _.jsx)("span", {
                       className: `${_().MessageNotification} ${_().MessageContents}`,
                       children: ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
                     }),
                   _.type === _._.Chat &&
-                    this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
+                    _.m_mapChannelModeratorUsers.get(_.steamid) &&
                     (0, _.jsx)("span", {
                       className: `${_().MessageNotification} ${_().MessageContents}`,
                       children: ` (${(0, _._)("#BroadcastChat_Moderator")})`,
@@ -478,7 +455,7 @@
                     className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && typeof _ == "string").length ? "" : _().EmoticonsOnly}`,
                     children: [
                       _.type === _._.Chat ? " : " : "",
-                      this.FormatMessage(_, this.m_chat.TextFilterStore),
+                      this.FormatMessage(_, _.TextFilterStore),
                     ],
                   }),
                 ],
@@ -493,7 +470,8 @@
                 bInvertLayout: _,
                 onSignIn: _,
               } = this.props,
-              _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
+              _ = this.m_chat,
+              _ = _ ? _.m_rgChatMessages : [],
               _ = _ ? _.reverse() : _,
               _ = this.m_chat
                 ? _._.GetPresenterMapForBroadcasterSteamID(
@@ -528,7 +506,8 @@
                   ),
                   onScroll: this.HandleScroll,
                   ref: this.messagesContainer,
-                  children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
+                  children:
+                    _ && _.map((_, _) => this.RenderUserChatLine(_, _, _, _)),
                 }),
                 (0, _.jsx)(_, {}),
                 !_ &&
@@ -550,18 +529,15 @@
           _([_._], _.prototype, "RenderUserChatLine", 1),
           (_ = _([_._], _));
         function _(_) {
-          var _, _, _;
           const {
             oChat: _,
             emoticonStore: _,
             bPartnerMemberOnlyChat: _,
             onSignIn: _,
           } = _;
-          return _ &&
-            (!((_ = _._) != null && _.logged_in) ||
-              !((_ = _._) != null && _.is_partner_member))
+          return _ && (!_._?.logged_in || !_._?.is_partner_member)
             ? (0, _.jsx)(_, {})
-            : (_ = _._) != null && _.logged_in
+            : _._?.logged_in
               ? (0, _.jsx)(_, {
                   oChat: _,
                   emoticonStore: _,
@@ -575,7 +551,7 @@
         function _(_) {
           const { oChat: _, emoticonStore: _ } = _,
             [_, _] = _.useState(""),
-            _ = _.useRef(void 0),
+            _ = _.useRef(null),
             _ = (0, _._)(() => _.m_bRateLimited),
             _ = _.useCallback(
               (_) => {
@@ -588,8 +564,7 @@
             ),
             _ = _.useCallback(
               (_, _ = !1) => {
-                _(_ + `\u02D0${_}\u02D0`),
-                  _ != null && _.current && _.current.focus();
+                _(_ + `\u02D0${_}\u02D0`), _?.current && _.current.focus();
               },
               [_, _],
             ),
@@ -654,17 +629,14 @@
           });
         }
         function _(_) {
-          var _;
           const { oChat: _, emoticonStore: _, textInputRef: _ } = _;
           return _.m_strFlairGroupID &&
             _.flair_list &&
-            (_ = _.GetFlairListByGroupID(_.m_strFlairGroupID)) != null &&
-            _.length
+            _.GetFlairListByGroupID(_.m_strFlairGroupID)?.length
             ? (0, _.jsx)(_._, {
                 disabled: !1,
                 OnEmoticonSelected: (_) => {
-                  _.UpdateChatMessageFlair(_),
-                    _ != null && _.current && _.current.focus();
+                  _.UpdateChatMessageFlair(_), _?.current && _.current.focus();
                 },
                 rtLastAckedNewEmoticons: Number.MAX_VALUE,
                 emoticonStore: _,
@@ -753,27 +725,25 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           const { latestAnnouncement: _ } = _;
-          return (_ == null ? void 0 : _.type) == "giveaway_draw"
+          return _?.type == "giveaway_draw"
             ? (0, _.jsx)(_, {
                 latestWinner: _,
               })
             : null;
         }
         function _(_) {
-          var _, _;
           const {
               latestWinner: _,
               className: _,
               strActionButton: _,
               strActionClassname: _,
             } = _,
-            _ =
-              ((_ = _.winners_info) == null ? void 0 : _.length) > 0
-                ? _.winners_info[0].accountid
-                : 0,
+            _ = _.winners_info ?? [],
+            _ = _.length > 0 ? _[0].accountid : 0,
             [_, _] = _.useState(_),
             _ =
               "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
@@ -782,8 +752,13 @@
             ),
             _ = (0, _._)(
               `${_._.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
-            ),
-            _ = (0, _._)(_.giveaway_gid);
+            );
+          (0, _._)(
+            !!_.giveaway_gid,
+            "Giveaway draw announcement is missing its giveaway",
+            _,
+          );
+          const _ = (0, _._)(_.giveaway_gid);
           let _ =
             _.bLoadingGiveawayInfo || _.closed ? null : _.seconds_until_drawing;
           const _ = _ === _._.accountid;
@@ -791,9 +766,8 @@
             _ != _ && setTimeout(() => _(_), 1500);
           }, [_, _]);
           const _ =
-            ((_ = _.winners_info) == null ? void 0 : _.length) > 0 &&
-            _.winners_info[0].persona
-              ? _.winners_info[0].persona
+            _.length > 0 && _[0].persona
+              ? _[0].persona
               : (0, _._)("#GA2022_UnknownPersonaName");
           return (0, _.jsx)(_._, {
             href: _,
@@ -836,7 +810,7 @@
                           (0, _.jsx)("br", {}),
                         ),
                       }),
-                    _ > 0 &&
+                    !!(_ && _ > 0) &&
                       (0, _.jsx)("div", {
                         className: _().GiveawayWinnerCountdown,
                         children: (0, _._)("#GA2022_Congrats_NextDraw", _),
@@ -857,32 +831,27 @@
           });
         }
         function _(_, _) {
-          const [_, _] = (0, _._)(() => {
-              var _;
-              return [
-                _ == null ? void 0 : _.steamid,
-                (_ = _._.GetBroadcast(_ == null ? void 0 : _.steamid)) == null
-                  ? void 0
-                  : _.m_ulBroadcastID,
-              ];
-            }),
+          const [_, _] = (0, _._)(() => [
+              _?.steamid,
+              _?.steamid
+                ? _._.GetBroadcast(_.steamid)?.m_ulBroadcastID
+                : void 0,
+            ]),
             [_, _] = _.useState(null);
           _.useEffect(() => {
             let _ = null;
             return (
-              (_ || _) &&
-                ((_ = _._.Get().GetOrCreateChat(_, _)),
-                _.StartForSteamID(_, _),
+              _ &&
+                ((_ = _._.Get().GetOrCreateChat(_ ?? "", _)),
+                _.StartForSteamID(_, _ ?? ""),
                 _(_)),
               () => {
                 _ && (_.Stop(), _(null));
               }
             );
           }, [_, _]);
-          const _ = (0, _._)(
-            () => (_ == null ? void 0 : _.m_latestAnnouncement) || null,
-          );
-          if ((_ == null ? void 0 : _.type) == "giveaway_draw") {
+          const _ = (0, _._)(() => _?.m_latestAnnouncement || null);
+          if (_?.type == "giveaway_draw") {
             const _ = _;
             if (_.giveaway_gid == _) return _;
           }
@@ -896,7 +865,7 @@
             _ = _().GiveawayRegisterButton;
           return (
             _._.logged_in
-              ? _ != null && _.registered
+              ? _?.registered
                 ? ((_ = (0, _._)("#GA2022_AlreadyRegistered")),
                   (_ = _().GiveawayAlreadyRegistered))
                 : (_ = (0, _._)("#GA2022_RegisterToWin"))
@@ -933,15 +902,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -950,16 +910,12 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "m_elCanvas", null),
-              _(this, "m_Context", null),
-              _(this, "m_schUpdate", new _._()),
-              _(this, "m_bSetupComplete", !1);
-          }
+          m_elCanvas = null;
+          m_Context = null;
+          m_schUpdate = new _._();
+          m_bSetupComplete = !1;
           componentDidMount() {
             this.props.updateRate == 0 && this.updateCanvas();
           }
@@ -973,7 +929,6 @@
             this.m_elCanvas = _;
           }
           updateCanvas() {
-            var _;
             if (
               this.props.elementRef == null ||
               this.m_elCanvas == null ||
@@ -994,7 +949,7 @@
               );
             (this.m_elCanvas.width = _),
               (this.m_elCanvas.height = _),
-              ((_ = this.props.blurAmount) != null ? _ : 0) > 0 &&
+              (this.props.blurAmount ?? 0) > 0 &&
                 (_.filter = "blur(" + this.props.blurAmount + "px)");
             let _ = () => {
               _.drawImage(_, 0, 0, _ * _[0], _ * _[1]),
@@ -1647,15 +1602,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1664,25 +1610,23 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ extends _.Component {
+          m_elSettingsButton;
+          m_SettingsButtonPos;
+          m_elClickListener = null;
+          m_elSettingsPanel = null;
+          m_elSubtitlesButton = _.createRef();
+          m_elSubtitlesPanel = _.createRef();
+          m_SubtitlesButtonPos;
           constructor(_) {
             super(_),
-              _(this, "m_elSettingsButton"),
-              _(this, "m_SettingsButtonPos"),
-              _(this, "m_elClickListener", null),
-              _(this, "m_elSettingsPanel", null),
-              _(this, "m_elSubtitlesButton", _.createRef()),
-              _(this, "m_elSubtitlesPanel", _.createRef()),
-              _(this, "m_SubtitlesButtonPos"),
               (this.state = {
                 bSettingsOpen: !1,
                 bSubtitlesOpen: !1,
               });
           }
           OnVideoControlClick(_) {
-            var _;
             this.setState({
               bSettingsOpen: !this.state.bSettingsOpen,
             }),
@@ -1692,31 +1636,34 @@
               ]),
               (this.m_elClickListener =
                 _.currentTarget.ownerDocument.defaultView),
-              (_ = this.m_elClickListener) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp, !0);
+              this.m_elClickListener?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+                !0,
+              );
           }
           OnSubtitlesClick(_) {
-            var _, _, _;
             this.setState({
               bSubtitlesOpen: !this.state.bSubtitlesOpen,
             }),
               (this.m_SubtitlesButtonPos = [
-                (_ = this.m_elSubtitlesButton.current) == null
-                  ? void 0
-                  : _.offsetLeft,
-                (_ = this.m_elSubtitlesButton.current) == null
-                  ? void 0
-                  : _.offsetTop,
+                this.m_elSubtitlesButton.current?.offsetLeft,
+                this.m_elSubtitlesButton.current?.offsetTop,
               ]),
               (this.m_elClickListener =
                 _.currentTarget.ownerDocument.defaultView),
-              (_ = this.m_elClickListener) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp, !0);
+              this.m_elClickListener?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+                !0,
+              );
           }
           OnMouseUp(_) {
-            var _;
-            (_ = this.m_elClickListener) == null ||
-              _.removeEventListener("mouseup", this.OnMouseUp, !0),
+            this.m_elClickListener?.removeEventListener(
+              "mouseup",
+              this.OnMouseUp,
+              !0,
+            ),
               (0, _._)(this.m_elSettingsPanel, _.target) ||
                 this.setState({
                   bSettingsOpen: !1,
@@ -1912,14 +1859,13 @@
         const _ = !0;
         let _ = class extends _.Component {
           constructor(_) {
-            super(_),
-              _(this, "k_nHideSliderTimeout", 1.5 * 1e3),
-              _(this, "m_bShowSlider", _),
-              _(this, "m_schHideSlider", new _._()),
-              _(this, "m_bChildDragging", !1),
-              _(this, "m_bMouseOver", !1),
-              (0, _._)(this);
+            super(_), (0, _._)(this);
           }
+          k_nHideSliderTimeout = 1.5 * 1e3;
+          m_bShowSlider = _;
+          m_schHideSlider = new _._();
+          m_bChildDragging = !1;
+          m_bMouseOver = !1;
           componentWillUnmount() {
             this.m_schHideSlider.Cancel();
           }
@@ -1993,21 +1939,23 @@
           (_ = _([_._], _));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_),
-              _(this, "m_elSlider", null),
-              _(this, "m_nVolumeStartOfDrag", 0),
-              (0, _._)(this);
+            super(_), (0, _._)(this);
           }
+          m_elSlider = null;
+          m_nVolumeStartOfDrag = 0;
           OnMouseDown(_) {
-            var _, _;
             let _ = _.currentTarget;
             (this.m_elSlider = _),
               (this.m_nVolumeStartOfDrag = this.props.video.GetVolume()),
               this.SetVolumeWithCoord(_, _.clientX),
-              (_ = _.ownerDocument.defaultView) == null ||
-                _.addEventListener("mousemove", this.OnMouseMove),
-              (_ = _.ownerDocument.defaultView) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp),
+              _.ownerDocument.defaultView?.addEventListener(
+                "mousemove",
+                this.OnMouseMove,
+              ),
+              _.ownerDocument.defaultView?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
               this.props.onDrag(!0);
           }
           OnMouseMove(_) {
@@ -2015,15 +1963,18 @@
               this.SetVolumeWithCoord(this.m_elSlider, _.clientX);
           }
           OnMouseUp(_) {
-            var _, _;
             if (!this.m_elSlider) return;
             this.SetVolumeWithCoord(this.m_elSlider, _.clientX);
             let _ = this.props.video;
             _.IsMuted() && _.SetVolume(this.m_nVolumeStartOfDrag),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.removeEventListener("mousemove", this.OnMouseMove),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.removeEventListener("mouseup", this.OnMouseUp),
+              this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
+                "mousemove",
+                this.OnMouseMove,
+              ),
+              this.m_elSlider.ownerDocument.defaultView?.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
               (this.m_nVolumeStartOfDrag = 0),
               (this.m_elSlider = null),
               this.props.onDrag(!1);
@@ -2072,15 +2023,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -2089,20 +2031,19 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 3200,
           _ = 15;
         let _ = class extends _.Component {
+          m_schHideControls = new _._();
+          m_schUnmountControls = new _._();
+          m_elVideo = null;
+          m_elBroadcastPlayer = null;
+          m_bMouseDown = !1;
+          m_elMouseDown = null;
+          m_listeners = new _._();
           constructor(_) {
             super(_),
-              _(this, "m_schHideControls", new _._()),
-              _(this, "m_schUnmountControls", new _._()),
-              _(this, "m_elVideo", null),
-              _(this, "m_elBroadcastPlayer", null),
-              _(this, "m_bMouseDown", !1),
-              _(this, "m_elMouseDown", null),
-              _(this, "m_listeners", new _._()),
               (this.state = {
                 bMountControls: !1,
                 bControlsVisible: !1,
@@ -2113,15 +2054,13 @@
               });
           }
           StopVideo() {
-            var _, _;
             let _ = this.state.video;
             _ &&
               (_._.StopVideo(_),
               this.setState({
                 video: null,
               }),
-              (_ = (_ = this.props).fnSetBroadcastVideo) == null ||
-                _.call(_, null));
+              this.props.fnSetBroadcastVideo?.(null));
           }
           IsMuted() {
             let _ = this.state.video;
@@ -2154,12 +2093,8 @@
                   include_trailers: !0,
                 })
                 .then(() => {
-                  var _;
-                  const _ = _._.Get().GetApp(_),
-                    _ =
-                      ((_ = _ == null ? void 0 : _.GetAssets()) == null
-                        ? void 0
-                        : _.GetMainCapsuleURL()) || "";
+                  const _ =
+                    _._.Get().GetApp(_)?.GetAssets()?.GetMainCapsuleURL() || "";
                   this.setState({
                     strInitialCapsuleImageUrl: _,
                   });
@@ -2197,7 +2132,6 @@
                 ));
           }
           BindVideoRef(_) {
-            var _, _;
             let _ = null;
             this.StopVideo(),
               this.props.steamIDBroadcast
@@ -2233,25 +2167,23 @@
               this.setState({
                 video: _,
               }),
-              (_ = (_ = this.props).fnSetBroadcastVideo) == null ||
-                _.call(_, _),
+              this.props.fnSetBroadcastVideo?.(_),
               (this.m_elVideo = _);
           }
           OnMouseDown(_) {
-            var _;
             (this.m_bMouseDown = !0),
               (this.m_elMouseDown = _.currentTarget),
-              (_ = this.m_elMouseDown.ownerDocument.defaultView) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp);
+              this.m_elMouseDown.ownerDocument.defaultView?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              );
           }
           OnMouseUp(_) {
-            var _, _;
             (this.m_bMouseDown = !1),
-              (_ =
-                (_ = this.m_elMouseDown) == null
-                  ? void 0
-                  : _.ownerDocument.defaultView) == null ||
-                _.removeEventListener("mouseup", this.OnMouseUp),
+              this.m_elMouseDown?.ownerDocument.defaultView?.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
               this.m_schHideControls.Schedule(_, this.HideControls);
           }
           OnMouseMove(_) {
@@ -2368,14 +2300,10 @@
               _.SetStatsViewIsVisible(!1));
           }
           OnToggleFullscreen() {
-            var _;
             this.m_elBroadcastPlayer &&
               ((0, _._)(this.m_elBroadcastPlayer)
                 ? (0, _._)(this.m_elBroadcastPlayer)
-                : (0, _._)(
-                    this.m_elBroadcastPlayer,
-                    (_ = this.m_elVideo) != null ? _ : void 0,
-                  ));
+                : (0, _._)(this.m_elBroadcastPlayer, this.m_elVideo ?? void 0));
           }
           OnFullscreenChange(_) {
             if (!this.m_elBroadcastPlayer) return;
@@ -2391,7 +2319,6 @@
               : _._.GetBroadcastState(_) == _._.Error;
           }
           render() {
-            var _;
             const _ = this.state.video,
               _ = _ && _.IsPaused(),
               _ = _ && _.BHasDASHStats() && this.state.bShowStats,
@@ -2399,9 +2326,9 @@
               _ = this.state.bMountControls,
               _ = this.state.bControlsVisible || _,
               _ = !!(_ && _.GetUserInputNeeded()),
-              _ = _ == null ? void 0 : _.GetDASHPlayerStats(),
+              _ = _?.GetDASHPlayerStats(),
               _ =
-                (_ == null ? void 0 : _.IsBroadcastVOD()) &&
+                _?.IsBroadcastVOD() &&
                 _ &&
                 this.state.strInitialCapsuleImageUrl;
             let _ = "videoContainer";
@@ -2471,7 +2398,7 @@
                 (0, _.jsx)("video", {
                   className: "videoSrc",
                   ref: this.BindVideoRef,
-                  muted: (_ = this.props.bMuted) != null ? _ : !0,
+                  muted: this.props.bMuted ?? !0,
                   autoPlay: !0,
                   playsInline: !0,
                   controls: !1,
@@ -2712,17 +2639,18 @@
         _([_._], _.prototype, "OnTogglePlayPause", 1), (_ = _([_._], _));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), _(this, "video"), (0, _._)(this), (this.video = _.video);
+            super(_), (0, _._)(this), (this.video = _.video);
           }
           componentDidUpdate() {
             this.video = this.props.video;
           }
+          video = void 0;
           get has_previous_marker() {
             return this.GetPreviousMarkerTime() !== void 0;
           }
           GetPreviousMarkerTime() {
             const _ = this.video;
-            if (!(_ != null && _.has_markers)) return;
+            if (!_?.has_markers) return;
             let _ = _.GetTimelineMarkers(),
               _ = _.GetPlaybackTime();
             for (let _ = _.length - 1; _ >= 0; _--)
@@ -2753,17 +2681,18 @@
           (_ = _([_._], _));
         let _ = class extends _.Component {
           constructor(_) {
-            super(_), _(this, "video"), (0, _._)(this), (this.video = _.video);
+            super(_), (0, _._)(this), (this.video = _.video);
           }
           componentDidUpdate() {
             this.video = this.props.video;
           }
+          video = void 0;
           get has_next_marker() {
             return this.GetNextMarkerTime() !== void 0;
           }
           GetNextMarkerTime() {
             const _ = this.video;
-            if (!(_ != null && _.has_markers)) return;
+            if (!_?.has_markers) return;
             let _ = _.GetTimelineMarkers(),
               _ = _.GetPlaybackTime();
             for (let _ = 0; _ < _.length; _++)
@@ -2849,10 +2778,10 @@
           );
         }
         let _ = class extends _.Component {
+          m_elSlider = _.createRef();
+          m_rectSlider = void 0;
           constructor(_) {
             super(_),
-              _(this, "m_elSlider", _.createRef()),
-              _(this, "m_rectSlider"),
               (this.state = {
                 nGrabberMouseDownTime: 0,
                 bGrabberMouseDown: !1,
@@ -2864,7 +2793,6 @@
               });
           }
           OnMouseDown(_, _) {
-            var _, _;
             const _ = this.m_elSlider.current;
             if (_) {
               _.persist(), (this.m_rectSlider = _.getBoundingClientRect());
@@ -2883,17 +2811,20 @@
                       bGrabberMouseDown: !0,
                     }),
                 this.setState(_, () => this.AdjustSliderForClientX(_.clientX)),
-                (_ = _.ownerDocument.defaultView) == null ||
-                  _.addEventListener("mousemove", this.OnMouseMove),
-                (_ = _.ownerDocument.defaultView) == null ||
-                  _.addEventListener("mouseup", this.OnMouseUp);
+                _.ownerDocument.defaultView?.addEventListener(
+                  "mousemove",
+                  this.OnMouseMove,
+                ),
+                _.ownerDocument.defaultView?.addEventListener(
+                  "mouseup",
+                  this.OnMouseUp,
+                );
             }
           }
           OnMouseMove(_) {
             this.AdjustSliderForClientX(_.clientX);
           }
           OnMouseUp(_) {
-            var _, _;
             this.state.bStartMouseDown
               ? this.setState({
                   bStartMouseDown: !1,
@@ -2908,10 +2839,14 @@
                     nGrabberMouseDownTime: 0,
                   })),
               this.m_elSlider.current &&
-                ((_ = this.m_elSlider.current.ownerDocument.defaultView) ==
-                  null || _.removeEventListener("mousemove", this.OnMouseMove),
-                (_ = this.m_elSlider.current.ownerDocument.defaultView) ==
-                  null || _.removeEventListener("mouseup", this.OnMouseUp));
+                (this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
+                  "mousemove",
+                  this.OnMouseMove,
+                ),
+                this.m_elSlider.current.ownerDocument.defaultView?.removeEventListener(
+                  "mouseup",
+                  this.OnMouseUp,
+                ));
           }
           OnKeyDown(_) {
             _.keyCode == _._
@@ -2948,14 +2883,11 @@
             });
           }
           AdjustHoverForClientX(_) {
-            var _;
             let _ = this.props.video,
               _ = _.GetTimelineStartPos(),
               _ = _.GetTimelineStartPos() + _.GetTimelineDuration();
             this.m_rectSlider =
-              (_ = this.m_elSlider.current) == null
-                ? void 0
-                : _.getBoundingClientRect();
+              this.m_elSlider.current?.getBoundingClientRect();
             let _ =
               this.m_rectSlider &&
               _.GetTimeAtMousePosition(_, this.m_rectSlider, _, _);
@@ -2974,7 +2906,6 @@
             });
           }
           render() {
-            var _;
             let _ = this.props.video,
               _ = this.state.bGrabberMouseDown,
               _ = _.GetPercentOffsetFromTime(
@@ -2998,7 +2929,7 @@
               ? ((_.left = _), (_.width = _), (_.width = _), (_.width = _))
               : ((_.left = _), (_.width = _), (_.width = _));
             let _ = (0, _._)(_.GetPlaybackTime()),
-              _ = (0, _._)((_ = this.state.nHoverValue) != null ? _ : 0),
+              _ = (0, _._)(this.state.nHoverValue ?? 0),
               _ = "STV_timelineContainer";
             this.state.bGrabberMouseDown && (_ += " grabberDown"),
               _.IsTimelineMapActive() && (_ += " minimapActive");
@@ -3180,12 +3111,9 @@
           _([_._], _.prototype, "OnMarkerMouseLeave", 1),
           (_ = _([_._], _));
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                info: null,
-              });
-          }
+          state = {
+            info: null,
+          };
           static getDerivedStateFromProps(_, _) {
             return (!_.info || _.info.m_steamIDBroadcast !== _.steamID) &&
               (_.info && (_._.StopInfo(_.info), (_.info = null)), _.steamID)
@@ -3273,13 +3201,8 @@
                       (0, _.jsx)("div", {
                         className: "Actions",
                         children: (0, _.jsx)("div", {
-                          onClick: (_) => {
-                            var _, _;
-                            return (_ = (_ = this.props)
-                              .onOpenLinkInNewWindow) == null
-                              ? void 0
-                              : _.call(_, _, _._.link);
-                          },
+                          onClick: (_) =>
+                            this.props.onOpenLinkInNewWindow?.(_, _._.link),
                           className: "BroadcastLink",
                           children: _._.linkName,
                         }),
@@ -3390,7 +3313,6 @@
               });
           }
           OnSaveRegions() {
-            var _, _;
             let _;
             _ = {
               links: [],
@@ -3408,7 +3330,7 @@
               }),
                 _.links.push(_);
             }
-            (_ = (_ = this.props).onSaveLinkRegions) == null || _.call(_, _);
+            this.props.onSaveLinkRegions?.(_);
           }
           async DeleteRegion(_) {
             this.state.sizableRegion.splice(_, 1),
@@ -3526,18 +3448,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EBroadcastImageType ( " + _ + " )";
         }
@@ -3550,13 +3461,15 @@
         function _(_) {
           return "unknown ESteamTVContentTemplate ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.unique_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3609,16 +3522,16 @@
           getClassName() {
             return "CSteamTV_CreateBroadcastChannel_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3671,16 +3584,16 @@
           getClassName() {
             return "CSteamTV_CreateBroadcastChannel_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.unique_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3733,16 +3646,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelID_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3805,16 +3718,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelID_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3907,9 +3820,7 @@
           getClassName() {
             return "CSteamTV_SetBroadcastChannelProfile_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3951,13 +3862,15 @@
             return "CSteamTV_SetBroadcastChannelProfile_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4010,16 +3923,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelProfile_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.unique_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4117,16 +4030,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelProfile_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4219,16 +4132,16 @@
           getClassName() {
             return "CSteamTV_SetBroadcastChannelImage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.replace_image_hash || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4281,16 +4194,16 @@
           getClassName() {
             return "CSteamTV_SetBroadcastChannelImage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4351,16 +4264,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelImages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.images || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4414,16 +4327,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelImages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.image_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4486,16 +4399,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelImages_Response_Images";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4548,16 +4461,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelLinks_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.links || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4611,16 +4524,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelLinks_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.link_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4703,16 +4616,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelLinks_Response_Links";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4771,16 +4684,16 @@
           getClassName() {
             return "CSteamTV_SetBroadcastChannelLinkRegions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.link_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4863,9 +4776,7 @@
           getClassName() {
             return "CSteamTV_SetBroadcastChannelLinkRegions_Request_Links";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4907,13 +4818,15 @@
             return "CSteamTV_SetBroadcastChannelLinkRegions_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4966,16 +4879,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_live || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5078,16 +4991,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5230,9 +5143,7 @@
           getClassName() {
             return "GetBroadcastChannelEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5274,13 +5185,15 @@
             return "CSteamTV_GetFollowedChannels_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5334,9 +5247,7 @@
           getClassName() {
             return "CSteamTV_GetFollowedChannels_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5378,13 +5289,15 @@
             return "CSteamTV_GetSubscribedChannels_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5438,16 +5351,16 @@
           getClassName() {
             return "CSteamTV_GetSubscribedChannels_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5505,16 +5418,16 @@
           getClassName() {
             return "CSteamTV_FollowBroadcastChannel_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_followed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5567,16 +5480,16 @@
           getClassName() {
             return "CSteamTV_FollowBroadcastChannel_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5629,16 +5542,16 @@
           getClassName() {
             return "CSteamTV_SubscribeBroadcastChannel_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_subscribed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5691,16 +5604,16 @@
           getClassName() {
             return "CSteamTV_SubscribeBroadcastChannel_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5758,9 +5671,7 @@
           getClassName() {
             return "CSteamTV_ReportBroadcastChannel_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5802,13 +5713,15 @@
             return "CSteamTV_ReportBroadcastChannel_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5861,16 +5774,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelInteraction_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_followed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5928,16 +5841,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelInteraction_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6026,16 +5939,16 @@
           getClassName() {
             return "CSteamTV_Game";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6098,16 +6011,16 @@
           getClassName() {
             return "CSteamTV_GetGames_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6161,16 +6074,16 @@
           getClassName() {
             return "CSteamTV_GetGames_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.algorithm || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6233,16 +6146,16 @@
           getClassName() {
             return "CSteamTV_GetChannels_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6296,16 +6209,16 @@
           getClassName() {
             return "CSteamTV_GetChannels_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6358,16 +6271,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelBroadcasters_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcasters || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6421,16 +6334,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6493,16 +6406,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelBroadcasters_Response_Broadcaster";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.issuer_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6575,16 +6488,16 @@
           getClassName() {
             return "CSteamTV_ChatBan";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6657,9 +6570,7 @@
           getClassName() {
             return "CSteamTV_AddChatBan_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -6701,13 +6612,15 @@
             return "CSteamTV_AddChatBan_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6760,16 +6673,16 @@
           getClassName() {
             return "CSteamTV_GetChatBans_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6823,16 +6736,16 @@
           getClassName() {
             return "CSteamTV_GetChatBans_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6895,9 +6808,7 @@
           getClassName() {
             return "CSteamTV_AddChatModerator_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -6939,13 +6850,15 @@
             return "CSteamTV_AddChatModerator_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6998,16 +6911,16 @@
           getClassName() {
             return "CSteamTV_GetChatModerators_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7065,16 +6978,16 @@
           getClassName() {
             return "CSteamTV_ChatModerator";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7128,16 +7041,16 @@
           getClassName() {
             return "CSteamTV_GetChatModerators_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7200,9 +7113,7 @@
           getClassName() {
             return "CSteamTV_AddWordBan_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7244,13 +7155,15 @@
             return "CSteamTV_AddWordBan_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7303,16 +7216,16 @@
           getClassName() {
             return "CSteamTV_GetWordBans_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7367,16 +7280,16 @@
           getClassName() {
             return "CSteamTV_GetWordBans_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7429,16 +7342,16 @@
           getClassName() {
             return "CSteamTV_JoinChat_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7504,16 +7417,16 @@
           getClassName() {
             return "CSteamTV_JoinChat_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.term || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7566,16 +7479,16 @@
           getClassName() {
             return "CSteamTV_Search_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7629,9 +7542,7 @@
           getClassName() {
             return "CSteamTV_Search_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7673,13 +7584,15 @@
             return "CSteamTV_GetSteamTVUserSettings_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stream_live_email || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7737,16 +7650,16 @@
           getClassName() {
             return "CSteamTV_GetSteamTVUserSettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stream_live_email || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7804,9 +7717,7 @@
           getClassName() {
             return "CSteamTV_SetSteamTVUserSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7889,13 +7800,15 @@
             return "CSteamTV_GetMyBroadcastChannels_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7949,16 +7862,16 @@
           getClassName() {
             return "CSteamTV_GetMyBroadcastChannels_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcasts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8012,16 +7925,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_Takeover";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcasts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8085,16 +7998,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_SingleGame";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8156,16 +8069,16 @@
           getClassName() {
             return "GameListEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entries || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8224,16 +8137,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_GameList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcasts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8292,16 +8205,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_QuickExplore";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcasts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8360,16 +8273,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_ConveyorBelt";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8431,16 +8344,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_WatchParty";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8497,16 +8410,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_Developer";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.title || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8559,16 +8472,16 @@
           getClassName() {
             return "CSteamTV_HomePageTemplate_Event";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.template_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8602,7 +8515,7 @@
                     },
                     watch_party: {
                       _: 7,
-                      _: _,
+                      _,
                     },
                     developer: {
                       _: 8,
@@ -8653,9 +8566,7 @@
           getClassName() {
             return "CSteamTV_HomePageContentRow";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -8697,13 +8608,15 @@
             return "CSteamTV_GetHomePageContents_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rows || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8757,16 +8670,16 @@
           getClassName() {
             return "CSteamTV_GetHomePageContents_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8819,16 +8732,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelClips_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8921,16 +8834,16 @@
           getClassName() {
             return "CSteamTV_BroadcastClipInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clips || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8989,16 +8902,16 @@
           getClassName() {
             return "CSteamTV_GetBroadcastChannelClips_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cheer_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9056,16 +8969,16 @@
           getClassName() {
             return "CSteamTV_AppCheer_SingleCheerType";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9129,16 +9042,16 @@
           getClassName() {
             return "CSteamTV_AppCheer_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.aggregation_delay_ms || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9191,9 +9104,7 @@
           getClassName() {
             return "CSteamTV_AppCheer_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -9558,15 +9469,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -9575,17 +9477,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 4,
           _ = 500,
           _ = 10,
           _ = class _ {
-            constructor() {
-              _(this, "m_mapChats", new Map()),
-                _(this, "m_cmInterface"),
-                (0, _._)(this);
-            }
+            m_mapChats = new Map();
+            m_cmInterface;
             SetCMInterface(_) {
               this.m_cmInterface = _;
             }
@@ -9599,44 +9497,48 @@
               let _ = this.GetChat(_, _);
               return _ || ((_ = new _()), this.m_mapChats.set(_ || _, _)), _;
             }
+            static s_Singleton;
             static Get() {
               return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
             }
+            constructor() {
+              (0, _._)(this);
+            }
           };
-        _(_, "s_Singleton"), _([_._], _.prototype, "m_mapChats", 2);
+        _([_._], _.prototype, "m_mapChats", 2);
         let _ = _;
         class _ {
+          m_ulBroadcastChannelID = "";
+          m_ulChatID = "";
+          m_strFlairGroupID = "";
+          m_bAutoScroll = !0;
+          m_ulBroadcastID = "";
+          m_ulBroadcastSteamID = "";
+          m_tsFirstRequest = null;
+          m_nFromFirstRequestMS = 0;
+          m_nNextChatTS = 0;
+          m_cConsecutiveErrors = 0;
+          m_nNudgeFactorMS = 0;
+          m_nLastSleepMS = 0;
+          m_bReconnecting = !1;
+          m_strChatURL = "";
+          m_unInstanceID = Math.floor(Math.random() * 4294967296);
+          m_strUserSteamID = "";
+          m_regexUserEmoticons;
+          m_chatScheduledFunc;
+          m_steamInterface;
+          m_textFilterStore;
+          m_bHasAddedWelcomeChat = !1;
+          m_mapMutedUsers = {};
+          m_mapChannelModeratorUsers = new Map();
+          m_mapBroadcastModeratorUsers = new Map();
+          m_nRateLimitSeconds = 0;
+          m_bRateLimited = !1;
+          m_rgChatMessages = [];
+          m_rgAnnouncements = [];
+          m_latestAnnouncement = null;
           constructor() {
-            _(this, "m_ulBroadcastChannelID", ""),
-              _(this, "m_ulChatID", ""),
-              _(this, "m_strFlairGroupID", ""),
-              _(this, "m_bAutoScroll", !0),
-              _(this, "m_ulBroadcastID", ""),
-              _(this, "m_ulBroadcastSteamID", ""),
-              _(this, "m_tsFirstRequest", null),
-              _(this, "m_nFromFirstRequestMS", 0),
-              _(this, "m_nNextChatTS", 0),
-              _(this, "m_cConsecutiveErrors", 0),
-              _(this, "m_nNudgeFactorMS", 0),
-              _(this, "m_nLastSleepMS", 0),
-              _(this, "m_bReconnecting", !1),
-              _(this, "m_strChatURL"),
-              _(this, "m_unInstanceID", Math.floor(Math.random() * 4294967296)),
-              _(this, "m_strUserSteamID", ""),
-              _(this, "m_regexUserEmoticons", null),
-              _(this, "m_chatScheduledFunc", null),
-              _(this, "m_steamInterface", null),
-              _(this, "m_textFilterStore", null),
-              _(this, "m_bHasAddedWelcomeChat", !1),
-              _(this, "m_mapMutedUsers", {}),
-              _(this, "m_mapChannelModeratorUsers", new Map()),
-              _(this, "m_mapBroadcastModeratorUsers", new Map()),
-              _(this, "m_nRateLimitSeconds", 0),
-              _(this, "m_bRateLimited", !1),
-              _(this, "m_rgChatMessages", []),
-              _(this, "m_rgAnnouncements", []),
-              _(this, "m_latestAnnouncement", null),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_steamInterface = this.CreateSteamInterface());
           }
           InitTextFilter() {
@@ -9657,8 +9559,7 @@
             return this.m_strUserSteamID;
           }
           CreateSteamInterface() {
-            var _;
-            const _ = (_ = (0, _._)()) != null ? _ : _.Get().GetCMInterface();
+            const _ = (0, _._)() ?? _.Get().GetCMInterface();
             return (
               _ || (0, _._)(new _._(_._.WEBAPI_BASE_URL, _._.webapi_token))
             );
@@ -9707,7 +9608,7 @@
                     : _.result == _._
                       ? (_ = (0, _._)(
                           "#BroadcastChat_Cooldown",
-                          _.cooldown_time_seconds,
+                          _.cooldown_time_seconds ?? 0,
                         ))
                       : (_ = (0, _._)("#BroadcastChat_FailedToSendMsg", _)),
                     this.m_rgChatMessages.push({
@@ -9722,7 +9623,7 @@
                   return;
                 }
                 this.m_nRateLimitSeconds ||
-                  (this.m_nRateLimitSeconds = _.cooldown_time_seconds),
+                  (this.m_nRateLimitSeconds = _.cooldown_time_seconds ?? 0),
                   this.m_nRateLimitSeconds &&
                     ((this.m_bRateLimited = !0),
                     setTimeout(
@@ -9753,15 +9654,14 @@
                 _ = await _().get(`${_._.CHAT_BASE_URL}broadcast/getchatinfo`, {
                   params: _,
                   withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
+                  cancelToken: _?.token,
                 });
               (!_ || !_.token.reason) &&
                 (0, _._)(() => {
                   const _ = _.data;
-                  (this.m_strChatURL = _.view_url_template),
-                    (this.m_ulChatID = _.chat_id),
-                    (this.m_strFlairGroupID =
-                      _.flair_group_ids && _.flair_group_ids[0]),
+                  (this.m_strChatURL = _.view_url_template ?? ""),
+                    (this.m_ulChatID = _.chat_id ?? ""),
+                    (this.m_strFlairGroupID = _.flair_group_ids?.[0] ?? ""),
                     _.blocked && console.log("User is blocked from chat"),
                     _.steamid && (this.m_strUserSteamID = _.steamid),
                     _.emoticons && this.SetOwnedEmoticons(_.emoticons),
@@ -9798,12 +9698,14 @@
                 this.m_steamInterface.GetServiceTransport(),
                 _,
               );
-              if (!_.Body().chat_id || !_.Body().view_url_template) {
+              const _ = _.Body().view_url_template(),
+                _ = _.Body().chat_id();
+              if (!_ || !_) {
                 console.log("Failed to join channel chat");
                 return;
               }
-              (this.m_strChatURL = _.Body().view_url_template()),
-                (this.m_ulChatID = _.Body().chat_id()),
+              (this.m_strChatURL = _),
+                (this.m_ulChatID = _),
                 (this.m_strFlairGroupID =
                   _.Body().flair_group_ids() && _.Body().flair_group_ids()[0]),
                 this.FetchChatModerators(),
@@ -9839,13 +9741,13 @@
                 .results(),
               _ = new Map();
             _.forEach((_) => {
-              _.set(_.steamid(), !0);
+              const _ = _.steamid();
+              _ && _.set(_, !0);
             }),
               (this.m_mapChannelModeratorUsers = _);
           }
           ReplaceChatAnnouncementIfAny(_) {
-            var _;
-            ((_ = _.announcements) == null ? void 0 : _.length) > 0
+            _.announcements?.length > 0
               ? ((this.m_rgAnnouncements = _.announcements.reverse()),
                 (!this.m_latestAnnouncement ||
                   JSON.stringify(this.m_latestAnnouncement) !=
@@ -9943,7 +9845,7 @@
               this.m_bReconnecting && (this.m_bReconnecting = !1),
                 (this.m_nLastSleepMS = _),
                 _ < 0 && (_ = 0),
-                this.m_chatScheduledFunc.Schedule(_, this.RequestLoop);
+                this.m_chatScheduledFunc?.Schedule(_, this.RequestLoop);
             } catch {
               if (
                 (console.log(
@@ -9976,7 +9878,7 @@
                   (this.m_bReconnecting = !0),
                   this.SyncChat();
               }
-              this.m_chatScheduledFunc.Schedule(_, this.RequestLoop);
+              this.m_chatScheduledFunc?.Schedule(_, this.RequestLoop);
             }
           }
           GetUserEmoticons() {
@@ -10240,15 +10142,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -10257,26 +10150,27 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
           constructor() {
-            _(this, "giveaway_id"),
-              _(this, "seconds_until_drawing"),
-              _(this, "rtime_start"),
-              _(this, "rtime_end"),
-              _(this, "closed"),
-              _(this, "winner_count"),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          giveaway_id = void 0;
+          seconds_until_drawing = void 0;
+          rtime_start = void 0;
+          rtime_end = void 0;
+          closed = void 0;
+          winner_count = void 0;
           BIsValid() {
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const _ = new _();
@@ -10300,12 +10194,12 @@
         let _ = _;
         const _ = class _ {
           constructor() {
-            _(this, "m_mapGiveawayIDToNextDrawInfo", new Map()),
-              _(this, "m_mapGiveawayIDAndInstanceToNextDrawInfo", new Map()),
-              _(this, "m_bLoadedFromConfig", !1),
-              _(this, "m_mapNextDrawChangeCallback", new Map()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapGiveawayIDToNextDrawInfo = new Map();
+          m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
+          m_bLoadedFromConfig = !1;
+          m_mapNextDrawChangeCallback = new Map();
           GetKey(_, _) {
             return _ + "_" + _;
           }
@@ -10315,10 +10209,11 @@
             );
           }
           GetNextDrawChangeCallback(_) {
+            let _ = this.m_mapNextDrawChangeCallback.get(_);
             return (
-              this.m_mapNextDrawChangeCallback.has(_) ||
-                this.m_mapNextDrawChangeCallback.set(_, new _._()),
-              this.m_mapNextDrawChangeCallback.get(_)
+              _ ||
+                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
+              _
             );
           }
           CopyToGiveaway(_, _) {
@@ -10334,42 +10229,33 @@
           async ReloadGiveaway(_, _) {
             if (!_) return null;
             let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = null,
               _ = {
                 origin: self.origin,
               };
-            return (
-              (_ = await _().get(_, {
+            const _ = await _().get(_, {
                 params: _,
-              })),
-              (0, _._)(() => {
+              }),
+              _ = (0, _._)(() => {
+                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                  ),
+                  (_ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
+                  this.CopyToGiveaway(_.data, _),
                   _ !== void 0)
                 ) {
                   const _ = this.GetKey(_, _);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      _,
-                      new _(),
-                    ),
-                    this.CopyToGiveaway(
-                      _.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                    );
+                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
+                  _ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
+                    this.CopyToGiveaway(_.data, _);
                 }
-              }),
-              this.GetNextDrawChangeCallback(_).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(_),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(_)
-            );
+                return _;
+              });
+            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
           }
+          static s_Singleton;
           static Get() {
             return (
               _.s_Singleton ||
@@ -10389,16 +10275,16 @@
             }
           }
         };
-        _(_, "s_Singleton"),
-          _([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
+        _([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
           _([_._], _.prototype, "CopyToGiveaway", 1);
         let _ = _;
         const _ = class _ {
+          m_intervalID;
+          m_intervalCountDownID;
+          static s_GlobalInstance = 0;
+          m_myInstanceNumber = 0;
           constructor() {
-            _(this, "m_intervalID"),
-              _(this, "m_intervalCountDownID"),
-              _(this, "m_myInstanceNumber", 0),
-              (this.m_myInstanceNumber = _.s_GlobalInstance),
+            (this.m_myInstanceNumber = _.s_GlobalInstance),
               (_.s_GlobalInstance += 1);
           }
           ClearRefreshInterval() {
@@ -10414,36 +10300,44 @@
           SetupRefreshDataInterval(_, _) {
             if ((this.ClearRefreshInterval(), !_.closed)) {
               let _ =
-                _.seconds_until_drawing <= 0 && _.winner_count == 0 ? 6e4 : 5e3;
+                _.seconds_until_drawing !== void 0 &&
+                _.seconds_until_drawing <= 0 &&
+                _.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
               this.m_intervalID = window.setInterval(_, _);
             }
           }
           SetupCountDown(_, _) {
-            _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
+            _ !== void 0 &&
+              _ > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
           }
         };
-        _(_, "s_GlobalInstance", 0),
-          _([_._], _.prototype, "ClearRefreshInterval", 1),
+        _([_._], _.prototype, "ClearRefreshInterval", 1),
           _([_._], _.prototype, "ClearCountDown", 1),
           _([_._], _.prototype, "SetupRefreshDataInterval", 1),
           _([_._], _.prototype, "SetupCountDown", 1);
         let _ = _;
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          (_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown();
+          !_ ||
+            _.seconds_until_drawing === void 0 ||
+            ((_.seconds_until_drawing -= 1),
+            _.seconds_until_drawing == 0 && _.ClearCountDown());
         }
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
           _ &&
             _.BIsValid() &&
+            _.seconds_until_drawing !== void 0 &&
             _.seconds_until_drawing <= 0 &&
             !_.closed &&
             (_.ClearCountDown(),
             _.Get()
               .ReloadGiveaway(_, _.m_myInstanceNumber)
               .then((_) => {
-                _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
+                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
               }));
         }
         function _(_) {
@@ -10454,9 +10348,10 @@
               _.Get()
                 .ReloadGiveaway(_, _.m_myInstanceNumber)
                 .then((_) => {
-                  _.SetupRefreshDataInterval(_, () => _(_, _)),
+                  _ &&
+                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
                     _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _();
+                    _());
                 }),
               () => {
                 _.ClearRefreshInterval(), _.ClearCountDown();
@@ -10466,9 +10361,9 @@
           );
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber),
             [_, _, _] = (0, _._)(() => [
-              _ == null ? void 0 : _.winner_count,
-              _ == null ? void 0 : _.closed,
-              _ == null ? void 0 : _.seconds_until_drawing,
+              _?.winner_count,
+              _?.closed,
+              _?.seconds_until_drawing,
             ]);
           return {
             bLoadingGiveawayInfo:

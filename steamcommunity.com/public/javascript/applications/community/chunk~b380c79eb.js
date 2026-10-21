@@ -4,34 +4,34 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [49769],
     {
-      99631: (W, M, e) => {
+      99631: (W, I, e) => {
         "use strict";
-        e.d(M, { C: () => g, I: () => I });
+        e.d(I, { C: () => v, I: () => b });
         var t = e(7850),
           l = e(90626),
-          C = e(7125);
-        const g = Symbol("CoercingTextInputNotParseable");
-        function I(x) {
+          f = e(7125);
+        const v = Symbol("CoercingTextInputNotParseable");
+        function b(h) {
           const {
-              value: F,
-              onValueChange: E,
+              value: z,
+              onValueChange: x,
               valueToString: U,
               valueFromString: c,
-              checkValidText: m,
+              checkValidText: C,
               onBlur: n,
               onKeyDown: a,
-              ...b
-            } = x,
-            [y, _] = (0, l.useState)(null),
-            H = y != null ? y : F === void 0 ? "" : U(F),
+              ...g
+            } = h,
+            [H, P] = (0, l.useState)(null),
+            F = H ?? (z === void 0 ? "" : U(z)),
             A = (L) => {
               const N = c(L);
-              N !== g && L === U(N) ? (_(null), E(N)) : (!m || m(L, N)) && _(L);
+              N !== v && L === U(N) ? (P(null), x(N)) : (!C || C(L, N)) && P(L);
             },
             $ = () => {
-              if (y !== null) {
-                const L = c(y);
-                L !== g && E(L), _(null);
+              if (H !== null) {
+                const L = c(H);
+                L !== v && x(L), P(null);
               }
             },
             Y = (L) => {
@@ -40,35 +40,35 @@
             G = (L) => {
               L.key === "Enter" && $(), a && a(L);
             };
-          return (0, t.jsx)(C.k, {
-            value: H,
+          return (0, t.jsx)(f.k, {
+            value: F,
             onTextChange: A,
             onKeyDown: G,
             onBlur: Y,
-            ...b,
+            ...g,
           });
         }
       },
-      74769: (W, M, e) => {
+      74769: (W, I, e) => {
         "use strict";
-        e.d(M, { Bp: () => re, EC: () => ie, G3: () => V, PT: () => X });
+        e.d(I, { Bp: () => re, EC: () => ie, G3: () => y, PT: () => X });
         var t = e(7850),
           l = e(90626),
-          C = e(86946),
-          g = e(12204),
-          I = e(15252),
-          x = e(7125),
-          F = e(63029),
-          E = e(185),
+          f = e(86946),
+          v = e(12204),
+          b = e(15252),
+          h = e(7125),
+          z = e(63029),
+          x = e(185),
           U = e(92148),
           c = e(59366),
-          m = e(60351),
+          C = e(60351),
           n = e(76854),
           a = e(68031),
-          b = e(36707),
-          y = e(39790),
-          _ = e(85367),
-          H = e(71742),
+          g = e(36707),
+          H = e(39790),
+          P = e(85367),
+          F = e(71742),
           A = e(82277),
           $ = e.n(A),
           Y = e(80549),
@@ -80,8 +80,8 @@
               children: o,
               state: r,
               placement: d = "bottom-end",
-              popoverWidth: v = "dropdown",
-              popoverMaxHeight: f,
+              popoverWidth: p = "dropdown",
+              popoverMaxHeight: _,
               popoverPresentation: R,
               popoverLabel: u,
               ...i
@@ -89,17 +89,17 @@
             [S, O] = (0, l.useState)(void 0);
           (0, l.useEffect)(() => O(void 0), [r.bOpen]);
           const T = (0, G.Qn)(),
-            h = (0, l.useRef)(null),
-            z = (0, l.useRef)(null),
+            m = (0, l.useRef)(null),
+            V = (0, l.useRef)(null),
             j = (0, l.useMemo)(
               () => r.rgFilteredOptions.findIndex((D) => D === r.selectedValue),
               [r.selectedValue, r.rgFilteredOptions],
             ),
-            K = (0, E.T)({
+            K = (0, x.T)({
               open: r.bOpen,
               onOpenChange: r.setOpen,
-              width: v,
-              maxHeight: f,
+              width: p,
+              maxHeight: _,
               placement: d,
               presentation: R,
               gutter: "4",
@@ -117,8 +117,8 @@
               ...i,
               focusedValue: S,
               onFocusChange: O,
-              refPopover: h,
-              refScrollElement: z,
+              refPopover: m,
+              refScrollElement: V,
               setOpen: (D) => {
                 if (D) {
                   let B = null;
@@ -142,7 +142,7 @@
             };
           return (0, t.jsx)(ce.Provider, {
             value: k,
-            children: (0, t.jsx)(E.k.Root, { state: K, children: o }),
+            children: (0, t.jsx)(x.k.Root, { state: K, children: o }),
           });
         }
         function w(s) {
@@ -150,39 +150,39 @@
               refPopover: o,
               inputValue: r,
               onInputChange: d,
-              activeIndex: v,
-              popoverPlacement: f,
+              activeIndex: p,
+              popoverPlacement: _,
               popoverPresentation: R,
               popoverLabel: u,
               multiselect: i,
               setActiveIndex: S,
               setOpen: O,
               filterPlaceholder: T,
-              onIndexSelected: h,
-              refScrollElement: z,
+              onIndexSelected: m,
+              refScrollElement: V,
             } = Z("<Combobox.Options>"),
-            j = (P) => {
-              P && P.focus({ preventScroll: !0 });
+            j = (E) => {
+              E && E.focus({ preventScroll: !0 });
             },
-            K = (P) => {
-              P.key === "Enter" &&
-                v !== null &&
-                (h(v),
+            K = (E) => {
+              E.key === "Enter" &&
+                p !== null &&
+                (m(p),
                 i || (S(null), O(!1)),
-                P.preventDefault(),
-                P.stopPropagation());
+                E.preventDefault(),
+                E.stopPropagation());
             },
-            k = R === "anchor" && f.startsWith("top"),
-            D = (0, t.jsx)(m.az, {
+            k = R === "anchor" && _.startsWith("top"),
+            D = (0, t.jsx)(C.az, {
               overflow: "auto",
-              ref: z,
+              ref: V,
               style: { overscrollBehavior: "contain" },
               children: s.children,
             }),
-            B = (P) => {
-              (P.key === "Home" || P.key === "End") && P.stopPropagation();
+            B = (E) => {
+              (E.key === "Home" || E.key === "End") && E.stopPropagation();
             };
-          return (0, t.jsx)(E.k.Positioner, {
+          return (0, t.jsx)(x.k.Positioner, {
             ref: o,
             label: u,
             children: (0, t.jsxs)(a.s, {
@@ -190,10 +190,10 @@
               maxHeight: "var(--popover-max-height)",
               children: [
                 k && D,
-                (0, t.jsx)(m.az, {
+                (0, t.jsx)(C.az, {
                   flexShrink: "0",
-                  className: (0, b.A)(A.FilterBorder, k ? A.Top : A.Bottom),
-                  children: (0, t.jsx)(x.k, {
+                  className: (0, g.A)(A.FilterBorder, k ? A.Top : A.Bottom),
+                  children: (0, t.jsx)(h.k, {
                     margin: "3",
                     variant: "inset",
                     radius: "sm",
@@ -213,32 +213,32 @@
         }
         const ne = (0, l.createContext)(null);
         function _e(s) {
-          const { items: o, renderItem: r, overscan: d = 5, ...v } = s,
+          const { items: o, renderItem: r, overscan: d = 5, ...p } = s,
             {
-              bOpen: f,
+              bOpen: _,
               refPopover: R,
               refScrollElement: u,
             } = Z("<ComboboxVirtualizedOptions>"),
             [i, S] = (0, l.useState)(!1),
-            O = f && !!R.current && !!u.current;
+            O = _ && !!R.current && !!u.current;
           (0, l.useEffect)(() => {
             O !== i && S(O);
           }, [O, i]);
           const T = (0, U.Te)({
             count: i ? o.length : Math.min(o.length, 3),
             getScrollElement: () => u.current,
-            enabled: f,
+            enabled: _,
             measureElement: c.ZO,
-            ...v,
+            ...p,
           });
           return (0, t.jsx)(w, {
             children: (0, t.jsx)(ne, {
               value: T,
-              children: (0, t.jsx)(m.az, {
+              children: (0, t.jsx)(C.az, {
                 height: `${T.getTotalSize()}px`,
                 position: "relative",
                 width: "100%",
-                children: T.getVirtualItems().map((h) => r(o[h.index], h, T)),
+                children: T.getVirtualItems().map((m) => r(o[m.index], m, T)),
               }),
             }),
           });
@@ -247,8 +247,8 @@
           const { virtualItem: o, children: r } = s,
             d = (0, l.useContext)(ne);
           return (
-            (0, H.wT)(d, "Virtual item rendered outside of a virtualizer!"),
-            (0, t.jsx)(m.az, {
+            (0, F.wT)(d, "Virtual item rendered outside of a virtualizer!"),
+            (0, t.jsx)(C.az, {
               position: "absolute",
               width: "100%",
               style: { top: 0, left: 0, transform: `translateY(${o.start}px)` },
@@ -272,20 +272,20 @@
         function q(s) {
           const { value: o, children: r, disabled: d } = s,
             {
-              onItemSelectionChange: v,
-              selectedValue: f,
+              onItemSelectionChange: p,
+              selectedValue: _,
               multiselect: R,
               maxSelected: u,
             } = Z("<ComboboxTrigger>");
           let i = !1,
             S = !1;
           R
-            ? ((i = Array.isArray(f) && f.includes(o)),
-              (S = !!u && Array.isArray(f) && f.length >= u))
-            : (i = o === f);
+            ? ((i = Array.isArray(_) && _.includes(o)),
+              (S = !!u && Array.isArray(_) && _.length >= u))
+            : (i = o === _);
           const O = d || (S && !i);
-          return (0, t.jsxs)(E.k.Item, {
-            onSelect: () => v(o),
+          return (0, t.jsxs)(x.k.Item, {
+            onSelect: () => p(o),
             selected: i,
             disabled: O,
             children: [
@@ -294,7 +294,7 @@
                   gap: "2",
                   align: "center",
                   children: [
-                    (0, t.jsx)(_.S, { checked: i, variant: "dark" }),
+                    (0, t.jsx)(P.S, { checked: i, variant: "dark" }),
                     r,
                   ],
                 }),
@@ -305,39 +305,39 @@
         function me(s) {
           const { children: o, beforeContent: r, render: d } = s,
             {
-              bOpen: v,
-              setOpen: f,
+              bOpen: p,
+              setOpen: _,
               inputValue: R,
               onInputChange: u,
               selectedValue: i,
               focusedValue: S,
               refScrollElement: O,
               onItemSelectionChange: T,
-              activeIndex: h,
-              setActiveIndex: z,
+              activeIndex: m,
+              setActiveIndex: V,
               onFocusChange: j,
               rgFilteredOptions: K,
               onSelectionChange: k,
               multiselect: D,
               onClear: B,
-              refPopover: P,
+              refPopover: E,
               clearable: Ee,
               filterPlaceholder: Pe,
-              onIndexSelected: p,
+              onIndexSelected: M,
               popoverPlacement: te,
               popoverPresentation: ue,
               popoverLabel: Te,
               maxSelected: je,
-              variant: Oe,
+              variant: ve,
               ...ge
             } = Z("<ComboboxTrigger>"),
             De = { tabIndex: 0, children: o },
             pe = D ? Array.isArray(i) && i.length > 0 : !!i,
-            ve = pe && Ee,
-            Me = ve
-              ? (0, t.jsx)(F.g, { onClick: B, cursor: "pointer", hitSlop: !0 })
-              : (0, t.jsx)(g.V, {}),
-            Ie = ve
+            Oe = pe && Ee,
+            Me = Oe
+              ? (0, t.jsx)(z.g, { onClick: B, cursor: "pointer", hitSlop: !0 })
+              : (0, t.jsx)(v.V, {}),
+            Ie = Oe
               ? {
                   onSecondaryButton: B,
                   actionDescriptionMap: {
@@ -345,8 +345,8 @@
                   },
                 }
               : void 0,
-            be = (0, Y.f)("Combobox", Oe),
-            Le = (0, t.jsx)(C.j, {
+            be = (0, Y.f)("Combobox", ve),
+            Le = (0, t.jsx)(f.j, {
               beforeContent: r,
               afterContent: Me,
               hasValue: pe,
@@ -357,10 +357,10 @@
               ...ge,
             }),
             Re = (0, n.Q)(d, Le, De, void 0);
-          return (0, t.jsx)(E.k.Anchor, { children: Re });
+          return (0, t.jsx)(x.k.Anchor, { children: Re });
         }
         function Q(s) {
-          return (0, t.jsx)(I.EY, {
+          return (0, t.jsx)(b.EY, {
             weight: "medium",
             truncate: !0,
             contrast: "title",
@@ -368,7 +368,7 @@
           });
         }
         function he(s) {
-          return (0, t.jsx)(I.EY, {
+          return (0, t.jsx)(b.EY, {
             contrast: "description",
             truncate: !0,
             ...s,
@@ -396,66 +396,64 @@
           const {
               rgOptions: r,
               filter: d = J,
-              filterPlaceholder: v,
-              selectedValue: f,
+              filterPlaceholder: p,
+              selectedValue: _,
               onSelectionChange: R,
               maxSelected: u,
             } = s,
             [i, S] = (0, l.useState)(""),
             [O, T] = (0, l.useState)(!1),
-            [h, z] = (0, l.useState)(null),
-            j = (0, l.useMemo)(() => r.filter((p) => d(i, p)), [i, r, d]),
-            K = typeof h == "number",
+            [m, V] = (0, l.useState)(null),
+            j = (0, l.useMemo)(() => r.filter((M) => d(i, M)), [i, r, d]),
+            K = typeof m == "number",
             k = j.length > 0,
             D = (0, l.useCallback)(
-              (p) => {
-                p && !K && k && z(0), S(p);
+              (M) => {
+                M && !K && k && V(0), S(M);
               },
               [K, k],
             ),
             B = (0, l.useCallback)(
-              (p) => {
-                p || D(""), T(p);
+              (M) => {
+                M || D(""), T(M);
               },
               [D],
             ),
-            P = (0, l.useCallback)(
-              (p) => {
-                R(p), o || B(!1);
+            E = (0, l.useCallback)(
+              (M) => {
+                R(M), o || B(!1);
               },
               [o, R, B],
             ),
-            Ee = (p) => {
-              P(o ? [] : null),
-                p == null || p.stopPropagation(),
-                p == null || p.preventDefault();
+            Ee = (M) => {
+              E(o ? [] : null), M?.stopPropagation(), M?.preventDefault();
             },
             Pe = (0, l.useCallback)(
-              (p) => {
-                if (!o) P(p);
-                else if (!f) P([p]);
+              (M) => {
+                if (!o) E(M);
+                else if (!_) E([M]);
                 else {
-                  const te = f,
-                    ue = te.indexOf(p);
-                  if (ue === -1) P(te.concat(p));
-                  else return P(te.slice(0, ue).concat(te.slice(ue + 1)));
+                  const te = _,
+                    ue = te.indexOf(M);
+                  if (ue === -1) E(te.concat(M));
+                  else return E(te.slice(0, ue).concat(te.slice(ue + 1)));
                 }
               },
-              [P, f, o],
+              [E, _, o],
             );
           return {
-            activeIndex: h,
-            setActiveIndex: z,
+            activeIndex: m,
+            setActiveIndex: V,
             rgFilteredOptions: j,
-            selectedValue: f,
-            onSelectionChange: P,
+            selectedValue: _,
+            onSelectionChange: E,
             onItemSelectionChange: Pe,
             onClear: Ee,
             inputValue: i,
             onInputChange: D,
             bOpen: O,
             setOpen: B,
-            filterPlaceholder: v,
+            filterPlaceholder: p,
             multiselect: o,
             maxSelected: u,
           };
@@ -490,43 +488,43 @@
               selectedValue: o,
               onSelectionChange: r,
               options: d,
-              filter: v,
-              filterPlaceholder: f,
+              filter: p,
+              filterPlaceholder: _,
               placeholder: R,
               getOptionLabel: u = ee,
               ...i
             } = s,
             S = (0, l.useCallback)(
-              (h, z) => (v ? v(h, z) : J(h, u(z))),
-              [v, u],
+              (m, V) => (p ? p(m, V) : J(m, u(V))),
+              [p, u],
             ),
             O = re({
               onSelectionChange: r,
               selectedValue: o,
               rgOptions: d,
               filter: S,
-              filterPlaceholder: f,
+              filterPlaceholder: _,
             }),
             T = o != null;
-          return (0, t.jsxs)(V.Root, {
+          return (0, t.jsxs)(y.Root, {
             state: O,
             ...i,
             children: [
-              (0, t.jsxs)(V.Trigger, {
+              (0, t.jsxs)(y.Trigger, {
                 children: [
-                  T && (0, t.jsx)(V.Value, { children: u(o) }),
-                  !T && (0, t.jsx)(V.Placeholder, { children: R }),
+                  T && (0, t.jsx)(y.Value, { children: u(o) }),
+                  !T && (0, t.jsx)(y.Placeholder, { children: R }),
                 ],
               }),
-              (0, t.jsx)(V.Options, {
-                children: O.rgFilteredOptions.map((h) =>
-                  (0, t.jsx)(q, { value: h, children: u(h) }, u(h)),
+              (0, t.jsx)(y.Options, {
+                children: O.rgFilteredOptions.map((m) =>
+                  (0, t.jsx)(q, { value: m, children: u(m) }, u(m)),
                 ),
               }),
             ],
           });
         }
-        const V = Object.assign(ae, le);
+        const y = Object.assign(ae, le);
         function ie(s) {
           return se(s, !0);
         }
@@ -535,46 +533,46 @@
               selectedValue: o,
               onSelectionChange: r,
               options: d,
-              filter: v,
-              filterPlaceholder: f,
+              filter: p,
+              filterPlaceholder: _,
               placeholder: R,
               getOptionLabel: u = ee,
               maxSelected: i,
               ...S
             } = s,
             O = (0, l.useCallback)(
-              (j, K) => (v ? v(j, K) : J(j, u(K))),
-              [v, u],
+              (j, K) => (p ? p(j, K) : J(j, u(K))),
+              [p, u],
             ),
             T = ie({
               onSelectionChange: r,
               selectedValue: o,
               rgOptions: d,
               filter: O,
-              filterPlaceholder: f,
+              filterPlaceholder: _,
               maxSelected: i,
             }),
-            h = Array.isArray(o) && o.length > 0;
-          let z = "";
-          if (h) {
+            m = Array.isArray(o) && o.length > 0;
+          let V = "";
+          if (m) {
             const j = o.map((K) => u(K));
             "ListFormat" in Intl
-              ? (z = new Intl.ListFormat((0, y.ZO)().strISOCode).format(j))
-              : (z = j.join(", "));
+              ? (V = new Intl.ListFormat((0, H.ZO)().strISOCode).format(j))
+              : (V = j.join(", "));
           }
-          return (0, t.jsxs)(V.Root, {
+          return (0, t.jsxs)(y.Root, {
             state: T,
             ...S,
             children: [
-              (0, t.jsxs)(V.Trigger, {
+              (0, t.jsxs)(y.Trigger, {
                 children: [
-                  h && (0, t.jsx)(V.Value, { children: z }),
-                  !h && (0, t.jsx)(V.Placeholder, { children: R }),
+                  m && (0, t.jsx)(y.Value, { children: V }),
+                  !m && (0, t.jsx)(y.Placeholder, { children: R }),
                 ],
               }),
-              (0, t.jsx)(V.Options, {
+              (0, t.jsx)(y.Options, {
                 children: T.rgFilteredOptions.map((j) =>
-                  (0, t.jsx)(V.Option, { value: j, children: u(j) }, u(j)),
+                  (0, t.jsx)(y.Option, { value: j, children: u(j) }, u(j)),
                 ),
               }),
             ],
@@ -589,26 +587,26 @@
           );
         }
       },
-      7125: (W, M, e) => {
+      7125: (W, I, e) => {
         "use strict";
-        e.d(M, { k: () => _ });
+        e.d(I, { k: () => P });
         var t = e(7850),
           l = e(90626),
-          C = e(64238),
-          g = e.n(C),
-          I = e(3877),
-          x = e(98929),
-          F = e(60351),
-          E = e(86946),
+          f = e(64238),
+          v = e.n(f),
+          b = e(3877),
+          h = e(98929),
+          z = e(60351),
+          x = e(86946),
           U = e(63029),
           c = e(18938),
-          m = e(24660),
+          C = e(24660),
           n = e(80549),
           a = e(3166),
-          b = e(58017),
-          y = e(64415);
-        function _(A) {
-          const { extracted: $, remaining: Y } = (0, F.A4)(A),
+          g = e(58017),
+          H = e(64415);
+        function P(A) {
+          const { extracted: $, remaining: Y } = (0, z.A4)(A),
             {
               value: G,
               onTextChange: L,
@@ -635,7 +633,7 @@
               L(""), N && N();
             },
             ae = !!G && de,
-            V = ae
+            y = ae
               ? (0, t.jsx)(U.g, { onClick: ee, cursor: "pointer", hitSlop: !0 })
               : Ce,
             ie = (0, n.f)("TextInput", _e),
@@ -646,7 +644,7 @@
               radius: ne,
               status: J,
               beforeContent: fe,
-              afterContent: V,
+              afterContent: y,
               ref: me,
               disabled: Q,
             },
@@ -655,17 +653,17 @@
               X.current && d.target !== X.current && X.current.focus();
             },
             Z = he && se,
-            s = Z ? H : "input",
+            s = Z ? F : "input",
             r =
               Z && ae && !Q
                 ? {
                     onSecondaryButton: ee,
                     actionDescriptionMap: {
-                      [y.pR.SECONDARY]: b.T.Localize("#Clear"),
+                      [H.pR.SECONDARY]: g.T.Localize("#Clear"),
                     },
                   }
                 : {};
-          return (0, t.jsx)(E.j, {
+          return (0, t.jsx)(x.j, {
             cursor: "text",
             ...xe,
             onClick: ce,
@@ -674,7 +672,7 @@
               type: "text",
               "aria-disabled": Q,
               readOnly: Q,
-              className: g()((0, I.T)(), (0, x.F)()),
+              className: v()((0, b.T)(), (0, h.F)()),
               value: G || "",
               onChange: le,
               ...r,
@@ -682,56 +680,56 @@
             }),
           });
         }
-        function H(A) {
-          return (0, t.jsx)(m.BA, { noFocusRing: !0, ...A });
+        function F(A) {
+          return (0, t.jsx)(C.BA, { noFocusRing: !0, ...A });
         }
       },
-      34771: (W, M, e) => {
+      34771: (W, I, e) => {
         "use strict";
-        e.d(M, { D: () => a });
+        e.d(I, { D: () => a });
         var t = e(7850),
           l = e(39049),
-          C = e(8928),
-          g = e(15252),
-          I = e(69289),
-          x = e(90626);
-        function F(_) {
-          const { depth: H } = useContext(E);
-          return jsx(E.Provider, {
-            value: { depth: H + 1 },
-            children: jsx(Box, { ..._ }),
+          f = e(8928),
+          v = e(15252),
+          b = e(69289),
+          h = e(90626);
+        function z(P) {
+          const { depth: F } = useContext(x);
+          return jsx(x.Provider, {
+            value: { depth: F + 1 },
+            children: jsx(Box, { ...P }),
           });
         }
-        const E = x.createContext({ depth: 0 });
+        const x = h.createContext({ depth: 0 });
         function U() {
-          return (0, x.useContext)(E).depth;
+          return (0, h.useContext)(x).depth;
         }
         var c = e(3877),
-          m = e(64238),
-          n = e.n(m);
-        function a(_) {
-          const { level: H = "auto", className: A, color: $ } = _,
+          C = e(64238),
+          n = e.n(C);
+        function a(P) {
+          const { level: F = "auto", className: A, color: $ } = P,
             Y = U(),
-            G = y(H, Y);
+            G = H(F, Y);
           return (0, t.jsx)(G, {
-            ...(0, I.mz)({ ..._, className: n()((0, c.T)(), l.Heading, A) }, b),
+            ...(0, b.mz)({ ...P, className: n()((0, c.T)(), l.Heading, A) }, g),
           });
         }
-        const b = [
-          ...g.U6,
-          ...C.L,
+        const g = [
+          ...v.U6,
+          ...f.L,
           {
             prop: "size",
             responsive: !0,
-            className: (_) => l[`HeadingSize-${_}`],
+            className: (P) => l[`HeadingSize-${P}`],
           },
         ];
-        function y(_, H) {
-          if (_ === "auto" && H === 0) return "h1";
-          const A = _ === "auto" ? H.toString() : _;
+        function H(P, F) {
+          if (P === "auto" && F === 0) return "h1";
+          const A = P === "auto" ? F.toString() : P;
           return /^[1-6]$/.test(A)
             ? "h" + A
-            : _ === "auto"
+            : P === "auto"
               ? (console.error(
                   '<Section> nesting has exceeded "h6" for headings.',
                 ),
@@ -742,82 +740,82 @@
                 "h1");
         }
       },
-      51596: (W, M, e) => {
+      51596: (W, I, e) => {
         "use strict";
-        e.d(M, { P: () => t });
-        function t(l, C) {
-          return C === void 0 ? l[""] : l[C];
+        e.d(I, { P: () => t });
+        function t(l, f) {
+          return f === void 0 ? l[""] : l[f];
         }
       },
-      52574: (W, M, e) => {
+      52574: (W, I, e) => {
         "use strict";
-        e.d(M, { L: () => C });
+        e.d(I, { L: () => f });
         var t = e(7850),
           l = e(51596);
-        const C = {
-          b: { Constructor: g },
-          i: { Constructor: I },
-          u: { Constructor: x },
-          c: { Constructor: F },
-          strike: { Constructor: E },
+        const f = {
+          b: { Constructor: v },
+          i: { Constructor: b },
+          u: { Constructor: h },
+          c: { Constructor: z },
+          strike: { Constructor: x },
           color: { Constructor: U },
         };
-        function g(c) {
+        function v(c) {
           return (0, t.jsx)("b", { children: c.children });
         }
-        function I(c) {
+        function b(c) {
           return (0, t.jsx)("i", { children: c.children });
         }
-        function x(c) {
+        function h(c) {
           return (0, t.jsx)("u", { children: c.children });
         }
-        function F(c) {
+        function z(c) {
           return (0, t.jsx)("code", { children: c.children });
         }
-        function E(c) {
+        function x(c) {
           return (0, t.jsx)("s", { children: c.children });
         }
         function U(c) {
-          const m = (0, l.P)(c.args),
+          const C = (0, l.P)(c.args),
             n = {};
           return (
-            m &&
-              (m.match(/^#[a-fA-F0-9]+$/) || m.match(/rgba?\([0-9, ]+\)$/)) &&
-              (n.color = m),
+            C &&
+              (C.match(/^#[a-fA-F0-9]+$/) || C.match(/rgba?\([0-9, ]+\)$/)) &&
+              (n.color = C),
             (0, t.jsx)("span", { style: n, children: c.children })
           );
         }
       },
-      91937: (W, M, e) => {
+      91937: (W, I, e) => {
         "use strict";
-        e.d(M, { F: () => g });
+        e.d(I, { F: () => v });
         var t = e(7850),
           l = e(17763),
-          C = e.n(l);
-        const g = {
-          h1: { Constructor: I, skipFollowingNewline: !0 },
-          h2: { Constructor: x, skipFollowingNewline: !0 },
-          h3: { Constructor: F, skipFollowingNewline: !0 },
-          code: { Constructor: E, skipFollowingNewline: !0 },
+          f = e.n(l);
+        const v = {
+          h1: { Constructor: b, skipFollowingNewline: !0 },
+          h2: { Constructor: h, skipFollowingNewline: !0 },
+          h3: { Constructor: z, skipFollowingNewline: !0 },
+          code: { Constructor: x, skipFollowingNewline: !0 },
           quote: {
             Constructor: U,
             skipFollowingNewline: !0,
             skipInternalNewline: !0,
           },
-          hr: { Constructor: m, skipFollowingNewline: !0 },
+          hr: { Constructor: C, skipFollowingNewline: !0 },
         };
-        function I(n) {
+        function b(n) {
           return (0, t.jsx)("h1", { children: n.children });
         }
-        function x(n) {
+        function h(n) {
           return (0, t.jsx)("h2", { children: n.children });
         }
-        function F(n) {
+        function z(n) {
           return (0, t.jsx)("h3", { children: n.children });
         }
-        function E(n) {
+        function x(n) {
           return (0, t.jsx)("pre", {
-            className: C().CodeBlock,
+            className: f().CodeBlock,
             children: (0, t.jsx)("code", { children: n.children }),
           });
         }
@@ -832,99 +830,96 @@
             ],
           });
         }
-        function m(n) {
+        function C(n) {
           return (0, t.jsxs)(t.Fragment, {
             children: [(0, t.jsx)("hr", {}), n.children],
           });
         }
       },
-      59443: (W, M, e) => {
+      59443: (W, I, e) => {
         "use strict";
-        e.d(M, { _r: () => c, e9: () => m, rh: () => U });
+        e.d(I, { _r: () => c, e9: () => C, rh: () => U });
         var t = e(7850),
           l = e(90626),
-          C = e(43434),
-          g = e(86336),
-          I = e(51596),
-          x = e(39414);
-        function F(n) {
+          f = e(43434),
+          v = e(86336),
+          b = e(51596),
+          h = e(39414);
+        function z(n) {
           const a = l.Children.toArray(n)[0];
           return typeof a == "string" ? a : void 0;
         }
-        function E(n, a) {
+        function x(n, a) {
           if (!n) return;
-          const b = n.startsWith("steamcommunity.com/") ? "https://" + n : n;
-          if (b.match(/^https?:\/\//))
+          const g = n.startsWith("steamcommunity.com/") ? "https://" + n : n;
+          if (g.match(/^https?:\/\//))
             return {
-              strURL: b,
+              strURL: g,
               bFromBody: !1,
-              bHasCustomText: !(a != null && a.match(/^https?:\/\//i)),
+              bHasCustomText: !a?.match(/^https?:\/\//i),
             };
         }
         function U(n) {
-          var a;
-          const b =
-            (a = (0, I.P)(n.args)) != null ? a : (0, I.P)(n.args, "href");
-          if (b) return E(b, F(n.children));
+          const a = (0, b.P)(n.args) ?? (0, b.P)(n.args, "href");
+          if (a) return x(a, z(n.children));
           if (typeof n.children == "string") {
-            const y = n.children.trim(),
-              _ = x.O.exec(y);
-            if ((_ == null ? void 0 : _[0]) == y)
-              return { strURL: y, bFromBody: !0, bHasCustomText: !1 };
+            const g = n.children.trim();
+            if (h.O.exec(g)?.[0] == g)
+              return { strURL: g, bFromBody: !0, bHasCustomText: !1 };
           }
         }
         function c(n) {
           const a = U(n);
           if (!a) return n.children;
-          if (a.bFromBody) return (0, t.jsx)(m, { strURL: a.strURL });
-          const b = (0, C.p)(a.strURL) ? (0, C.E)(a.strURL) : a.strURL;
-          return (0, t.jsx)(g.Y, {
+          if (a.bFromBody) return (0, t.jsx)(C, { strURL: a.strURL });
+          const g = (0, f.p)(a.strURL) ? (0, f.E)(a.strURL) : a.strURL;
+          return (0, t.jsx)(v.Y, {
             target: "_blank",
-            href: b,
+            href: g,
             underline: "auto",
             contrast: "title",
             children: n.children,
           });
         }
-        function m(n) {
+        function C(n) {
           const a = n.strURL.match(/^[a-z][a-z0-9+.-]*:/i)
               ? n.strURL
               : "http://" + n.strURL,
-            b = (0, C.p)(a) ? (0, C.E)(a) : a;
-          return (0, t.jsx)(g.Y, {
+            g = (0, f.p)(a) ? (0, f.E)(a) : a;
+          return (0, t.jsx)(v.Y, {
             target: "_blank",
-            href: b,
+            href: g,
             underline: "auto",
             contrast: "title",
             children: n.strURL,
           });
         }
       },
-      49144: (W, M, e) => {
+      49144: (W, I, e) => {
         "use strict";
-        e.d(M, { I: () => l });
+        e.d(I, { I: () => l });
         var t = e(7850);
         const l = {
           list: {
-            Constructor: C,
+            Constructor: f,
             skipInternalNewline: !0,
             skipFollowingNewline: !0,
           },
           olist: {
-            Constructor: g,
+            Constructor: v,
             skipInternalNewline: !0,
             skipFollowingNewline: !0,
           },
-          "*": { Constructor: I, autocloses: !0 },
+          "*": { Constructor: b, autocloses: !0 },
         };
-        function C(x) {
-          return (0, t.jsx)("ul", { children: x.children });
+        function f(h) {
+          return (0, t.jsx)("ul", { children: h.children });
         }
-        function g(x) {
-          return (0, t.jsx)("ol", { children: x.children });
+        function v(h) {
+          return (0, t.jsx)("ol", { children: h.children });
         }
-        function I(x) {
-          return (0, t.jsx)("li", { children: x.children });
+        function b(h) {
+          return (0, t.jsx)("li", { children: h.children });
         }
       },
       82277: (W) => {

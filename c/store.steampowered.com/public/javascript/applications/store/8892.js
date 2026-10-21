@@ -340,6 +340,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
@@ -356,15 +357,21 @@
               ref: _,
               ..._,
             }),
-            _ = (0, _._)(_.direction ?? "row");
-          return _
-            ? (0, _.jsx)(_._, {
+            _ = (0, _._)();
+          if (_) {
+            const _ = (0, _._)(_.wrap, _);
+            let _ = (0, _._)(_.direction, _) ?? "row";
+            return (
+              _ === "wrap" && _ === "row" && (_ = "grid"),
+              (0, _.jsx)(_._, {
                 ...(_ || {}),
                 focusable: _,
                 "flow-children": _,
                 children: _,
               })
-            : _;
+            );
+          }
+          return _;
         }
         const _ = [
           ..._._,
@@ -846,7 +853,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
@@ -856,7 +862,7 @@
           return _.initial;
         }
         function _(_) {
-          const _ = (0, _._)();
+          const _ = useFormFactor();
           return _(_, _);
         }
       },

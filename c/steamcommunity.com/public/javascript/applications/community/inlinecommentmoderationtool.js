@@ -13,7 +13,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const {
               steamid: _,
               commentThreadID: _,
@@ -26,12 +25,9 @@
             }),
             _ = (0, _._)(_, _, _),
             _ = (0, _._)(_, _, _),
-            _ = (
-              (_ = (_ = _.data) == null ? void 0 : _.subjects) != null ? _ : []
-            ).find((_) => {
-              var _;
-              return ((_ = _.coordinates) == null ? void 0 : _.comment) === _;
-            });
+            _ = (_.data?.subjects ?? []).find(
+              (_) => _.coordinates?.comment === _,
+            );
           return (0, _.jsx)(_._, {
             sanctionMutation: _,
             acquitMutation: _,

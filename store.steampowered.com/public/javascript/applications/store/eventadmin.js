@@ -4,11 +4,11 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [50970],
     {
-      71698: (ae, Se, s) => {
+      71698: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { H: () => i, s: () => b });
+        s.d(fe, { H: () => i, s: () => j });
         var e = s(90626),
-          U = s(41623);
+          F = s(41623);
         let f = 0;
         function i(ge, O) {
           (0, e.useEffect)(() => {
@@ -16,49 +16,49 @@
               return (
                 f++,
                 () => {
-                  --f == 0 && (0, U.s)();
+                  --f == 0 && (0, F.s)();
                 }
               );
           }, [ge, O]);
         }
-        function b(ge) {
-          const [O, X] = (0, e.useState)(!1);
+        function j(ge) {
+          const [O, $] = (0, e.useState)(!1);
           (0, e.useEffect)(() => {
-            const Y = window.setTimeout(() => X(!0), ge);
-            return () => window.clearTimeout(Y);
+            const X = window.setTimeout(() => $(!0), ge);
+            return () => window.clearTimeout(X);
           }, [ge]),
             i(O);
         }
       },
-      94699: (ae, Se, s) => {
+      94699: (ae, fe, s) => {
         "use strict";
-        s.d(Se, {
-          w2: () => I,
-          wN: () => M,
-          Dw: () => P,
+        s.d(fe, {
+          w2: () => w,
+          wN: () => I,
+          Dw: () => U,
           vB: () => z,
           D$: () => e,
-          bH: () => S,
+          bH: () => p,
         });
         var e = {};
         s.r(e), s.d(e, { w4: () => ge });
-        var U = s(80613),
-          f = s.n(U),
+        var F = s(80613),
+          f = s.n(F),
           i = s(75245),
-          b = s(35038);
+          j = s(35038);
         const ge = 0,
           O = 1,
-          X = 2,
-          Y = 3;
+          $ = 2,
+          X = 3;
         function ie(d) {
           return "unknown ENewsRecommendationState ( " + d + " )";
         }
-        class _ extends U.Message {
+        class _ extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               _.prototype.gid || i.Sg(_.M()),
-              U.Message.initialize(this, t, 0, -1, [5], null);
+              F.Message.initialize(this, t, 0, -1, [5], null);
           }
           static sm_m;
           static sm_mbf;
@@ -172,20 +172,20 @@
             return "CNewsFeedDef";
           }
         }
-        class I extends U.Message {
+        class w extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              I.prototype.gid || i.Sg(I.M()),
-              U.Message.initialize(this, t, 0, -1, [11], null);
+              w.prototype.gid || i.Sg(w.M()),
+              F.Message.initialize(this, t, 0, -1, [11], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              I.sm_m ||
-                (I.sm_m = {
-                  proto: I,
+              w.sm_m ||
+                (w.sm_m = {
+                  proto: w,
                   fields: {
                     gid: {
                       n: 1,
@@ -249,52 +249,52 @@
                     },
                   },
                 }),
-              I.sm_m
+              w.sm_m
             );
           }
           static MBF() {
-            return I.sm_mbf || (I.sm_mbf = i.w0(I.M())), I.sm_mbf;
+            return w.sm_mbf || (w.sm_mbf = i.w0(w.M())), w.sm_mbf;
           }
           toObject(t = !1) {
-            return I.toObject(t, this);
+            return w.toObject(t, this);
           }
           static toObject(t, g) {
-            return i.BT(I.M(), t, g);
+            return i.BT(w.M(), t, g);
           }
           static fromObject(t) {
-            return i.Uq(I.M(), t);
+            return i.Uq(w.M(), t);
           }
           static deserializeBinary(t) {
             let g = new (f().BinaryReader)(t),
-              u = new I();
-            return I.deserializeBinaryFromReader(u, g);
+              u = new w();
+            return w.deserializeBinaryFromReader(u, g);
           }
           static deserializeBinaryFromReader(t, g) {
-            return i.zj(I.MBF(), t, g);
+            return i.zj(w.MBF(), t, g);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return I.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return w.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, g) {
-            i.i0(I.M(), t, g);
+            i.i0(w.M(), t, g);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              I.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              w.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
             return "CNewsFeedPostDef";
           }
         }
-        class k extends U.Message {
+        class k extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               k.prototype.content || i.Sg(k.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -357,12 +357,12 @@
             return "CNews_ConvertHTMLToBBCode_Request";
           }
         }
-        class V extends U.Message {
+        class V extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               V.prototype.converted_content || i.Sg(V.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -420,12 +420,12 @@
             return "CNews_ConvertHTMLToBBCode_Response";
           }
         }
-        class D extends U.Message {
+        class D extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               D.prototype.rss_message || i.Sg(D.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -452,7 +452,7 @@
                       br: i.qM.readString,
                       bw: i.gp.writeString,
                     },
-                    post: { n: 6, c: I },
+                    post: { n: 6, c: w },
                     valid_post: { n: 7, br: i.qM.readBool, bw: i.gp.writeBool },
                     post_error_msg: {
                       n: 8,
@@ -501,20 +501,20 @@
             return "CNewsPartnerEventPreview";
           }
         }
-        class P extends U.Message {
+        class U extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              P.prototype.rss_url || i.Sg(P.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              U.prototype.rss_url || i.Sg(U.M()),
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              P.sm_m ||
-                (P.sm_m = {
-                  proto: P,
+              U.sm_m ||
+                (U.sm_m = {
+                  proto: U,
                   fields: {
                     rss_url: {
                       n: 1,
@@ -529,60 +529,60 @@
                     },
                   },
                 }),
-              P.sm_m
+              U.sm_m
             );
           }
           static MBF() {
-            return P.sm_mbf || (P.sm_mbf = i.w0(P.M())), P.sm_mbf;
+            return U.sm_mbf || (U.sm_mbf = i.w0(U.M())), U.sm_mbf;
           }
           toObject(t = !1) {
-            return P.toObject(t, this);
+            return U.toObject(t, this);
           }
           static toObject(t, g) {
-            return i.BT(P.M(), t, g);
+            return i.BT(U.M(), t, g);
           }
           static fromObject(t) {
-            return i.Uq(P.M(), t);
+            return i.Uq(U.M(), t);
           }
           static deserializeBinary(t) {
             let g = new (f().BinaryReader)(t),
-              u = new P();
-            return P.deserializeBinaryFromReader(u, g);
+              u = new U();
+            return U.deserializeBinaryFromReader(u, g);
           }
           static deserializeBinaryFromReader(t, g) {
-            return i.zj(P.MBF(), t, g);
+            return i.zj(U.MBF(), t, g);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return P.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return U.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, g) {
-            i.i0(P.M(), t, g);
+            i.i0(U.M(), t, g);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              P.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              U.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
             return "CNews_PreviewPartnerEvents_Request";
           }
         }
-        class Q extends U.Message {
+        class Y extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              Q.prototype.rss_url || i.Sg(Q.M()),
-              U.Message.initialize(this, t, 0, -1, [2], null);
+              Y.prototype.rss_url || i.Sg(Y.M()),
+              F.Message.initialize(this, t, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              Q.sm_m ||
-                (Q.sm_m = {
-                  proto: Q,
+              Y.sm_m ||
+                (Y.sm_m = {
+                  proto: Y,
                   fields: {
                     rss_url: {
                       n: 1,
@@ -597,60 +597,60 @@
                     },
                   },
                 }),
-              Q.sm_m
+              Y.sm_m
             );
           }
           static MBF() {
-            return Q.sm_mbf || (Q.sm_mbf = i.w0(Q.M())), Q.sm_mbf;
+            return Y.sm_mbf || (Y.sm_mbf = i.w0(Y.M())), Y.sm_mbf;
           }
           toObject(t = !1) {
-            return Q.toObject(t, this);
+            return Y.toObject(t, this);
           }
           static toObject(t, g) {
-            return i.BT(Q.M(), t, g);
+            return i.BT(Y.M(), t, g);
           }
           static fromObject(t) {
-            return i.Uq(Q.M(), t);
+            return i.Uq(Y.M(), t);
           }
           static deserializeBinary(t) {
             let g = new (f().BinaryReader)(t),
-              u = new Q();
-            return Q.deserializeBinaryFromReader(u, g);
+              u = new Y();
+            return Y.deserializeBinaryFromReader(u, g);
           }
           static deserializeBinaryFromReader(t, g) {
-            return i.zj(Q.MBF(), t, g);
+            return i.zj(Y.MBF(), t, g);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return Q.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return Y.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, g) {
-            i.i0(Q.M(), t, g);
+            i.i0(Y.M(), t, g);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              Q.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              Y.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
             return "CNews_PreviewPartnerEvents_Response";
           }
         }
-        class j extends U.Message {
+        class T extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              j.prototype.clan_account_id || i.Sg(j.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              T.prototype.clan_account_id || i.Sg(T.M()),
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              j.sm_m ||
-                (j.sm_m = {
-                  proto: j,
+              T.sm_m ||
+                (T.sm_m = {
+                  proto: T,
                   fields: {
                     clan_account_id: {
                       n: 1,
@@ -659,108 +659,108 @@
                     },
                   },
                 }),
-              j.sm_m
+              T.sm_m
             );
           }
           static MBF() {
-            return j.sm_mbf || (j.sm_mbf = i.w0(j.M())), j.sm_mbf;
+            return T.sm_mbf || (T.sm_mbf = i.w0(T.M())), T.sm_mbf;
           }
           toObject(t = !1) {
-            return j.toObject(t, this);
+            return T.toObject(t, this);
           }
           static toObject(t, g) {
-            return i.BT(j.M(), t, g);
+            return i.BT(T.M(), t, g);
           }
           static fromObject(t) {
-            return i.Uq(j.M(), t);
+            return i.Uq(T.M(), t);
           }
           static deserializeBinary(t) {
             let g = new (f().BinaryReader)(t),
-              u = new j();
-            return j.deserializeBinaryFromReader(u, g);
+              u = new T();
+            return T.deserializeBinaryFromReader(u, g);
           }
           static deserializeBinaryFromReader(t, g) {
-            return i.zj(j.MBF(), t, g);
+            return i.zj(T.MBF(), t, g);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return j.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return T.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, g) {
-            i.i0(j.M(), t, g);
+            i.i0(T.M(), t, g);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              j.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              T.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
             return "CNews_GetNewsFeedByRepublishClan_Request";
           }
         }
-        class $ extends U.Message {
+        class Z extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              $.prototype.feeds || i.Sg($.M()),
-              U.Message.initialize(this, t, 0, -1, [1], null);
+              Z.prototype.feeds || i.Sg(Z.M()),
+              F.Message.initialize(this, t, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              $.sm_m ||
-                ($.sm_m = {
-                  proto: $,
+              Z.sm_m ||
+                (Z.sm_m = {
+                  proto: Z,
                   fields: { feeds: { n: 1, c: _, r: !0, q: !0 } },
                 }),
-              $.sm_m
+              Z.sm_m
             );
           }
           static MBF() {
-            return $.sm_mbf || ($.sm_mbf = i.w0($.M())), $.sm_mbf;
+            return Z.sm_mbf || (Z.sm_mbf = i.w0(Z.M())), Z.sm_mbf;
           }
           toObject(t = !1) {
-            return $.toObject(t, this);
+            return Z.toObject(t, this);
           }
           static toObject(t, g) {
-            return i.BT($.M(), t, g);
+            return i.BT(Z.M(), t, g);
           }
           static fromObject(t) {
-            return i.Uq($.M(), t);
+            return i.Uq(Z.M(), t);
           }
           static deserializeBinary(t) {
             let g = new (f().BinaryReader)(t),
-              u = new $();
-            return $.deserializeBinaryFromReader(u, g);
+              u = new Z();
+            return Z.deserializeBinaryFromReader(u, g);
           }
           static deserializeBinaryFromReader(t, g) {
-            return i.zj($.MBF(), t, g);
+            return i.zj(Z.MBF(), t, g);
           }
           serializeBinary() {
             var t = new (f().BinaryWriter)();
-            return $.serializeBinaryToWriter(this, t), t.getResultBuffer();
+            return Z.serializeBinaryToWriter(this, t), t.getResultBuffer();
           }
           static serializeBinaryToWriter(t, g) {
-            i.i0($.M(), t, g);
+            i.i0(Z.M(), t, g);
           }
           serializeBase64String() {
             var t = new (f().BinaryWriter)();
             return (
-              $.serializeBinaryToWriter(this, t), t.getResultBase64String()
+              Z.serializeBinaryToWriter(this, t), t.getResultBase64String()
             );
           }
           getClassName() {
             return "CNews_GetNewsFeedByRepublishClan_Response";
           }
         }
-        class z extends U.Message {
+        class z extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               z.prototype.post || i.Sg(z.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
@@ -770,7 +770,7 @@
                 (z.sm_m = {
                   proto: z,
                   fields: {
-                    post: { n: 1, c: I },
+                    post: { n: 1, c: w },
                     draft: { n: 2, br: i.qM.readBool, bw: i.gp.writeBool },
                   },
                 }),
@@ -814,20 +814,20 @@
             return "CNews_PublishPartnerEvent_Request";
           }
         }
-        class w extends U.Message {
+        class M extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
-              w.prototype.clan_event_gid || i.Sg(w.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
+              M.prototype.clan_event_gid || i.Sg(M.M()),
+              F.Message.initialize(this, t, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              w.sm_m ||
-                (w.sm_m = {
-                  proto: w,
+              M.sm_m ||
+                (M.sm_m = {
+                  proto: M,
                   fields: {
                     clan_event_gid: {
                       n: 1,
@@ -838,80 +838,6 @@
                       n: 2,
                       br: i.qM.readFixed64String,
                       bw: i.gp.writeFixed64String,
-                    },
-                  },
-                }),
-              w.sm_m
-            );
-          }
-          static MBF() {
-            return w.sm_mbf || (w.sm_mbf = i.w0(w.M())), w.sm_mbf;
-          }
-          toObject(t = !1) {
-            return w.toObject(t, this);
-          }
-          static toObject(t, g) {
-            return i.BT(w.M(), t, g);
-          }
-          static fromObject(t) {
-            return i.Uq(w.M(), t);
-          }
-          static deserializeBinary(t) {
-            let g = new (f().BinaryReader)(t),
-              u = new w();
-            return w.deserializeBinaryFromReader(u, g);
-          }
-          static deserializeBinaryFromReader(t, g) {
-            return i.zj(w.MBF(), t, g);
-          }
-          serializeBinary() {
-            var t = new (f().BinaryWriter)();
-            return w.serializeBinaryToWriter(this, t), t.getResultBuffer();
-          }
-          static serializeBinaryToWriter(t, g) {
-            i.i0(w.M(), t, g);
-          }
-          serializeBase64String() {
-            var t = new (f().BinaryWriter)();
-            return (
-              w.serializeBinaryToWriter(this, t), t.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CNews_PublishPartnerEvent_Response";
-          }
-        }
-        class M extends U.Message {
-          static ImplementsStaticInterface() {}
-          constructor(t = null) {
-            super(),
-              M.prototype.news_feed_gid || i.Sg(M.M()),
-              U.Message.initialize(this, t, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              M.sm_m ||
-                (M.sm_m = {
-                  proto: M,
-                  fields: {
-                    news_feed_gid: {
-                      n: 1,
-                      br: i.qM.readFixed64String,
-                      bw: i.gp.writeFixed64String,
-                    },
-                    start_index: {
-                      n: 2,
-                      d: 0,
-                      br: i.qM.readUint32,
-                      bw: i.gp.writeUint32,
-                    },
-                    amount: {
-                      n: 3,
-                      d: 100,
-                      br: i.qM.readUint32,
-                      bw: i.gp.writeUint32,
                     },
                   },
                 }),
@@ -952,15 +878,89 @@
             );
           }
           getClassName() {
+            return "CNews_PublishPartnerEvent_Response";
+          }
+        }
+        class I extends F.Message {
+          static ImplementsStaticInterface() {}
+          constructor(t = null) {
+            super(),
+              I.prototype.news_feed_gid || i.Sg(I.M()),
+              F.Message.initialize(this, t, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              I.sm_m ||
+                (I.sm_m = {
+                  proto: I,
+                  fields: {
+                    news_feed_gid: {
+                      n: 1,
+                      br: i.qM.readFixed64String,
+                      bw: i.gp.writeFixed64String,
+                    },
+                    start_index: {
+                      n: 2,
+                      d: 0,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                    amount: {
+                      n: 3,
+                      d: 100,
+                      br: i.qM.readUint32,
+                      bw: i.gp.writeUint32,
+                    },
+                  },
+                }),
+              I.sm_m
+            );
+          }
+          static MBF() {
+            return I.sm_mbf || (I.sm_mbf = i.w0(I.M())), I.sm_mbf;
+          }
+          toObject(t = !1) {
+            return I.toObject(t, this);
+          }
+          static toObject(t, g) {
+            return i.BT(I.M(), t, g);
+          }
+          static fromObject(t) {
+            return i.Uq(I.M(), t);
+          }
+          static deserializeBinary(t) {
+            let g = new (f().BinaryReader)(t),
+              u = new I();
+            return I.deserializeBinaryFromReader(u, g);
+          }
+          static deserializeBinaryFromReader(t, g) {
+            return i.zj(I.MBF(), t, g);
+          }
+          serializeBinary() {
+            var t = new (f().BinaryWriter)();
+            return I.serializeBinaryToWriter(this, t), t.getResultBuffer();
+          }
+          static serializeBinaryToWriter(t, g) {
+            i.i0(I.M(), t, g);
+          }
+          serializeBase64String() {
+            var t = new (f().BinaryWriter)();
+            return (
+              I.serializeBinaryToWriter(this, t), t.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CNews_GetBatchPublishedPartnerEvent_Request";
           }
         }
-        class m extends U.Message {
+        class m extends F.Message {
           static ImplementsStaticInterface() {}
           constructor(t = null) {
             super(),
               m.prototype.clan_account_id || i.Sg(m.M()),
-              U.Message.initialize(this, t, 0, -1, [3, 4, 5], null);
+              F.Message.initialize(this, t, 0, -1, [3, 4, 5], null);
           }
           static sm_m;
           static sm_mbf;
@@ -1045,77 +1045,77 @@
             return "CNews_GetBatchPublishedPartnerEvent_Response";
           }
         }
-        var S;
+        var p;
         ((d) => {
-          function t(J, ee, de) {
-            return J.SendMsg(
+          function t(N, ee, de) {
+            return N.SendMsg(
               "News.ConvertHTMLToBBCode#1",
-              (0, b.I8)(k, ee, de),
+              (0, j.I8)(k, ee, de),
               V,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }
           d.ConvertHTMLToBBCode = t;
-          function g(J, ee, de) {
-            return J.SendMsg(
+          function g(N, ee, de) {
+            return N.SendMsg(
               "News.PreviewPartnerEvents#1",
-              (0, b.I8)(P, ee, de),
-              Q,
+              (0, j.I8)(U, ee, de),
+              Y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
           d.PreviewPartnerEvents = g;
-          function u(J, ee, de) {
-            return J.SendMsg(
+          function u(N, ee, de) {
+            return N.SendMsg(
               "News.GetNewsFeedByRepublishClan#1",
-              (0, b.I8)(j, ee, de),
-              $,
+              (0, j.I8)(T, ee, de),
+              Z,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
           d.GetNewsFeedByRepublishClan = u;
-          function A(J, ee, de) {
-            return J.SendMsg(
+          function x(N, ee, de) {
+            return N.SendMsg(
               "News.PublishPartnerEvent#1",
-              (0, b.I8)(z, ee, de),
-              w,
+              (0, j.I8)(z, ee, de),
+              M,
               { ePrivilege: 1 },
             );
           }
-          d.PublishPartnerEvent = A;
-          function T(J, ee, de) {
-            return J.SendMsg(
+          d.PublishPartnerEvent = x;
+          function E(N, ee, de) {
+            return N.SendMsg(
               "News.GetBatchPublishedPartnerEvent#1",
-              (0, b.I8)(M, ee, de),
+              (0, j.I8)(I, ee, de),
               m,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }
-          d.GetBatchPublishedPartnerEvent = T;
-        })(S || (S = {}));
+          d.GetBatchPublishedPartnerEvent = E;
+        })(p || (p = {}));
       },
-      37656: (ae, Se, s) => {
+      37656: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { w: () => w });
+        s.d(fe, { w: () => M });
         var e = s(41735),
-          U = s.n(e),
+          F = s.n(e),
           f = s(14947),
           i = s(65946),
-          b = s(90626),
+          j = s(90626),
           ge = s(27066),
           O = s(8323),
-          X = s(30096),
-          Y = s(3166),
+          $ = s(30096),
+          X = s(3166),
           ie = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          I = (M, m, S, d) => {
+          w = (I, m, p, d) => {
             for (
-              var t = d > 1 ? void 0 : d ? _(m, S) : m, g = M.length - 1, u;
+              var t = d > 1 ? void 0 : d ? _(m, p) : m, g = I.length - 1, u;
               g >= 0;
               g--
             )
-              (u = M[g]) && (t = (d ? u(m, S, t) : u(t)) || t);
-            return d && t && ie(m, S, t), t;
+              (u = I[g]) && (t = (d ? u(m, p, t) : u(t)) || t);
+            return d && t && ie(m, p, t), t;
           };
         const k = class Yt {
           constructor() {
@@ -1131,10 +1131,12 @@
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const m = new Yt();
@@ -1149,12 +1151,12 @@
             );
           }
         };
-        I([f.sH], k.prototype, "giveaway_id", 2),
-          I([f.sH], k.prototype, "seconds_until_drawing", 2),
-          I([f.sH], k.prototype, "rtime_start", 2),
-          I([f.sH], k.prototype, "rtime_end", 2),
-          I([f.sH], k.prototype, "closed", 2),
-          I([f.sH], k.prototype, "winner_count", 2);
+        w([f.sH], k.prototype, "giveaway_id", 2),
+          w([f.sH], k.prototype, "seconds_until_drawing", 2),
+          w([f.sH], k.prototype, "rtime_start", 2),
+          w([f.sH], k.prototype, "rtime_end", 2),
+          w([f.sH], k.prototype, "closed", 2),
+          w([f.sH], k.prototype, "winner_count", 2);
         let V = k;
         const D = class et {
           constructor() {
@@ -1164,65 +1166,56 @@
           m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
           m_bLoadedFromConfig = !1;
           m_mapNextDrawChangeCallback = new Map();
-          GetKey(m, S) {
-            return m + "_" + S;
+          GetKey(m, p) {
+            return m + "_" + p;
           }
-          GetInfoByInstance(m, S) {
+          GetInfoByInstance(m, p) {
             return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-              this.GetKey(m, S),
+              this.GetKey(m, p),
             );
           }
           GetNextDrawChangeCallback(m) {
+            let p = this.m_mapNextDrawChangeCallback.get(m);
             return (
-              this.m_mapNextDrawChangeCallback.has(m) ||
-                this.m_mapNextDrawChangeCallback.set(m, new O.lu()),
-              this.m_mapNextDrawChangeCallback.get(m)
+              p ||
+                ((p = new O.lu()), this.m_mapNextDrawChangeCallback.set(m, p)),
+              p
             );
           }
-          CopyToGiveaway(m, S) {
-            S.closed != m.closed && (S.closed = m.closed),
-              S.giveaway_id != m.giveaway_id && (S.giveaway_id = m.giveaway_id),
-              S.rtime_start != m.rtime_start && (S.rtime_start = m.rtime_start),
-              S.rtime_end != m.rtime_end && (S.rtime_end = m.rtime_end),
-              S.winner_count != m.winner_count &&
-                (S.winner_count = m.winner_count),
-              S.seconds_until_drawing != m.seconds_until_drawing &&
-                (S.seconds_until_drawing = m.seconds_until_drawing);
+          CopyToGiveaway(m, p) {
+            p.closed != m.closed && (p.closed = m.closed),
+              p.giveaway_id != m.giveaway_id && (p.giveaway_id = m.giveaway_id),
+              p.rtime_start != m.rtime_start && (p.rtime_start = m.rtime_start),
+              p.rtime_end != m.rtime_end && (p.rtime_end = m.rtime_end),
+              p.winner_count != m.winner_count &&
+                (p.winner_count = m.winner_count),
+              p.seconds_until_drawing != m.seconds_until_drawing &&
+                (p.seconds_until_drawing = m.seconds_until_drawing);
           }
-          async ReloadGiveaway(m, S) {
+          async ReloadGiveaway(m, p) {
             if (!m) return null;
-            let d = Y.TS.STORE_BASE_URL + "prizes/nextdraw/" + m,
-              t = null,
-              g = { origin: self.origin };
-            return (
-              (t = await U().get(d, { params: g })),
-              (0, f.h5)(() => {
+            let d = X.TS.STORE_BASE_URL + "prizes/nextdraw/" + m,
+              t = { origin: self.origin };
+            const g = await F().get(d, { params: t }),
+              u = (0, f.h5)(() => {
+                let x = this.m_mapGiveawayIDToNextDrawInfo.get(m);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(m) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(m, new V()),
-                  this.CopyToGiveaway(
-                    t.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(m),
-                  ),
-                  S !== void 0)
+                  (x ||
+                    ((x = new V()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(m, x)),
+                  this.CopyToGiveaway(g.data, x),
+                  p !== void 0)
                 ) {
-                  const u = this.GetKey(m, S);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(u) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      u,
-                      new V(),
-                    ),
-                    this.CopyToGiveaway(
-                      t.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(u),
-                    );
+                  const E = this.GetKey(m, p);
+                  let N = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(E);
+                  N ||
+                    ((N = new V()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(E, N)),
+                    this.CopyToGiveaway(g.data, N);
                 }
-              }),
-              this.GetNextDrawChangeCallback(m).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(m),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(m)
-            );
+                return x;
+              });
+            return this.GetNextDrawChangeCallback(m).Dispatch(u), u;
           }
           static s_Singleton;
           static Get() {
@@ -1234,20 +1227,20 @@
           }
           Init() {
             if (!this.m_bLoadedFromConfig) {
-              let m = (0, Y.Tc)("giveawaynextdraw", "application_config");
+              let m = (0, X.Tc)("giveawaynextdraw", "application_config");
               if (m && m.giveaway_id) {
-                let S = new V();
-                this.CopyToGiveaway(m, S),
-                  this.m_mapGiveawayIDToNextDrawInfo.set(m.giveaway_id, S);
+                let p = new V();
+                this.CopyToGiveaway(m, p),
+                  this.m_mapGiveawayIDToNextDrawInfo.set(m.giveaway_id, p);
               }
               this.m_bLoadedFromConfig = !0;
             }
           }
         };
-        I([f.sH], D.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
-          I([f.XI], D.prototype, "CopyToGiveaway", 1);
-        let P = D;
-        const Q = class Wt {
+        w([f.sH], D.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
+          w([f.XI], D.prototype, "CopyToGiveaway", 1);
+        let U = D;
+        const Y = class Wt {
           m_intervalID;
           m_intervalCountDownID;
           static s_GlobalInstance = 0;
@@ -1266,59 +1259,69 @@
               (window.clearInterval(this.m_intervalCountDownID),
               (this.m_intervalCountDownID = void 0));
           }
-          SetupRefreshDataInterval(m, S) {
+          SetupRefreshDataInterval(m, p) {
             if ((this.ClearRefreshInterval(), !m.closed)) {
-              let d =
-                m.seconds_until_drawing <= 0 && m.winner_count == 0 ? 6e4 : 5e3;
-              this.m_intervalID = window.setInterval(S, d);
+              let t =
+                m.seconds_until_drawing !== void 0 &&
+                m.seconds_until_drawing <= 0 &&
+                m.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
+              this.m_intervalID = window.setInterval(p, t);
             }
           }
-          SetupCountDown(m, S) {
-            m > 0 && (this.m_intervalCountDownID = window.setInterval(S, 1e3));
+          SetupCountDown(m, p) {
+            m !== void 0 &&
+              m > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(p, 1e3));
           }
         };
-        I([ge.o], Q.prototype, "ClearRefreshInterval", 1),
-          I([ge.o], Q.prototype, "ClearCountDown", 1),
-          I([ge.o], Q.prototype, "SetupRefreshDataInterval", 1),
-          I([ge.o], Q.prototype, "SetupCountDown", 1);
-        let j = Q;
-        function $(M, m) {
-          const S = P.Get().GetInfoByInstance(M, m.m_myInstanceNumber);
-          (S.seconds_until_drawing -= 1),
-            S.seconds_until_drawing == 0 && m.ClearCountDown();
+        w([ge.o], Y.prototype, "ClearRefreshInterval", 1),
+          w([ge.o], Y.prototype, "ClearCountDown", 1),
+          w([ge.o], Y.prototype, "SetupRefreshDataInterval", 1),
+          w([ge.o], Y.prototype, "SetupCountDown", 1);
+        let T = Y;
+        function Z(I, m) {
+          const p = U.Get().GetInfoByInstance(I, m.m_myInstanceNumber);
+          !p ||
+            p.seconds_until_drawing === void 0 ||
+            ((p.seconds_until_drawing -= 1),
+            p.seconds_until_drawing == 0 && m.ClearCountDown());
         }
-        function z(M, m) {
-          const S = P.Get().GetInfoByInstance(M, m.m_myInstanceNumber);
-          S &&
-            S.BIsValid() &&
-            S.seconds_until_drawing <= 0 &&
-            !S.closed &&
+        function z(I, m) {
+          const p = U.Get().GetInfoByInstance(I, m.m_myInstanceNumber);
+          p &&
+            p.BIsValid() &&
+            p.seconds_until_drawing !== void 0 &&
+            p.seconds_until_drawing <= 0 &&
+            !p.closed &&
             (m.ClearCountDown(),
-            P.Get()
-              .ReloadGiveaway(M, m.m_myInstanceNumber)
+            U.Get()
+              .ReloadGiveaway(I, m.m_myInstanceNumber)
               .then((d) => {
-                m.SetupCountDown(d.seconds_until_drawing, () => $(M, m));
+                d && m.SetupCountDown(d.seconds_until_drawing, () => Z(I, m));
               }));
         }
-        function w(M) {
-          const [m] = (0, b.useState)(new j()),
-            S = (0, X.CH)();
-          (0, b.useEffect)(
+        function M(I) {
+          const [m] = (0, j.useState)(new T()),
+            p = (0, $.CH)();
+          (0, j.useEffect)(
             () => (
-              P.Get()
-                .ReloadGiveaway(M, m.m_myInstanceNumber)
-                .then((A) => {
-                  m.SetupRefreshDataInterval(A, () => z(M, m)),
-                    m.SetupCountDown(A.seconds_until_drawing, () => $(M, m)),
-                    S();
+              U.Get()
+                .ReloadGiveaway(I, m.m_myInstanceNumber)
+                .then((x) => {
+                  x &&
+                    (m.SetupRefreshDataInterval(x, () => z(I, m)),
+                    m.SetupCountDown(x.seconds_until_drawing, () => Z(I, m)),
+                    p());
                 }),
               () => {
                 m.ClearRefreshInterval(), m.ClearCountDown();
               }
             ),
-            [m, M, S],
+            [m, I, p],
           );
-          const d = P.Get().GetInfoByInstance(M, m.m_myInstanceNumber),
+          const d = U.Get().GetInfoByInstance(I, m.m_myInstanceNumber),
             [t, g, u] = (0, i.q3)(() => [
               d?.winner_count,
               d?.closed,
@@ -1333,84 +1336,84 @@
           };
         }
       },
-      35098: (ae, Se, s) => {
+      35098: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { DW: () => I, js: () => ie, mK: () => Q, tb: () => P });
+        s.d(fe, { DW: () => w, js: () => ie, mK: () => Y, tb: () => U });
         var e = s(90626),
-          U = s(80902),
+          F = s(80902),
           f = s(54806),
           i = s(99412),
-          b = s(68312),
+          j = s(68312),
           ge = s(15369),
           O = s(5858),
-          X = s(76559),
-          Y = s(15860);
-        function ie(w) {
-          const M = (0, b.KV)(),
+          $ = s(76559),
+          X = s(15860);
+        function ie(M) {
+          const I = (0, j.KV)(),
             m = e.useContext(D);
-          return (0, U.I)(Q(m, M, w));
+          return (0, F.I)(Y(m, I, M));
         }
-        function _(w) {
-          const M = React.useRef(void 0),
-            m = ie(w);
+        function _(M) {
+          const I = React.useRef(void 0),
+            m = ie(M);
           return m.data
             ? m
-            : (M.current ||
-                (M.current = new CPersonaStateImpl(
-                  typeof w == "string"
-                    ? new CSteamID(w)
-                    : CSteamID.InitFromAccountID(w),
+            : (I.current ||
+                (I.current = new CPersonaStateImpl(
+                  typeof M == "string"
+                    ? new CSteamID(M)
+                    : CSteamID.InitFromAccountID(M),
                 )),
-              { ...m, data: M.current });
+              { ...m, data: I.current });
         }
-        function I(w) {
-          const M = (0, b.KV)(),
+        function w(M) {
+          const I = (0, j.KV)(),
             m = e.useContext(D);
-          return (0, f.E)({ queries: w.map((S) => Q(m, M, S)) });
+          return (0, f.E)({ queries: M.map((p) => Y(m, I, p)) });
         }
-        function k(w) {
-          return ReactQueryClient.getQueryData(["PlayerSummary", w]);
+        function k(M) {
+          return ReactQueryClient.getQueryData(["PlayerSummary", M]);
         }
-        function V(w) {
-          const { loadPersonaState: M, children: m } = w,
-            S = React.useMemo(() => ({ loadPersonaState: M }), [M]);
-          return React.createElement(D.Provider, { value: S }, m);
+        function V(M) {
+          const { loadPersonaState: I, children: m } = M,
+            p = React.useMemo(() => ({ loadPersonaState: I }), [I]);
+          return React.createElement(D.Provider, { value: p }, m);
         }
         const D = e.createContext({
-          loadPersonaState: async (w, M) => {
-            if (w == null) return null;
-            const m = await $(M).load(
-              X.b.InitFromAccountID(w).ConvertTo64BitString(),
+          loadPersonaState: async (M, I) => {
+            if (M == null) return null;
+            const m = await Z(I).load(
+              $.b.InitFromAccountID(M).ConvertTo64BitString(),
             );
-            return z(X.b.InitFromAccountID(w), m);
+            return z($.b.InitFromAccountID(M), m);
           },
         });
-        function P() {
+        function U() {
           return e.useContext(D);
         }
-        function Q(w, M, m) {
-          const S = typeof m == "string" ? new X.b(m).GetAccountID() : m;
+        function Y(M, I, m) {
+          const p = typeof m == "string" ? new $.b(m).GetAccountID() : m;
           return {
-            queryKey: ["PlayerSummary", S],
-            queryFn: () => w.loadPersonaState(S, M),
-            enabled: !!S,
+            queryKey: ["PlayerSummary", p],
+            queryFn: () => M.loadPersonaState(p, I),
+            enabled: !!p,
           };
         }
-        let j;
-        function $(w) {
-          return (j ??= (0, Y.c)(w));
+        let T;
+        function Z(M) {
+          return (T ??= (0, X.c)(M));
         }
-        function z(w, M) {
-          let m = new O.Z(w);
-          const S = M?.public_data,
-            d = M?.private_data;
+        function z(M, I) {
+          let m = new O.Z(M);
+          const p = I?.public_data,
+            d = I?.private_data;
           return (
-            (m.m_bInitialized = !!M),
+            (m.m_bInitialized = !!I),
             (m.m_ePersonaState = d?.persona_state ?? i.cU3),
-            (m.m_strAvatarHash = S?.sha_digest_avatar
-              ? (0, ge.Kx)(S.sha_digest_avatar)
+            (m.m_strAvatarHash = p?.sha_digest_avatar
+              ? (0, ge.Kx)(p.sha_digest_avatar)
               : O.dV),
-            (m.m_strPlayerName = S?.persona_name ?? w.ConvertTo64BitString()),
+            (m.m_strPlayerName = p?.persona_name ?? M.ConvertTo64BitString()),
             (m.m_strAccountName = d?.account_name),
             d?.persona_state_flags &&
               (m.m_unPersonaStateFlags = d?.persona_state_flags),
@@ -1419,26 +1422,26 @@
               (m.m_unGameServerIP = d?.game_server_ip_address),
             d?.lobby_steam_id && (m.m_game_lobby_id = d?.lobby_steam_id),
             d?.game_extra_info && (m.m_strGameExtraInfo = d?.game_extra_info),
-            S?.profile_url && (m.m_strProfileURL = S.profile_url),
+            p?.profile_url && (m.m_strProfileURL = p.profile_url),
             m
           );
         }
       },
-      57223: (ae, Se, s) => {
+      57223: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { A: () => t });
+        s.d(fe, { A: () => t });
         var e = s(41735),
-          U = s.n(e),
+          F = s.n(e),
           f = s(14947),
           i = s(3166),
-          b = s(3685),
+          j = s(3685),
           ge = s(60298),
           O = s(35038),
-          X = s(94699),
-          Y = s(99412),
+          $ = s(94699),
+          X = s(99412),
           ie = s(72604),
           _ = s(76559),
-          I = s(77495);
+          w = s(77495);
         function k(g) {
           return "unknown EMsg ( " + g + " )";
         }
@@ -1448,29 +1451,29 @@
         function D(g) {
           return "unknown EMsgClanAccountFlags ( " + g + " )";
         }
-        function P(g) {
+        function U(g) {
           return "unknown ESteamReviewScore ( " + g + " )";
         }
-        function Q(g) {
+        function Y(g) {
           return "unknown ECodecUsagePlatform ( " + g + " )";
         }
-        function j(g) {
+        function T(g) {
           return "unknown ECodecUsageReason ( " + g + " )";
         }
-        var $ = s(71742),
+        var Z = s(71742),
           z = s(34592),
-          w = Object.defineProperty,
-          M = Object.getOwnPropertyDescriptor,
-          m = (g, u, A, T) => {
+          M = Object.defineProperty,
+          I = Object.getOwnPropertyDescriptor,
+          m = (g, u, x, E) => {
             for (
-              var J = T > 1 ? void 0 : T ? M(u, A) : u, ee = g.length - 1, de;
+              var N = E > 1 ? void 0 : E ? I(u, x) : u, ee = g.length - 1, de;
               ee >= 0;
               ee--
             )
-              (de = g[ee]) && (J = (T ? de(u, A, J) : de(J)) || J);
-            return T && J && w(u, A, J), J;
+              (de = g[ee]) && (N = (E ? de(u, x, N) : de(N)) || N);
+            return E && N && M(u, x, N), N;
           };
-        class S {
+        class p {
           m_clanAccountID;
           m_clanSteamID;
           m_strRSSFeedURL = void 0;
@@ -1492,15 +1495,15 @@
               (this.m_eCuratorLanguage = u.curation_language);
           }
           GetFeedLanguageHandleUnset() {
-            return this.m_eRSSFeedLanguage == Y.xPp
-              ? this.m_eCuratorLanguage == Y.xPp
-                ? Y.Bhc
+            return this.m_eRSSFeedLanguage == X.xPp
+              ? this.m_eCuratorLanguage == X.xPp
+                ? X.Bhc
                 : this.m_eCuratorLanguage
               : this.m_eRSSFeedLanguage;
           }
           GetCuratorLanguage() {
-            return this.m_eCuratorLanguage == Y.xPp
-              ? Y.Bhc
+            return this.m_eCuratorLanguage == X.xPp
+              ? X.Bhc
               : this.m_eCuratorLanguage;
           }
           BHasSavedRSSURL() {
@@ -1535,23 +1538,23 @@
                 ),
                 null
               );
-            const A = O.w.Init(X.Dw);
-            A.Body().set_rss_url(u),
-              A.Body().set_lang(this.GetFeedLanguageHandleUnset()),
-              A.Body().set_clan_account_id(this.GetClanAccountID());
-            let T = await X.bH.PreviewPartnerEvents(
+            const x = O.w.Init($.Dw);
+            x.Body().set_rss_url(u),
+              x.Body().set_lang(this.GetFeedLanguageHandleUnset()),
+              x.Body().set_clan_account_id(this.GetClanAccountID());
+            let E = await $.bH.PreviewPartnerEvents(
               t.Get().GetCuratorTransport(),
-              A,
+              x,
             );
             return (
-              T.GetEResult() != ie.R &&
+              E.GetEResult() != ie.R &&
                 console.error(
                   "PreviewPartnerEventsFromRSSFeed error: " +
-                    T.GetEMsg() +
+                    E.GetEMsg() +
                     " " +
-                    T.GetEResult(),
+                    E.GetEResult(),
                 ),
-              T
+              E
             );
           }
           async FetchPublishedEvents(u = 100) {
@@ -1566,62 +1569,62 @@
                 ),
                 null
               );
-            const A = O.w.Init(X.wN);
-            A.Body().set_news_feed_gid(this.m_strRSSGID),
-              A.Body().set_amount(u);
-            let T = await X.bH.GetBatchPublishedPartnerEvent(
+            const x = O.w.Init($.wN);
+            x.Body().set_news_feed_gid(this.m_strRSSGID),
+              x.Body().set_amount(u);
+            let E = await $.bH.GetBatchPublishedPartnerEvent(
               t.Get().GetCuratorTransport(),
-              A,
+              x,
             );
             return (
-              T.GetEResult() != ie.R
+              E.GetEResult() != ie.R
                 ? console.error(
                     "FetchPublishedEvents error: EMsg:" +
-                      k(T.GetEMsg()) +
+                      k(E.GetEMsg()) +
                       " EResult:" +
-                      T.GetEResult() +
+                      E.GetEResult() +
                       " msg:" +
-                      T.Hdr().error_message(),
+                      E.Hdr().error_message(),
                   )
                 : (0, f.h5)(() => {
-                    for (let J = 0; J < T.Body().clan_event_gid().length; ++J) {
+                    for (let N = 0; N < E.Body().clan_event_gid().length; ++N) {
                       let ee = {
-                        url: T.Body().news_url()[J],
-                        clan_event_gid: T.Body().clan_event_gid()[J],
-                        news_post_gid: T.Body().news_post_gid()[J],
+                        url: E.Body().news_url()[N],
+                        clan_event_gid: E.Body().clan_event_gid()[N],
+                        news_post_gid: E.Body().news_post_gid()[N],
                       };
                       this.m_mapURLToPosted.set(ee.url, ee);
                     }
                   }),
-              T
+              E
             );
           }
           MapArticleURLToClanEventGID(u) {
-            let A = this.m_mapURLToPosted.get(u);
-            if (A) return A.clan_event_gid;
+            let x = this.m_mapURLToPosted.get(u);
+            if (x) return x.clan_event_gid;
           }
           BIsLoggedIn() {
             return i.iA.logged_in;
           }
-          async CreateOrUpdateRSSNewFeed(u, A = 0) {
-            let T = new FormData();
-            T.append("sessionid", (0, i.KC)()),
-              T.append("gid", this.m_strRSSGID),
-              T.append("lang", "" + this.GetCuratorLanguage()),
-              T.append("rss_url", u),
-              T.append("polling_interval", "" + A);
-            const J =
+          async CreateOrUpdateRSSNewFeed(u, x = 0) {
+            let E = new FormData();
+            E.append("sessionid", (0, i.KC)()),
+              E.append("gid", this.m_strRSSGID),
+              E.append("lang", "" + this.GetCuratorLanguage()),
+              E.append("rss_url", u),
+              E.append("polling_interval", "" + x);
+            const N =
               i.TS.STORE_BASE_URL +
               "curator/" +
               this.m_clanAccountID +
               "/admin/ajaxmanagerssfeed";
-            let ee = await U().post(J, T, { withCredentials: !0 });
+            let ee = await F().post(N, E, { withCredentials: !0 });
             return (
               ee.data.success == ie.R &&
                 (0, f.h5)(() => {
                   (this.m_strRSSGID = ee.data.gid),
                     (this.m_strRSSFeedURL = u),
-                    (this.m_nPollIntervalSeconds = A);
+                    (this.m_nPollIntervalSeconds = x);
                 }),
               ee.data
             );
@@ -1637,15 +1640,15 @@
               let u = new FormData();
               u.append("sessionid", (0, i.KC)()),
                 u.append("gid", this.m_strRSSGID);
-              const A =
+              const x =
                 i.TS.STORE_BASE_URL +
                 "curator/" +
                 this.m_clanAccountID +
                 "/admin/ajaxcheckfornews";
-              await U().post(A, u, { withCredentials: !0 });
+              await F().post(x, u, { withCredentials: !0 });
             }
           }
-          async CreatePost(u, A) {
+          async CreatePost(u, x) {
             if (!this.BIsLoggedIn())
               return (
                 console.error(
@@ -1660,27 +1663,27 @@
                 ),
                 null
               );
-            let T = new X.w2();
-            T.set_gid(u.post.gid),
-              T.set_news_feed_gid(this.m_strRSSGID),
-              T.set_title(u.post.title),
-              T.set_url(u.post.url),
-              T.set_author(u.post.author),
-              T.set_rtime_date(u.post.rtime_date),
-              T.set_contents(u.post.contents),
-              T.set_commited(u.post.commited),
-              T.set_deleted(u.post.deleted),
-              T.set_tags(u.post.tags),
-              T.set_appids(u.post.appids),
-              T.set_recommendation_state(u.post.recommendation_state),
-              T.set_received_for_free(u.post.received_for_free),
-              T.set_received_compensation(u.post.received_compensation),
-              T.set_blurb(u.post.blurb);
-            const J = O.w.Init(X.vB);
-            J.Body().set_post(T), J.Body().set_draft(A);
-            let ee = await X.bH.PublishPartnerEvent(
+            let E = new $.w2();
+            E.set_gid(u.post.gid),
+              E.set_news_feed_gid(this.m_strRSSGID),
+              E.set_title(u.post.title),
+              E.set_url(u.post.url),
+              E.set_author(u.post.author),
+              E.set_rtime_date(u.post.rtime_date),
+              E.set_contents(u.post.contents),
+              E.set_commited(u.post.commited),
+              E.set_deleted(u.post.deleted),
+              E.set_tags(u.post.tags),
+              E.set_appids(u.post.appids),
+              E.set_recommendation_state(u.post.recommendation_state),
+              E.set_received_for_free(u.post.received_for_free),
+              E.set_received_compensation(u.post.received_compensation),
+              E.set_blurb(u.post.blurb);
+            const N = O.w.Init($.vB);
+            N.Body().set_post(E), N.Body().set_draft(x);
+            let ee = await $.bH.PublishPartnerEvent(
               t.Get().GetCuratorTransport(),
-              J,
+              N,
             );
             return (
               ee.GetEResult() != ie.R
@@ -1695,7 +1698,7 @@
                     };
                     this.m_mapURLToPosted.set(u.post.url, de);
                   }),
-                  I.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  w.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                     this.m_clanSteamID,
                     ee.Body().clan_event_gid(),
                     0,
@@ -1704,13 +1707,13 @@
             );
           }
         }
-        m([f.sH], S.prototype, "m_strRSSFeedURL", 2),
-          m([f.sH], S.prototype, "m_strRSSGID", 2),
-          m([f.sH], S.prototype, "m_rtimeRSSLastChecked", 2),
-          m([f.sH], S.prototype, "m_nPollIntervalSeconds", 2),
-          m([f.sH], S.prototype, "m_eRSSFeedLanguage", 2),
-          m([f.sH], S.prototype, "m_eCuratorLanguage", 2),
-          m([f.sH], S.prototype, "m_mapURLToPosted", 2);
+        m([f.sH], p.prototype, "m_strRSSFeedURL", 2),
+          m([f.sH], p.prototype, "m_strRSSGID", 2),
+          m([f.sH], p.prototype, "m_rtimeRSSLastChecked", 2),
+          m([f.sH], p.prototype, "m_nPollIntervalSeconds", 2),
+          m([f.sH], p.prototype, "m_eRSSFeedLanguage", 2),
+          m([f.sH], p.prototype, "m_eCuratorLanguage", 2),
+          m([f.sH], p.prototype, "m_mapURLToPosted", 2);
         const d = class tt {
           constructor() {
             (0, f.Gn)(this);
@@ -1726,7 +1729,7 @@
           m_cClanInfoRequestsInFlight = 0;
           GetCuratorTransport() {
             return (
-              (0, $.wT)(
+              (0, Z.wT)(
                 this.m_transport,
                 "Expects Transpoate to be initialized but it is now",
               ),
@@ -1750,20 +1753,20 @@
           Init() {
             let u = (0, i.Tc)("curatoradmin", "application_config");
             this.ValidateStoreDefault(u) &&
-              ((this.m_defaultAdmin = new S(u)),
+              ((this.m_defaultAdmin = new p(u)),
               this.m_mapClanAccountToAdmin.set(u.clanid, this.m_defaultAdmin)),
               this.ValidateWebAPI(u) &&
                 (this.m_transport = (0, ge.C)(
-                  new b.D(i.TS.WEBAPI_BASE_URL, u.webapi_token),
+                  new j.D(i.TS.WEBAPI_BASE_URL, u.webapi_token),
                 ).GetServiceTransport());
           }
           ValidateStoreDefault(u) {
-            const A = u;
-            return A && typeof A == "object" && typeof A.clanid == "number";
+            const x = u;
+            return x && typeof x == "object" && typeof x.clanid == "number";
           }
           ValidateWebAPI(u) {
-            const A = u;
-            return A && typeof A.webapi_token == "string";
+            const x = u;
+            return x && typeof x.webapi_token == "string";
           }
           BIsLoggedIn() {
             return i.iA.logged_in;
@@ -1789,61 +1792,61 @@
                 ? Promise.resolve()
                 : (this.m_setPendingClanInfo.size ||
                     ((this.m_PendingClanInfoPromise = new Promise(
-                      (A) => (this.m_PendingClanInfoResolve = A),
+                      (x) => (this.m_PendingClanInfoResolve = x),
                     )),
                     window.setTimeout(() => this.FlushPendingClanInfo(), 25)),
                   this.m_setPendingClanInfo.add(u),
                   this.m_PendingClanInfoPromise)
-              : ((0, $.wT)(!u, "unexpected clanid of zero or undefined: " + u),
+              : ((0, Z.wT)(!u, "unexpected clanid of zero or undefined: " + u),
                 Promise.resolve());
           }
           async FlushPendingClanInfo() {
             const u = this.m_PendingClanInfoResolve,
-              A = Array.from(this.m_setPendingClanInfo);
+              x = Array.from(this.m_setPendingClanInfo);
             (this.m_PendingClanInfoPromise = void 0),
               (this.m_PendingClanInfoResolve = void 0),
               this.m_setPendingClanInfo.clear(),
-              await this.LoadBatchedClanRSSAdminInfo(A),
+              await this.LoadBatchedClanRSSAdminInfo(x),
               u();
           }
           EnsureClanInfoLoaded(u) {
-            const A = u.filter(
-              (T) =>
-                !this.m_mapClanAccountToAdmin.has(T) &&
-                this.m_setPendingClanInfo.has(T),
+            const x = u.filter(
+              (E) =>
+                !this.m_mapClanAccountToAdmin.has(E) &&
+                this.m_setPendingClanInfo.has(E),
             );
             return (
-              A.forEach((T) => this.QueueCuratorAdminInfoLoad(T)),
-              A.length > 0 && this.m_PendingClanInfoPromise
+              x.forEach((E) => this.QueueCuratorAdminInfoLoad(E)),
+              x.length > 0 && this.m_PendingClanInfoPromise
                 ? this.m_PendingClanInfoPromise
                 : Promise.resolve()
             );
           }
           async LoadBatchedClanRSSAdminInfo(u) {
             this.m_cClanInfoRequestsInFlight++;
-            let A = u.filter((J) => !this.m_mapClanAccountToAdmin.has(J));
-            const T = 50;
-            for (; A.length > 0; ) {
-              const J = Math.min(T, A.length),
-                ee = A.slice(0, J);
-              A = A.slice(J);
+            let x = u.filter((N) => !this.m_mapClanAccountToAdmin.has(N));
+            const E = 50;
+            for (; x.length > 0; ) {
+              const N = Math.min(E, x.length),
+                ee = x.slice(0, N);
+              x = x.slice(N);
               try {
                 const de =
                     i.TS.STORE_BASE_URL + "events_admin/ajaxgetrssadmininfo",
                   Te = { clanids: u },
-                  Ie = await U().get(de, { params: Te, withCredentials: !0 });
+                  we = await F().get(de, { params: Te, withCredentials: !0 });
                 if (
-                  Ie &&
-                  Ie.data &&
-                  Ie.data.success == ie.R &&
-                  Ie.data.rss_admin_infos &&
-                  Array.isArray(Ie.data.rss_admin_infos)
+                  we &&
+                  we.data &&
+                  we.data.success == ie.R &&
+                  we.data.rss_admin_infos &&
+                  Array.isArray(we.data.rss_admin_infos)
                 )
                   (0, f.h5)(() => {
-                    Ie.data.rss_admin_infos.forEach((ye) => {
-                      this.m_mapClanAccountToAdmin.set(ye.clanid, new S(ye));
+                    we.data.rss_admin_infos.forEach((ye) => {
+                      this.m_mapClanAccountToAdmin.set(ye.clanid, new p(ye));
                     }),
-                      Ie.data.rss_event_stats.forEach((ye) => {
+                      we.data.rss_event_stats.forEach((ye) => {
                         this.m_mapClanToEventRSSStats.set(
                           ye.clan_account_id,
                           ye,
@@ -1851,7 +1854,7 @@
                       });
                   });
                 else {
-                  const ye = (0, z.H)(Ie.data || {});
+                  const ye = (0, z.H)(we.data || {});
                   console.error(
                     "LoadBatchedClanRSSAdminInfo error:" + ye.strErrorMsg,
                     ye,
@@ -1872,14 +1875,14 @@
           m([f.sH.shallow], d.prototype, "m_mapClanToEventRSSStats", 2);
         let t = d;
       },
-      82559: (ae, Se, s) => {
+      82559: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { q: () => me, A: () => Fe });
+        s.d(fe, { q: () => me, A: () => Pe });
         var e = s(7850),
-          U = s(41735),
-          f = s.n(U),
+          F = s(41735),
+          f = s.n(F),
           i = s(57223),
-          b = s(3166),
+          j = s(3166),
           ge = s(76559);
         class O {
           static s_CuratorStore;
@@ -1919,18 +1922,18 @@
               q.length > 0)
             ) {
               const ue =
-                  b.TS.STORE_BASE_URL +
+                  j.TS.STORE_BASE_URL +
                   "curator/" +
                   y.GetAccountID() +
                   "/admin/ajaxgetrecbyapps",
-                fe = await f().get(ue, {
+                Se = await f().get(ue, {
                   params: {
                     appids: q,
-                    cc: b.TS.COUNTRY || "US",
-                    l: b.TS.LANGUAGE,
+                    cc: j.TS.COUNTRY || "US",
+                    l: j.TS.LANGUAGE,
                   },
                 }),
-                he = fe && fe.data;
+                he = Se && Se.data;
               he &&
                 he.rec_app &&
                 he.rec_app.forEach((ve) => {
@@ -1939,67 +1942,67 @@
             }
           }
         }
-        var X = s(75844),
-          Y = s(90626),
+        var $ = s(75844),
+          X = s(90626),
           ie = s(99412),
           _ = s(72604),
-          I = s(73259),
+          w = s(73259),
           k = s(94699),
           V = s(77495),
           D = s(16412),
-          P = s(91424),
-          Q = s(95695),
-          j = s.n(Q),
-          $ = s(12037),
+          U = s(91424),
+          Y = s(95695),
+          T = s.n(Y),
+          Z = s(12037),
           z = s(96538),
-          w = s(88003),
-          M = s(85599),
+          M = s(88003),
+          I = s(85599),
           m = s(53107),
-          S = s(36707),
+          p = s(36707),
           d = s(82734),
           t = s(18210),
           g = s(34592),
           u = s(30096),
-          A = s(71909),
-          T = s(41635),
-          J = s(48473),
+          x = s(71909),
+          E = s(41635),
+          N = s(48473),
           ee = s(56330),
           de = s.n(ee),
           Te = s(53113),
-          Ie = s(92264),
+          we = s(92264),
           ye = Object.defineProperty,
           Ge = Object.getOwnPropertyDescriptor,
-          te = (E, y, G, C) => {
+          te = (b, y, G, C) => {
             for (
-              var q = C > 1 ? void 0 : C ? Ge(y, G) : y, ue = E.length - 1, fe;
+              var q = C > 1 ? void 0 : C ? Ge(y, G) : y, ue = b.length - 1, Se;
               ue >= 0;
               ue--
             )
-              (fe = E[ue]) && (q = (C ? fe(y, G, q) : fe(q)) || q);
+              (Se = b[ue]) && (q = (C ? Se(y, G, q) : Se(q)) || q);
             return C && q && ye(y, G, q), q;
           };
-        let Fe = class extends Y.Component {
+        let Pe = class extends X.Component {
           state = { strRssURL: i.A.Get().GetDefaultAdmin().GetRSSUrl() };
           m_Admin = i.A.Get().GetDefaultAdmin();
-          OnChangeActualRSSURL(E) {
-            this.setState({ strRssURL: E.target.value });
+          OnChangeActualRSSURL(b) {
+            this.setState({ strRssURL: b.target.value });
           }
-          OnCreateOrSaveFeed(E) {
-            E.preventDefault(),
-              (0, w.pg)(
+          OnCreateOrSaveFeed(b) {
+            b.preventDefault(),
+              (0, M.pg)(
                 (0, e.jsx)(Ke, {
                   strRSSUrl: this.state.strRssURL,
                   admin: this.m_Admin,
                 }),
-                (0, d.uX)(E),
+                (0, d.uX)(b),
               );
           }
-          OnRevert(E) {
-            E.preventDefault(),
+          OnRevert(b) {
+            b.preventDefault(),
               this.setState({ strRssURL: this.m_Admin.GetRSSUrl() });
           }
           render() {
-            let E = this.state.strRssURL === this.m_Admin.GetRSSUrl();
+            let b = this.state.strRssURL === this.m_Admin.GetRSSUrl();
             if (window.Prototype !== void 0)
               return window.location.reload(), null;
             const y = (0, ie.x6o)(
@@ -2007,7 +2010,7 @@
               ),
               G = i.A.Get().GetDefaultAdmin();
             return (0, e.jsxs)("div", {
-              className: (0, S.A)(A.Ctn),
+              className: (0, p.A)(x.Ctn),
               children: [
                 (0, e.jsxs)("div", {
                   className: "titleframe",
@@ -2032,14 +2035,14 @@
                       ),
                     }),
                     (0, e.jsx)("p", {
-                      className: A.DashboardBtn,
+                      className: x.DashboardBtn,
                       children: (0, e.jsx)(m.uU, {
                         href:
-                          b.TS.COMMUNITY_BASE_URL +
+                          j.TS.COMMUNITY_BASE_URL +
                           "gid/" +
                           this.m_Admin.GetClanSteamID().ConvertTo64BitString() +
                           "/partnerevents/",
-                        className: (0, S.A)(j().Button, j().Primary),
+                        className: (0, p.A)(T().Button, T().Primary),
                         children: (0, t.we)("#RSSManager_EventDashBoard"),
                       }),
                     }),
@@ -2049,28 +2052,28 @@
                   className: "darkframe",
                   children: [
                     (0, e.jsxs)("div", {
-                      className: A.LanguageRow,
+                      className: x.LanguageRow,
                       children: [
                         (0, e.jsx)("span", {
-                          className: A.LanguageTitle,
+                          className: x.LanguageTitle,
                           children: (0, t.we)(
                             "#CuratorAdmin_RSSFeed_lang_only",
                           ),
                         }),
                         (0, e.jsx)("span", {
-                          className: A.LanguageSet,
+                          className: x.LanguageSet,
                           children: y,
                         }),
                         (0, e.jsx)("a", {
                           href:
-                            b.TS.COMMUNITY_BASE_URL +
+                            j.TS.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.m_Admin
                               .GetClanSteamID()
                               .ConvertTo64BitString() +
                             "/edit ",
                           target: "_blank",
-                          className: (0, S.A)(j().Button, A.PreviewBtn),
+                          className: (0, p.A)(T().Button, x.PreviewBtn),
                           children: (0, t.we)(
                             "#CuratorAdmin_RSSFeed_edit_language",
                           ),
@@ -2080,12 +2083,12 @@
                     this.m_Admin.GetFeedLanguageHandleUnset() !=
                       this.m_Admin.GetCuratorLanguage() &&
                       (0, e.jsx)("div", {
-                        className: (0, S.A)(
-                          A.LanguageRow,
+                        className: (0, p.A)(
+                          x.LanguageRow,
                           de().WarningIconLayout,
                         ),
                         children: (0, e.jsx)("span", {
-                          className: A.LanguageTitle,
+                          className: x.LanguageTitle,
                           children: (0, t.we)(
                             "#CuratorAdmin_Curator_lang_only",
                             (0, t.we)(
@@ -2097,13 +2100,13 @@
                         }),
                       }),
                     (0, e.jsxs)("div", {
-                      className: (0, S.A)(
-                        j().FlexRowContainer,
-                        A.UrlSettingCtn,
+                      className: (0, p.A)(
+                        T().FlexRowContainer,
+                        x.UrlSettingCtn,
                       ),
                       children: [
                         (0, e.jsx)(D.pd, {
-                          className: A.RssInpu,
+                          className: x.RssInpu,
                           type: "text",
                           name: "link_url",
                           id: "link_url",
@@ -2120,11 +2123,11 @@
                           onClick: this.OnCreateOrSaveFeed,
                           children: (0, e.jsx)("span", {
                             children: (0, t.we)(
-                              E ? "#Button_Saved" : "#Button_Save",
+                              b ? "#Button_Saved" : "#Button_Save",
                             ),
                           }),
                         }),
-                        !E &&
+                        !b &&
                           (0, e.jsx)("a", {
                             onClick: this.OnRevert,
                             className: "btn_grey_white_innerfade btn_medium",
@@ -2144,18 +2147,18 @@
             });
           }
         };
-        te([u.oI], Fe.prototype, "OnChangeActualRSSURL", 1),
-          te([u.oI], Fe.prototype, "OnCreateOrSaveFeed", 1),
-          te([u.oI], Fe.prototype, "OnRevert", 1),
-          (Fe = te([X.PA], Fe));
-        let me = class extends Y.Component {
+        te([u.oI], Pe.prototype, "OnChangeActualRSSURL", 1),
+          te([u.oI], Pe.prototype, "OnCreateOrSaveFeed", 1),
+          te([u.oI], Pe.prototype, "OnRevert", 1),
+          (Pe = te([$.PA], Pe));
+        let me = class extends X.Component {
           state = { strParseRssURL: this.props.strRssURL, bLoadingPreview: !1 };
           m_cancelSignal = f().CancelToken.source();
           componentDidMount() {
-            const { admin: E } = this.props;
-            E.BHasFeedGID() &&
-              E.BHasSavedRSSURL() &&
-              E.GetRSSUrl() == this.props.strRssURL &&
+            const { admin: b } = this.props;
+            b.BHasFeedGID() &&
+              b.BHasSavedRSSURL() &&
+              b.GetRSSUrl() == this.props.strRssURL &&
               this.OnLoadPreview();
           }
           componentWillUnmount() {
@@ -2164,15 +2167,15 @@
             );
           }
           RenderPreviews() {
-            let E = this.props.admin,
+            let b = this.props.admin,
               y = new Array();
             if (this.state.previews) {
               let G = this.state.previews;
               (G = G.sort((C, q) => {
-                let ue = E.MapArticleURLToClanEventGID(C.post.url),
-                  fe = E.MapArticleURLToClanEventGID(q.post.url),
+                let ue = b.MapArticleURLToClanEventGID(C.post.url),
+                  Se = b.MapArticleURLToClanEventGID(q.post.url),
                   he = ue ? V.O3.GetClanEventModel(ue) : null,
-                  ve = fe ? V.O3.GetClanEventModel(fe) : null;
+                  ve = Se ? V.O3.GetClanEventModel(Se) : null;
                 return he && ve
                   ? ve.postTime - he.postTime
                   : he
@@ -2184,11 +2187,11 @@
                 G.forEach((C) => {
                   y.push(
                     (0, e.jsx)(
-                      Z,
+                      J,
                       {
                         newsData: C,
-                        admin: E,
-                        clanSteamID: E.GetClanSteamID(),
+                        admin: b,
+                        clanSteamID: b.GetClanSteamID(),
                         fnGetRSSUrl: this.GetRSSPreviewURL,
                       },
                       "id: " + C.unique_id,
@@ -2213,20 +2216,20 @@
             );
           }
           async DoLoadPreview() {
-            let E = this.props.admin,
-              y = await E.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
+            let b = this.props.admin,
+              y = await b.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
             if (y && y.GetEResult() == _.R) {
               let G = y.Body().toObject();
               this.setState(
                 { strParseRssURL: G.rss_url, bLoadingPreview: !0 },
                 async () => {
-                  await E.FetchPublishedEvents(Math.max(100, G.results.length));
+                  await b.FetchPublishedEvents(Math.max(100, G.results.length));
                   let C = new Array(),
                     q = new Array();
                   if (
                     (G.results.forEach((ue) => {
-                      let fe = E.MapArticleURLToClanEventGID(ue.post.url);
-                      fe && C.push(fe),
+                      let Se = b.MapArticleURLToClanEventGID(ue.post.url);
+                      Se && C.push(Se),
                         ue.post.appids &&
                           ue.post.appids.length === 1 &&
                           ue.post.recommendation_state !== k.D$.w4 &&
@@ -2240,7 +2243,7 @@
                       )),
                     q.length > 0)
                   ) {
-                    const ue = E.GetClanSteamID();
+                    const ue = b.GetClanSteamID();
                     await O.Get().LoadAppRecommendation(ue, q);
                   }
                   this.setState({
@@ -2260,14 +2263,14 @@
               });
           }
           render() {
-            const E = this.RenderPreviews();
+            const b = this.RenderPreviews();
             let y = this.props.admin;
             return (0, e.jsxs)("div", {
               children: [
                 !this.state.bLoadingPreview &&
                   this.state.strPreviewURL !== this.props.strRssURL &&
                   (0, e.jsx)("div", {
-                    className: A.PreviewListBtn,
+                    className: x.PreviewListBtn,
                     children: (0, e.jsx)(D.$n, {
                       disabled: !D.pd.validateUrl(this.props.strRssURL),
                       onClick: this.OnLoadPreview,
@@ -2275,17 +2278,17 @@
                     }),
                   }),
                 this.state.bLoadingPreview &&
-                  (0, e.jsx)(M.t, {
+                  (0, e.jsx)(I.t, {
                     string: (0, t.we)("#Loading"),
                     size: "medium",
                     position: "center",
                   }),
                 this.state.strPreviewErrorMsg &&
                   (0, e.jsx)("div", {
-                    className: j().ErrorMsg,
+                    className: T().ErrorMsg,
                     children: this.state.strPreviewErrorMsg,
                   }),
-                E.length > 0 &&
+                b.length > 0 &&
                   (0, e.jsxs)("div", {
                     children: [
                       (0, e.jsx)("p", {
@@ -2295,18 +2298,18 @@
                         ),
                       }),
                       (0, e.jsx)("div", {
-                        className: A.PreviewListCtn,
-                        children: E,
+                        className: x.PreviewListCtn,
+                        children: b,
                       }),
                       (0, e.jsx)("p", {
-                        className: A.DashboardBtn,
+                        className: x.DashboardBtn,
                         children: (0, e.jsx)(m.uU, {
                           href:
-                            b.TS.COMMUNITY_BASE_URL +
+                            j.TS.COMMUNITY_BASE_URL +
                             "gid/" +
                             y.GetClanSteamID().ConvertTo64BitString() +
                             "/partnerevents/",
-                          className: (0, S.A)(j().Button, j().Primary),
+                          className: (0, p.A)(T().Button, T().Primary),
                           children: (0, t.we)("#RSSManager_EventDashBoard"),
                         }),
                       }),
@@ -2318,13 +2321,13 @@
         };
         te([u.oI], me.prototype, "GetRSSPreviewURL", 1),
           te([u.oI], me.prototype, "OnLoadPreview", 1),
-          (me = te([X.PA], me));
-        let re = class extends Y.Component {
+          (me = te([$.PA], me));
+        let re = class extends X.Component {
           state = {};
-          OnToggleChannelAutomation(E) {
-            E
+          OnToggleChannelAutomation(b) {
+            b
               ? (this.setState({ strErrorMessage: void 0 }),
-                (0, w.pg)(
+                (0, M.pg)(
                   (0, e.jsx)(Ke, {
                     strRSSUrl: this.props.admin.GetRSSUrl(),
                     admin: this.props.admin,
@@ -2352,28 +2355,28 @@
               )
               .finally(() => this.setState({ strReasonWaiting: void 0 }));
           }
-          async OnQueueScan(E) {
+          async OnQueueScan(b) {
             this.setState({
               strReasonWaiting: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
             }),
               this.props.admin
                 .CheckForNewUpdate()
                 .then(() =>
-                  (0, w.pg)(
+                  (0, M.pg)(
                     (0, e.jsx)(z.o0, {
                       strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
                       strDescription: (0, t.we)("#CuratorAdmin_RSSFeed_queued"),
                     }),
-                    (0, d.uX)(E),
+                    (0, d.uX)(b),
                   ),
                 )
                 .catch((y) =>
-                  (0, w.pg)(
+                  (0, M.pg)(
                     (0, e.jsx)(z.KG, {
                       strTitle: (0, t.we)("#CuratorAdmin_RSSFeed_scannow"),
                       strDescription: (0, g.H)(y).strErrorMsg,
                     }),
-                    (0, d.uX)(E),
+                    (0, d.uX)(b),
                   ),
                 )
                 .finally(() => this.setState({ strReasonWaiting: void 0 }));
@@ -2383,13 +2386,13 @@
               ? (0, e.jsxs)("div", {
                   children: [
                     !!this.state.strReasonWaiting &&
-                      (0, e.jsx)(M.t, {
+                      (0, e.jsx)(I.t, {
                         size: "medium",
                         string: this.state.strReasonWaiting,
                       }),
                     !!this.state.strErrorMessage &&
                       (0, e.jsx)("div", {
-                        className: A.Error,
+                        className: x.Error,
                         children: this.state.strErrorMessage,
                       }),
                     (0, e.jsx)(D.RF, {
@@ -2408,7 +2411,7 @@
                             !1,
                           ),
                           "\xA0 @ ",
-                          (0, Ie.KC)(
+                          (0, we.KC)(
                             this.props.admin.GetRSSLastRtimeChecked(),
                             { bForce24HourClock: !1 },
                           ),
@@ -2430,8 +2433,8 @@
         };
         te([u.oI], re.prototype, "OnToggleChannelAutomation", 1),
           te([u.oI], re.prototype, "OnQueueScan", 1),
-          (re = te([X.PA], re));
-        let Z = class extends Y.Component {
+          (re = te([$.PA], re));
+        let J = class extends X.Component {
           state = {
             clan_event_gid: this.props.admin.MapArticleURLToClanEventGID(
               this.props.newsData.post.url,
@@ -2446,11 +2449,11 @@
           }
           async DoPartnerEventLoad() {
             if (this.state.clan_event_gid) {
-              let E = this.props.admin.GetClanSteamID(),
+              let b = this.props.admin.GetClanSteamID(),
                 y = V.O3.GetClanEventModel(this.state.clan_event_gid);
               y ||
                 (y = await V.O3.LoadHiddenPartnerEvent(
-                  E,
+                  b,
                   this.state.clan_event_gid,
                 )),
                 this.setState({
@@ -2459,9 +2462,9 @@
                 });
             }
           }
-          OnOpenPreviewAsPartnerEvent(E) {
+          OnOpenPreviewAsPartnerEvent(b) {
             const { newsData: y, clanSteamID: G } = this.props;
-            let C = new I.lh();
+            let C = new w.lh();
             (C.GID = "PreviewPartnerEventRow_0"),
               (C.clanSteamID = G),
               (C.postTime = Date.now() / 1e3),
@@ -2478,7 +2481,7 @@
             let q = this.props.admin.GetFeedLanguageHandleUnset();
             !C.jsondata.localized_summary &&
               y.post.event_summary &&
-              ((C.jsondata.localized_summary = (0, T.$Y)(
+              ((C.jsondata.localized_summary = (0, E.$Y)(
                 C.jsondata.localized_summary,
                 ie.bP9,
                 null,
@@ -2488,7 +2491,7 @@
                 (C.jsondata.localized_summary[q] = y.post.event_summary)),
               !C.jsondata.localized_subtitle &&
                 y.post.event_subtitle &&
-                ((C.jsondata.localized_subtitle = (0, T.$Y)(
+                ((C.jsondata.localized_subtitle = (0, E.$Y)(
                   C.jsondata.localized_subtitle,
                   ie.bP9,
                   null,
@@ -2503,33 +2506,33 @@
               V.O3.GetClanEventModel(this.state.clan_event_gid),
             );
           }
-          ShowModalEvent(E) {
+          ShowModalEvent(b) {
             let y = document.getElementById("curator_header_area_ctn_id");
             y &&
-              (E
+              (b
                 ? y.classList.add("curator_header_area_ctn_hideme")
                 : y.classList.remove("curator_header_area_ctn_hideme")),
-              this.setState({ eventModelForPreviewNow: E });
+              this.setState({ eventModelForPreviewNow: b });
           }
-          ValidateJSONDefault(E) {
-            const y = E;
+          ValidateJSONDefault(b) {
+            const y = b;
             return !!(y && !Array.isArray(y) && typeof y == "object");
           }
-          OnPostNewsEvent(E) {
+          OnPostNewsEvent(b) {
             const { newsData: y, fnGetRSSUrl: G } = this.props;
-            (0, w.pg)(
+            (0, M.pg)(
               (0, e.jsx)(Ke, {
                 newsData: y,
                 admin: this.props.admin,
                 strRSSUrl: G(),
                 fnClanEventGID: this.OnClanEventCreateSuccess,
               }),
-              (0, d.uX)(E),
+              (0, d.uX)(b),
             );
           }
-          OnUpdateNewsEvent(E) {
+          OnUpdateNewsEvent(b) {
             const { newsData: y, fnGetRSSUrl: G } = this.props;
-            (0, w.pg)(
+            (0, M.pg)(
               (0, e.jsx)(Ke, {
                 newsData: y,
                 strRSSUrl: G(),
@@ -2537,41 +2540,41 @@
                 fnClanEventGID: this.OnClanEventCreateSuccess,
                 bUpdatePost: !0,
               }),
-              (0, d.uX)(E),
+              (0, d.uX)(b),
             );
           }
           HideModalEvent() {
             this.state.eventModelForPreviewNow && this.ShowModalEvent(void 0);
           }
-          OnClanEventCreateSuccess(E) {
+          OnClanEventCreateSuccess(b) {
             this.setState(
-              { clan_event_gid: E, bLoadingPartnerEvent: !0 },
+              { clan_event_gid: b, bLoadingPartnerEvent: !0 },
               this.DoPartnerEventLoad,
             );
           }
-          OnShowRawRSS(E) {
+          OnShowRawRSS(b) {
             const y = this.props.newsData.rss_message,
               G = (() => {
                 const C = y.match(/<entry[^>]*>([\s\S]*)<\/entry>/m);
                 if (!C) return y;
                 const q = C[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
-                return q ? (0, J.EK)(q[0]) : C[0];
+                return q ? (0, N.EK)(q[0]) : C[0];
               })();
-            (0, w.pg)(
+            (0, M.pg)(
               (0, e.jsx)(z.o0, {
                 bAlertDialog: !0,
                 strTitle: (0, t.we)("#RSSManager_PostEvent_ViewRaw"),
                 children: (0, e.jsx)("textarea", {
-                  className: A.RawRSS,
+                  className: x.RawRSS,
                   value: G,
                   disabled: !0,
                 }),
               }),
-              (0, d.uX)(E),
+              (0, d.uX)(b),
             );
           }
           render() {
-            const { newsData: E } = this.props,
+            const { newsData: b } = this.props,
               {
                 clan_event_gid: y,
                 existingEventModel: G,
@@ -2579,11 +2582,11 @@
               } = this.state;
             let q = this.props.admin,
               ue = q.GetClanSteamID(),
-              fe = G && G.BIsStagedEvent(),
+              Se = G && G.BIsStagedEvent(),
               he =
-                E.post.appids && E.post.appids.length == 1 && E.post.appids[0],
+                b.post.appids && b.post.appids.length == 1 && b.post.appids[0],
               ve =
-                E.post.recommendation_state !== k.D$.w4 &&
+                b.post.recommendation_state !== k.D$.w4 &&
                 he &&
                 O.Get().BHasReviewForApp(ue, he),
               oe = "";
@@ -2594,26 +2597,26 @@
               oe =
                 (0, t.$z)(Ye) +
                 " @ " +
-                (0, Ie.KC)(Ye, { bForce24HourClock: !1 });
+                (0, we.KC)(Ye, { bForce24HourClock: !1 });
             }
             return (0, e.jsxs)("div", {
-              className: (0, S.A)(
-                A.PostCtn,
-                y ? A.ActivePost : "",
-                E.valid_post ? "" : A.ErrorPost,
+              className: (0, p.A)(
+                x.PostCtn,
+                y ? x.ActivePost : "",
+                b.valid_post ? "" : x.ErrorPost,
               ),
               children: [
                 (0, e.jsx)("span", {
-                  className: A.PostTitle,
-                  children: E.title,
+                  className: x.PostTitle,
+                  children: b.title,
                 }),
                 (0, e.jsx)("br", {}),
                 !!G &&
-                  (0, e.jsxs)(Y.Fragment, {
+                  (0, e.jsxs)(X.Fragment, {
                     children: [
                       !!G.BIsVisibleEvent() &&
                         (0, e.jsx)("span", {
-                          className: A.PostDate,
+                          className: x.PostDate,
                           children: (0, t.we)(
                             "#RSSManager_PostEvent_PostedDate",
                             oe,
@@ -2621,12 +2624,12 @@
                         }),
                       !G.BIsVisibleEvent() &&
                         (0, e.jsx)("span", {
-                          className: (0, S.A)(
-                            A.PostDraft,
-                            fe ? A.PostStaged : "",
+                          className: (0, p.A)(
+                            x.PostDraft,
+                            Se ? x.PostStaged : "",
                           ),
                           children: (0, t.we)(
-                            fe
+                            Se
                               ? "#RSSManager_PostEvent_Staged"
                               : "#RSSManager_PostEvent_Draft",
                             oe,
@@ -2634,38 +2637,38 @@
                         }),
                     ],
                   }),
-                !!(!E.valid_post && E.post_error_msg) &&
+                !!(!b.valid_post && b.post_error_msg) &&
                   (0, e.jsxs)("div", {
                     className: de().ErrorStylesBackground,
                     children: [
                       (0, t.we)("#Error_Generic_Label"),
                       " ",
-                      (0, t.we)(E.post_error_msg),
+                      (0, t.we)(b.post_error_msg),
                     ],
                   }),
                 (0, e.jsxs)("div", {
-                  className: A.ButtonCtn,
+                  className: x.ButtonCtn,
                   children: [
                     y
-                      ? (0, e.jsxs)(Y.Fragment, {
+                      ? (0, e.jsxs)(X.Fragment, {
                           children: [
                             C
-                              ? (0, e.jsx)(M.t, {
+                              ? (0, e.jsx)(I.t, {
                                   string: (0, t.we)("#Loading"),
                                   size: "small",
                                   position: "center",
                                 })
                               : (0, e.jsx)("div", {
                                   onClick: this.OnViewEvent,
-                                  className: (0, S.A)(j().Button, A.PreviewBtn),
+                                  className: (0, p.A)(T().Button, x.PreviewBtn),
                                   children: (0, t.we)(
                                     "#RSSManager_PostEvent_ViewEvent",
                                   ),
                                 }),
                             (0, e.jsx)("a", {
-                              className: (0, S.A)(j().Button, A.PreviewBtn),
+                              className: (0, p.A)(T().Button, x.PreviewBtn),
                               href:
-                                b.TS.COMMUNITY_BASE_URL +
+                                j.TS.COMMUNITY_BASE_URL +
                                 "gid/" +
                                 q.GetClanSteamID().ConvertTo64BitString() +
                                 "/partnerevents/edit/" +
@@ -2676,18 +2679,18 @@
                             }),
                             (0, e.jsx)("div", {
                               onClick: this.OnUpdateNewsEvent,
-                              className: (0, S.A)(j().Button, A.PreviewBtn),
+                              className: (0, p.A)(T().Button, x.PreviewBtn),
                               children: (0, t.we)(
                                 "#RSSManager_PostEvent_UpdateEvent",
                               ),
                             }),
                             ve &&
                               (0, e.jsx)("a", {
-                                className: (0, S.A)(j().Button, A.PreviewBtn),
+                                className: (0, p.A)(T().Button, x.PreviewBtn),
                                 href: (0, Te.k2)(
-                                  b.TS.STORE_BASE_URL +
+                                  j.TS.STORE_BASE_URL +
                                     "app/" +
-                                    E.post.appids[0] +
+                                    b.post.appids[0] +
                                     "/?curator_clanid=" +
                                     ue.GetAccountID(),
                                 ),
@@ -2695,35 +2698,35 @@
                               }),
                           ],
                         })
-                      : (0, e.jsxs)(Y.Fragment, {
+                      : (0, e.jsxs)(X.Fragment, {
                           children: [
                             (0, e.jsx)("div", {
                               onClick: this.OnOpenPreviewAsPartnerEvent,
-                              className: (0, S.A)(j().Button, A.PreviewBtn),
+                              className: (0, p.A)(T().Button, x.PreviewBtn),
                               children: (0, t.we)(
                                 "#CuratorAdmin_RSSFeed_col_preview_event",
                               ),
                             }),
                             (0, e.jsx)("div", {
                               onClick: this.OnPostNewsEvent,
-                              className: (0, S.A)(j().Button, A.PreviewBtn),
+                              className: (0, p.A)(T().Button, x.PreviewBtn),
                               children: (0, t.we)(
                                 "#CuratorAdmin_RSSFeed_col_create_event",
                               ),
                             }),
                           ],
                         }),
-                    !!(E.rss_message && E.rss_message.length > 0) &&
+                    !!(b.rss_message && b.rss_message.length > 0) &&
                       (0, e.jsx)("div", {
                         onClick: this.OnShowRawRSS,
-                        className: A.ViewRaw,
+                        className: x.ViewRaw,
                         children: (0, t.we)("#RSSManager_PostEvent_ViewRaw"),
                       }),
                     !!this.state.eventModelForPreviewNow &&
                       (0, e.jsx)(z.of, {
-                        className: $.StoreHeaderAdjust,
+                        className: Z.StoreHeaderAdjust,
                         children: (0, e.jsx)("div", {
-                          children: (0, e.jsx)(P.H, {
+                          children: (0, e.jsx)(U.H, {
                             event: this.state.eventModelForPreviewNow,
                             fnClose: this.HideModalEvent,
                           }),
@@ -2735,16 +2738,16 @@
             });
           }
         };
-        te([u.oI], Z.prototype, "DoPartnerEventLoad", 1),
-          te([u.oI], Z.prototype, "OnOpenPreviewAsPartnerEvent", 1),
-          te([u.oI], Z.prototype, "OnViewEvent", 1),
-          te([u.oI], Z.prototype, "OnPostNewsEvent", 1),
-          te([u.oI], Z.prototype, "OnUpdateNewsEvent", 1),
-          te([u.oI], Z.prototype, "HideModalEvent", 1),
-          te([u.oI], Z.prototype, "OnClanEventCreateSuccess", 1),
-          te([u.oI], Z.prototype, "OnShowRawRSS", 1),
-          (Z = te([X.PA], Z));
-        const W = class kt extends Y.Component {
+        te([u.oI], J.prototype, "DoPartnerEventLoad", 1),
+          te([u.oI], J.prototype, "OnOpenPreviewAsPartnerEvent", 1),
+          te([u.oI], J.prototype, "OnViewEvent", 1),
+          te([u.oI], J.prototype, "OnPostNewsEvent", 1),
+          te([u.oI], J.prototype, "OnUpdateNewsEvent", 1),
+          te([u.oI], J.prototype, "HideModalEvent", 1),
+          te([u.oI], J.prototype, "OnClanEventCreateSuccess", 1),
+          te([u.oI], J.prototype, "OnShowRawRSS", 1),
+          (J = te([$.PA], J));
+        const W = class kt extends X.Component {
           state = {
             initialState: kt.DetermineStartState(this.props),
             step: kt.DetermineStartState(this.props),
@@ -2877,7 +2880,7 @@
                                 checked: !!this.state.bConduct,
                               }),
                               (0, e.jsx)(m.uU, {
-                                href: b.TS.STORE_BASE_URL + "online_conduct/",
+                                href: j.TS.STORE_BASE_URL + "online_conduct/",
                                 children: (0, t.we)(
                                   "#RSSManager_CreateFeed_Conduct_Link",
                                 ),
@@ -2916,7 +2919,7 @@
                   strTitle: this.GetStrTitle(),
                   strDescription: (0, t.we)("#RSSManager_PostEvent_InFlight"),
                   closeModal: this.props.closeModal,
-                  children: (0, e.jsx)(M.t, { position: "center" }),
+                  children: (0, e.jsx)(I.t, { position: "center" }),
                 });
               case "create_post":
                 return (0, e.jsx)(z.eV, {
@@ -2932,7 +2935,7 @@
                               ),
                             }),
                             (0, e.jsx)("div", {
-                              className: A.DialogPostTitle,
+                              className: x.DialogPostTitle,
                               children: this.props.newsData.title,
                             }),
                             (0, e.jsx)("br", {}),
@@ -2972,7 +2975,7 @@
                             }),
                             (0, e.jsx)("br", {}),
                             (0, e.jsx)("div", {
-                              className: A.DialogPostTitle,
+                              className: x.DialogPostTitle,
                               children: this.props.newsData.title,
                             }),
                             (0, e.jsx)("br", {}),
@@ -3002,7 +3005,7 @@
                     !!this.state.eventGID &&
                     (0, e.jsx)("a", {
                       href:
-                        b.TS.COMMUNITY_BASE_URL +
+                        j.TS.COMMUNITY_BASE_URL +
                         "gid/" +
                         this.props.admin
                           .GetClanSteamID()
@@ -3025,69 +3028,69 @@
           te([u.oI], W.prototype, "GetStrTitle", 1);
         let Ke = W;
       },
-      59970: (ae, Se, s) => {
+      59970: (ae, fe, s) => {
         "use strict";
-        s.d(Se, { d: () => pt });
+        s.d(fe, { d: () => pt });
         var e = s(7850),
-          U = s(19367),
+          F = s(19367),
           f = s(90626),
           i = s(3685),
-          b = s(85528),
+          j = s(85528),
           ge = s(77495),
           O = s(18210),
-          X = s(3166),
-          Y = s(75779),
+          $ = s(3166),
+          X = s(75779),
           ie = s(80902),
           _ = s(30454);
-        async function I() {
-          const p = await (0, _.d)(
+        async function w() {
+          const S = await (0, _.d)(
             "ajaxgetuserdeckcompatcounts",
             new URLSearchParams(),
           );
-          if (!p.counts)
+          if (!S.counts)
             throw new Error(
               "ajaxgetuserdeckcompatcounts answered without counts",
             );
-          return p.counts;
+          return S.counts;
         }
         const k = 300 * 1e3;
         function V() {
           return ["DeckCompatCounts"];
         }
         function D() {
-          return { queryKey: V(), queryFn: () => I(), staleTime: k, retry: !1 };
+          return { queryKey: V(), queryFn: () => w(), staleTime: k, retry: !1 };
         }
-        function P() {
-          const { data: p } = (0, ie.I)(D());
-          return p;
+        function U() {
+          const { data: S } = (0, ie.I)(D());
+          return S;
         }
-        function Q(p, x) {
-          switch (x) {
-            case Y.sd:
-              return p?.playable;
-            case Y.V8:
-              return p?.unsupported;
+        function Y(S, A) {
+          switch (A) {
+            case X.sd:
+              return S?.playable;
+            case X.V8:
+              return S?.unsupported;
             default:
-              return p?.verified;
+              return S?.verified;
           }
         }
-        var j = s(70187),
-          $ = s(36549),
+        var T = s(70187),
+          Z = s(36549),
           z = s(39153),
-          w = s(99412),
-          M = s(72609),
+          M = s(99412),
+          I = s(72609),
           m = s(25792),
-          S = s(85599),
+          p = s(85599),
           d = s(41635),
           t = s(47610),
           g = s(18860),
           u = s(87805);
-        function A(p) {
-          const { event: x } = p.context,
-            R = Number.parseInt((0, j.j$)(p.args)),
-            N = f.useMemo(() => {
-              if (x)
-                return x.jsondata.sale_sections?.find(
+        function x(S) {
+          const { event: A } = S.context,
+            R = Number.parseInt((0, T.j$)(S.args)),
+            Q = f.useMemo(() => {
+              if (A)
+                return A.jsondata.sale_sections?.find(
                   (K) =>
                     K.section_type == "vo_internal" &&
                     (K.internal_section_data?.internal_type ==
@@ -3095,81 +3098,81 @@
                       K.internal_section_data?.internal_type ==
                         "while_supplies_last"),
                 );
-            }, [x]);
-          if (R && N) {
-            const K = Number.parseInt((0, j.j$)(p.args, "depositpackageid")),
-              L = Number.parseInt((0, j.j$)(p.args, "psulesspackageid")),
-              ce = (0, j.j$)(p.args, "out_of_stock_override"),
-              we = (0, j.j$)(p.args, "delivery_override"),
-              be = (0, j.j$)(p.args, "delivery_override_out_of_stock");
-            return (0, e.jsx)(T, {
-              section: N,
+            }, [A]);
+          if (R && Q) {
+            const K = Number.parseInt((0, T.j$)(S.args, "depositpackageid")),
+              L = Number.parseInt((0, T.j$)(S.args, "psulesspackageid")),
+              ce = (0, T.j$)(S.args, "out_of_stock_override"),
+              Me = (0, T.j$)(S.args, "delivery_override"),
+              Ee = (0, T.j$)(S.args, "delivery_override_out_of_stock");
+            return (0, e.jsx)(E, {
+              section: Q,
               reservationPackageID: R,
               depositPackageID: K,
               psuLessPackageID: L,
               strOutOfStockOverride: ce,
-              strDeliveryOverride: be || we,
-              bDeliveryOverrideOnlyIfOutOfStock: !!be,
-              PreviewActions: p.PreviewActions,
+              strDeliveryOverride: Ee || Me,
+              bDeliveryOverrideOnlyIfOutOfStock: !!Ee,
+              PreviewActions: S.PreviewActions,
             });
           }
           return (0, e.jsx)(e.Fragment, {});
         }
-        function T(p) {
+        function E(S) {
           const {
-              reservationPackageID: x,
+              reservationPackageID: A,
               depositPackageID: R,
-              bIsPreview: N,
+              bIsPreview: Q,
               psuLessPackageID: K,
               strOutOfStockOverride: L,
               strDeliveryOverride: ce,
-              bDeliveryOverrideOnlyIfOutOfStock: we,
-              section: be,
-              PreviewActions: De,
-            } = p,
-            { data: pe } = (0, t.DR)(x),
+              bDeliveryOverrideOnlyIfOutOfStock: Me,
+              section: Ee,
+              PreviewActions: je,
+            } = S,
+            { data: pe } = (0, t.DR)(A),
             { data: Ve } = (0, t.DR)(K),
             Be = (0, f.useMemo)(
               () => [
                 {
-                  unique_id: "reservation_bbcode_" + x,
-                  reservation_package: x,
+                  unique_id: "reservation_bbcode_" + A,
+                  reservation_package: A,
                   deposit_package: R,
-                  localized_reservation_desc: (0, d.$Y)([], w.bP9, null),
+                  localized_reservation_desc: (0, d.$Y)([], M.bP9, null),
                   localized_out_of_stock_override: (0, d.$Y)(
                     [L || null],
-                    w.bP9,
+                    M.bP9,
                     null,
                   ),
                   localized_delivery_override_desc: (0, d.$Y)(
                     [ce || null],
-                    w.bP9,
+                    M.bP9,
                     null,
                   ),
-                  override_delivery_only_out_of_stock: !!we,
+                  override_delivery_only_out_of_stock: !!Me,
                   psu_less_package: K,
                 },
               ],
-              [x, R, L, ce, we, K],
+              [A, R, L, ce, Me, K],
             );
           if (!pe || (K && !Ve))
-            return (0, e.jsx)(S.t, {
+            return (0, e.jsx)(p.t, {
               string: (0, O.we)("#Loading"),
               size: "small",
               position: "center",
             });
-          const Ut = !M.iA.logged_in || !pe.account_restricted_from_purchasing,
-            ft =
+          const Ft = !I.iA.logged_in || !pe.account_restricted_from_purchasing,
+            St =
               pe.reservation_state == g.G.k_EPurchaseReservationState_Reserved
                 ? pe
                 : void 0;
           return (0, e.jsxs)(m.tH, {
             children: [
-              De &&
+              je &&
                 (0, e.jsx)(f.Suspense, {
                   fallback: null,
-                  children: (0, e.jsx)(De, {
-                    bIsPreview: !!N,
+                  children: (0, e.jsx)(je, {
+                    bIsPreview: !!Q,
                     rgReservationDef: Be,
                   }),
                 }),
@@ -3181,14 +3184,14 @@
                       reservationDef: Be[0],
                       hardwareDetail: pe,
                       bPSULessModel: !1,
-                      reservedHardwareDetail: ft,
+                      reservedHardwareDetail: St,
                     }),
-                    Ut &&
+                    Ft &&
                       (0, e.jsx)(u.p, {
-                        section: be,
+                        section: Ee,
                         reservationDef: Be[0],
                         hardwareDetail: pe,
-                        reservedHardwareDetail: ft,
+                        reservedHardwareDetail: St,
                       }),
                     Ve &&
                       Ve?.allow_purchase_in_country &&
@@ -3203,43 +3206,43 @@
             ],
           });
         }
-        var J = s(6878),
+        var N = s(6878),
           ee = s(21035),
           de = s(72865),
           Te = s(38081),
-          Ie = s.n(Te),
+          we = s.n(Te),
           ye = s(36707),
           Ge = s(69596),
           te = s(10026),
-          Fe = s.n(te),
+          Pe = s.n(te),
           me = s(19298),
           re = s(11996),
-          Z = s(19047),
+          J = s(19047),
           W = s(36118),
           Ke = s(47689),
-          E = s(89926),
+          b = s(89926),
           y = s(32545),
           G = s.n(y);
-        function C(p) {
-          const { appID: x, classOverride: R, styleOverride: N } = p,
+        function C(S) {
+          const { appID: A, classOverride: R, styleOverride: Q } = S,
             [K, L] = (0, f.useState)(!1),
             ce = (0, Ke.m)("GameHoverFollowButton"),
-            { elDialogElement: we, fnShowLogonDialog: be } = (0, E.l)(),
-            De = (0, re.Fh)(x),
-            { mutateAsync: pe } = (0, Z.L)(x, !De, void 0),
+            { elDialogElement: Me, fnShowLogonDialog: Ee } = (0, b.l)(),
+            je = (0, re.Fh)(A),
+            { mutateAsync: pe } = (0, J.L)(A, !je, void 0),
             Ve = async (Be) => {
               Be.preventDefault(),
                 Be.stopPropagation(),
-                X.iA.logged_in
+                $.iA.logged_in
                   ? (L(!0), await pe(), ce.token.reason || L(!1))
-                  : be();
+                  : Ee();
             };
           return (0, e.jsxs)(me.Z, {
             className: (0, ye.A)(G().FollowButton, R),
             onClick: Ve,
-            style: N,
+            style: Q,
             children: [
-              De ? (0, e.jsx)(W.pPV, {}) : (0, e.jsx)(W.c9e, {}),
+              je ? (0, e.jsx)(W.pPV, {}) : (0, e.jsx)(W.c9e, {}),
               (0, e.jsx)("div", {
                 className: (0, ye.A)(
                   G().FollowButtonText,
@@ -3247,90 +3250,90 @@
                   "FollowGameButton",
                 ),
                 children: (0, O.we)(
-                  De ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
+                  je ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
                 ),
               }),
-              we,
+              Me,
             ],
           });
         }
-        function q(p) {
-          const { appid: x, color: R, bgcolor: N } = p,
+        function q(S) {
+          const { appid: A, color: R, bgcolor: Q } = S,
             K = (0, de.n9)();
           return (0, e.jsx)(C, {
-            appID: x,
+            appID: A,
             classOverride: (0, ye.A)(
-              Ie().FollowGameButtonNotTop,
-              Fe().BBCodeFollowButton,
+              we().FollowGameButtonNotTop,
+              Pe().BBCodeFollowButton,
             ),
-            styleOverride: { color: R, backgroundColor: N },
+            styleOverride: { color: R, backgroundColor: Q },
           });
         }
-        function ue(p) {
-          const x = Number(p.args.appid);
-          if (!x) return null;
-          const R = (0, Ge.O)(p.args.color, "black"),
-            N = (0, Ge.O)(p.args.bgcolor, "white");
-          return (0, e.jsx)(q, { appid: x, color: R, bgcolor: N });
+        function ue(S) {
+          const A = Number(S.args.appid);
+          if (!A) return null;
+          const R = (0, Ge.O)(S.args.color, "black"),
+            Q = (0, Ge.O)(S.args.bgcolor, "white");
+          return (0, e.jsx)(q, { appid: A, color: R, bgcolor: Q });
         }
-        var fe = s(57646);
-        function he(p) {
-          const x = Number(p.args.packageid);
-          return x
-            ? (0, e.jsx)(fe.eF, {
-                packageID: x,
-                display_style: (0, fe._w)(p.args.display),
+        var Se = s(57646);
+        function he(S) {
+          const A = Number(S.args.packageid);
+          return A
+            ? (0, e.jsx)(Se.eF, {
+                packageID: A,
+                display_style: (0, Se._w)(S.args.display),
               })
             : null;
         }
-        function ve(p) {
-          const x = Number(p.args.packageid),
-            R = Number(p.args.compareid);
-          return !x || !R
+        function ve(S) {
+          const A = Number(S.args.packageid),
+            R = Number(S.args.compareid);
+          return !A || !R
             ? null
-            : (0, e.jsx)(fe.hJ, { packageID: x, compareID: R });
+            : (0, e.jsx)(Se.hJ, { packageID: A, compareID: R });
         }
-        function oe(p) {
-          const x = p.args[""]?.trim();
-          return x
-            ? (0, e.jsx)("div", { className: x, children: p.children })
-            : (0, e.jsx)(e.Fragment, { children: p.children });
+        function oe(S) {
+          const A = S.args[""]?.trim();
+          return A
+            ? (0, e.jsx)("div", { className: A, children: S.children })
+            : (0, e.jsx)(e.Fragment, { children: S.children });
         }
         var Ye = s(18657),
           mt = s.n(Ye),
           ut = s(63026);
-        function St(p) {
-          const { clanAccountID: x, color: R, bgcolor: N } = p,
+        function ft(S) {
+          const { clanAccountID: A, color: R, bgcolor: Q } = S,
             [K, L] = f.useState(!1);
           return (0, e.jsx)("div", {
             className: (0, ye.A)(mt().BBCodeFollowButton, K && mt().isHovered),
             onMouseEnter: () => L(!0),
             onMouseLeave: () => L(!1),
             children: (0, e.jsx)(ut.Q, {
-              nCreatorAccountID: x,
-              classOverride: Ie().FollowGameButtonNotTop,
-              styleOverride: { color: R, backgroundColor: N },
+              nCreatorAccountID: A,
+              classOverride: we().FollowGameButtonNotTop,
+              styleOverride: { color: R, backgroundColor: Q },
               followType: "group",
             }),
           });
         }
-        function yt(p) {
-          const { event: x } = p.context,
-            R = Number(p.args.groupid) || x?.clanSteamID.GetAccountID();
+        function yt(S) {
+          const { event: A } = S.context,
+            R = Number(S.args.groupid) || A?.clanSteamID.GetAccountID();
           if (!R) return null;
-          const N = (0, Ge.O)(p.args.color, "black"),
-            K = (0, Ge.O)(p.args.bgcolor, "white");
-          return (0, e.jsx)(St, { clanAccountID: R, color: N, bgcolor: K });
+          const Q = (0, Ge.O)(S.args.color, "black"),
+            K = (0, Ge.O)(S.args.bgcolor, "white");
+          return (0, e.jsx)(ft, { clanAccountID: R, color: Q, bgcolor: K });
         }
         var Xe = s(83482),
           gt = s(44267),
-          At = s(9202),
-          ht = s.n(At),
+          xt = s(9202),
+          ht = s.n(xt),
           nt = s(29522);
-        function xt(p) {
-          const { appid: x, color: R, bgcolor: N } = p,
+        function At(S) {
+          const { appid: A, color: R, bgcolor: Q } = S,
             K = (0, de.n9)(),
-            L = (0, nt.$5)(x),
+            L = (0, nt.$5)(A),
             ce = (0, Xe.L3)(K);
           return (0, e.jsx)("div", {
             className: ht().WishlistHoverCtn,
@@ -3338,53 +3341,53 @@
               snr: ce,
               id: L,
               classOverride: (0, ye.A)(
-                Ie().WishlistButtonNotTop,
+                we().WishlistButtonNotTop,
                 ht().BBCodeWishlistButton,
                 "WishlistButton",
               ),
-              styleOverride: { color: R, backgroundColor: N },
+              styleOverride: { color: R, backgroundColor: Q },
               bShowInGamepadUI: !0,
             }),
           });
         }
-        function It(p) {
-          const x = Number(p.args.appid);
-          if (!x) return null;
-          const R = (0, Ge.O)(p.args.color, "black"),
-            N = (0, Ge.O)(p.args.bgcolor, "white");
-          return (0, e.jsx)(xt, { appid: x, color: R, bgcolor: N });
+        function wt(S) {
+          const A = Number(S.args.appid);
+          if (!A) return null;
+          const R = (0, Ge.O)(S.args.color, "black"),
+            Q = (0, Ge.O)(S.args.bgcolor, "white");
+          return (0, e.jsx)(At, { appid: A, color: R, bgcolor: Q });
         }
         let He = null;
-        function wt() {
+        function Mt() {
           return (
             He == null &&
               (He = new Map([
-                ["wishlist", { Constructor: It, autocloses: !1 }],
+                ["wishlist", { Constructor: wt, autocloses: !1 }],
                 ["followgroup", { Constructor: yt, autocloses: !1 }],
                 ["classname", { Constructor: oe, autocloses: !1 }],
                 ["price", { Constructor: he, autocloses: !1 }],
                 ["pricesavings", { Constructor: ve, autocloses: !1 }],
-                ["reservationbutton", { Constructor: A, autocloses: !1 }],
+                ["reservationbutton", { Constructor: x, autocloses: !1 }],
               ])),
             He
           );
         }
-        var Mt = s(37656),
+        var It = s(37656),
           Ce = s(29868),
           Re = s(24642);
-        function Pe(p) {
-          return p < 10 ? "0" + p : p;
+        function Ue(S) {
+          return S < 10 ? "0" + S : S;
         }
-        function Qe(p) {
-          const { giveawayid: x } = p,
-            R = (0, Mt.w)(x),
+        function Qe(S) {
+          const { giveawayid: A } = S,
+            R = (0, It.w)(A),
             {
-              bLoadingGiveawayInfo: N,
+              bLoadingGiveawayInfo: Q,
               winner_count: K,
               closed: L,
               seconds_until_drawing: ce,
             } = R;
-          return N
+          return Q
             ? null
             : (0, e.jsxs)("div", {
                 className: Ce.countdownCtn,
@@ -3404,7 +3407,7 @@
                           ? (0, e.jsxs)("div", {
                               className: Ce.Throbber,
                               children: [
-                                (0, e.jsx)(S.t, { size: "small" }),
+                                (0, e.jsx)(p.t, { size: "small" }),
                                 (0, e.jsx)("div", {
                                   children: (0, O.we)("#Giveaway_RandomDraw"),
                                 }),
@@ -3416,7 +3419,7 @@
                                 (0, e.jsx)("div", {
                                   className: Ce.CountDownTime,
                                   children:
-                                    Pe(Math.floor(ce / 60)) + ":" + Pe(ce % 60),
+                                    Ue(Math.floor(ce / 60)) + ":" + Ue(ce % 60),
                                 }),
                                 (0, e.jsxs)("div", {
                                   className: Ce.CountDownText,
@@ -3447,32 +3450,32 @@
                 ],
               });
         }
-        var Et = s(88245),
-          bt = s(35702),
-          Ue = s(16412),
-          Dt = s(92757),
-          jt = s(39256),
+        var bt = s(88245),
+          Et = s(35702),
+          Fe = s(16412),
+          jt = s(92757),
+          Dt = s(39256),
           Tt = s(4720),
-          Le = s(37375),
+          Le = s(75110),
           We = s(57810),
           at = s(36631),
           Bt = s(76281),
-          Je = s(81416);
-        function Oe(p) {
-          const { eventModel: x, nEventBadgeID: R } = p,
-            N = (0, bt.fy)(R);
-          if (N?.level > 0) {
-            let K = N.level;
-            if (x?.BHasSaleEnabled()) {
-              const L = x.GetSaleSectionsByType("badge_progress");
+          $e = s(81416);
+        function Oe(S) {
+          const { eventModel: A, nEventBadgeID: R } = S,
+            Q = (0, Et.fy)(R);
+          if (Q?.level > 0) {
+            let K = Q.level;
+            if (A?.BHasSaleEnabled()) {
+              const L = A.GetSaleSectionsByType("badge_progress");
               if (L?.length == 1) {
                 const ce = L[0].badge_progress;
                 if (ce?.event_badgeid == R && ce?.granted_by_discovery_queue) {
-                  const we = ce.levels[ce.levels.length - 1].level;
+                  const Me = ce.levels[ce.levels.length - 1].level;
                   return (0, e.jsx)(rt, {
-                    eventModel: x,
+                    eventModel: A,
                     nBadgeLevel: K,
-                    nMaxLevel: we,
+                    nMaxLevel: Me,
                   });
                 }
               }
@@ -3484,117 +3487,117 @@
           }
           return null;
         }
-        function rt(p) {
-          const { eventModel: x, nBadgeLevel: R, nMaxLevel: N } = p,
+        function rt(S) {
+          const { eventModel: A, nBadgeLevel: R, nMaxLevel: Q } = S,
             K = f.useMemo(() => {
-              const De = x
-                .GetSaleSections()
-                .filter((pe) => pe.section_type == "discoveryqueue");
-              return De?.length > 0 ? De[0] : null;
-            }, [x]),
+              const je = A.GetSaleSections().filter(
+                (pe) => pe.section_type == "discoveryqueue",
+              );
+              return je?.length > 0 ? je[0] : null;
+            }, [A]),
             { storePageFilter: L, eStoreDiscoveryQueueType: ce } = f.useMemo(
-              () => (0, Le.lx)(x, K),
-              [x, K],
+              () => (0, Le.lx)(A, K),
+              [A, K],
             ),
-            we = (0, We.Uf)(ce, L),
-            be = Math.min(R + we, N);
+            Me = (0, We.Uf)(ce, L),
+            Ee = Math.min(R + Me, Q);
           return (0, e.jsx)("span", {
             className: "DisplayBadgeProgress",
-            children: (0, Re.D)(be),
+            children: (0, Re.D)(Ee),
           });
         }
-        function _e(p) {
-          const { event: x } = p.context,
-            R = Number.parseInt((0, j.j$)(p.args, "eventid"));
-          return X.iA.logged_in && R
-            ? (0, e.jsx)(Oe, { nEventBadgeID: R, eventModel: x })
+        function _e(S) {
+          const { event: A } = S.context,
+            R = Number.parseInt((0, T.j$)(S.args, "eventid"));
+          return $.iA.logged_in && R
+            ? (0, e.jsx)(Oe, { nEventBadgeID: R, eventModel: A })
             : null;
         }
-        function Ze(p) {
-          const { nDoorIndex: x, children: R } = p,
-            N = (0, z.OM)(x),
+        function Je(S) {
+          const { nDoorIndex: A, children: R } = S,
+            Q = (0, z.OM)(A),
             K = (0, z.gP)(),
             [L, ce] = f.useState(!1),
-            [we, be] = f.useState(!1),
-            { elDialogElement: De, fnShowLogonDialog: pe } = (0, E.l)();
+            [Me, Ee] = f.useState(!1),
+            { elDialogElement: je, fnShowLogonDialog: pe } = (0, b.l)();
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              (0, e.jsx)(Ue.$n, {
-                disabled: N,
+              (0, e.jsx)(Fe.$n, {
+                disabled: Q,
                 onClick: (Ve) => {
                   L ||
-                    (X.iA.logged_in
+                    ($.iA.logged_in
                       ? (ce(!0),
-                        K({ iDoorIndex: x })
+                        K({ iDoorIndex: A })
                           .then((Be) => {
-                            Be || be(!0), ce(!1);
+                            Be || Ee(!0), ce(!1);
                           })
                           .catch(() => {
-                            be(!0), ce(!1);
+                            Ee(!0), ce(!1);
                           }))
                       : pe());
                 },
-                children: we
+                children: Me
                   ? (0, e.jsx)("div", {
                       children: (0, O.we)("#GrantAwardError_Busy"),
                     })
                   : (0, e.jsxs)(e.Fragment, {
                       children: [
-                        !!L && (0, e.jsx)(S.t, { size: "small" }),
-                        !!N && (0, e.jsx)(W.Jlk, {}),
+                        !!L && (0, e.jsx)(p.t, { size: "small" }),
+                        !!Q && (0, e.jsx)(W.Jlk, {}),
                         R,
                       ],
                     }),
               }),
-              De,
+              je,
             ],
           });
         }
-        function ke(p) {
-          const x = Number.parseInt((0, j.j$)(p.args)) || 0;
-          return x >= 0 && x < 32
-            ? (0, e.jsx)(Ze, { nDoorIndex: x, children: p.children })
+        function ke(S) {
+          const A = Number.parseInt((0, T.j$)(S.args)) || 0;
+          return A >= 0 && A < 32
+            ? (0, e.jsx)(Je, { nDoorIndex: A, children: S.children })
             : null;
         }
-        const Ae = (0, Dt.y)(Bt.H);
-        function Ct(p) {
-          const x = Number.parseInt((0, j.j$)(p.args)),
-            { event: R, showErrorInfo: N } = p.context;
-          if (x) {
+        const xe = (0, jt.y)(Bt.H);
+        function Ct(S) {
+          const A = Number.parseInt((0, T.j$)(S.args)),
+            { event: R, showErrorInfo: Q } = S.context;
+          if (A) {
             const K = R?.jsondata?.sale_sections?.findIndex(
-              (L) => L.unique_id == x,
+              (L) => L.unique_id == A,
             );
             if (K >= 0) {
               const L = R.GetDayIndexFromEventStart();
               return (0, e.jsx)(at.Cs, {
-                location: N ? at.HY : at.bs,
-                children: (0, e.jsx)(Ae, {
+                location: Q ? at.HY : at.bs,
+                children: (0, e.jsx)(xe, {
                   event: R,
                   section: R.jsondata.sale_sections[K],
                   activeTab: new Tt.y(null, L),
-                  language: p.language,
+                  language: S.language,
                   nSaleDayIndex: L,
                   promotionName: "",
                   appVisibilityTracker: null,
-                  ePreviewMode: N
-                    ? Je.S.EPreviewMode_Enabled
-                    : Je.S.EPreviewMode_Disabled,
+                  ePreviewMode: Q
+                    ? $e.S.EPreviewMode_Enabled
+                    : $e.S.EPreviewMode_Disabled,
                 }),
               });
-            } else if (N)
+            } else if (Q)
               return (0, e.jsxs)("div", {
-                className: jt.ErrorDiv,
-                children: ["Error could not find sale section ", x],
+                className: Dt.ErrorDiv,
+                children: ["Error could not find sale section ", A],
               });
           }
           return null;
         }
-        let $e = null;
-        function Ee() {
+        let Ze = null;
+        function be() {
           return (
-            $e == null &&
-              ($e = new Map([
-                ...Array.from(wt().entries()),
+            Ze == null &&
+              (Ze = new Map([
+                ...Array.from(Mt().entries()),
                 [
                   "itemdef",
                   {
@@ -3618,74 +3621,74 @@
                 ["salesection", { Constructor: Ct, autocloses: !1 }],
                 ["reservationbutton", { Constructor: st, autocloses: !1 }],
               ])),
-            $e
+            Ze
           );
         }
-        function Rt(p) {
-          const { event: x } = p.context,
-            R = Number.parseInt((0, j.j$)(p.args, "appid")),
-            N = Number.parseInt((0, j.j$)(p.args, "itemdefid")),
-            K = Number.parseInt((0, j.j$)(p.args, "maxquantity")),
-            L = (0, j.j$)(p.args, "calltoaction");
-          return !(0, Et.gS)(R, N, !1) || !x
-            ? (0, e.jsx)(S.t, {
+        function Rt(S) {
+          const { event: A } = S.context,
+            R = Number.parseInt((0, T.j$)(S.args, "appid")),
+            Q = Number.parseInt((0, T.j$)(S.args, "itemdefid")),
+            K = Number.parseInt((0, T.j$)(S.args, "maxquantity")),
+            L = (0, T.j$)(S.args, "calltoaction");
+          return !(0, bt.gS)(R, Q, !1) || !A
+            ? (0, e.jsx)(p.t, {
                 size: "small",
                 position: "center",
                 string: (0, O.we)("#Loading"),
               })
             : (0, e.jsx)(ee.f, {
-                language: p.language,
-                clanAccountID: x.clanSteamID.GetAccountID(),
-                itemDefSetting: { nAppID: R, nItemDefID: N, max_quantity: K },
+                language: S.language,
+                clanAccountID: A.clanSteamID.GetAccountID(),
+                itemDefSetting: { nAppID: R, nItemDefID: Q, max_quantity: K },
                 strCallToAction: L,
               });
         }
-        function Lt(p) {
-          const x = P();
-          if (!x) return (0, e.jsx)(S.t, { size: "small" });
-          const R = Number.parseInt((0, j.j$)(p.args));
-          return (0, e.jsx)("span", { children: (0, Re.D)(Number(Q(x, R))) });
+        function Lt(S) {
+          const A = U();
+          if (!A) return (0, e.jsx)(p.t, { size: "small" });
+          const R = Number.parseInt((0, T.j$)(S.args));
+          return (0, e.jsx)("span", { children: (0, Re.D)(Number(Y(A, R))) });
         }
-        function Ot(p) {
-          const x = (0, $.jR)(X.iA.accountid, "library");
-          if (!x) return (0, e.jsx)(S.t, { size: "small" });
-          const R = Number.parseInt((0, j.j$)(p.args));
-          let N = x.verifiedList?.length || 0;
+        function Ot(S) {
+          const A = (0, Z.jR)($.iA.accountid, "library");
+          if (!A) return (0, e.jsx)(p.t, { size: "small" });
+          const R = Number.parseInt((0, T.j$)(S.args));
+          let Q = A.verifiedList?.length || 0;
           switch (R) {
-            case Y.sd:
-              N = x.playableList?.length || 0;
+            case X.sd:
+              Q = A.playableList?.length || 0;
               break;
-            case Y.V8:
-              N = x.unsupportedList?.length || 0;
+            case X.V8:
+              Q = A.unsupportedList?.length || 0;
               break;
-            case Y.YX:
-              N = x.unknownList?.length || 0;
+            case X.YX:
+              Q = A.unknownList?.length || 0;
               break;
           }
-          return (0, e.jsx)("span", { children: (0, Re.D)(Number(N)) });
+          return (0, e.jsx)("span", { children: (0, Re.D)(Number(Q)) });
         }
-        function Gt(p) {
-          const x = Number.parseInt((0, j.j$)(p.args)),
+        function Gt(S) {
+          const A = Number.parseInt((0, T.j$)(S.args)),
             R =
-              "hide" in p.args && !!Number.parseInt((0, j.j$)(p.args, "hide"));
-          return x >= 0
-            ? (0, e.jsx)(Ft, { nDoorIndex: x, bHide: R, children: p.children })
+              "hide" in S.args && !!Number.parseInt((0, T.j$)(S.args, "hide"));
+          return A >= 0
+            ? (0, e.jsx)(Pt, { nDoorIndex: A, bHide: R, children: S.children })
             : null;
         }
-        function Ft(p) {
-          const { nDoorIndex: x, bHide: R, children: N } = p,
-            K = (0, z.OM)(x);
+        function Pt(S) {
+          const { nDoorIndex: A, bHide: R, children: Q } = S,
+            K = (0, z.OM)(A);
           return K == null
             ? null
             : (K && !R) || (!K && R)
-              ? (0, e.jsx)(e.Fragment, { children: p.children })
+              ? (0, e.jsx)(e.Fragment, { children: S.children })
               : null;
         }
-        function Ne(p) {
+        function Ne(S) {
           return (0, e.jsx)("span", {
-            className: J.LocalizeBlock,
+            className: N.LocalizeBlock,
             children: (0, O.oW)(
-              p.children,
+              S.children,
               (0, e.jsx)("b", {}),
               (0, e.jsx)("b", {}),
               (0, e.jsx)("b", {}),
@@ -3693,51 +3696,51 @@
             ),
           });
         }
-        function vt(p) {
-          let x = (0, j.j$)(p.args);
-          return x
-            ? (0, e.jsx)(Qe, { giveawayid: x })
+        function vt(S) {
+          let A = (0, T.j$)(S.args);
+          return A
+            ? (0, e.jsx)(Qe, { giveawayid: A })
             : (0, e.jsx)(f.Fragment, {});
         }
-        const Pt = void 0;
-        function st(p) {
-          return (0, e.jsx)(A, { ...p, PreviewActions: Pt });
+        const Ut = void 0;
+        function st(S) {
+          return (0, e.jsx)(x, { ...S, PreviewActions: Ut });
         }
         var qe = s(71698),
-          F = s(94520);
-        function pt(p) {
-          const { bSalePage: x } = p,
-            [R, N] = f.useState(!1);
+          P = s(94520);
+        function pt(S) {
+          const { bSalePage: A } = S,
+            [R, Q] = f.useState(!1);
           return (
-            (0, qe.H)(R, x),
+            (0, qe.H)(R, A),
             f.useEffect(() => {
-              b.Vw.Init(new i.D(X.TS.WEBAPI_BASE_URL)), ge.O3.Init(), N(!0);
+              j.Vw.Init(new i.D($.TS.WEBAPI_BASE_URL)), ge.O3.Init(), Q(!0);
             }, []),
             f.useEffect(() => {
               const K = (0, O.l4)();
-              K && U.locale(K);
+              K && F.locale(K);
             }, []),
             R
-              ? x
-                ? (0, e.jsx)(F.d3, { dictionary: Ee(), children: p.children })
-                : p.children
+              ? A
+                ? (0, e.jsx)(P.d3, { dictionary: be(), children: S.children })
+                : S.children
               : null
           );
         }
       },
-      52671: (ae, Se, s) => {
+      52671: (ae, fe, s) => {
         "use strict";
-        s.r(Se), s.d(Se, { default: () => O });
+        s.r(fe), s.d(fe, { default: () => O });
         var e = s(7850),
-          U = s(90626),
+          F = s(90626),
           f = s(92757),
           i = s(82559),
-          b = s(57223),
+          j = s(57223),
           ge = s(25792);
-        class O extends U.Component {
+        class O extends F.Component {
           state = { bIsLoading: !0 };
           componentDidMount() {
-            b.A.Get(), this.setState({ bIsLoading: !1 });
+            j.A.Get(), this.setState({ bIsLoading: !1 });
           }
           render() {
             return this.state.bIsLoading
@@ -3757,18 +3760,18 @@
           }
         }
       },
-      87278: (ae, Se, s) => {
+      87278: (ae, fe, s) => {
         "use strict";
-        s.r(Se), s.d(Se, { default: () => ln });
+        s.r(fe), s.d(fe, { default: () => ln });
         var e = s(7850),
-          U = s(58732),
+          F = s(58732),
           f = s(57223),
           i = s(72604),
-          b = s(3166),
+          j = s(3166),
           ge = s(41735),
           O = s.n(ge),
-          X = s(34592);
-        class Y {
+          $ = s(34592);
+        class X {
           static s_Singleton;
           m_rgRSSEnabledClans = [];
           GetAllRSSEnabledClans() {
@@ -3781,13 +3784,13 @@
           }
           static Get() {
             return (
-              Y.s_Singleton ||
-                ((Y.s_Singleton = new Y()), Y.s_Singleton.Init()),
-              Y.s_Singleton
+              X.s_Singleton ||
+                ((X.s_Singleton = new X()), X.s_Singleton.Init()),
+              X.s_Singleton
             );
           }
           Init() {
-            let n = (0, b.Tc)("rssaccountinfo", "application_config");
+            let n = (0, j.Tc)("rssaccountinfo", "application_config");
             this.ValidateRSSAccountConfig(n) && (this.m_rgRSSEnabledClans = n);
           }
           ValidateRSSAccountConfig(n) {
@@ -3823,9 +3826,9 @@
           async HintLoadAccounts() {}
           async ReindexClanEventsAndReloadAccount(n) {
             const r =
-                b.TS.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
+                j.TS.STORE_BASE_URL + "events_admin/ajaxflushandreindexrss",
               o = new FormData();
-            o.set("sessionid", (0, b.KC)()), o.append("clanids", "" + n);
+            o.set("sessionid", (0, j.KC)()), o.append("clanids", "" + n);
             try {
               if (
                 (await O().post(r, o, { withCredentials: !0 }))?.data
@@ -3833,7 +3836,7 @@
               )
                 return !0;
             } catch (l) {
-              const c = (0, X.H)(l);
+              const c = (0, $.H)(l);
               console.error(
                 "Failed to ReindexClanEventsAndReloadAccount: " + c.strErrorMsg,
                 c,
@@ -3844,50 +3847,50 @@
         }
         var ie = s(82559),
           _ = s(75844),
-          I = s(90626),
+          w = s(90626),
           k = s(92757),
           V = s(76559),
           D = s(813),
-          P = s(16412),
-          Q = s(25792),
-          j = s(13784),
-          $ = s(88003),
+          U = s(16412),
+          Y = s(25792),
+          T = s(13784),
+          Z = s(88003),
           z = s(36118),
-          w = s(85599),
-          M = s(71421),
+          M = s(85599),
+          I = s(71421),
           m = s(36707),
-          S = s(82734),
+          p = s(82734),
           d = s(18210),
           t = s(52081),
           g = s.n(t),
           u = s(96538),
-          A = s(2259),
-          T = s(24642);
-        const J = (a) => {
-            const [n, r] = (0, I.useState)(!0);
+          x = s(2259),
+          E = s(24642);
+        const N = (a) => {
+            const [n, r] = (0, w.useState)(!0);
             if (
-              ((0, I.useEffect)(() => {
+              ((0, w.useEffect)(() => {
                 (async () => (
-                  D.ac.Init(), await Y.Get().HintLoadAccounts(), r(!1)
+                  D.ac.Init(), await X.Get().HintLoadAccounts(), r(!1)
                 ))();
               }, []),
               n)
             )
-              return (0, e.jsx)(w.t, {
+              return (0, e.jsx)(M.t, {
                 string: (0, d.we)("#Loading"),
                 size: "medium",
               });
-            const o = Y.Get().GetTrustedEnabledClans(!0),
-              l = Y.Get().GetTrustedEnabledClans(!1);
+            const o = X.Get().GetTrustedEnabledClans(!0),
+              l = X.Get().GetTrustedEnabledClans(!1);
             return (0, e.jsx)("div", {
-              children: (0, e.jsxs)(Q.tH, {
+              children: (0, e.jsxs)(Y.tH, {
                 children: [
                   (0, e.jsx)("h1", {
                     children: (0, d.we)("#RSSModeration_Title"),
                   }),
                   (0, e.jsx)(de, {}),
                   (0, e.jsx)(te, {
-                    rgClanIDs: Y.Get()
+                    rgClanIDs: X.Get()
                       .GetAllRSSEnabledClans()
                       .map((c) => c.clan_accoundid),
                   }),
@@ -3903,12 +3906,12 @@
               }),
             });
           },
-          ee = (0, k.y)(J),
+          ee = (0, k.y)(N),
           de = (0, _.PA)((a) => {
-            const [n, r] = (0, I.useState)(!1),
-              [o, l] = (0, I.useState)(void 0);
+            const [n, r] = (0, w.useState)(!1),
+              [o, l] = (0, w.useState)(void 0);
             return n
-              ? (0, e.jsx)(w.t, {
+              ? (0, e.jsx)(M.t, {
                   string: (0, d.we)("#Loading"),
                   size: "medium",
                 })
@@ -3923,11 +3926,11 @@
                         "#RSSModreation_AllAutomationEnabled",
                       ),
                     })
-                : (0, e.jsxs)(P.$n, {
+                : (0, e.jsxs)(U.$n, {
                     onClick: async () => {
                       r(!0),
-                        await Y.Get().LoadKnownAllRSSInfo(),
-                        l(Y.Get().ExtractWithoutRSSAutomation()),
+                        await X.Get().LoadKnownAllRSSInfo(),
+                        l(X.Get().ExtractWithoutRSSAutomation()),
                         r(!1);
                     },
                     children: [(0, d.we)("#RSSModeration_FindInActive"), " "],
@@ -3935,10 +3938,10 @@
           }),
           Te = (a) => {
             const { rgClanIDs: n, strTitle: r } = a,
-              [o, l] = (0, I.useState)(!1);
+              [o, l] = (0, w.useState)(!1);
             let c = null;
             return (
-              o || (c = n.map((h) => (0, e.jsx)(Ie, { clanAccountID: h }, h))),
+              o || (c = n.map((h) => (0, e.jsx)(we, { clanAccountID: h }, h))),
               (0, e.jsxs)("div", {
                 className: (0, m.A)(g().SectionContainer),
                 children: [
@@ -3948,7 +3951,7 @@
                     children: [
                       r,
                       (0, e.jsx)("span", { children: "\xA0" }),
-                      (0, e.jsx)(P.$n, {
+                      (0, e.jsx)(U.$n, {
                         className: g().ResizeButton,
                         onClick: () => l(!o),
                         children: o
@@ -3958,7 +3961,7 @@
                     ],
                   }),
                   o &&
-                    (0, e.jsx)(P.$n, {
+                    (0, e.jsx)(U.$n, {
                       onClick: () => l(!1),
                       children: (0, d.we)("#Sale_ShowContents"),
                     }),
@@ -3967,7 +3970,7 @@
               })
             );
           },
-          Ie = (0, _.PA)((a) => {
+          we = (0, _.PA)((a) => {
             const { clanAccountID: n } = a;
             return D.ac.BHasClanInfoLoadedByAccountID(n) &&
               f.A.Get().BHasClanIDLoaded(n)
@@ -3987,7 +3990,7 @@
                   f.A.Get().QueueCuratorAdminInfoLoad(n),
                 ]);
               },
-              l = (0, A.OO)(
+              l = (0, x.OO)(
                 { onEnter: o },
                 { rootMargin: `${r} 0px ${r} 0px` },
               );
@@ -4001,14 +4004,14 @@
           },
           Ge = (a) => {
             const { clanInfo: n, rssAdminInfo: r } = a,
-              [o, l] = (0, I.useState)(!1),
-              c = b.TS.STORE_BASE_URL + "newshub/group/" + n.clanAccountID,
+              [o, l] = (0, w.useState)(!1),
+              c = j.TS.STORE_BASE_URL + "newshub/group/" + n.clanAccountID,
               h =
-                b.TS.STORE_BASE_URL +
+                j.TS.STORE_BASE_URL +
                 "curator/" +
                 n.clanAccountID +
                 "/admin/manage_rss",
-              v = b.TS.COMMUNITY_BASE_URL + "group/" + n.clanAccountID,
+              v = j.TS.COMMUNITY_BASE_URL + "group/" + n.clanAccountID,
               H =
                 "https://steamsupport.valvesoftware.com/clan/overview/" +
                 V.b.InitFromClanID(n.clanAccountID).ConvertTo64BitString(),
@@ -4044,18 +4047,18 @@
                               (0, e.jsx)("div", {
                                 children: (0, d.we)(
                                   "#RSSModeration_TotalEvents",
-                                  (0, T.D)(se.total_event_count),
+                                  (0, E.D)(se.total_event_count),
                                 ),
                               }),
                               (0, e.jsx)("div", {
                                 children: (0, d.we)(
                                   "#RSSModeration_RSSEvents",
-                                  (0, T.D)(se.rss_event_count),
+                                  (0, E.D)(se.rss_event_count),
                                 ),
                               }),
                             ],
                           }),
-                        (0, e.jsx)(P.$n, {
+                        (0, e.jsx)(U.$n, {
                           onClick: () => l(!o),
                           children: (0, d.we)(
                             o
@@ -4106,7 +4109,7 @@
                     }),
                     (0, e.jsx)("div", {
                       className: g().CreatorCtn,
-                      children: (0, e.jsx)(j.hA, {
+                      children: (0, e.jsx)(T.hA, {
                         bHideCreatorType: !0,
                         creatorID: {
                           name: null,
@@ -4131,27 +4134,27 @@
           },
           te = (a) => {
             const n = (r) => {
-              (0, $.pg)((0, e.jsx)(Fe, { ...a }), (0, S.uX)(r));
+              (0, Z.pg)((0, e.jsx)(Pe, { ...a }), (0, p.uX)(r));
             };
-            return (0, e.jsx)(M.he, {
+            return (0, e.jsx)(I.he, {
               toolTipContent: (0, d.we)("#RSSModeration_ReindexAndReload_ttip"),
-              children: (0, e.jsx)(P.$n, {
+              children: (0, e.jsx)(U.$n, {
                 onClick: n,
                 children: (0, d.we)("#RSSModeration_ReindexAndReload"),
               }),
             });
           },
-          Fe = (a) => {
-            const [n, r] = (0, I.useState)(void 0),
-              [o, l] = (0, I.useState)(!1),
-              [c, h] = (0, I.useState)(void 0),
+          Pe = (a) => {
+            const [n, r] = (0, w.useState)(void 0),
+              [o, l] = (0, w.useState)(!1),
+              [c, h] = (0, w.useState)(void 0),
               v = () => a.closeModal && a.closeModal(),
               B = async () => {
                 let H = 0;
                 r(H);
                 for (let se = 0; se < a.rgClanIDs.length; ++se) {
                   let ne = a.rgClanIDs[se];
-                  if (await Y.Get().ReindexClanEventsAndReloadAccount(ne))
+                  if (await X.Get().ReindexClanEventsAndReloadAccount(ne))
                     (H += 1), r(H);
                   else {
                     h((0, d.we)("#Error_Generic_Label"));
@@ -4162,18 +4165,18 @@
               };
             return (0, e.jsx)(u.x_, {
               onEscKeypress: v,
-              children: (0, e.jsxs)(P.UC, {
+              children: (0, e.jsxs)(U.UC, {
                 children: [
-                  (0, e.jsxs)(P.Y9, {
+                  (0, e.jsxs)(U.Y9, {
                     children: [
                       " ",
                       (0, d.we)("#RSSModeration_ReindexAndReload"),
                       " ",
                     ],
                   }),
-                  (0, e.jsxs)(P.nB, {
+                  (0, e.jsxs)(U.nB, {
                     children: [
-                      (0, e.jsxs)(P.a3, {
+                      (0, e.jsxs)(U.a3, {
                         children: [
                           n === void 0
                             ? (0, e.jsxs)(e.Fragment, {
@@ -4184,7 +4187,7 @@
                                       a.rgClanIDs.length,
                                     ),
                                   }),
-                                  (0, e.jsx)(P.jn, {
+                                  (0, e.jsx)(U.jn, {
                                     onClick: B,
                                     children: (0, d.we)("#Button_Continue"),
                                   }),
@@ -4205,7 +4208,7 @@
                                           "#EventEditor_ImportFromHTML_ConvertFinished",
                                         ),
                                       })
-                                    : (0, e.jsx)(w.t, {
+                                    : (0, e.jsx)(M.t, {
                                         size: "small",
                                         string: (0, d.we)("#Updating"),
                                       }),
@@ -4214,8 +4217,8 @@
                           !!c && (0, e.jsxs)("span", { children: [c, " "] }),
                         ],
                       }),
-                      (0, e.jsx)(P.wi, {
-                        children: (0, e.jsx)(P.$n, {
+                      (0, e.jsx)(U.wi, {
+                        children: (0, e.jsx)(U.$n, {
                           onClick: v,
                           children: (0, d.we)(
                             o ? "#Button_OK" : "#Button_Cancel",
@@ -4230,13 +4233,13 @@
           };
         var me = s(77495),
           re = s(30096),
-          Z = s(99412),
+          J = s(99412),
           W = s(14947),
           Ke = Object.defineProperty,
-          E = Object.getOwnPropertyDescriptor,
+          b = Object.getOwnPropertyDescriptor,
           y = (a, n, r, o) => {
             for (
-              var l = o > 1 ? void 0 : o ? E(n, r) : n, c = a.length - 1, h;
+              var l = o > 1 ? void 0 : o ? b(n, r) : n, c = a.length - 1, h;
               c >= 0;
               c--
             )
@@ -4290,11 +4293,11 @@
             let ne = new Array();
             return (
               (0, W.h5)(() => {
-                se.forEach((xe) => {
-                  this.m_mapEventGIDToSolrData.has(xe.unique_id) ||
-                    (ne.push(xe),
-                    this.m_mapEventGIDToSolrData.set(xe.unique_id, xe),
-                    this.m_listEvents.push(xe));
+                se.forEach((Ae) => {
+                  this.m_mapEventGIDToSolrData.has(Ae.unique_id) ||
+                    (ne.push(Ae),
+                    this.m_mapEventGIDToSolrData.set(Ae.unique_id, Ae),
+                    this.m_listEvents.push(Ae));
                 });
               }),
               ne
@@ -4312,12 +4315,12 @@
             H,
             se,
             ne,
-            xe,
+            Ae,
             le,
           ) {
-            const Me =
-                b.TS.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
-              je = {
+            const Ie =
+                j.TS.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
+              De = {
                 page: r,
                 count: o,
                 date: v,
@@ -4327,12 +4330,12 @@
                 eventtypefilter: B === void 0 ? void 0 : B.join(","),
                 orderByVisibility: H || void 0,
                 creator_home_clan_id: se === void 0 ? void 0 : se.join(","),
-                showUnpublished: xe === void 0 ? void 0 : xe,
+                showUnpublished: Ae === void 0 ? void 0 : Ae,
                 sale_only: le === void 0 ? void 0 : le,
                 term: ne === void 0 ? void 0 : ne,
               },
-              Ht = await O().get(Me, {
-                params: je,
+              Ht = await O().get(Ie, {
+                params: De,
                 withCredentials: !0,
                 cancelToken: n ? n.token : void 0,
               });
@@ -4345,10 +4348,10 @@
         let C = G;
         var q = s(9046),
           ue = Object.defineProperty,
-          fe = Object.getOwnPropertyDescriptor,
+          Se = Object.getOwnPropertyDescriptor,
           he = (a, n, r, o) => {
             for (
-              var l = o > 1 ? void 0 : o ? fe(n, r) : n, c = a.length - 1, h;
+              var l = o > 1 ? void 0 : o ? Se(n, r) : n, c = a.length - 1, h;
               c >= 0;
               c--
             )
@@ -4424,13 +4427,13 @@
           he([W.XI], ve.prototype, "CloseProgress", 1);
         const oe = new ve();
         var Ye = s(45559),
-          mt = s(25279),
+          mt = s(87498),
           ut = s(56492),
-          St = s(75909),
+          ft = s(75909),
           yt = s(64),
           Xe = s(29630),
           gt = s(6658),
-          At = Object.defineProperty,
+          xt = Object.defineProperty,
           ht = Object.getOwnPropertyDescriptor,
           nt = (a, n, r, o) => {
             for (
@@ -4439,11 +4442,11 @@
               c--
             )
               (h = a[c]) && (l = (o ? h(n, r, l) : h(l)) || l);
-            return o && l && At(n, r, l), l;
+            return o && l && xt(n, r, l), l;
           };
-        const xt = 25,
-          It = 5e3;
-        let He = class extends I.Component {
+        const At = 25,
+          wt = 5e3;
+        let He = class extends w.Component {
           m_cancelSignal = O().CancelToken.source();
           m_nImageID = 0;
           m_mapArtworkResizeSuccess = new Map();
@@ -4467,7 +4470,7 @@
               this.RunArtworkResizeBackfill()
                 .then(() => this.setState({ eBackfillState: "success" }))
                 .catch((a) => {
-                  let n = (0, X.H)(a);
+                  let n = (0, $.H)(a);
                   console.error(
                     "EventBackfillLanding: error " + n.strErrorMsg,
                     n,
@@ -4487,7 +4490,7 @@
             );
           }
           HandleErrorFatal(a, n, r, o) {
-            let l = (0, X.H)(n),
+            let l = (0, $.H)(n),
               c =
                 "EventBackfillLanding: " +
                 r +
@@ -4501,7 +4504,7 @@
                 : oe.CompleteBackfill("resize_image");
           }
           async HandleResizeForImageType(a, n, r, o, l) {
-            for (let c = Z.Bhc; c < a.length && c < Z.bP9; ++c)
+            for (let c = J.Bhc; c < a.length && c < J.bP9; ++c)
               if (a[c] && a[c].length > 0) {
                 let h = a[c],
                   v = (0, gt.yh)(h);
@@ -4538,19 +4541,19 @@
                     else {
                       r.bProcessing = !0;
                       let ne = Xe.zU.GetHashFromHashAndExt(h),
-                        xe = Xe.zU.GetExtStringFromHashAndExt(h),
+                        Ae = Xe.zU.GetExtStringFromHashAndExt(h),
                         le = (0, yt.K_)(o);
                       if (le)
                         try {
-                          const Me = await (0, St.bT)(
+                          const Ie = await (0, ft.bT)(
                             this.m_cancelSignal.token,
                             B,
                             ne,
-                            xe,
+                            Ae,
                             le,
                           );
                           console.log("success on the resize request"),
-                            Me == le.length
+                            Ie == le.length
                               ? ((r.bSucceeded = !0),
                                 this.m_mapArtworkResizeSuccess.set(
                                   o,
@@ -4561,14 +4564,14 @@
                                   "Did not resize all: " +
                                   o +
                                   " " +
-                                  Me +
+                                  Ie +
                                   " / " +
                                   le.length));
-                        } catch (Me) {
+                        } catch (Ie) {
                           r.bFailed = !0;
-                          let je = (0, X.H)(Me);
-                          (r.strMessage = je.strErrorMsg),
-                            console.error("Resize: " + je.strErrorMsg, je);
+                          let De = (0, $.H)(Ie);
+                          (r.strMessage = De.strErrorMsg),
+                            console.error("Resize: " + De.strErrorMsg, De);
                         }
                       else
                         (r.bFailed = !0),
@@ -4585,7 +4588,7 @@
             let a = 0;
             for (; oe.BIsBackkFillInProgress(); ) {
               let n = await C.Get()
-                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, a, xt)
+                .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, a, At)
                 .catch((r) =>
                   this.HandleErrorFatal(
                     null,
@@ -4648,7 +4651,7 @@
                       " Event " +
                       c.GID +
                       " Title: " +
-                      c.GetNameWithFallback(Z.Bhc),
+                      c.GetNameWithFallback(J.Bhc),
                   }),
                   c.jsondata && c.jsondata.localized_capsule_image)
                 ) {
@@ -4708,7 +4711,7 @@
                 )
                   break;
               }
-              if (oe.m_nFailures > It) {
+              if (oe.m_nFailures > wt) {
                 console.log("Hit too many errors, stoppinng the backfill");
                 break;
               }
@@ -4731,7 +4734,7 @@
                               (0, e.jsx)(ut.tj, {
                                 eventModel: o,
                                 route: ut.PH.k_eView,
-                                children: o.GetNameWithFallback(Z.Bhc),
+                                children: o.GetNameWithFallback(J.Bhc),
                               }),
                               (0, e.jsx)("div", {
                                 className: Ye.Error,
@@ -4835,7 +4838,7 @@
                   children: ["Events Skipped: ", oe.m_nSkipped],
                 }),
                 a.length > 0 &&
-                  (0, e.jsxs)(I.Fragment, {
+                  (0, e.jsxs)(w.Fragment, {
                     children: [
                       (0, e.jsx)("h2", { children: "Failure Info" }),
                       a,
@@ -4849,7 +4852,7 @@
                     ],
                   }),
                 this.state.eBackfillState == "started" &&
-                  (0, e.jsx)(w.t, {
+                  (0, e.jsx)(M.t, {
                     size: "medium",
                     position: "center",
                     string: "Backfill In Progress",
@@ -4861,25 +4864,25 @@
         nt([re.oI], He.prototype, "OnArtworkResizeBackfill", 1),
           nt([re.oI], He.prototype, "BeginArtworkResize", 1),
           (He = nt([_.PA], He));
-        var wt = s(65946),
-          Mt = s(92298),
-          Ce = s.n(Mt),
+        var Mt = s(65946),
+          It = s(92298),
+          Ce = s.n(It),
           Re = s(5634),
-          Pe = s(73259),
+          Ue = s(73259),
           Qe = s(71684),
-          Et = Object.defineProperty,
-          bt = Object.getOwnPropertyDescriptor,
-          Ue = (a, n, r, o) => {
+          bt = Object.defineProperty,
+          Et = Object.getOwnPropertyDescriptor,
+          Fe = (a, n, r, o) => {
             for (
-              var l = o > 1 ? void 0 : o ? bt(n, r) : n, c = a.length - 1, h;
+              var l = o > 1 ? void 0 : o ? Et(n, r) : n, c = a.length - 1, h;
               c >= 0;
               c--
             )
               (h = a[c]) && (l = (o ? h(n, r, l) : h(l)) || l);
-            return o && l && Et(n, r, l), l;
+            return o && l && bt(n, r, l), l;
           };
-        const Dt = s(87937),
-          jt = ["mod_reviewed", "auto_migrated"],
+        const jt = s(87937),
+          Dt = ["mod_reviewed", "auto_migrated"],
           Tt = 20,
           Le = class dt {
             static s_Singleton;
@@ -4908,7 +4911,7 @@
                   .filter(Boolean)
                   .map((H) => ({ label: H, value: H })));
               let l = !1,
-                c = jt.map((H) => ({ label: H, value: H }));
+                c = Dt.map((H) => ({ label: H, value: H }));
               r.has("excludedTags") &&
                 ((c = r
                   .getAll("excludedTags")
@@ -4927,7 +4930,7 @@
               let v;
               r.has("filterDate") &&
                 r.get("filterDate")?.length > 0 &&
-                (v = Dt.unix(Number(r.get("filterDate"))));
+                (v = jt.unix(Number(r.get("filterDate"))));
               let B = !1;
               r.has("orderByVisibility") &&
                 r.get("orderByVisibility")?.length > 0 &&
@@ -4943,18 +4946,18 @@
                 });
             }
           };
-        Ue([W.sH], Le.prototype, "selectedTags", 2),
-          Ue([W.sH], Le.prototype, "excludedTags", 2),
-          Ue([W.sH], Le.prototype, "filterDate", 2),
-          Ue([W.sH], Le.prototype, "filterDateAsString", 2),
-          Ue([W.sH], Le.prototype, "eventsToLoadPerPaging", 2),
-          Ue([W.sH], Le.prototype, "filterEventTypes", 2),
-          Ue([W.sH], Le.prototype, "bOrderByVisibilityStartTime", 2),
-          Ue([W.sH], Le.prototype, "bUseCustomQuery", 2);
+        Fe([W.sH], Le.prototype, "selectedTags", 2),
+          Fe([W.sH], Le.prototype, "excludedTags", 2),
+          Fe([W.sH], Le.prototype, "filterDate", 2),
+          Fe([W.sH], Le.prototype, "filterDateAsString", 2),
+          Fe([W.sH], Le.prototype, "eventsToLoadPerPaging", 2),
+          Fe([W.sH], Le.prototype, "filterEventTypes", 2),
+          Fe([W.sH], Le.prototype, "bOrderByVisibilityStartTime", 2),
+          Fe([W.sH], Le.prototype, "bUseCustomQuery", 2);
         let We = Le;
         var at = Object.defineProperty,
           Bt = Object.getOwnPropertyDescriptor,
-          Je = (a, n, r, o) => {
+          $e = (a, n, r, o) => {
             for (
               var l = o > 1 ? void 0 : o ? Bt(n, r) : n, c = a.length - 1, h;
               c >= 0;
@@ -5026,7 +5029,7 @@
           }
           SetActionChangeEvent(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = 2),
               (this.m_newEventType = n),
@@ -5035,7 +5038,7 @@
           }
           SetReviewAction(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = n ? 0 : 1),
               this
@@ -5043,7 +5046,7 @@
           }
           SetAdultOnlyContentAction(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = n ? 6 : 7),
               this
@@ -5051,7 +5054,7 @@
           }
           SetHalloweenEventTypeAction(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = n ? 8 : 9),
               this
@@ -5059,7 +5062,7 @@
           }
           SetReReviewAction(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = n ? 4 : 1),
               this
@@ -5070,7 +5073,7 @@
           }
           SetUpdateSeasonalTags(n) {
             return (
-              (this.m_moderator = b.iA.accountid),
+              (this.m_moderator = j.iA.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = 3),
               (this.m_newTagAdded = n),
@@ -5078,7 +5081,7 @@
             );
           }
         }
-        const Ze = class ct {
+        const Je = class ct {
           static s_Singleton;
           m_mapEventGIDToSolrData = new Map();
           m_listEvents = new Array();
@@ -5102,7 +5105,7 @@
           }
           async LoadPartnerEventForModerationIncremental(n, r = 30) {
             const o =
-              b.TS.STORE_BASE_URL +
+              j.TS.STORE_BASE_URL +
               "events_admin/ajaxgetmoderationspecificpartnerevents";
             let l = 0;
             this.m_listEvents?.length &&
@@ -5139,7 +5142,7 @@
                 );
               }
             } catch (h) {
-              const v = (0, X.H)(h);
+              const v = (0, $.H)(h);
               console.error(
                 "LoadPartnerEventForModerationIncremental failed:" +
                   v.strErrorMsg,
@@ -5149,12 +5152,12 @@
             return [];
           }
           async UpdateTagsOnPartnerEvent(n, r, o, l, c, h) {
-            const v = b.TS.STORE_BASE_URL + "events_admin/ajaxupdatetags";
+            const v = j.TS.STORE_BASE_URL + "events_admin/ajaxupdatetags";
             let B = l.join(",");
             h && (l.length > 0 && (B += ","), (B += h.ToModString()));
             const H = new FormData();
             return (
-              H.append("sessionid", (0, b.KC)()),
+              H.append("sessionid", (0, j.KC)()),
               H.append("clan_accountid", "" + r.GetAccountID()),
               H.append("gid_announcement", o),
               H.append("add_tags", B),
@@ -5168,9 +5171,9 @@
             );
           }
           async UpdatePartnerEventType(n, r, o, l) {
-            const c = b.TS.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
+            const c = j.TS.STORE_BASE_URL + "events_admin/ajaxupdateeventtype",
               h = new FormData();
-            h.append("sessionid", (0, b.KC)()),
+            h.append("sessionid", (0, j.KC)()),
               h.append("clan_accountid", "" + r.GetAccountID()),
               h.append("gid_event", o),
               h.append("new_event_type", "" + l),
@@ -5180,18 +5183,18 @@
               });
           }
         };
-        Je([W.sH], Ze.prototype, "m_mapEventGIDToSolrData", 2),
-          Je([W.sH], Ze.prototype, "m_listEvents", 2),
-          Je([W.XI], Ze.prototype, "ClearAllSolrEvents", 1);
-        let ke = Ze;
-        var Ae = s(10142),
+        $e([W.sH], Je.prototype, "m_mapEventGIDToSolrData", 2),
+          $e([W.sH], Je.prototype, "m_listEvents", 2),
+          $e([W.XI], Je.prototype, "ClearAllSolrEvents", 1);
+        let ke = Je;
+        var xe = s(10142),
           Ct = s(91424),
-          $e = s(92264),
-          Ee = s(61311),
+          Ze = s(92264),
+          be = s(61311),
           Rt = s(35098);
         function Lt(a) {
           const { accountID: n, locToken: r } = a,
-            o = I.useMemo(() => V.b.InitFromAccountID(n), [n]),
+            o = w.useMemo(() => V.b.InitFromAccountID(n), [n]),
             { data: l } = (0, Rt.js)(n);
           let c =
             "https://steamsupport.valvesoftware.com/account/overview/" +
@@ -5201,10 +5204,10 @@
               r,
               (0, e.jsx)("a", {
                 href: c,
-                target: b.TS.IN_CLIENT ? void 0 : "_blank",
+                target: j.TS.IN_CLIENT ? void 0 : "_blank",
                 children: l
-                  ? (0, e.jsx)(I.Fragment, { children: l.m_strPlayerName })
-                  : (0, e.jsx)(I.Fragment, {
+                  ? (0, e.jsx)(w.Fragment, { children: l.m_strPlayerName })
+                  : (0, e.jsx)(w.Fragment, {
                       children: (0, e.jsx)("span", { children: n }),
                     }),
               }),
@@ -5216,7 +5219,7 @@
             r =
               (0, d.TW)(n.m_rtWhen) +
               " @ " +
-              (0, $e.KC)(n.m_rtWhen, { bForce24HourClock: !1 }),
+              (0, Ze.KC)(n.m_rtWhen, { bForce24HourClock: !1 }),
             o = (0, e.jsx)(Lt, {
               locToken: "#EventModTile_Moderator",
               accountID: n.m_moderator,
@@ -5224,7 +5227,7 @@
           switch (n.m_action) {
             case Oe.k_ModReviewed:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_Reviewed",
                   (0, e.jsx)("span", { children: r }),
@@ -5233,7 +5236,7 @@
               });
             case Oe.k_ModUnreviewed:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_UnReviewed",
                   (0, e.jsx)("span", { children: r }),
@@ -5242,7 +5245,7 @@
               });
             case Oe.k_ChangeEventType:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_NewEventType",
                   (0, e.jsx)("span", { children: r }),
@@ -5252,7 +5255,7 @@
               });
             case Oe.k_UpdateSeasonTags:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_SeasonTagUpdate",
                   (0, e.jsx)("span", { children: r }),
@@ -5262,7 +5265,7 @@
               });
             case Oe.k_ModReReviewed:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_ReReviewed",
                   (0, e.jsx)("span", { children: r }),
@@ -5271,7 +5274,7 @@
               });
             case Oe.k_ModRemovedFromSteamChina:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_RemoveFromSC",
                   (0, e.jsx)("span", { children: r }),
@@ -5280,7 +5283,7 @@
               });
             case Oe.k_ModFlagAdultOnlyContent:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_FlagAdultContent",
                   (0, e.jsx)("span", { children: r }),
@@ -5289,7 +5292,7 @@
               });
             case Oe.k_ModRemoveAdultOnlyContent:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: (0, d.PP)(
                   "#EventModTile_Action_RemoveAdultContent",
                   (0, e.jsx)("span", { children: r }),
@@ -5298,21 +5301,21 @@
               });
             default:
               return (0, e.jsx)("div", {
-                className: Ee.ModeratorAuditActionCtn,
+                className: be.ModeratorAuditActionCtn,
                 children: n.ToModString(),
               });
           }
         }
         function Gt(a) {
-          const [n, r] = I.useState(!0),
+          const [n, r] = w.useState(!0),
             o = 3,
             l = (H) => {
               const { eventModel: se } = a;
               return H.map((ne) => {
-                const xe = new _e();
+                const Ae = new _e();
                 return (
-                  xe.FromString(ne),
-                  (0, e.jsx)(Ot, { modAction: xe }, se.GID + ne)
+                  Ae.FromString(ne),
+                  (0, e.jsx)(Ot, { modAction: Ae }, se.GID + ne)
                 );
               });
             },
@@ -5335,31 +5338,31 @@
                   B &&
                     (0, e.jsx)("a", {
                       onClick: () => r(!1),
-                      className: Ee.ExpandModActions,
+                      className: be.ExpandModActions,
                       children: (0, d.we)("#EventModTile_Action_More", v - o),
                     }),
                   !B &&
                     v > o &&
                     (0, e.jsx)("a", {
                       onClick: () => r(!0),
-                      className: Ee.ExpandModActions,
+                      className: be.ExpandModActions,
                       children: (0, d.we)("#EventModTile_Action_Hide"),
                     }),
                 ],
               }));
         }
-        var Ft = s(95695),
-          Ne = s.n(Ft),
+        var Pt = s(95695),
+          Ne = s.n(Pt),
           vt = s(95414),
-          Pt = s(13465),
+          Ut = s(13465),
           st = s(53107),
           qe = s(53113),
-          F = s(961),
+          P = s(961),
           pt = s(7582),
-          p = s(29522),
-          x = s(88812),
+          S = s(29522),
+          A = s(88812),
           R = s(32606),
-          N = Object.defineProperty,
+          Q = Object.defineProperty,
           K = Object.getOwnPropertyDescriptor,
           L = (a, n, r, o) => {
             for (
@@ -5368,19 +5371,19 @@
               c--
             )
               (h = a[c]) && (l = (o ? h(n, r, l) : h(l)) || l);
-            return o && l && N(n, r, l), l;
+            return o && l && Q(n, r, l), l;
           };
         const ce = s(87937),
-          we = 500,
-          be = 50,
-          De = {
+          Me = 500,
+          Ee = 50,
+          je = {
             bExhaustedEventList: !1,
             bInfiniteScrollLoading: !0,
             nLastFetchCompletedMS: 0,
           };
-        let pe = class extends I.Component {
+        let pe = class extends w.Component {
           m_cancelSignal = O().CancelToken.source();
-          m_refScroll = I.createRef();
+          m_refScroll = w.createRef();
           m_IntervalTimer = void 0;
           state = {
             bInfiniteScrollLoading: !1,
@@ -5430,7 +5433,7 @@
               (this.m_IntervalTimer = void 0));
           }
           HandleError(a) {
-            let n = (0, X.H)(a);
+            let n = (0, $.H)(a);
             console.error("EventModerationLanding error: " + n.strErrorMsg, n),
               this.setState({
                 bInfiniteScrollLoading: !1,
@@ -5441,7 +5444,7 @@
           async LoadMorePublicEventWithDelay() {
             this.m_IntervalTimer = window.setInterval(
               this.LoadMoreModerationEvents,
-              we,
+              Me,
             );
           }
           LoadMoreModerationEvents() {
@@ -5507,8 +5510,8 @@
             a &&
               (this.state.bExhaustedEventList ||
                 this.state.bInfiniteScrollLoading ||
-                (a.getBoundingClientRect().bottom <= window.innerHeight + be &&
-                  (this.state.nLastFetchCompletedMS + we < Date.now()
+                (a.getBoundingClientRect().bottom <= window.innerHeight + Ee &&
+                  (this.state.nLastFetchCompletedMS + Me < Date.now()
                     ? this.setState(
                         { bInfiniteScrollLoading: !0 },
                         this.LoadMorePublicEventWithDelay,
@@ -5523,7 +5526,7 @@
               ke.Get().ClearAllSolrEvents(),
               C.Get().ClearAllSolrEvents(),
               this.setState(
-                { ...De },
+                { ...je },
                 this.UpdateQueryParametersAndLoadMoreEvents,
               );
           }
@@ -5531,7 +5534,7 @@
             let a = this.RenderTiles();
             const n = We.Get();
             return (0, e.jsxs)("div", {
-              className: F.ModerationContainer,
+              className: P.ModerationContainer,
               ref: this.m_refScroll,
               children: [
                 (0, e.jsxs)("div", {
@@ -5539,7 +5542,7 @@
                     (0, e.jsx)("h2", {
                       children: (0, d.we)("#EventModeration_Title"),
                     }),
-                    (0, e.jsx)(Q.tH, {
+                    (0, e.jsx)(Y.tH, {
                       children: (0, e.jsxs)("div", {
                         className: (0, m.A)(Ne().FlexRowContainer),
                         children: [
@@ -5547,7 +5550,7 @@
                             fnRequireRefetchEvents: this.RefetchAllEventTiles,
                           }),
                           !!n.bUseCustomQuery &&
-                            (0, e.jsx)(Ut, {
+                            (0, e.jsx)(Ft, {
                               fnRequireRefetchEvents: this.RefetchAllEventTiles,
                             }),
                         ],
@@ -5555,9 +5558,9 @@
                     }),
                   ],
                 }),
-                (0, e.jsx)(Q.tH, { children: a }),
+                (0, e.jsx)(Y.tH, { children: a }),
                 this.state.bInfiniteScrollLoading &&
-                  (0, e.jsx)(w.t, {
+                  (0, e.jsx)(M.t, {
                     position: "center",
                     size: "medium",
                     string: (0, d.we)("#Loading"),
@@ -5580,12 +5583,12 @@
             return (0, e.jsxs)(e.Fragment, {
               children: [
                 (0, e.jsx)("div", {
-                  className: F.FilterContainer,
-                  children: (0, e.jsx)(M.he, {
+                  className: P.FilterContainer,
+                  children: (0, e.jsx)(I.he, {
                     toolTipContent: (0, d.we)(
                       "#EventModeration_ShowCustomFilter_ttip",
                     ),
-                    children: (0, e.jsx)(P.Yh, {
+                    children: (0, e.jsx)(U.Yh, {
                       label: (0, d.we)("#EventModeration_ShowCustomFilter"),
                       checked: n.bUseCustomQuery,
                       onChange: (o) => {
@@ -5595,7 +5598,7 @@
                   }),
                 }),
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("label", {
                       htmlFor: "EventPerLoad",
@@ -5622,13 +5625,13 @@
               ],
             });
           }),
-          Ut = (0, _.PA)((a) => {
+          Ft = (0, _.PA)((a) => {
             const n = We.Get(),
               { fnRequireRefetchEvents: r } = a,
-              o = Z.Zi8.map((v) => ({ value: v, label: (0, Qe.rG)(v) })).sort(
+              o = J.Zi8.map((v) => ({ value: v, label: (0, Qe.rG)(v) })).sort(
                 (v, B) => v.label.localeCompare(B.label),
               ),
-              l = Pe.FZ.map((v) => ({ value: v, label: v })).sort((v, B) =>
+              l = Ue.FZ.map((v) => ({ value: v, label: v })).sort((v, B) =>
                 v.label.localeCompare(B.label),
               ),
               c = { option: (v) => ({ ...v, color: "#444444" }) },
@@ -5647,7 +5650,7 @@
             return (0, e.jsxs)(e.Fragment, {
               children: [
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("span", {
                       children: (0, d.we)("#EventModeration_FilterByTag"),
@@ -5665,7 +5668,7 @@
                   ],
                 }),
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("span", {
                       children: (0, d.we)(
@@ -5685,7 +5688,7 @@
                   ],
                 }),
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("span", {
                       children: (0, d.we)("#EventModeration_FilterToType"),
@@ -5703,7 +5706,7 @@
                   ],
                 }),
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("span", {
                       children: (0, d.we)("#EventModeration_FilterToDate"),
@@ -5728,13 +5731,13 @@
                       isValidDate: h,
                       inputProps: {
                         placeholder: (0, d.we)("#EventModeration_PickDatee"),
-                        className: F.TimeWidth,
+                        className: P.TimeWidth,
                       },
                     }),
                   ],
                 }),
                 (0, e.jsxs)("div", {
-                  className: F.FilterContainer,
+                  className: P.FilterContainer,
                   children: [
                     (0, e.jsx)("input", {
                       type: "checkbox",
@@ -5757,24 +5760,24 @@
               ],
             });
           }),
-          ft = (0, _.PA)((a) => {
+          St = (0, _.PA)((a) => {
             const { onClick: n, event: r, bSaving: o } = a;
             let l = (0, d.we)("#EventModTile_Moderate_ClearReviewed"),
-              c = F.EventModerateClearReview,
+              c = P.EventModerateClearReview,
               h = !1;
             return (
-              (0, Pe.Xx)(r) ||
+              (0, Ue.Xx)(r) ||
                 ((l = (0, d.we)("#EventModTile_Moderate_MarkReviewed")),
-                (c = F.EventModerateMarkReview),
+                (c = P.EventModerateMarkReview),
                 (h = !0)),
               o &&
                 ((l = (0, d.we)("#EventModTile_Moderate_Saving")),
-                (c = F.EventModerateSaving)),
+                (c = P.EventModerateSaving)),
               (0, e.jsxs)("button", {
-                className: (0, m.A)(Ne().Button, F.Button, c),
+                className: (0, m.A)(Ne().Button, P.Button, c),
                 onClick: () => n(h),
                 disabled: o,
-                children: [o && (0, e.jsx)(w.t, { size: "small" }), l],
+                children: [o && (0, e.jsx)(M.t, { size: "small" }), l],
               })
             );
           }),
@@ -5789,16 +5792,16 @@
             return (
               o && (c = (0, d.we)("#EventModTile_Moderate_Saving")),
               (0, e.jsxs)("button", {
-                className: (0, m.A)(Ne().Button, F.Button),
+                className: (0, m.A)(Ne().Button, P.Button),
                 onClick: () => n(!l),
                 disabled: o,
-                children: [o && (0, e.jsx)(w.t, { size: "small" }), c],
+                children: [o && (0, e.jsx)(M.t, { size: "small" }), c],
               })
             );
           });
         function Xt(a) {
           const { onClick: n, event: r, bSaving: o } = a,
-            l = (0, wt.q3)(() => r.BHasTag("halloween"));
+            l = (0, Mt.q3)(() => r.BHasTag("halloween"));
           let c = (0, d.we)(
             l
               ? "#EventModTile_Moderate_RemoveHalloweenFlag"
@@ -5808,14 +5811,14 @@
           const h = pt.HD.GetTimeNowWithOverrideAsDate();
           return h.getMonth() >= 8 && h.getMonth() <= 10
             ? (0, e.jsxs)("button", {
-                className: (0, m.A)(Ne().Button, F.Button),
+                className: (0, m.A)(Ne().Button, P.Button),
                 onClick: () => n(!l),
                 disabled: o,
-                children: [o && (0, e.jsx)(w.t, { size: "small" }), c],
+                children: [o && (0, e.jsx)(M.t, { size: "small" }), c],
               })
             : null;
         }
-        let ze = class extends I.Component {
+        let ze = class extends w.Component {
           state = {
             bLoadingEvent: !me.O3.BHasClanEventModel(
               this.props.solrData.unique_id,
@@ -5831,7 +5834,7 @@
               me.O3.LoadHiddenPartnerEvent(new V.b(a.clan_steamid), n)
                 .then(() => this.setState({ bLoadingEvent: !1 }))
                 .catch((r) => {
-                  const o = (0, X.H)(r);
+                  const o = (0, $.H)(r);
                   console.error(
                     "EventModerationTile: Event Load: " + o.strErrorMsg,
                     o,
@@ -5890,7 +5893,7 @@
               r = n.unique_id,
               o = me.O3.GetClanEventModel(r);
             if (!o) return;
-            const l = (0, Pe.Xx)(o);
+            const l = (0, Ue.Xx)(o);
             if (a === l) return;
             const c = new Array(),
               h = new Array();
@@ -5918,7 +5921,7 @@
                   );
                 c.vecTags = h;
               } catch (h) {
-                let v = (0, X.H)(h);
+                let v = (0, $.H)(h);
                 console.error("UpdateTagsOnPartnerEvent " + v.strErrorMsg, v);
               }
               this.setState({ bSavingModeration: !1 });
@@ -5929,25 +5932,25 @@
           OnChangeCategory(a) {
             const { solrData: n } = this.props;
             let r = me.O3.GetClanEventModel(n.unique_id);
-            (0, $.pg)((0, e.jsx)(it, { eventModel: r }), (0, S.uX)(a));
+            (0, Z.pg)((0, e.jsx)(it, { eventModel: r }), (0, p.uX)(a));
           }
           OnUpdateSeasonalTag(a) {
             const { solrData: n } = this.props;
             let r = me.O3.GetClanEventModel(n.unique_id);
-            (0, $.pg)((0, e.jsx)(ot, { eventModel: r }), (0, S.uX)(a));
+            (0, Z.pg)((0, e.jsx)(ot, { eventModel: r }), (0, p.uX)(a));
           }
           render() {
             const { solrData: a } = this.props,
               n = a.unique_id,
               r = Number(a.appid);
             let o,
-              l = (0, Z.sfN)(b.TS.LANGUAGE),
+              l = (0, J.sfN)(j.TS.LANGUAGE),
               c = me.O3.GetClanEventModel(n),
               h = null;
             c
               ? (this.state.bShowAsModal &&
                   (h = (0, e.jsx)(u.of, {
-                    className: F.StoreHeaderAdjust,
+                    className: P.StoreHeaderAdjust,
                     children: (0, e.jsx)("div", {
                       children: (0, e.jsx)(Ct.H, {
                         event: c,
@@ -5955,7 +5958,7 @@
                       }),
                     }),
                   })),
-                (o = (0, e.jsx)(Jt, { eventModel: c, lang: l })))
+                (o = (0, e.jsx)($t, { eventModel: c, lang: l })))
               : (o = (0, d.we)("#Loading"));
             const v = a.last_modified_date
                 ? Date.parse(a.last_modified_date) / 1e3
@@ -5963,57 +5966,57 @@
               B = c ? c.type : Number(a.event_type),
               H = new V.b(a.clan_steamid),
               se = r ? `app/${r}` : `group/${H.GetAccountID()}`,
-              ne = `${b.TS.STORE_BASE_URL}news/${se}/view/${a.announcement_gid}`,
-              xe = !!(c && c.BHasTag("adult_only_content")),
+              ne = `${j.TS.STORE_BASE_URL}news/${se}/view/${a.announcement_gid}`,
+              Ae = !!(c && c.BHasTag("adult_only_content")),
               le = !!(c && c.BHasTag("halloween"));
-            return (0, e.jsxs)(Q.tH, {
+            return (0, e.jsxs)(Y.tH, {
               children: [
                 h,
                 (0, e.jsxs)("div", {
-                  className: (0, m.A)({ [F.Tile]: !0, [F.HalloweenEvent]: le }),
+                  className: (0, m.A)({ [P.Tile]: !0, [P.HalloweenEvent]: le }),
                   children: [
                     (0, e.jsx)("a", {
                       href: ne,
-                      className: F.TileCapsule,
+                      className: P.TileCapsule,
                       onClick: this.ShowModalEvent,
                       children: o,
                     }),
                     (0, e.jsxs)("div", {
-                      className: F.TileDetails,
+                      className: P.TileDetails,
                       children: [
                         (0, e.jsxs)("div", {
-                          className: F.DetailsLeft,
+                          className: P.DetailsLeft,
                           children: [
                             (0, e.jsx)("a", {
-                              className: F.EventTitle,
+                              className: P.EventTitle,
                               href: ne,
                               onClick: this.ShowModalEvent,
                               children: a.event_name,
                             }),
                             (0, e.jsx)("div", {
                               className: (0, m.A)(
-                                F.TileEventType,
-                                B == Z.DRF ? F.TileEventOtherType : "",
+                                P.TileEventType,
+                                B == J.DRF ? P.TileEventOtherType : "",
                               ),
                               children: c
                                 ? c.GetCategoryAsString()
                                 : a.event_type,
                             }),
-                            xe &&
+                            Ae &&
                               (0, e.jsx)("div", {
-                                className: F.HasAdultContent,
+                                className: P.HasAdultContent,
                                 children: (0, d.we)(
                                   "#EventModTile_HasAdultContent",
                                 ),
                               }),
                             this.state.bLoadingEvent &&
-                              (0, e.jsx)(w.t, {
+                              (0, e.jsx)(M.t, {
                                 size: "small",
                                 string: (0, d.we)("#Loading"),
                               }),
                             (0, e.jsx)("div", {
-                              className: F.ChannelInfo,
-                              children: (0, e.jsx)(Zt, {
+                              className: P.ChannelInfo,
+                              children: (0, e.jsx)(Jt, {
                                 appid: r,
                                 clanSteamID: new V.b(a.clan_steamid),
                               }),
@@ -6021,18 +6024,18 @@
                           ],
                         }),
                         (0, e.jsx)("div", {
-                          className: F.DetailsMiddle,
+                          className: P.DetailsMiddle,
                           children:
                             c &&
-                            (0, e.jsxs)(I.Fragment, {
+                            (0, e.jsxs)(w.Fragment, {
                               children: [
-                                (0, e.jsx)(ft, {
+                                (0, e.jsx)(St, {
                                   onClick: this.SetModeratedState,
                                   bSaving: this.state.bSavingModeration,
                                   event: c,
                                 }),
                                 (0, e.jsx)("button", {
-                                  className: (0, m.A)(Ne().Button, F.Button),
+                                  className: (0, m.A)(Ne().Button, P.Button),
                                   onClick: this.OnChangeCategory,
                                   children: (0, d.we)(
                                     "#EventModTile_ChangeEventType",
@@ -6061,19 +6064,19 @@
                             }),
                         }),
                         (0, e.jsxs)("div", {
-                          className: F.DetailsRight,
+                          className: P.DetailsRight,
                           children: [
                             (0, e.jsxs)("div", {
-                              className: F.EventTimingBlock,
+                              className: P.EventTimingBlock,
                               children: [
                                 !!v &&
                                   (0, e.jsx)("div", {
-                                    className: F.LastUpdateTime,
+                                    className: P.LastUpdateTime,
                                     children: (0, d.we)(
                                       "#EventModTile_LastModified",
                                       (0, d.TW)(v) +
                                         "@" +
-                                        (0, $e.KC)(v, {
+                                        (0, Ze.KC)(v, {
                                           bForce24HourClock: !1,
                                         }),
                                     ),
@@ -6081,7 +6084,7 @@
                                 c &&
                                   (0, e.jsx)(R.j, {
                                     event: c,
-                                    stylesmodule: F,
+                                    stylesmodule: P,
                                     nOverrideEndTime:
                                       c.GetEndTimeAndDateUnixSeconds(),
                                     nOverrideStartTime:
@@ -6113,27 +6116,27 @@
           L([re.oI], ze.prototype, "OnChangeCategory", 1),
           L([re.oI], ze.prototype, "OnUpdateSeasonalTag", 1),
           (ze = L([_.PA], ze));
-        function Jt(a) {
+        function $t(a) {
           const { eventModel: n, lang: r } = a,
-            o = (0, x.WC)(n, "capsule", r, q.wI.capsule_main),
+            o = (0, A.WC)(n, "capsule", r, q.wI.capsule_main),
             l = n.BImageNeedScreenshotFallback("capsule", r);
           return o && o.length > 0
             ? (0, e.jsxs)(e.Fragment, {
                 children: [
-                  (0, e.jsx)(Pt.c, { rgSources: o }),
+                  (0, e.jsx)(Ut.c, { rgSources: o }),
                   l &&
                     (0, e.jsx)("div", {
-                      className: F.NoCapsuleFallback,
+                      className: P.NoCapsuleFallback,
                       children: (0, d.we)("#EventModTile_FallbackImageText"),
                     }),
                 ],
               })
             : (0, e.jsx)("div", {
-                className: F.NoCapsule,
+                className: P.NoCapsule,
                 children: (0, d.we)("#EventModTile_NoCapsule"),
               });
         }
-        let Kt = class extends I.Component {
+        let Kt = class extends w.Component {
           state = { bDownloadingImages: !1, nLocLanguages: 0 };
           m_cancelSignal = O().CancelToken.source();
           componentWillUnmount() {
@@ -6144,7 +6147,7 @@
           CountLanguages(a) {
             let n = 0;
             if (a && a.length > 0)
-              for (let r = 0; r < a.length && r < Z.bP9; ++r)
+              for (let r = 0; r < a.length && r < J.bP9; ++r)
                 a[r] && a[r].length > 0 && (n += 1);
             return n;
           }
@@ -6159,7 +6162,7 @@
                   this.setState({ nLocLanguages: n.length });
               })
               .catch((n) => {
-                let r = (0, X.H)(n);
+                let r = (0, $.H)(n);
                 console.error(
                   "EventInspection.LoadLoc : error " + r.strErrorMsg,
                   r,
@@ -6181,10 +6184,10 @@
               h = this.CountLanguages(a.jsondata.localized_summary),
               v = this.CountLanguages(a.jsondata.localized_subtitle);
             return (0, e.jsxs)("div", {
-              className: F.AnalysisCtn,
+              className: P.AnalysisCtn,
               children: [
                 (0, e.jsx)("div", {
-                  className: F.TileTitle,
+                  className: P.TileTitle,
                   children: (0, d.we)("#EventModTile_Analysis"),
                 }),
                 (0, e.jsx)("div", {
@@ -6204,7 +6207,7 @@
                 }),
                 !!n &&
                   (0, e.jsxs)("div", {
-                    className: F.ArtHeader,
+                    className: P.ArtHeader,
                     children: [
                       (0, d.we)("#EventModTile_ImageAnalysis_Header", n),
                       " ",
@@ -6219,7 +6222,7 @@
                   }),
                 !!o &&
                   (0, e.jsxs)("div", {
-                    className: F.ArtSpotlight,
+                    className: P.ArtSpotlight,
                     children: [
                       (0, d.we)("#EventModTile_ImageAnalysis_Spotlight", o),
                       " ",
@@ -6234,14 +6237,14 @@
                   }),
                 c == 0 &&
                   (0, e.jsxs)("div", {
-                    className: F.AnalysisMissing,
+                    className: P.AnalysisMissing,
                     children: [
                       (0, d.we)("#EventModTile_ImageAnalysis_None"),
                       " ",
                     ],
                   }),
                 this.state.nLocLanguages == 0 &&
-                  (0, e.jsx)(w.t, {
+                  (0, e.jsx)(M.t, {
                     size: "small",
                     string: (0, d.we)("#EventModTile_LoadingLocs"),
                   }),
@@ -6271,27 +6274,27 @@
           }
         };
         Kt = L([_.PA], Kt);
-        const Zt = (0, _.PA)((a) => {
+        const Jt = (0, _.PA)((a) => {
           const { appid: n, clanSteamID: r } = a,
-            o = (0, p.$5)(n),
-            [l, c] = (0, I.useState)(!Ae.A.Get().BHasApp(a.appid)),
-            h = I.useRef(O().CancelToken.source());
+            o = (0, S.$5)(n),
+            [l, c] = (0, w.useState)(!xe.A.Get().BHasApp(a.appid)),
+            h = w.useRef(O().CancelToken.source());
           if (
-            ((0, I.useEffect)(
+            ((0, w.useEffect)(
               () => () =>
                 h.current.cancel(
                   "EventModerationChannelInfo component unmounted",
                 ),
               [],
             ),
-            (0, I.useEffect)(() => {
+            (0, w.useEffect)(() => {
               const { appid: v, clanSteamID: B } = a;
-              ((v && !Ae.A.Get().BHasApp(v)) ||
+              ((v && !xe.A.Get().BHasApp(v)) ||
                 (B && !D.ac.BHasClanInfoLoaded(B))) &&
                 (async () => {
                   try {
                     await Promise.all([
-                      Ae.A.Get().QueueAppRequest(v, {
+                      xe.A.Get().QueueAppRequest(v, {
                         include_assets: !0,
                         include_release: !0,
                         include_screenshots: !0,
@@ -6299,7 +6302,7 @@
                       B ? D.ac.LoadClanInfoForClanSteamID(B) : void 0,
                     ]);
                   } catch (se) {
-                    const ne = (0, X.H)(se);
+                    const ne = (0, $.H)(se);
                     console.error(
                       "EventModerationChannelInfo: App Load: " + ne.strErrorMsg,
                       ne,
@@ -6311,24 +6314,24 @@
             }, [a]),
             l)
           )
-            return (0, e.jsx)(w.t, {
+            return (0, e.jsx)(M.t, {
               size: "small",
               string: (0, d.we)("#EventModTile_AppInfoLoading"),
             });
           if (n) {
-            const v = Ae.A.Get().GetApp(n);
+            const v = xe.A.Get().GetApp(n);
             return v
               ? (0, e.jsx)("div", {
-                  className: F.TileAppInfo,
+                  className: P.TileAppInfo,
                   children: (0, e.jsxs)("div", {
-                    className: F.TileAppInfoTitle,
+                    className: P.TileAppInfoTitle,
                     children: [
                       (0, e.jsx)(vt.j, {
                         id: o,
                         children: (0, e.jsx)(st.uU, {
                           href: (0, qe.k2)(v.GetStorePageURL()),
                           children: (0, e.jsx)("img", {
-                            className: F.TileAppInfoImage,
+                            className: P.TileAppInfoImage,
                             src: v.GetAssets().GetMainCapsuleURL(),
                           }),
                         }),
@@ -6351,16 +6354,16 @@
               B = D.ac.GetClanInfoByClanAccountID(v);
             if (B && B.is_curator)
               return (0, e.jsx)("div", {
-                className: F.TileAppInfo,
+                className: P.TileAppInfo,
                 children: (0, e.jsx)("div", {
-                  className: F.TileAppInfoTitle,
+                  className: P.TileAppInfoTitle,
                   children: (0, e.jsxs)(st.uU, {
                     href: (0, qe.k2)(
-                      b.TS.STORE_BASE_URL + "/curator/" + v + "/",
+                      j.TS.STORE_BASE_URL + "/curator/" + v + "/",
                     ),
                     children: [
                       (0, e.jsx)("img", {
-                        className: F.TileAppInfoImage,
+                        className: P.TileAppInfoImage,
                         src: B.avatar_full_url,
                       }),
                       (0, e.jsx)("div", {
@@ -6376,7 +6379,7 @@
           }
           return null;
         });
-        let _t = class extends I.Component {
+        let _t = class extends w.Component {
           render() {
             const { event: a, hidden: n, published: r } = this.props,
               o = n
@@ -6384,9 +6387,9 @@
                   ? (0, d.we)("#EVentModTile_State_Staged")
                   : (0, d.we)("#EVentModTile_State_Draft")
                 : (0, d.we)("#EVentModTile_State_Published"),
-              l = (0, Pe.iy)(a),
-              c = (0, Pe.A4)(a),
-              h = (0, Pe.ZA)(a);
+              l = (0, Ue.iy)(a),
+              c = (0, Ue.A4)(a),
+              h = (0, Ue.ZA)(a);
             let v =
                 h && !a.BHasTag("hide_store") && !a.BHasTag("mod_hide_store"),
               B =
@@ -6398,9 +6401,9 @@
                 !a.BHasTag("hide_library_detail") &&
                 !a.BHasTag("mod_hide_library_detail");
             return (0, e.jsxs)("div", {
-              className: F.VisibiltyCtn,
+              className: P.VisibiltyCtn,
               children: [
-                (0, e.jsx)("div", { className: F.TileTitle, children: o }),
+                (0, e.jsx)("div", { className: P.TileTitle, children: o }),
                 (0, e.jsx)("div", {
                   children: (0, d.we)(
                     "#EventModTile_Store_Visibility",
@@ -6468,12 +6471,12 @@
           }
         };
         _t = L([_.PA], _t);
-        let it = class extends I.Component {
+        let it = class extends w.Component {
           state = {
             bUpdating: !1,
             newCategoryOption: {
-              label: (0, Qe.rG)(Z.HFK),
-              value: { eventType: Z.HFK },
+              label: (0, Qe.rG)(J.HFK),
+              value: { eventType: J.HFK },
             },
           };
           m_cancelSignal = O().CancelToken.source();
@@ -6495,7 +6498,7 @@
                   a.GID,
                   o,
                 );
-              const l = Pe.Ac,
+              const l = Ue.Ac,
                 c = [];
               r.value.tags &&
                 r.value.tags.forEach((v) => {
@@ -6518,7 +6521,7 @@
               }),
                 this.setState({ bUpdating: !1 }, n);
             } catch (r) {
-              const o = (0, X.H)(r);
+              const o = (0, $.H)(r);
               console.error("ChangeEventTypeDialog error " + o.strErrorMsg, o),
                 this.setState({ bUpdating: !1, strErrorMsg: o.strErrorMsg });
             }
@@ -6528,33 +6531,33 @@
           }
           render() {
             const { eventModel: a, closeModal: n } = this.props,
-              r = Z.Zi8.filter(
-                (c) => c == Z.DRF || c == Z.Y3j || c >= Z.L0X,
+              r = J.Zi8.filter(
+                (c) => c == J.DRF || c == J.Y3j || c >= J.L0X,
               ).map((c) => {
                 const h = { eventType: c };
                 return (
-                  c == Z.Fwr && (h.tags = ["patchnotes"]),
+                  c == J.Fwr && (h.tags = ["patchnotes"]),
                   { label: (0, Qe.rG)(c), value: h }
                 );
               });
             r.push({
               label: (0, d.we)("#PartnerEvent_Curator_Group_Members"),
               value: {
-                eventType: Z.uYK,
+                eventType: J.uYK,
                 tags: ["curator", "curator_group_members"],
               },
             }),
               r.push({
                 label: (0, d.we)("#PartnerEvent_Curator_Public"),
                 value: {
-                  eventType: Z.uYK,
+                  eventType: J.uYK,
                   tags: ["curator", "curator_public"],
                 },
               }),
               r.push({
                 label: (0, d.we)("#PartnerEvent_SteamAwardNominations"),
                 value: {
-                  eventType: Z.uYK,
+                  eventType: J.uYK,
                   tags: [
                     "steam_award_nomination_request",
                     "mod_hide_library_overview",
@@ -6564,7 +6567,7 @@
               r.push({
                 label: (0, d.we)("#PartnerEvent_SteamAwardVoteRequest"),
                 value: {
-                  eventType: Z.uYK,
+                  eventType: J.uYK,
                   tags: [
                     "steam_award_vote_request",
                     "mod_hide_library_overview",
@@ -6573,23 +6576,23 @@
               });
             const o = [
                 {
-                  value: { eventType: Z.f4X, tags: ["halloween"] },
+                  value: { eventType: J.f4X, tags: ["halloween"] },
                   label: "Halloween: " + (0, d.we)("#PartnerEvent_15"),
                 },
                 {
-                  value: { eventType: Z.zA, tags: ["halloween"] },
+                  value: { eventType: J.zA, tags: ["halloween"] },
                   label: "Halloween: " + (0, d.we)("#PartnerEvent_22"),
                 },
                 {
-                  value: { eventType: Z.y6, tags: ["halloween"] },
+                  value: { eventType: J.y6, tags: ["halloween"] },
                   label: "Halloween: " + (0, d.we)("#PartnerEvent_23"),
                 },
                 {
-                  value: { eventType: Z.hGl, tags: ["halloween"] },
+                  value: { eventType: J.hGl, tags: ["halloween"] },
                   label: "Halloween: " + (0, d.we)("#PartnerEvent_24"),
                 },
                 {
-                  value: { eventType: Z.WNR, tags: ["halloween"] },
+                  value: { eventType: J.WNR, tags: ["halloween"] },
                   label: "Halloween: " + (0, d.we)("#PartnerEvent_35"),
                 },
               ],
@@ -6607,13 +6610,13 @@
                 onCancel: n,
                 onOK: () =>
                   this.setState({ bUpdating: !0 }, this.ChangeCategoryForEvent),
-                children: (0, e.jsx)(I.Fragment, {
+                children: (0, e.jsx)(w.Fragment, {
                   children: (0, e.jsxs)("div", {
-                    className: F.CategoryChangeDialog,
+                    className: P.CategoryChangeDialog,
                     children: [
                       (0, e.jsx)("br", {}),
                       this.state.bUpdating &&
-                        (0, e.jsx)(w.t, { size: "small" }),
+                        (0, e.jsx)(M.t, { size: "small" }),
                       this.state.strErrorMsg &&
                         (0, e.jsxs)("div", {
                           children: [
@@ -6638,7 +6641,7 @@
         L([re.oI], it.prototype, "ChangeCategoryForEvent", 1),
           L([re.oI], it.prototype, "OnChangeSelection", 1),
           (it = L([_.PA], it));
-        class ot extends I.Component {
+        class ot extends w.Component {
           state = {
             bUpdating: !1,
             bAccept: this.props.eventModel.BHasTag("halloween2019"),
@@ -6686,7 +6689,7 @@
                 );
               (o.vecTags = l), this.props.closeModal();
             } catch (o) {
-              let l = (0, X.H)(o);
+              let l = (0, $.H)(o);
               console.error("EventModerationTile " + l.strErrorMsg, l),
                 this.setState({ strErrorMsg: l.strErrorMsg });
             }
@@ -6697,9 +6700,9 @@
               strTitle: (0, d.we)("#EventModTile_SeasonalTag"),
               onCancel: r,
               onOK: () => this.setState({ bUpdating: !0 }, this.ApplyAction),
-              children: (0, e.jsx)(I.Fragment, {
+              children: (0, e.jsx)(w.Fragment, {
                 children: (0, e.jsxs)("div", {
-                  className: F.CategoryChangeDialog,
+                  className: P.CategoryChangeDialog,
                   children: [
                     (0, e.jsx)("input", {
                       id: "Acceptance",
@@ -6736,7 +6739,7 @@
                       htmlFor: "Cute",
                       children: "Cute Tag",
                     }),
-                    this.state.bUpdating && (0, e.jsx)(w.t, { size: "small" }),
+                    this.state.bUpdating && (0, e.jsx)(M.t, { size: "small" }),
                     this.state.strErrorMsg &&
                       (0, e.jsxs)("div", {
                         children: [
@@ -6756,7 +6759,7 @@
           L([re.oI], ot.prototype, "ChangeCute", 1),
           L([re.oI], ot.prototype, "ApplyAction", 1);
         var Nt = s(48156),
-          $t = Object.defineProperty,
+          Zt = Object.defineProperty,
           qt = Object.getOwnPropertyDescriptor,
           en = (a, n, r, o) => {
             for (
@@ -6765,9 +6768,9 @@
               c--
             )
               (h = a[c]) && (l = (o ? h(n, r, l) : h(l)) || l);
-            return o && l && $t(n, r, l), l;
+            return o && l && Zt(n, r, l), l;
           };
-        let zt = class extends I.Component {
+        let zt = class extends w.Component {
           state = { bLoadingEvent: !0 };
           m_cancelSignal = O().CancelToken.source();
           componentWillUnmount() {
@@ -6815,18 +6818,18 @@
                   include_screenshots: !0,
                   include_release: !0,
                 };
-                await Ae.A.Get().QueueMultipleAppRequests(l, v),
+                await xe.A.Get().QueueMultipleAppRequests(l, v),
                   this.setState({
                     rgAppIDs: l,
                     rgUnknownTypeAppIDs: c,
                     bLoadingApps: !1,
                   }),
-                  await Ae.A.Get().QueueMultipleAppRequests(l, v),
+                  await xe.A.Get().QueueMultipleAppRequests(l, v),
                   this.setState({ bLoadingAssociatedDemoInfo: !1 });
                 const B = l.flatMap(
-                  (H) => Ae.A.Get().GetApp(H)?.GetDemoAppIDs() ?? [],
+                  (H) => xe.A.Get().GetApp(H)?.GetDemoAppIDs() ?? [],
                 );
-                await Ae.A.Get().QueueMultipleAppRequests(B, v),
+                await xe.A.Get().QueueMultipleAppRequests(B, v),
                   this.setState({ bLoadingDemos: !1 });
               } else this.setState({ bLoadingEvent: !1, rgAppIDs: l });
             } else this.setState({ bLoadingEvent: !1 });
@@ -6838,7 +6841,7 @@
               this.state.bLoadingApps ||
               this.state.bLoadingAssociatedDemoInfo
             )
-              return (0, e.jsx)(w.t, {
+              return (0, e.jsx)(M.t, {
                 string:
                   (0, d.we)("#Loading") +
                   (this.state.bLoadingEvent
@@ -6860,14 +6863,14 @@
             let n = new Array(),
               r = new Array();
             this.state.rgAppIDs
-              .filter((le) => !Ae.A.Get().GetApp(le))
+              .filter((le) => !xe.A.Get().GetApp(le))
               .forEach((le) => {
                 n.push(
                   (0, e.jsx)(
                     "div",
                     {
                       children: (0, e.jsx)("a", {
-                        href: b.TS.STORE_BASE_URL + "app/" + le + "/?beta=1",
+                        href: j.TS.STORE_BASE_URL + "app/" + le + "/?beta=1",
                         target: "_blank",
                         children: le,
                       }),
@@ -6878,36 +6881,36 @@
                   r.push(le);
               });
             const o = this.state.rgAppIDs.reduce(
-                (le, Me) => le + (Ae.A.Get().GetApp(Me)?.BHasDemo() ? 1 : 0),
+                (le, Ie) => le + (xe.A.Get().GetApp(Ie)?.BHasDemo() ? 1 : 0),
                 0,
               ),
               l = new Array();
             this.state.rgAppIDs.forEach((le) => {
-              const Me = Ae.A.Get().GetApp(le);
-              if (Me && !Me.BHasDemo()) {
-                let je = Ae.A.Get().GetApp(le);
+              const Ie = xe.A.Get().GetApp(le);
+              if (Ie && !Ie.BHasDemo()) {
+                let De = xe.A.Get().GetApp(le);
                 l.push(
                   (0, e.jsxs)(
                     "div",
                     {
                       children: [
-                        je?.GetAppType() == Nt.uE.ue &&
+                        De?.GetAppType() == Nt.uE.ue &&
                           (0, e.jsx)("b", {
                             children:
                               "--Error: Sale Page has Demo AppID, based game --\xA0",
                           }),
-                        je?.GetName(),
+                        De?.GetName(),
                         " (",
                         le,
                         ")",
                         (0, e.jsx)("a", {
-                          href: (0, qe.k2)(je.GetStorePageURL() + "?beta=0"),
+                          href: (0, qe.k2)(De.GetStorePageURL() + "?beta=0"),
                           target: "_blank",
                           children: "Store Page",
                         }),
                         "\xA0",
                         (0, e.jsx)("a", {
-                          href: b.TS.PARTNER_BASE_URL + "apps/landing/" + le,
+                          href: j.TS.PARTNER_BASE_URL + "apps/landing/" + le,
                           target: "_blank",
                           children: "App Landing Page",
                         }),
@@ -6925,24 +6928,24 @@
               H = 0,
               se = 0;
             this.state.rgAppIDs.forEach((le) => {
-              let Me = !1;
-              const je = Ae.A.Get().GetApp(le);
-              je &&
-                je.BHasDemo() &&
-                (Ae.A.Get().GetApp(je.GetDemoAppIDs()[0]).BIsComingSoon()
-                  ? ((v += 1), (Me = !0))
+              let Ie = !1;
+              const De = xe.A.Get().GetApp(le);
+              De &&
+                De.BHasDemo() &&
+                (xe.A.Get().GetApp(De.GetDemoAppIDs()[0]).BIsComingSoon()
+                  ? ((v += 1), (Ie = !0))
                   : (B += 1));
             });
             let ne = new Array(),
-              xe = 0;
+              Ae = 0;
             return (
               this.state.rgAppIDs.forEach((le) => {
-                Ae.A.Get().GetApp(le)?.GetAppType() != Nt.uE.ue && (xe += 1);
+                xe.A.Get().GetApp(le)?.GetAppType() != Nt.uE.ue && (Ae += 1);
               }),
-              (0, e.jsxs)(Q.tH, {
+              (0, e.jsxs)(Y.tH, {
                 children: [
                   (0, e.jsx)("h1", {
-                    children: a.GetNameWithFallback((0, Z.sfN)(b.TS.LANGUAGE)),
+                    children: a.GetNameWithFallback((0, J.sfN)(j.TS.LANGUAGE)),
                   }),
                   (0, e.jsxs)("div", {
                     children: [
@@ -6955,10 +6958,10 @@
                   (0, e.jsxs)("div", {
                     children: [
                       (0, e.jsxs)("b", {
-                        children: ["Visible Apps in ", b.TS.COUNTRY, ":"],
+                        children: ["Visible Apps in ", j.TS.COUNTRY, ":"],
                       }),
                       " ",
-                      xe,
+                      Ae,
                     ],
                   }),
                   (0, e.jsxs)("div", {
@@ -7082,20 +7085,20 @@
           nn = s(60298),
           an = s(5827);
         function rn(a) {
-          const [n, r] = (0, I.useState)(!1),
-            [o] = (0, I.useState)(() => Qt()),
-            l = (0, I.useMemo)(
+          const [n, r] = (0, w.useState)(!1),
+            [o] = (0, w.useState)(() => Qt()),
+            l = (0, w.useMemo)(
               () => ({
-                country: b.TS.COUNTRY,
-                language: b.TS.LANGUAGE,
+                country: j.TS.COUNTRY,
+                language: j.TS.LANGUAGE,
                 bUsePartnerAPI: !0,
               }),
               [],
             );
           return (
-            (0, I.useEffect)(() => (r(!0), sn(o)), [o]),
+            (0, w.useEffect)(() => (r(!0), sn(o)), [o]),
             n
-              ? (0, I.createElement)(an.V3, {
+              ? (0, w.createElement)(an.V3, {
                   context: l,
                   serviceTransportOverride: o.GetServiceTransport(),
                   children: a.children,
@@ -7121,16 +7124,16 @@
           });
         }
         function Qt() {
-          const a = (0, b.Tc)(
+          const a = (0, j.Tc)(
             "partnerbrowse_webapi_token",
             "application_config",
           );
-          return (0, nn.p)(new tn.D(b.TS.WEBAPI_BASE_URL, a));
+          return (0, nn.p)(new tn.D(j.TS.WEBAPI_BASE_URL, a));
         }
         function sn(a) {
-          return Ae.A.Initialize(
+          return xe.A.Initialize(
             a.GetServiceTransport(),
-            b.iA.is_partner_member,
+            j.iA.is_partner_member,
           );
         }
         var on = s(59970);
@@ -7140,7 +7143,7 @@
               children: (0, e.jsxs)(k.dO, {
                 children: [
                   (0, e.jsx)(k.qh, {
-                    path: U.B.EventGameFestivalDebug(),
+                    path: F.B.EventGameFestivalDebug(),
                     render: (a) =>
                       (0, e.jsx)(zt, {
                         ...a,
@@ -7150,15 +7153,15 @@
                   }),
                   (0, e.jsx)(k.qh, {
                     exact: !0,
-                    path: U.B.EventBackfill(),
+                    path: F.B.EventBackfill(),
                     render: (a) => (0, e.jsx)(He, { ...a }),
                   }),
                   (0, e.jsx)(k.qh, {
-                    path: U.B.EventRSSModeration(),
+                    path: F.B.EventRSSModeration(),
                     render: (a) => (0, e.jsx)(ee, { ...a }),
                   }),
                   (0, e.jsx)(k.qh, {
-                    path: U.B.EventModeration(),
+                    path: F.B.EventModeration(),
                     render: (a) =>
                       (0, e.jsx)(Ve, {
                         ...a,
@@ -7178,18 +7181,6 @@
           FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
           FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
           FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
         };
       },
       61311: (ae) => {
@@ -7231,18 +7222,6 @@
           LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
           LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
           LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-          BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
-          "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
-          "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
-          "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
-          "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
-          "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
-          "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
-          "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
-          "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
-          "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
-          focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
-          hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
         };
       },
       9202: (ae) => {
@@ -7252,18 +7231,6 @@
           SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
           WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
           BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
         };
       },
       71909: (ae) => {

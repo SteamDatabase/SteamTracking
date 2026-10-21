@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktiivisia elementtejä",
     "GameRating_OnlineMusicNotice": "Verkosta löytyvää musiikkia ilman ESRB-luokitusta",
     "GameRating_OnlineInteractionsNotice": "Verkkotoimintoja ilman ESRB-luokitusta",
-    "GameRating_ContentCategoryDescriptor_64": "Suodatettu pelinsisäinen chat"
+    "GameRating_ContentCategoryDescriptor_64": "Suodatettu pelinsisäinen chat",
+    "GameRating_ContentCategories_Title": "Sisältö",
+    "GameRating_Ratings_Title": "Arvostelut"
 }

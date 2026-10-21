@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Elementy interaktywne",
     "GameRating_OnlineMusicNotice": "Muzyka online, która nie została oceniona przez ESRB.",
     "GameRating_OnlineInteractionsNotice": "Interakcje online, które nie zostały ocenione przez ESRB.",
-    "GameRating_ContentCategoryDescriptor_64": "Filtrowany czat w grze"
+    "GameRating_ContentCategoryDescriptor_64": "Filtrowany czat w grze",
+    "GameRating_ContentCategories_Title": "Treści",
+    "GameRating_Ratings_Title": "Oceny"
 }

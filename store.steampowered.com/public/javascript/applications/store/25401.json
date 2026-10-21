@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "องค์ประกอบแบบโต้ตอบ",
     "GameRating_OnlineMusicNotice": "เพลงออนไลน์ที่ไม่ได้จัดระดับความเหมาะสมโดย ESRB",
     "GameRating_OnlineInteractionsNotice": "การโต้ตอบออนไลน์ที่ไม่ได้จัดระดับความเหมาะสมโดย ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "แช็ตในเกมที่ได้รับการกรอง"
+    "GameRating_ContentCategoryDescriptor_64": "แช็ตในเกมที่ได้รับการกรอง",
+    "GameRating_ContentCategories_Title": "เนื้อหา",
+    "GameRating_Ratings_Title": "ระดับความเหมาะสม"
 }

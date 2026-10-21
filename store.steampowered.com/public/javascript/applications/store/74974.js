@@ -4,73 +4,73 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [74974],
     {
-      87242: (ve, We, w) => {
+      87242: (Ce, Ye, w) => {
         "use strict";
-        w.d(We, {
-          FU: () => D,
-          eF: () => Ge,
-          gf: () => I,
-          wI: () => Q,
-          yp: () => $,
+        w.d(Ye, {
+          FU: () => _e,
+          eF: () => Ne,
+          gf: () => Q,
+          wI: () => Ue,
+          yp: () => ht,
         });
         var n = w(14947),
-          je = w(41735),
-          Ce = w.n(je),
-          l = w(35038),
-          E = w(71742),
-          Te = w(27066),
-          T = w(72604),
-          Fe = w(99412),
-          Ie = w(94354),
-          _e = w(3166),
-          re = w(6740),
-          ue = w(71944),
-          O = w(73011),
-          Pe = Object.defineProperty,
-          De = Object.getOwnPropertyDescriptor,
-          F = (x, d, A, v) => {
+          ke = w(41735),
+          $ = w.n(ke),
+          y = w(35038),
+          Ae = w(71742),
+          f = w(27066),
+          _ = w(72604),
+          Pe = w(99412),
+          qe = w(94354),
+          Ge = w(3166),
+          Se = w(6740),
+          De = w(71944),
+          ie = w(30178),
+          ve = Object.defineProperty,
+          X = Object.getOwnPropertyDescriptor,
+          V = (L, C, j, b) => {
             for (
-              var b = v > 1 ? void 0 : v ? De(d, A) : d, Z = x.length - 1, W;
-              Z >= 0;
-              Z--
+              var x = b > 1 ? void 0 : b ? X(C, j) : C, P = L.length - 1, U;
+              P >= 0;
+              P--
             )
-              (W = x[Z]) && (b = (v ? W(d, A, b) : W(b)) || b);
-            return v && b && Pe(d, A, b), b;
+              (U = L[P]) && (x = (b ? U(C, j, x) : U(x)) || x);
+            return b && x && ve(C, j, x), x;
           },
-          Ge = ((x) => (
-            (x[(x.None = 0)] = "None"),
-            (x[(x.Generic = 1)] = "Generic"),
-            (x[(x.Expired = 2)] = "Expired"),
-            (x[(x.Network = 3)] = "Network"),
-            (x[(x.MoveAuthenticator = 4)] = "MoveAuthenticator"),
-            (x[(x.RateLimitExceeded = 5)] = "RateLimitExceeded"),
-            (x[(x.AnonymousLogin = 6)] = "AnonymousLogin"),
-            x
-          ))(Ge || {});
-        function D(x) {
+          Ne = ((L) => (
+            (L[(L.None = 0)] = "None"),
+            (L[(L.Generic = 1)] = "Generic"),
+            (L[(L.Expired = 2)] = "Expired"),
+            (L[(L.Network = 3)] = "Network"),
+            (L[(L.MoveAuthenticator = 4)] = "MoveAuthenticator"),
+            (L[(L.RateLimitExceeded = 5)] = "RateLimitExceeded"),
+            (L[(L.AnonymousLogin = 6)] = "AnonymousLogin"),
+            L
+          ))(Ne || {});
+        function _e(L) {
           const {
-            shared_secret: d,
-            identity_secret: A,
-            secret_1: v,
-            status: b,
-            uri: Z,
-            server_time: W,
-            ...se
-          } = x;
+            shared_secret: C,
+            identity_secret: j,
+            secret_1: b,
+            status: x,
+            uri: P,
+            server_time: U,
+            ...ee
+          } = L;
           return {
-            shared_secret: ue.iI(d),
-            identity_secret: ue.iI(A),
-            secret_1: ue.iI(v),
-            ...se,
+            shared_secret: De.iI(C),
+            identity_secret: De.iI(j),
+            secret_1: De.iI(b),
+            ...ee,
           };
         }
-        var Q = ((x) => (
-          (x[(x.k_Success = 0)] = "k_Success"),
-          (x[(x.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
-          (x[(x.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail"),
-          x
-        ))(Q || {});
-        class I {
+        var Ue = ((L) => (
+          (L[(L.k_Success = 0)] = "k_Success"),
+          (L[(L.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
+          (L[(L.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail"),
+          L
+        ))(Ue || {});
+        class Q {
           m_transport;
           m_strClientID;
           m_msPollInterval;
@@ -84,16 +84,16 @@
           m_eFailureState = 0;
           m_strExtendedErrorMessage = "";
           m_onDeviceDetailsCallback;
-          constructor(d, A, v, b) {
+          constructor(C, j, b, x) {
             (0, n.Gn)(this),
-              (this.m_transport = d),
-              (this.m_onCompleteCallback = A),
-              (this.m_onDeviceDetailsCallback = v),
-              (this.m_onShowAgreement = b);
+              (this.m_transport = C),
+              (this.m_onCompleteCallback = j),
+              (this.m_onDeviceDetailsCallback = b),
+              (this.m_onShowAgreement = x);
           }
-          StartPolling(d = !0) {
+          StartPolling(C = !0) {
             this.m_activeTimerID != null && this.StopPolling(),
-              d
+              C
                 ? this.PollForUpdate()
                 : (this.m_activeTimerID = window.setTimeout(
                     this.PollForUpdate,
@@ -106,90 +106,90 @@
           }
           async PollForUpdate() {
             try {
-              const d = l.w.Init(re.Ev);
-              d.SetEMsg(Ie.Kec),
-                d.Body().set_client_id(this.m_strClientID),
-                d.Body().set_request_id(this.m_rgRequestID),
+              const C = y.w.Init(Se.Ev);
+              C.SetEMsg(qe.Kec),
+                C.Body().set_client_id(this.m_strClientID),
+                C.Body().set_request_id(this.m_rgRequestID),
                 this.m_strTokenToRevoke &&
-                  d.Body().set_token_to_revoke(this.m_strTokenToRevoke);
-              const A = await re.kX.PollAuthSessionStatus(this.m_transport, d),
-                v = A.GetEResult();
-              if (v !== T.R) {
-                if (v === T.zi) {
-                  const he = A.Hdr().transport_error();
+                  C.Body().set_token_to_revoke(this.m_strTokenToRevoke);
+              const j = await Se.kX.PollAuthSessionStatus(this.m_transport, C),
+                b = j.GetEResult();
+              if (b !== _.R) {
+                if (b === _.zi) {
+                  const ce = j.Hdr().transport_error();
                   if (
-                    ((0, O.ZI)(
-                      `Failed to poll auth session. Result ${v}. Transport Error: ${he}`,
+                    ((0, ie.ZI)(
+                      `Failed to poll auth session. Result ${b}. Transport Error: ${ce}`,
                     ),
-                    he === Fe.MhR || he === Fe.VrD)
+                    ce === Pe.MhR || ce === Pe.VrD)
                   )
                     return (
-                      this.m_transport.MakeReady(), this.StartPolling(!1), T.R
+                      this.m_transport.MakeReady(), this.StartPolling(!1), _.R
                     );
                 }
-                if (v === T.Qo || v === T.ob) this.m_eFailureState = 2;
-                else if (v === T.h_) this.m_eFailureState = 5;
-                else if (v == T.oH) {
-                  const he = A.Body().agreement_session_url();
+                if (b === _.Qo || b === _.ob) this.m_eFailureState = 2;
+                else if (b === _.h_) this.m_eFailureState = 5;
+                else if (b == _.oH) {
+                  const ce = j.Body().agreement_session_url();
                   if (
-                    ((0, E.wT)(
-                      !!he,
+                    ((0, Ae.wT)(
+                      !!ce,
                       "Missing agreement session URL for result",
-                      v,
+                      b,
                     ),
                     this.m_onShowAgreement)
                   )
-                    this.m_onShowAgreement(he);
+                    this.m_onShowAgreement(ce);
                   else {
-                    const we = document.location.href;
-                    window.location.href = `${he}&redir=${encodeURIComponent(we)}`;
+                    const Xe = document.location.href;
+                    window.location.href = `${ce}&redir=${encodeURIComponent(Xe)}`;
                   }
-                  return this.m_onCompleteCallback({ bSuccess: !1 }), v;
+                  return this.m_onCompleteCallback({ bSuccess: !1 }), b;
                 } else
-                  (0, O.ZI)(`Failed to poll auth session. Result: ${v}`),
+                  (0, ie.ZI)(`Failed to poll auth session. Result: ${b}`),
                     (this.m_eFailureState = 1);
-                return this.m_onCompleteCallback({ bSuccess: !1 }), v;
+                return this.m_onCompleteCallback({ bSuccess: !1 }), b;
               }
               const {
-                new_challenge_url: b,
-                new_client_id: Z,
-                refresh_token: W,
-                access_token: se,
-                account_name: ke,
-                had_remote_interaction: V,
-                new_guard_data: B,
-              } = A.Body().toObject();
+                new_challenge_url: x,
+                new_client_id: P,
+                refresh_token: U,
+                access_token: ee,
+                account_name: ye,
+                had_remote_interaction: B,
+                new_guard_data: N,
+              } = j.Body().toObject();
               return (
-                (this.m_bRemoteInteraction = !!V),
-                W
-                  ? ((0, E.wT)(
-                      !!se && !!ke,
+                (this.m_bRemoteInteraction = !!B),
+                U
+                  ? ((0, Ae.wT)(
+                      !!ee && !!ye,
                       "Missing access token or account name with refresh token",
                     ),
                     this.m_onCompleteCallback({
                       bSuccess: !0,
-                      strRefreshToken: W,
-                      strAccessToken: se,
-                      strAccountName: ke,
-                      strNewGuardData: B,
+                      strRefreshToken: U,
+                      strAccessToken: ee,
+                      strAccountName: ye,
+                      strNewGuardData: N,
                     }),
-                    v)
-                  : (b && (this.m_strChallengeURL = b),
-                    Z && (this.m_strClientID = Z),
+                    b)
+                  : (x && (this.m_strChallengeURL = x),
+                    P && (this.m_strClientID = P),
                     this.StartPolling(!1),
-                    v)
+                    b)
               );
-            } catch (d) {
+            } catch (C) {
               return (
-                (0, O.ZI)(`Failed to poll auth session. ${d}`),
+                (0, ie.ZI)(`Failed to poll auth session. ${C}`),
                 (this.m_eFailureState = 1),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
-                T.zi
+                _.zi
               );
             }
           }
-          SetTokenToRevoke(d) {
-            this.m_strTokenToRevoke = d;
+          SetTokenToRevoke(C) {
+            this.m_strTokenToRevoke = C;
           }
           GetFailureState() {
             return this.m_eFailureState;
@@ -201,411 +201,1549 @@
             return this.m_bRemoteInteraction;
           }
           async GetDeviceDetails() {
-            const d = await this.m_onDeviceDetailsCallback();
-            return re.tS.fromObject(d);
+            const C = await this.m_onDeviceDetailsCallback();
+            return Se.tS.fromObject(C);
           }
         }
-        F([n.sH], I.prototype, "m_strChallengeURL", 2),
-          F([n.sH], I.prototype, "m_bRemoteInteraction", 2),
-          F([n.sH], I.prototype, "m_eFailureState", 2),
-          F([n.sH], I.prototype, "m_strExtendedErrorMessage", 2),
-          F([Te.o], I.prototype, "PollForUpdate", 1),
-          F([Te.o], I.prototype, "SetTokenToRevoke", 1);
-        function $(x) {
-          const d = new FormData();
-          d.append("nonce", x), d.append("sessionid", (0, _e.KC)());
-          let A = new URL(document.location.href);
-          const v = new URLSearchParams(A.search);
-          v.has("need_password") &&
-            (v.delete("need_password"), (A.search = v.toString())),
-            d.append("redir", A.toString());
-          const b = `${_e.TS.LOGIN_BASE_URL}jwt/finalizelogin`;
-          return Ce()
-            .post(b, d, { withCredentials: !0 })
+        V([n.sH], Q.prototype, "m_strChallengeURL", 2),
+          V([n.sH], Q.prototype, "m_bRemoteInteraction", 2),
+          V([n.sH], Q.prototype, "m_eFailureState", 2),
+          V([n.sH], Q.prototype, "m_strExtendedErrorMessage", 2),
+          V([f.o], Q.prototype, "PollForUpdate", 1),
+          V([f.o], Q.prototype, "SetTokenToRevoke", 1);
+        function ht(L) {
+          const C = new FormData();
+          C.append("nonce", L), C.append("sessionid", (0, Ge.KC)());
+          let j = new URL(document.location.href);
+          const b = new URLSearchParams(j.search);
+          b.has("need_password") &&
+            (b.delete("need_password"), (j.search = b.toString())),
+            C.append("redir", j.toString());
+          const x = `${Ge.TS.LOGIN_BASE_URL}jwt/finalizelogin`;
+          return $()
+            .post(x, C, { withCredentials: !0 })
             .then(
-              (Z) => {
-                const { data: W } = Z;
+              (P) => {
+                const { data: U } = P;
                 if (
-                  !W ||
-                  !W.transfer_info ||
-                  !W.steamID ||
-                  !Array.isArray(W.transfer_info)
+                  !U ||
+                  !U.transfer_info ||
+                  !U.steamID ||
+                  !Array.isArray(U.transfer_info)
                 )
                   return (
-                    (0, O.ZI)(
+                    (0, ie.ZI)(
                       "Result of finalizelogin does not match expectations!",
                     ),
                     1
                   );
-                const { transfer_info: se, steamID: ke, primary_domain: V } = W;
+                const { transfer_info: ee, steamID: ye, primary_domain: B } = U;
                 return Promise.all(
-                  se.map(({ url: B, params: he }) =>
-                    P(B, { ...he, steamID: ke }),
+                  ee.map(({ url: N, params: ce }) =>
+                    $e(N, { ...ce, steamID: ye }),
                   ),
                 ).then(
-                  (B) => te(B, V),
+                  (N) => Oe(N, B),
                   () => 2,
                 );
               },
               () => (
-                (0, O.ZI)("Failed to finalize login. Initial call failed."), 1
+                (0, ie.ZI)("Failed to finalize login. Initial call failed."), 1
               ),
             );
         }
-        function te(x, d) {
-          let A = 0;
+        function Oe(L, C) {
+          let j = 0;
           return (
-            x.forEach((v) => {
-              v.bSuccess ||
-                (d && v.domain.toLowerCase() === d.toLowerCase()
-                  ? (A = 1)
-                  : A == 0 && (A = 2));
+            L.forEach((b) => {
+              b.bSuccess ||
+                (C && b.domain.toLowerCase() === C.toLowerCase()
+                  ? (j = 1)
+                  : j == 0 && (j = 2));
             }),
-            A
+            j
           );
         }
-        async function P(x, d) {
-          const A = new URL(x);
-          let v = !0;
+        async function $e(L, C) {
+          const j = new URL(L);
+          let b = !0;
           try {
-            const b = new FormData();
-            Object.keys(d).forEach((W) => b.append(W, d[W]));
-            const Z = await Ce().post(x, b, {
+            const x = new FormData();
+            Object.keys(C).forEach((U) => x.append(U, C[U]));
+            const P = await $().post(L, x, {
               withCredentials: !0,
               timeout: 1e4,
             });
-            Z.status !== 200
-              ? ((0, O.ZI)(
-                  `Transfer login to ${A.host} failed with status code: ${Z.status}`,
+            P.status !== 200
+              ? ((0, ie.ZI)(
+                  `Transfer login to ${j.host} failed with status code: ${P.status}`,
                 ),
-                (v = !1))
-              : Z.data.result !== T.R &&
-                ((0, O.ZI)(
-                  `Transfer login to ${A.host} failed with result: ${Z.data.result}`,
+                (b = !1))
+              : P.data.result !== _.R &&
+                ((0, ie.ZI)(
+                  `Transfer login to ${j.host} failed with result: ${P.data.result}`,
                 ),
-                (v = !1));
-          } catch (b) {
-            (0, O.ZI)(`Transfer login to ${A.host} failed: "${b}"`), (v = !1);
+                (b = !1));
+          } catch (x) {
+            (0, ie.ZI)(`Transfer login to ${j.host} failed: "${x}"`), (b = !1);
           }
-          return { bSuccess: v, domain: A.host };
+          return { bSuccess: b, domain: j.host };
         }
       },
-      73011: (ve, We, w) => {
+      30178: (Ce, Ye, w) => {
         "use strict";
-        w.d(We, {
-          Cr: () => ue,
-          Ok: () => O,
-          P8: () => De,
-          ZC: () => Ge,
-          ZI: () => Ie,
-          tG: () => Te,
-          tH: () => Fe,
+        w.d(Ye, {
+          ZC: () => Mt,
+          Ok: () => ws,
+          tG: () => Es,
+          ZI: () => _s,
+          tH: () => ze,
+          P8: () => Et,
+          Cr: () => bs,
         });
         var n = w(41735),
-          je = w.n(n),
-          Ce = w(57589);
-        const l = w(80407).A,
-          E = new Ce.wd("Login"),
-          Te = E.Info,
-          T = E.Debug,
-          Fe = E.Warning,
-          Ie = E.Error;
-        function _e(D, Q) {
-          return D.endsWith("/") || (D += "/"), `${D}login/${Q}/`;
+          ke = w.n(n),
+          $,
+          y = 0xdeadbeefcafe,
+          Ae = (y & 16777215) == 15715070;
+        function f(e, t, s) {
+          e != null &&
+            (typeof e == "number"
+              ? this.fromNumber(e, t, s)
+              : t == null && typeof e != "string"
+                ? this.fromString(e, 256)
+                : this.fromString(e, t));
         }
-        function re() {
-          let D = new FormData();
-          return D.append("donotcache", new Date().getTime().toString()), D;
+        function _() {
+          return new f(null);
         }
-        async function ue(D) {
-          let Q = re(),
-            I = _e(D, "refreshcaptcha"),
-            $ = "";
+        function Pe(e, t, s, i, u, h) {
+          for (; --h >= 0; ) {
+            var S = t * this[e++] + s[i] + u;
+            (u = Math.floor(S / 67108864)), (s[i++] = S & 67108863);
+          }
+          return u;
+        }
+        function qe(e, t, s, i, u, h) {
+          for (var S = t & 32767, v = t >> 15; --h >= 0; ) {
+            var D = this[e] & 32767,
+              H = this[e++] >> 15,
+              Z = v * D + H * S;
+            (D = S * D + ((Z & 32767) << 15) + s[i] + (u & 1073741823)),
+              (u = (D >>> 30) + (Z >>> 15) + v * H + (u >>> 30)),
+              (s[i++] = D & 1073741823);
+          }
+          return u;
+        }
+        function Ge(e, t, s, i, u, h) {
+          for (var S = t & 16383, v = t >> 14; --h >= 0; ) {
+            var D = this[e] & 16383,
+              H = this[e++] >> 14,
+              Z = v * D + H * S;
+            (D = S * D + ((Z & 16383) << 14) + s[i] + u),
+              (u = (D >> 28) + (Z >> 14) + v * H),
+              (s[i++] = D & 268435455);
+          }
+          return u;
+        }
+        Ae && navigator.appName == "Microsoft Internet Explorer"
+          ? ((f.prototype.am = qe), ($ = 30))
+          : Ae && navigator.appName != "Netscape"
+            ? ((f.prototype.am = Pe), ($ = 26))
+            : ((f.prototype.am = Ge), ($ = 28)),
+          (f.prototype.DB = $),
+          (f.prototype.DM = (1 << $) - 1),
+          (f.prototype.DV = 1 << $);
+        var Se = 52;
+        (f.prototype.FV = Math.pow(2, Se)),
+          (f.prototype.F1 = Se - $),
+          (f.prototype.F2 = 2 * $ - Se);
+        var De = "0123456789abcdefghijklmnopqrstuvwxyz",
+          ie = new Array(),
+          ve,
+          X;
+        for (ve = 48, X = 0; X <= 9; ++X) ie[ve++] = X;
+        for (ve = 97, X = 10; X < 36; ++X) ie[ve++] = X;
+        for (ve = 65, X = 10; X < 36; ++X) ie[ve++] = X;
+        function V(e) {
+          return De.charAt(e);
+        }
+        function Ne(e, t) {
+          var s = ie[e.charCodeAt(t)];
+          return s ?? -1;
+        }
+        function _e(e) {
+          for (var t = this.t - 1; t >= 0; --t) e[t] = this[t];
+          (e.t = this.t), (e.s = this.s);
+        }
+        function Ue(e) {
+          (this.t = 1),
+            (this.s = e < 0 ? -1 : 0),
+            e > 0 ? (this[0] = e) : e < -1 ? (this[0] = e + DV) : (this.t = 0);
+        }
+        function Q(e) {
+          var t = _();
+          return t.fromInt(e), t;
+        }
+        function ht(e, t) {
+          var s;
+          if (t == 16) s = 4;
+          else if (t == 8) s = 3;
+          else if (t == 256) s = 8;
+          else if (t == 2) s = 1;
+          else if (t == 32) s = 5;
+          else if (t == 4) s = 2;
+          else {
+            this.fromRadix(e, t);
+            return;
+          }
+          (this.t = 0), (this.s = 0);
+          for (var i = e.length, u = !1, h = 0; --i >= 0; ) {
+            var S = s == 8 ? e[i] & 255 : Ne(e, i);
+            if (S < 0) {
+              e.charAt(i) == "-" && (u = !0);
+              continue;
+            }
+            (u = !1),
+              h == 0
+                ? (this[this.t++] = S)
+                : h + s > this.DB
+                  ? ((this[this.t - 1] |=
+                      (S & ((1 << (this.DB - h)) - 1)) << h),
+                    (this[this.t++] = S >> (this.DB - h)))
+                  : (this[this.t - 1] |= S << h),
+              (h += s),
+              h >= this.DB && (h -= this.DB);
+          }
+          s == 8 &&
+            (e[0] & 128) != 0 &&
+            ((this.s = -1),
+            h > 0 && (this[this.t - 1] |= ((1 << (this.DB - h)) - 1) << h)),
+            this.clamp(),
+            u && f.ZERO.subTo(this, this);
+        }
+        function Oe() {
+          for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e; )
+            --this.t;
+        }
+        function $e(e) {
+          if (this.s < 0) return "-" + this.negate().toString(e);
+          var t;
+          if (e == 16) t = 4;
+          else if (e == 8) t = 3;
+          else if (e == 2) t = 1;
+          else if (e == 32) t = 5;
+          else if (e == 4) t = 2;
+          else return this.toRadix(e);
+          var s = (1 << t) - 1,
+            i,
+            u = !1,
+            h = "",
+            S = this.t,
+            v = this.DB - ((S * this.DB) % t);
+          if (S-- > 0)
+            for (
+              v < this.DB && (i = this[S] >> v) > 0 && ((u = !0), (h = V(i)));
+              S >= 0;
+            )
+              v < t
+                ? ((i = (this[S] & ((1 << v) - 1)) << (t - v)),
+                  (i |= this[--S] >> (v += this.DB - t)))
+                : ((i = (this[S] >> (v -= t)) & s),
+                  v <= 0 && ((v += this.DB), --S)),
+                i > 0 && (u = !0),
+                u && (h += V(i));
+          return u ? h : "0";
+        }
+        function L() {
+          var e = _();
+          return f.ZERO.subTo(this, e), e;
+        }
+        function C() {
+          return this.s < 0 ? this.negate() : this;
+        }
+        function j(e) {
+          var t = this.s - e.s;
+          if (t != 0) return t;
+          var s = this.t;
+          if (((t = s - e.t), t != 0)) return t;
+          for (; --s >= 0; ) if ((t = this[s] - e[s]) != 0) return t;
+          return 0;
+        }
+        function b(e) {
+          var t = 1,
+            s;
+          return (
+            (s = e >>> 16) != 0 && ((e = s), (t += 16)),
+            (s = e >> 8) != 0 && ((e = s), (t += 8)),
+            (s = e >> 4) != 0 && ((e = s), (t += 4)),
+            (s = e >> 2) != 0 && ((e = s), (t += 2)),
+            (s = e >> 1) != 0 && ((e = s), (t += 1)),
+            t
+          );
+        }
+        function x() {
+          return this.t <= 0
+            ? 0
+            : this.DB * (this.t - 1) + b(this[this.t - 1] ^ (this.s & this.DM));
+        }
+        function P(e, t) {
+          var s;
+          for (s = this.t - 1; s >= 0; --s) t[s + e] = this[s];
+          for (s = e - 1; s >= 0; --s) t[s] = 0;
+          (t.t = this.t + e), (t.s = this.s);
+        }
+        function U(e, t) {
+          for (var s = e; s < this.t; ++s) t[s - e] = this[s];
+          (t.t = Math.max(this.t - e, 0)), (t.s = this.s);
+        }
+        function ee(e, t) {
+          var s = e % this.DB,
+            i = this.DB - s,
+            u = (1 << i) - 1,
+            h = Math.floor(e / this.DB),
+            S = (this.s << s) & this.DM,
+            v;
+          for (v = this.t - 1; v >= 0; --v)
+            (t[v + h + 1] = (this[v] >> i) | S), (S = (this[v] & u) << s);
+          for (v = h - 1; v >= 0; --v) t[v] = 0;
+          (t[h] = S), (t.t = this.t + h + 1), (t.s = this.s), t.clamp();
+        }
+        function ye(e, t) {
+          t.s = this.s;
+          var s = Math.floor(e / this.DB);
+          if (s >= this.t) {
+            t.t = 0;
+            return;
+          }
+          var i = e % this.DB,
+            u = this.DB - i,
+            h = (1 << i) - 1;
+          t[0] = this[s] >> i;
+          for (var S = s + 1; S < this.t; ++S)
+            (t[S - s - 1] |= (this[S] & h) << u), (t[S - s] = this[S] >> i);
+          i > 0 && (t[this.t - s - 1] |= (this.s & h) << u),
+            (t.t = this.t - s),
+            t.clamp();
+        }
+        function B(e, t) {
+          for (var s = 0, i = 0, u = Math.min(e.t, this.t); s < u; )
+            (i += this[s] - e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+          if (e.t < this.t) {
+            for (i -= e.s; s < this.t; )
+              (i += this[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+            i += this.s;
+          } else {
+            for (i += this.s; s < e.t; )
+              (i -= e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+            i -= e.s;
+          }
+          (t.s = i < 0 ? -1 : 0),
+            i < -1 ? (t[s++] = this.DV + i) : i > 0 && (t[s++] = i),
+            (t.t = s),
+            t.clamp();
+        }
+        function N(e, t) {
+          var s = this.abs(),
+            i = e.abs(),
+            u = s.t;
+          for (t.t = u + i.t; --u >= 0; ) t[u] = 0;
+          for (u = 0; u < i.t; ++u) t[u + s.t] = s.am(0, i[u], t, u, 0, s.t);
+          (t.s = 0), t.clamp(), this.s != e.s && f.ZERO.subTo(t, t);
+        }
+        function ce(e) {
+          for (var t = this.abs(), s = (e.t = 2 * t.t); --s >= 0; ) e[s] = 0;
+          for (s = 0; s < t.t - 1; ++s) {
+            var i = t.am(s, t[s], e, 2 * s, 0, 1);
+            (e[s + t.t] += t.am(
+              s + 1,
+              2 * t[s],
+              e,
+              2 * s + 1,
+              i,
+              t.t - s - 1,
+            )) >= t.DV && ((e[s + t.t] -= t.DV), (e[s + t.t + 1] = 1));
+          }
+          e.t > 0 && (e[e.t - 1] += t.am(s, t[s], e, 2 * s, 0, 1)),
+            (e.s = 0),
+            e.clamp();
+        }
+        function Xe(e, t, s) {
+          var i = e.abs();
+          if (!(i.t <= 0)) {
+            var u = this.abs();
+            if (u.t < i.t) {
+              t?.fromInt(0), s != null && this.copyTo(s);
+              return;
+            }
+            s == null && (s = _());
+            var h = _(),
+              S = this.s,
+              v = e.s,
+              D = this.DB - b(i[i.t - 1]);
+            D > 0
+              ? (i.lShiftTo(D, h), u.lShiftTo(D, s))
+              : (i.copyTo(h), u.copyTo(s));
+            var H = h.t,
+              Z = h[H - 1];
+            if (Z != 0) {
+              var ne = Z * (1 << this.F1) + (H > 1 ? h[H - 2] >> this.F2 : 0),
+                fe = this.FV / ne,
+                Je = (1 << this.F1) / ne,
+                he = 1 << this.F2,
+                de = s.t,
+                ut = de - H,
+                we = t ?? _();
+              for (
+                h.dlShiftTo(ut, we),
+                  s.compareTo(we) >= 0 && ((s[s.t++] = 1), s.subTo(we, s)),
+                  f.ONE.dlShiftTo(H, we),
+                  we.subTo(h, h);
+                h.t < H;
+              )
+                h[h.t++] = 0;
+              for (; --ut >= 0; ) {
+                var oe =
+                  s[--de] == Z
+                    ? this.DM
+                    : Math.floor(s[de] * fe + (s[de - 1] + he) * Je);
+                if ((s[de] += h.am(0, oe, s, ut, 0, H)) < oe)
+                  for (h.dlShiftTo(ut, we), s.subTo(we, s); s[de] < --oe; )
+                    s.subTo(we, s);
+              }
+              t != null && (s.drShiftTo(H, t), S != v && f.ZERO.subTo(t, t)),
+                (s.t = H),
+                s.clamp(),
+                D > 0 && s.rShiftTo(D, s),
+                S < 0 && f.ZERO.subTo(s, s);
+            }
+          }
+        }
+        function je(e) {
+          var t = _();
+          return (
+            this.abs().divRemTo(e, null, t),
+            this.s < 0 && t.compareTo(f.ZERO) > 0 && e.subTo(t, t),
+            t
+          );
+        }
+        function Re(e) {
+          this.m = e;
+        }
+        function kt(e) {
+          return e.s < 0 || e.compareTo(this.m) >= 0 ? e.mod(this.m) : e;
+        }
+        function ae(e) {
+          return e;
+        }
+        function Dt(e) {
+          e.divRemTo(this.m, null, e);
+        }
+        function be(e, t, s) {
+          e.multiplyTo(t, s), this.reduce(s);
+        }
+        function et(e, t) {
+          e.squareTo(t), this.reduce(t);
+        }
+        (Re.prototype.convert = kt),
+          (Re.prototype.revert = ae),
+          (Re.prototype.reduce = Dt),
+          (Re.prototype.mulTo = be),
+          (Re.prototype.sqrTo = et);
+        function Ze() {
+          if (this.t < 1) return 0;
+          var e = this[0];
+          if ((e & 1) == 0) return 0;
+          var t = e & 3;
+          return (
+            (t = (t * (2 - (e & 15) * t)) & 15),
+            (t = (t * (2 - (e & 255) * t)) & 255),
+            (t = (t * (2 - (((e & 65535) * t) & 65535))) & 65535),
+            (t = (t * (2 - ((e * t) % this.DV))) % this.DV),
+            t > 0 ? this.DV - t : -t
+          );
+        }
+        function te(e) {
+          (this.m = e),
+            (this.mp = e.invDigit()),
+            (this.mpl = this.mp & 32767),
+            (this.mph = this.mp >> 15),
+            (this.um = (1 << (e.DB - 15)) - 1),
+            (this.mt2 = 2 * e.t);
+        }
+        function Te(e) {
+          var t = _();
+          return (
+            e.abs().dlShiftTo(this.m.t, t),
+            t.divRemTo(this.m, null, t),
+            e.s < 0 && t.compareTo(f.ZERO) > 0 && this.m.subTo(t, t),
+            t
+          );
+        }
+        function ue(e) {
+          var t = _();
+          return e.copyTo(t), this.reduce(t), t;
+        }
+        function Le(e) {
+          for (; e.t <= this.mt2; ) e[e.t++] = 0;
+          for (var t = 0; t < this.m.t; ++t) {
+            var s = e[t] & 32767,
+              i =
+                (s * this.mpl +
+                  (((s * this.mph + (e[t] >> 15) * this.mpl) & this.um) <<
+                    15)) &
+                e.DM;
+            for (
+              s = t + this.m.t, e[s] += this.m.am(0, i, e, t, 0, this.m.t);
+              e[s] >= e.DV;
+            )
+              (e[s] -= e.DV), e[++s]++;
+          }
+          e.clamp(),
+            e.drShiftTo(this.m.t, e),
+            e.compareTo(this.m) >= 0 && e.subTo(this.m, e);
+        }
+        function tt(e, t) {
+          e.squareTo(t), this.reduce(t);
+        }
+        function We(e, t, s) {
+          e.multiplyTo(t, s), this.reduce(s);
+        }
+        (te.prototype.convert = Te),
+          (te.prototype.revert = ue),
+          (te.prototype.reduce = Le),
+          (te.prototype.mulTo = We),
+          (te.prototype.sqrTo = tt);
+        function Nt() {
+          return (this.t > 0 ? this[0] & 1 : this.s) == 0;
+        }
+        function Ee(e, t) {
+          if (e > 4294967295 || e < 1) return f.ONE;
+          var s = _(),
+            i = _(),
+            u = t.convert(this),
+            h = b(e) - 1;
+          for (u.copyTo(s); --h >= 0; )
+            if ((t.sqrTo(s, i), (e & (1 << h)) > 0)) t.mulTo(i, u, s);
+            else {
+              var S = s;
+              (s = i), (i = S);
+            }
+          return t.revert(s);
+        }
+        function Me(e, t) {
+          var s;
+          return (
+            e < 256 || t.isEven() ? (s = new Re(t)) : (s = new te(t)),
+            this.exp(e, s)
+          );
+        }
+        (f.prototype.copyTo = _e),
+          (f.prototype.fromInt = Ue),
+          (f.prototype.fromString = ht),
+          (f.prototype.clamp = Oe),
+          (f.prototype.dlShiftTo = P),
+          (f.prototype.drShiftTo = U),
+          (f.prototype.lShiftTo = ee),
+          (f.prototype.rShiftTo = ye),
+          (f.prototype.subTo = B),
+          (f.prototype.multiplyTo = N),
+          (f.prototype.squareTo = ce),
+          (f.prototype.divRemTo = Xe),
+          (f.prototype.invDigit = Ze),
+          (f.prototype.isEven = Nt),
+          (f.prototype.exp = Ee),
+          (f.prototype.toString = $e),
+          (f.prototype.negate = L),
+          (f.prototype.abs = C),
+          (f.prototype.compareTo = j),
+          (f.prototype.bitLength = x),
+          (f.prototype.mod = je),
+          (f.prototype.modPowInt = Me),
+          (f.ZERO = Q(0)),
+          (f.ONE = Q(1));
+        function st() {
+          var e = _();
+          return this.copyTo(e), e;
+        }
+        function Qe() {
+          if (this.s < 0) {
+            if (this.t == 1) return this[0] - this.DV;
+            if (this.t == 0) return -1;
+          } else {
+            if (this.t == 1) return this[0];
+            if (this.t == 0) return 0;
+          }
+          return ((this[1] & ((1 << (32 - this.DB)) - 1)) << this.DB) | this[0];
+        }
+        function dt() {
+          return this.t == 0 ? this.s : (this[0] << 24) >> 24;
+        }
+        function nt() {
+          return this.t == 0 ? this.s : (this[0] << 16) >> 16;
+        }
+        function ft(e) {
+          return Math.floor((Math.LN2 * this.DB) / Math.log(e));
+        }
+        function q() {
+          return this.s < 0
+            ? -1
+            : this.t <= 0 || (this.t == 1 && this[0] <= 0)
+              ? 0
+              : 1;
+        }
+        function Bt(e) {
+          if ((e == null && (e = 10), this.signum() == 0 || e < 2 || e > 36))
+            return "0";
+          var t = this.chunkSize(e),
+            s = Math.pow(e, t),
+            i = Q(s),
+            u = _(),
+            h = _(),
+            S = "";
+          for (this.divRemTo(i, u, h); u.signum() > 0; )
+            (S = (s + h.intValue()).toString(e).substr(1) + S),
+              u.divRemTo(i, u, h);
+          return h.intValue().toString(e) + S;
+        }
+        function Ts(e, t) {
+          this.fromInt(0), t == null && (t = 10);
+          for (
+            var s = this.chunkSize(t),
+              i = Math.pow(t, s),
+              u = !1,
+              h = 0,
+              S = 0,
+              v = 0;
+            v < e.length;
+            ++v
+          ) {
+            var D = Ne(e, v);
+            if (D < 0) {
+              e.charAt(v) == "-" && this.signum() == 0 && (u = !0);
+              continue;
+            }
+            (S = t * S + D),
+              ++h >= s &&
+                (this.dMultiply(i), this.dAddOffset(S, 0), (h = 0), (S = 0));
+          }
+          h > 0 && (this.dMultiply(Math.pow(t, h)), this.dAddOffset(S, 0)),
+            u && f.ZERO.subTo(this, this);
+        }
+        function mt(e, t, s) {
+          if (typeof t == "number")
+            if (e < 2) this.fromInt(1);
+            else
+              for (
+                this.fromNumber(e, s),
+                  this.testBit(e - 1) ||
+                    this.bitwiseTo(f.ONE.shiftLeft(e - 1), rt, this),
+                  this.isEven() && this.dAddOffset(1, 0);
+                !this.isProbablePrime(t);
+              )
+                this.dAddOffset(2, 0),
+                  this.bitLength() > e &&
+                    this.subTo(f.ONE.shiftLeft(e - 1), this);
+          else {
+            var i = new Array(),
+              u = e & 7;
+            (i.length = (e >> 3) + 1),
+              t.nextBytes(i),
+              u > 0 ? (i[0] &= (1 << u) - 1) : (i[0] = 0),
+              this.fromString(i, 256);
+          }
+        }
+        function Ht() {
+          var e = this.t,
+            t = new Array();
+          t[0] = this.s;
+          var s = this.DB - ((e * this.DB) % 8),
+            i,
+            u = 0;
+          if (e-- > 0)
+            for (
+              s < this.DB &&
+              (i = this[e] >> s) != (this.s & this.DM) >> s &&
+              (t[u++] = i | (this.s << (this.DB - s)));
+              e >= 0;
+            )
+              s < 8
+                ? ((i = (this[e] & ((1 << s) - 1)) << (8 - s)),
+                  (i |= this[--e] >> (s += this.DB - 8)))
+                : ((i = (this[e] >> (s -= 8)) & 255),
+                  s <= 0 && ((s += this.DB), --e)),
+                (i & 128) != 0 && (i |= -256),
+                u == 0 && (this.s & 128) != (i & 128) && ++u,
+                (u > 0 || i != this.s) && (t[u++] = i);
+          return t;
+        }
+        function Vt(e) {
+          return this.compareTo(e) == 0;
+        }
+        function ot(e) {
+          return this.compareTo(e) < 0 ? this : e;
+        }
+        function pt(e) {
+          return this.compareTo(e) > 0 ? this : e;
+        }
+        function gt(e, t, s) {
+          var i,
+            u,
+            h = Math.min(e.t, this.t);
+          for (i = 0; i < h; ++i) s[i] = t(this[i], e[i]);
+          if (e.t < this.t) {
+            for (u = e.s & this.DM, i = h; i < this.t; ++i)
+              s[i] = t(this[i], u);
+            s.t = this.t;
+          } else {
+            for (u = this.s & this.DM, i = h; i < e.t; ++i) s[i] = t(u, e[i]);
+            s.t = e.t;
+          }
+          (s.s = t(this.s, e.s)), s.clamp();
+        }
+        function K(e, t) {
+          return e & t;
+        }
+        function Ft(e) {
+          var t = _();
+          return this.bitwiseTo(e, K, t), t;
+        }
+        function rt(e, t) {
+          return e | t;
+        }
+        function Pt(e) {
+          var t = _();
+          return this.bitwiseTo(e, rt, t), t;
+        }
+        function Be(e, t) {
+          return e ^ t;
+        }
+        function Ct(e) {
+          var t = _();
+          return this.bitwiseTo(e, Be, t), t;
+        }
+        function it(e, t) {
+          return e & ~t;
+        }
+        function St(e) {
+          var t = _();
+          return this.bitwiseTo(e, it, t), t;
+        }
+        function vt() {
+          for (var e = _(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
+          return (e.t = this.t), (e.s = ~this.s), e;
+        }
+        function Gt(e) {
+          var t = _();
+          return e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t;
+        }
+        function at(e) {
+          var t = _();
+          return e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t;
+        }
+        function Ut(e) {
+          if (e == 0) return -1;
+          var t = 0;
+          return (
+            (e & 65535) == 0 && ((e >>= 16), (t += 16)),
+            (e & 255) == 0 && ((e >>= 8), (t += 8)),
+            (e & 15) == 0 && ((e >>= 4), (t += 4)),
+            (e & 3) == 0 && ((e >>= 2), (t += 2)),
+            (e & 1) == 0 && ++t,
+            t
+          );
+        }
+        function Ls() {
+          for (var e = 0; e < this.t; ++e)
+            if (this[e] != 0) return e * this.DB + Ut(this[e]);
+          return this.s < 0 ? this.t * this.DB : -1;
+        }
+        function _t(e) {
+          for (var t = 0; e != 0; ) (e &= e - 1), ++t;
+          return t;
+        }
+        function bt() {
+          for (var e = 0, t = this.s & this.DM, s = 0; s < this.t; ++s)
+            e += _t(this[s] ^ t);
+          return e;
+        }
+        function Ot(e) {
+          var t = Math.floor(e / this.DB);
+          return t >= this.t
+            ? this.s != 0
+            : (this[t] & (1 << (e % this.DB))) != 0;
+        }
+        function Zt(e, t) {
+          var s = f.ONE.shiftLeft(e);
+          return this.bitwiseTo(s, t, s), s;
+        }
+        function Wt(e) {
+          return this.changeBit(e, rt);
+        }
+        function p(e) {
+          return this.changeBit(e, it);
+        }
+        function Qt(e) {
+          return this.changeBit(e, Be);
+        }
+        function zt(e, t) {
+          for (var s = 0, i = 0, u = Math.min(e.t, this.t); s < u; )
+            (i += this[s] + e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+          if (e.t < this.t) {
+            for (i += e.s; s < this.t; )
+              (i += this[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+            i += this.s;
+          } else {
+            for (i += this.s; s < e.t; )
+              (i += e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
+            i += e.s;
+          }
+          (t.s = i < 0 ? -1 : 0),
+            i > 0 ? (t[s++] = i) : i < -1 && (t[s++] = this.DV + i),
+            (t.t = s),
+            t.clamp();
+        }
+        function Kt(e) {
+          var t = _();
+          return this.addTo(e, t), t;
+        }
+        function wt(e) {
+          var t = _();
+          return this.subTo(e, t), t;
+        }
+        function xt(e) {
+          var t = _();
+          return this.multiplyTo(e, t), t;
+        }
+        function Jt(e) {
+          var t = _();
+          return this.divRemTo(e, t, null), t;
+        }
+        function Yt(e) {
+          var t = _();
+          return this.divRemTo(e, null, t), t;
+        }
+        function qt(e) {
+          var t = _(),
+            s = _();
+          return this.divRemTo(e, t, s), new Array(t, s);
+        }
+        function $t(e) {
+          (this[this.t] = this.am(0, e - 1, this, 0, 0, this.t)),
+            ++this.t,
+            this.clamp();
+        }
+        function Xt(e, t) {
+          for (; this.t <= t; ) this[this.t++] = 0;
+          for (this[t] += e; this[t] >= this.DV; )
+            (this[t] -= this.DV),
+              ++t >= this.t && (this[this.t++] = 0),
+              ++this[t];
+        }
+        function z() {}
+        function yt(e) {
+          return e;
+        }
+        function es(e, t, s) {
+          e.multiplyTo(t, s);
+        }
+        function ts(e, t) {
+          e.squareTo(t);
+        }
+        (z.prototype.convert = yt),
+          (z.prototype.revert = yt),
+          (z.prototype.mulTo = es),
+          (z.prototype.sqrTo = ts);
+        function ss(e) {
+          return this.exp(e, new z());
+        }
+        function ns(e, t, s) {
+          var i = Math.min(this.t + e.t, t);
+          for (s.s = 0, s.t = i; i > 0; ) s[--i] = 0;
+          var u;
+          for (u = s.t - this.t; i < u; ++i)
+            s[i + this.t] = this.am(0, e[i], s, i, 0, this.t);
+          for (u = Math.min(e.t, t); i < u; ++i)
+            this.am(0, e[i], s, i, 0, t - i);
+          s.clamp();
+        }
+        function os(e, t, s) {
+          --t;
+          var i = (s.t = this.t + e.t - t);
+          for (s.s = 0; --i >= 0; ) s[i] = 0;
+          for (i = Math.max(t - this.t, 0); i < e.t; ++i)
+            s[this.t + i - t] = this.am(t - i, e[i], s, 0, 0, this.t + i - t);
+          s.clamp(), s.drShiftTo(1, s);
+        }
+        function Ie(e) {
+          (this.r2 = _()),
+            (this.q3 = _()),
+            f.ONE.dlShiftTo(2 * e.t, this.r2),
+            (this.mu = this.r2.divide(e)),
+            (this.m = e);
+        }
+        function rs(e) {
+          if (e.s < 0 || e.t > 2 * this.m.t) return e.mod(this.m);
+          if (e.compareTo(this.m) < 0) return e;
+          var t = _();
+          return e.copyTo(t), this.reduce(t), t;
+        }
+        function Rt(e) {
+          return e;
+        }
+        function He(e) {
+          for (
+            e.drShiftTo(this.m.t - 1, this.r2),
+              e.t > this.m.t + 1 && ((e.t = this.m.t + 1), e.clamp()),
+              this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
+              this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
+            e.compareTo(this.r2) < 0;
+          )
+            e.dAddOffset(1, this.m.t + 1);
+          for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
+            e.subTo(this.m, e);
+        }
+        function is(e, t) {
+          e.squareTo(t), this.reduce(t);
+        }
+        function as(e, t, s) {
+          e.multiplyTo(t, s), this.reduce(s);
+        }
+        (Ie.prototype.convert = rs),
+          (Ie.prototype.revert = Rt),
+          (Ie.prototype.reduce = He),
+          (Ie.prototype.mulTo = as),
+          (Ie.prototype.sqrTo = is);
+        function ls(e, t) {
+          var s = e.bitLength(),
+            i,
+            u = Q(1),
+            h;
+          if (s <= 0) return u;
+          s < 18
+            ? (i = 1)
+            : s < 48
+              ? (i = 3)
+              : s < 144
+                ? (i = 4)
+                : s < 768
+                  ? (i = 5)
+                  : (i = 6),
+            s < 8
+              ? (h = new Re(t))
+              : t.isEven()
+                ? (h = new Ie(t))
+                : (h = new te(t));
+          var S = new Array(),
+            v = 3,
+            D = i - 1,
+            H = (1 << i) - 1;
+          if (((S[1] = h.convert(this)), i > 1)) {
+            var Z = _();
+            for (h.sqrTo(S[1], Z); v <= H; )
+              (S[v] = _()), h.mulTo(Z, S[v - 2], S[v]), (v += 2);
+          }
+          var ne = e.t - 1,
+            fe,
+            Je = !0,
+            he = _(),
+            de;
+          for (s = b(e[ne]) - 1; ne >= 0; ) {
+            for (
+              s >= D
+                ? (fe = (e[ne] >> (s - D)) & H)
+                : ((fe = (e[ne] & ((1 << (s + 1)) - 1)) << (D - s)),
+                  ne > 0 && (fe |= e[ne - 1] >> (this.DB + s - D))),
+                v = i;
+              (fe & 1) == 0;
+            )
+              (fe >>= 1), --v;
+            if (((s -= v) < 0 && ((s += this.DB), --ne), Je))
+              S[fe].copyTo(u), (Je = !1);
+            else {
+              for (; v > 1; ) h.sqrTo(u, he), h.sqrTo(he, u), (v -= 2);
+              v > 0 ? h.sqrTo(u, he) : ((de = u), (u = he), (he = de)),
+                h.mulTo(he, S[fe], u);
+            }
+            for (; ne >= 0 && (e[ne] & (1 << s)) == 0; )
+              h.sqrTo(u, he),
+                (de = u),
+                (u = he),
+                (he = de),
+                --s < 0 && ((s = this.DB - 1), --ne);
+          }
+          return h.revert(u);
+        }
+        function cs(e) {
+          var t = this.s < 0 ? this.negate() : this.clone(),
+            s = e.s < 0 ? e.negate() : e.clone();
+          if (t.compareTo(s) < 0) {
+            var i = t;
+            (t = s), (s = i);
+          }
+          var u = t.getLowestSetBit(),
+            h = s.getLowestSetBit();
+          if (h < 0) return t;
+          for (
+            u < h && (h = u), h > 0 && (t.rShiftTo(h, t), s.rShiftTo(h, s));
+            t.signum() > 0;
+          )
+            (u = t.getLowestSetBit()) > 0 && t.rShiftTo(u, t),
+              (u = s.getLowestSetBit()) > 0 && s.rShiftTo(u, s),
+              t.compareTo(s) >= 0
+                ? (t.subTo(s, t), t.rShiftTo(1, t))
+                : (s.subTo(t, s), s.rShiftTo(1, s));
+          return h > 0 && s.lShiftTo(h, s), s;
+        }
+        function us(e) {
+          if (e <= 0) return 0;
+          var t = this.DV % e,
+            s = this.s < 0 ? e - 1 : 0;
+          if (this.t > 0)
+            if (t == 0) s = this[0] % e;
+            else
+              for (var i = this.t - 1; i >= 0; --i) s = (t * s + this[i]) % e;
+          return s;
+        }
+        function hs(e) {
+          var t = e.isEven();
+          if ((this.isEven() && t) || e.signum() == 0) return f.ZERO;
+          for (
+            var s = e.clone(),
+              i = this.clone(),
+              u = Q(1),
+              h = Q(0),
+              S = Q(0),
+              v = Q(1);
+            s.signum() != 0;
+          ) {
+            for (; s.isEven(); )
+              s.rShiftTo(1, s),
+                t
+                  ? ((!u.isEven() || !h.isEven()) &&
+                      (u.addTo(this, u), h.subTo(e, h)),
+                    u.rShiftTo(1, u))
+                  : h.isEven() || h.subTo(e, h),
+                h.rShiftTo(1, h);
+            for (; i.isEven(); )
+              i.rShiftTo(1, i),
+                t
+                  ? ((!S.isEven() || !v.isEven()) &&
+                      (S.addTo(this, S), v.subTo(e, v)),
+                    S.rShiftTo(1, S))
+                  : v.isEven() || v.subTo(e, v),
+                v.rShiftTo(1, v);
+            s.compareTo(i) >= 0
+              ? (s.subTo(i, s), t && u.subTo(S, u), h.subTo(v, h))
+              : (i.subTo(s, i), t && S.subTo(u, S), v.subTo(h, v));
+          }
+          if (i.compareTo(f.ONE) != 0) return f.ZERO;
+          if (v.compareTo(e) >= 0) return v.subtract(e);
+          if (v.signum() < 0) v.addTo(e, v);
+          else return v;
+          return v.signum() < 0 ? v.add(e) : v;
+        }
+        var se = [
+            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
+            67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137,
+            139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
+            211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277,
+            281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359,
+            367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439,
+            443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509,
+          ],
+          ds = (1 << 26) / se[se.length - 1];
+        function Tt(e) {
+          var t,
+            s = this.abs();
+          if (s.t == 1 && s[0] <= se[se.length - 1]) {
+            for (t = 0; t < se.length; ++t) if (s[0] == se[t]) return !0;
+            return !1;
+          }
+          if (s.isEven()) return !1;
+          for (t = 1; t < se.length; ) {
+            for (var i = se[t], u = t + 1; u < se.length && i < ds; )
+              i *= se[u++];
+            for (i = s.modInt(i); t < u; ) if (i % se[t++] == 0) return !1;
+          }
+          return s.millerRabin(e);
+        }
+        function fs(e) {
+          var t = this.subtract(f.ONE),
+            s = t.getLowestSetBit();
+          if (s <= 0) return !1;
+          var i = t.shiftRight(s);
+          (e = (e + 1) >> 1), e > se.length && (e = se.length);
+          for (var u = _(), h = 0; h < e; ++h) {
+            u.fromInt(se[h]);
+            var S = u.modPow(i, this);
+            if (S.compareTo(f.ONE) != 0 && S.compareTo(t) != 0) {
+              for (var v = 1; v++ < s && S.compareTo(t) != 0; )
+                if (((S = S.modPowInt(2, this)), S.compareTo(f.ONE) == 0))
+                  return !1;
+              if (S.compareTo(t) != 0) return !1;
+            }
+          }
+          return !0;
+        }
+        (f.prototype.chunkSize = ft),
+          (f.prototype.toRadix = Bt),
+          (f.prototype.fromRadix = Ts),
+          (f.prototype.fromNumber = mt),
+          (f.prototype.bitwiseTo = gt),
+          (f.prototype.changeBit = Zt),
+          (f.prototype.addTo = zt),
+          (f.prototype.dMultiply = $t),
+          (f.prototype.dAddOffset = Xt),
+          (f.prototype.multiplyLowerTo = ns),
+          (f.prototype.multiplyUpperTo = os),
+          (f.prototype.modInt = us),
+          (f.prototype.millerRabin = fs),
+          (f.prototype.clone = st),
+          (f.prototype.intValue = Qe),
+          (f.prototype.byteValue = dt),
+          (f.prototype.shortValue = nt),
+          (f.prototype.signum = q),
+          (f.prototype.toByteArray = Ht),
+          (f.prototype.equals = Vt),
+          (f.prototype.min = ot),
+          (f.prototype.max = pt),
+          (f.prototype.and = Ft),
+          (f.prototype.or = Pt),
+          (f.prototype.xor = Ct),
+          (f.prototype.andNot = St),
+          (f.prototype.not = vt),
+          (f.prototype.shiftLeft = Gt),
+          (f.prototype.shiftRight = at),
+          (f.prototype.getLowestSetBit = Ls),
+          (f.prototype.bitCount = bt),
+          (f.prototype.testBit = Ot),
+          (f.prototype.setBit = Wt),
+          (f.prototype.clearBit = p),
+          (f.prototype.flipBit = Qt),
+          (f.prototype.add = Kt),
+          (f.prototype.subtract = wt),
+          (f.prototype.multiply = xt),
+          (f.prototype.divide = Jt),
+          (f.prototype.remainder = Yt),
+          (f.prototype.divideAndRemainder = qt),
+          (f.prototype.modPow = ls),
+          (f.prototype.modInverse = hs),
+          (f.prototype.pow = ss),
+          (f.prototype.gcd = cs),
+          (f.prototype.isProbablePrime = Tt);
+        const lt = f;
+        var ms = function (e, t) {
+            (this.modulus = new lt(e, 16)),
+              (this.encryptionExponent = new lt(t, 16));
+          },
+          ps = {
+            base64:
+              "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+            encode: function (e) {
+              if (!e) return !1;
+              var t = "",
+                s,
+                i,
+                u,
+                h,
+                S,
+                v,
+                D,
+                H = 0;
+              do
+                (s = e.charCodeAt(H++)),
+                  (i = e.charCodeAt(H++)),
+                  (u = e.charCodeAt(H++)),
+                  (h = s >> 2),
+                  (S = ((s & 3) << 4) | (i >> 4)),
+                  (v = ((i & 15) << 2) | (u >> 6)),
+                  (D = u & 63),
+                  isNaN(i) ? (v = D = 64) : isNaN(u) && (D = 64),
+                  (t +=
+                    this.base64.charAt(h) +
+                    this.base64.charAt(S) +
+                    this.base64.charAt(v) +
+                    this.base64.charAt(D));
+              while (H < e.length);
+              return t;
+            },
+            decode: function (e) {
+              if (!e) return !1;
+              e = e.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+              var t = "",
+                s,
+                i,
+                u,
+                h,
+                S = 0;
+              do
+                (s = this.base64.indexOf(e.charAt(S++))),
+                  (i = this.base64.indexOf(e.charAt(S++))),
+                  (u = this.base64.indexOf(e.charAt(S++))),
+                  (h = this.base64.indexOf(e.charAt(S++))),
+                  (t += String.fromCharCode((s << 2) | (i >> 4))),
+                  u != 64 &&
+                    (t += String.fromCharCode(((i & 15) << 4) | (u >> 2))),
+                  h != 64 && (t += String.fromCharCode(((u & 3) << 6) | h));
+              while (S < e.length);
+              return t;
+            },
+          },
+          gs = {
+            hex: "0123456789abcdef",
+            encode: function (e) {
+              if (!e) return !1;
+              var t = "",
+                s,
+                i = 0;
+              do
+                (s = e.charCodeAt(i++)),
+                  (t +=
+                    this.hex.charAt((s >> 4) & 15) + this.hex.charAt(s & 15));
+              while (i < e.length);
+              return t;
+            },
+            decode: function (e) {
+              if (!e) return !1;
+              e = e.replace(/[^0-9abcdef]/g, "");
+              var t = "",
+                s = 0;
+              do
+                t += String.fromCharCode(
+                  ((this.hex.indexOf(e.charAt(s++)) << 4) & 240) |
+                    (this.hex.indexOf(e.charAt(s++)) & 15),
+                );
+              while (s < e.length);
+              return t;
+            },
+          },
+          Cs = {
+            getPublicKey: function (e, t) {
+              return new ms(e, t);
+            },
+            encrypt: function (e, t) {
+              return !t ||
+                ((e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)),
+                !e) ||
+                ((e = e.modPowInt(t.encryptionExponent, t.modulus)), !e)
+                ? !1
+                : ((e = e.toString(16)),
+                  (e.length & 1) == 1 && (e = "0" + e),
+                  ps.encode(gs.decode(e)));
+            },
+            pkcs1pad2: function (e, t) {
+              if (t < e.length + 11) return null;
+              for (var s = [], i = e.length - 1; i >= 0 && t > 0; )
+                s[--t] = e.charCodeAt(i--);
+              for (s[--t] = 0; t > 2; )
+                s[--t] = Math.floor(Math.random() * 254) + 1;
+              return (s[--t] = 2), (s[--t] = 0), new lt(s);
+            },
+          };
+        const Lt = Cs;
+        var Ss = w(57589);
+        const Ve = new Ss.wd("Login"),
+          Es = Ve.Info,
+          vs = Ve.Debug,
+          ze = Ve.Warning,
+          _s = Ve.Error;
+        function Ke(e, t) {
+          return e.endsWith("/") || (e += "/"), `${e}login/${t}/`;
+        }
+        function ct() {
+          let e = new FormData();
+          return e.append("donotcache", new Date().getTime().toString()), e;
+        }
+        async function bs(e) {
+          let t = ct(),
+            s = Ke(e, "refreshcaptcha"),
+            i = "";
           try {
-            let te = { "Content-Type": "multipart/form-data" },
-              P = await je().post(I, Q, { headers: te });
-            if (P.status != 200) return !1;
-            $ = P.data.gid;
+            let u = { "Content-Type": "multipart/form-data" },
+              h = await ke().post(s, t, { headers: u });
+            if (h.status != 200) return !1;
+            i = h.data.gid;
           } catch {
             return !1;
           }
-          return $;
+          return i;
         }
-        function O(D, Q) {
-          return _e(D, "rendercaptcha") + `?gid=${Q}`;
+        function ws(e, t) {
+          return Ke(e, "rendercaptcha") + `?gid=${t}`;
         }
-        async function Pe(D, Q) {
-          let I = re();
-          I.append("username", Q);
-          let $ = _e(D, "getrsakey"),
-            te;
+        async function xs(e, t) {
+          let s = ct();
+          s.append("username", t);
+          let i = Ke(e, "getrsakey"),
+            u;
           try {
-            let P = { "Content-Type": "multipart/form-data" },
-              x = await je().post($, I, { headers: P });
-            if (x.status != 200)
+            let h = { "Content-Type": "multipart/form-data" },
+              S = await ke().post(i, s, { headers: h });
+            if (S.status != 200)
               return (
-                console.log("GetRSAKey failure: "), console.log(x.status), null
+                console.log("GetRSAKey failure: "), console.log(S.status), null
               );
-            let d = x.data;
+            let v = S.data;
             if (
-              !d ||
-              !d.success ||
-              !d.publickey_mod ||
-              !d.publickey_exp ||
-              !d.timestamp
+              !v ||
+              !v.success ||
+              !v.publickey_mod ||
+              !v.publickey_exp ||
+              !v.timestamp
             )
-              return console.log("GetRSAKey failure: "), console.log(d), null;
-            te = d;
-          } catch (P) {
-            return console.log("GetRSAKey exception: "), console.log(P), null;
+              return console.log("GetRSAKey failure: "), console.log(v), null;
+            u = v;
+          } catch (h) {
+            return console.log("GetRSAKey exception: "), console.log(h), null;
           }
-          return te;
+          return u;
         }
-        function De(D, Q) {
-          let I = l.getPublicKey(Q.publickey_mod, Q.publickey_exp),
-            $ = l.encrypt(D, I);
-          return $ === !1 ? null : $;
+        function Et(e, t) {
+          let s = Lt.getPublicKey(t.publickey_mod, t.publickey_exp),
+            i = Lt.encrypt(e, s);
+          return i === !1 ? null : i;
         }
-        async function F(D, Q, I, $) {
-          const te = De(I.strPassword, $);
-          if (!te) return null;
-          let P = re();
-          P.append("password", te),
-            P.append("username", I.strUserName),
-            P.append("twofactorcode", I.strTwoFactorCode || ""),
-            P.append("emailauth", I.strEmailAuthCode || ""),
-            P.append("loginfriendlyname", ""),
-            P.append("captchagid", I.gidCaptcha || ""),
-            P.append("captcha_text", I.strCaptchaText || ""),
-            P.append("emailsteamid", I.emailSteamID || ""),
-            P.append("rsatimestamp", $.timestamp),
-            P.append("remember_login", I.bRememberLogin ? "true" : "false");
-          let x = {};
-          Q &&
-            (P.append("oauth_client_id", Q),
-            P.append("mobile_chat_client", "true"));
-          let d = _e(D, "dologin"),
-            A;
+        async function ys(e, t, s, i) {
+          const u = Et(s.strPassword, i);
+          if (!u) return null;
+          let h = ct();
+          h.append("password", u),
+            h.append("username", s.strUserName),
+            h.append("twofactorcode", s.strTwoFactorCode || ""),
+            h.append("emailauth", s.strEmailAuthCode || ""),
+            h.append("loginfriendlyname", ""),
+            h.append("captchagid", s.gidCaptcha || ""),
+            h.append("captcha_text", s.strCaptchaText || ""),
+            h.append("emailsteamid", s.emailSteamID || ""),
+            h.append("rsatimestamp", i.timestamp),
+            h.append("remember_login", s.bRememberLogin ? "true" : "false");
+          let S = {};
+          t &&
+            (h.append("oauth_client_id", t),
+            h.append("mobile_chat_client", "true"));
+          let v = Ke(e, "dologin"),
+            D;
           try {
-            x.headers = { "Content-Type": "multipart/form-data" };
-            let v = await je().post(d, P, x);
-            if (v.status != 200) return null;
-            let b = v.data;
-            if (!b) return null;
-            b.oauth && (b.oauth = JSON.parse(b.oauth)), (A = b);
+            S.headers = { "Content-Type": "multipart/form-data" };
+            let H = await ke().post(v, h, S);
+            if (H.status != 200) return null;
+            let Z = H.data;
+            if (!Z) return null;
+            Z.oauth && (Z.oauth = JSON.parse(Z.oauth)), (D = Z);
           } catch {
             return null;
           }
-          return A;
+          return D;
         }
-        async function Ge(D, Q, I) {
+        async function Mt(e, t, s) {
           if (
-            ((I = Object.assign({}, I)),
-            I.strUserName &&
-              (I.strUserName = I.strUserName.replace(/[^\x00-\x7F]/g, "")),
-            !I.strPassword ||
-              I.strPassword.match(/[^\x00-\x7F]/) ||
-              !I.strUserName)
+            ((s = Object.assign({}, s)),
+            s.strUserName &&
+              (s.strUserName = s.strUserName.replace(/[^\x00-\x7F]/g, "")),
+            !s.strPassword ||
+              s.strPassword.match(/[^\x00-\x7F]/) ||
+              !s.strUserName)
           )
             return null;
-          let $ = await Pe(D, I.strUserName);
-          return $
-            ? await F(
-                D,
-                Q,
+          let i = await xs(e, s.strUserName);
+          return i
+            ? await ys(
+                e,
+                t,
                 {
-                  ...I,
-                  strUserName: I.strUserName,
-                  strPassword: I.strPassword,
+                  ...s,
+                  strUserName: s.strUserName,
+                  strPassword: s.strPassword,
                 },
-                $,
+                i,
               )
-            : (console.error(`Failed to get RSA key from ${D}`), null);
+            : (console.error(`Failed to get RSA key from ${e}`), null);
         }
       },
-      74974: (ve, We, w) => {
+      74974: (Ce, Ye, w) => {
         "use strict";
-        w.d(We, { YN: () => ts, Fn: () => es, Mk: () => hs, kt: () => Je });
+        w.d(Ye, { YN: () => as, Fn: () => is, Mk: () => gs, kt: () => s });
         var n = w(7850),
-          je = w(32093),
-          Ce = w(99412),
-          l = w(72604),
-          E = w(41735),
-          Te = w.n(E),
-          T = w(90626),
-          Fe = w(92757);
-        const Ie =
+          ke = w(32093),
+          $ = w(99412),
+          y = w(72604),
+          Ae = w(41735),
+          f = w.n(Ae),
+          _ = w(90626),
+          Pe = w(92757);
+        const qe =
           w.p +
           "images/applications/store/login_mobile_auth.png?v=valveisgoodatcaching";
-        var _e = w(71568),
-          re = w(87883),
-          ue = w(25792),
-          O = w(179),
-          Pe = w(24660),
-          De = w(19298),
-          F = w(36707),
-          Ge = w(32224),
-          D = w.n(Ge);
-        function Q(r) {
+        var Ge = w(71568),
+          Se = w(87883),
+          De = w(25792),
+          ie = w(179),
+          ve = w(24660),
+          X = w(19298),
+          V = w(36707),
+          Ne = w(32224),
+          _e = w.n(Ne);
+        function Ue(r) {
           const {
             length: o,
             value: a,
-            onChange: u,
-            onPaste: p,
-            tone: C,
-            autoFocus: c,
-            disabled: f,
-            loading: R,
-            backupCode: k,
-            allowCharacter: j,
+            onChange: c,
+            onPaste: m,
+            tone: g,
+            autoFocus: l,
+            disabled: d,
+            loading: T,
+            backupCode: I,
+            allowCharacter: A,
           } = r;
-          (0, T.useEffect)(() => {
-            c && q();
+          (0, _.useEffect)(() => {
+            l && J();
           }, []);
-          const G = (0, T.useRef)([]),
-            Y = () => u(G.current.map((y) => y.value)),
-            z = (y) => {
-              const L = y.target.value;
-              if (L && j && !j(L)) return;
-              const N = y.target.nextElementSibling;
-              y.target.value && N && N.focus(), Y();
+          const F = (0, _.useRef)([]),
+            W = () => c(F.current.map((R) => R.value)),
+            O = (R) => {
+              const E = R.target.value;
+              if (E && A && !A(E)) return;
+              const k = R.target.nextElementSibling;
+              R.target.value && k && k.focus(), W();
             },
-            ce = (y) => {
-              G.current.findIndex((L) => !!L.value) === -1
-                ? G.current[0]?.select()
-                : y.target.select();
+            le = (R) => {
+              F.current.findIndex((E) => !!E.value) === -1
+                ? F.current[0]?.select()
+                : R.target.select();
             },
-            q = () => {
-              const y = G.current.find((L) => !L.value);
-              y ? y.focus() : G.current[G.current.length - 1].focus();
+            J = () => {
+              const R = F.current.find((E) => !E.value);
+              R ? R.focus() : F.current[F.current.length - 1].focus();
             },
-            oe = (y) => {
-              const L = y.target;
-              if (y.key === "Backspace" || y.key === "Delete") {
-                const N =
-                  y.key === "Backspace"
-                    ? L.previousElementSibling
-                    : L.nextElementSibling;
-                L.value === "" &&
-                  N &&
-                  ((N.value = ""), N.focus(), y.preventDefault(), Y());
+            re = (R) => {
+              const E = R.target;
+              if (R.key === "Backspace" || R.key === "Delete") {
+                const k =
+                  R.key === "Backspace"
+                    ? E.previousElementSibling
+                    : E.nextElementSibling;
+                E.value === "" &&
+                  k &&
+                  ((k.value = ""), k.focus(), R.preventDefault(), W());
               } else if (
-                y.key === "ArrowLeft" ||
-                y.key === "ArrowRight" ||
-                y.key === "ArrowUp" ||
-                y.key === "ArrowDown"
+                R.key === "ArrowLeft" ||
+                R.key === "ArrowRight" ||
+                R.key === "ArrowUp" ||
+                R.key === "ArrowDown"
               ) {
-                const N =
-                  y.key === "ArrowLeft" || y.key === "ArrowUp"
-                    ? L.previousElementSibling
-                    : L.nextElementSibling;
-                N && (N.focus(), y.preventDefault());
+                const k =
+                  R.key === "ArrowLeft" || R.key === "ArrowUp"
+                    ? E.previousElementSibling
+                    : E.nextElementSibling;
+                k && (k.focus(), R.preventDefault());
               }
             },
-            M = (y) => {
-              const L = y.clipboardData.getData("Text");
-              let N = y.target,
-                K = 0;
-              for (; N && K < L.length; )
-                N.focus(),
-                  (N.value = L.charAt(K)),
-                  (N = N.nextElementSibling),
-                  K++;
-              Y(), y.preventDefault(), p && p();
+            M = (R) => {
+              const E = R.clipboardData.getData("Text");
+              let k = R.target,
+                G = 0;
+              for (; k && G < E.length; )
+                k.focus(),
+                  (k.value = E.charAt(G)),
+                  (k = k.nextElementSibling),
+                  G++;
+              W(), R.preventDefault(), m && m();
             },
-            X = [];
-          for (let y = 0; y < o; y++)
-            X.push(
+            Y = [];
+          for (let R = 0; R < o; R++)
+            Y.push(
               (0, n.jsx)(
-                Pe.BA,
+                ve.BA,
                 {
                   noFocusRing: !0,
                   type: "text",
                   maxLength: 1,
-                  ref: (L) => {
-                    G.current[y] = L;
+                  ref: (E) => {
+                    E && (F.current[R] = E);
                   },
-                  onChange: z,
-                  onFocus: ce,
-                  onClick: (L) => L.stopPropagation(),
-                  onKeyDown: oe,
+                  onChange: O,
+                  onFocus: le,
+                  onClick: (E) => E.stopPropagation(),
+                  onKeyDown: re,
                   onPaste: M,
-                  value: a[y] ? a[y][0] : "",
+                  value: a[R] ? a[R][0] : "",
                   autoComplete: "none",
-                  autoFocus: y === 0 && c,
-                  disabled: f || R,
-                  className: D().Input,
+                  autoFocus: R === 0 && l,
+                  disabled: d || T,
+                  className: _e().Input,
                 },
-                y,
+                R,
               ),
             );
-          return (0, n.jsxs)(De.Z, {
-            className: (0, F.A)(
-              D().SegmentedCharacterInput,
-              C === "danger" && D().Danger,
-              f && D().Disabled,
-              k && D().BackupCode,
+          return (0, n.jsxs)(X.Z, {
+            className: (0, V.A)(
+              _e().SegmentedCharacterInput,
+              g === "danger" && _e().Danger,
+              d && _e().Disabled,
+              I && _e().BackupCode,
             ),
-            onClick: q,
+            onClick: J,
             children: [
-              R &&
+              T &&
                 (0, n.jsx)("div", {
-                  className: D().Loading,
-                  children: (0, n.jsx)(Je, { size: "small" }),
+                  className: _e().Loading,
+                  children: (0, n.jsx)(s, { size: "small" }),
                 }),
-              X,
+              Y,
             ],
           });
         }
-        var I = w(36118),
-          $ = w(54212),
-          te = w(85599),
-          P = w(71421),
-          x = w(71742),
-          d = w(18210),
-          A = w(30096),
-          v = w(3166),
-          b = w(87242),
-          Z = w(14947),
-          W = w(94354),
-          se = w(35038),
-          ke = w(65946),
-          V = w(73011),
-          B = w(6740),
-          he = w(95039),
-          we = w(3685),
-          Oe = w(44787),
-          Lt = Object.defineProperty,
-          Et = Object.getOwnPropertyDescriptor,
-          ie = (r, o, a, u) => {
+        var Q = w(36118),
+          ht = w(54212),
+          Oe = w(85599),
+          $e = w(71421),
+          L = w(71742),
+          C = w(18210),
+          j = w(30096),
+          b = w(3166),
+          x = w(87242),
+          P = w(14947),
+          U = w(94354),
+          ee = w(35038),
+          ye = w(65946),
+          B = w(30178),
+          N = w(6740),
+          ce = w(95039),
+          Xe = w(3685),
+          je = w(44787),
+          Re = Object.defineProperty,
+          kt = Object.getOwnPropertyDescriptor,
+          ae = (r, o, a, c) => {
             for (
-              var p = u > 1 ? void 0 : u ? Et(o, a) : o, C = r.length - 1, c;
-              C >= 0;
-              C--
+              var m = c > 1 ? void 0 : c ? kt(o, a) : o, g = r.length - 1, l;
+              g >= 0;
+              g--
             )
-              (c = r[C]) && (p = (u ? c(o, a, p) : c(p)) || p);
-            return u && p && Lt(o, a, p), p;
+              (l = r[g]) && (m = (c ? l(o, a, m) : l(m)) || m);
+            return c && m && Re(o, a, m), m;
           };
-        const Mt = 2,
-          Le = 0,
-          be = 1,
-          $e = 2,
-          Ee = 3,
-          Ne = 4,
-          me = 5,
-          Be = 6,
-          st = 7,
-          qe = 8,
-          At = 9,
-          He = 10,
-          Ve = 11,
-          nt = 12,
-          Xe = 13,
-          lt = 14,
-          ot = 15,
-          ct = 16;
-        class ee extends b.gf {
-          m_eStatus = Le;
+        const Dt = 2,
+          be = 0,
+          et = 1,
+          Ze = 2,
+          te = 3,
+          Te = 4,
+          ue = 5,
+          Le = 6,
+          tt = 7,
+          We = 8,
+          Nt = 9,
+          Ee = 10,
+          Me = 11,
+          st = 12,
+          Qe = 13,
+          dt = 14,
+          nt = 15,
+          ft = 16;
+        class q extends x.gf {
+          m_eStatus = be;
           m_steamid;
           m_strAccountName;
           m_strConfirmationAssociatedMessage = "";
@@ -623,236 +1761,237 @@
               o.onDeviceDetails,
               o.onShowAgreement,
             ),
-              (0, Z.Gn)(this),
+              (0, P.Gn)(this),
               (this.m_onLoginComplete = o.onComplete),
               (this.m_onGetMachineAuth = o.onGetMachineAuth);
           }
-          async Start(o, a, u) {
-            if (this.m_eStatus !== Le && this.m_eStatus !== $e)
+          async Start(o, a, c) {
+            if (this.m_eStatus !== be && this.m_eStatus !== Ze)
               return (
-                (0, V.ZI)(
+                (0, B.ZI)(
                   "Cannot start an already started auth session. Create a new session instance.",
                 ),
-                l.Ze
+                y.Ze
               );
-            const p = o.replace(/[^\x00-\x7F]/g, ""),
-              C = a.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
-            if (!p.length || !C.length) return l.nO;
+            const m = o.replace(/[^\x00-\x7F]/g, ""),
+              g = a.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
+            if (!m.length || !g.length) return y.nO;
             if (
-              ((this.m_eStatus = be),
+              ((this.m_eStatus = et),
               (this.m_bUsingCodeOverride = !1),
               o == "anonymous")
             )
               return (
-                this.SetFailureState(b.eF.AnonymousLogin, J.EResult(l.FK)), l.FK
+                this.SetFailureState(x.eF.AnonymousLogin, K.EResult(y.FK)), y.FK
               );
             try {
-              const c = await jt(this.m_transport, p);
-              if (!c)
+              const l = await Bt(this.m_transport, m);
+              if (!l)
                 return (
-                  (0, V.ZI)(
+                  (0, B.ZI)(
                     "Cannot start auth session without a valid RSA key",
                   ),
-                  this.SetFailureState(b.eF.Network, J.EResult(l.Sq)),
-                  l.Sq
+                  this.SetFailureState(x.eF.Network, K.EResult(y.Sq)),
+                  y.Sq
                 );
-              const f = (0, V.P8)(C, c),
-                R = se.w.Init(B.iP);
-              R.SetEMsg(W.Kec),
-                R.Body().set_account_name(p),
-                R.Body().set_encrypted_password(f ?? void 0),
-                R.Body().set_encryption_timestamp(c.timestamp),
-                R.Body().set_remember_login(!!u),
-                R.Body().set_persistence(u ? he.nW : he.fH),
-                R.Body().set_website_id(v.TS.WEBSITE_ID);
+              const d = (0, B.P8)(g, l),
+                T = ee.w.Init(N.iP);
+              T.SetEMsg(U.Kec),
+                T.Body().set_account_name(m),
+                T.Body().set_encrypted_password(d ?? void 0),
+                T.Body().set_encryption_timestamp(l.timestamp),
+                T.Body().set_remember_login(!!c),
+                T.Body().set_persistence(c ? ce.nW : ce.fH),
+                T.Body().set_website_id(b.TS.WEBSITE_ID);
               try {
-                R.Body().set_device_details(await this.GetDeviceDetails());
-              } catch (j) {
-                (0, V.ZI)("Failed to GetDeviceDetails"), (0, V.ZI)(j);
+                T.Body().set_device_details(await this.GetDeviceDetails());
+              } catch (A) {
+                (0, B.ZI)("Failed to GetDeviceDetails"), (0, B.ZI)(A);
               }
               if (
-                (R.Body().set_language((0, Ce.sfN)(v.TS.LANGUAGE)),
+                (T.Body().set_language((0, $.sfN)(b.TS.LANGUAGE)),
                 this.m_onGetMachineAuth != null)
               ) {
-                const j = await this.m_onGetMachineAuth(p);
-                j.eresult == l.R && R.Body().set_guard_data(j.data);
+                const A = await this.m_onGetMachineAuth(m);
+                A.eresult == y.R && T.Body().set_guard_data(A.data);
               }
               await this.m_transport.MakeReady();
-              const k = await B.kX.BeginAuthSessionViaCredentials(
+              const I = await N.kX.BeginAuthSessionViaCredentials(
                 this.m_transport,
-                R,
+                T,
               );
               return (
-                k.DEBUG_LogToConsole(),
-                (0, Z.h5)(async () => {
-                  const j = k.GetEResult(),
-                    G = k.Hdr().transport_error();
-                  if (j !== l.R)
-                    switch (j) {
-                      case l.Um:
-                        return (this.m_eStatus = $e), j;
-                      case l.Sq:
-                      case l.a_:
+                I.DEBUG_LogToConsole(),
+                (0, P.h5)(async () => {
+                  const A = I.GetEResult(),
+                    F = I.Hdr().transport_error();
+                  if (A !== y.R)
+                    switch (A) {
+                      case y.Um:
+                        return (this.m_eStatus = Ze), A;
+                      case y.Sq:
+                      case y.a_:
                         return (
-                          this.SetFailureState(b.eF.Network, J.EResult(l.Sq)), j
+                          this.SetFailureState(x.eF.Network, K.EResult(y.Sq)), A
                         );
-                      case l.h_:
+                      case y.h_:
                         return (
                           this.SetFailureState(
-                            b.eF.RateLimitExceeded,
-                            J.EResult(j),
+                            x.eF.RateLimitExceeded,
+                            K.EResult(A),
                           ),
-                          j
+                          A
                         );
-                      case l.oH:
-                        const L = k.Body().agreement_session_url();
+                      case y.oH: {
+                        const E = I.Body().agreement_session_url();
                         if (
-                          ((0, x.wT)(
-                            !!L,
+                          ((0, L.wT)(
+                            !!E,
                             "Missing agreement session URL for result",
-                            j,
+                            A,
                           ),
                           this.m_onShowAgreement)
                         )
-                          this.m_onShowAgreement(L);
+                          this.m_onShowAgreement(E);
                         else {
-                          const N = document.location.href;
-                          window.location.href = `${L}&redir=${encodeURIComponent(N)}`;
+                          const k = document.location.href;
+                          window.location.href = `${E}&redir=${encodeURIComponent(k)}`;
                         }
                         return (
                           this.m_onCompleteCallback({ bSuccess: !1 }),
-                          (this.m_eStatus = Le),
-                          j
+                          (this.m_eStatus = be),
+                          A
                         );
-                      case l.uN:
+                      }
+                      case y.uN:
                       default:
                         return (
-                          (0, V.ZI)(
-                            `Failed to start auth session. Result: ${j} Transport: ${G}`,
+                          (0, B.ZI)(
+                            `Failed to start auth session. Result: ${A} Transport: ${F}`,
                           ),
                           this.SetFailureState(
-                            b.eF.Generic,
-                            J.EResult(j),
-                            k.Body().extended_error_message(),
+                            x.eF.Generic,
+                            K.EResult(A),
+                            I.Body().extended_error_message(),
                           ),
                           this.m_onCompleteCallback({ bSuccess: !1 }),
-                          j
+                          A
                         );
                     }
                   this.m_strAccountName = o;
                   const {
-                    client_id: Y,
-                    request_id: z,
-                    interval: ce,
-                    allowed_confirmations: q = [],
-                    steamid: oe,
+                    client_id: W,
+                    request_id: O,
+                    interval: le,
+                    allowed_confirmations: J = [],
+                    steamid: re,
                     weak_token: M,
-                  } = k.Body().toObject();
+                  } = I.Body().toObject();
                   if (
-                    ((0, x.wT)(
-                      ce !== void 0 && !!Y && !!oe,
+                    ((0, L.wT)(
+                      le !== void 0 && !!W && !!re,
                       "Missing poll interval, client ID, or steamid for result",
-                      j,
+                      A,
                     ),
-                    (this.m_msPollInterval = ce * 1e3),
-                    (this.m_strClientID = Y),
-                    (this.m_rgRequestID = z),
-                    (this.m_steamid = oe),
+                    (this.m_msPollInterval = le * 1e3),
+                    (this.m_strClientID = W),
+                    (this.m_rgRequestID = O),
+                    (this.m_steamid = re),
                     (this.m_strWeakAuthToken = M ?? ""),
-                    q.find(({ confirmation_type: L }) => L === B.TY.ig))
+                    J.find(({ confirmation_type: E }) => E === N.TY.ig))
                   ) {
-                    const L = new FormData();
-                    L.append("clientid", Y), L.append("steamid", oe);
-                    const N = `${v.TS.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
+                    const E = new FormData();
+                    E.append("clientid", W), E.append("steamid", re);
+                    const k = `${b.TS.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                     try {
                       if (
                         (
-                          await Te().post(N, L, {
+                          await f().post(k, E, {
                             headers: { "Content-Type": "multipart/form-data" },
                             withCredentials: !0,
                           })
-                        ).data.result == l.R
+                        ).data.result == y.R
                       )
                         return (
-                          (this.m_eStatus = Ne), this.StartPolling(!0), l.R
+                          (this.m_eStatus = Te), this.StartPolling(!0), y.R
                         );
-                    } catch (K) {
+                    } catch (G) {
                       if (
-                        ((0, V.tG)(
-                          `checkdevice ajax to ${N} failed: ${K.message}`,
+                        ((0, B.tG)(
+                          `checkdevice ajax to ${k} failed: ${G.message}`,
                         ),
-                        K instanceof E.AxiosError)
+                        G instanceof Ae.AxiosError)
                       ) {
-                        const ge = K;
-                        return ge.response
+                        const pe = G;
+                        return pe.response
                           ? (this.SetFailureState(
-                              b.eF.Network,
-                              J.AjaxFailureWithCode(ge.response.status),
+                              x.eF.Network,
+                              K.AjaxFailureWithCode(pe.response.status),
                             ),
-                            l.Sq)
+                            y.Sq)
                           : (this.SetFailureState(
-                              b.eF.Network,
-                              J.AjaxFailureNoCode(),
+                              x.eF.Network,
+                              K.AjaxFailureNoCode(),
                             ),
-                            l.Sq);
+                            y.Sq);
                       }
                       return (
-                        this.SetFailureState(b.eF.Network, J.EResult(l.eH)),
-                        l.eH
+                        this.SetFailureState(x.eF.Network, K.EResult(y.eH)),
+                        y.eH
                       );
                     }
                   }
-                  const X = It(
-                      q.map(
-                        ({ confirmation_type: L }) => (
-                          (0, x.wT)(
-                            L !== void 0,
+                  const Y = Ht(
+                      J.map(
+                        ({ confirmation_type: E }) => (
+                          (0, L.wT)(
+                            E !== void 0,
                             "Missing confirmation type in allowed confirmations",
                           ),
-                          L
+                          E
                         ),
                       ),
                     ),
-                    y = q.find(({ confirmation_type: L }) => L === X);
+                    R = J.find(({ confirmation_type: E }) => E === Y);
                   switch (
-                    (y &&
-                      y.associated_message &&
+                    (R &&
+                      R.associated_message &&
                       (this.m_strConfirmationAssociatedMessage =
-                        y.associated_message),
-                    X)
+                        R.associated_message),
+                    Y)
                   ) {
-                    case B.TY.WM:
-                      return (this.m_eStatus = Xe), this.StartPolling(), j;
-                    case B.TY.Xs:
-                      this.m_eStatus = Ee;
+                    case N.TY.WM:
+                      return (this.m_eStatus = Qe), this.StartPolling(), A;
+                    case N.TY.Xs:
+                      this.m_eStatus = te;
                       break;
-                    case B.TY.$Y:
-                      (this.m_eStatus = Ne), this.StartPolling(!1);
+                    case N.TY.$Y:
+                      (this.m_eStatus = Te), this.StartPolling(!1);
                       break;
-                    case B.TY.bH:
-                      (this.m_eStatus = me), this.StartPolling(!1);
+                    case N.TY.bH:
+                      (this.m_eStatus = ue), this.StartPolling(!1);
                       break;
-                    case B.TY.x0:
-                      (this.m_eStatus = Be), this.StartPolling(!1);
+                    case N.TY.x0:
+                      (this.m_eStatus = Le), this.StartPolling(!1);
                       break;
                   }
-                  return j;
+                  return A;
                 })
               );
-            } catch (c) {
+            } catch (l) {
               return (
-                (0, V.ZI)(
-                  `Failed to start auth session. Exception: ${JSON.stringify(c)}`,
+                (0, B.ZI)(
+                  `Failed to start auth session. Exception: ${JSON.stringify(l)}`,
                 ),
-                (0, V.tG)(c),
-                this.SetFailureState(b.eF.Generic, J.FailedToStart()),
+                (0, B.tG)(l),
+                this.SetFailureState(x.eF.Generic, K.FailedToStart()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
-                l.zi
+                y.zi
               );
             }
           }
           Stop() {
-            this.StopPolling(), (this.m_eStatus = ct);
+            this.StopPolling(), (this.m_eStatus = ft);
           }
           GetStatus() {
             return this.m_eStatus;
@@ -875,218 +2014,219 @@
           async SendSteamGuardCode(o, a = !0) {
             if (o.length == 0) {
               switch (this.m_eStatus) {
-                case He:
-                  this.m_eStatus = Ee;
-                  break;
-                case Ve:
-                  this.m_eStatus = me;
-                  break;
-                case me:
                 case Ee:
+                  this.m_eStatus = te;
+                  break;
+                case Me:
+                  this.m_eStatus = ue;
+                  break;
+                case ue:
+                case te:
                   break;
                 default:
                   throw new Error("Attempted to clear code in invalid state");
               }
-              return Promise.resolve(l.R);
+              return Promise.resolve(y.R);
             }
             try {
               await this.m_transport.MakeReady();
-              const u = this.m_eStatus === Ee || this.m_eStatus === He,
-                p = se.w.Init(B.Qc);
-              p.SetEMsg(W.Kec),
-                p.Body().set_client_id(this.m_strClientID),
-                p.Body().set_steamid(this.m_steamid),
-                p.Body().set_code(o),
-                p.Body().set_code_type(u ? B.TY.Xs : B.TY.bH);
-              const C = await B.kX.UpdateAuthSessionWithSteamGuardCode(
+              const c = this.m_eStatus === te || this.m_eStatus === Ee,
+                m = ee.w.Init(N.Qc);
+              m.SetEMsg(U.Kec),
+                m.Body().set_client_id(this.m_strClientID),
+                m.Body().set_steamid(this.m_steamid),
+                m.Body().set_code(o),
+                m.Body().set_code_type(c ? N.TY.Xs : N.TY.bH);
+              const g = await N.kX.UpdateAuthSessionWithSteamGuardCode(
                   this.m_transport,
-                  p,
+                  m,
                 ),
-                c = C.GetEResult();
-              if (c !== l.R) {
+                l = g.GetEResult();
+              if (l !== y.R) {
                 if (!a)
                   return (
-                    (0, V.ZI)(
-                      `Failed to automatically update session with local SG info. Result ${c}. Transport ${C.Hdr().transport_error()}`,
+                    (0, B.ZI)(
+                      `Failed to automatically update session with local SG info. Result ${l}. Transport ${g.Hdr().transport_error()}`,
                     ),
-                    c
+                    l
                   );
-                switch (c) {
-                  case l.QR:
-                  case l.b7:
-                    return (this.m_eStatus = u ? He : Ve), c;
-                  case l.ob:
+                switch (l) {
+                  case y.QR:
+                  case y.b7:
+                    return (this.m_eStatus = c ? Ee : Me), l;
+                  case y.ob:
                     return (
-                      this.SetFailureState(b.eF.Expired, J.EResult(c)),
+                      this.SetFailureState(x.eF.Expired, K.EResult(l)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      c
+                      l
                     );
-                  case l.h_:
+                  case y.h_:
                     return (
                       this.SetFailureState(
-                        b.eF.RateLimitExceeded,
-                        J.EResult(c),
+                        x.eF.RateLimitExceeded,
+                        K.EResult(l),
                       ),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      c
+                      l
                     );
-                  case l.oH:
-                    const f = C.Body().agreement_session_url();
+                  case y.oH: {
+                    const d = g.Body().agreement_session_url();
                     if (
-                      ((0, x.wT)(
-                        !!f,
+                      ((0, L.wT)(
+                        !!d,
                         "Missing agreement session URL for result",
-                        c,
+                        l,
                       ),
                       this.m_onShowAgreement)
                     )
-                      this.m_onShowAgreement(f);
+                      this.m_onShowAgreement(d);
                     else {
-                      const R = document.location.href;
-                      window.location.href = `${f}&redir=${encodeURIComponent(R)}`;
+                      const T = document.location.href;
+                      window.location.href = `${d}&redir=${encodeURIComponent(T)}`;
                     }
                     return (
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      (this.m_eStatus = Le),
-                      c
+                      (this.m_eStatus = be),
+                      l
                     );
+                  }
                   default:
                     return (
-                      (0, V.ZI)(
-                        `Failed to update auth session with SG code. Result: ${c}`,
+                      (0, B.ZI)(
+                        `Failed to update auth session with SG code. Result: ${l}`,
                       ),
-                      this.SetFailureState(b.eF.Generic, J.EResult(c)),
+                      this.SetFailureState(x.eF.Generic, K.EResult(l)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      c
+                      l
                     );
                 }
               }
-              return (this.m_eStatus = Xe), this.StartPolling(), c;
-            } catch (u) {
+              return (this.m_eStatus = Qe), this.StartPolling(), l;
+            } catch (c) {
               return (
-                (0, V.ZI)(`Failed to update auth session with SG code. ${u}`),
-                this.SetFailureState(b.eF.Generic, J.FailedToAddCode()),
+                (0, B.ZI)(`Failed to update auth session with SG code. ${c}`),
+                this.SetFailureState(x.eF.Generic, K.FailedToAddCode()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
-                l.zi
+                y.zi
               );
             }
           }
           UseCodeOverride() {
             switch (this.m_eStatus) {
-              case Be:
-                (this.m_bUsingCodeOverride = !0), (this.m_eStatus = me);
+              case Le:
+                (this.m_bUsingCodeOverride = !0), (this.m_eStatus = ue);
                 return;
-              case Ne:
-                (this.m_bUsingCodeOverride = !0), (this.m_eStatus = Ee);
+              case Te:
+                (this.m_bUsingCodeOverride = !0), (this.m_eStatus = te);
                 return;
               default:
-                (0, V.ZI)(
+                (0, B.ZI)(
                   `Don't know how to UseCodeOverride from login session status ${this.m_eStatus}`,
                 );
                 return;
             }
           }
           CantAccessCode() {
-            this.m_eStatus = st;
+            this.m_eStatus = tt;
           }
           async StartMoveAuthenticator() {
-            this.m_weakAuthWebInterface = new we.D(
-              v.TS.WEBAPI_BASE_URL,
+            this.m_weakAuthWebInterface = new Xe.D(
+              b.TS.WEBAPI_BASE_URL,
               this.m_strWeakAuthToken,
             );
             try {
-              const o = se.w.Init(Oe.ot),
-                a = await Oe.fz.RemoveAuthenticatorViaChallengeStart(
+              const o = ee.w.Init(je.ot),
+                a = await je.fz.RemoveAuthenticatorViaChallengeStart(
                   this.m_weakAuthWebInterface.GetServiceTransport(),
                   o,
                 );
-              l.R != a.GetEResult()
+              y.R != a.GetEResult()
                 ? (a.DEBUG_LogToConsole(),
-                  (0, V.ZI)(
+                  (0, B.ZI)(
                     "An unexpected error occured while adding an authenticator",
                     a.GetEResult(),
                   ),
                   this.SetFailureState(
-                    b.eF.MoveAuthenticator,
-                    J.EResult(a.GetEResult()),
+                    x.eF.MoveAuthenticator,
+                    K.EResult(a.GetEResult()),
                   ))
-                : (this.m_eStatus = qe);
+                : (this.m_eStatus = We);
             } catch (o) {
-              (0, V.ZI)(
+              (0, B.ZI)(
                 "An unexpected error occured while moving an authenticator",
                 o,
               ),
-                this.SetFailureState(b.eF.MoveAuthenticator, J.EResult(l.zi));
+                this.SetFailureState(x.eF.MoveAuthenticator, K.EResult(y.zi));
             }
           }
           async ResendMoveCode() {
-            (0, x.wT)(
+            (0, L.wT)(
               !!this.m_weakAuthWebInterface,
               "Resending move code before StartMoveAuthenticator",
             );
-            const o = se.w.Init(Oe.ot),
-              a = await Oe.fz.RemoveAuthenticatorViaChallengeStart(
+            const o = ee.w.Init(je.ot),
+              a = await je.fz.RemoveAuthenticatorViaChallengeStart(
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 o,
               );
-            l.R != a.GetEResult() &&
+            y.R != a.GetEResult() &&
               (a.DEBUG_LogToConsole(),
-              (0, V.ZI)(
+              (0, B.ZI)(
                 "An unexpected error occured while adding an authenticator",
                 a.GetEResult(),
               )),
-              (this.m_eStatus = qe);
+              (this.m_eStatus = We);
           }
           async FinishMoveAuthenticator(o) {
-            (0, x.wT)(
+            (0, L.wT)(
               !!this.m_weakAuthWebInterface,
               "Finishing authenticator move before StartMoveAuthenticator",
             );
-            const a = se.w.Init(Oe.bv);
+            const a = ee.w.Init(je.bv);
             a.Body().set_sms_code(o),
               a.Body().set_generate_new_token(!0),
-              a.Body().set_version(Mt);
-            const u = await Oe.fz.RemoveAuthenticatorViaChallengeContinue(
+              a.Body().set_version(Dt);
+            const c = await je.fz.RemoveAuthenticatorViaChallengeContinue(
               this.m_weakAuthWebInterface.GetServiceTransport(),
               a,
             );
-            if (l.c3 == u.GetEResult()) this.m_eStatus = nt;
-            else if (!u.Body().success())
-              u.DEBUG_LogToConsole(),
-                (0, V.ZI)(
+            if (y.c3 == c.GetEResult()) this.m_eStatus = st;
+            else if (!c.Body().success())
+              c.DEBUG_LogToConsole(),
+                (0, B.ZI)(
                   "Error when calling RemoveAuthenticatorViaChallengeContinue",
-                  u.GetEResult(),
+                  c.GetEResult(),
                 ),
                 this.SetFailureState(
-                  b.eF.MoveAuthenticator,
-                  J.EResult(u.GetEResult()),
+                  x.eF.MoveAuthenticator,
+                  K.EResult(c.GetEResult()),
                 );
             else {
-              u.DEBUG_LogToConsole();
-              const p = u.Body().replacement_token();
-              (0, x.wT)(
-                !!p,
+              c.DEBUG_LogToConsole();
+              const m = c.Body().replacement_token();
+              (0, L.wT)(
+                !!m,
                 "Missing replacement token on successful authenticator move",
               ),
-                (this.m_replacementAuthenticator = (0, b.FU)(p.toObject())),
-                (this.m_eStatus = At),
+                (this.m_replacementAuthenticator = (0, x.FU)(m.toObject())),
+                (this.m_eStatus = Nt),
                 (this.m_bUsingCodeOverride = !1);
             }
           }
           FinishMoveRecovery() {
-            this.m_eStatus = me;
+            this.m_eStatus = ue;
           }
           BCanGoBack() {
             switch (this.m_eStatus) {
-              case me:
-              case Ve:
+              case ue:
+              case Me:
+              case te:
               case Ee:
-              case He:
-              case Be:
-              case Ne:
+              case Le:
+              case Te:
+              case tt:
+              case We:
               case st:
-              case qe:
-              case nt:
                 return !0;
               default:
                 return !1;
@@ -1094,41 +2234,41 @@
           }
           GoBack() {
             switch (this.m_eStatus) {
-              case Be:
-              case Ne:
-                this.m_eStatus = Le;
+              case Le:
+              case Te:
+                this.m_eStatus = be;
                 break;
-              case me:
-              case Ve:
-                this.m_eStatus = this.m_bUsingCodeOverride ? Be : Le;
+              case ue:
+              case Me:
+                this.m_eStatus = this.m_bUsingCodeOverride ? Le : be;
                 break;
+              case tt:
+              case We:
               case st:
-              case qe:
-              case nt:
-                this.m_eStatus = (this.m_bUsingCodeOverride, me);
+                this.m_eStatus = (this.m_bUsingCodeOverride, ue);
                 break;
+              case te:
               case Ee:
-              case He:
-                this.m_eStatus = this.m_bUsingCodeOverride ? Ne : Le;
+                this.m_eStatus = this.m_bUsingCodeOverride ? Te : be;
                 break;
               default:
-                (0, V.ZI)(
+                (0, B.ZI)(
                   `Don't know how to GoBack from login session status ${this.m_eStatus}`,
                 );
                 return;
             }
           }
-          SetFailureState(o, a, u = "") {
-            (this.m_eStatus = ot),
+          SetFailureState(o, a, c = "") {
+            (this.m_eStatus = nt),
               (this.m_eFailureState = o),
               (this.m_strErrorReference = a),
-              (this.m_strExtendedErrorMessage = u);
+              (this.m_strExtendedErrorMessage = c);
           }
           onAuthComplete = (o) => {
-            this.m_eStatus = o.bSuccess ? lt : ot;
+            this.m_eStatus = o.bSuccess ? dt : nt;
             let a;
             o.bSuccess
-              ? ((0, x.wT)(
+              ? ((0, L.wT)(
                   !!this.m_strAccountName && !!this.m_steamid,
                   "Missing account name or steamid on auth success",
                 ),
@@ -1144,68 +2284,68 @@
             this.m_onLoginComplete = o;
           }
         }
-        ie([Z.sH], ee.prototype, "m_eStatus", 2),
-          ie([Z.sH], ee.prototype, "m_strErrorReference", 2),
-          ie([A.oI], ee.prototype, "Start", 1),
-          ie([A.oI], ee.prototype, "SendSteamGuardCode", 1),
-          ie([A.oI], ee.prototype, "UseCodeOverride", 1),
-          ie([A.oI], ee.prototype, "CantAccessCode", 1),
-          ie([A.oI], ee.prototype, "StartMoveAuthenticator", 1),
-          ie([A.oI], ee.prototype, "ResendMoveCode", 1),
-          ie([A.oI], ee.prototype, "FinishMoveAuthenticator", 1),
-          ie([A.oI], ee.prototype, "FinishMoveRecovery", 1),
-          ie([A.oI], ee.prototype, "GoBack", 1),
-          ie([Z.XI], ee.prototype, "SetFailureState", 1),
-          ie([A.oI], ee.prototype, "SetOnLoginComplete", 1);
-        async function jt(r, o) {
-          const a = se.w.Init(B.qu);
-          a.Body().set_account_name(o), a.SetEMsg(W.Kec);
+        ae([P.sH], q.prototype, "m_eStatus", 2),
+          ae([P.sH], q.prototype, "m_strErrorReference", 2),
+          ae([j.oI], q.prototype, "Start", 1),
+          ae([j.oI], q.prototype, "SendSteamGuardCode", 1),
+          ae([j.oI], q.prototype, "UseCodeOverride", 1),
+          ae([j.oI], q.prototype, "CantAccessCode", 1),
+          ae([j.oI], q.prototype, "StartMoveAuthenticator", 1),
+          ae([j.oI], q.prototype, "ResendMoveCode", 1),
+          ae([j.oI], q.prototype, "FinishMoveAuthenticator", 1),
+          ae([j.oI], q.prototype, "FinishMoveRecovery", 1),
+          ae([j.oI], q.prototype, "GoBack", 1),
+          ae([P.XI], q.prototype, "SetFailureState", 1),
+          ae([j.oI], q.prototype, "SetOnLoginComplete", 1);
+        async function Bt(r, o) {
+          const a = ee.w.Init(N.qu);
+          a.Body().set_account_name(o), a.SetEMsg(U.Kec);
           try {
             await r.MakeReady();
-            const u = await B.kX.GetPasswordRSAPublicKey(r, a);
-            if ((u.DEBUG_LogToConsole(), u.GetEResult() !== l.R))
+            const c = await N.kX.GetPasswordRSAPublicKey(r, a);
+            if ((c.DEBUG_LogToConsole(), c.GetEResult() !== y.R))
               return (
-                (0, V.ZI)(
-                  `Failed to get RSA key with EResult: ${u.GetEResult()}`,
+                (0, B.ZI)(
+                  `Failed to get RSA key with EResult: ${c.GetEResult()}`,
                 ),
                 null
               );
             const {
-              publickey_exp: p,
-              publickey_mod: C,
-              timestamp: c,
-            } = u.Body().toObject();
-            return !p || !C || !c
-              ? ((0, V.ZI)(
-                  `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: p, publickey_mod: C, timestamp: c })}`,
+              publickey_exp: m,
+              publickey_mod: g,
+              timestamp: l,
+            } = c.Body().toObject();
+            return !m || !g || !l
+              ? ((0, B.ZI)(
+                  `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: m, publickey_mod: g, timestamp: l })}`,
                 ),
                 null)
-              : { publickey_exp: p, publickey_mod: C, timestamp: c };
-          } catch (u) {
+              : { publickey_exp: m, publickey_mod: g, timestamp: l };
+          } catch (c) {
             return (
-              (0, V.ZI)(`Failed to get RSA key: ${JSON.stringify(u)}`), null
+              (0, B.ZI)(`Failed to get RSA key: ${JSON.stringify(c)}`), null
             );
           }
         }
-        const ut = [
-          B.TY.x0,
-          B.TY.bH,
-          B.TY.Xs,
-          B.TY.WM,
-          B.TY.oP,
-          B.TY.$Y,
+        const mt = [
+          N.TY.x0,
+          N.TY.bH,
+          N.TY.Xs,
+          N.TY.WM,
+          N.TY.oP,
+          N.TY.$Y,
         ].reduce((r, o, a) => ((r[o] = a), r), {});
-        function It(r) {
-          let o = r[0] || B.TY.oP;
-          return r.length > 1 && (o = r.sort((a, u) => ut[a] - ut[u])[0]), o;
+        function Ht(r) {
+          let o = r[0] || N.TY.oP;
+          return r.length > 1 && (o = r.sort((a, c) => mt[a] - mt[c])[0]), o;
         }
-        function Dt(r) {
-          const [o, a] = (0, T.useState)(new ee(r));
+        function Vt(r) {
+          const [o, a] = (0, _.useState)(new q(r));
           return (
-            (0, T.useEffect)(() => {
+            (0, _.useEffect)(() => {
               o?.SetOnLoginComplete(r.onComplete);
             }, [o, r.onComplete]),
-            (0, ke.q3)(() => ({
+            (0, ye.q3)(() => ({
               strAccountName: o.GetAccountName(),
               steamid: o.GetSteamID(),
               eFailureState: o.GetFailureState(),
@@ -1224,120 +2364,120 @@
               finishMoveAuthenticator: o.FinishMoveAuthenticator,
               finishMoveRecovery: o.FinishMoveRecovery,
               replacementAuthenticator: o.GetReplacementAuthenticator(),
-              reset: () => a(new ee(r)),
+              reset: () => a(new q(r)),
               goBack: o.GoBack,
               setTokenToRevoke: o.SetTokenToRevoke,
             }))
           );
         }
-        function rt(r) {
+        function ot(r) {
           return r ? 7 : 5;
         }
-        function ht(r, o) {
-          return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(r) && r.length <= rt(o);
+        function pt(r, o) {
+          return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(r) && r.length <= ot(o);
         }
-        function dt(r, o) {
-          return ht(r, o) && r.length === rt(o);
+        function gt(r, o) {
+          return pt(r, o) && r.length === ot(o);
         }
-        const J = {
+        const K = {
           EResult: (r) => `e${r}`,
           FailedToStart: () => "c-fts",
           FailedToAddCode: () => "c-ftac",
           AjaxFailureNoCode: () => "af",
           AjaxFailureWithCode: (r) => `af-${r}`,
         };
-        var kt = Object.defineProperty,
-          ft = Object.getOwnPropertyDescriptor,
-          Nt = (r, o, a, u) => {
+        var Ft = Object.defineProperty,
+          rt = Object.getOwnPropertyDescriptor,
+          Pt = (r, o, a, c) => {
             for (
-              var p = u > 1 ? void 0 : u ? ft(o, a) : o, C = r.length - 1, c;
-              C >= 0;
-              C--
+              var m = c > 1 ? void 0 : c ? rt(o, a) : o, g = r.length - 1, l;
+              g >= 0;
+              g--
             )
-              (c = r[C]) && (p = (u ? c(o, a, p) : c(p)) || p);
-            return u && p && kt(o, a, p), p;
+              (l = r[g]) && (m = (c ? l(o, a, m) : l(m)) || m);
+            return c && m && Ft(o, a, m), m;
           };
-        const Qe = 0,
-          mt = 1,
-          pt = 2,
-          gt = 3,
-          Ct = 4,
-          Bt = 5;
-        class it extends b.gf {
-          m_eStatus = Qe;
+        const Be = 0,
+          Ct = 1,
+          it = 2,
+          St = 3,
+          vt = 4,
+          Gt = 5;
+        class at extends x.gf {
+          m_eStatus = Be;
           constructor(o) {
             super(
               o.transport,
               (a) => {
-                (this.m_eStatus = a.bSuccess ? gt : Ct), o.onComplete(a);
+                (this.m_eStatus = a.bSuccess ? St : vt), o.onComplete(a);
               },
               o.onDeviceDetails,
             ),
-              (0, Z.Gn)(this);
+              (0, P.Gn)(this);
           }
           async Start() {
-            if (this.m_eStatus !== Qe)
+            if (this.m_eStatus !== Be)
               return (
                 console.error(
                   "Cannot start an already started auth session. Create a new session instance.",
                 ),
-                l.zi
+                y.zi
               );
-            this.m_eStatus = mt;
+            this.m_eStatus = Ct;
             try {
               await this.m_transport.MakeReady();
-              const o = se.w.Init(B.R9);
-              o.SetEMsg(W.Kec);
+              const o = ee.w.Init(N.R9);
+              o.SetEMsg(U.Kec);
               try {
                 o.Body().set_device_details(await this.GetDeviceDetails());
-              } catch (k) {
-                console.error("Failed to GetDeviceDetails"), console.log(k);
+              } catch (I) {
+                console.error("Failed to GetDeviceDetails"), console.log(I);
               }
-              o.Body().set_website_id(v.TS.WEBSITE_ID);
-              const a = await B.kX.BeginAuthSessionViaQR(this.m_transport, o),
-                u = a.GetEResult(),
-                p = a.Hdr().transport_error();
-              if (u !== l.R)
+              o.Body().set_website_id(b.TS.WEBSITE_ID);
+              const a = await N.kX.BeginAuthSessionViaQR(this.m_transport, o),
+                c = a.GetEResult(),
+                m = a.Hdr().transport_error();
+              if (c !== y.R)
                 return (
                   console.error(
-                    `Failed to start auth session. Result: ${u} Transport: ${p}`,
+                    `Failed to start auth session. Result: ${c} Transport: ${m}`,
                   ),
-                  (this.m_eFailureState = b.eF.Generic),
+                  (this.m_eFailureState = x.eF.Generic),
                   this.m_onCompleteCallback({ bSuccess: !1 }),
-                  u
+                  c
                 );
               const {
-                client_id: C,
-                challenge_url: c,
-                interval: f,
-                request_id: R,
+                client_id: g,
+                challenge_url: l,
+                interval: d,
+                request_id: T,
               } = a.Body().toObject();
               return (
-                (0, x.wT)(
-                  f !== void 0,
+                (0, L.wT)(
+                  d !== void 0,
                   "Missing poll interval for QR auth session",
                 ),
-                (this.m_strClientID = C),
-                (this.m_strChallengeURL = c),
-                (this.m_msPollInterval = f * 1e3),
-                (this.m_rgRequestID = R),
-                (this.m_eStatus = pt),
+                (this.m_strClientID = g),
+                (this.m_strChallengeURL = l),
+                (this.m_msPollInterval = d * 1e3),
+                (this.m_rgRequestID = T),
+                (this.m_eStatus = it),
                 this.StartPolling(!1),
-                u
+                c
               );
             } catch (o) {
               return (
                 console.error(
                   `Failed to start auth session: ${JSON.stringify(o)}`,
                 ),
-                (this.m_eFailureState = b.eF.Generic),
+                (this.m_eFailureState = x.eF.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
-                l.zi
+                y.zi
               );
             }
           }
           Stop() {
-            this.StopPolling(), (this.m_eStatus = Bt);
+            this.StopPolling(), (this.m_eStatus = Gt);
           }
           GetChallengeURL() {
             return this.m_strChallengeURL;
@@ -1349,11 +2489,11 @@
             return this.m_eStatus;
           }
         }
-        Nt([Z.sH], it.prototype, "m_eStatus", 2);
-        function Ht(r) {
-          const [o, a] = (0, T.useState)(new it(r));
+        Pt([P.sH], at.prototype, "m_eStatus", 2);
+        function Ut(r) {
+          const [o, a] = (0, _.useState)(new at(r));
           return (
-            (0, T.useEffect)(
+            (0, _.useEffect)(
               () => (
                 o.Start(),
                 () => {
@@ -1362,18 +2502,18 @@
               ),
               [o],
             ),
-            (0, ke.q3)(() => ({
+            (0, ye.q3)(() => ({
               strChallengeURL: o.GetChallengeURL(),
               strClientID: o.GetClientID(),
               eFailureState: o.GetFailureState(),
               eStatus: o.GetStatus(),
               bHadRemoteInteraction: o.BHadRemoteInteraction(),
-              reset: () => a(new it(r)),
+              reset: () => a(new at(r)),
               setTokenToRevoke: o.SetTokenToRevoke,
             }))
           );
         }
-        function ms(r) {
+        function Ls(r) {
           switch (r) {
             case k_EUniverseDev:
               return "dev";
@@ -1385,8 +2525,8 @@
               return "unknown";
           }
         }
-        async function St() {
-          const [r, o, a, u] = await Promise.all([
+        async function _t() {
+          const [r, o, a, c] = await Promise.all([
             SteamClient.System.GetOSType(),
             SteamClient.System.GetSystemInfo(),
             SteamClient?.Auth?.GetLocalHostname?.() ?? "",
@@ -1395,377 +2535,377 @@
           return {
             os_type: r,
             device_friendly_name: a,
-            machine_id: u,
-            platform_type: B.SS.w0,
+            machine_id: c,
+            platform_type: N.SS.w0,
             gaming_device_type: o.eGamingDeviceType,
           };
         }
-        async function vt() {
+        async function bt() {
           return {
             device_friendly_name: window.navigator.userAgent,
-            platform_type: B.SS.tS,
+            platform_type: N.SS.tS,
           };
         }
-        function Vt(r) {
+        function Ot(r) {
           const {
               onSuccess: o,
               secureComputer: a = !0,
-              isProbablySharedPC: u = !1,
+              isProbablySharedPC: c = !1,
             } = r,
-            p = (0, T.useCallback)(
-              (y) => {
-                if (y.bSuccess) {
+            m = (0, _.useCallback)(
+              (R) => {
+                if (R.bSuccess) {
                   const {
-                    strRefreshToken: L,
-                    strAccessToken: N,
-                    strAccountName: K,
-                    strNewGuardData: ge,
-                  } = y;
+                    strRefreshToken: E,
+                    strAccessToken: k,
+                    strAccountName: G,
+                    strNewGuardData: pe,
+                  } = R;
                   o({
-                    strRefreshToken: L,
-                    strAccessToken: N,
-                    strAccountName: K,
-                    strNewGuardData: ge,
+                    strRefreshToken: E,
+                    strAccessToken: k,
+                    strAccountName: G,
+                    strNewGuardData: pe,
                   });
                 }
               },
               [o],
             ),
-            C = Dt({
+            g = Vt({
               transport: r.transport,
-              onComplete: p,
+              onComplete: m,
               onDeviceDetails: r.onDeviceDetails,
               onGetMachineAuth: r.onGetMachineAuth,
               onShowAgreement: r.onShowAgreement,
             }),
-            [c, f] = (0, T.useState)(Qe),
-            R = "Login_RememberMeSetting",
-            [k, j] = (0, T.useState)(
+            [l, d] = (0, _.useState)(Be),
+            T = "Login_RememberMeSetting",
+            [I, A] = (0, _.useState)(
               r.refreshInfo?.account_name ?? r.defaultAccountName ?? "",
             ),
-            [G, Y] = (0, T.useState)(""),
-            [z, ce] = (0, T.useState)(
-              a && !u && localStorage?.getItem(R) != "0",
+            [F, W] = (0, _.useState)(""),
+            [O, le] = (0, _.useState)(
+              a && !c && localStorage?.getItem(T) != "0",
             ),
-            q = !(C.eStatus === Le || C.eStatus === be || C.eStatus === $e),
-            oe = () => (!k || !G ? Promise.resolve(l.nO) : C.start(k, G, z)),
+            J = !(g.eStatus === be || g.eStatus === et || g.eStatus === Ze),
+            re = () => (!I || !F ? Promise.resolve(y.nO) : g.start(I, F, O)),
             M = () => {
-              (0, V.tG)(`Logging in offline with username ${k}`),
-                SteamClient.User.SetLoginCredentials(k, G, z),
+              (0, B.tG)(`Logging in offline with username ${I}`),
+                SteamClient.User.SetLoginCredentials(I, F, O),
                 SteamClient.User.StartOffline(!0);
             };
           return (
-            (0, T.useEffect)(() => {
+            (0, _.useEffect)(() => {
               r.refreshInfo?.login_token_id &&
-                C.setTokenToRevoke(r.refreshInfo.login_token_id);
-            }, [r.refreshInfo, C]),
+                g.setTokenToRevoke(r.refreshInfo.login_token_id);
+            }, [r.refreshInfo, g]),
             {
-              password: C,
-              onComplete: p,
-              eQRStatus: c,
-              onQRStatusChange: f,
-              strAccountName: k,
-              onAccountNameChange: j,
-              strPassword: G,
-              onPasswordChange: Y,
-              bRememberMe: z,
-              onRememberMeChange: (y) => {
-                ce(y), localStorage?.setItem(R, y ? "1" : "0");
+              password: g,
+              onComplete: m,
+              eQRStatus: l,
+              onQRStatusChange: d,
+              strAccountName: I,
+              onAccountNameChange: A,
+              strPassword: F,
+              onPasswordChange: W,
+              bRememberMe: O,
+              onRememberMeChange: (R) => {
+                le(R), localStorage?.setItem(T, R ? "1" : "0");
               },
-              onPasswordSubmit: oe,
-              bInPasswordFlow: q,
+              onPasswordSubmit: re,
+              bInPasswordFlow: J,
               onTryOffline: M,
             }
           );
         }
-        function Ft(r, o = "") {
+        function Zt(r, o = "") {
           let a = { title: "", description: "" };
           switch (r) {
-            case b.eF.None:
+            case x.eF.None:
               return { title: "", description: "" };
-            case b.eF.Expired:
+            case x.eF.Expired:
               a = {
-                title: (0, d.we)("#Login_Error_Expired_Title"),
-                description: (0, d.we)("#Login_Error_Expired_Description"),
+                title: (0, C.we)("#Login_Error_Expired_Title"),
+                description: (0, C.we)("#Login_Error_Expired_Description"),
               };
               break;
-            case b.eF.Network:
+            case x.eF.Network:
               a = {
-                title: (0, d.we)("#Login_Error_Network_Title"),
-                description: (0, d.we)("#Login_Error_Network_Description"),
+                title: (0, C.we)("#Login_Error_Network_Title"),
+                description: (0, C.we)("#Login_Error_Network_Description"),
               };
               break;
-            case b.eF.MoveAuthenticator:
+            case x.eF.MoveAuthenticator:
               a = {
-                title: (0, d.we)("#Error_Generic"),
-                description: (0, d.we)(
+                title: (0, C.we)("#Error_Generic"),
+                description: (0, C.we)(
                   "#Login_Error_MoveAuthenticator_Description",
                 ),
               };
               break;
-            case b.eF.RateLimitExceeded:
+            case x.eF.RateLimitExceeded:
               a = {
-                title: (0, d.we)("#Login_Error_RateLimit_Title"),
-                description: (0, d.we)("#Login_Error_RateLimit_Description"),
+                title: (0, C.we)("#Login_Error_RateLimit_Title"),
+                description: (0, C.we)("#Login_Error_RateLimit_Description"),
               };
               break;
-            case b.eF.AnonymousLogin:
+            case x.eF.AnonymousLogin:
               a = {
-                title: (0, d.we)("#Login_Error_Anonymous_Title"),
-                description: (0, d.we)("#Login_Error_Anonymous_Description"),
+                title: (0, C.we)("#Login_Error_Anonymous_Title"),
+                description: (0, C.we)("#Login_Error_Anonymous_Description"),
               };
               break;
-            case b.eF.Generic:
+            case x.eF.Generic:
             default:
               a = {
-                title: (0, d.we)("#Error_Generic"),
-                description: (0, d.we)("#Login_Error_Default_Description"),
+                title: (0, C.we)("#Error_Generic"),
+                description: (0, C.we)("#Login_Error_Default_Description"),
               };
               break;
           }
           return o && (a.description = o), a;
         }
-        var Pt = w(78412),
-          g = w.n(Pt),
-          Gt = w(56589),
-          Ot = w.n(Gt),
-          Ut = w(5804),
-          _t = w.n(Ut),
-          wt = ((r) => (
+        var Wt = w(78412),
+          p = w.n(Wt),
+          Qt = w(56589),
+          zt = w.n(Qt),
+          Kt = w(5804),
+          wt = w.n(Kt),
+          xt = ((r) => (
             (r[(r.L = 1)] = "L"),
             (r[(r.M = 0)] = "M"),
             (r[(r.Q = 3)] = "Q"),
             (r[(r.H = 2)] = "H"),
             r
-          ))(wt || {});
-        function Zt(r, o, a) {
-          const u = r.length,
-            p = r[0].length,
-            C = (u + 2) * p,
-            c = new Uint8Array(40 + C);
-          let f = 0;
-          (c[f++] = 71),
-            (c[f++] = 73),
-            (c[f++] = 70),
-            (c[f++] = 56),
-            (c[f++] = 57),
-            (c[f++] = 97),
-            (c[f++] = u),
-            (c[f++] = 0),
-            (c[f++] = p),
-            (c[f++] = 0),
-            (0, x.wT)(
+          ))(xt || {});
+        function Jt(r, o, a) {
+          const c = r.length,
+            m = r[0].length,
+            g = (c + 2) * m,
+            l = new Uint8Array(40 + g);
+          let d = 0;
+          (l[d++] = 71),
+            (l[d++] = 73),
+            (l[d++] = 70),
+            (l[d++] = 56),
+            (l[d++] = 57),
+            (l[d++] = 97),
+            (l[d++] = c),
+            (l[d++] = 0),
+            (l[d++] = m),
+            (l[d++] = 0),
+            (0, L.wT)(
               o != "transparent" || a != "transparent",
               "Trying to use transparent for both colors in QR",
             ),
-            (c[f++] = 161),
-            (c[f++] = 0),
-            (c[f++] = 0),
+            (l[d++] = 161),
+            (l[d++] = 0),
+            (l[d++] = 0),
             o == "transparent"
-              ? ((c[f++] = 0), (c[f++] = 0), (c[f++] = 0))
-              : ((c[f++] = o[0]), (c[f++] = o[1]), (c[f++] = o[2])),
+              ? ((l[d++] = 0), (l[d++] = 0), (l[d++] = 0))
+              : ((l[d++] = o[0]), (l[d++] = o[1]), (l[d++] = o[2])),
             a == "transparent"
-              ? ((c[f++] = 0), (c[f++] = 0), (c[f++] = 0))
-              : ((c[f++] = a[0]), (c[f++] = a[1]), (c[f++] = a[2])),
-            (c[f++] = 255),
-            (c[f++] = 255),
-            (c[f++] = 255),
-            (c[f++] = 255),
-            (c[f++] = 255),
-            (c[f++] = 255),
+              ? ((l[d++] = 0), (l[d++] = 0), (l[d++] = 0))
+              : ((l[d++] = a[0]), (l[d++] = a[1]), (l[d++] = a[2])),
+            (l[d++] = 255),
+            (l[d++] = 255),
+            (l[d++] = 255),
+            (l[d++] = 255),
+            (l[d++] = 255),
+            (l[d++] = 255),
             (o == "transparent" || a == "transparent") &&
-              ((c[f++] = 33),
-              (c[f++] = 249),
-              (c[f++] = 4),
-              (c[f++] = 1),
-              (c[f++] = 0),
-              (c[f++] = 0),
-              (c[f++] = o == "transparent" ? 0 : 1),
-              (c[f++] = 0)),
-            (c[f++] = 44),
-            (c[f++] = 0),
-            (c[f++] = 0),
-            (c[f++] = 0),
-            (c[f++] = 0),
-            (c[f++] = u),
-            (c[f++] = 0),
-            (c[f++] = p),
-            (c[f++] = 0),
-            (c[f++] = 0);
-          const R = 7;
-          c[f++] = R;
-          for (let k = 0; k < r.length; k++) {
-            (c[f++] = u + 1), (c[f++] = 2 ** R);
-            for (let j = 0; j < r.length; j++) c[f++] = r[k][j] ? 0 : 1;
+              ((l[d++] = 33),
+              (l[d++] = 249),
+              (l[d++] = 4),
+              (l[d++] = 1),
+              (l[d++] = 0),
+              (l[d++] = 0),
+              (l[d++] = o == "transparent" ? 0 : 1),
+              (l[d++] = 0)),
+            (l[d++] = 44),
+            (l[d++] = 0),
+            (l[d++] = 0),
+            (l[d++] = 0),
+            (l[d++] = 0),
+            (l[d++] = c),
+            (l[d++] = 0),
+            (l[d++] = m),
+            (l[d++] = 0),
+            (l[d++] = 0);
+          const T = 7;
+          l[d++] = T;
+          for (let I = 0; I < r.length; I++) {
+            (l[d++] = c + 1), (l[d++] = 2 ** T);
+            for (let A = 0; A < r.length; A++) l[d++] = r[I][A] ? 0 : 1;
           }
           return (
-            (c[f++] = 1), (c[f++] = 2 ** R + 1), (c[f++] = 0), (c[f++] = 59), c
+            (l[d++] = 1), (l[d++] = 2 ** T + 1), (l[d++] = 0), (l[d++] = 59), l
           );
         }
-        function Wt(
+        function Yt(
           r,
           {
             activeBitColor: o = [33, 35, 40],
             inactiveBitColor: a = [255, 255, 255],
-            borderWidth: u = 3,
+            borderWidth: c = 3,
           } = {},
-          p = {},
+          m = {},
         ) {
-          const C = Ot()(r, p).modules;
-          if (!C) return null;
-          let c = [];
-          for (let f = 0; f < u; f++) c.push(Array(C.length + u * 2).fill(!1));
-          for (let f = 0; f < C.length; f++)
-            c.push([
-              ...Array.from({ length: u }, () => !1),
-              ...C[f],
-              ...Array.from({ length: u }, () => !1),
+          const g = zt()(r, m).modules;
+          if (!g) return null;
+          let l = [];
+          for (let d = 0; d < c; d++) l.push(Array(g.length + c * 2).fill(!1));
+          for (let d = 0; d < g.length; d++)
+            l.push([
+              ...Array.from({ length: c }, () => !1),
+              ...g[d],
+              ...Array.from({ length: c }, () => !1),
             ]);
-          for (let f = 0; f < u; f++) c.push(Array(C.length + u * 2).fill(!1));
-          return Zt(c, o, a);
+          for (let d = 0; d < c; d++) l.push(Array(g.length + c * 2).fill(!1));
+          return Jt(l, o, a);
         }
-        function Qt(r) {
+        function qt(r) {
           let {
             quality: o = 0,
             children: a,
-            className: u,
-            activeBitColor: p = [33, 35, 40],
-            inactiveBitColor: C = [255, 255, 255],
-            borderWidth: c = 3,
-            typeNumber: f = 6,
+            className: c,
+            activeBitColor: m = [33, 35, 40],
+            inactiveBitColor: g = [255, 255, 255],
+            borderWidth: l = 3,
+            typeNumber: d = 6,
           } = r;
-          const R = ze(a, {
-            typeNumber: f,
+          const T = $t(a, {
+            typeNumber: d,
             errorCorrectLevel: o,
-            activeBitColor: p,
-            inactiveBitColor: C,
-            borderWidth: c,
+            activeBitColor: m,
+            inactiveBitColor: g,
+            borderWidth: l,
           });
-          if (!R) return null;
-          const k = new Blob([R], { type: "image/gif" }),
-            j = URL.createObjectURL(k),
-            G = `rgb(${C[0]}, ${C[1]}, ${C[2]})`;
+          if (!T) return null;
+          const I = new Blob([T], { type: "image/gif" }),
+            A = URL.createObjectURL(I),
+            F = `rgb(${g[0]}, ${g[1]}, ${g[2]})`;
           return (0, n.jsx)("div", {
-            className: (0, F.A)(_t().QRBits, u),
-            style: { "--qr-bright-color": G },
+            className: (0, V.A)(wt().QRBits, c),
+            style: { "--qr-bright-color": F },
             children: (0, n.jsx)("img", {
-              className: _t().QRImg,
-              src: j,
+              className: wt().QRImg,
+              src: A,
               alt: "",
             }),
           });
         }
-        function ze(r, o) {
+        function $t(r, o) {
           const {
             typeNumber: a,
-            errorCorrectLevel: u,
-            activeBitColor: p,
-            inactiveBitColor: C,
-            borderWidth: c,
+            errorCorrectLevel: c,
+            activeBitColor: m,
+            inactiveBitColor: g,
+            borderWidth: l,
           } = o;
-          return (0, T.useMemo)(
+          return (0, _.useMemo)(
             () =>
-              Wt(
+              Yt(
                 r,
-                { activeBitColor: p, inactiveBitColor: C, borderWidth: c },
-                { typeNumber: a, errorCorrectLevel: u },
+                { activeBitColor: m, inactiveBitColor: g, borderWidth: l },
+                { typeNumber: a, errorCorrectLevel: c },
               ),
-            [r, a, u, p, C, c],
+            [r, a, c, m, g, l],
           );
         }
-        var bt = w(15557),
-          ae = w.n(bt),
-          zt = w(16412);
-        function Kt(r) {
+        var Xt = w(15557),
+          z = w.n(Xt),
+          yt = w(16412);
+        function es(r) {
           const {
               transport: o,
               onComplete: a,
-              onStatusChange: u,
-              platform: p,
-              styling: C = "default",
-              activeBitValue: c = 255,
+              onStatusChange: c,
+              platform: m,
+              styling: g = "default",
+              activeBitValue: l = 255,
             } = r,
-            f = v.TS.IN_STEAMUI ? St : vt,
+            d = b.TS.IN_STEAMUI ? _t : bt,
             {
-              eStatus: R,
-              strChallengeURL: k,
-              strClientID: j,
-              bHadRemoteInteraction: G,
-              reset: Y,
-              setTokenToRevoke: z,
-            } = Ht({ transport: o, onComplete: a, onDeviceDetails: f });
-          (0, T.useEffect)(() => u && u(R), [u, R]);
-          const ce = R === pt && k ? k : v.TS.STORE_BASE_URL,
-            q = R === Qe || R === mt || G,
-            oe = R === Ct,
-            M = R === gt,
-            X = M
-              ? (0, n.jsx)(qt, {})
-              : oe
-                ? (0, n.jsx)(Ue, { reset: Y })
-                : q
-                  ? (0, n.jsx)(Yt, { size: "small" })
+              eStatus: T,
+              strChallengeURL: I,
+              strClientID: A,
+              bHadRemoteInteraction: F,
+              reset: W,
+              setTokenToRevoke: O,
+            } = Ut({ transport: o, onComplete: a, onDeviceDetails: d });
+          (0, _.useEffect)(() => c && c(T), [c, T]);
+          const le = T === it && I ? I : b.TS.STORE_BASE_URL,
+            J = T === Be || T === Ct || F,
+            re = T === vt,
+            M = T === St,
+            Y = M
+              ? (0, n.jsx)(Ie, {})
+              : re
+                ? (0, n.jsx)(ns, { reset: W })
+                : J
+                  ? (0, n.jsx)(ss, { size: "small" })
                   : null,
-            y = q || oe || M;
-          (0, T.useEffect)(() => {
-            r.refreshInfo?.login_token_id && z(r.refreshInfo.login_token_id);
-          }, [r.refreshInfo, z]);
-          const L = v.TS.EUNIVERSE !== Ce.wLO,
-            N = `rgb(${c}, ${c}, ${c})`;
+            R = J || re || M;
+          (0, _.useEffect)(() => {
+            r.refreshInfo?.login_token_id && O(r.refreshInfo.login_token_id);
+          }, [r.refreshInfo, O]);
+          const E = b.TS.EUNIVERSE !== $.wLO,
+            k = `rgb(${l}, ${l}, ${l})`;
           return (0, n.jsx)("div", {
-            className: ae().Column,
+            className: z().Column,
             children: (0, n.jsxs)("div", {
               style: { position: "relative" },
               children: [
-                (0, n.jsx)(Qt, {
+                (0, n.jsx)(qt, {
                   borderWidth: 0,
                   activeBitColor: [21, 23, 28],
-                  inactiveBitColor: L ? [c, 0, c] : [c, c, c],
-                  quality: Jt(ce),
-                  className: (0, F.A)(
-                    ae().LoginQR,
-                    C == "deck" && ae().QRLoginDeck,
-                    C == "vr" && ae().QRLoginVR,
-                    y && ae().Blur,
-                    L && ae().NonPublic,
+                  inactiveBitColor: E ? [l, 0, l] : [l, l, l],
+                  quality: ts(le),
+                  className: (0, V.A)(
+                    z().LoginQR,
+                    g == "deck" && z().QRLoginDeck,
+                    g == "vr" && z().QRLoginVR,
+                    R && z().Blur,
+                    E && z().NonPublic,
                   ),
-                  children: ce,
+                  children: le,
                 }),
-                y &&
+                R &&
                   (0, n.jsx)("div", {
-                    className: ae().Overlay,
+                    className: z().Overlay,
                     children: (0, n.jsx)("div", {
-                      className: ae().Box,
-                      style: { "--qr-bright-color": N },
-                      children: X,
+                      className: z().Box,
+                      style: { "--qr-bright-color": k },
+                      children: Y,
                     }),
                   }),
               ],
             }),
           });
         }
-        function Jt(r) {
-          return r.length <= 90 ? wt.Q : void 0;
+        function ts(r) {
+          return r.length <= 90 ? xt.Q : void 0;
         }
-        function Yt(r) {
+        function ss(r) {
           const { size: o } = r;
           return (0, n.jsx)("div", {
-            className: (0, F.A)(
-              ae().Loading,
-              o == "small" && ae().Small,
-              (o == "medium" || !o) && ae().Medium,
-              o == "large" && ae().Large,
+            className: (0, V.A)(
+              z().Loading,
+              o == "small" && z().Small,
+              (o == "medium" || !o) && z().Medium,
+              o == "large" && z().Large,
             ),
           });
         }
-        function Ue(r) {
-          return (0, n.jsx)(zt.$n, {
+        function ns(r) {
+          return (0, n.jsx)(yt.$n, {
             onClick: r.reset,
-            className: ae().QRFailure,
-            children: (0, n.jsx)($t, {}),
+            className: z().QRFailure,
+            children: (0, n.jsx)(os, {}),
           });
         }
-        function $t(r) {
+        function os(r) {
           return (0, n.jsxs)("svg", {
             version: "1.1",
             id: "Layer_2",
@@ -1792,7 +2932,7 @@
             ],
           });
         }
-        function qt() {
+        function Ie() {
           return (0, n.jsx)("svg", {
             version: "1.1",
             id: "base",
@@ -1814,171 +2954,171 @@
             }),
           });
         }
-        var Xt = w(72609);
-        const xt = (0, T.createContext)(!1),
-          Ke = () => (0, T.useContext)(xt);
-        function es() {
+        var rs = w(72609);
+        const Rt = (0, _.createContext)(!1),
+          He = () => (0, _.useContext)(Rt);
+        function is() {
           return (0, n.jsx)("div", {
-            className: g().Login,
-            children: (0, n.jsx)(at, {
+            className: p().Login,
+            children: (0, n.jsx)(u, {
               reset: () => window.location.reload(),
-              failure: b.eF.Generic,
+              failure: x.eF.Generic,
             }),
           });
         }
-        function ts(r) {
-          const o = Ns(r.redirectUrl),
-            a = (u) => {
-              const { strRefreshToken: p } = u;
-              (0, b.yp)(p).then(
-                (C) => r.onComplete(C),
-                () => r.onComplete(b.wI.k_PrimaryDomainFail),
+        function as(r) {
+          const o = Hs(r.redirectUrl),
+            a = (c) => {
+              const { strRefreshToken: m } = c;
+              (0, x.yp)(m).then(
+                (g) => r.onComplete(g),
+                () => r.onComplete(x.wI.k_PrimaryDomainFail),
               );
             };
           return o
             ? null
-            : (0, n.jsx)(ss, {
+            : (0, n.jsx)(ls, {
                 ...r,
                 creationRedirectUrl: r.redirectUrl,
                 onSuccess: a,
                 embedded: r.theme === "modal",
               });
         }
-        function ss(r) {
-          const { embedded: o, children: a, ...u } = r;
-          return (0, n.jsx)(ue.tH, {
-            children: (0, n.jsx)(xt.Provider, {
+        function ls(r) {
+          const { embedded: o, children: a, ...c } = r;
+          return (0, n.jsx)(De.tH, {
+            children: (0, n.jsx)(Rt.Provider, {
               value: o ?? !1,
               children: (0, n.jsxs)("div", {
-                className: g().Login,
-                children: [(0, n.jsx)(is, { ...u }), a],
+                className: p().Login,
+                children: [(0, n.jsx)(ds, { ...c }), a],
               }),
             }),
           });
         }
-        function ns(r) {
-          if ((0, re.q)()) return null;
+        function cs(r) {
+          if ((0, Se.q)()) return null;
           const { variant: o } = r;
           return typeof o == "function"
-            ? (0, n.jsx)(Se, {
+            ? (0, n.jsx)(oe, {
                 onClick: o,
-                children: (0, d.we)("#Login_Help_SignIn"),
+                children: (0, C.we)("#Login_Help_SignIn"),
               })
-            : (0, n.jsx)(Se, {
-                href: `${v.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
-                children: (0, d.we)("#Login_Help_SignIn"),
+            : (0, n.jsx)(oe, {
+                href: `${b.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
+                children: (0, C.we)("#Login_Help_SignIn"),
               });
         }
-        function ne(r) {
+        function us(r) {
           const { variant: o, redirectUrl: a } = r;
           if (typeof o == "function")
-            return (0, n.jsx)(Se, {
+            return (0, n.jsx)(oe, {
               inline: !0,
               onClick: o,
-              children: (0, d.we)("#Login_CreateAccount"),
+              children: (0, C.we)("#Login_CreateAccount"),
             });
           {
-            const u = a ? `?redir=${encodeURIComponent(a)}` : "";
+            const c = a ? `?redir=${encodeURIComponent(a)}` : "";
             switch (o ?? "normal") {
               default:
               case "normal":
-                return (0, n.jsx)(Se, {
+                return (0, n.jsx)(oe, {
                   inline: !0,
-                  href: `${v.TS.STORE_BASE_URL}join/${u}`,
-                  children: (0, d.we)("#Login_CreateAccount"),
+                  href: `${b.TS.STORE_BASE_URL}join/${c}`,
+                  children: (0, C.we)("#Login_CreateAccount"),
                 });
               case "partner":
-                return (0, n.jsx)(Se, {
+                return (0, n.jsx)(oe, {
                   inline: !0,
-                  href: `${v.TS.PARTNER_BASE_URL}${u}`,
-                  children: (0, d.we)("#Login_CreateSteamworksAccount"),
+                  href: `${b.TS.PARTNER_BASE_URL}${c}`,
+                  children: (0, C.we)("#Login_CreateSteamworksAccount"),
                 });
               case "none":
                 return null;
             }
           }
         }
-        function os(r) {
-          const { launcherType: o, variant: a, redirectUrl: u } = r;
-          if (o === Ce.A2g || a == "none") return null;
-          const p = o !== void 0;
-          let C;
+        function hs(r) {
+          const { launcherType: o, variant: a, redirectUrl: c } = r;
+          if (o === $.A2g || a == "none") return null;
+          const m = o !== void 0;
+          let g;
           switch (a ?? "normal") {
             default:
             case "normal":
-              C = "#Login_NoSteamAccount";
+              g = "#Login_NoSteamAccount";
               break;
             case "partner":
-              C = "#Login_NoSteamworksAccount";
+              g = "#Login_NoSteamworksAccount";
               break;
           }
           return (0, n.jsxs)("div", {
-            className: (0, F.A)(g().AccountCreation, p && g().InClient),
+            className: (0, V.A)(p().AccountCreation, m && p().InClient),
             children: [
               (0, n.jsx)("span", {
-                className: g().AccountCreationPrompt,
-                children: (0, d.we)(C),
+                className: p().AccountCreationPrompt,
+                children: (0, C.we)(g),
               }),
-              (0, n.jsx)(ne, { variant: a, redirectUrl: u }),
+              (0, n.jsx)(us, { variant: a, redirectUrl: c }),
             ],
           });
         }
-        function rs() {
+        function se() {
           const r =
-            window?.location && (0, O.f3)(window.location, "need_password");
+            window?.location && (0, ie.f3)(window.location, "need_password");
           return r !== void 0 && r !== "false" && r !== "0";
         }
-        function is(r) {
+        function ds(r) {
           const {
               transport: o,
               onSuccess: a,
-              platform: u,
-              autoFocus: p,
-              refreshInfo: C,
-              renderSuccess: c = () => (0, n.jsx)(ks, {}),
-              lastResult: f,
-              joinLinkVariant: R,
-              defaultAccountName: k,
-              secureComputer: j = !0,
-              isProbablySharedPC: G = !1,
-              onShowAgreement: Y,
-              creationRedirectUrl: z,
+              platform: c,
+              autoFocus: m,
+              refreshInfo: g,
+              renderSuccess: l = () => (0, n.jsx)(Bs, {}),
+              lastResult: d,
+              joinLinkVariant: T,
+              defaultAccountName: I,
+              secureComputer: A = !0,
+              isProbablySharedPC: F = !1,
+              onShowAgreement: W,
+              creationRedirectUrl: O,
             } = r,
-            ce = v.TS.IN_STEAMUI ? St : vt,
-            q = v.TS.IN_STEAMUI
-              ? (K) => SteamClient.Auth.GetSteamGuardData(K)
+            le = b.TS.IN_STEAMUI ? _t : bt,
+            J = b.TS.IN_STEAMUI
+              ? (G) => SteamClient.Auth.GetSteamGuardData(G)
               : null,
-            oe = rs(),
-            M = Vt({
+            re = se(),
+            M = Ot({
               transport: o,
-              platform: u,
+              platform: c,
               onSuccess: a,
-              refreshInfo: C,
-              onDeviceDetails: ce,
-              onGetMachineAuth: q,
-              defaultAccountName: k,
-              secureComputer: j,
-              isProbablySharedPC: G,
-              onShowAgreement: Y,
+              refreshInfo: g,
+              onDeviceDetails: le,
+              onGetMachineAuth: J,
+              defaultAccountName: I,
+              secureComputer: A,
+              isProbablySharedPC: F,
+              onShowAgreement: W,
             }),
-            X = Ke(),
-            y = (0, T.useId)();
-          if (f != null && f != l.R)
+            Y = He(),
+            R = (0, _.useId)();
+          if (d != null && d != y.R)
             return (0, n.jsx)("div", {
-              className: g().Login,
-              children: (0, n.jsx)(at, {
+              className: p().Login,
+              children: (0, n.jsx)(u, {
                 reset: () => window.location.reload(),
-                failure: b.eF.Generic,
-                errorReference: f.toString(),
+                failure: x.eF.Generic,
+                errorReference: d.toString(),
                 extendedErrorMessage: M.password.strExtendedErrorMessage,
               }),
             });
-          const L = !(0, v.Y2)();
+          const E = !(0, b.Y2)();
           if (!M.bInPasswordFlow) {
-            const K = (0, n.jsxs)("div", {
-              className: (0, F.A)(g().SideBySide, X && g().Embedded),
+            const G = (0, n.jsxs)("div", {
+              className: (0, V.A)(p().SideBySide, Y && p().Embedded),
               children: [
-                (0, n.jsx)(ls, {
+                (0, n.jsx)(lt, {
                   strAccountName: M.strAccountName,
                   onAccountNameChange: M.onAccountNameChange,
                   strPassword: M.strPassword,
@@ -1987,54 +3127,54 @@
                   onRememberMeChange: M.onRememberMeChange,
                   onSubmit: M.onPasswordSubmit,
                   status: M.password.eStatus,
-                  autoFocus: p,
-                  secureComputer: j,
+                  autoFocus: m,
+                  secureComputer: A,
                   refreshInfo: r.refreshInfo,
                 }),
-                L &&
-                  (0, n.jsx)(us, {
+                E &&
+                  (0, n.jsx)(ps, {
                     transport: o,
                     onQRStatusChange: M.onQRStatusChange,
                     onComplete: M.onComplete,
-                    platform: u,
-                    refreshInfo: C,
+                    platform: c,
+                    refreshInfo: g,
                   }),
               ],
             });
-            if (X) {
-              const Ae = v.TS.IN_STEAMUI,
-                Re = Ae ? v.TS.LAUNCHER_TYPE : void 0;
-              return (0, n.jsxs)(ye, {
-                className: (0, F.A)(g().EmbeddedRoot, Ae && g().InClient),
+            if (Y) {
+              const xe = b.TS.IN_STEAMUI,
+                ge = xe ? b.TS.LAUNCHER_TYPE : void 0;
+              return (0, n.jsxs)(me, {
+                className: (0, V.A)(p().EmbeddedRoot, xe && p().InClient),
                 children: [
-                  !Ae && !1,
+                  !xe && !1,
                   !r.refreshInfo &&
-                    (0, n.jsx)(ds, {
-                      realm: v.TS.EREALM,
-                      launcherType: Re,
-                      className: g().HeaderLogo,
+                    (0, n.jsx)(Rs, {
+                      realm: b.TS.EREALM,
+                      launcherType: ge,
+                      className: p().HeaderLogo,
                       onBack: r.onBack,
                     }),
-                  (0, n.jsx)(et, { refreshInfo: C }),
-                  K,
+                  (0, n.jsx)(Tt, { refreshInfo: g }),
+                  G,
                   (0, n.jsxs)("div", {
-                    className: (0, F.A)(
-                      g().EmbeddedRootFooter,
-                      Ae && g().InClient,
+                    className: (0, V.A)(
+                      p().EmbeddedRootFooter,
+                      xe && p().InClient,
                     ),
                     children: [
-                      (0, n.jsx)(ns, { variant: r.helpLinkVariant }),
-                      (0, n.jsx)(os, {
-                        launcherType: Re,
-                        variant: R,
-                        redirectUrl: z,
+                      (0, n.jsx)(cs, { variant: r.helpLinkVariant }),
+                      (0, n.jsx)(hs, {
+                        launcherType: ge,
+                        variant: T,
+                        redirectUrl: O,
                       }),
                     ],
                   }),
                 ],
               });
             }
-            const ge = (0, n.jsxs)("div", {
+            const pe = (0, n.jsxs)("div", {
               style: {
                 display: "flex",
                 flexDirection: "column",
@@ -2044,78 +3184,80 @@
               children: [
                 !1,
                 (0, n.jsx)("h2", {
-                  className: g().PrimaryHeader,
-                  id: y,
+                  className: p().PrimaryHeader,
+                  id: R,
                   children: r.refreshInfo
-                    ? (0, d.we)("#Login_RefreshSignIn")
-                    : (0, d.we)("#Login_SignInTitle"),
+                    ? (0, C.we)("#Login_RefreshSignIn")
+                    : (0, C.we)("#Login_SignInTitle"),
                 }),
-                (0, n.jsx)(et, { refreshInfo: r.refreshInfo }),
+                (0, n.jsx)(Tt, { refreshInfo: r.refreshInfo }),
               ],
             });
-            return (0, n.jsxs)(Ye, {
-              title: ge,
-              titleId: y,
-              children: [oe && (0, n.jsx)(as, {}), K],
+            return (0, n.jsxs)(Fe, {
+              title: pe,
+              titleId: R,
+              children: [re && (0, n.jsx)(fs, {}), G],
             });
           }
-          const N = M.password.eStatus;
-          switch (N) {
-            case Xe:
+          const k = M.password.eStatus;
+          switch (k) {
+            case Qe:
               return r.renderLoading
                 ? (0, n.jsx)(n.Fragment, { children: r.renderLoading() })
-                : (0, n.jsx)(Me, {});
-            case me:
-            case Ve:
-            case Ee:
-            case He:
-              (0, x.wT)(
+                : (0, n.jsx)(t, {});
+            case ue:
+            case Me:
+            case te:
+            case Ee: {
+              (0, L.wT)(
                 !!M.password.strAccountName,
                 "Missing account name in login session for status",
-                N,
+                k,
               );
-              const K = N === me || N === Ve;
-              return (0, n.jsx)(bs, {
-                type: K ? "mobile" : "email",
+              const G = k === ue || k === Me;
+              return (0, n.jsx)(S, {
+                type: G ? "mobile" : "email",
                 onSubmitCode: M.password.addCode,
-                status: N,
+                status: k,
                 associatedLabel: M.password.strConfirmationAssociatedMessage,
                 accountName: M.password.strAccountName,
                 onBack: M.password.goBack,
                 onCodeHelp: r.onCodeHelp,
               });
-            case Be:
-            case Ne:
-              (0, x.wT)(
+            }
+            case Le:
+            case Te: {
+              (0, L.wT)(
                 !!M.password.strAccountName,
                 "Missing account name in login session for status",
-                N,
+                k,
               );
-              const ge = N === Be;
-              return (0, n.jsx)(Es, {
-                type: ge ? "mobile" : "email",
+              const G = k === Le;
+              return (0, n.jsx)(we, {
+                type: G ? "mobile" : "email",
                 accountName: M.password.strAccountName,
                 onUseCodeOverride: M.password.useCodeOverride,
                 onCodeHelp: r.onCodeHelp,
               });
-            case ct:
-              return (0, n.jsx)(ws, { reset: M.password.reset });
-            case ot:
-              return (0, n.jsx)(at, {
+            }
+            case ft:
+              return (0, n.jsx)(h, { reset: M.password.reset });
+            case nt:
+              return (0, n.jsx)(u, {
                 reset: M.password.reset,
                 failure: M.password.eFailureState,
                 onRequestOffline: M.onTryOffline,
                 errorReference: M.password.strErrorReference,
                 extendedErrorMessage: M.password.strExtendedErrorMessage,
               });
-            case lt:
-              return (0, n.jsx)(Ye, { compact: !0, children: c() });
+            case dt:
+              return (0, n.jsx)(Fe, { compact: !0, children: l() });
             default:
               return (
-                (0, V.ZI)(`Unknown Phase: ${N}`),
-                (0, n.jsx)(at, {
+                (0, B.ZI)(`Unknown Phase: ${k}`),
+                (0, n.jsx)(u, {
                   reset: M.password.reset,
-                  failure: b.eF.Generic,
+                  failure: x.eF.Generic,
                   onRequestOffline: M.onTryOffline,
                   errorReference: M.password.strErrorReference,
                   extendedErrorMessage: M.password.strExtendedErrorMessage,
@@ -2123,185 +3265,185 @@
               );
           }
         }
-        function et(r) {
+        function Tt(r) {
           if (!r.refreshInfo) return null;
           let o;
-          switch (r.refreshInfo?.reason ?? l.zi) {
-            case l.zi:
-            case l.Vr:
+          switch (r.refreshInfo?.reason ?? y.zi) {
+            case y.zi:
+            case y.Vr:
             default:
               o = "#Login_RefreshReason_Generic";
               break;
-            case l.KH:
+            case y.KH:
               o = "#Login_RefreshReason_LoggedInElsewhere";
               break;
-            case l.CF:
+            case y.CF:
               o = "#Login_RefreshReason_LogonSessionReplaced";
               break;
-            case l.Um:
+            case y.Um:
               o = "#Login_RefreshReason_InvalidPassword";
               break;
-            case l.fY:
+            case y.fY:
               o = "#Login_RefreshReason_Revoked";
               break;
-            case l.ob:
+            case y.ob:
               o = "#Login_RefreshReason_Expired";
               break;
-            case l.cr:
+            case y.cr:
               o = "#Login_RefreshReason_PasswordRequiredToKickSession";
               break;
-            case l.uN:
+            case y.uN:
               o = "#Login_RefreshReason_AccountDisabled";
               break;
-            case l.sG:
+            case y.sG:
               o = "#Login_RefreshReason_ParentalControlRestricted";
               break;
-            case l.h_:
+            case y.h_:
               o = "#Login_RefreshReason_RateLimitExceeded";
               break;
           }
           return (0, n.jsxs)("div", {
-            className: g().RefreshReasonContainer,
+            className: p().RefreshReasonContainer,
             children: [
               (0, n.jsx)("div", {
-                className: g().RefreshTitle,
-                children: (0, d.we)("#Login_RefreshSignIn"),
+                className: p().RefreshTitle,
+                children: (0, C.we)("#Login_RefreshSignIn"),
               }),
               (0, n.jsx)("div", {
-                className: g().RefreshReason,
-                children: (0, d.we)(o),
+                className: p().RefreshReason,
+                children: (0, C.we)(o),
               }),
             ],
           });
         }
-        function as() {
+        function fs() {
           return (0, n.jsx)("div", {
-            className: g().ConfirmCredntialsNag,
-            children: (0, d.we)("#Login_ConfirmCredentials"),
+            className: p().ConfirmCredntialsNag,
+            children: (0, C.we)("#Login_ConfirmCredentials"),
           });
         }
-        function ls(r) {
+        function lt(r) {
           const {
               onSubmit: o,
               status: a,
-              autoFocus: u,
-              refreshInfo: p,
-              strAccountName: C,
-              onAccountNameChange: c,
-              strPassword: f,
-              onPasswordChange: R,
-              bRememberMe: k,
-              onRememberMeChange: j,
-              secureComputer: G = !0,
+              autoFocus: c,
+              refreshInfo: m,
+              strAccountName: g,
+              onAccountNameChange: l,
+              strPassword: d,
+              onPasswordChange: T,
+              bRememberMe: I,
+              onRememberMeChange: A,
+              secureComputer: F = !0,
             } = r,
-            [Y, z] = (0, T.useState)(!1),
-            ce = Ke(),
-            q = Hs(),
-            oe = () => {
+            [W, O] = (0, _.useState)(!1),
+            le = He(),
+            J = Fs(),
+            re = () => {
               o().then(() => {
-                q() && z(!1);
+                J() && O(!1);
               });
             },
-            M = a === be || a === Xe,
-            X = a === $e && !Y,
-            y = X
-              ? (0, n.jsx)(Ze, {
-                  children: (0, d.we)("#Login_CheckCredentials"),
+            M = a === et || a === Qe,
+            Y = a === Ze && !W,
+            R = Y
+              ? (0, n.jsx)(e, {
+                  children: (0, C.we)("#Login_CheckCredentials"),
                 })
-              : (0, n.jsx)(Ze, { children: "\xA0" }),
-            L = u && !C,
-            N = u && !!C,
-            K = !!r.refreshInfo,
-            ge = (0, T.useId)(),
-            Ae = (0, T.useId)();
-          return (0, n.jsxs)(Ss, {
-            onSubmit: oe,
-            className: g().LoginForm,
+              : (0, n.jsx)(e, { children: "\xA0" }),
+            E = c && !g,
+            k = c && !!g,
+            G = !!r.refreshInfo,
+            pe = (0, _.useId)(),
+            xe = (0, _.useId)();
+          return (0, n.jsxs)(Ms, {
+            onSubmit: re,
+            className: p().LoginForm,
             children: [
-              (0, n.jsx)(m, {
-                tone: X ? "danger" : void 0,
-                label: (0, n.jsx)(S, {
+              (0, n.jsx)(vs, {
+                tone: Y ? "danger" : void 0,
+                label: (0, n.jsx)(ze, {
                   highlight: !0,
-                  inputId: ge,
-                  children: (0, d.we)("#Login_SignIn_WithAccountName"),
+                  inputId: pe,
+                  children: (0, C.we)("#Login_SignIn_WithAccountName"),
                 }),
-                value: C,
-                onChange: (Re) => {
-                  z(!0), c(Re);
+                value: g,
+                onChange: (ge) => {
+                  O(!0), l(ge);
                 },
-                autoFocus: L,
-                disabled: K,
-                id: ge,
+                autoFocus: E,
+                disabled: G,
+                id: pe,
               }),
-              (0, n.jsx)(m, {
-                tone: X ? "danger" : void 0,
-                label: (0, n.jsx)(S, {
-                  inputId: Ae,
-                  children: (0, d.we)("#Login_Password"),
+              (0, n.jsx)(vs, {
+                tone: Y ? "danger" : void 0,
+                label: (0, n.jsx)(ze, {
+                  inputId: xe,
+                  children: (0, C.we)("#Login_Password"),
                 }),
-                value: f,
-                onChange: (Re) => {
-                  z(!0), R(Re);
+                value: d,
+                onChange: (ge) => {
+                  O(!0), T(ge);
                 },
                 type: "password",
-                autoFocus: N,
-                id: Ae,
+                autoFocus: k,
+                id: xe,
               }),
-              G
-                ? (0, n.jsx)(P.he, {
-                    toolTipContent: (0, d.we)("#Login_RememberMe_Tooltip"),
+              F
+                ? (0, n.jsx)($e.he, {
+                    toolTipContent: (0, C.we)("#Login_RememberMe_Tooltip"),
                     direction: "bottom",
-                    children: (0, n.jsx)(U, {
-                      label: (0, d.we)("#Login_RememberMe_Short"),
-                      value: k,
-                      onChange: j,
+                    children: (0, n.jsx)(ct, {
+                      label: (0, C.we)("#Login_RememberMe_Short"),
+                      value: I,
+                      onChange: A,
                     }),
                   })
                 : (0, n.jsx)("div", {
-                    className: g().InsecureComputer,
-                    children: (0, d.we)("#Login_InsecureComputer"),
+                    className: p().InsecureComputer,
+                    children: (0, C.we)("#Login_InsecureComputer"),
                   }),
-              (0, n.jsx)(le, { loading: M, refreshLogin: K }),
-              y,
-              !ce &&
-                (0, n.jsx)(Se, {
-                  href: `${v.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
+              (0, n.jsx)(ws, { loading: M, refreshLogin: G }),
+              R,
+              !le &&
+                (0, n.jsx)(oe, {
+                  href: `${b.TS.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                   align: "center",
-                  children: (0, d.we)("#Login_Help_SignIn"),
+                  children: (0, C.we)("#Login_Help_SignIn"),
                 }),
             ],
           });
         }
-        const cs = 700;
-        function us(r) {
-          const o = (0, _e.R7)(),
-            a = () => o.ownerWindow.screen.width < cs,
-            [u, p] = (0, T.useState)(a());
+        const ms = 700;
+        function ps(r) {
+          const o = (0, Ge.R7)(),
+            a = () => o.ownerWindow.screen.width < ms,
+            [c, m] = (0, _.useState)(a());
           return (
-            (0, A.l6)(o.ownerWindow, "resize", () => {
-              p(a());
+            (0, j.l6)(o.ownerWindow, "resize", () => {
+              m(a());
             }),
             (0, n.jsx)("div", {
-              className: g().QRSection,
-              children: u ? (0, n.jsx)(t, { ...r }) : (0, n.jsx)(e, { ...r }),
+              className: p().QRSection,
+              children: c ? (0, n.jsx)(Lt, { ...r }) : (0, n.jsx)(Cs, { ...r }),
             })
           );
         }
-        function hs(r) {
+        function gs(r) {
           const o =
-            v.TS.STORE_BASE_URL +
+            b.TS.STORE_BASE_URL +
             "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
             encodeURIComponent(r.redirectURL);
           return (0, n.jsx)("div", {
-            className: g().GuestLayout,
-            children: (0, n.jsx)(Ye, {
+            className: p().GuestLayout,
+            children: (0, n.jsx)(Fe, {
               compact: !0,
               children: (0, n.jsxs)("div", {
-                className: g().GuestContainer,
+                className: p().GuestContainer,
                 children: [
                   (0, n.jsx)("div", {
-                    className: g().GuestText,
-                    children: (0, d.oW)(
+                    className: p().GuestText,
+                    children: (0, C.oW)(
                       "#Login_Guest",
                       (0, n.jsx)("a", {
                         href: `${o}`,
@@ -2310,11 +3452,11 @@
                     ),
                   }),
                   (0, n.jsx)("a", {
-                    className: g().GuestLink,
+                    className: p().GuestLink,
                     href: `${o}`,
                     children: (0, n.jsx)("button", {
-                      className: g().GuestButton,
-                      children: (0, d.we)("#Login_GuestContinue"),
+                      className: p().GuestButton,
+                      children: (0, C.we)("#Login_GuestContinue"),
                     }),
                   }),
                 ],
@@ -2322,83 +3464,85 @@
             }),
           });
         }
-        function e(r) {
-          return (0, n.jsx)(i, { ...r });
+        function Cs(r) {
+          return (0, n.jsx)(Ve, { ...r });
         }
-        function t(r) {
-          const [o, a] = (0, T.useState)(!1);
+        function Lt(r) {
+          const [o, a] = (0, _.useState)(!1);
           return o
-            ? (0, n.jsx)(i, { ...r, bShowHideButton: !0, setShowQR: a })
-            : (0, n.jsx)(s, { setShowQR: a });
+            ? (0, n.jsx)(Ve, { ...r, bShowHideButton: !0, setShowQR: a })
+            : (0, n.jsx)(Ss, { setShowQR: a });
         }
-        function s(r) {
+        function Ss(r) {
           return (0, n.jsxs)("div", {
-            className: g().MessagingContainer,
+            className: p().MessagingContainer,
             children: [
               (0, n.jsx)("div", {
-                className: g().MessagingTag,
-                children: (0, d.we)("#Login_MobileFlow_New"),
+                className: p().MessagingTag,
+                children: (0, C.we)("#Login_MobileFlow_New"),
               }),
               (0, n.jsx)("div", {
-                className: g().MessagingSubtitle,
+                className: p().MessagingSubtitle,
                 children: (0, n.jsx)("div", {
-                  className: g().MessagingSubtitle,
-                  children: (0, d.we)("#Login_MobileFlow_SignIn_ScanQR"),
+                  className: p().MessagingSubtitle,
+                  children: (0, C.we)("#Login_MobileFlow_SignIn_ScanQR"),
                 }),
               }),
-              (0, n.jsx)("div", {
-                className: g().MessagingButton,
+              (0, n.jsx)("button", {
+                type: "button",
+                className: p().MessagingButton,
                 onClick: () => r.setShowQR(!0),
-                children: (0, d.we)("#Login_MobileFlow_ShowMeQR_Button"),
+                children: (0, C.we)("#Login_MobileFlow_ShowMeQR_Button"),
               }),
               (0, n.jsx)("a", {
-                href: `${v.TS.STORE_BASE_URL}mobile`,
-                className: g().MessagingLink,
-                children: (0, d.we)("#Login_JoinBeta_Button"),
+                href: `${b.TS.STORE_BASE_URL}mobile`,
+                className: p().MessagingLink,
+                children: (0, C.we)("#Login_JoinBeta_Button"),
               }),
             ],
           });
         }
-        function i(r) {
+        function Ve(r) {
           const {
             onQRStatusChange: o,
             transport: a,
-            onComplete: u,
-            platform: p,
-            refreshInfo: C,
-            bShowHideButton: c = !1,
-            setShowQR: f,
+            onComplete: c,
+            platform: m,
+            refreshInfo: g,
+            bShowHideButton: l = !1,
+            setShowQR: d,
           } = r;
           return (0, n.jsxs)("div", {
-            className: g().QRCodeContainer,
+            className: p().QRCodeContainer,
             children: [
-              (0, n.jsx)(S, {
+              (0, n.jsx)(ze, {
                 highlight: !0,
-                children: (0, d.we)("#Login_SignIn_OrWithQRCode"),
+                children: (0, C.we)("#Login_SignIn_OrWithQRCode"),
               }),
               (0, n.jsx)("div", {
-                className: g().QR,
-                children: (0, n.jsx)(Kt, {
+                className: p().QR,
+                children: (0, n.jsx)(es, {
                   onStatusChange: o,
                   transport: a,
-                  onComplete: u,
-                  platform: p,
-                  refreshInfo: C,
+                  onComplete: c,
+                  platform: m,
+                  refreshInfo: g,
                 }),
               }),
-              c &&
-                f &&
-                (0, n.jsx)("div", {
-                  className: g().QRHideLink,
-                  onClick: () => f(!1),
-                  children: (0, d.we)("#Button_Hide"),
+              l &&
+                d &&
+                (0, n.jsx)("button", {
+                  type: "button",
+                  className: p().QRHideLink,
+                  onClick: () => d(!1),
+                  children: (0, C.we)("#Button_Hide"),
                 }),
               (0, n.jsx)("div", {
-                className: g().UseMobileAppForQR,
-                children: (0, d.oW)(
+                className: p().UseMobileAppForQR,
+                children: (0, C.oW)(
                   "#Login_UseMobileAppForQR_Inline",
-                  (0, n.jsx)(Se, {
-                    href: `${v.TS.STORE_BASE_URL}mobile`,
+                  (0, n.jsx)(oe, {
+                    href: `${b.TS.STORE_BASE_URL}mobile`,
                     align: "center",
                   }),
                 ),
@@ -2406,184 +3550,185 @@
             ],
           });
         }
-        function h() {
+        function Es() {
           const r = "bShowLoginQR",
             [o, a] = useState(localStorage?.getItem(r) === "1"),
-            u = useCallback((p) => {
-              a(p),
-                p ? localStorage?.setItem(r, "1") : localStorage?.removeItem(r);
+            c = useCallback((m) => {
+              a(m),
+                m ? localStorage?.setItem(r, "1") : localStorage?.removeItem(r);
             }, []);
-          return [o, u];
+          return [o, c];
         }
-        function m(r) {
-          const { label: o, error: a, tone: u, autoFocus: p, id: C, ...c } = r,
-            f = u ?? (a ? "danger" : void 0);
+        function vs(r) {
+          const { label: o, error: a, tone: c, autoFocus: m, id: g, ...l } = r,
+            d = c ?? (a ? "danger" : void 0);
           return (0, n.jsxs)("div", {
-            className: g().TextField,
+            className: p().TextField,
             children: [
               typeof o == "string"
-                ? (0, n.jsx)(S, { inputId: C, children: o })
+                ? (0, n.jsx)(ze, { inputId: g, children: o })
                 : o,
-              a && (0, n.jsx)(H, { type: "error", children: a }),
-              (0, n.jsx)(_, { autoFocus: p, tone: f, id: C, ...c }),
+              a && (0, n.jsx)(Ke, { type: "error", children: a }),
+              (0, n.jsx)(_s, { autoFocus: m, tone: d, id: g, ...l }),
             ],
           });
         }
-        function S(r) {
-          const { children: o, inputId: a, highlight: u } = r;
+        function ze(r) {
+          const { children: o, inputId: a, highlight: c } = r;
           return (0, n.jsx)("label", {
-            className: (0, F.A)(g().FieldLabel, u && g().Highlight),
+            className: (0, V.A)(p().FieldLabel, c && p().Highlight),
             htmlFor: a,
             children: o,
           });
         }
-        function _(r) {
+        function _s(r) {
           const {
             value: o,
             onChange: a,
-            type: u = "text",
-            tone: p,
-            className: C,
-            autoFocus: c,
-            disabled: f,
-            id: R,
+            type: c = "text",
+            tone: m,
+            className: g,
+            autoFocus: l,
+            disabled: d,
+            id: T,
           } = r;
           return (0, n.jsx)("input", {
             value: o,
-            type: u,
-            autoFocus: c,
-            onChange: (k) => a(k.target.value),
-            className: (0, F.A)(g().TextInput, p === "danger" && g().Danger, C),
-            disabled: f,
-            id: R,
+            type: c,
+            autoFocus: l,
+            onChange: (I) => a(I.target.value),
+            className: (0, V.A)(p().TextInput, m === "danger" && p().Danger, g),
+            disabled: d,
+            id: T,
           });
         }
-        function H(r) {
+        function Ke(r) {
           const { children: o, type: a } = r;
           return (0, n.jsx)("div", {
-            className: (0, F.A)(g().FieldHint, a === "error" && g().Error),
+            className: (0, V.A)(p().FieldHint, a === "error" && p().Error),
             children: o,
           });
         }
-        function U(r) {
-          const { label: o, onChange: a, value: u } = r;
-          let p = () => {
-            a && a(!u);
+        function ct(r) {
+          const { label: o, onChange: a, value: c } = r;
+          let m = () => {
+            a && a(!c);
           };
-          const C = (0, T.useId)();
+          const g = (0, _.useId)();
           return (0, n.jsxs)("div", {
-            className: g().CheckboxField,
-            onClick: p,
-            onKeyPress: (c) => {
-              c.key == " " && (p(), c.preventDefault());
+            role: "presentation",
+            className: p().CheckboxField,
+            onClick: m,
+            onKeyPress: (l) => {
+              l.key == " " && (m(), l.preventDefault());
             },
             children: [
-              (0, n.jsx)(de, { labelledBy: C, value: u }),
+              (0, n.jsx)(bs, { labelledBy: g, value: c }),
               (0, n.jsx)("label", {
-                id: C,
-                className: g().CheckboxFieldLabel,
+                id: g,
+                className: p().CheckboxFieldLabel,
                 children: o,
               }),
             ],
           });
         }
-        function de(r) {
+        function bs(r) {
           const { value: o, labelledBy: a } = r;
           return (0, n.jsx)("div", {
             tabIndex: 0,
-            className: g().Checkbox,
+            className: p().Checkbox,
             "aria-labelledby": a,
             role: "checkbox",
             "aria-checked": o,
             children:
               o &&
               (0, n.jsx)("div", {
-                className: g().Check,
-                children: (0, n.jsx)(I.Jlk, { strokeWidth: 35 }),
+                className: p().Check,
+                children: (0, n.jsx)(Q.Jlk, { strokeWidth: 35 }),
               }),
           });
         }
-        function le(r) {
+        function ws(r) {
           const { refreshLogin: o, ...a } = r;
           return o &&
             "SteamClient" in globalThis &&
             "User" in SteamClient &&
             "StartShutdown" in SteamClient.User
-            ? (0, n.jsx)(tt, {})
-            : (0, n.jsx)(xe, { ...a });
+            ? (0, n.jsx)(Et, {})
+            : (0, n.jsx)(xs, { ...a });
         }
-        function xe(r) {
+        function xs(r) {
           return (0, n.jsx)("div", {
-            className: g().SignInButtonContainer,
-            children: (0, n.jsx)(pe, {
+            className: p().SignInButtonContainer,
+            children: (0, n.jsx)(ys, {
               ...r,
-              children: (0, d.we)("#Login_SignIn"),
+              children: (0, C.we)("#Login_SignIn"),
             }),
           });
         }
-        function tt() {
+        function Et() {
           const r = () => SteamClient.User.StartShutdown(!0);
           return (0, n.jsxs)("div", {
-            className: g().RefreshButtonContainer,
+            className: p().RefreshButtonContainer,
             children: [
               (0, n.jsx)("button", {
-                className: g().SubmitButton,
+                className: p().SubmitButton,
                 type: "submit",
-                children: (0, d.we)("#Login_SignIn"),
+                children: (0, C.we)("#Login_SignIn"),
               }),
               (0, n.jsx)("button", {
-                className: g().RefreshQuitButton,
+                className: p().RefreshQuitButton,
                 onClick: r,
-                children: (0, d.we)("#Login_ExitSteam"),
+                children: (0, C.we)("#Login_ExitSteam"),
               }),
             ],
           });
         }
-        function pe(r) {
-          return (0, n.jsx)(fe, { type: "submit", ...r });
+        function ys(r) {
+          return (0, n.jsx)(Mt, { type: "submit", ...r });
         }
-        function fe(r) {
+        function Mt(r) {
           const {
               className: o,
               loading: a,
-              disabled: u,
-              children: p,
-              ...C
+              disabled: c,
+              children: m,
+              ...g
             } = r,
-            c = u || a;
+            l = c || a;
           return (0, n.jsxs)("button", {
-            className: (0, F.A)(g().SubmitButton, a && g().Loading, o),
-            disabled: c,
-            ...C,
+            className: (0, V.A)(p().SubmitButton, a && p().Loading, o),
+            disabled: l,
+            ...g,
             children: [
-              p,
+              m,
               a &&
                 (0, n.jsx)("div", {
-                  className: g().LoadingContainer,
-                  children: (0, n.jsx)(Je, { size: "small" }),
+                  className: p().LoadingContainer,
+                  children: (0, n.jsx)(s, { size: "small" }),
                 }),
             ],
           });
         }
-        function Ze(r) {
+        function e(r) {
           const o = r.children || "\xA0";
-          return (0, n.jsx)("div", { className: g().FormError, children: o });
+          return (0, n.jsx)("div", { className: p().FormError, children: o });
         }
-        function Me() {
-          return (0, n.jsx)(Ye, {
+        function t() {
+          return (0, n.jsx)(Fe, {
             compact: !0,
-            children: (0, n.jsxs)(ye, {
+            children: (0, n.jsxs)(me, {
               alignItems: "center",
-              className: (0, F.A)(
-                g().WaitingForTokenContainer,
-                v.TS.IN_STEAMUI && g().Client,
+              className: (0, V.A)(
+                p().WaitingForTokenContainer,
+                b.TS.IN_STEAMUI && p().Client,
               ),
               children: [
-                (0, n.jsx)(te.t, { size: "xlarge" }),
+                (0, n.jsx)(Oe.t, { size: "xlarge" }),
                 (0, n.jsx)("div", {
-                  className: (0, F.A)(g().Description),
-                  children: (0, d.we)(
-                    v.TS.IN_STEAMUI
+                  className: (0, V.A)(p().Description),
+                  children: (0, C.we)(
+                    b.TS.IN_STEAMUI
                       ? "#Login_ConnectingToSteam"
                       : "#Login_LoadingAccountInfo",
                   ),
@@ -2592,296 +3737,296 @@
             }),
           });
         }
-        function Je(r) {
+        function s(r) {
           const { size: o } = r;
           return (0, n.jsx)("div", {
-            className: (0, F.A)(
-              g().LoadingSpinner,
-              o == "small" && g().Small,
-              (o == "medium" || !o) && g().Medium,
-              o == "large" && g().Large,
+            className: (0, V.A)(
+              p().LoadingSpinner,
+              o == "small" && p().Small,
+              (o == "medium" || !o) && p().Medium,
+              o == "large" && p().Large,
             ),
           });
         }
-        function _s(r) {
+        function i(r) {
           return (0, n.jsx)("div", {
-            className: g().OfferOffline,
+            className: p().OfferOffline,
             children: (0, n.jsx)("button", {
-              className: g().OfferOfflineButton,
+              className: p().OfferOfflineButton,
               onClick: r.onRequestOffline,
-              children: (0, d.we)("#Login_GoOffline_Button"),
+              children: (0, C.we)("#Login_GoOffline_Button"),
             }),
           });
         }
-        function at(r) {
+        function u(r) {
           const {
               reset: o,
               failure: a,
-              onRequestOffline: u,
-              errorReference: p,
-              extendedErrorMessage: C,
+              onRequestOffline: c,
+              errorReference: m,
+              extendedErrorMessage: g,
             } = r,
-            { title: c, description: f } = Ft(a, C),
-            R = v.TS.IN_STEAMUI && a == b.eF.Network;
-          return (0, n.jsxs)(Ye, {
+            { title: l, description: d } = Zt(a, g),
+            T = b.TS.IN_STEAMUI && a == x.eF.Network;
+          return (0, n.jsxs)(Fe, {
             compact: !0,
             children: [
-              (0, n.jsxs)(ye, {
+              (0, n.jsxs)(me, {
                 alignItems: "center",
                 gap: 12,
                 children: [
                   (0, n.jsx)("div", {
-                    className: g().FailureTitle,
-                    children: c,
+                    className: p().FailureTitle,
+                    children: l,
                   }),
                   (0, n.jsx)("div", {
-                    className: g().FailureDescription,
-                    children: f,
+                    className: p().FailureDescription,
+                    children: d,
                   }),
-                  R &&
+                  T &&
                     (0, n.jsx)("div", {
-                      className: g().FailureDescription,
-                      children: (0, d.we)("#Login_GoOffline_Description"),
+                      className: p().FailureDescription,
+                      children: (0, C.we)("#Login_GoOffline_Description"),
                     }),
-                  (0, n.jsxs)(yt, {
-                    className: g().FailureButtons,
+                  (0, n.jsxs)(At, {
+                    className: p().FailureButtons,
                     children: [
-                      (0, n.jsx)(fe, {
-                        className: g().TryAgainButton,
+                      (0, n.jsx)(Mt, {
+                        className: p().TryAgainButton,
                         onClick: o,
-                        children: (0, d.we)("#Button_Retry"),
+                        children: (0, C.we)("#Button_Retry"),
                       }),
-                      R && u && (0, n.jsx)(_s, { onRequestOffline: u }),
+                      T && c && (0, n.jsx)(i, { onRequestOffline: c }),
                     ],
                   }),
                 ],
               }),
-              p &&
+              m &&
                 (0, n.jsx)("div", {
-                  className: g().MutedErrorReference,
-                  children: (0, d.we)("#Login_Error_Reference", p),
+                  className: p().MutedErrorReference,
+                  children: (0, C.we)("#Login_Error_Reference", m),
                 }),
             ],
           });
         }
-        function ws(r) {
+        function h(r) {
           const { reset: o } = r;
-          return (0, n.jsx)(at, { reset: o, failure: b.eF.Generic });
+          return (0, n.jsx)(u, { reset: o, failure: x.eF.Generic });
         }
-        function bs(r) {
+        function S(r) {
           const {
               type: o,
               onSubmitCode: a,
-              status: u,
-              accountName: p,
-              associatedLabel: C,
-              onBack: c,
+              status: c,
+              accountName: m,
+              associatedLabel: g,
+              onBack: l,
             } = r,
-            [f, R] = (0, T.useState)([]),
-            [k, j] = (0, T.useState)(!1),
-            [G, Y] = (0, T.useState)(!1),
-            [z, ce] = (0, T.useState)(!1),
-            [q, oe] = (0, T.useState)(0),
+            [d, T] = (0, _.useState)([]),
+            [I, A] = (0, _.useState)(!1),
+            [F, W] = (0, _.useState)(!1),
+            [O, le] = (0, _.useState)(!1),
+            [J, re] = (0, _.useState)(0),
             M = o === "mobile",
-            X = f.join(""),
-            y = dt(X, z),
-            L = (Tt) => {
-              Y(!0),
-                a(Tt).then(() => {
-                  j(!1), Y(!1);
+            Y = d.join(""),
+            R = gt(Y, O),
+            E = (It) => {
+              W(!0),
+                a(It).then(() => {
+                  A(!1), W(!1);
                 });
             },
-            N = (Tt) => {
-              k || j(!0), R(Tt);
-              const vs = Tt.join("");
-              dt(vs, z) && L(vs);
+            k = (It) => {
+              I || A(!0), T(It);
+              const As = It.join("");
+              gt(As, O) && E(As);
             },
-            K = () => {
-              y && L(X);
+            G = () => {
+              R && E(Y);
             },
-            ge = () => {
-              ce(!z), R([]), a(""), oe(q + 1);
+            pe = () => {
+              le(!O), T([]), a(""), re(J + 1);
             },
-            Ae = !k && (u === Ve || u === He);
-          let Re, Rt;
+            xe = !I && (c === Me || c === Ee);
+          let ge, jt;
           return (
-            z
+            O
               ? o === "mobile"
-                ? ((Rt = (0, n.jsx)(gs, {})), (Re = "#Login_UseMobileCode"))
-                : ((Rt = (0, n.jsx)(gs, {})), (Re = "#Login_UseEmailCode"))
-              : ((Rt =
+                ? ((jt = (0, n.jsx)(D, {})), (ge = "#Login_UseMobileCode"))
+                : ((jt = (0, n.jsx)(D, {})), (ge = "#Login_UseEmailCode"))
+              : ((jt =
                   o === "mobile"
-                    ? (0, n.jsx)(xs, {})
-                    : (0, n.jsx)(ys, { emailAddress: C })),
-                (Re = "#Login_UseBackupCode")),
-            (0, n.jsx)(Ye, {
-              title: (0, n.jsx)(ds, {}),
+                    ? (0, n.jsx)(H, {})
+                    : (0, n.jsx)(Z, { emailAddress: g })),
+                (ge = "#Login_UseBackupCode")),
+            (0, n.jsx)(Fe, {
+              title: (0, n.jsx)(Rs, {}),
               compact: !0,
-              children: (0, n.jsx)(Ss, {
-                onSubmit: K,
-                children: (0, n.jsxs)(ye, {
+              children: (0, n.jsx)(Ms, {
+                onSubmit: G,
+                children: (0, n.jsxs)(me, {
                   alignItems: "center",
                   gap: 14,
                   children: [
-                    (0, n.jsx)(Cs, { type: o, accountName: p }),
+                    (0, n.jsx)(ne, { type: o, accountName: m }),
                     (0, n.jsxs)("div", {
-                      className: g().ConfirmationEntryContainer,
+                      className: p().ConfirmationEntryContainer,
                       children: [
-                        (0, n.jsxs)(ye, {
+                        (0, n.jsxs)(me, {
                           alignItems: "center",
                           gap: 2,
                           children: [
-                            Ae &&
-                              (0, n.jsx)(Ze, {
-                                children: (0, d.we)(
+                            xe &&
+                              (0, n.jsx)(e, {
+                                children: (0, C.we)(
                                   "#Login_IncorrectSteamGuard",
                                 ),
                               }),
                             (0, n.jsx)(
-                              Ms,
+                              js,
                               {
-                                value: f,
-                                onChange: N,
-                                tone: Ae ? "danger" : void 0,
-                                loading: G,
-                                backupCode: z,
+                                value: d,
+                                onChange: k,
+                                tone: xe ? "danger" : void 0,
+                                loading: F,
+                                backupCode: O,
                               },
-                              q,
+                              J,
                             ),
                           ],
                         }),
-                        Rt,
+                        jt,
                       ],
                     }),
                     M &&
-                      (0, n.jsx)(Se, {
-                        onClick: ge,
+                      (0, n.jsx)(oe, {
+                        onClick: pe,
                         align: "center",
-                        children: (0, d.we)(Re),
+                        children: (0, C.we)(ge),
                       }),
-                    (0, n.jsx)(ps, { type: o, onCodeHelp: r.onCodeHelp }),
+                    (0, n.jsx)(v, { type: o, onCodeHelp: r.onCodeHelp }),
                   ],
                 }),
               }),
             })
           );
         }
-        function ps(r) {
-          if ((0, re.q)()) return null;
+        function v(r) {
+          if ((0, Se.q)()) return null;
           let o, a;
           return (
             r.type === "mobile"
-              ? ((o = `${v.TS.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
-                (a = (0, d.we)("#Login_Help_AccessMobileApp")))
-              : ((o = `${v.TS.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
-                (a = (0, d.we)("#Login_Help_AccessEmail"))),
+              ? ((o = `${b.TS.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`),
+                (a = (0, C.we)("#Login_Help_AccessMobileApp")))
+              : ((o = `${b.TS.HELP_BASE_URL}wizard/HelpWithSteamGuardCode`),
+                (a = (0, C.we)("#Login_Help_AccessEmail"))),
             r.onCodeHelp
-              ? (0, n.jsx)(Se, {
+              ? (0, n.jsx)(oe, {
                   onClick: () => r.onCodeHelp(o),
                   align: "center",
                   children: a,
                 })
-              : (0, n.jsx)(Se, { href: o, align: "center", children: a })
+              : (0, n.jsx)(oe, { href: o, align: "center", children: a })
           );
         }
-        function gs() {
-          return (0, n.jsx)(yt, {
+        function D() {
+          return (0, n.jsx)(At, {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: g().EnterBackupCodeContainer,
-            children: (0, n.jsxs)(ye, {
+            className: p().EnterBackupCodeContainer,
+            children: (0, n.jsxs)(me, {
               children: [
                 (0, n.jsx)("div", {
-                  className: g().EnterCodeFromMobile,
-                  children: (0, d.we)("#Login_EnterBackupCode"),
+                  className: p().EnterCodeFromMobile,
+                  children: (0, C.we)("#Login_EnterBackupCode"),
                 }),
                 (0, n.jsx)("div", {
-                  className: g().Label,
-                  children: (0, d.we)("#Login_EnterBackupCodeDescription"),
+                  className: p().Label,
+                  children: (0, C.we)("#Login_EnterBackupCodeDescription"),
                 }),
               ],
             }),
           });
         }
-        function xs() {
-          return (0, n.jsxs)(yt, {
+        function H() {
+          return (0, n.jsxs)(At, {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: g().EnterCodeFromMobileContainer,
+            className: p().EnterCodeFromMobileContainer,
             children: [
               (0, n.jsx)("div", {
-                className: g().EnterCodeFromMobile,
-                children: (0, d.we)("#Login_EnterMobileCode"),
+                className: p().EnterCodeFromMobile,
+                children: (0, C.we)("#Login_EnterMobileCode"),
               }),
-              (0, n.jsx)(Ts, { className: g().AwaitingMobileConfIcon }),
+              (0, n.jsx)(Je, { className: p().AwaitingMobileConfIcon }),
             ],
           });
         }
-        function ys(r) {
-          return (0, n.jsxs)(yt, {
+        function Z(r) {
+          return (0, n.jsxs)(At, {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: g().EnterCodeFromEmailContainer,
+            className: p().EnterCodeFromEmailContainer,
             children: [
-              (0, n.jsx)(As, {
+              (0, n.jsx)(Is, {
                 align: "center",
                 spacing: 6,
                 children: (0, n.jsx)("div", {
-                  className: g().EnterCodeFromEmail,
-                  children: (0, d.PP)(
+                  className: p().EnterCodeFromEmail,
+                  children: (0, C.PP)(
                     "#Login_EnterEmailCode",
                     (0, n.jsx)("span", {
-                      className: g().EnterCodeEmailAddress,
+                      className: p().EnterCodeEmailAddress,
                       children: r.emailAddress,
                     }),
                   ),
                 }),
               }),
-              (0, n.jsx)(Ls, { className: g().AwaitingEmailConfIcon }),
+              (0, n.jsx)(he, { className: p().AwaitingEmailConfIcon }),
             ],
           });
         }
-        function Cs(r) {
+        function ne(r) {
           const { accountName: o, type: a } = r,
-            u =
+            c =
               a === "mobile"
-                ? (0, d.we)("#Login_MobileProtectingAccount")
-                : (0, d.we)("#Login_EmailProtectingAccount"),
-            p = Ke();
+                ? (0, C.we)("#Login_MobileProtectingAccount")
+                : (0, C.we)("#Login_EmailProtectingAccount"),
+            m = He();
           return (0, n.jsxs)("div", {
-            className: g().ProtectingAccount,
+            className: p().ProtectingAccount,
             children: [
               (0, n.jsx)("div", {
-                className: g().Label,
-                children: (0, d.PP)(
+                className: p().Label,
+                children: (0, C.PP)(
                   "#Login_ActiveAccountName",
                   (0, n.jsx)("span", {
-                    className: g().AccountName,
+                    className: p().AccountName,
                     children: o,
                   }),
                 ),
               }),
-              !p &&
-                (0, n.jsx)("div", { className: g().Description, children: u }),
+              !m &&
+                (0, n.jsx)("div", { className: p().Description, children: c }),
             ],
           });
         }
-        function Rs() {
-          return (0, n.jsx)(ye, {
+        function fe() {
+          return (0, n.jsx)(me, {
             alignItems: "center",
             children: (0, n.jsxs)("div", {
-              className: g().ConfirmationContainer,
+              className: p().ConfirmationContainer,
               children: [
-                (0, n.jsx)("img", { src: (0, Xt.YJ)(Ie) }),
+                (0, n.jsx)("img", { src: (0, rs.YJ)(qe), alt: "" }),
                 (0, n.jsx)("div", {
-                  className: g().AwaitingMobileConfText,
-                  children: (0, d.oW)("#Login_AwaitingMobileConfirmation"),
+                  className: p().AwaitingMobileConfText,
+                  children: (0, C.oW)("#Login_AwaitingMobileConfirmation"),
                 }),
               ],
             }),
           });
         }
-        function Ts(r) {
+        function Je(r) {
           return (0, n.jsxs)("svg", {
             viewBox: "0 0 33 49",
             fill: "currentColor",
@@ -2916,7 +4061,7 @@
             ],
           });
         }
-        function Ls(r) {
+        function he(r) {
           return (0, n.jsx)("svg", {
             viewBox: "0 0 58 56",
             fill: "none",
@@ -2927,7 +4072,7 @@
             }),
           });
         }
-        function Vs(r) {
+        function de(r) {
           const [o, a] = useSvgId();
           return jsxs("svg", {
             className: r.className,
@@ -2970,7 +4115,7 @@
             ],
           });
         }
-        function Fs(r) {
+        function ut(r) {
           return jsxs("svg", {
             className: r.className,
             viewBox: "0 0 25 25",
@@ -3043,64 +4188,64 @@
             ],
           });
         }
-        function Es(r) {
-          const { type: o, accountName: a, onUseCodeOverride: u } = r,
-            p = Ke(),
-            C = (0, n.jsx)(ps, { type: "mobile", onCodeHelp: r.onCodeHelp }),
-            c = p
+        function we(r) {
+          const { type: o, accountName: a, onUseCodeOverride: c } = r,
+            m = He(),
+            g = (0, n.jsx)(v, { type: "mobile", onCodeHelp: r.onCodeHelp }),
+            l = m
               ? (0, n.jsx)("div", {
                   style: { paddingBottom: "20px" },
-                  children: (0, n.jsx)(Se, {
+                  children: (0, n.jsx)(oe, {
                     align: "center",
-                    onClick: u,
-                    children: (0, d.we)("#Login_EnterCodeInstead"),
+                    onClick: c,
+                    children: (0, C.we)("#Login_EnterCodeInstead"),
                   }),
                 })
               : (0, n.jsx)("div", {
-                  className: g().EnterCodeInsteadLink,
-                  children: (0, n.jsx)(Se, {
+                  className: p().EnterCodeInsteadLink,
+                  children: (0, n.jsx)(oe, {
                     align: "center",
-                    onClick: u,
-                    children: (0, d.we)("#Login_EnterCodeInstead"),
+                    onClick: c,
+                    children: (0, C.we)("#Login_EnterCodeInstead"),
                   }),
                 });
-          return (0, n.jsx)(Ye, {
-            title: (0, n.jsx)(ds, {}),
+          return (0, n.jsx)(Fe, {
+            title: (0, n.jsx)(Rs, {}),
             compact: !0,
-            children: (0, n.jsxs)(ye, {
-              gap: v.TS.IN_STEAMUI ? 24 : 40,
+            children: (0, n.jsxs)(me, {
+              gap: b.TS.IN_STEAMUI ? 24 : 40,
               children: [
-                (0, n.jsx)(Cs, { type: o, accountName: a }),
-                (0, n.jsx)(Rs, {}),
+                (0, n.jsx)(ne, { type: o, accountName: a }),
+                (0, n.jsx)(fe, {}),
                 (0, n.jsxs)("div", {
-                  className: g().LinkContainer,
-                  children: [c, C],
+                  className: p().LinkContainer,
+                  children: [l, g],
                 }),
               ],
             }),
           });
         }
-        function Se(r) {
-          const { children: o, align: a, inline: u } = r,
-            p = (0, F.A)(g().TextLink, a === "center" && g().TextAlignCenter);
+        function oe(r) {
+          const { children: o, align: a, inline: c } = r,
+            m = (0, V.A)(p().TextLink, a === "center" && p().TextAlignCenter);
           if ("href" in r) {
-            const C = v.TS.IN_STEAMUI
+            const g = b.TS.IN_STEAMUI
               ? `steam://openurl_external/${r.href}`
               : r.href;
-            return (0, n.jsx)("a", { className: p, href: C, children: o });
+            return (0, n.jsx)("a", { className: m, href: g, children: o });
           } else {
-            const C = u ? "span" : "div";
-            return (0, n.jsx)(C, {
-              className: p,
+            const g = c ? "span" : "div";
+            return (0, n.jsx)(g, {
+              className: m,
               onClick: r.onClick,
               children: o,
             });
           }
         }
-        function Ss(r) {
-          const { onSubmit: o, children: a, className: u } = r,
-            p = (C) => (C.preventDefault(), o(), !1);
-          return (0, n.jsx)("form", { onSubmit: p, className: u, children: a });
+        function Ms(r) {
+          const { onSubmit: o, children: a, className: c } = r,
+            m = (g) => (g.preventDefault(), o(), !1);
+          return (0, n.jsx)("form", { onSubmit: m, className: c, children: a });
         }
         function Ps(r) {
           const { align: o, ...a } = r;
@@ -3109,128 +4254,130 @@
             ...a,
           });
         }
-        function ye(r) {
+        function me(r) {
           const {
               alignItems: o,
               justifyContent: a,
-              gap: u,
-              className: p,
-              ariaLabelledBy: C,
-              children: c,
+              gap: c,
+              className: m,
+              ariaLabelledBy: g,
+              children: l,
             } = r,
-            f = (0, F.A)(
-              g().FlexCol,
-              o === "center" && g().AlignItemsCenter,
-              a === "center" && g().JustifyContentCenter,
-              p,
+            d = (0, V.A)(
+              p().FlexCol,
+              o === "center" && p().AlignItemsCenter,
+              a === "center" && p().JustifyContentCenter,
+              m,
             ),
-            R = u ? { gap: typeof u == "number" ? `${u}px` : u } : void 0;
+            T = c ? { gap: typeof c == "number" ? `${c}px` : c } : void 0;
           return (0, n.jsx)("section", {
-            className: f,
-            style: R,
-            "aria-labelledby": C,
-            children: c,
+            className: d,
+            style: T,
+            "aria-labelledby": g,
+            children: l,
           });
         }
-        function yt(r) {
+        function At(r) {
           const {
               children: o,
               justifyContent: a,
-              alignItems: u,
-              className: p,
+              alignItems: c,
+              className: m,
             } = r,
-            C = {
+            g = {
               display: "flex",
               flexDirection: "row",
               justifyContent: a,
-              alignItems: u,
+              alignItems: c,
             };
-          return (0, n.jsx)("div", { style: C, className: p, children: o });
+          return (0, n.jsx)("div", { style: g, className: m, children: o });
         }
-        function Ms(r) {
-          const { onChange: o, backupCode: a = !1, ...u } = r,
-            p = (C) => {
-              C = C.map((f) => f.toUpperCase());
-              const c = C.join("").trim();
-              ht(c, a) && o(C);
+        function js(r) {
+          const { onChange: o, backupCode: a = !1, ...c } = r,
+            m = (g) => {
+              g = g.map((d) => d.toUpperCase());
+              const l = g.join("").trim();
+              pt(l, a) && o(g);
             };
-          return (0, n.jsx)(Q, {
-            length: rt(a),
+          return (0, n.jsx)(Ue, {
+            length: ot(a),
             backupCode: a,
-            onChange: p,
+            onChange: m,
             autoFocus: !0,
-            ...u,
-            allowCharacter: (C) => /\w/g.test(C),
+            ...c,
+            allowCharacter: (g) => /\w/g.test(g),
           });
         }
-        function As(r) {
-          const { children: o, spacing: a = 0, align: u } = r;
-          return (0, n.jsx)(ye, {
-            alignItems: u,
-            children: T.Children.map(o, (p, C) =>
-              p
+        function Is(r) {
+          const { children: o, spacing: a = 0, align: c } = r;
+          return (0, n.jsx)(me, {
+            alignItems: c,
+            children: _.Children.map(o, (m, g) =>
+              m
                 ? (0, n.jsx)("div", {
-                    style: C > 0 ? { paddingTop: `${a}px` } : void 0,
-                    children: p,
+                    style: g > 0 ? { paddingTop: `${a}px` } : void 0,
+                    children: m,
                   })
                 : null,
             )?.filter(Boolean),
           });
         }
-        function Ye(r) {
-          const { title: o, titleId: a, children: u, compact: p } = r,
-            C = Ke(),
-            c = (0, T.useId)();
-          return (0, n.jsxs)(ye, {
-            gap: v.TS.IN_STEAMUI ? 0 : 32,
-            className: (0, F.A)(
-              g().StandardLayout,
-              C && g().Embedded,
-              p && g().Compact,
-              v.TS.IN_STEAMUI && "IN_CLIENT",
+        function Fe(r) {
+          const { title: o, titleId: a, children: c, compact: m } = r,
+            g = He(),
+            l = (0, _.useId)();
+          return (0, n.jsxs)(me, {
+            gap: b.TS.IN_STEAMUI ? 0 : 32,
+            className: (0, V.A)(
+              p().StandardLayout,
+              g && p().Embedded,
+              m && p().Compact,
+              b.TS.IN_STEAMUI && "IN_CLIENT",
             ),
-            ariaLabelledBy: a ?? c,
+            ariaLabelledBy: a ?? l,
             children: [
               typeof o == "string"
                 ? (0, n.jsx)("div", {
-                    className: g().PrimaryHeader,
-                    id: a ?? c,
+                    className: p().PrimaryHeader,
+                    id: a ?? l,
                     children: o,
                   })
                 : o,
-              (0, n.jsx)("div", { className: g().FormContainer, children: u }),
+              (0, n.jsx)("div", { className: p().FormContainer, children: c }),
             ],
           });
         }
-        function ds(r) {
+        function Rs(r) {
           const {
-            realm: o = v.TS.EREALM,
-            launcherType: a = v.TS.IN_STEAMUI ? v.TS.LAUNCHER_TYPE : void 0,
-            className: u = g().HeaderLogo,
+            realm: o = b.TS.EREALM,
+            launcherType: a = b.TS.IN_STEAMUI ? b.TS.LAUNCHER_TYPE : void 0,
+            className: c = p().HeaderLogo,
           } = r;
-          return a === Ce.A2g
-            ? (0, n.jsx)("div", { className: u })
+          return a === $.A2g
+            ? (0, n.jsx)("div", { className: c })
             : (0, n.jsxs)("div", {
-                className: g().LogoContainer,
+                className: p().LogoContainer,
                 children: [
-                  (0, n.jsx)(js, { onBack: r.onBack }),
-                  o !== je.TU.k_ESteamRealmChina
-                    ? (0, n.jsx)(Is, { className: u })
-                    : (0, n.jsx)(Ds, { className: u }),
+                  (0, n.jsx)(ks, { onBack: r.onBack }),
+                  o !== ke.TU.k_ESteamRealmChina
+                    ? (0, n.jsx)(Ds, { className: c })
+                    : (0, n.jsx)(Ns, { className: c }),
                   " ",
                 ],
               });
         }
-        function js(r) {
+        function ks(r) {
           return r.onBack
-            ? (0, n.jsx)("div", {
-                className: g().BackArrowContainer,
+            ? (0, n.jsx)("button", {
+                type: "button",
+                className: p().BackArrowContainer,
                 onClick: r.onBack,
-                children: (0, n.jsx)(I.Q38, { className: g().BackArrow }),
+                "aria-label": (0, C.we)("#Button_Back"),
+                children: (0, n.jsx)(Q.Q38, { className: p().BackArrow }),
               })
             : null;
         }
-        function Is(r) {
+        function Ds(r) {
           return (0, n.jsxs)("svg", {
             viewBox: "0 0 153 46",
             fill: "none",
@@ -3276,7 +4423,7 @@
             ],
           });
         }
-        function Ds(r) {
+        function Ns(r) {
           return (0, n.jsxs)("svg", {
             viewBox: "0 0 232.73 46.07",
             xmlns: "http://www.w3.org/2000/svg",
@@ -3346,67 +4493,67 @@
             ],
           });
         }
-        function ks() {
-          return (0, n.jsx)(ye, {
+        function Bs() {
+          return (0, n.jsx)(me, {
             alignItems: "center",
             justifyContent: "center",
-            children: (0, n.jsx)(te.t, {}),
+            children: (0, n.jsx)(Oe.t, {}),
           });
         }
-        function Ns(r) {
-          const o = (0, T.useRef)(r);
+        function Hs(r) {
+          const o = (0, _.useRef)(r);
           o.current = r;
-          const [a, u] = (0, T.useState)(!0),
-            p = (0, Fe.zy)();
+          const [a, c] = (0, _.useState)(!0),
+            m = (0, Pe.zy)();
           return (
-            (0, T.useEffect)(() => {
-              if (new URLSearchParams(p.search).get("need_password")) {
-                u(!1);
+            (0, _.useEffect)(() => {
+              if (new URLSearchParams(m.search).get("need_password")) {
+                c(!1);
                 return;
               }
               if (!o.current) {
-                u(!1);
+                c(!1);
                 return;
               }
-              Bs(o.current)
-                .then((c) => {
-                  u(c);
+              Vs(o.current)
+                .then((l) => {
+                  c(l);
                 })
-                .catch((c) => {
-                  (0, V.tH)("PerformRefresh exception", c), u(!1);
+                .catch((l) => {
+                  (0, B.tH)("PerformRefresh exception", l), c(!1);
                 });
-            }, [o, p.search]),
+            }, [o, m.search]),
             a
           );
         }
-        async function Bs(r) {
+        async function Vs(r) {
           const o = new FormData();
           o.append("redir", r);
-          const a = `${v.TS.LOGIN_BASE_URL}jwt/ajaxrefresh`,
-            u = await Te().post(a, o, { timeout: 1e4, withCredentials: !0 });
-          if (u.status !== 200 || !u?.data?.success) return !1;
-          const { success: p, login_url: C, error: c, ...f } = u.data,
-            R = new FormData();
-          Object.entries(f).forEach(([G, Y]) => R.append(G, Y));
-          const k = await Te().post(C, R),
-            j = k.status === 200 && k.data.result === l.R;
-          return j && window.location.assign(r), j;
+          const a = `${b.TS.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+            c = await f().post(a, o, { timeout: 1e4, withCredentials: !0 });
+          if (c.status !== 200 || !c?.data?.success) return !1;
+          const { success: m, login_url: g, error: l, ...d } = c.data,
+            T = new FormData();
+          Object.entries(d).forEach(([F, W]) => T.append(F, W));
+          const I = await f().post(g, T),
+            A = I.status === 200 && I.data.result === y.R;
+          return A && window.location.assign(r), A;
         }
-        function Hs() {
-          const r = (0, T.useRef)(!0);
+        function Fs() {
+          const r = (0, _.useRef)(!0);
           return (
-            (0, T.useEffect)(
+            (0, _.useEffect)(
               () => () => {
                 r.current = !1;
               },
               [r],
             ),
-            (0, T.useCallback)(() => r.current, [r])
+            (0, _.useCallback)(() => r.current, [r])
           );
         }
       },
-      78412: (ve) => {
-        ve.exports = {
+      78412: (Ce) => {
+        Ce.exports = {
           Login: "_3EoMsOmqpdSZOFkxEPOqTw",
           SideBySide: "_26GwL4e6kWGCQPYX9_ZAC8",
           GuestContainer: "rLcB9iUxp0k1vOk6m_BRU",
@@ -3510,8 +4657,8 @@
           Client: "xkGF13f3kmhCqC-UPI3Lw",
         };
       },
-      15557: (ve) => {
-        ve.exports = {
+      15557: (Ce) => {
+        Ce.exports = {
           LoginQR: "_1RBdpuXQ8gNILSNU1JGlsC",
           NonPublic: "_2pgLZjuLvDu9oZpL9uDUTj",
           QRLoginDeck: "_2Xu3kVHfz2ij-c4aUzmT98",
@@ -3527,16 +4674,16 @@
           Large: "_174GHCvLhZKr1nVbcJBwcc",
         };
       },
-      5804: (ve) => {
-        ve.exports = {
+      5804: (Ce) => {
+        Ce.exports = {
           QRBits: "_3BALYLTpJdiDaC7JKmeeFJ",
           QRImg: "_5S5WqZhvbmRD1cHQT8P-l",
           Bit: "_1YVDTFYSTDWouyIbRs_hN_",
           Active: "_1zNnNw2BDhrN6ML6YxBYJE",
         };
       },
-      32224: (ve) => {
-        ve.exports = {
+      32224: (Ce) => {
+        Ce.exports = {
           SegmentedCharacterInput: "_1gzkmmy_XA39rp9MtxJfZJ",
           Disabled: "_4WrcvilhO29CHFM0pqglW",
           Danger: "_3lEvxoIfUV21o8WAfErUcA",
@@ -3544,1149 +4691,6 @@
           Loading: "_3khV2wP4icszbiR8o7sw37",
           Input: "_3xcXqLVteTNHmk-gh9W65d",
         };
-      },
-      80407: (ve, We, w) => {
-        "use strict";
-        w.d(We, { A: () => hs });
-        var n,
-          je = 0xdeadbeefcafe,
-          Ce = (je & 16777215) == 15715070;
-        function l(e, t, s) {
-          e != null &&
-            (typeof e == "number"
-              ? this.fromNumber(e, t, s)
-              : t == null && typeof e != "string"
-                ? this.fromString(e, 256)
-                : this.fromString(e, t));
-        }
-        function E() {
-          return new l(null);
-        }
-        function Te(e, t, s, i, h, m) {
-          for (; --m >= 0; ) {
-            var S = t * this[e++] + s[i] + h;
-            (h = Math.floor(S / 67108864)), (s[i++] = S & 67108863);
-          }
-          return h;
-        }
-        function T(e, t, s, i, h, m) {
-          for (var S = t & 32767, _ = t >> 15; --m >= 0; ) {
-            var H = this[e] & 32767,
-              U = this[e++] >> 15,
-              de = _ * H + U * S;
-            (H = S * H + ((de & 32767) << 15) + s[i] + (h & 1073741823)),
-              (h = (H >>> 30) + (de >>> 15) + _ * U + (h >>> 30)),
-              (s[i++] = H & 1073741823);
-          }
-          return h;
-        }
-        function Fe(e, t, s, i, h, m) {
-          for (var S = t & 16383, _ = t >> 14; --m >= 0; ) {
-            var H = this[e] & 16383,
-              U = this[e++] >> 14,
-              de = _ * H + U * S;
-            (H = S * H + ((de & 16383) << 14) + s[i] + h),
-              (h = (H >> 28) + (de >> 14) + _ * U),
-              (s[i++] = H & 268435455);
-          }
-          return h;
-        }
-        Ce && navigator.appName == "Microsoft Internet Explorer"
-          ? ((l.prototype.am = T), (n = 30))
-          : Ce && navigator.appName != "Netscape"
-            ? ((l.prototype.am = Te), (n = 26))
-            : ((l.prototype.am = Fe), (n = 28)),
-          (l.prototype.DB = n),
-          (l.prototype.DM = (1 << n) - 1),
-          (l.prototype.DV = 1 << n);
-        var Ie = 52;
-        (l.prototype.FV = Math.pow(2, Ie)),
-          (l.prototype.F1 = Ie - n),
-          (l.prototype.F2 = 2 * n - Ie);
-        var _e = "0123456789abcdefghijklmnopqrstuvwxyz",
-          re = new Array(),
-          ue,
-          O;
-        for (ue = 48, O = 0; O <= 9; ++O) re[ue++] = O;
-        for (ue = 97, O = 10; O < 36; ++O) re[ue++] = O;
-        for (ue = 65, O = 10; O < 36; ++O) re[ue++] = O;
-        function Pe(e) {
-          return _e.charAt(e);
-        }
-        function De(e, t) {
-          var s = re[e.charCodeAt(t)];
-          return s ?? -1;
-        }
-        function F(e) {
-          for (var t = this.t - 1; t >= 0; --t) e[t] = this[t];
-          (e.t = this.t), (e.s = this.s);
-        }
-        function Ge(e) {
-          (this.t = 1),
-            (this.s = e < 0 ? -1 : 0),
-            e > 0 ? (this[0] = e) : e < -1 ? (this[0] = e + DV) : (this.t = 0);
-        }
-        function D(e) {
-          var t = E();
-          return t.fromInt(e), t;
-        }
-        function Q(e, t) {
-          var s;
-          if (t == 16) s = 4;
-          else if (t == 8) s = 3;
-          else if (t == 256) s = 8;
-          else if (t == 2) s = 1;
-          else if (t == 32) s = 5;
-          else if (t == 4) s = 2;
-          else {
-            this.fromRadix(e, t);
-            return;
-          }
-          (this.t = 0), (this.s = 0);
-          for (var i = e.length, h = !1, m = 0; --i >= 0; ) {
-            var S = s == 8 ? e[i] & 255 : De(e, i);
-            if (S < 0) {
-              e.charAt(i) == "-" && (h = !0);
-              continue;
-            }
-            (h = !1),
-              m == 0
-                ? (this[this.t++] = S)
-                : m + s > this.DB
-                  ? ((this[this.t - 1] |=
-                      (S & ((1 << (this.DB - m)) - 1)) << m),
-                    (this[this.t++] = S >> (this.DB - m)))
-                  : (this[this.t - 1] |= S << m),
-              (m += s),
-              m >= this.DB && (m -= this.DB);
-          }
-          s == 8 &&
-            (e[0] & 128) != 0 &&
-            ((this.s = -1),
-            m > 0 && (this[this.t - 1] |= ((1 << (this.DB - m)) - 1) << m)),
-            this.clamp(),
-            h && l.ZERO.subTo(this, this);
-        }
-        function I() {
-          for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e; )
-            --this.t;
-        }
-        function $(e) {
-          if (this.s < 0) return "-" + this.negate().toString(e);
-          var t;
-          if (e == 16) t = 4;
-          else if (e == 8) t = 3;
-          else if (e == 2) t = 1;
-          else if (e == 32) t = 5;
-          else if (e == 4) t = 2;
-          else return this.toRadix(e);
-          var s = (1 << t) - 1,
-            i,
-            h = !1,
-            m = "",
-            S = this.t,
-            _ = this.DB - ((S * this.DB) % t);
-          if (S-- > 0)
-            for (
-              _ < this.DB && (i = this[S] >> _) > 0 && ((h = !0), (m = Pe(i)));
-              S >= 0;
-            )
-              _ < t
-                ? ((i = (this[S] & ((1 << _) - 1)) << (t - _)),
-                  (i |= this[--S] >> (_ += this.DB - t)))
-                : ((i = (this[S] >> (_ -= t)) & s),
-                  _ <= 0 && ((_ += this.DB), --S)),
-                i > 0 && (h = !0),
-                h && (m += Pe(i));
-          return h ? m : "0";
-        }
-        function te() {
-          var e = E();
-          return l.ZERO.subTo(this, e), e;
-        }
-        function P() {
-          return this.s < 0 ? this.negate() : this;
-        }
-        function x(e) {
-          var t = this.s - e.s;
-          if (t != 0) return t;
-          var s = this.t;
-          if (((t = s - e.t), t != 0)) return t;
-          for (; --s >= 0; ) if ((t = this[s] - e[s]) != 0) return t;
-          return 0;
-        }
-        function d(e) {
-          var t = 1,
-            s;
-          return (
-            (s = e >>> 16) != 0 && ((e = s), (t += 16)),
-            (s = e >> 8) != 0 && ((e = s), (t += 8)),
-            (s = e >> 4) != 0 && ((e = s), (t += 4)),
-            (s = e >> 2) != 0 && ((e = s), (t += 2)),
-            (s = e >> 1) != 0 && ((e = s), (t += 1)),
-            t
-          );
-        }
-        function A() {
-          return this.t <= 0
-            ? 0
-            : this.DB * (this.t - 1) + d(this[this.t - 1] ^ (this.s & this.DM));
-        }
-        function v(e, t) {
-          var s;
-          for (s = this.t - 1; s >= 0; --s) t[s + e] = this[s];
-          for (s = e - 1; s >= 0; --s) t[s] = 0;
-          (t.t = this.t + e), (t.s = this.s);
-        }
-        function b(e, t) {
-          for (var s = e; s < this.t; ++s) t[s - e] = this[s];
-          (t.t = Math.max(this.t - e, 0)), (t.s = this.s);
-        }
-        function Z(e, t) {
-          var s = e % this.DB,
-            i = this.DB - s,
-            h = (1 << i) - 1,
-            m = Math.floor(e / this.DB),
-            S = (this.s << s) & this.DM,
-            _;
-          for (_ = this.t - 1; _ >= 0; --_)
-            (t[_ + m + 1] = (this[_] >> i) | S), (S = (this[_] & h) << s);
-          for (_ = m - 1; _ >= 0; --_) t[_] = 0;
-          (t[m] = S), (t.t = this.t + m + 1), (t.s = this.s), t.clamp();
-        }
-        function W(e, t) {
-          t.s = this.s;
-          var s = Math.floor(e / this.DB);
-          if (s >= this.t) {
-            t.t = 0;
-            return;
-          }
-          var i = e % this.DB,
-            h = this.DB - i,
-            m = (1 << i) - 1;
-          t[0] = this[s] >> i;
-          for (var S = s + 1; S < this.t; ++S)
-            (t[S - s - 1] |= (this[S] & m) << h), (t[S - s] = this[S] >> i);
-          i > 0 && (t[this.t - s - 1] |= (this.s & m) << h),
-            (t.t = this.t - s),
-            t.clamp();
-        }
-        function se(e, t) {
-          for (var s = 0, i = 0, h = Math.min(e.t, this.t); s < h; )
-            (i += this[s] - e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-          if (e.t < this.t) {
-            for (i -= e.s; s < this.t; )
-              (i += this[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-            i += this.s;
-          } else {
-            for (i += this.s; s < e.t; )
-              (i -= e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-            i -= e.s;
-          }
-          (t.s = i < 0 ? -1 : 0),
-            i < -1 ? (t[s++] = this.DV + i) : i > 0 && (t[s++] = i),
-            (t.t = s),
-            t.clamp();
-        }
-        function ke(e, t) {
-          var s = this.abs(),
-            i = e.abs(),
-            h = s.t;
-          for (t.t = h + i.t; --h >= 0; ) t[h] = 0;
-          for (h = 0; h < i.t; ++h) t[h + s.t] = s.am(0, i[h], t, h, 0, s.t);
-          (t.s = 0), t.clamp(), this.s != e.s && l.ZERO.subTo(t, t);
-        }
-        function V(e) {
-          for (var t = this.abs(), s = (e.t = 2 * t.t); --s >= 0; ) e[s] = 0;
-          for (s = 0; s < t.t - 1; ++s) {
-            var i = t.am(s, t[s], e, 2 * s, 0, 1);
-            (e[s + t.t] += t.am(
-              s + 1,
-              2 * t[s],
-              e,
-              2 * s + 1,
-              i,
-              t.t - s - 1,
-            )) >= t.DV && ((e[s + t.t] -= t.DV), (e[s + t.t + 1] = 1));
-          }
-          e.t > 0 && (e[e.t - 1] += t.am(s, t[s], e, 2 * s, 0, 1)),
-            (e.s = 0),
-            e.clamp();
-        }
-        function B(e, t, s) {
-          var i = e.abs();
-          if (!(i.t <= 0)) {
-            var h = this.abs();
-            if (h.t < i.t) {
-              t?.fromInt(0), s != null && this.copyTo(s);
-              return;
-            }
-            s == null && (s = E());
-            var m = E(),
-              S = this.s,
-              _ = e.s,
-              H = this.DB - d(i[i.t - 1]);
-            H > 0
-              ? (i.lShiftTo(H, m), h.lShiftTo(H, s))
-              : (i.copyTo(m), h.copyTo(s));
-            var U = m.t,
-              de = m[U - 1];
-            if (de != 0) {
-              var le = de * (1 << this.F1) + (U > 1 ? m[U - 2] >> this.F2 : 0),
-                xe = this.FV / le,
-                tt = (1 << this.F1) / le,
-                pe = 1 << this.F2,
-                fe = s.t,
-                Ze = fe - U,
-                Me = t ?? E();
-              for (
-                m.dlShiftTo(Ze, Me),
-                  s.compareTo(Me) >= 0 && ((s[s.t++] = 1), s.subTo(Me, s)),
-                  l.ONE.dlShiftTo(U, Me),
-                  Me.subTo(m, m);
-                m.t < U;
-              )
-                m[m.t++] = 0;
-              for (; --Ze >= 0; ) {
-                var Je =
-                  s[--fe] == de
-                    ? this.DM
-                    : Math.floor(s[fe] * xe + (s[fe - 1] + pe) * tt);
-                if ((s[fe] += m.am(0, Je, s, Ze, 0, U)) < Je)
-                  for (m.dlShiftTo(Ze, Me), s.subTo(Me, s); s[fe] < --Je; )
-                    s.subTo(Me, s);
-              }
-              t != null && (s.drShiftTo(U, t), S != _ && l.ZERO.subTo(t, t)),
-                (s.t = U),
-                s.clamp(),
-                H > 0 && s.rShiftTo(H, s),
-                S < 0 && l.ZERO.subTo(s, s);
-            }
-          }
-        }
-        function he(e) {
-          var t = E();
-          return (
-            this.abs().divRemTo(e, null, t),
-            this.s < 0 && t.compareTo(l.ZERO) > 0 && e.subTo(t, t),
-            t
-          );
-        }
-        function we(e) {
-          this.m = e;
-        }
-        function Oe(e) {
-          return e.s < 0 || e.compareTo(this.m) >= 0 ? e.mod(this.m) : e;
-        }
-        function Lt(e) {
-          return e;
-        }
-        function Et(e) {
-          e.divRemTo(this.m, null, e);
-        }
-        function ie(e, t, s) {
-          e.multiplyTo(t, s), this.reduce(s);
-        }
-        function Mt(e, t) {
-          e.squareTo(t), this.reduce(t);
-        }
-        (we.prototype.convert = Oe),
-          (we.prototype.revert = Lt),
-          (we.prototype.reduce = Et),
-          (we.prototype.mulTo = ie),
-          (we.prototype.sqrTo = Mt);
-        function Le() {
-          if (this.t < 1) return 0;
-          var e = this[0];
-          if ((e & 1) == 0) return 0;
-          var t = e & 3;
-          return (
-            (t = (t * (2 - (e & 15) * t)) & 15),
-            (t = (t * (2 - (e & 255) * t)) & 255),
-            (t = (t * (2 - (((e & 65535) * t) & 65535))) & 65535),
-            (t = (t * (2 - ((e * t) % this.DV))) % this.DV),
-            t > 0 ? this.DV - t : -t
-          );
-        }
-        function be(e) {
-          (this.m = e),
-            (this.mp = e.invDigit()),
-            (this.mpl = this.mp & 32767),
-            (this.mph = this.mp >> 15),
-            (this.um = (1 << (e.DB - 15)) - 1),
-            (this.mt2 = 2 * e.t);
-        }
-        function $e(e) {
-          var t = E();
-          return (
-            e.abs().dlShiftTo(this.m.t, t),
-            t.divRemTo(this.m, null, t),
-            e.s < 0 && t.compareTo(l.ZERO) > 0 && this.m.subTo(t, t),
-            t
-          );
-        }
-        function Ee(e) {
-          var t = E();
-          return e.copyTo(t), this.reduce(t), t;
-        }
-        function Ne(e) {
-          for (; e.t <= this.mt2; ) e[e.t++] = 0;
-          for (var t = 0; t < this.m.t; ++t) {
-            var s = e[t] & 32767,
-              i =
-                (s * this.mpl +
-                  (((s * this.mph + (e[t] >> 15) * this.mpl) & this.um) <<
-                    15)) &
-                e.DM;
-            for (
-              s = t + this.m.t, e[s] += this.m.am(0, i, e, t, 0, this.m.t);
-              e[s] >= e.DV;
-            )
-              (e[s] -= e.DV), e[++s]++;
-          }
-          e.clamp(),
-            e.drShiftTo(this.m.t, e),
-            e.compareTo(this.m) >= 0 && e.subTo(this.m, e);
-        }
-        function me(e, t) {
-          e.squareTo(t), this.reduce(t);
-        }
-        function Be(e, t, s) {
-          e.multiplyTo(t, s), this.reduce(s);
-        }
-        (be.prototype.convert = $e),
-          (be.prototype.revert = Ee),
-          (be.prototype.reduce = Ne),
-          (be.prototype.mulTo = Be),
-          (be.prototype.sqrTo = me);
-        function st() {
-          return (this.t > 0 ? this[0] & 1 : this.s) == 0;
-        }
-        function qe(e, t) {
-          if (e > 4294967295 || e < 1) return l.ONE;
-          var s = E(),
-            i = E(),
-            h = t.convert(this),
-            m = d(e) - 1;
-          for (h.copyTo(s); --m >= 0; )
-            if ((t.sqrTo(s, i), (e & (1 << m)) > 0)) t.mulTo(i, h, s);
-            else {
-              var S = s;
-              (s = i), (i = S);
-            }
-          return t.revert(s);
-        }
-        function At(e, t) {
-          var s;
-          return (
-            e < 256 || t.isEven() ? (s = new we(t)) : (s = new be(t)),
-            this.exp(e, s)
-          );
-        }
-        (l.prototype.copyTo = F),
-          (l.prototype.fromInt = Ge),
-          (l.prototype.fromString = Q),
-          (l.prototype.clamp = I),
-          (l.prototype.dlShiftTo = v),
-          (l.prototype.drShiftTo = b),
-          (l.prototype.lShiftTo = Z),
-          (l.prototype.rShiftTo = W),
-          (l.prototype.subTo = se),
-          (l.prototype.multiplyTo = ke),
-          (l.prototype.squareTo = V),
-          (l.prototype.divRemTo = B),
-          (l.prototype.invDigit = Le),
-          (l.prototype.isEven = st),
-          (l.prototype.exp = qe),
-          (l.prototype.toString = $),
-          (l.prototype.negate = te),
-          (l.prototype.abs = P),
-          (l.prototype.compareTo = x),
-          (l.prototype.bitLength = A),
-          (l.prototype.mod = he),
-          (l.prototype.modPowInt = At),
-          (l.ZERO = D(0)),
-          (l.ONE = D(1));
-        function He() {
-          var e = E();
-          return this.copyTo(e), e;
-        }
-        function Ve() {
-          if (this.s < 0) {
-            if (this.t == 1) return this[0] - this.DV;
-            if (this.t == 0) return -1;
-          } else {
-            if (this.t == 1) return this[0];
-            if (this.t == 0) return 0;
-          }
-          return ((this[1] & ((1 << (32 - this.DB)) - 1)) << this.DB) | this[0];
-        }
-        function nt() {
-          return this.t == 0 ? this.s : (this[0] << 24) >> 24;
-        }
-        function Xe() {
-          return this.t == 0 ? this.s : (this[0] << 16) >> 16;
-        }
-        function lt(e) {
-          return Math.floor((Math.LN2 * this.DB) / Math.log(e));
-        }
-        function ot() {
-          return this.s < 0
-            ? -1
-            : this.t <= 0 || (this.t == 1 && this[0] <= 0)
-              ? 0
-              : 1;
-        }
-        function ct(e) {
-          if ((e == null && (e = 10), this.signum() == 0 || e < 2 || e > 36))
-            return "0";
-          var t = this.chunkSize(e),
-            s = Math.pow(e, t),
-            i = D(s),
-            h = E(),
-            m = E(),
-            S = "";
-          for (this.divRemTo(i, h, m); h.signum() > 0; )
-            (S = (s + m.intValue()).toString(e).substr(1) + S),
-              h.divRemTo(i, h, m);
-          return m.intValue().toString(e) + S;
-        }
-        function ee(e, t) {
-          this.fromInt(0), t == null && (t = 10);
-          for (
-            var s = this.chunkSize(t),
-              i = Math.pow(t, s),
-              h = !1,
-              m = 0,
-              S = 0,
-              _ = 0;
-            _ < e.length;
-            ++_
-          ) {
-            var H = De(e, _);
-            if (H < 0) {
-              e.charAt(_) == "-" && this.signum() == 0 && (h = !0);
-              continue;
-            }
-            (S = t * S + H),
-              ++m >= s &&
-                (this.dMultiply(i), this.dAddOffset(S, 0), (m = 0), (S = 0));
-          }
-          m > 0 && (this.dMultiply(Math.pow(t, m)), this.dAddOffset(S, 0)),
-            h && l.ZERO.subTo(this, this);
-        }
-        function jt(e, t, s) {
-          if (typeof t == "number")
-            if (e < 2) this.fromInt(1);
-            else
-              for (
-                this.fromNumber(e, s),
-                  this.testBit(e - 1) ||
-                    this.bitwiseTo(l.ONE.shiftLeft(e - 1), J, this),
-                  this.isEven() && this.dAddOffset(1, 0);
-                !this.isProbablePrime(t);
-              )
-                this.dAddOffset(2, 0),
-                  this.bitLength() > e &&
-                    this.subTo(l.ONE.shiftLeft(e - 1), this);
-          else {
-            var i = new Array(),
-              h = e & 7;
-            (i.length = (e >> 3) + 1),
-              t.nextBytes(i),
-              h > 0 ? (i[0] &= (1 << h) - 1) : (i[0] = 0),
-              this.fromString(i, 256);
-          }
-        }
-        function fs() {
-          var e = this.t,
-            t = new Array();
-          t[0] = this.s;
-          var s = this.DB - ((e * this.DB) % 8),
-            i,
-            h = 0;
-          if (e-- > 0)
-            for (
-              s < this.DB &&
-              (i = this[e] >> s) != (this.s & this.DM) >> s &&
-              (t[h++] = i | (this.s << (this.DB - s)));
-              e >= 0;
-            )
-              s < 8
-                ? ((i = (this[e] & ((1 << s) - 1)) << (8 - s)),
-                  (i |= this[--e] >> (s += this.DB - 8)))
-                : ((i = (this[e] >> (s -= 8)) & 255),
-                  s <= 0 && ((s += this.DB), --e)),
-                (i & 128) != 0 && (i |= -256),
-                h == 0 && (this.s & 128) != (i & 128) && ++h,
-                (h > 0 || i != this.s) && (t[h++] = i);
-          return t;
-        }
-        function ut(e) {
-          return this.compareTo(e) == 0;
-        }
-        function It(e) {
-          return this.compareTo(e) < 0 ? this : e;
-        }
-        function Dt(e) {
-          return this.compareTo(e) > 0 ? this : e;
-        }
-        function rt(e, t, s) {
-          var i,
-            h,
-            m = Math.min(e.t, this.t);
-          for (i = 0; i < m; ++i) s[i] = t(this[i], e[i]);
-          if (e.t < this.t) {
-            for (h = e.s & this.DM, i = m; i < this.t; ++i)
-              s[i] = t(this[i], h);
-            s.t = this.t;
-          } else {
-            for (h = this.s & this.DM, i = m; i < e.t; ++i) s[i] = t(h, e[i]);
-            s.t = e.t;
-          }
-          (s.s = t(this.s, e.s)), s.clamp();
-        }
-        function ht(e, t) {
-          return e & t;
-        }
-        function dt(e) {
-          var t = E();
-          return this.bitwiseTo(e, ht, t), t;
-        }
-        function J(e, t) {
-          return e | t;
-        }
-        function kt(e) {
-          var t = E();
-          return this.bitwiseTo(e, J, t), t;
-        }
-        function ft(e, t) {
-          return e ^ t;
-        }
-        function Nt(e) {
-          var t = E();
-          return this.bitwiseTo(e, ft, t), t;
-        }
-        function Qe(e, t) {
-          return e & ~t;
-        }
-        function mt(e) {
-          var t = E();
-          return this.bitwiseTo(e, Qe, t), t;
-        }
-        function pt() {
-          for (var e = E(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
-          return (e.t = this.t), (e.s = ~this.s), e;
-        }
-        function gt(e) {
-          var t = E();
-          return e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t;
-        }
-        function Ct(e) {
-          var t = E();
-          return e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t;
-        }
-        function Bt(e) {
-          if (e == 0) return -1;
-          var t = 0;
-          return (
-            (e & 65535) == 0 && ((e >>= 16), (t += 16)),
-            (e & 255) == 0 && ((e >>= 8), (t += 8)),
-            (e & 15) == 0 && ((e >>= 4), (t += 4)),
-            (e & 3) == 0 && ((e >>= 2), (t += 2)),
-            (e & 1) == 0 && ++t,
-            t
-          );
-        }
-        function it() {
-          for (var e = 0; e < this.t; ++e)
-            if (this[e] != 0) return e * this.DB + Bt(this[e]);
-          return this.s < 0 ? this.t * this.DB : -1;
-        }
-        function Ht(e) {
-          for (var t = 0; e != 0; ) (e &= e - 1), ++t;
-          return t;
-        }
-        function ms() {
-          for (var e = 0, t = this.s & this.DM, s = 0; s < this.t; ++s)
-            e += Ht(this[s] ^ t);
-          return e;
-        }
-        function St(e) {
-          var t = Math.floor(e / this.DB);
-          return t >= this.t
-            ? this.s != 0
-            : (this[t] & (1 << (e % this.DB))) != 0;
-        }
-        function vt(e, t) {
-          var s = l.ONE.shiftLeft(e);
-          return this.bitwiseTo(s, t, s), s;
-        }
-        function Vt(e) {
-          return this.changeBit(e, J);
-        }
-        function Ft(e) {
-          return this.changeBit(e, Qe);
-        }
-        function Pt(e) {
-          return this.changeBit(e, ft);
-        }
-        function g(e, t) {
-          for (var s = 0, i = 0, h = Math.min(e.t, this.t); s < h; )
-            (i += this[s] + e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-          if (e.t < this.t) {
-            for (i += e.s; s < this.t; )
-              (i += this[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-            i += this.s;
-          } else {
-            for (i += this.s; s < e.t; )
-              (i += e[s]), (t[s++] = i & this.DM), (i >>= this.DB);
-            i += e.s;
-          }
-          (t.s = i < 0 ? -1 : 0),
-            i > 0 ? (t[s++] = i) : i < -1 && (t[s++] = this.DV + i),
-            (t.t = s),
-            t.clamp();
-        }
-        function Gt(e) {
-          var t = E();
-          return this.addTo(e, t), t;
-        }
-        function Ot(e) {
-          var t = E();
-          return this.subTo(e, t), t;
-        }
-        function Ut(e) {
-          var t = E();
-          return this.multiplyTo(e, t), t;
-        }
-        function _t(e) {
-          var t = E();
-          return this.divRemTo(e, t, null), t;
-        }
-        function wt(e) {
-          var t = E();
-          return this.divRemTo(e, null, t), t;
-        }
-        function Zt(e) {
-          var t = E(),
-            s = E();
-          return this.divRemTo(e, t, s), new Array(t, s);
-        }
-        function Wt(e) {
-          (this[this.t] = this.am(0, e - 1, this, 0, 0, this.t)),
-            ++this.t,
-            this.clamp();
-        }
-        function Qt(e, t) {
-          for (; this.t <= t; ) this[this.t++] = 0;
-          for (this[t] += e; this[t] >= this.DV; )
-            (this[t] -= this.DV),
-              ++t >= this.t && (this[this.t++] = 0),
-              ++this[t];
-        }
-        function ze() {}
-        function bt(e) {
-          return e;
-        }
-        function ae(e, t, s) {
-          e.multiplyTo(t, s);
-        }
-        function zt(e, t) {
-          e.squareTo(t);
-        }
-        (ze.prototype.convert = bt),
-          (ze.prototype.revert = bt),
-          (ze.prototype.mulTo = ae),
-          (ze.prototype.sqrTo = zt);
-        function Kt(e) {
-          return this.exp(e, new ze());
-        }
-        function Jt(e, t, s) {
-          var i = Math.min(this.t + e.t, t);
-          for (s.s = 0, s.t = i; i > 0; ) s[--i] = 0;
-          var h;
-          for (h = s.t - this.t; i < h; ++i)
-            s[i + this.t] = this.am(0, e[i], s, i, 0, this.t);
-          for (h = Math.min(e.t, t); i < h; ++i)
-            this.am(0, e[i], s, i, 0, t - i);
-          s.clamp();
-        }
-        function Yt(e, t, s) {
-          --t;
-          var i = (s.t = this.t + e.t - t);
-          for (s.s = 0; --i >= 0; ) s[i] = 0;
-          for (i = Math.max(t - this.t, 0); i < e.t; ++i)
-            s[this.t + i - t] = this.am(t - i, e[i], s, 0, 0, this.t + i - t);
-          s.clamp(), s.drShiftTo(1, s);
-        }
-        function Ue(e) {
-          (this.r2 = E()),
-            (this.q3 = E()),
-            l.ONE.dlShiftTo(2 * e.t, this.r2),
-            (this.mu = this.r2.divide(e)),
-            (this.m = e);
-        }
-        function $t(e) {
-          if (e.s < 0 || e.t > 2 * this.m.t) return e.mod(this.m);
-          if (e.compareTo(this.m) < 0) return e;
-          var t = E();
-          return e.copyTo(t), this.reduce(t), t;
-        }
-        function qt(e) {
-          return e;
-        }
-        function Xt(e) {
-          for (
-            e.drShiftTo(this.m.t - 1, this.r2),
-              e.t > this.m.t + 1 && ((e.t = this.m.t + 1), e.clamp()),
-              this.mu.multiplyUpperTo(this.r2, this.m.t + 1, this.q3),
-              this.m.multiplyLowerTo(this.q3, this.m.t + 1, this.r2);
-            e.compareTo(this.r2) < 0;
-          )
-            e.dAddOffset(1, this.m.t + 1);
-          for (e.subTo(this.r2, e); e.compareTo(this.m) >= 0; )
-            e.subTo(this.m, e);
-        }
-        function xt(e, t) {
-          e.squareTo(t), this.reduce(t);
-        }
-        function Ke(e, t, s) {
-          e.multiplyTo(t, s), this.reduce(s);
-        }
-        (Ue.prototype.convert = $t),
-          (Ue.prototype.revert = qt),
-          (Ue.prototype.reduce = Xt),
-          (Ue.prototype.mulTo = Ke),
-          (Ue.prototype.sqrTo = xt);
-        function es(e, t) {
-          var s = e.bitLength(),
-            i,
-            h = D(1),
-            m;
-          if (s <= 0) return h;
-          s < 18
-            ? (i = 1)
-            : s < 48
-              ? (i = 3)
-              : s < 144
-                ? (i = 4)
-                : s < 768
-                  ? (i = 5)
-                  : (i = 6),
-            s < 8
-              ? (m = new we(t))
-              : t.isEven()
-                ? (m = new Ue(t))
-                : (m = new be(t));
-          var S = new Array(),
-            _ = 3,
-            H = i - 1,
-            U = (1 << i) - 1;
-          if (((S[1] = m.convert(this)), i > 1)) {
-            var de = E();
-            for (m.sqrTo(S[1], de); _ <= U; )
-              (S[_] = E()), m.mulTo(de, S[_ - 2], S[_]), (_ += 2);
-          }
-          var le = e.t - 1,
-            xe,
-            tt = !0,
-            pe = E(),
-            fe;
-          for (s = d(e[le]) - 1; le >= 0; ) {
-            for (
-              s >= H
-                ? (xe = (e[le] >> (s - H)) & U)
-                : ((xe = (e[le] & ((1 << (s + 1)) - 1)) << (H - s)),
-                  le > 0 && (xe |= e[le - 1] >> (this.DB + s - H))),
-                _ = i;
-              (xe & 1) == 0;
-            )
-              (xe >>= 1), --_;
-            if (((s -= _) < 0 && ((s += this.DB), --le), tt))
-              S[xe].copyTo(h), (tt = !1);
-            else {
-              for (; _ > 1; ) m.sqrTo(h, pe), m.sqrTo(pe, h), (_ -= 2);
-              _ > 0 ? m.sqrTo(h, pe) : ((fe = h), (h = pe), (pe = fe)),
-                m.mulTo(pe, S[xe], h);
-            }
-            for (; le >= 0 && (e[le] & (1 << s)) == 0; )
-              m.sqrTo(h, pe),
-                (fe = h),
-                (h = pe),
-                (pe = fe),
-                --s < 0 && ((s = this.DB - 1), --le);
-          }
-          return m.revert(h);
-        }
-        function ts(e) {
-          var t = this.s < 0 ? this.negate() : this.clone(),
-            s = e.s < 0 ? e.negate() : e.clone();
-          if (t.compareTo(s) < 0) {
-            var i = t;
-            (t = s), (s = i);
-          }
-          var h = t.getLowestSetBit(),
-            m = s.getLowestSetBit();
-          if (m < 0) return t;
-          for (
-            h < m && (m = h), m > 0 && (t.rShiftTo(m, t), s.rShiftTo(m, s));
-            t.signum() > 0;
-          )
-            (h = t.getLowestSetBit()) > 0 && t.rShiftTo(h, t),
-              (h = s.getLowestSetBit()) > 0 && s.rShiftTo(h, s),
-              t.compareTo(s) >= 0
-                ? (t.subTo(s, t), t.rShiftTo(1, t))
-                : (s.subTo(t, s), s.rShiftTo(1, s));
-          return m > 0 && s.lShiftTo(m, s), s;
-        }
-        function ss(e) {
-          if (e <= 0) return 0;
-          var t = this.DV % e,
-            s = this.s < 0 ? e - 1 : 0;
-          if (this.t > 0)
-            if (t == 0) s = this[0] % e;
-            else
-              for (var i = this.t - 1; i >= 0; --i) s = (t * s + this[i]) % e;
-          return s;
-        }
-        function ns(e) {
-          var t = e.isEven();
-          if ((this.isEven() && t) || e.signum() == 0) return l.ZERO;
-          for (
-            var s = e.clone(),
-              i = this.clone(),
-              h = D(1),
-              m = D(0),
-              S = D(0),
-              _ = D(1);
-            s.signum() != 0;
-          ) {
-            for (; s.isEven(); )
-              s.rShiftTo(1, s),
-                t
-                  ? ((!h.isEven() || !m.isEven()) &&
-                      (h.addTo(this, h), m.subTo(e, m)),
-                    h.rShiftTo(1, h))
-                  : m.isEven() || m.subTo(e, m),
-                m.rShiftTo(1, m);
-            for (; i.isEven(); )
-              i.rShiftTo(1, i),
-                t
-                  ? ((!S.isEven() || !_.isEven()) &&
-                      (S.addTo(this, S), _.subTo(e, _)),
-                    S.rShiftTo(1, S))
-                  : _.isEven() || _.subTo(e, _),
-                _.rShiftTo(1, _);
-            s.compareTo(i) >= 0
-              ? (s.subTo(i, s), t && h.subTo(S, h), m.subTo(_, m))
-              : (i.subTo(s, i), t && S.subTo(h, S), _.subTo(m, _));
-          }
-          if (i.compareTo(l.ONE) != 0) return l.ZERO;
-          if (_.compareTo(e) >= 0) return _.subtract(e);
-          if (_.signum() < 0) _.addTo(e, _);
-          else return _;
-          return _.signum() < 0 ? _.add(e) : _;
-        }
-        var ne = [
-            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
-            67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137,
-            139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199,
-            211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277,
-            281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359,
-            367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439,
-            443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509,
-          ],
-          os = (1 << 26) / ne[ne.length - 1];
-        function rs(e) {
-          var t,
-            s = this.abs();
-          if (s.t == 1 && s[0] <= ne[ne.length - 1]) {
-            for (t = 0; t < ne.length; ++t) if (s[0] == ne[t]) return !0;
-            return !1;
-          }
-          if (s.isEven()) return !1;
-          for (t = 1; t < ne.length; ) {
-            for (var i = ne[t], h = t + 1; h < ne.length && i < os; )
-              i *= ne[h++];
-            for (i = s.modInt(i); t < h; ) if (i % ne[t++] == 0) return !1;
-          }
-          return s.millerRabin(e);
-        }
-        function is(e) {
-          var t = this.subtract(l.ONE),
-            s = t.getLowestSetBit();
-          if (s <= 0) return !1;
-          var i = t.shiftRight(s);
-          (e = (e + 1) >> 1), e > ne.length && (e = ne.length);
-          for (var h = E(), m = 0; m < e; ++m) {
-            h.fromInt(ne[m]);
-            var S = h.modPow(i, this);
-            if (S.compareTo(l.ONE) != 0 && S.compareTo(t) != 0) {
-              for (var _ = 1; _++ < s && S.compareTo(t) != 0; )
-                if (((S = S.modPowInt(2, this)), S.compareTo(l.ONE) == 0))
-                  return !1;
-              if (S.compareTo(t) != 0) return !1;
-            }
-          }
-          return !0;
-        }
-        (l.prototype.chunkSize = lt),
-          (l.prototype.toRadix = ct),
-          (l.prototype.fromRadix = ee),
-          (l.prototype.fromNumber = jt),
-          (l.prototype.bitwiseTo = rt),
-          (l.prototype.changeBit = vt),
-          (l.prototype.addTo = g),
-          (l.prototype.dMultiply = Wt),
-          (l.prototype.dAddOffset = Qt),
-          (l.prototype.multiplyLowerTo = Jt),
-          (l.prototype.multiplyUpperTo = Yt),
-          (l.prototype.modInt = ss),
-          (l.prototype.millerRabin = is),
-          (l.prototype.clone = He),
-          (l.prototype.intValue = Ve),
-          (l.prototype.byteValue = nt),
-          (l.prototype.shortValue = Xe),
-          (l.prototype.signum = ot),
-          (l.prototype.toByteArray = fs),
-          (l.prototype.equals = ut),
-          (l.prototype.min = It),
-          (l.prototype.max = Dt),
-          (l.prototype.and = dt),
-          (l.prototype.or = kt),
-          (l.prototype.xor = Nt),
-          (l.prototype.andNot = mt),
-          (l.prototype.not = pt),
-          (l.prototype.shiftLeft = gt),
-          (l.prototype.shiftRight = Ct),
-          (l.prototype.getLowestSetBit = it),
-          (l.prototype.bitCount = ms),
-          (l.prototype.testBit = St),
-          (l.prototype.setBit = Vt),
-          (l.prototype.clearBit = Ft),
-          (l.prototype.flipBit = Pt),
-          (l.prototype.add = Gt),
-          (l.prototype.subtract = Ot),
-          (l.prototype.multiply = Ut),
-          (l.prototype.divide = _t),
-          (l.prototype.remainder = wt),
-          (l.prototype.divideAndRemainder = Zt),
-          (l.prototype.modPow = es),
-          (l.prototype.modInverse = ns),
-          (l.prototype.pow = Kt),
-          (l.prototype.gcd = ts),
-          (l.prototype.isProbablePrime = rs);
-        const et = l;
-        var as = function (e, t) {
-            (this.modulus = new et(e, 16)),
-              (this.encryptionExponent = new et(t, 16));
-          },
-          ls = {
-            base64:
-              "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-            encode: function (e) {
-              if (!e) return !1;
-              var t = "",
-                s,
-                i,
-                h,
-                m,
-                S,
-                _,
-                H,
-                U = 0;
-              do
-                (s = e.charCodeAt(U++)),
-                  (i = e.charCodeAt(U++)),
-                  (h = e.charCodeAt(U++)),
-                  (m = s >> 2),
-                  (S = ((s & 3) << 4) | (i >> 4)),
-                  (_ = ((i & 15) << 2) | (h >> 6)),
-                  (H = h & 63),
-                  isNaN(i) ? (_ = H = 64) : isNaN(h) && (H = 64),
-                  (t +=
-                    this.base64.charAt(m) +
-                    this.base64.charAt(S) +
-                    this.base64.charAt(_) +
-                    this.base64.charAt(H));
-              while (U < e.length);
-              return t;
-            },
-            decode: function (e) {
-              if (!e) return !1;
-              e = e.replace(/[^A-Za-z0-9\+\/\=]/g, "");
-              var t = "",
-                s,
-                i,
-                h,
-                m,
-                S = 0;
-              do
-                (s = this.base64.indexOf(e.charAt(S++))),
-                  (i = this.base64.indexOf(e.charAt(S++))),
-                  (h = this.base64.indexOf(e.charAt(S++))),
-                  (m = this.base64.indexOf(e.charAt(S++))),
-                  (t += String.fromCharCode((s << 2) | (i >> 4))),
-                  h != 64 &&
-                    (t += String.fromCharCode(((i & 15) << 4) | (h >> 2))),
-                  m != 64 && (t += String.fromCharCode(((h & 3) << 6) | m));
-              while (S < e.length);
-              return t;
-            },
-          },
-          cs = {
-            hex: "0123456789abcdef",
-            encode: function (e) {
-              if (!e) return !1;
-              var t = "",
-                s,
-                i = 0;
-              do
-                (s = e.charCodeAt(i++)),
-                  (t +=
-                    this.hex.charAt((s >> 4) & 15) + this.hex.charAt(s & 15));
-              while (i < e.length);
-              return t;
-            },
-            decode: function (e) {
-              if (!e) return !1;
-              e = e.replace(/[^0-9abcdef]/g, "");
-              var t = "",
-                s = 0;
-              do
-                t += String.fromCharCode(
-                  ((this.hex.indexOf(e.charAt(s++)) << 4) & 240) |
-                    (this.hex.indexOf(e.charAt(s++)) & 15),
-                );
-              while (s < e.length);
-              return t;
-            },
-          },
-          us = {
-            getPublicKey: function (e, t) {
-              return new as(e, t);
-            },
-            encrypt: function (e, t) {
-              return !t ||
-                ((e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)),
-                !e) ||
-                ((e = e.modPowInt(t.encryptionExponent, t.modulus)), !e)
-                ? !1
-                : ((e = e.toString(16)),
-                  (e.length & 1) == 1 && (e = "0" + e),
-                  ls.encode(cs.decode(e)));
-            },
-            pkcs1pad2: function (e, t) {
-              if (t < e.length + 11) return null;
-              for (var s = [], i = e.length - 1; i >= 0 && t > 0; )
-                s[--t] = e.charCodeAt(i--);
-              for (s[--t] = 0; t > 2; )
-                s[--t] = Math.floor(Math.random() * 254) + 1;
-              return (s[--t] = 2), (s[--t] = 0), new et(s);
-            },
-          };
-        const hs = us;
       },
     },
   ]);

@@ -1549,18 +1549,6 @@
           FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
           FilterInput: "_2l4z-U60lABvd9XWArGjAf",
           AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
-          BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
-          "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
-          "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
-          "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
-          "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
-          "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
-          "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
-          "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
-          "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
-          focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
-          hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
         };
       },
       chunkid: (module) => {

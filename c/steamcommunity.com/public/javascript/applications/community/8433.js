@@ -1,35 +1,24 @@
 "use strict";
 (() => {
-  var _ = Object.defineProperty;
-  var _ = (_, _, _) =>
-    _ in _
-      ? _(_, _, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: _,
-        })
-      : (_[_] = _);
-  var _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [8433],
     {
       chunkid: (module, module_exports, __webpack_require__) => {
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports),
+          __webpack_require__.module(module_exports, {
             apply: () => _,
             isSupported: () => _,
           });
-        var _ = class extends Event {
+        var module = class extends Event {
+            oldState;
+            newState;
             constructor(_, { oldState: _ = "", newState: _ = "", ..._ } = {}) {
-              super(_, _);
-              _(this, "oldState");
-              _(this, "newState");
-              (this.oldState = String(_ || "")),
+              super(_, _),
+                (this.oldState = String(_ || "")),
                 (this.newState = String(_ || ""));
             }
           },
-          _ = new WeakMap();
+          module = new WeakMap();
         function _(_, _, _) {
           _.set(
             _,
@@ -45,15 +34,15 @@
             }, 0),
           );
         }
-        var _ = globalThis.ShadowRoot || function () {},
-          _ = globalThis.HTMLDialogElement || function () {},
-          _ = new WeakMap(),
-          _ = new WeakMap(),
-          _ = new WeakMap();
+        var module = globalThis.ShadowRoot || function () {},
+          module = globalThis.HTMLDialogElement || function () {},
+          module = new WeakMap(),
+          module = new WeakMap(),
+          module = new WeakMap();
         function _(_) {
           return _.get(_) || "hidden";
         }
-        var _ = new WeakMap();
+        var module = new WeakMap();
         function _(_) {
           const _ = _.popoverTargetElement;
           if (!(_ instanceof HTMLElement)) return;
@@ -137,7 +126,7 @@
             const _ = _.get(_);
             (_ === null || _.get(_) < _) && (_ = _);
           }
-          return _(_ == null ? void 0 : _.parentElement), _;
+          return _(_?.parentElement), _;
         }
         function _(_) {
           return _.hidden ||
@@ -184,10 +173,9 @@
           }
         }
         function _(_) {
-          var _;
-          (_ = _(_)) == null || _.focus();
+          _(_)?.focus();
         }
-        var _ = new WeakMap();
+        var module = new WeakMap();
         function _(_) {
           if (!_(_, !1)) return;
           const _ = _.ownerDocument;
@@ -224,7 +212,6 @@
             _(_, "closed", "open");
         }
         function _(_, _ = !1, _ = !1) {
-          var _, _;
           if (!_(_, !0)) return;
           const _ = _.ownerDocument;
           if (
@@ -241,8 +228,8 @@
               !_(_, !0)))
           )
             return;
-          (_ = _.get(_)) == null || _.delete(_),
-            (_ = _.get(_)) == null || _.delete(_),
+          _.get(_)?.delete(_),
+            _.get(_)?.delete(_),
             _.classList.remove(":popover-open"),
             _.set(_, "hidden"),
             _ && _(_, "open", "closed");
@@ -254,7 +241,6 @@
           for (; _; ) _(_, _, _), (_ = _(_));
         }
         function _(_, _, _) {
-          var _;
           const _ = _.ownerDocument || _;
           if (_ instanceof Document) return _(_, _, _);
           let _ = null,
@@ -266,10 +252,9 @@
               break;
             }
           if (!_) return _(_, _, _);
-          for (; _ && _(_) === "showing" && (_ = _.get(_)) != null && _.size; )
-            _(_, _, _);
+          for (; _ && _(_) === "showing" && _.get(_)?.size; ) _(_, _, _);
         }
-        var _ = new WeakMap();
+        var module = new WeakMap();
         function _(_) {
           if (!_.isTrusted) return;
           const _ = _.composedPath()[0];
@@ -283,7 +268,7 @@
             _.delete(_), _ && _(_ || _, !1, !0);
           }
         }
-        var _ = new WeakMap();
+        var module = new WeakMap();
         function _(_, _ = !1) {
           if (!_) return;
           _.has(_) || _.set(_, _.getAttribute("aria-expanded"));
@@ -297,10 +282,10 @@
               : _.removeAttribute("aria-expanded");
           }
         }
-        var _ = globalThis.ShadowRoot || function () {};
+        var module = globalThis.ShadowRoot || function () {};
         function _() {
           return (
-            typeof HTMLElement != "undefined" &&
+            typeof HTMLElement < "u" &&
             typeof HTMLElement.prototype == "object" &&
             "popover" in HTMLElement.prototype
           );
@@ -313,8 +298,8 @@
             },
           });
         }
-        var _ = /(^|[^\\]):popover-open\b/g,
-          _ = `
+        var module = /(^|[^\\]):popover-open\b/g,
+          module = `
   :where([popover]) {
     position: fixed;
     z-index: 2147483647;
@@ -371,7 +356,7 @@
     display: none;
   }
 `,
-          _ = null;
+          module = null;
         function _(_) {
           if (_ === null)
             try {
@@ -389,8 +374,7 @@
           window.ToggleEvent = window.ToggleEvent || _;
           function _(_) {
             return (
-              _ != null &&
-                _.includes(":popover-open") &&
+              _?.includes(":popover-open") &&
                 (_ = _.replace(_, "$1.\\:popover-open")),
               _
             );
@@ -525,8 +509,7 @@
           _(HTMLButtonElement), _(HTMLInputElement);
           const _ = (_) => {
               const _ = _.composedPath()[0];
-              if (!(_ instanceof Element) || (_ != null && _.shadowRoot))
-                return;
+              if (!(_ instanceof Element) || _?.shadowRoot) return;
               const _ = _(_);
               if (!(_ instanceof _ || _ instanceof Document)) return;
               const _ = _.closest("[popovertargetaction],[popovertarget]");

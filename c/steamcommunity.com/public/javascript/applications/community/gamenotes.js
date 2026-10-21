@@ -15,8 +15,8 @@
           _ = __webpack_require__("chunkid");
         const _ = {
           List: () => "/notes/list",
-          AppNotes: (_, _) => `/notes/app/${_}/${_ != null ? _ : ""}`,
-          ShortcutNotes: (_, _) => `/notes/shortcut/${_}/${_ != null ? _ : ""}`,
+          AppNotes: (_, _) => `/notes/app/${_}/${_ ?? ""}`,
+          ShortcutNotes: (_, _) => `/notes/shortcut/${_}/${_ ?? ""}`,
         };
         function _(_, _) {
           return "appid" in _
@@ -29,18 +29,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown ECloudPendingRemoteOperation ( " + _ + " )";
         }
@@ -50,13 +39,15 @@
         function _(_) {
           return "unknown ESteamDeckKeyboardLayout ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -124,16 +115,16 @@
           getClassName() {
             return "SteamMessagesClientIClientForcedEnumDependencies";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -192,16 +183,16 @@
           getClassName() {
             return "CMsgNetworkDeviceIP4Address";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.addresses || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -284,16 +275,16 @@
           getClassName() {
             return "CMsgNetworkDeviceIP4Config";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -347,16 +338,16 @@
           getClassName() {
             return "CMsgNetworkDeviceIP6Address";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.addresses || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -438,16 +429,16 @@
           getClassName() {
             return "CMsgNetworkDeviceIP6Config";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.devices || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -511,16 +502,16 @@
           getClassName() {
             return "CMsgNetworkDevicesData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -615,16 +606,16 @@
           getClassName() {
             return "CMsgNetworkDevicesData_Device";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_cable_present || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -688,16 +679,16 @@
           getClassName() {
             return "CMsgNetworkDevicesData_Device_Wired";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.aps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -756,16 +747,16 @@
           getClassName() {
             return "CMsgNetworkDevicesData_Device_Wireless";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -874,16 +865,16 @@
           getClassName() {
             return "CMsgNetworkDevicesData_Device_Wireless_AP";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.device_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -961,16 +952,16 @@
           getClassName() {
             return "CMsgNetworkDeviceConnect";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ap_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1023,16 +1014,16 @@
           getClassName() {
             return "CMsgNetworkDeviceConnect_KnownAP";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ssid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1090,16 +1081,16 @@
           getClassName() {
             return "CMsgNetworkDeviceConnect_CustomAP";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.username || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1157,16 +1148,16 @@
           getClassName() {
             return "CMsgNetworkDeviceConnect_Credentials";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.band_filter || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1219,16 +1210,16 @@
           getClassName() {
             return "CMsgNetworkDeviceConnect_Wireless";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.wireless || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1280,16 +1271,16 @@
           getClassName() {
             return "CMsgNetworkDeviceSetOptions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ap_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1353,16 +1344,16 @@
           getClassName() {
             return "CMsgNetworkDeviceSetOptions_Wireless";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.drives || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1437,16 +1428,16 @@
           getClassName() {
             return "CMsgStorageDevicesData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1530,16 +1521,16 @@
           getClassName() {
             return "CMsgStorageDevicesData_Drive";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1649,16 +1640,16 @@
           getClassName() {
             return "CMsgStorageDevicesData_BlockDevice";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.operation || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1736,16 +1727,16 @@
           getClassName() {
             return "CCloud_PendingRemoteOperation";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.operations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1799,16 +1790,16 @@
           getClassName() {
             return "CMsgCloudPendingRemoteOperations";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.adapters || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1872,16 +1863,16 @@
           getClassName() {
             return "CMsgBluetoothDevicesData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1955,16 +1946,16 @@
           getClassName() {
             return "CMsgBluetoothDevicesData_Adapter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2069,16 +2060,16 @@
           getClassName() {
             return "CMsgBluetoothDevicesData_Device";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_bluetooth_enabled || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2131,16 +2122,16 @@
           getClassName() {
             return "CMsgBluetoothDevicesData_Manager";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2198,16 +2189,16 @@
           getClassName() {
             return "CMsgSystemPerfDiagnosticEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2285,16 +2276,16 @@
           getClassName() {
             return "CMsgSystemPerfNetworkInterface";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entries || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2359,16 +2350,16 @@
           getClassName() {
             return "CMsgSystemPerfDiagnosticInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cpu_governor_manual_min_mhz || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [13, 21, 26, 27], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2523,16 +2514,16 @@
           getClassName() {
             return "CMsgSystemPerfLimits";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.diagnostic_update_rate || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2641,16 +2632,16 @@
           getClassName() {
             return "CMsgSystemPerfSettingsGlobal";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.fps_limit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2798,16 +2789,16 @@
           getClassName() {
             return "CMsgSystemPerfSettingsPerApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.global || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2863,16 +2854,16 @@
           getClassName() {
             return "CMsgSystemPerfSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.diagnostic_update_rate || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3025,16 +3016,16 @@
           getClassName() {
             return "CMsgSystemPerfSettingsV1";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.limits || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3100,16 +3091,16 @@
           getClassName() {
             return "CMsgSystemPerfState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3176,16 +3167,16 @@
           getClassName() {
             return "CMsgSystemPerfUpdateSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3242,16 +3233,16 @@
           getClassName() {
             return "CMsgSystemPerfLegacySettingEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.global || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3309,16 +3300,16 @@
           getClassName() {
             return "CMsgSystemPerfLegacySettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3401,16 +3392,16 @@
           getClassName() {
             return "CMsgSystemDockUpdateState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.update_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3462,16 +3453,16 @@
           getClassName() {
             return "CMsgSystemDockState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.check_only || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3524,16 +3515,16 @@
           getClassName() {
             return "CMsgSystemDockUpdateFirmware";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entries || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3592,16 +3583,16 @@
           getClassName() {
             return "CMsgSystemAudioVolume";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.echannel || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3659,16 +3650,16 @@
           getClassName() {
             return "CMsgSystemAudioVolume_ChannelEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3726,16 +3717,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerObject";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.base || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3807,16 +3798,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerDevice";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.base || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3897,16 +3888,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerNode";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.base || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4003,16 +3994,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerPort";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.base || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4084,16 +4075,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerLink";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.devices || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4165,16 +4156,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerStateHW";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rtime_filter || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4236,16 +4227,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.counter || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4298,16 +4289,16 @@
           getClassName() {
             return "CMsgSystemAudioManagerUpdateSomething";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4375,16 +4366,16 @@
           getClassName() {
             return "CMsgSystemDisplayMode";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [11, 18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4531,16 +4522,16 @@
           getClassName() {
             return "CMsgSystemDisplay";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.width || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4598,16 +4589,16 @@
           getClassName() {
             return "CMsgSystemDisplayManagerGameResolution";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.displays || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4679,16 +4670,16 @@
           getClassName() {
             return "CMsgSystemDisplayManagerState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.display_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4751,16 +4742,16 @@
           getClassName() {
             return "CMsgSystemDisplayManagerSetMode";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.idle_backlight_dim_battery_seconds || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4968,16 +4959,16 @@
           getClassName() {
             return "CMsgSystemManagerSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.branch || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5035,23 +5026,23 @@
           getClassName() {
             return "CMsgSelectOSBranchParams";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
-              _.prototype.stage_progress || _._(_._()),
+              _.prototype.total_progress || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
                 (_.sm_m = {
                   proto: _,
                   fields: {
-                    stage_progress: {
+                    total_progress: {
                       _: 1,
                       _: _._.readFloat,
                       _: _._.writeFloat,
@@ -5065,6 +5056,11 @@
                       _: 3,
                       _: _._.readFixed32,
                       _: _._.writeFixed32,
+                    },
+                    stage_bytes_downloaded: {
+                      _: 4,
+                      _: _._.readInt64String,
+                      _: _._.writeInt64String,
                     },
                   },
                 }),
@@ -5107,16 +5103,16 @@
           getClassName() {
             return "CMsgSystemUpdateProgress";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5200,16 +5196,16 @@
           getClassName() {
             return "CMsgSystemUpdateCheckResult";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apply_types || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1], null);
+              _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5218,6 +5214,14 @@
                   fields: {
                     apply_types: {
                       _: 1,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                    recheck_types: {
+                      _: 2,
                       _: !0,
                       _: !0,
                       _: _._.readEnum,
@@ -5265,16 +5269,16 @@
           getClassName() {
             return "CMsgSystemUpdateApplyParams";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5345,16 +5349,16 @@
           getClassName() {
             return "CMsgSystemUpdateApplyResult";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5428,16 +5432,16 @@
           getClassName() {
             return "CMsgSystemUpdateState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5490,16 +5494,16 @@
           getClassName() {
             return "CMsgAchievementChange";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cells || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5553,16 +5557,16 @@
           getClassName() {
             return "CMsgCellList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cell_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5620,16 +5624,16 @@
           getClassName() {
             return "CMsgCellList_Cell";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5784,16 +5788,16 @@
           getClassName() {
             return "CMsgShortcutInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.shorcuts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5847,16 +5851,16 @@
           getClassName() {
             return "CMsgShortcutInfos";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5912,16 +5916,16 @@
           getClassName() {
             return "CMsgShortcutAppIds";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.selected_device_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5981,16 +5985,16 @@
           getClassName() {
             return "CMsgMonitorInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.monitor_device_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6050,16 +6054,16 @@
           getClassName() {
             return "CMsgMonitorInfo_MonitorInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.report_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6112,16 +6116,16 @@
           getClassName() {
             return "CMsgGenerateSystemReportReply";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.port || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6179,16 +6183,16 @@
           getClassName() {
             return "CMsgWebUITransportInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.connect_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6241,16 +6245,16 @@
           getClassName() {
             return "CMsgWebUITransportFailure";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.key_sha || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6313,16 +6317,16 @@
           getClassName() {
             return "CMsgClientShaderHitCacheEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entries || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6376,27 +6380,16 @@
           getClassName() {
             return "CMsgClientShaderHitCache";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6501,16 +6494,16 @@
           getClassName() {
             return "CCloud_UserFile";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6609,16 +6602,16 @@
           getClassName() {
             return "CCloud_BeginHTTPUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ugcid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6697,16 +6690,16 @@
           getClassName() {
             return "CCloud_BeginHTTPUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6764,16 +6757,16 @@
           getClassName() {
             return "CCloud_BeginHTTPUpload_Response_HTTPHeaders";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.transfer_succeeded || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6841,16 +6834,16 @@
           getClassName() {
             return "CCloud_CommitHTTPUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.file_committed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6903,16 +6896,16 @@
           getClassName() {
             return "CCloud_CommitHTTPUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6990,16 +6983,16 @@
           getClassName() {
             return "CCloud_BeginUGCUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.storage_system || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7083,16 +7076,16 @@
           getClassName() {
             return "CCloud_BeginUGCUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7150,16 +7143,16 @@
           getClassName() {
             return "CCloud_BeginUGCUpload_Response_HTTPHeaders";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.transfer_succeeded || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7222,16 +7215,16 @@
           getClassName() {
             return "CCloud_CommitUGCUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.file_committed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7284,16 +7277,16 @@
           getClassName() {
             return "CCloud_CommitUGCUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ugcid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7351,16 +7344,16 @@
           getClassName() {
             return "CCloud_GetFileDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7417,16 +7410,16 @@
           getClassName() {
             return "CCloud_GetFileDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7484,16 +7477,16 @@
           getClassName() {
             return "CCloud_GetSingleFileInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7571,16 +7564,16 @@
           getClassName() {
             return "CCloud_GetSingleFileInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7648,16 +7641,16 @@
           getClassName() {
             return "CCloud_EnumerateUserFiles_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.files || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7716,16 +7709,16 @@
           getClassName() {
             return "CCloud_EnumerateUserFiles_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filename || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7788,9 +7781,7 @@
           getClassName() {
             return "CCloud_Delete_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7873,13 +7864,15 @@
             return "CCloud_GetClientEncryptionKey_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7937,16 +7930,16 @@
           getClassName() {
             return "CCloud_GetClientEncryptionKey_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8029,16 +8022,16 @@
           getClassName() {
             return "CCloud_CDNReport_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.host || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8166,16 +8159,16 @@
           getClassName() {
             return "CCloud_ExternalStorageTransferReport_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8253,16 +8246,16 @@
           getClassName() {
             return "CCloud_AppLaunchIntent_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.pending_remote_operations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8316,16 +8309,16 @@
           getClassName() {
             return "CCloud_AppLaunchIntent_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8393,16 +8386,16 @@
           getClassName() {
             return "CCloud_AppExitSyncDone_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8455,16 +8448,16 @@
           getClassName() {
             return "CCloud_ClientGetAppQuotaUsage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.existing_files || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8532,16 +8525,16 @@
           getClassName() {
             return "CCloud_ClientGetAppQuotaUsage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.file_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8634,16 +8627,16 @@
           getClassName() {
             return "CCloud_AppFileInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8701,16 +8694,16 @@
           getClassName() {
             return "CCloud_GetAppFileChangelist_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.current_change_number || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8793,16 +8786,16 @@
           getClassName() {
             return "CCloud_GetAppFileChangelist_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.url_host || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8896,16 +8889,16 @@
           getClassName() {
             return "ClientCloudFileUploadBlockDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8963,16 +8956,16 @@
           getClassName() {
             return "ClientCloudFileUploadBlockDetails_HTTPHeaders";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9054,16 +9047,16 @@
           getClassName() {
             return "CCloud_BeginAppUploadBatch_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.batch_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9121,16 +9114,16 @@
           getClassName() {
             return "CCloud_BeginAppUploadBatch_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9193,16 +9186,16 @@
           getClassName() {
             return "CCloud_CompleteAppUploadBatch_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9265,9 +9258,7 @@
           getClassName() {
             return "CCloud_CompleteAppUploadBatch_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -9309,13 +9300,15 @@
             return "CCloud_CompleteAppUploadBatch_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9373,16 +9366,16 @@
           getClassName() {
             return "CCloud_AppCloudStateChange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9491,16 +9484,16 @@
           getClassName() {
             return "CCloud_ClientBeginFileUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.encrypt_file || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9559,16 +9552,16 @@
           getClassName() {
             return "CCloud_ClientBeginFileUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.transfer_succeeded || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9636,16 +9629,16 @@
           getClassName() {
             return "CCloud_ClientCommitFileUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.file_committed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9698,16 +9691,16 @@
           getClassName() {
             return "CCloud_ClientCommitFileUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9775,16 +9768,16 @@
           getClassName() {
             return "CCloud_ClientFileDownload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9888,16 +9881,16 @@
           getClassName() {
             return "CCloud_ClientFileDownload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9955,16 +9948,16 @@
           getClassName() {
             return "CCloud_ClientFileDownload_Response_HTTPHeaders";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10032,9 +10025,7 @@
           getClassName() {
             return "CCloud_ClientDeleteFile_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -10076,13 +10067,15 @@
             return "CCloud_ClientDeleteFile_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10140,16 +10133,16 @@
           getClassName() {
             return "CCloud_ClientConflictResolution_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10217,9 +10210,7 @@
           getClassName() {
             return "CCloud_AppSessionSuspend_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -10261,13 +10252,15 @@
             return "CCloud_AppSessionSuspend_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10325,9 +10318,7 @@
           getClassName() {
             return "CCloud_AppSessionResume_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -10369,13 +10360,15 @@
             return "CCloud_AppSessionResume_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10428,16 +10421,16 @@
           getClassName() {
             return "CCloud_ClientLogUploadCheck_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.request_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10490,16 +10483,16 @@
           getClassName() {
             return "CCloud_ClientLogUploadRequest_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10557,16 +10550,16 @@
           getClassName() {
             return "CCloud_ClientLogUploadComplete_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10624,16 +10617,16 @@
           getClassName() {
             return "CCloud_ShareFile_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hcontent || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10687,9 +10680,7 @@
           getClassName() {
             return "CCloud_ShareFile_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _) {
@@ -11025,28 +11016,12 @@
             );
           }
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         const _ = new _._("GameNotesCloudStore").Debug;
         class _ extends _ {
+          m_props;
           constructor(_) {
-            super(),
-              _(this, "m_props"),
-              _(this, "m_mapCachedImageFiles", new Map()),
-              _(this, "m_mapFileInfo"),
-              _(this, "m_tsFileInfoLoaded", 0),
-              _(this, "m_promiseLoadingNotes"),
-              (this.m_props = _);
+            super(), (this.m_props = _);
           }
           async GetGamesWithNotes() {
             let _ = [];
@@ -11076,6 +11051,7 @@
               throw "There was an error uploading the file";
             return this.m_mapCachedImageFiles.set(_, _), _;
           }
+          m_mapCachedImageFiles = new Map();
           async ResolveImageURL(_) {
             let _ = this.m_mapCachedImageFiles.get(_);
             if (!_) {
@@ -11086,6 +11062,9 @@
             }
             return URL.createObjectURL(_);
           }
+          m_mapFileInfo;
+          m_tsFileInfoLoaded = 0;
+          m_promiseLoadingNotes;
           async GetFiles() {
             return (
               (!this.m_mapFileInfo ||
@@ -11264,8 +11243,7 @@
           return _.useContext(_).onClickURL;
         }
         function _() {
-          var _;
-          return (_ = _.useContext(_).bSpellcheckEnabled) != null ? _ : !0;
+          return _.useContext(_).bSpellcheckEnabled ?? !0;
         }
         function _() {
           return _.useContext(_).setSpellcheckEnabled;
@@ -11322,7 +11300,7 @@
               if (!_) throw `Failed to load notes for ${JSON.stringify(_)}`;
               const _ = _.find((_) => _._ == _._),
                 _ = {
-                  ...(_ != null ? _ : {}),
+                  ...(_ ?? {}),
                   ..._,
                   title: _,
                   content: _,
@@ -11792,10 +11770,8 @@
             const _ = [];
             if (
               (_.doc.descendants((_, _) => {
-                var _;
                 _.type === _.nodes.image &&
-                  (_ = _.attrs.src) != null &&
-                  _.match(/^\/gamenotes\//) &&
+                  _.attrs.src?.match(/^\/gamenotes\//) &&
                   _.push({
                     node: _,
                     pos: _,
@@ -11916,7 +11892,7 @@
             ? (0, _.jsx)(_, {
                 noteParent: _,
                 notes: _,
-                activeNoteID: _ == null ? void 0 : _._,
+                activeNoteID: _?._,
                 actions: _,
                 bStandalonePage: _,
               })
@@ -11935,22 +11911,19 @@
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(_.params.noteid || _ ? "ActivePage" : "PageList"),
-            _ = _.map((_) => {
-              var _;
-              return {
-                title:
-                  ((_ = _.title) == null ? void 0 : _.length) > 0
-                    ? _.title
-                    : (0, _._)("#UserGameNotes_Untitled"),
-                identifier: _._,
-                content: (0, _.jsx)(_, {
-                  noteParent: _,
-                  note: _,
-                }),
-                pageClassName: _.NotePage,
-                hideTitle: !0,
-              };
-            }),
+            _ = _.map((_) => ({
+              title:
+                _.title?.length > 0
+                  ? _.title
+                  : (0, _._)("#UserGameNotes_Untitled"),
+              identifier: _._,
+              content: (0, _.jsx)(_, {
+                noteParent: _,
+                note: _,
+              }),
+              pageClassName: _.NotePage,
+              hideTitle: !0,
+            })),
             _ = _(),
             _ = _.useCallback((_) => _(_, _), [_, _]),
             _ = _._.IN_STEAMUI
@@ -11985,7 +11958,7 @@
             _ = _("appid" in _ ? _.appid : void 0);
           let _;
           return (
-            "appid" in _ ? (_ = _ == null ? void 0 : _.name) : (_ = _.shortcut),
+            "appid" in _ ? (_ = _?.name) : (_ = _.shortcut),
             (0, _.jsx)(_.Fragment, {
               children: (0, _._)("#UserGameNotes_NotesForGame", _),
             })
@@ -12033,9 +12006,7 @@
           const { data: _, isLoading: _ } = _(),
             _ = _.useMemo(
               () =>
-                _ == null
-                  ? void 0
-                  : _.slice().sort((_, _) => _.last_modified - _.last_modified),
+                _?.slice().sort((_, _) => _.last_modified - _.last_modified),
               [_],
             );
           return _
@@ -12083,9 +12054,8 @@
           });
         }
         function _(_) {
-          const { appid: _ } = _,
-            _ = _(_);
-          return _ == null ? void 0 : _.name;
+          const { appid: _ } = _;
+          return _(_)?.name;
         }
         function _(_, _, _ = {}) {
           const { bIsPublic: _ = !0 } = _,
@@ -12245,24 +12215,13 @@
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
+          m_fnAccumulatorFactory;
+          m_dictComponents;
           constructor(_, _) {
-            _(this, "m_fnAccumulatorFactory"),
-              _(this, "m_dictComponents"),
-              _ instanceof Map
-                ? (this.m_dictComponents = _)
-                : (this.m_dictComponents = new Map(Object.entries(_))),
+            _ instanceof Map
+              ? (this.m_dictComponents = _)
+              : (this.m_dictComponents = new Map(Object.entries(_))),
               (this.m_fnAccumulatorFactory = _);
           }
           Parse(_, _, _ = !0) {
@@ -12274,10 +12233,7 @@
             const _ = [],
               _ = () => (_.length < 1 ? void 0 : _[_.length - 1]),
               _ = this.m_dictComponents,
-              _ = (_) => {
-                var _;
-                return !!(_.tag && (_ = _.get(_.tag)) != null && _.autocloses);
-              };
+              _ = (_) => !!(_.tag && _.get(_.tag)?.autocloses);
             let _ = !1,
               _ = !0;
             const _ = (_, _) => {
@@ -12307,7 +12263,6 @@
             };
             for (
               _.forEach((_, _) => {
-                var _, _;
                 if (_.type == _) {
                   const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
                   _.AppendText(_, _), (_ = !1);
@@ -12330,7 +12285,7 @@
                     }),
                       (_ = this.m_fnAccumulatorFactory(_)),
                       (_ = !!_.skipInternalNewline),
-                      (_ = (_ = _.allowWrapTextForCopying) != null ? _ : !1);
+                      (_ = _.allowWrapTextForCopying ?? !1);
                   }
                 } else if (_.type == _) {
                   let _ = _.text.toLowerCase();
@@ -12338,7 +12293,7 @@
                     const _ = _.pop();
                     _(_, _.node);
                   }
-                  if (((_ = _()) == null ? void 0 : _.node.tag) == _) {
+                  if (_()?.node.tag == _) {
                     const _ = _.pop();
                     _(_, _);
                   } else _.AppendText("[/" + _.text + "]", _.length == 0);
@@ -12354,7 +12309,7 @@
         }
         function _(_, _, _ = !1) {
           let _ = "[" + _;
-          _ != null && _[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
+          _?.[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
           for (const _ in _) _ !== "" && (_ += ` ${_(_)}=${_("" + _[_])}`);
           return (_ += "]"), _;
         }
@@ -12403,18 +12358,16 @@
           };
         }
         function _(_) {
-          var _;
           let _ = "";
           return (
             _.type == _ ? (_ = "[/") : _.type == _ && (_ = "["),
             {
               type: _,
-              text: _ + ((_ = _.text) != null ? _ : ""),
+              text: _ + (_.text ?? ""),
             }
           );
         }
         function _(_, _) {
-          var _, _, _;
           const _ = [];
           let _ = {
               type: _,
@@ -12437,13 +12390,8 @@
                 else if (_ == "[" && !_) (_ = _(_, _(_), _)), (_ = !0);
                 else if (_ == "]" && !_) {
                   const _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse",
-                    _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse";
+                      _.type == _ && _.text?.toLocaleLowerCase() == "noparse",
+                    _ = _.type == _ && _.text?.toLocaleLowerCase() == "noparse";
                   _ || (_ && !_)
                     ? ((_ = _(_)), (_.text += _))
                     : _
@@ -12471,7 +12419,7 @@
                 ? _.push(_(_))
                 : _.push({
                     type: _.type,
-                    text: (_ = _.text) != null ? _ : "",
+                    text: _.text ?? "",
                   })),
             _
           );
@@ -12809,15 +12757,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -12826,22 +12765,19 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new _._("ReactUsageReporting").Debug,
           _ = 100,
           _ = _._.PerMinute * 1e3;
         class _ {
-          constructor() {
-            _(this, "m_strProduct"),
-              _(this, "m_strVersion"),
-              _(this, "m_transport", null),
-              _(this, "m_mapRoutes", new Map()),
-              _(this, "m_mapComponents", new Map()),
-              _(this, "m_mapActions", new Map()),
-              _(this, "m_reportCount", 0),
-              _(this, "m_bInitialized", !1);
-          }
+          m_strProduct;
+          m_strVersion;
+          m_transport = null;
+          m_mapRoutes = new Map();
+          m_mapComponents = new Map();
+          m_mapActions = new Map();
+          m_reportCount = 0;
+          m_bInitialized = !1;
           Init(_, _, _) {
             (this.m_bInitialized = !0),
               (this.m_strProduct = _),
@@ -13073,9 +13009,7 @@
             _ = _ ? _ : void 0,
             _ = _.useCallback(
               (_) => {
-                var _;
-                (_ = _.dataTransfer.files) != null &&
-                  _.length &&
+                _.dataTransfer.files?.length &&
                   (_(_.dataTransfer.files, _),
                   _.preventDefault(),
                   _.stopPropagation()),
@@ -13197,18 +13131,6 @@
           EditorInput: "_1Ve4VFO2EEkeNZdel_Asky",
           NewNoteButton: "_3Sjbkvk647UKKVLX6J7gsW",
           CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
-          BackgroundAnimation: "K5kB32gMVsnDCBwxYDm4r",
-          "ItemFocusAnim-darkerGrey-nocolor": "_39HD17cQ23IvuK35ytuPef",
-          "ItemFocusAnim-darkerGrey": "_1UnKhkmcATwZcT0qX1VO-I",
-          "ItemFocusAnim-darkGreySettings": "_3pEtHMkdw57n0C8DKxtXPb",
-          "ItemFocusAnim-darkGrey": "bif353VzxtsbctKKtWLUm",
-          "ItemFocusAnim-grey": "_1lXo0Q4biCUQ5CPs1x9v8z",
-          "ItemFocusAnim-translucent-white-10": "_3jeaGvKmUWZNHnBKV71gwe",
-          "ItemFocusAnim-translucent-white-20": "_1S31mEHMzu94gIf5W00vQ5",
-          "ItemFocusAnimBorder-darkGrey": "_3qGIi9phn_i9vlXbBfE2N4",
-          "ItemFocusAnim-green": "PKY6xp7_WNHMI65Uc8yJ_",
-          focusAnimation: "_1AiJFdtfIMUo0maxXZuGYY",
-          hoverAnimation: "_2FZZ9Hxx9YxFh9K9vrhe9t",
         };
       },
       chunkid: (module) => {

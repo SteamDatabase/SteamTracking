@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Produk ini tidak kompatibel dengan sistem macOS yang menggunakan prosesor Intel. <1>Klik di sini</1> untuk info lebih lanjut.",
     "AppPage_PurchaseNote_Mod_Title": "Mod Buatan Komunitas",
     "AppPage_PurchaseNote_Mod_LearnMore": "Klik <1>di sini</1> untuk mempelajari lebih lanjut tentang mod di Steam.",
+    "AppPage_Franchise_SeeAll": "Lihat keseluruhan koleksi %1$s di Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Lihat keseluruhan %1$s di Steam",
     "AppPage_Series_ContentTitle": "Konten Seri",
     "AppPage_Series_ExtraContent": "Konten Ekstra",
     "AppPage_Series_SeasonName_Season": "Musim %1$s",

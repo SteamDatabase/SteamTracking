@@ -33526,6 +33526,11 @@ Error generating stack: ` +
                 br: ReaderProto.readEnum,
                 bw: WriterProto.writeEnum,
               },
+              has_community_hub: {
+                n: 33,
+                br: ReaderProto.readBool,
+                bw: WriterProto.writeBool,
+              },
             },
           }),
           t.sm_m
@@ -37073,7 +37078,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 1,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `help`],
         },
       );
     }
@@ -37867,7 +37872,11 @@ Error generating stack: ` +
           r,
         ),
         CAccountPrivacy_GetCookiePreferences_Response,
-        { bConstMethod: !0, ePrivilege: 1, rgBrowserAPISites: [`partner`] },
+        {
+          bConstMethod: !0,
+          ePrivilege: 1,
+          rgBrowserAPISites: [`partner`, `help`],
+        },
       );
     }
     t.GetCookiePreferences = n;
@@ -37894,7 +37903,7 @@ Error generating stack: ` +
     preferenceControls: { isTechnicallyNecessary: !0 },
   };
   function WriteCookie(t, n) {
-    if (!document.cookie || !IsCookieAllowedByPreferences(t)) return;
+    if (!(`document` in globalThis) || !IsCookieAllowedByPreferences(t)) return;
     let r = t.options?.path ?? `/`,
       i = ``;
     t.options?.expires
@@ -39163,30 +39172,30 @@ Error generating stack: ` +
           (o != t &&
             o.Element &&
             o.m_Properties?.scrollRegionToStartOrEnd &&
-            PerformScrollToStartOrEnd(o.Element, n, r),
+            PerformScrollToStartOrEnd(o.Element, n, r, o == o.Tree.Root),
           o == i)
         );
         o = o.GetNavParentCrossingTrees()
       );
   }
-  function PerformScrollToStartOrEnd(t, n, r) {
-    let i = t,
-      o = i.ownerDocument;
+  function PerformScrollToStartOrEnd(t, n, r, i) {
+    let o = t,
+      s = o.ownerDocument;
     if (
-      (i == o.body &&
-        o.defaultView &&
-        !BIsElementScrollableOnAxis(i, r) &&
-        (i = o.defaultView),
-      !BIsElementScrollableOnAxis(i, r))
+      ((i || o == s.body) &&
+        s.defaultView &&
+        !BIsElementScrollableOnAxis(o, r) &&
+        (o = s.defaultView),
+      !BIsElementScrollableOnAxis(o, r))
     )
       return;
-    let s = GetScrollValues(i);
+    let l = GetScrollValues(o);
     if (r == `y`) {
-      let t = n == EGamepadButton.DIR_DOWN ? s.MaxScrollTop() : 0;
-      s.scrollTo({ top: t, behavior: `smooth` });
+      let t = n == EGamepadButton.DIR_DOWN ? l.MaxScrollTop() : 0;
+      l.scrollTo({ top: t, behavior: `smooth` });
     } else {
-      let t = n == EGamepadButton.DIR_RIGHT ? s.MaxScrollLeft() : 0;
-      s.scrollTo({ left: t, behavior: `smooth` });
+      let t = n == EGamepadButton.DIR_RIGHT ? l.MaxScrollLeft() : 0;
+      l.scrollTo({ left: t, behavior: `smooth` });
     }
   }
   function GetBoundingRectNoTransform(t) {
@@ -40040,6 +40049,8 @@ Error generating stack: ` +
         if (n && r) {
           let t = r.GetWrappedTree();
           if (t && t.GetExcludeFromScrollRegionSearch()) return !1;
+          for (let t = r; t && t != this; t = t.m_Parent)
+            if (t.m_Properties?.excludeFromScrollRegionSearch) return !1;
         }
         return !!r;
       }
@@ -40791,7 +40802,7 @@ Error generating stack: ` +
         onGlobalButtonDown: g,
         disableFocusClasses: _,
         disabledRoot: v,
-        excludeFromScrollRegionSearch: y,
+        excludeTreeFromScrollRegionSearch: y,
         "flow-children": x,
         ...S
       } = t,
@@ -40810,7 +40821,7 @@ Error generating stack: ` +
           onGlobalButtonDown: g,
           disableFocusClasses: _,
           disabledRoot: v,
-          excludeFromScrollRegionSearch: y,
+          excludeTreeFromScrollRegionSearch: y,
           "flow-children": x,
           ...w,
           ...T,
@@ -40833,7 +40844,7 @@ Error generating stack: ` +
         onGlobalButtonDown: g,
         disableFocusClasses: _ = !1,
         disabledRoot: v = !1,
-        excludeFromScrollRegionSearch: y = !1,
+        excludeTreeFromScrollRegionSearch: y = !1,
         "flow-children": x,
         ...S
       } = t,
@@ -40848,7 +40859,7 @@ Error generating stack: ` +
         virtualFocus: u,
         modal: l,
         historyMode: p,
-        excludeFromScrollRegionSearch: y,
+        excludeTreeFromScrollRegionSearch: y,
       });
     useCallbackList(D.OnActivateCallbacks, r),
       useCallbackList(D.OnDeactivateCallbacks, i),
@@ -40876,7 +40887,7 @@ Error generating stack: ` +
         navID: n,
         parentEmbeddedNavTree: r,
         disabledRoot: i,
-        excludeFromScrollRegionSearch: o,
+        excludeTreeFromScrollRegionSearch: o,
         enabled: s,
         navTreeRef: l,
         onGlobalButtonDown: u,
@@ -41097,15 +41108,16 @@ Error generating stack: ` +
         scrollIntoViewType: O,
         resetNavOnEntry: k,
         scrollRegionToStartOrEnd: ee,
-        ...te
+        excludeFromScrollRegionSearch: te,
+        ...ne
       } = t,
       {
-        gamepadEvents: ne,
-        actionDescriptions: re,
-        props: ie,
-      } = ExpandGamepadEventProps(te);
+        gamepadEvents: re,
+        actionDescriptions: ie,
+        props: ae,
+      } = ExpandGamepadEventProps(ne);
     return {
-      elemProps: ie,
+      elemProps: ae,
       navOptions: {
         autoFocus: n,
         preferredFocus: r,
@@ -41130,9 +41142,10 @@ Error generating stack: ` +
         scrollIntoViewType: O,
         resetNavOnEntry: k,
         scrollRegionToStartOrEnd: ee,
-        actionDescriptionMap: { ...y, ...re },
+        excludeFromScrollRegionSearch: te,
+        actionDescriptionMap: { ...y, ...ie },
       },
-      gamepadEvents: ne,
+      gamepadEvents: re,
     };
   }
   function FocusReactiveElementFactory(t) {
@@ -66885,7 +66898,7 @@ Error generating stack: ` +
         (m_ext_new = `MỚI`),
         (Cart_CountWidget = `Giỏ hàng (%1$s)`),
         (responsive_menu_wallet_balance = `Ví (%1$s)`),
-        (responsive_footer_copyright = `© Valve Corporation. Bảo lưu mọi quyền. Tất cả các thương hiệu là tài sản của chủ sở hữu tương ứng tại Hoa Kỳ và các quốc gia khác.`),
+        (responsive_footer_copyright = `© Valve Corporation. Bảo lưu mọi quyền. Tất cả các nhãn hiệu là tài sản của chủ sở hữu tương ứng tại Hoa Kỳ và các quốc gia khác.`),
         (Common_Footer_PrivacyPolicy = `Chính sách bảo mật`),
         (Common_Footer_Legal = `Pháp lý`),
         (Common_Footer_SSA = `Thỏa thuận người đăng ký Steam`),

@@ -4,68 +4,61 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [97062],
     {
-      17871: (I, P, r) => {
+      17871: (M, j, n) => {
         "use strict";
-        r.r(P),
-          r.d(P, {
-            ReportedSubjectList: () => F,
-            default: () => x,
-            useCommentThread: () => W,
+        n.r(j),
+          n.d(j, {
+            ReportedSubjectList: () => L,
+            default: () => A,
+            useCommentThread: () => U,
           });
-        var u = r(7850),
-          p = r(46085),
-          g = r(86067),
-          d = r(86392),
-          v = r(35038),
-          C = r(64981),
-          h = r(68495),
-          f = r(20476),
-          O = r(98112),
-          M = r(88942),
-          K = r(68312),
-          A = r(85599),
-          b = r(3166),
-          y = r(30253),
-          L = r.n(y),
-          T = r(90626),
-          w = r(36118),
-          j = r(36707);
-        function x(a) {
-          const m = (0, p.w3)({ subject_type: C.lN, topic: a.gidTopic }),
-            _ = W(a.clanSteamID, h.Bv, a.gidForum, a.gidTopic);
-          return (0, u.jsx)(F, {
+        var u = n(7850),
+          p = n(46085),
+          g = n(86067),
+          d = n(86392),
+          R = n(35038),
+          C = n(64981),
+          h = n(68495),
+          f = n(20476),
+          P = n(98112),
+          D = n(88942),
+          S = n(68312),
+          K = n(85599),
+          O = n(3166),
+          y = n(30253),
+          I = n.n(y),
+          v = n(90626),
+          b = n(36118),
+          B = n(36707);
+        function A(a) {
+          const o = (0, p.w3)({ subject_type: C.lN, topic: a.gidTopic }),
+            i = U(a.clanSteamID, h.Bv, a.gidForum, a.gidTopic);
+          return (0, u.jsx)(L, {
             subjectType: C.lN,
-            subjectGroupQuery: m,
-            commentThreadQuery: _,
+            subjectGroupQuery: o,
+            commentThreadQuery: i,
           });
         }
-        function F(a) {
-          var m, _, E;
-          const { subjectGroupQuery: l } = a,
+        function L(a) {
+          const { subjectGroupQuery: o } = a,
             i = "floatingforumreportedsubjectslist",
-            [e, t] = (0, T.useState)(() => localStorage[i] !== void 0);
+            [m, l] = (0, v.useState)(() => localStorage[i] !== void 0);
           if (
-            ((0, T.useMemo)(() => {
-              var o, c;
-              (c = (o = l.data) == null ? void 0 : o.subjects) == null ||
-                c.sort(N);
-            }, [(m = l.data) == null ? void 0 : m.subjects]),
-            !l.isSuccess ||
-              !((_ = l.data) != null && _.subjects) ||
-              l.data.subjects.length === 0)
+            ((0, v.useMemo)(() => {
+              o.data?.subjects?.sort(x);
+            }, [o.data?.subjects]),
+            !o.isSuccess || !o.data?.subjects || o.data.subjects.length === 0)
           )
             return null;
-          const n = () => {
-            e ? localStorage.removeItem(i) : localStorage.setItem(i, "1"),
-              t(!e);
+          const E = () => {
+            m ? localStorage.removeItem(i) : localStorage.setItem(i, "1"),
+              l(!m);
           };
-          let s = 0;
+          let e = 0;
           return (0, u.jsx)("div", {
-            className: e
+            className: m
               ? y.FloatingSubjectListCtn
-              : (E = a.inlineClassNames) != null
-                ? E
-                : "",
+              : (a.inlineClassNames ?? ""),
             children: (0, u.jsx)("div", {
               className: "rightbox",
               children: (0, u.jsxs)("div", {
@@ -82,41 +75,41 @@
                         }),
                         (0, u.jsx)("button", {
                           className: y.PopoutButton,
-                          onClick: n,
-                          children: (0, u.jsx)(w.YNO, {}),
+                          onClick: E,
+                          children: (0, u.jsx)(b.YNO, {}),
                         }),
                       ],
                     }),
                   }),
-                  l.isError &&
+                  o.isError &&
                     (0, u.jsx)("div", {
                       className: "moderatorToolLink",
                       children: "Error",
                     }),
-                  l.isLoading && (0, u.jsx)(A.t, {}),
-                  l.isSuccess &&
+                  o.isLoading && (0, u.jsx)(K.t, {}),
+                  o.isSuccess &&
                     (0, u.jsx)("div", {
                       style: { maxHeight: "20em", overflowY: "scroll" },
-                      children: l.data.subjects.map((o) =>
-                        o.coordinates
+                      children: o.data.subjects.map((t) =>
+                        t.coordinates
                           ? (0, u.jsx)(
-                              Q,
+                              N,
                               {
-                                subject: o,
+                                subject: t,
                                 commentThreadQuery: a.commentThreadQuery,
                               },
-                              o.reported_content_id,
+                              t.reported_content_id,
                             )
                           : (0, u.jsx)(
                               "div",
                               {
-                                className: (0, j.A)(
+                                className: (0, B.A)(
                                   "moderatorToolLink",
                                   y.ReportedSubjectRow,
                                 ),
                                 children: "Bug - inform Valve",
                               },
-                              `bad-${s++}`,
+                              `bad-${e++}`,
                             ),
                       ),
                     }),
@@ -125,114 +118,102 @@
             }),
           });
         }
-        function U(a, m) {
-          if (a.length !== m.length) return a.length - m.length;
-          for (let _ = 0; _ < a.length; _++) {
-            const E = a.charCodeAt(_),
-              l = m.charCodeAt(_);
-            if (E !== l) return E - l;
+        function w(a, o) {
+          if (a.length !== o.length) return a.length - o.length;
+          for (let i = 0; i < a.length; i++) {
+            const m = a.charCodeAt(i),
+              l = o.charCodeAt(i);
+            if (m !== l) return m - l;
           }
           return 0;
         }
-        function N(a, m) {
-          var _, E, l, i;
-          const e =
+        function x(a, o) {
+          const i =
             a.unresolved_dispute_count + a.unresolved_report_count > 0 ? 1 : 0;
           return (
-            (m.unresolved_dispute_count + m.unresolved_report_count > 0
+            (o.unresolved_dispute_count + o.unresolved_report_count > 0
               ? 1
-              : 0) - e ||
-            m.required_moderator_level - a.required_moderator_level ||
-            U(
-              (E = (_ = a.coordinates) == null ? void 0 : _.comment) != null
-                ? E
-                : "",
-              (i = (l = m.coordinates) == null ? void 0 : l.comment) != null
-                ? i
-                : "",
-            )
+              : 0) - i ||
+            o.required_moderator_level - a.required_moderator_level ||
+            w(a.coordinates?.comment ?? "", o.coordinates?.comment ?? "")
           );
         }
-        function G(a) {
+        function F(a) {
           for (;;) {
-            const _ = a.indexOf("[/quote]");
-            if (_ === -1) break;
-            a = a.slice(_ + 8);
+            const i = a.indexOf("[/quote]");
+            if (i === -1) break;
+            a = a.slice(i + 8);
           }
           return a.slice(0, 35);
         }
-        function Q(a) {
-          var m, _, E, l;
-          const { subject: i, commentThreadQuery: e } = a,
-            t = (m = i.coordinates) == null ? void 0 : m.comment;
-          let n = null;
-          t === d.Ie && (n = "Topic");
-          let s = "#NA";
-          if (n === null && e.isSuccess) {
-            let B = 1;
-            for (const S of (_ = e.data.comments) != null ? _ : []) {
-              if (S.gidcomment === t) {
-                (n = G(S.text)), (s = `#${B}`);
+        function N(a) {
+          const { subject: o, commentThreadQuery: i } = a,
+            m = o.coordinates?.comment;
+          let l = null;
+          m === d.Ie && (l = "Topic");
+          let E = "#NA";
+          if (l === null && i.isSuccess) {
+            let c = 1;
+            for (const _ of i.data.comments ?? []) {
+              if (_.gidcomment === m) {
+                (l = F(_.text)), (E = `#${c}`);
                 break;
               }
-              B++;
+              c++;
             }
           }
-          if (n === null && e.isSuccess) {
-            if (i.subject_type === C.NC) n = "[Deleted]";
+          if (l === null && i.isSuccess) {
+            if (o.subject_type === C.NC) l = "[Deleted]";
             else
-              for (const B of (E = e.data.deleted_comments) != null ? E : [])
-                if (B.gidcomment === t) {
-                  n = G(B.text);
+              for (const c of i.data.deleted_comments ?? [])
+                if (c.gidcomment === m) {
+                  l = F(c.text);
                   break;
                 }
           }
-          n === null && (n = "[Comment]");
-          let o;
-          i.subject_type === C.lN
-            ? (o =
-                t === d.Ie
-                  ? `#forum_op_${((l = i.coordinates)) == null ? void 0 : l.topic}`
-                  : `#c${t}`)
-            : i.subject_type === C.NC && (o = `#comment_${t}`);
-          const c =
-              i.unresolved_dispute_count > 0 || i.unresolved_report_count > 0,
-            R = i.required_moderator_level === f.PV,
-            D = i.required_moderator_level === f.lp;
+          l === null && (l = "[Comment]");
+          let e;
+          o.subject_type === C.lN
+            ? (e = m === d.Ie ? `#forum_op_${o.coordinates?.topic}` : `#c${m}`)
+            : o.subject_type === C.NC && (e = `#comment_${m}`);
+          const t =
+              o.unresolved_dispute_count > 0 || o.unresolved_report_count > 0,
+            r = o.required_moderator_level === f.PV,
+            s = o.required_moderator_level === f.lp;
           return (0, u.jsxs)("div", {
-            className: (0, j.A)("moderatorToolLink", y.ReportedSubjectRow),
+            className: (0, B.A)("moderatorToolLink", y.ReportedSubjectRow),
             children: [
               (0, u.jsxs)("a", {
-                href: o,
+                href: e,
                 children: [
-                  c &&
-                    !R &&
-                    !D &&
+                  t &&
+                    !r &&
+                    !s &&
                     (0, u.jsx)("img", {
                       className: y.FlagIcon,
-                      src: `${b.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                      src: `${O.TS.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
                     }),
-                  !c &&
+                  !t &&
                     (0, u.jsx)("span", {
                       className: y.FlagIcon,
                       children: "\xA0",
                     }),
-                  c &&
-                    R &&
+                  t &&
+                    r &&
                     (0, u.jsx)("span", {
-                      className: (0, j.A)(y.FlagIcon, y.ValveOnlyFlag),
+                      className: (0, B.A)(y.FlagIcon, y.ValveOnlyFlag),
                       children: "VO",
                     }),
-                  c &&
-                    D &&
+                  t &&
+                    s &&
                     (0, u.jsx)("span", {
-                      className: (0, j.A)(y.FlagIcon, y.SupervisorFlag),
+                      className: (0, B.A)(y.FlagIcon, y.SupervisorFlag),
                       children: "\u25B2",
                     }),
                   "\xA0",
-                  s,
+                  E,
                   "\xA0",
-                  n,
+                  l,
                 ],
               }),
               (0, u.jsxs)("div", {
@@ -241,79 +222,79 @@
                   "\xA0",
                   g.T.Localize(
                     "#forumsubjectlist_subjectreportsummary",
-                    i.unresolved_report_count,
-                    i.unresolved_dispute_count,
+                    o.unresolved_report_count,
+                    o.unresolved_dispute_count,
                   ),
                 ],
               }),
             ],
           });
         }
-        function W(a, m, _, E) {
-          const l = (0, K.KV)();
-          return (0, M.I)({
-            queryKey: ["comment_thread", a, m, _, E],
+        function U(a, o, i, m) {
+          const l = (0, S.KV)();
+          return (0, D.I)({
+            queryKey: ["comment_thread", a, o, i, m],
             queryFn: async () => {
-              const i = v.w.Init(O.ZP);
+              const E = R.w.Init(P.ZP);
               return (
-                i.Body().set_steamid(a),
-                i.Body().set_comment_thread_type(m),
-                _ !== -1 && i.Body().set_gidfeature(_),
-                E !== -1 && i.Body().set_gidfeature2(E),
-                i.Body().set_include_deleted(!0),
-                i.Body().set_oldest_first(!0),
-                (await O.BE.GetCommentThread(l, i)).Body().toObject()
+                E.Body().set_steamid(a),
+                E.Body().set_comment_thread_type(o),
+                i !== -1 && E.Body().set_gidfeature(i),
+                m !== -1 && E.Body().set_gidfeature2(m),
+                E.Body().set_include_deleted(!0),
+                E.Body().set_oldest_first(!0),
+                (await P.BE.GetCommentThread(l, E)).Body().toObject()
               );
             },
           });
         }
       },
-      46085: (I, P, r) => {
+      46085: (M, j, n) => {
         "use strict";
-        r.d(P, {
+        n.d(j, {
           EC: () => l,
-          KQ: () => E,
-          Kt: () => N,
-          Ky: () => T,
-          N8: () => Q,
-          OI: () => b,
-          YL: () => W,
-          c3: () => i,
-          lY: () => G,
-          w3: () => j,
-          wy: () => m,
+          KQ: () => m,
+          Kt: () => x,
+          Ky: () => v,
+          N8: () => N,
+          OI: () => O,
+          YL: () => U,
+          c3: () => E,
+          lY: () => F,
+          w3: () => B,
+          wy: () => o,
           y4: () => a,
         });
-        var u = r(72604),
-          p = r(35038),
-          g = r(98112),
-          d = r(16277),
-          v = r(68312),
-          C = r(88942),
-          h = r(29385),
-          f = r(61739),
-          O = r(86392);
-        const M = "get_reported_content",
-          K = "get_reported_content_by_id",
-          A = "get_reported_content_audit_log",
-          b = (e) => [M, JSON.stringify(e)],
-          y = (e) => [K, e],
-          L = (e) => [A, e];
-        async function T(e, t) {
+        var u = n(72604),
+          p = n(35038),
+          g = n(98112),
+          d = n(16277),
+          R = n(68312),
+          C = n(88942),
+          h = n(29385),
+          f = n(61739),
+          P = n(86392);
+        const D = "get_reported_content",
+          S = "get_reported_content_by_id",
+          K = "get_reported_content_audit_log",
+          O = (e) => [D, JSON.stringify(e)],
+          y = (e) => [S, e],
+          I = (e) => [K, e];
+        async function v(e, t) {
           return Promise.all([
-            e.invalidateQueries({ queryKey: [M], exact: !1 }),
+            e.invalidateQueries({ queryKey: [D], exact: !1 }),
             e.invalidateQueries({ queryKey: y(t) }),
-            e.invalidateQueries({ queryKey: L(t) }),
+            e.invalidateQueries({ queryKey: I(t) }),
           ]);
         }
-        function w(e, t) {
+        function b(e, t) {
           return {
-            queryKey: b(t),
-            enabled: (0, O.NX)(t),
+            queryKey: O(t),
+            enabled: (0, P.NX)(t),
             queryFn: async () => {
-              const n = p.w.Init(d.Mw);
-              n.Body().set_coordinates(d.UC.fromObject(t));
-              const s = await d.fL.GetReportedContent(e, n);
+              const r = p.w.Init(d.Mw);
+              r.Body().set_coordinates(d.UC.fromObject(t));
+              const s = await d.fL.GetReportedContent(e, r);
               if (!s.BSuccess())
                 throw new Error(
                   "Failed in GetReportedContent, EResult: " + s.GetEResult(),
@@ -322,21 +303,21 @@
             },
           };
         }
-        function j(e) {
-          const t = (0, v.KV)();
-          return (0, C.I)(w(t, e));
+        function B(e) {
+          const t = (0, R.KV)();
+          return (0, C.I)(b(t, e));
         }
-        function x(e, t) {
+        function A(e, t) {
           return {
             queryKey: y(t),
             queryFn: async () => {
-              const n = CProtoBufMsg.Init(
+              const r = CProtoBufMsg.Init(
                 CContentModeration_GetReportedContentByID_Request,
               );
-              n.Body().set_reported_content_id(t);
+              r.Body().set_reported_content_id(t);
               const s = await ContentModerationService.GetReportedContentByID(
                 e,
-                n,
+                r,
               );
               if (!s.BSuccess())
                 throw new Error(
@@ -347,212 +328,212 @@
             },
           };
         }
-        function F(e) {
+        function L(e) {
           const t = useActiveServiceTransport();
-          return useQuery(x(t, e));
+          return useQuery(A(t, e));
         }
-        function U(e, t) {
+        function w(e, t) {
           return {
-            queryKey: L(t),
+            queryKey: I(t),
             queryFn: async () => {
               if (!t) return;
-              const n = p.w.Init(d.v5);
+              const r = p.w.Init(d.v5);
               return (
-                n.Body().set_reported_content_id(t),
-                (await d.fL.GetAuditLogByID(e, n)).Body().toObject()
+                r.Body().set_reported_content_id(t),
+                (await d.fL.GetAuditLogByID(e, r)).Body().toObject()
               );
             },
           };
         }
-        function N(e) {
-          const t = (0, v.KV)();
-          return (0, C.I)(U(t, e));
+        function x(e) {
+          const t = (0, R.KV)();
+          return (0, C.I)(w(t, e));
         }
-        function G(e) {
-          const t = (0, v.KV)(),
-            n = (0, h.jE)();
+        function F(e) {
+          const t = (0, R.KV)(),
+            r = (0, h.jE)();
           return (0, f.n)({
             mutationFn: async (s) => {
-              const o = p.w.Init(d.Qi);
-              o.Body().set_reported_content_id(e),
-                o.Body().set_new_level(s.eNewLevel),
-                s.eReason && o.Body().set_reason(s.eReason),
-                s.strNote && o.Body().set_note(s.strNote);
-              const c = await d.fL.EscalateSubjectByID(t, o);
-              if (c.GetEResult() !== u.R)
-                throw new Error(`Failed to escalate subject: ${c.GetEMsg()}`);
+              const c = p.w.Init(d.Qi);
+              c.Body().set_reported_content_id(e),
+                c.Body().set_new_level(s.eNewLevel),
+                s.eReason && c.Body().set_reason(s.eReason),
+                s.strNote && c.Body().set_note(s.strNote);
+              const _ = await d.fL.EscalateSubjectByID(t, c);
+              if (_.GetEResult() !== u.R)
+                throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
             },
             onSuccess: async () => {
               await Promise.all([
-                T(n, e),
-                n.invalidateQueries({ queryKey: ["get_claimed"] }),
-                n.invalidateQueries({ queryKey: ["get_subject_overview"] }),
+                v(r, e),
+                r.invalidateQueries({ queryKey: ["get_claimed"] }),
+                r.invalidateQueries({ queryKey: ["get_subject_overview"] }),
               ]);
             },
           });
         }
-        function Q() {
-          const e = (0, v.KV)(),
+        function N() {
+          const e = (0, R.KV)(),
             t = (0, h.jE)();
           return (0, f.n)({
-            mutationFn: async (n) => {
+            mutationFn: async (r) => {
               const s = p.w.Init(d.Nr);
-              s.Body().set_reported_content_id(n.reportedContentID);
-              const o = await d.fL.SustainModerationByID(e, s);
-              if (!o.BSuccess()) throw new Error("EResult " + o.GetEResult());
+              s.Body().set_reported_content_id(r.reportedContentID);
+              const c = await d.fL.SustainModerationByID(e, s);
+              if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
             },
-            onSuccess: async (n, s) => {
-              await T(t, s.reportedContentID),
+            onSuccess: async (r, s) => {
+              await v(t, s.reportedContentID),
                 await t.invalidateQueries({ queryKey: ["get_claimed"] });
             },
           });
         }
-        function W(e) {
+        function U(e) {
           const t = (0, h.jE)(),
-            n = (0, v.KV)();
+            r = (0, R.KV)();
           return (0, f.n)({
             mutationKey: ["release_subject", ...e],
             mutationFn: async () => {
               const s = p.w.Init(d.GD);
-              for (const c of e) {
-                const R = new d.F9();
-                R.set_reported_content_id(c),
-                  s.Body().add_subjects_to_release(R);
+              for (const _ of e) {
+                const T = new d.F9();
+                T.set_reported_content_id(_),
+                  s.Body().add_subjects_to_release(T);
               }
-              const o = await d.fL.ReleaseSubjects(n, s);
-              if (!o.BSuccess()) throw new Error("EResult " + o.GetEResult());
+              const c = await d.fL.ReleaseSubjects(r, s);
+              if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
             },
             onSuccess: async () => {
               await Promise.all([
                 t.invalidateQueries({ queryKey: ["get_claimed"] }),
                 t.invalidateQueries({ queryKey: ["get_subject_overview"] }),
-                ...e.map((s) => T(t, s)),
+                ...e.map((s) => v(t, s)),
               ]);
             },
           });
         }
         function a(e, t) {
-          const n = (0, v.KV)(),
+          const r = (0, R.KV)(),
             s = (0, h.jE)();
           return (0, f.n)({
             mutationFn: async () => {
-              const o = p.w.Init(d.LW);
-              o.Body().set_reported_content_id(e), o.Body().set_details(t);
-              const c = await d.fL.OwnerDisputeModeration(n, o);
-              if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
+              const c = p.w.Init(d.LW);
+              c.Body().set_reported_content_id(e), c.Body().set_details(t);
+              const _ = await d.fL.OwnerDisputeModeration(r, c);
+              if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
             },
             onSuccess: async () => {
-              await T(s, e);
+              await v(s, e);
             },
           });
         }
-        function m(e, t) {
-          const n = (0, h.jE)(),
-            s = (0, v.KV)();
+        function o(e, t) {
+          const r = (0, h.jE)(),
+            s = (0, R.KV)();
           return (0, f.n)({
             mutationFn: async () => {
-              const o = p.w.Init(d.ps);
-              o.Body().set_reported_content_id(e),
-                o.Body().set_owner_dispute_details(t);
-              const c = await d.fL.UpdateSubjectByID(s, o);
-              if (!c.BSuccess()) throw new Error("EResult " + c.GetEResult());
+              const c = p.w.Init(d.ps);
+              c.Body().set_reported_content_id(e),
+                c.Body().set_owner_dispute_details(t);
+              const _ = await d.fL.UpdateSubjectByID(s, c);
+              if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
             },
             onSuccess: async () => {
-              await T(n, e);
+              await v(r, e);
             },
           });
         }
-        function _(e, t) {
+        function i(e, t) {
           return {
             queryKey: ["reporterstats", t],
             queryFn: async () => {
-              const n = p.w.Init(d.KD);
-              n.Body().set_steamid(t);
-              const s = await d.fL.GetReporterStats(e, n);
+              const r = p.w.Init(d.KD);
+              r.Body().set_steamid(t);
+              const s = await d.fL.GetReporterStats(e, r);
               if (!s.BSuccess()) throw new Error("EResult " + s.GetEResult());
               return s.Body().toObject();
             },
           };
         }
-        function E(e) {
-          const t = (0, v.KV)();
-          return (0, C.I)(_(t, e));
+        function m(e) {
+          const t = (0, R.KV)();
+          return (0, C.I)(i(t, e));
         }
-        function l(e, t, n) {
-          const s = (0, v.KV)(),
-            o = (0, h.jE)();
+        function l(e, t, r) {
+          const s = (0, R.KV)(),
+            c = (0, h.jE)();
           return (0, f.n)({
-            mutationFn: async (c) => {
-              const R = p.w.Init(g.Er);
-              R.Body().set_steamid(e),
-                R.Body().set_comment_thread_id(t),
-                R.Body().set_gidcomment(n),
-                R.Body().set_reason(c.reason),
-                R.Body().set_note(c.message);
-              for (const B of c.sanctions) {
-                const S = new g.u6();
-                S.set_sanction(B.sanction),
-                  B.days && S.set_days(B.days),
-                  R.Body().add_sanctions(S);
+            mutationFn: async (_) => {
+              const T = p.w.Init(g.Er);
+              T.Body().set_steamid(e),
+                T.Body().set_comment_thread_id(t),
+                T.Body().set_gidcomment(r),
+                T.Body().set_reason(_.reason),
+                T.Body().set_note(_.message);
+              for (const W of _.sanctions) {
+                const Q = new g.u6();
+                Q.set_sanction(W.sanction),
+                  W.days && Q.set_days(W.days),
+                  T.Body().add_sanctions(Q);
               }
-              const D = await g.BE.SanctionComment(s, R);
-              if (!D.BSuccess())
+              const G = await g.BE.SanctionComment(s, T);
+              if (!G.BSuccess())
                 throw new Error(
-                  `SanctionComment failed. EResult: ${D.GetEResult()} (${D.GetErrorMessage()})`,
+                  `SanctionComment failed. EResult: ${G.GetEResult()} (${G.GetErrorMessage()})`,
                 );
             },
             onSuccess: async () => {
-              await o.invalidateQueries({ queryKey: ["get_claimed"] });
+              await c.invalidateQueries({ queryKey: ["get_claimed"] });
             },
           });
         }
-        function i(e, t, n) {
-          const s = (0, v.KV)(),
-            o = (0, h.jE)();
+        function E(e, t, r) {
+          const s = (0, R.KV)(),
+            c = (0, h.jE)();
           return (0, f.n)({
             mutationFn: async () => {
-              const c = p.w.Init(g.RX);
-              c.Body().set_steamid(e),
-                c.Body().set_comment_thread_id(t),
-                c.Body().set_gidcomment(n),
-                c.Body().set_report_action(g.du.Pn),
-                c.Body().set_resolve(!0),
-                await g.Vi.UpdateCommentReportState(s, c);
+              const _ = p.w.Init(g.RX);
+              _.Body().set_steamid(e),
+                _.Body().set_comment_thread_id(t),
+                _.Body().set_gidcomment(r),
+                _.Body().set_report_action(g.du.Pn),
+                _.Body().set_resolve(!0),
+                await g.Vi.UpdateCommentReportState(s, _);
             },
             onSuccess: async () => {
-              await o.invalidateQueries({ queryKey: ["get_claimed"] });
+              await c.invalidateQueries({ queryKey: ["get_claimed"] });
             },
           });
         }
       },
-      68495: (I, P, r) => {
+      68495: (M, j, n) => {
         "use strict";
-        r.d(P, { Bv: () => f, Dq: () => C, Yd: () => K });
+        n.d(j, { Bv: () => f, Dq: () => C, Yd: () => S });
         const u = 0,
           p = 1,
           g = 2,
           d = 3,
-          v = 4,
+          R = 4,
           C = 5,
           h = 6,
           f = 7,
-          O = 8,
-          M = 9,
-          K = 10,
-          A = 11,
-          b = 12,
+          P = 8,
+          D = 9,
+          S = 10,
+          K = 11,
+          O = 12,
           y = 13,
-          L = 14,
-          T = 15,
-          w = 16,
-          j = 17,
-          x = 18,
-          F = 19,
-          U = 20,
-          N = 21;
+          I = 14,
+          v = 15,
+          b = 16,
+          B = 17,
+          A = 18,
+          L = 19,
+          w = 20,
+          x = 21;
       },
-      30253: (I) => {
-        I.exports = {
+      30253: (M) => {
+        M.exports = {
           FloatingSubjectListCtn: "_2Z4y2kIderxN4_alSJYYh8",
           SplitHeader: "_2B88BA7YbropfCtjJdn1yD",
           PopoutButton: "_3cujMozXvwTlTehPQtPJ7F",

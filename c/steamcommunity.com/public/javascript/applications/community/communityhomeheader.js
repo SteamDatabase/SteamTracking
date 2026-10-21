@@ -246,12 +246,12 @@
             _ = _.useRef(void 0);
           _.useEffect(() => {
             const _ = document.getElementById(_);
-            if (_ && _ != null && _.current) {
+            if (_ && _?.current) {
               const _ = _.offsetLeft + _.clientWidth;
               _ > window.innerWidth &&
                 _.current.scrollBy(_ - window.innerWidth, 0);
             }
-          }, [_ == null ? void 0 : _.current]);
+          }, [_?.current]);
           const _ = [
             {
               label: "#Community_Home_Header_Filter_All",
@@ -379,19 +379,17 @@
             [_, _] = useState(null),
             [_, _] = _(_, _, _);
           useEffect(() => {
-            (_ == null ? void 0 : _.GetAppType()) ===
-              EStoreAppType.k_EStoreAppType_Demo && _(_.GetParentAppID());
+            _?.GetAppType() === EStoreAppType.k_EStoreAppType_Demo &&
+              _(_.GetParentAppID());
           }, [_]);
-          let _ =
-            _ != null && _.GetShortDescription()
-              ? StripBBCodeTags(_.GetShortDescription())
-              : "";
+          let _ = _?.GetShortDescription()
+            ? StripBBCodeTags(_.GetShortDescription())
+            : "";
           (!_ || _.length === 0) &&
             _ &&
-            (_ =
-              _ != null && _.GetShortDescription()
-                ? StripBBCodeTags(_.GetShortDescription())
-                : "");
+            (_ = _?.GetShortDescription()
+              ? StripBBCodeTags(_.GetShortDescription())
+              : "");
           const _ = _ == _ && (!_ || _ == _);
           return [_, _];
         }
@@ -457,13 +455,9 @@
                   _._.Get()
                     .QueueStoreItemRequest(_, _, _)
                     .then((_) => {
-                      !(_ != null && _.token.reason) &&
-                        _.current === _ &&
-                        _(_ == _._),
-                        _();
+                      !_?.token.reason && _.current === _ && _(_ == _._), _();
                     })),
-                () =>
-                  _ == null ? void 0 : _.cancel("useStoreItemCache: unmounting")
+                () => _?.cancel("useStoreItemCache: unmounting")
               );
             }, [
               _,
@@ -509,15 +503,14 @@
           return _(_, _._._, _, _);
         }
         function _(_, _, _) {
-          var _;
           const [_, _] = _(_, _, _);
           let _;
-          (_ == null ? void 0 : _.GetStoreItemType()) == _._._ &&
-            !((_ = _.GetAssets()) != null && _.GetHeaderURL()) &&
-            (_ == null ? void 0 : _.GetIncludedAppIDs().length) == 1 &&
+          _?.GetStoreItemType() == _._._ &&
+            !_.GetAssets()?.GetHeaderURL() &&
+            _?.GetIncludedAppIDs().length == 1 &&
             (_ = _.GetIncludedAppIDs()[0]);
           const [_, _] = _(_, _);
-          return _ && _ != null && _.BIsVisible() ? [_, _] : [_, _];
+          return _ && _?.BIsVisible() ? [_, _] : [_, _];
         }
         function _(_, _, _, _) {
           const _ = (0, _._)(),

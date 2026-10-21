@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Tento produkt není kompatibilní s počítači Mac osazenými procesory Intel. Pro více informací klikněte <1>zde</1>.",
     "AppPage_PurchaseNote_Mod_Title": "Komunitní modifikace",
     "AppPage_PurchaseNote_Mod_LearnMore": "Pro více informací o modifikacích ve službě Steam klikněte <1>zde</1>.",
+    "AppPage_Franchise_SeeAll": "%1$s – prohlédněte si celou kolekci",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "%1$s – prohlédněte si celou sérii",
     "AppPage_Series_ContentTitle": "Obsah seriálu",
     "AppPage_Series_ExtraContent": "Obsah navíc",
     "AppPage_Series_SeasonName_Season": "%1$s. sezóna",

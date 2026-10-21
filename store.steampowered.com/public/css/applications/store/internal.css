@@ -1566,8 +1566,12 @@ a:link {
   height: 24px;
 }
 ._1ZDJKWpT_nU_GDved7bxnd {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
   color: #67c1f5;
-  margin: 10px 0px 20px 0px;
+  margin: 0;
   font-size: 12px;
   cursor: pointer;
 }

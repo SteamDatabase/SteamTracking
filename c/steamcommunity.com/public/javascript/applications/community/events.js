@@ -48,13 +48,10 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bShowModal: !1,
-                bLoadedLandingState: this.props.bPreventDismiss,
-              });
-          }
+          state = {
+            bShowModal: !1,
+            bLoadedLandingState: this.props.bPreventDismiss,
+          };
           componentDidMount() {
             this.props.bPreventDismiss
               ? this.LoadAppAndFirstEvent()
@@ -67,7 +64,6 @@
                 });
           }
           async LoadAppAndFirstEvent() {
-            var _;
             const _ = (0, _._)(
               "eventinfinitescrolllanding",
               "application_config",
@@ -98,10 +94,7 @@
                   bShowModal: !0,
                   appid: _.appid,
                   clanSteamID: _.clanSteamID,
-                  announcementGID:
-                    (_ = _ == null ? void 0 : _[0]) == null
-                      ? void 0
-                      : _.AnnouncementGID,
+                  announcementGID: _?.[0]?.AnnouncementGID,
                 });
               } else
                 this.setState({
@@ -188,7 +181,7 @@
                   (0, _.jsx)(_._, {
                     className: _.SectionButton,
                     onClick: (_) => {
-                      _ == null || _(), _.stopPropagation(), _.preventDefault();
+                      _?.(), _.stopPropagation(), _.preventDefault();
                     },
                     children: (0, _._)("#EventBrowse_MoreEventsBtn"),
                   }),
@@ -202,7 +195,7 @@
                   children: (0, _.jsx)(_, {
                     event: _,
                     onClick: (_) => {
-                      _ == null || _(), _.stopPropagation(), _.preventDefault();
+                      _?.(), _.stopPropagation(), _.preventDefault();
                     },
                   }),
                 }),
@@ -383,8 +376,7 @@
                   active: _,
                   children: (0, _.jsx)(_, {
                     ..._,
-                    announcementGID:
-                      _ || (_ == null ? void 0 : _.AnnouncementGID),
+                    announcementGID: _ || _?.AnnouncementGID,
                     eventModel: _,
                     closeModal: _,
                   }),
@@ -494,7 +486,7 @@
             trackingLocation: _,
             announcementGID: _,
             partnerEventStore: _,
-            eventModel: _ != null ? _ : void 0,
+            eventModel: _ ?? void 0,
             closeModal: _,
           });
         }
@@ -605,18 +597,6 @@
           LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
           LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
           LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-          BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
-          "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
-          "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
-          "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
-          "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
-          "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
-          "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
-          "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
-          "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
-          "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
-          focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
-          hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
         };
       },
     },

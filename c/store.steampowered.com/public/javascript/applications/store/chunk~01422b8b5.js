@@ -846,18 +846,6 @@
           pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
           innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
           DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
-          BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
-          "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
-          "ItemFocusAnim-darkGreySettings": "KiXqOP4sNGGqLzPFjAa3D",
-          "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
-          "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
-          "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
-          "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
-          "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
-          "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
-          focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
-          hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
         };
       },
       chunkid: (module) => {

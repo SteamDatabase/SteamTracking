@@ -1001,7 +1001,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -1010,7 +1010,7 @@
             return O.SendNotification(
               "SteamNotification.MarkNotificationsRead#1",
               (0, l.I8)(L, x),
-              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner", "help"] },
             );
           }
           ii.MarkNotificationsRead = g;
@@ -1018,7 +1018,7 @@
             return O.SendNotification(
               "SteamNotification.MarkNotificationsViewed#1",
               (0, l.I8)(C, x),
-              { ePrivilege: 1, rgBrowserAPISites: ["partner"] },
+              { ePrivilege: 1, rgBrowserAPISites: ["partner", "help"] },
             );
           }
           ii.MarkNotificationsViewed = w;
@@ -2863,7 +2863,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }

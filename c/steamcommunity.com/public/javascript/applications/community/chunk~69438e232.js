@@ -270,15 +270,14 @@
         }
         function _(_, _, _ = 0, _) {
           if (!_ || _.length == 0) return null;
-          if (_ != null && _.startsWith(_._))
-            return _.ReplacementTokenToClanImageURL(_);
-          if (_ != null && _.startsWith(_._)) {
+          if (_?.startsWith(_._)) return _.ReplacementTokenToClanImageURL(_);
+          if (_?.startsWith(_._)) {
             const _ = _.GetBaseURL(),
               _ = _.substring(_._.length + 1),
               _ = parseInt(_.substring(0, _.indexOf("/"))),
               _ = _.substring(_.indexOf("/") + 1),
               _ = _.GenerateURLFromHashAndExt(_, _);
-            if ((_ == null ? void 0 : _[_(_, _)]) === !1) return _;
+            if (_?.[_(_, _)] === !1) return _;
             const _ = _.GetLocalizedClanImageFileNames(_, _).map(
               (_) => _ + _ + "/" + _ + "?t=" + _,
             );
@@ -304,16 +303,14 @@
               /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^.]*)$/.exec(
                 _,
               );
-            return _ != null && _.groups
+            return _?.groups
               ? [_.groups.filename, parseInt(_.groups.clanid)]
               : [void 0, void 0];
           },
           GetExtensionString(_) {
-            var _;
-            return (_ = _.file_type != null ? (0, _._)(_.file_type) : null) !=
-              null
-              ? _
-              : ".jpg";
+            return (
+              (_.file_type != null ? (0, _._)(_.file_type) : null) ?? ".jpg"
+            );
           },
           GetHashAndExt(_) {
             return _ ? _.image_hash + this.GetExtensionString(_) : null;
@@ -361,7 +358,7 @@
           },
           GetHashAndExtFromURL(_) {
             let _ = this.GetBaseURL();
-            return !(_ != null && _.startsWith(_)) ||
+            return !_?.startsWith(_) ||
               ((_ = _.substring(_.length)), _.indexOf("/") == -1)
               ? null
               : ((_ = _.substring(_.indexOf("/") + 1)), _);
@@ -460,30 +457,17 @@
           _: () => _,
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
-          constructor() {
-            _(this, "imageid"),
-              _(this, "image_hash"),
-              _(this, "thumbnail_hash"),
-              _(this, "file_type"),
-              _(this, "file_name"),
-              _(this, "clanAccountID"),
-              _(this, "url"),
-              _(this, "thumb_url"),
-              _(this, "uploaded_time"),
-              _(this, "loc_group_id");
-          }
+          imageid;
+          image_hash;
+          thumbnail_hash;
+          file_type;
+          file_name;
+          clanAccountID;
+          url;
+          thumb_url;
+          uploaded_time;
+          loc_group_id;
         }
         var _ = ((_) => (
           (_.full = ""),
@@ -527,7 +511,8 @@
           _ = 20,
           _ = 45559995,
           _ = 45902273,
-          _ = [_, _, _, _, _];
+          _ = [_, _, _, _, _],
+          _ = [_, _, _, _, _, _, _, _, _, _, _];
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -1110,7 +1095,7 @@
             { data: _ } = useStoreItemSupportedPlatforms(_);
           return _
             ? jsx(_, {
-                category: _ == null ? void 0 : _.steam_deck_compat_category,
+                category: _?.steam_deck_compat_category,
                 className: _,
               })
             : null;
@@ -1197,44 +1182,25 @@
             });
           };
         function _(_) {
-          var _, _, _, _;
           const { eDisplay: _, storeItemPlatform: _, className: _ } = _;
           return _ == _._
             ? (0, _.jsx)(_, {
-                category:
-                  (_ = _ == null ? void 0 : _.steam_deck_compat_category) !=
-                  null
-                    ? _
-                    : _._,
+                category: _?.steam_deck_compat_category ?? _._,
                 className: _,
               })
             : _ == _._
               ? (0, _.jsx)(_, {
-                  category:
-                    (_ =
-                      _ == null ? void 0 : _.steam_machine_compat_category) !=
-                    null
-                      ? _
-                      : _._,
+                  category: _?.steam_machine_compat_category ?? _._,
                   className: _,
                 })
               : _ == _._
                 ? (0, _.jsx)(_, {
-                    category:
-                      (_ = _ == null ? void 0 : _.steam_os_compat_category) !=
-                      null
-                        ? _
-                        : _._,
+                    category: _?.steam_os_compat_category ?? _._,
                     className: _,
                   })
                 : _ == _._
                   ? (0, _.jsx)(_, {
-                      category:
-                        (_ =
-                          _ == null ? void 0 : _.steam_frame_compat_category) !=
-                        null
-                          ? _
-                          : _._,
+                      category: _?.steam_frame_compat_category ?? _._,
                       className: _,
                     })
                   : null;
@@ -1414,35 +1380,22 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _._ {
+          m_LinkFilter = _._;
+          m_parentNode = void 0;
+          m_mapHostToComponent;
+          m_globalStoreLink;
           constructor(_, _, _, _) {
             super(_),
-              _(this, "m_LinkFilter", _._),
-              _(this, "m_parentNode"),
-              _(this, "m_mapHostToComponent"),
-              _(this, "m_globalStoreLink"),
               (this.m_parentNode = _),
               (this.m_mapHostToComponent = _),
               (this.m_globalStoreLink = _);
           }
           AppendText(_, _ = !1) {
-            var _;
             let _ = _;
             if (
-              (_ ||
-                ((_ = this.m_parentNode) == null ? void 0 : _.tag) == "*") &&
+              (_ || this.m_parentNode?.tag == "*") &&
               (this.m_parentNode == null || this.m_parentNode.tag != "img")
             ) {
               let _ = this.m_LinkFilter.exec(_);
@@ -1476,9 +1429,7 @@
         }
         const _ = "[\u02D0:]([a-zA-Z0-9_]+)[\u02D0:]";
         class _ extends _._ {
-          constructor() {
-            super(...arguments), _(this, "m_EmoteRegex", new RegExp(_));
-          }
+          m_EmoteRegex = new RegExp(_);
           AppendText(_, _ = !1) {
             let _ = _;
             if (_.length >= 3) {
@@ -1506,8 +1457,9 @@
           }
         }
         class _ extends _._ {
+          m_parentNode = void 0;
           constructor(_, _) {
-            super(_), _(this, "m_parentNode"), (this.m_parentNode = _);
+            super(_), (this.m_parentNode = _);
           }
           AppendText(_, _ = !1) {
             let _ = _;
@@ -1564,19 +1516,10 @@
           ))(_ || {});
         const _ = /\bappid\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s\]]+))/i;
         function _(_, _) {
-          var _, _, _, _;
           const _ = new Set();
           for (const _ of _.matchAll(/\[trailer\b([^\]]*)\]/gi)) {
-            const _ = _.exec((_ = _[1]) != null ? _ : ""),
-              _ = _
-                ? Number.parseInt(
-                    (_ =
-                      (_ = (_ = _[1]) != null ? _ : _[2]) != null ? _ : _[3]) !=
-                      null
-                      ? _
-                      : "",
-                  )
-                : _;
+            const _ = _.exec(_[1] ?? ""),
+              _ = _ ? Number.parseInt(_[1] ?? _[2] ?? _[3] ?? "") : _;
             _ && _.add(_);
           }
           return Array.from(_);
@@ -1648,8 +1591,7 @@
             );
           return (
             (0, _.useEffect)(() => {
-              _ != null &&
-                _.unvailable_for_country_restriction &&
+              _?.unvailable_for_country_restriction &&
                 _((0, _._)("#TrailerPlayer_CouldNotLoad", _, _)),
                 _ &&
                   !_ &&
@@ -1664,7 +1606,7 @@
               _,
               _.appid,
               _.trailerBaseID,
-              _ == null ? void 0 : _.unvailable_for_country_restriction,
+              _?.unvailable_for_country_restriction,
               _,
               _,
               _,
@@ -1701,14 +1643,13 @@
                 strCaptionManufest: _,
               };
             }, [_]);
-          return (_ == null ? void 0 : _.length) == 0
+          return _?.length == 0
             ? null
             : (0, _.jsx)("div", {
                 className: _().VideoPopupContainers,
                 children: (0, _.jsx)(_._, {
                   dashManifests: _ || [],
-                  hlsManifest:
-                    (_.length > 0 && (_ == null ? void 0 : _[0])) || "",
+                  hlsManifest: (_.length > 0 && _?.[0]) || "",
                   screenshot: (0, _._)(_),
                   altText: _.trailer_name,
                   muteWhenAutoplayBlocked: !0,
@@ -1930,26 +1871,18 @@
           );
         }
         function _(_) {
-          var _;
           const { showErrorInfo: _, event: _ } = _.context;
-          let _ =
-            (0, _._)(_.args, "src") ||
-            ((_ = _.children) == null ? void 0 : _.toString());
-          _ || (_ = (0, _._)(_.args)),
-            (_ = (0, _._)(_ != null ? _ : "") || void 0);
+          let _ = (0, _._)(_.args, "src") || _.children?.toString();
+          _ || (_ = (0, _._)(_.args)), (_ = (0, _._)(_ ?? "") || void 0);
           const _ = (0, _._)(_.args, "style") === "inline",
-            _ = (0, _._)(
-              _,
-              _.language,
-              _ == null ? void 0 : _.rtime32_last_modified,
-            );
+            _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
           if (_ == null) return null;
           if (typeof _ == "string") {
             _ = _;
             let _;
             return (
               (_ = !(0, _._)(_)),
-              _ != null && _.BHasTag("auto_rssfeed") && (_ = !1),
+              _?.BHasTag("auto_rssfeed") && (_ = !1),
               _
                 ? (0, _.jsx)(_._, {
                     className: (0, _._)({
@@ -1979,10 +1912,9 @@
             });
         }
         function _(_) {
-          var _;
           const _ = (0, _._)(_.args);
           if (_ == null || _ == null || _.length == 0) return "";
-          const _ = (_ = _.children) == null ? void 0 : _.toString(),
+          const _ = _.children?.toString(),
             _ = new Array();
           return (
             _.push(
@@ -1999,22 +1931,10 @@
           );
         }
         function _(_) {
-          var _, _, _, _;
-          const _ = _(
-              _.args,
-              "appid",
-              (_ = (_ = _.context.event) == null ? void 0 : _.appid) != null
-                ? _
-                : 0,
-            ),
+          const _ = _(_.args, "appid", _.context.event?.appid ?? 0),
             _ = _(_.args, "trailerid", 0);
           let _ =
-            (_ =
-              (_ = (0, _._)(_.args, "style")) == null
-                ? void 0
-                : _.toLocaleLowerCase()) != null
-              ? _
-              : _.k_TrailerAsFull;
+            (0, _._)(_.args, "style")?.toLocaleLowerCase() ?? _.k_TrailerAsFull;
           _ = Object.values(_).includes(_) ? _ : _.k_TrailerAsFull;
           const _ = (0, _._)(_.args.color, "black"),
             _ = (0, _._)(_.args.bgcolor, "white"),
@@ -2086,8 +2006,7 @@
         }
         const _ = _.createContext(null);
         function _() {
-          var _;
-          return (_ = _.useContext(_)) != null ? _ : _();
+          return _.useContext(_) ?? _();
         }
         function _(_) {
           const _ = _(),
@@ -2266,17 +2185,13 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _({ clanSteamID: _, strVanity: _, strGroupVanity: _ }) {
-          var _, _;
           const _ = _ !== void 0 || _ !== void 0,
             { data: _, isPending: _ } = (0, _._)(
-              _ && (_ = _ != null ? _ : _) != null ? _ : "",
+              _ ? (_ ?? _ ?? "") : "",
               _ !== void 0 ? "store" : "group",
             );
-          if (!_) return _ == null ? void 0 : _.GetAccountID();
-          if (!_)
-            return (_ = _ == null ? void 0 : _.clanAccountID) != null
-              ? _
-              : null;
+          if (!_) return _?.GetAccountID();
+          if (!_) return _?.clanAccountID ?? null;
         }
         function _(_) {
           const { appid: _, announcementGID: _, eventGID: _, strURL: _ } = _,
@@ -2297,14 +2212,14 @@
                     announcementGID: _,
                   },
             ),
-            _ = (0, _._)(_ || (_ == null ? void 0 : _.appid) || void 0),
+            _ = (0, _._)(_ || _?.appid || void 0),
             { data: _ } = (0, _._)(_);
           if (_ || _ || _ === null) return (0, _._)(_);
           if (_ || !_) return (0, _.jsx)(_._, {});
           const _ = (0, _.sfN)(_._.LANGUAGE),
             _ = _.GetNameWithFallback(_),
             _ = _.GetSubTitleWithSummaryFallback(_),
-            _ = _ == null ? void 0 : _.name,
+            _ = _?.name,
             _ = (0, _._)(_.GetStartTimeAndDateUnixSeconds());
           return (0, _.jsxs)(_._, {
             eventModel: _,
@@ -2325,7 +2240,7 @@
                         _.type == _.uYK
                           ? "#EventDisplay_Share_Announcement"
                           : "#EventDisplay_Share_Event",
-                        _ != null ? _ : "",
+                        _ ?? "",
                       ),
                       (0, _.jsx)(_._, {
                         children: _,
@@ -2347,22 +2262,18 @@
           });
         }
         function _(_) {
-          var _;
           const {
             event: _,
             fnFilterImageURLsForKnownFailures: _,
             fnImageFailureCallback: _,
           } = _;
           let _ = (0, _.sfN)(_._.LANGUAGE),
-            _ =
-              (_ = (0, _._)(_, "capsule", _, _._.capsule_main)) != null
-                ? _
-                : [];
+            _ = (0, _._)(_, "capsule", _, _._.capsule_main) ?? [];
           return (
             _ && _ && (_ = _(_)),
             (0, _.jsx)(_._, {
               className: _._.Preview,
-              rgSources: _ != null ? _ : [],
+              rgSources: _ ?? [],
               onIncrementalError: (_, _, _) => _ && _(_),
             })
           );
@@ -2431,18 +2342,13 @@
           );
         }
         function _(_) {
-          var _;
           const _ = _(_),
             _ = _ ? _.clanSteamID.GetAccountID() : void 0,
             { data: _, isLoading: _ } = (0, _._)(_),
             { data: _, isLoading: _ } = (0, _._)(_);
           if (!_) return null;
           if (!(_ || _))
-            return !_ || !_ || !(0, _._)(_, _)
-              ? null
-              : (_ = _.appids) != null
-                ? _
-                : [];
+            return !_ || !_ || !(0, _._)(_, _) ? null : (_.appids ?? []);
         }
         function _(_, _) {
           return _ === null
@@ -2482,11 +2388,11 @@
               return (0, _.jsx)(_, {
                 link: _,
                 strURL: _,
-                eventModel: _ == null ? void 0 : _.event,
+                eventModel: _?.event,
                 bAnnouncement: _,
               });
           }
-          return (0, _._)(_, _ == null ? void 0 : _.event);
+          return (0, _._)(_, _?.event);
         }
         function _(_, _) {
           return _(_, _, _);
@@ -2499,13 +2405,10 @@
         }
         const _ = /community.+sharedfiles\/filedetails\/\?id=\d+/i;
         function _(_) {
-          var _;
           if (!_.test(_)) return;
           const _ = _.split("?");
           if (_.length == 2)
-            return (_ = new URLSearchParams(_[1]).get("id")) != null
-              ? _
-              : void 0;
+            return new URLSearchParams(_[1]).get("id") ?? void 0;
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -2514,18 +2417,15 @@
           const { sharedFileID: _ } = _,
             { data: _ } = (0, _._)(_),
             _ = _._.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=",
-            _ =
-              _ != null
-                ? _
-                : {
-                    sharedfileid: _,
-                    title: (0, _._)("#Loading"),
-                    description: "",
-                    type: "",
-                    previewurl: "",
-                    appid: 0,
-                    url: _ + _,
-                  },
+            _ = _ ?? {
+              sharedfileid: _,
+              title: (0, _._)("#Loading"),
+              description: "",
+              type: "",
+              previewurl: "",
+              appid: 0,
+              url: _ + _,
+            },
             _ = (0, _._)(_.url) ? _ + _.url : _.url;
           let _ = _.personnaname !== void 0 && _.personnaname.length > 0;
           return (0, _.jsx)(_._, {
@@ -2581,7 +2481,6 @@
           return (0, _._)(_(_));
         }
         function _(_) {
-          var _;
           const { modelID: _ } = _,
             [_, _] = _.useState(!0),
             { data: _ } = _(_);
@@ -2598,7 +2497,7 @@
               onClick: _,
               onKeyDown: _,
               children: [
-                (_ == null ? void 0 : _.thumbnail_url) &&
+                _?.thumbnail_url &&
                   (0, _.jsx)("img", {
                     className: _().dynamiclink_preview,
                     src: _.thumbnail_url,
@@ -2618,13 +2517,13 @@
                           className: _().dynamiclink_type,
                           children: (0, _._)("#EventDisplay_Sketchfab"),
                         }),
-                        (_ == null ? void 0 : _.title) &&
+                        _?.title &&
                           (0, _.jsxs)("div", {
                             children: [_.title, "\xA0"],
                           }),
                       ],
                     }),
-                    (_ == null ? void 0 : _.author_name) &&
+                    _?.author_name &&
                       (0, _.jsx)("div", {
                         className: _().dynamiclink_author,
                         children: _.author_name,
@@ -2638,7 +2537,7 @@
             className: _().sketchfabmodelembedded,
             children: (0, _.jsx)("iframe", {
               className: _().sketchfabmodelembedded,
-              title: (_ = _ == null ? void 0 : _.title) != null ? _ : _,
+              title: _?.title ?? _,
               src: `https://sketchfab.com/models/${encodeURIComponent(_)}/embed?autostart=1`,
               frameBorder: 0,
               allowFullScreen: !0,
@@ -2793,7 +2692,7 @@
           const _ = new RegExp(_).exec(_);
           if (_ && _.length > 1) {
             const _ = _[1];
-            if ((_ == null ? void 0 : _.length) > 0) {
+            if (_?.length > 0) {
               let _ =
                 "https://medal.tv/clip/" +
                 _ +
@@ -2808,7 +2707,7 @@
               });
             }
           }
-          return (0, _._)(_, _ == null ? void 0 : _.event);
+          return (0, _._)(_, _?.event);
         }
         function _(_, _) {
           let _ = new RegExp(_).exec(_);
@@ -2819,7 +2718,7 @@
                 modelID: _,
               });
           }
-          return (0, _._)(_, _ == null ? void 0 : _.event);
+          return (0, _._)(_, _?.event);
         }
         function _(_, _) {
           const _ = _(_);
@@ -2827,21 +2726,20 @@
             ? (0, _.jsx)(_, {
                 sharedFileID: _,
               })
-            : (0, _._)(_, _ == null ? void 0 : _.event);
+            : (0, _._)(_, _?.event);
         }
         function _(_, _) {
           const _ = _(_);
           return _
             ? (0, _.jsx)(_, {
-                eventModel: _ == null ? void 0 : _.event,
+                eventModel: _?.event,
                 inputID: _._,
                 inputType: _.strItemType,
                 fallbackUrl: _,
               })
-            : (0, _._)(_, _ == null ? void 0 : _.event);
+            : (0, _._)(_, _?.event);
         }
         function _(_) {
-          var _;
           const { inputID: _, inputType: _, eventModel: _, fallbackUrl: _ } = _,
             _ = (0, _._)(_, _),
             { data: _ } = (0, _._)(_),
@@ -2849,11 +2747,7 @@
           let _;
           if (_ === null) _ = !0;
           else if (_ && _) {
-            const _ = _.appid
-              ? [_.appid]
-              : (_ = _.included_appids) != null
-                ? _
-                : [];
+            const _ = _.appid ? [_.appid] : (_.included_appids ?? []);
             _ = _(_, _);
           }
           return _ === void 0
@@ -2876,7 +2770,7 @@
                   url: _,
                 }),
               })
-            : (0, _._)(_, _ == null ? void 0 : _.event);
+            : (0, _._)(_, _?.event);
         }
         function _(_, _) {
           return _() ? null : _(_, (0, _.jsx)(_.KKS, {}), "@", _);
@@ -2896,11 +2790,7 @@
             _ = _.lastIndexOf("/", _ - 1);
           _ != -1 && _ + 1 < _.length && (_ = _.substring(_ + 1, _)),
             _ && _ && (_ = _ + _);
-          const _ = (0, _._)(
-            _,
-            _ == null ? void 0 : _.event,
-            _ != null ? _ : _,
-          );
+          const _ = (0, _._)(_, _?.event, _ ?? _);
           return (0, _.jsxs)("div", {
             className: _().SocialLink,
             children: [
@@ -2934,7 +2824,6 @@
           return _ ? (0, _._)(new _._(_.clanSteamID64), _.event) : null;
         }
         async function _(_, _) {
-          var _;
           const _ = new URLSearchParams();
           _.clanAccountID && _.set("clan_accountid", String(_.clanAccountID)),
             _.appid && _.set("appid", String(_.appid)),
@@ -2947,7 +2836,7 @@
             _ = await fetch(_);
           if (!_._) throw new Error(`${_} answered ${_.status}`);
           const _ = await _.json();
-          return _.success !== _._ || !((_ = _.event) != null && _.clan_steamid)
+          return _.success !== _._ || !_.event?.clan_steamid
             ? null
             : {
                 clanSteamID64: _.event.clan_steamid,
@@ -2974,8 +2863,8 @@
         function _(_, _) {
           const _ = _(_);
           return {
-            queryKey: _(_ != null ? _ : {}, _),
-            queryFn: () => _(_ != null ? _ : {}, _),
+            queryKey: _(_ ?? {}, _),
+            queryFn: () => _(_ ?? {}, _),
             select: _,
             enabled: _,
             staleTime: 3600 * 1e3,
@@ -3068,12 +2957,8 @@
           return ["MeetSteamSelections", _, _];
         }
         function _(_) {
-          var _, _;
           return {
-            queryKey: _(
-              (_ = _ == null ? void 0 : _.gidClanEvent) != null ? _ : _,
-              (_ = _ == null ? void 0 : _.userAccountID) != null ? _ : _,
-            ),
+            queryKey: _(_?.gidClanEvent ?? _, _?.userAccountID ?? _),
             queryFn: async () => {
               if (!_) return _;
               const _ = await (0, _._)(_.gidClanEvent),
@@ -3092,9 +2977,7 @@
               );
             },
             enabled:
-              !!_ &&
-              (0, _._)() == (_ == null ? void 0 : _.clanAccountID) &&
-              !!(_ != null && _.userAccountID),
+              !!_ && (0, _._)() == _?.clanAccountID && !!_?.userAccountID,
           };
         }
         function _(_, _) {
@@ -3128,24 +3011,18 @@
           });
         }
         function _() {
-          var _, _, _;
           const _ = _.useContext(_),
             _ = (0, _._)(_(_)),
-            _ = (0, _._)(
-              _(
-                (_ = _ == null ? void 0 : _.gidClanEvent) != null ? _ : _,
-                (_ = _ == null ? void 0 : _.userAccountID) != null ? _ : _,
-              ),
-            ),
-            _ = (_ = _.data) != null ? _ : _;
-          return _.useMemo(() => {
-            var _;
-            return {
+            _ = (0, _._)(_(_?.gidClanEvent ?? _, _?.userAccountID ?? _)),
+            _ = _.data ?? _;
+          return _.useMemo(
+            () => ({
               registrations: _,
-              selections: (_ = _.data) != null ? _ : _(_),
+              selections: _.data ?? _(_),
               bLoading: _.isFetching,
-            };
-          }, [_, _.data, _.isFetching]);
+            }),
+            [_, _.data, _.isFetching],
+          );
         }
         function _(_) {
           const _ = new Map();
@@ -3163,42 +3040,28 @@
           return Array.from(_.selections.keys());
         }
         function _(_, _, _) {
-          var _;
           if (_ === void 0 || _ === void 0) return _;
-          const _ =
-              ((_ = _.registrations.get(_)) == null ? void 0 : _.session_id) ==
-              _,
+          const _ = _.registrations.get(_)?.session_id == _,
             _ = _.selections.get(_) == _;
           return _ && _ ? _ : !_ && _ ? _ : _ && !_ ? _ : _;
         }
         function _(_, _, _) {
-          var _;
           if (_ === void 0 || _ === void 0) return !1;
           const _ = !!_.registrations.get(_),
             _ = _.selections.get(_) == _,
-            _ =
-              ((_ = _.registrations.get(_)) == null ? void 0 : _.session_id) ==
-              _.selections.get(_);
+            _ = _.registrations.get(_)?.session_id == _.selections.get(_);
           return _ && !_ && _;
         }
         function _(_, _) {
-          var _;
-          return _ === void 0 || (_ = _.registrations.get(_)) == null
-            ? void 0
-            : _.session_id;
+          return _ === void 0 ? void 0 : _.registrations.get(_)?.session_id;
         }
         function _(_) {
           return _.selections.size == 0 && _.registrations.size == 0
             ? !1
             : _.selections.size != _.registrations.size ||
-                !Array.from(_.selections.entries()).every((_) => {
-                  var _;
-                  return (
-                    ((_ = _.registrations.get(_[0])) == null
-                      ? void 0
-                      : _.session_id) == _[1]
-                  );
-                });
+                !Array.from(_.selections.entries()).every(
+                  (_) => _.registrations.get(_[0])?.session_id == _[1],
+                );
         }
         function _(_) {
           return Array.from(_.selections.entries()).some((_) => {
@@ -3240,13 +3103,8 @@
         function _(_, _, _, _) {
           _ !== void 0 &&
             _.setQueryData(_(_.gidClanEvent, _.userAccountID), (_) => {
-              var _;
-              const _ =
-                  (_ = _.getQueryData(_(_.gidClanEvent, _.userAccountID))) !=
-                  null
-                    ? _
-                    : _,
-                _ = new Map(_ != null ? _ : _(_));
+              const _ = _.getQueryData(_(_.gidClanEvent, _.userAccountID)) ?? _,
+                _ = new Map(_ ?? _(_));
               return _ !== void 0 && _ > 0 ? _.set(_, _) : _.delete(_), _;
             });
         }
@@ -3269,7 +3127,6 @@
             _ = _(),
             { mutateAsync: _ } = (0, _._)({
               mutationFn: async (_) => {
-                var _;
                 if (!_) return !1;
                 const _ = Object.fromEntries(
                     Object.entries(_).filter(
@@ -3282,7 +3139,7 @@
                     gid: _.gidClanEvent,
                     group_id: _,
                     session_id: _,
-                    guest_count: (_ = _.guests_registered) != null ? _ : 1,
+                    guest_count: _.guests_registered ?? 1,
                     jsondata: JSON.stringify(_),
                     skip_email: !1,
                   });
@@ -3329,16 +3186,11 @@
             /(?<!\\)\[(meetsteamsessiongroup|meetsteamscheduleview)\b([^\]]*)\]/gi,
           _ = /\b(?:group_id|schedule_id)\s*=\s*"?(\d+)/i;
         function _(_) {
-          var _, _;
           const _ = [];
           for (const _ of _.matchAll(_))
             _.push({
               strTag: _[1].toLowerCase(),
-              nID: Number(
-                (_ = (_ = _.exec(_[2])) == null ? void 0 : _[1]) != null
-                  ? _
-                  : 0,
-              ),
+              nID: Number(_.exec(_[2])?.[1] ?? 0),
             });
           return _;
         }
@@ -3346,21 +3198,20 @@
           return _(_).length > 0;
         }
         function _(_, _) {
-          if (_ === void 0) return !0;
-          const _ = _(_).find((_) => _.strTag == "meetsteamsessiongroup");
-          return (_ == null ? void 0 : _.nID) == _;
+          return _ === void 0
+            ? !0
+            : _(_).find((_) => _.strTag == "meetsteamsessiongroup")?.nID == _;
         }
         function _(_, _, _) {
           if (_ === void 0) return !0;
           const _ = _(_),
             _ = _[_.length - 1];
-          return (_ == null ? void 0 : _.strTag) == _ && _.nID == _;
+          return _?.strTag == _ && _.nID == _;
         }
         const _ = _.createContext(null);
         function _(_) {
-          var _;
           return jsx(_.Provider, {
-            value: (_ = _.nVisibilityID) != null ? _ : null,
+            value: _.nVisibilityID ?? null,
             children: _.children,
           });
         }
@@ -3373,7 +3224,6 @@
           _ = __webpack_require__("chunkid");
         const _ = [];
         function _(_) {
-          var _, _, _, _, _, _, _, _;
           const {
               eventModel: _,
               fnConfirm: _,
@@ -3395,13 +3245,13 @@
             ),
             _ = (0, _._)(
               _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
+              _.GID ?? "",
               _._.accountid,
             ),
             { data: _ } = (0, _._)(_._.accountid),
-            _ = (_ = _ == null ? void 0 : _.realname) != null ? _ : "",
-            _ = (_ = _ == null ? void 0 : _.email) != null ? _ : "",
-            _ = (_ = _ == null ? void 0 : _.partners) != null ? _ : _,
+            _ = _?.realname ?? "",
+            _ = _?.email ?? "",
+            _ = _?.partners ?? _,
             [_, _] = _.useState(void 0),
             [_, _] = _.useState(void 0),
             _ = _.useMemo(() => {
@@ -3428,37 +3278,30 @@
           _.useEffect(() => {
             if (!_.isSuccess) return;
             const _ = _.find((_) => _.partnerid == _.data.partner_id),
-              _ =
-                _.data.partner_id === 0 ? 0 : _ == null ? void 0 : _.partnerid;
+              _ = _.data.partner_id === 0 ? 0 : _?.partnerid;
             _(_), _(_), _(_.data);
           }, [_.isSuccess, _.data, _]);
-          const _ = (_ == null ? void 0 : _.length) > 0,
+          const _ = _?.length > 0,
             _ = !_ || _ != null,
             _ = _ && _ === 0;
           _.useEffect(() => {
-            var _, _, _;
             if (_ == _ || (_(_), !_ || !_)) return;
             let _;
             const _ = _.find((_) => _.partnerid == _);
             _ || !_
               ? (_ = {
-                  name: (_ == null ? void 0 : _.length) > 0 ? _ : void 0,
-                  email_override:
-                    (_ == null ? void 0 : _.length) > 0 ? _ : void 0,
+                  name: _?.length > 0 ? _ : void 0,
+                  email_override: _?.length > 0 ? _ : void 0,
                   partner_id: 0,
                 })
               : (_ = {
                   name:
-                    ((_ = _.partneruserrealname) == null ? void 0 : _.length) >
-                    0
+                    _.partneruserrealname?.length > 0
                       ? _.partneruserrealname
                       : void 0,
-                  company:
-                    ((_ = _.partner_name) == null ? void 0 : _.length) > 0
-                      ? _.partner_name
-                      : void 0,
+                  company: _.partner_name?.length > 0 ? _.partner_name : void 0,
                   email_override:
-                    ((_ = _.partneruseremail) == null ? void 0 : _.length) > 0
+                    _.partneruseremail?.length > 0
                       ? _.partneruseremail
                       : void 0,
                   partner_id: _.partnerid,
@@ -3469,7 +3312,7 @@
             _ = _
               ? (0, _._)(
                   "#MeetSteam_Register_title",
-                  (_ = _.GetNameWithFallback(_)) != null ? _ : "",
+                  _.GetNameWithFallback(_) ?? "",
                 )
               : (0, _._)("#MeetSteam_Unregister_title"),
             _ =
@@ -3571,13 +3414,9 @@
                                     label: _,
                                   })),
                                   selectedOption:
-                                    ((_ = _.guests_registered) != null
-                                      ? _
-                                      : 1) - 1,
+                                    (_.guests_registered ?? 1) - 1,
                                   onChange: (_) => {
-                                    var _;
-                                    const _ =
-                                      (_ = _.guest_names) != null ? _ : [];
+                                    const _ = _.guest_names ?? [];
                                     _({
                                       guests_registered: _.data + 1,
                                       guest_names:
@@ -3587,7 +3426,7 @@
                                     });
                                   },
                                 }),
-                              ((_ = _.guests_registered) != null ? _ : 0) > 1 &&
+                              (_.guests_registered ?? 0) > 1 &&
                                 (0, _.jsxs)("div", {
                                   children: [
                                     (0, _.jsx)("div", {
@@ -3596,31 +3435,27 @@
                                       ),
                                     }),
                                     (0, _.jsx)("br", {}),
-                                    ((_ = _.guest_names) != null ? _ : []).map(
-                                      (_, _) =>
-                                        (0, _.jsx)(
-                                          _._,
-                                          {
-                                            type: "text",
-                                            label: (0, _._)(
-                                              "#MeetSteam_Reg_Others_name",
-                                            ),
-                                            value: _,
-                                            onChange: (_) => {
-                                              var _;
-                                              const _ = [
-                                                ...((_ = _.guest_names) != null
-                                                  ? _
-                                                  : []),
-                                              ];
-                                              (_[_] = _.currentTarget.value),
-                                                _({
-                                                  guest_names: _,
-                                                });
-                                            },
+                                    (_.guest_names ?? []).map((_, _) =>
+                                      (0, _.jsx)(
+                                        _._,
+                                        {
+                                          type: "text",
+                                          label: (0, _._)(
+                                            "#MeetSteam_Reg_Others_name",
+                                          ),
+                                          value: _,
+                                          onChange: (_) => {
+                                            const _ = [
+                                              ...(_.guest_names ?? []),
+                                            ];
+                                            (_[_] = _.currentTarget.value),
+                                              _({
+                                                guest_names: _,
+                                              });
                                           },
-                                          "guesname_" + _,
-                                        ),
+                                        },
+                                        "guesname_" + _,
+                                      ),
                                     ),
                                   ],
                                 }),
@@ -3643,9 +3478,8 @@
           );
         }
         function _(_) {
-          var _;
           const { eventModel: _, oReg: _, fnUpdateRegistration: _ } = _,
-            _ = _((_ = _.jsondata.meet_steam_groups) != null ? _ : [], _);
+            _ = _(_.jsondata.meet_steam_groups ?? [], _);
           return !_ || _.length == 0
             ? null
             : (0, _.jsxs)("div", {
@@ -3657,11 +3491,9 @@
                     children: (0, _._)("#MeetSteam_Reg_Question_desc"),
                   }),
                   _.map((_) => {
-                    var _;
-                    const _ =
-                      (_ = _.jsondata.meet_steam_groups) == null
-                        ? void 0
-                        : _.find((_) => _.group_id == _);
+                    const _ = _.jsondata.meet_steam_groups?.find(
+                      (_) => _.group_id == _,
+                    );
                     return _
                       ? (0, _.jsx)(
                           _,
@@ -3697,20 +3529,12 @@
         function _(_) {
           const { fnUpdateText: _, groupInfo: _, oReg: _ } = _,
             _ = (0, _.sfN)(_._.LANGUAGE),
-            [_, _] = (0, _._)(() => {
-              var _, _, _;
-              return [
-                (_ = _._.GetWithFallback(_.localized_session_title, _)) != null
-                  ? _
-                  : "",
-                ((_ =
-                  (_ = _.pre_event_partner_questions) == null
-                    ? void 0
-                    : _.find((_) => _.group_id == _.group_id)) == null
-                  ? void 0
-                  : _.question) || "",
-              ];
-            });
+            [_, _] = (0, _._)(() => [
+              _._.GetWithFallback(_.localized_session_title, _) ?? "",
+              _.pre_event_partner_questions?.find(
+                (_) => _.group_id == _.group_id,
+              )?.question || "",
+            ]);
           return (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)(_._, {
@@ -3734,7 +3558,6 @@
           });
         }
         function _(_) {
-          var _;
           const _ = _.context.event,
             _ = _.context.showErrorInfo,
             _ = (0, _._)(_.args, "group_id"),
@@ -3756,7 +3579,7 @@
             _ = _(_.context.bbcode, "meetsteamsessiongroup", _);
           return (0, _.jsxs)(_, {
             clanAccountID: _.clanSteamID.GetAccountID(),
-            gidClanEvent: (_ = _.GID) != null ? _ : "",
+            gidClanEvent: _.GID ?? "",
             userAccountID: _._.accountid,
             children: [
               _ &&
@@ -3784,9 +3607,8 @@
             : null;
         }
         function _(_) {
-          var _;
           const { eventModel: _, accountID: _ } = _,
-            _ = (0, _._)((_ = _.GID) != null ? _ : "", _);
+            _ = (0, _._)(_.GID ?? "", _);
           return (0, _.jsx)("div", {
             children:
               !!_ &&
@@ -3804,44 +3626,31 @@
           });
         }
         function _(_) {
-          var _, _, _;
           const { groupData: _, eventModel: _ } = _,
             _ = (0, _._)(),
             _ = _(),
             _ = _(),
-            _ = (0, _._)(
-              _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
-            ),
+            _ = (0, _._)(_.clanSteamID.GetAccountID(), _.GID ?? ""),
             _ = (0, _.useMemo)(
               () =>
-                (_ == null ? void 0 : _.sessions) &&
-                [..._.sessions].sort((_, _) => {
-                  var _, _;
-                  return (
-                    ((_ = _.rtime_start) != null ? _ : 0) -
-                    ((_ = _.rtime_start) != null ? _ : 0)
-                  );
-                }),
-              [_ == null ? void 0 : _.sessions],
+                _?.sessions &&
+                [..._.sessions].sort(
+                  (_, _) => (_.rtime_start ?? 0) - (_.rtime_start ?? 0),
+                ),
+              [_?.sessions],
             ),
             { elLogInDialog: _, fnRequireLogIn: _ } = _(),
             _ = _(),
             _ = (0, _._)(() =>
-              _ == null
-                ? void 0
-                : _.reduce((_, _) => {
-                    var _;
-                    return _.set(
-                      (_ = _._) != null ? _ : 0,
-                      _(_, _.group_id, _._),
-                    );
-                  }, new Map()),
+              _?.reduce(
+                (_, _) => _.set(_._ ?? 0, _(_, _.group_id, _._)),
+                new Map(),
+              ),
             ),
             _ = _(),
             _ = (0, _._)(
               _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
+              _.GID ?? "",
               _._.accountid,
             ),
             _ = _.isSuccess && !!_.data.allow_registration_if_full,
@@ -3857,71 +3666,51 @@
               string: (0, _._)("#Loading"),
             });
           const _ = (_) => _(_.group_id, _),
-            _ = (_ = _.group_visibility_tokens) != null ? _ : [],
+            _ = _.group_visibility_tokens ?? [],
             _ = _ !== null && _.includes(_);
           return _.length > 0 && !_ && !_
             ? null
             : (0, _.jsxs)(_, {
                 groupData: _,
                 children: [
-                  _ == null
-                    ? void 0
-                    : _.map((_, _) => {
-                        var _;
-                        const _ = _.find(
-                            (_) =>
-                              _.group_id === _.group_id && _.session_id === _._,
-                          ),
-                          _ =
-                            _ == null
-                              ? void 0
-                              : _.get((_ = _._) != null ? _ : 0),
-                          _ = _ + 1 < _.length;
-                        return (0, _.jsxs)(
-                          _.Fragment,
-                          {
-                            children: [
-                              (0, _.jsx)("div", {
-                                className: _().SessionColumnCtn,
-                                children: (0, _.jsx)(_, {
-                                  sessionData: _,
-                                  onClick: () => _(() => _(_._)),
-                                  nGuestReservations:
-                                    (_ == null ? void 0 : _.guest_count) || 0,
-                                  eRegistrationStatus: _,
-                                  bAllowedToRegisterIfFull: _,
-                                }),
-                              }),
-                              _ && (0, _.jsx)(_, {}),
-                            ],
-                          },
-                          "timecol_" + _.group_id + "_" + _._,
-                        );
-                      }),
+                  _?.map((_, _) => {
+                    const _ = _.find(
+                        (_) =>
+                          _.group_id === _.group_id && _.session_id === _._,
+                      ),
+                      _ = _?.get(_._ ?? 0),
+                      _ = _ + 1 < _.length;
+                    return (0, _.jsxs)(
+                      _.Fragment,
+                      {
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().SessionColumnCtn,
+                            children: (0, _.jsx)(_, {
+                              sessionData: _,
+                              onClick: () => _(() => _(_._)),
+                              nGuestReservations: _?.guest_count || 0,
+                              eRegistrationStatus: _,
+                              bAllowedToRegisterIfFull: _,
+                            }),
+                          }),
+                          _ && (0, _.jsx)(_, {}),
+                        ],
+                      },
+                      "timecol_" + _.group_id + "_" + _._,
+                    );
+                  }),
                   _,
                 ],
               });
         }
         function _(_) {
-          var _, _;
           const { groupData: _, children: _ } = _,
             _ = (0, _.sfN)(_._.LANGUAGE),
-            _ = _._.GetWithFallback(
-              _ == null ? void 0 : _.localized_session_title,
-              _,
-            ),
-            _ = _._.GetWithFallback(
-              _ == null ? void 0 : _.localized_session_description,
-              _,
-            ),
-            _ = _._.GetWithFallback(
-              _ == null ? void 0 : _.localized_intended_audience,
-              _,
-            ),
-            _ = _._.GetWithFallback(
-              _ == null ? void 0 : _.localized_sesssion_faq,
-              _,
-            ),
+            _ = _._.GetWithFallback(_?.localized_session_title, _),
+            _ = _._.GetWithFallback(_?.localized_session_description, _),
+            _ = _._.GetWithFallback(_?.localized_intended_audience, _),
+            _ = _._.GetWithFallback(_?.localized_sesssion_faq, _),
             _ = (0, _._)(),
             [_, _] = (0, _.useState)(!1);
           return _
@@ -3930,13 +3719,7 @@
                   [_().Ctn]: !0,
                   [_().CtnRegistered]: !1,
                   [_().VisibilityOverride]:
-                    _ &&
-                    ((_ =
-                      (_ = _.group_visibility_tokens) == null
-                        ? void 0
-                        : _.length) != null
-                      ? _
-                      : 0) > 0,
+                    _ && (_.group_visibility_tokens?.length ?? 0) > 0,
                 }),
                 children: [
                   !!_ &&
@@ -3954,7 +3737,7 @@
                       className: _().SessionAudience,
                       children: (0, _._)(
                         "#MeetSteam_Session_Audience",
-                        _ != null ? _ : "",
+                        _ ?? "",
                       ),
                     }),
                   (0, _.jsx)("div", {
@@ -3980,7 +3763,7 @@
                           (0, _.jsx)("div", {
                             className: _().FAQDisplay,
                             children: (0, _.jsx)(_._, {
-                              text: _ != null ? _ : "",
+                              text: _ ?? "",
                             }),
                           }),
                       ],
@@ -4020,10 +3803,7 @@
               eRegistrationStatus: _ = _,
               bAllowedToRegisterIfFull: _,
             } = _,
-            _ = (0, _._)(() => {
-              var _;
-              return (_ = _.max_capacity) != null ? _ : 0;
-            }),
+            _ = (0, _._)(() => _.max_capacity ?? 0),
             _ = Math.max(0, _ - (_ || 0)),
             {
               strStatusClass: _,
@@ -4031,8 +3811,8 @@
               bEnabled: _,
             } = _(_, _, !!_),
             { sDisplayTimeZone: _, rtime_start: _, rtime_end: _ } = (0, _._)(_),
-            _ = (0, _._)(_ != null ? _ : 0, _),
-            _ = (0, _._)(_ != null ? _ : 0, _ != null ? _ : 0, _);
+            _ = (0, _._)(_ ?? 0, _),
+            _ = (0, _._)(_ ?? 0, _ ?? 0, _);
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsxs)("div", {
               className: (0, _._)(_().SessionInstance, _),
@@ -4098,14 +3878,10 @@
           });
         }
         function _(_) {
-          var _;
           const { eventModel: _, bIsLast: _ } = _,
             [_, _] = _.useState(!1),
             [_, _] = _.useState(!1),
-            _ = (0, _._)(
-              _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
-            ),
+            _ = (0, _._)(_.clanSteamID.GetAccountID(), _.GID ?? ""),
             [_, _, _] = (0, _._)(),
             { elLogInDialog: _, fnRequireLogIn: _ } = _(),
             _ = _(),
@@ -4120,19 +3896,9 @@
             _ = _(_),
             _ = (0, _._)(() =>
               _(_).reduce((_, _) => {
-                var _, _, _;
                 const _ = _(_, _),
-                  _ = _(_, _ == null ? void 0 : _.group_id),
-                  _ =
-                    (_ =
-                      (_ =
-                        (_ = _ == null ? void 0 : _.sessions) == null
-                          ? void 0
-                          : _.find((_) => _._ == _)) == null
-                        ? void 0
-                        : _.max_per_team) != null
-                      ? _
-                      : 0;
+                  _ = _(_, _?.group_id),
+                  _ = _?.sessions?.find((_) => _._ == _)?.max_per_team ?? 0;
                 return Math.max(_, _);
               }, 1),
             );
@@ -4193,20 +3959,14 @@
           );
         }
         function _(_, _) {
-          var _;
-          const _ =
-            ((_ = _ == null ? void 0 : _.jsondata) == null
-              ? void 0
-              : _.meet_steam_groups) || [];
-          return _ == null ? void 0 : _.find((_) => _.group_id == _);
+          return (_?.jsondata?.meet_steam_groups || [])?.find(
+            (_) => _.group_id == _,
+          );
         }
         function _(_, _) {
-          var _;
-          const _ =
-            ((_ = _ == null ? void 0 : _.jsondata) == null
-              ? void 0
-              : _.meet_steam_schedules) || [];
-          return _ == null ? void 0 : _.find((_) => _.schedule_id == _);
+          return (_?.jsondata?.meet_steam_schedules || [])?.find(
+            (_) => _.schedule_id == _,
+          );
         }
         function _() {
           const { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(
@@ -4220,7 +3980,6 @@
           };
         }
         function _(_) {
-          var _;
           const _ = _.context.event,
             _ = _.context.showErrorInfo,
             _ = (0, _._)(_.args, "schedule_id"),
@@ -4241,7 +4000,7 @@
           const _ = _(_.context.bbcode, "meetsteamscheduleview", _);
           return (0, _.jsxs)(_, {
             clanAccountID: _.clanSteamID.GetAccountID(),
-            gidClanEvent: (_ = _.GID) != null ? _ : "",
+            gidClanEvent: _.GID ?? "",
             userAccountID: _._.accountid,
             children: [
               (0, _.jsx)(_, {
@@ -4256,17 +4015,13 @@
           });
         }
         function _(_) {
-          var _, _, _;
           const { eventModel: _ } = _,
             _ = _(),
             _ = _(),
+            _ = (0, _._)(_.clanSteamID.GetAccountID(), _.GID ?? ""),
             _ = (0, _._)(
               _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
-            ),
-            _ = (0, _._)(
-              _.clanSteamID.GetAccountID(),
-              (_ = _.GID) != null ? _ : "",
+              _.GID ?? "",
               _._.accountid,
             ),
             _ = _.data;
@@ -4284,10 +4039,7 @@
                   ..._,
                   fnOnClick: _,
                   rgAvailability: _,
-                  bAllowedToRegisterIfFull:
-                    (_ = _.data) == null
-                      ? void 0
-                      : _.allow_registration_if_full,
+                  bAllowedToRegisterIfFull: _.data?.allow_registration_if_full,
                 });
         }
         function _(_) {
@@ -4301,31 +4053,27 @@
             _ = (0, _._)(),
             _ = _(),
             _ = (0, _._)(),
-            [_, _, _] = (0, _._)(() => {
-              var _;
-              return [
-                _.jsondata.meet_steam_groups,
-                (_ = _.in_person_time_zone) != null ? _ : _._,
-                _.location_type,
-              ];
-            }),
+            [_, _, _] = (0, _._)(() => [
+              _.jsondata.meet_steam_groups,
+              _.in_person_time_zone ?? _._,
+              _.location_type,
+            ]),
             [_, _, _] = (0, _.useMemo)(() => {
-              var _, _, _, _, _;
               if (!_) return [new Map(), new Map(), new Array()];
               const _ = new Map(),
                 _ = new Map();
               for (const _ of _) {
-                const _ = (_ = _.group_visibility_tokens) != null ? _ : [],
+                const _ = _.group_visibility_tokens ?? [],
                   _ = _ !== null && _.includes(_);
                 if (!(_.length > 0 && !_ && !_))
                   for (const _ of _.sessions) {
                     const _ = (
                       _ == "in_person"
                         ? _()
-                            .unix((_ = _.rtime_start) != null ? _ : 0)
+                            .unix(_.rtime_start ?? 0)
                             ._(_)
                         : _()
-                            .unix((_ = _.rtime_start) != null ? _ : 0)
+                            .unix(_.rtime_start ?? 0)
                             ._(_)
                     ).format("YYYY-MM-DD");
                     let _ = _.get(_);
@@ -4340,23 +4088,20 @@
                 const _ = (
                   _ == "in_person"
                     ? _()
-                        .unix((_ = _.rtime_start) != null ? _ : 0)
+                        .unix(_.rtime_start ?? 0)
                         ._(_)
                     : _()
-                        .unix((_ = _.rtime_start) != null ? _ : 0)
+                        .unix(_.rtime_start ?? 0)
                         ._(_)
                 ).format("YYYY-MM-DD");
                 let _ = _.get(_);
                 _ || ((_ = []), _.set(_, _)), _.push(_);
               }
               for (const _ of _.values())
-                _.sort((_, _) => {
-                  var _, _;
-                  return (
-                    ((_ = _.session.rtime_start) != null ? _ : 0) -
-                    ((_ = _.session.rtime_start) != null ? _ : 0)
-                  );
-                });
+                _.sort(
+                  (_, _) =>
+                    (_.session.rtime_start ?? 0) - (_.session.rtime_start ?? 0),
+                );
               return [_, _, Array.from(_.keys()).sort()];
             }, [_, _, _, _, _, _, _.session_breaks]);
           return _
@@ -4371,9 +4116,9 @@
                         scheduleData: _,
                         bAllowedToRegisterIfFull: !!_,
                         fnOnClick: _,
-                        rgDayGroupSessions: _ != null ? _ : [],
+                        rgDayGroupSessions: _ ?? [],
                         rgBreakSessions: _.get(_) || [],
-                        rgAvailability: _ != null ? _ : [],
+                        rgAvailability: _ ?? [],
                       }),
                     },
                     "day_" + _,
@@ -4403,20 +4148,16 @@
               return _;
             }, [_]),
             { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_[0].session),
-            _ = (0, _._)(_ != null ? _ : 0, _);
+            _ = (0, _._)(_ ?? 0, _);
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)("h2", {
                 className: _().ScheduleTopDate,
                 children: _,
               }),
-              _.filter((_) => {
-                var _, _;
-                return (
-                  ((_ = _.rtime_end) != null ? _ : 0) <=
-                  ((_ = _[0][0].session.rtime_start) != null ? _ : 0)
-                );
-              }).map((_) =>
+              _.filter(
+                (_) => (_.rtime_end ?? 0) <= (_[0][0].session.rtime_start ?? 0),
+              ).map((_) =>
                 (0, _.jsx)(
                   _,
                   {
@@ -4427,18 +4168,13 @@
                 ),
               ),
               _.map((_, _) => {
-                var _, _;
                 let _ = [];
                 if (_ + 1 < _.length) {
-                  const _ = (_ = _[0].session.rtime_start) != null ? _ : 0,
-                    _ = (_ = _[_ + 1][0].session.rtime_end) != null ? _ : 0;
-                  _ = _.filter((_) => {
-                    var _, _;
-                    return (
-                      _ < ((_ = _.rtime_start) != null ? _ : 0) &&
-                      ((_ = _.rtime_end) != null ? _ : 0) < _
-                    );
-                  });
+                  const _ = _[0].session.rtime_start ?? 0,
+                    _ = _[_ + 1][0].session.rtime_end ?? 0;
+                  _ = _.filter(
+                    (_) => _ < (_.rtime_start ?? 0) && (_.rtime_end ?? 0) < _,
+                  );
                 }
                 return (0, _.jsxs)(
                   _.Fragment,
@@ -4466,13 +4202,11 @@
                   "start_" + _[0].session.rtime_start,
                 );
               }),
-              _.filter((_) => {
-                var _, _;
-                return (
-                  ((_ = _.rtime_start) != null ? _ : 0) >=
-                  ((_ = _[_.length - 1][0].session.rtime_end) != null ? _ : 0)
-                );
-              }).map((_) =>
+              _.filter(
+                (_) =>
+                  (_.rtime_start ?? 0) >=
+                  (_[_.length - 1][0].session.rtime_end ?? 0),
+              ).map((_) =>
                 (0, _.jsx)(
                   _,
                   {
@@ -4488,15 +4222,9 @@
         function _(_) {
           const { scheduleData: _, breakSession: _ } = _,
             _ = (0, _.sfN)(_._.LANGUAGE),
-            _ = (0, _._)(() => {
-              var _;
-              return (_ = _._.GetWithFallback(
-                _.localized_break_description,
-                _,
-              )) != null
-                ? _
-                : "";
-            }),
+            _ = (0, _._)(
+              () => _._.GetWithFallback(_.localized_break_description, _) ?? "",
+            ),
             _ = (0, _._)(() => ({
               rtime_start: _.rtime_start,
               rtime_end: _.rtime_end,
@@ -4550,8 +4278,8 @@
         function _(_) {
           const { session: _ } = _,
             { sDisplayTimeZone: _, rtime_start: _, rtime_end: _ } = (0, _._)(_),
-            _ = (0, _._)(_ != null ? _ : 0, _),
-            _ = (0, _._)(_ != null ? _ : 0, _ != null ? _ : 0, _);
+            _ = (0, _._)(_ ?? 0, _),
+            _ = (0, _._)(_ ?? 0, _ ?? 0, _);
           return (0, _.jsxs)("div", {
             className: _().ScheduleTimeColumn,
             children: [
@@ -4566,7 +4294,6 @@
           });
         }
         function _(_) {
-          var _, _, _;
           const {
               session: _,
               bAllowedToRegisterIfFull: _,
@@ -4574,31 +4301,13 @@
               rgAvailability: _,
             } = _,
             _ = (0, _.sfN)(_._.LANGUAGE),
-            [_, _, _, _] = (0, _._)(() => {
-              var _, _, _, _;
-              return [
-                (_ = _._.GetWithFallback(_.group.localized_session_title, _)) !=
-                null
-                  ? _
-                  : "",
-                (_ = _._.GetWithFallback(
-                  _.group.localized_intended_audience,
-                  _,
-                )) != null
-                  ? _
-                  : "",
-                (_ = _._.GetWithFallback(_.group.localized_sesssion_faq, _)) !=
-                null
-                  ? _
-                  : "",
-                (_ = _._.GetWithFallback(
-                  _.group.localized_session_description,
-                  _,
-                )) != null
-                  ? _
-                  : "",
-              ];
-            }),
+            [_, _, _, _] = (0, _._)(() => [
+              _._.GetWithFallback(_.group.localized_session_title, _) ?? "",
+              _._.GetWithFallback(_.group.localized_intended_audience, _) ?? "",
+              _._.GetWithFallback(_.group.localized_sesssion_faq, _) ?? "",
+              _._.GetWithFallback(_.group.localized_session_description, _) ??
+                "",
+            ]),
             [_, _, _] = (0, _._)(!1),
             _ = _(),
             [_, _, _] = (0, _._)(() => [
@@ -4606,21 +4315,11 @@
               _(_, _.group.group_id, _.session._),
               _(_, _.group.group_id),
             ]),
-            _ =
-              (_ =
-                _ == null
-                  ? void 0
-                  : _.find(
-                      (_) =>
-                        _.group_id === _.group.group_id &&
-                        _.session_id === _.session._,
-                    )) == null
-                ? void 0
-                : _.guest_count,
-            _ = Math.max(
-              0,
-              ((_ = _.session.max_capacity) != null ? _ : 0) - (_ || 0),
-            ),
+            _ = _?.find(
+              (_) =>
+                _.group_id === _.group.group_id && _.session_id === _.session._,
+            )?.guest_count,
+            _ = Math.max(0, (_.session.max_capacity ?? 0) - (_ || 0)),
             {
               strStatusClass: _,
               strStatusToken: _,
@@ -4628,9 +4327,7 @@
             } = _(_, _, _, _),
             _ =
               _ && _
-                ? (_ = _.group.sessions.find((_) => _._ == _)) == null
-                  ? void 0
-                  : _.rtime_start
+                ? _.group.sessions.find((_) => _._ == _)?.rtime_start
                 : void 0;
           return (0, _.jsx)(_._, {
             toolTipContent: _
@@ -4765,23 +4462,20 @@
             (_ == "button" || _ == "pill") &&
               _ &&
               (_ = {
-                ...(_ != null ? _ : {}),
+                ...(_ ?? {}),
                 color: _,
               }),
             _
           );
         }
         function _(_, _) {
-          var _;
-          const _ =
-            (_ =
-              typeof _ == "string"
-                ? _
-                : Array.isArray(_) && _.length == 1 && typeof _[0] == "string"
-                  ? _[0]
-                  : void 0) == null
-              ? void 0
-              : _.trim();
+          const _ = (
+            typeof _ == "string"
+              ? _
+              : Array.isArray(_) && _.length == 1 && typeof _[0] == "string"
+                ? _[0]
+                : void 0
+          )?.trim();
           return !_ || !_ ? !0 : _ != _.trim();
         }
         function _(_) {
@@ -4798,12 +4492,8 @@
             ),
             _ = _(_),
             _ = _.context.event,
-            _ = (0, _._)(
-              _,
-              _.language,
-              _ == null ? void 0 : _.rtime32_last_modified,
-            ),
-            _ = (0, _._)(_(_.children, _) ? "" : _ != null ? _ : "");
+            _ = (0, _._)(_, _.language, _?.rtime32_last_modified),
+            _ = (0, _._)(_(_.children, _) ? "" : (_ ?? ""));
           if (_ && _)
             return _.fnBBComponent(_, {
               event: _.context.event,
@@ -4969,18 +4659,13 @@
         }
         const _ = 1440 * 60;
         function _(_, _) {
-          var _, _;
           let _ = 0;
           return (
             _.poll_end_time
               ? (_ = _.poll_end_time)
               : (_ =
-                  ((_ =
-                    (_ = _.rtime32_visibility_start) != null
-                      ? _
-                      : _.rtime32_start_time) != null
-                    ? _
-                    : 0) + (_.poll_end_days_since_start || _)),
+                  (_.rtime32_visibility_start ?? _.rtime32_start_time ?? 0) +
+                  (_.poll_end_days_since_start || _)),
             _
           );
         }
@@ -5024,35 +4709,24 @@
           });
         }
         function _(_, _) {
-          var _;
-          const _ =
-            ((_ = _ == null ? void 0 : _.jsondata) == null
-              ? void 0
-              : _.user_polls) || [];
-          return (_ == null ? void 0 : _.find((_) => _.poll_id == _)) || null;
+          return (
+            (_?.jsondata?.user_polls || [])?.find((_) => _.poll_id == _) || null
+          );
         }
         function _(_) {
-          var _, _, _;
           const { eventModel: _, userPollDef: _, lang: _ } = _,
             { userPollData: _, ..._ } = _(
               _.clanSteamID,
               _.GID || "0",
               _.poll_id,
             ),
-            _ = !!(
-              _.error_message &&
-              ((_ = _.error_message) == null ? void 0 : _.length) > 0
-            ),
+            _ = !!(_.error_message && _.error_message?.length > 0),
             _ = _(_.clanSteamID, _.GID || "0"),
             [_, _] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
-            _ =
-              (_ == null ? void 0 : _.option_results) &&
-              (_ == null ? void 0 : _.option_results.length) > 0,
-            _ =
-              ((_ && ((_ = _.voted_option_id) == null ? void 0 : _.length)) ||
-                0) > 0;
+            _ = _?.option_results && _?.option_results.length > 0,
+            _ = ((_ && _.voted_option_id?.length) || 0) > 0;
           return (
             (0, _.useEffect)(() => {
               !_ &&
@@ -5072,42 +4746,27 @@
             (0, _.jsxs)(_, {
               ..._,
               children: [
-                (_ = _.options) == null
-                  ? void 0
-                  : _.map((_) => {
-                      const _ =
-                          _ == null
-                            ? void 0
-                            : _.option_results.find(
-                                (_) => _.unique_id == _.option_id,
-                              ),
-                        _ =
-                          (_ == null
-                            ? void 0
-                            : _.voted_option_id.includes(_.option_id || 0)) ||
-                          _ === _.option_id;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          lang: _,
-                          pollOptionDef: _,
-                          bSelected: _,
-                          nPercentage: _
-                            ? _ == null
-                              ? void 0
-                              : _.percent
-                            : void 0,
-                          onClick: () => _(_.option_id),
-                          bDisableSelection:
-                            _.bLoading ||
-                            !(_ != null && _.vote_permitted) ||
-                            _ ||
-                            _ ||
-                            _,
-                        },
-                        "polloption" + _.option_id,
-                      );
-                    }),
+                _.options?.map((_) => {
+                  const _ = _?.option_results.find(
+                      (_) => _.unique_id == _.option_id,
+                    ),
+                    _ =
+                      _?.voted_option_id.includes(_.option_id || 0) ||
+                      _ === _.option_id;
+                  return (0, _.jsx)(
+                    _,
+                    {
+                      lang: _,
+                      pollOptionDef: _,
+                      bSelected: _,
+                      nPercentage: _ ? _?.percent : void 0,
+                      onClick: () => _(_.option_id),
+                      bDisableSelection:
+                        _.bLoading || !_?.vote_permitted || _ || _ || _,
+                    },
+                    "polloption" + _.option_id,
+                  );
+                }),
                 !!_ &&
                   (0, _.jsx)(_._, {
                     onClick: async () => {
@@ -5198,12 +4857,12 @@
                     (0, _.jsx)("div", {
                       children: (0, _._)(
                         "#UserPolls_status_N_Votes",
-                        (0, _._)((_ == null ? void 0 : _.total_votes) || 0),
+                        (0, _._)(_?.total_votes || 0),
                       ),
                     }),
-                    _ != null && _.display_message
+                    _?.display_message
                       ? (0, _.jsx)("div", {
-                          children: _ == null ? void 0 : _.display_message,
+                          children: _?.display_message,
                         })
                       : (0, _.jsx)("div", {
                           children: (0, _._)(
@@ -5227,7 +4886,7 @@
               nPercentage: _,
             } = _,
             [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]),
-            _ = Math.round((_ != null ? _ : 0) * 100),
+            _ = Math.round((_ ?? 0) * 100),
             _ = !_ && !!_;
           return (0, _.jsxs)("div", {
             className: (0, _._)({
@@ -5243,7 +4902,7 @@
             onKeyDown: _
               ? (_) => {
                   (_.key === "Enter" || _.key === " ") &&
-                    (_.preventDefault(), _ == null || _());
+                    (_.preventDefault(), _?.());
                 }
               : void 0,
             children: [
@@ -5336,8 +4995,7 @@
         const _ =
           /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
         function _(_) {
-          const _ = _.match(_);
-          return _ == null ? void 0 : _[1];
+          return _.match(_)?.[1];
         }
         function _(_, _) {
           if (!_) return !1;
@@ -5427,7 +5085,7 @@
         }
         function _(_, _, _) {
           const { data: _ } = (0, _._)(
-            _ != null && _.appid
+            _?.appid
               ? {
                   appid: _.appid,
                 }
@@ -5598,11 +5256,7 @@
                     pathname: _,
                   }),
                   onClick: (_) => {
-                    var _;
-                    _ &&
-                      ((_ = _.onClick) == null || _.call(_, _),
-                      _.push(_),
-                      _.preventDefault());
+                    _ && (_.onClick?.(_), _.push(_), _.preventDefault());
                   },
                   onOptionsActionDescription: _,
                   onOptionsButton: _ ? _ : void 0,
@@ -5862,7 +5516,7 @@
             ),
             [_, _, _] = (0, _._)(),
             _ = _.useCallback(async () => {
-              _ != null && (_(!0), await _(), _(!1), _ == null || _(_));
+              _ != null && (_(!0), await _(), _(!1), _?.(_));
             }, [_, _, _]);
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -5875,11 +5529,7 @@
                   _._.is_limited ? _() : _();
                 },
                 followType:
-                  _ != null
-                    ? _
-                    : _ != null && _.is_creator_home
-                      ? "creatorhome"
-                      : "steamcurator",
+                  _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
               }),
               (0, _.jsx)(_._, {
                 active: _,
@@ -6059,10 +5709,7 @@
           if (!_) return null;
           if (_) {
             if (_) return null;
-            if (
-              (_ == null ? void 0 : _.filter_failure) == _._._ ||
-              (_ == null ? void 0 : _.filter_failure) == _._._
-            ) {
+            if (_?.filter_failure == _._._ || _?.filter_failure == _._._) {
               let _ = "#StoreCapsule_App_Excluded";
               switch (_) {
                 case "sub":
@@ -6117,17 +5764,13 @@
           return _ == "up" ? 1 : _ == "down" ? -1 : 0;
         }
         function _(_, _, _, _) {
-          var _;
           const _ = (0, _._)(),
             _ = _(_, _._.accountid),
             { data: _ } = (0, _._)({
               queryKey: _,
               queryFn: async () => await _.GetMyEventVote(_),
-              initialData: _ == null ? void 0 : _.initialVote,
-              enabled:
-                !!_ &&
-                !!_._.accountid &&
-                ((_ = _ == null ? void 0 : _.bAsk) != null ? _ : !0),
+              initialData: _?.initialVote,
+              enabled: !!_ && !!_._.accountid && (_?.bAsk ?? !0),
               staleTime: 1 / 0,
               gcTime: 1 / 0,
             }),
@@ -6152,7 +5795,7 @@
         }
         function _(_, _) {
           if (_.length == 0) return;
-          const _ = _ != null ? _ : (0, _._)("SetMyEventVotes");
+          const _ = _ ?? (0, _._)("SetMyEventVotes");
           _ &&
             _.forEach((_) =>
               _.setQueryData(_(_.gidAnnouncement, _._.accountid), _.vote),
@@ -6176,12 +5819,7 @@
           _ = __webpack_require__._(_);
         function _(_) {
           const { event: _ } = _,
-            _ = (0, _._)(() => {
-              var _;
-              return (
-                ((_ = _.jsondata) == null ? void 0 : _.referenced_appids) || []
-              );
-            }),
+            _ = (0, _._)(() => _.jsondata?.referenced_appids || []),
             _ = (0, _._)(),
             _ = (0, _._)({
               queries: _.map((_) =>
@@ -6197,7 +5835,7 @@
           if (!_.length || !_.bLoaded) return null;
           const _ = _.data
               .flatMap((_) =>
-                _ != null && _.store_url_path && _ != null && _.name
+                _?.store_url_path && _?.name
                   ? [`[url="${(0, _._)(_)}"]${_.name}[/url]`]
                   : [],
               )
@@ -6225,17 +5863,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _, _) {
-          var _;
           const _ = (0, _._)(),
             _ = (0, _._)();
-          return (_ = (0, _._)(_(_, _, _, _, _, _, _)).data) != null
-            ? _
-            : void 0;
+          return (0, _._)(_(_, _, _, _, _, _, _)).data ?? void 0;
         }
         function _(_, _, _, _, _) {
           return [
             "useEventImageForSizeAsArrayWithFallback",
-            _ == null ? void 0 : _.GID,
+            _?.GID,
             _,
             _,
             _,
@@ -6266,13 +5901,78 @@
                   if (
                     ((0, _._)(
                       !1,
-                      `Failed to get fallback art/screenshot for event ${_ == null ? void 0 : _.GID} from clan ${_ == null ? void 0 : _.clanSteamID.GetAccountID()}`,
+                      `Failed to get fallback art/screenshot for event ${_?.GID} from clan ${_?.clanSteamID.GetAccountID()}`,
                     ),
                     _.length == 0)
                   )
                     throw _;
                 }
               return _;
+            },
+          };
+        }
+        function _(_, _, _, _, _) {
+          if (!_ || _.BImageNeedScreenshotFallback(_, _)) return;
+          const _ = GetImageFromEventDirectly(_, _, _, _);
+          if (!_) return;
+          const _ = [_];
+          if (_ != EArtworkSizes.full) {
+            const _ = GetImageFromEventDirectly(_, _, _, EArtworkSizes.full);
+            if (!_) return;
+            _.push(_);
+          }
+          return _;
+        }
+        function _(_, _, _, _) {
+          const _ = useQueryClient(),
+            _ = useStoreBrowseDataLoader();
+          return useQuery(_(_, _, _, _, _, _)).data ?? void 0;
+        }
+        function _(_, _, _, _) {
+          const _ = {};
+          for (const _ of _) {
+            if (!_.eventModel.GID) continue;
+            const _ = _(_.eventModel, _, _, _, _.bIgnoreArtworkScreenshot);
+            if (!_) return;
+            _[_.eventModel.GID] = _;
+          }
+          return _;
+        }
+        function _(_, _, _, _, _, _) {
+          return {
+            queryKey: [
+              "useEventImagesForSizeAsArrayWithFallback",
+              _.map(
+                (_) => `${_.eventModel.GID}:${!!_.bIgnoreArtworkScreenshot}`,
+              ),
+              _,
+              _,
+              _,
+            ],
+            enabled: _.length > 0,
+            initialData: () => _(_, _, _, _),
+            placeholderData: keepPreviousData,
+            queryFn: async () => {
+              const _ = {};
+              return (
+                await Promise.all(
+                  _.map(async (_) => {
+                    const { eventModel: _, bIgnoreArtworkScreenshot: _ } = _;
+                    if (!_.GID) return;
+                    let _ = _(_, _, _, _, _);
+                    if (!_)
+                      try {
+                        _ =
+                          (await _.ensureQueryData(_(_, _, _, _, _, _, _))) ??
+                          void 0;
+                      } catch {
+                        _ = void 0;
+                      }
+                    _ && (_[_.GID] = _);
+                  }),
+                ),
+                _
+              );
             },
           };
         }
@@ -6295,30 +5995,19 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _, _ = _._.full, _ = !0) {
-          var _;
           const _ = (0, _._)(),
             _ = (0, _._)();
-          return (_ = (0, _._)(_(_, _, _, _, _, _, _)).data) != null
-            ? _
-            : void 0;
+          return (0, _._)(_(_, _, _, _, _, _, _)).data ?? void 0;
         }
         function _(_, _, _, _ = _._.full, _ = !0) {
-          return [
-            "useEventImageURLWithFallback",
-            _ == null ? void 0 : _.GID,
-            _,
-            _,
-            _,
-            _,
-          ];
+          return ["useEventImageURLWithFallback", _?.GID, _, _, _, _];
         }
         function _(_, _, _, _, _, _ = _._.full, _ = !0) {
           return {
             queryKey: _(_, _, _, _, _),
-            enabled: !!(_ != null && _.GID),
+            enabled: !!_?.GID,
             initialData: () => _(_, _, _, _, _),
             queryFn: async () => {
-              var _, _, _, _, _;
               if (!_) return null;
               let _ = _(_, _, _, _, _);
               if (_) return _;
@@ -6332,34 +6021,24 @@
                   _ &&
                   ((_.is_creator_home && !_.is_ogg) || _.is_curator)
                 )
-                  if (
-                    (_ =
-                      (_ = _.jsondata) == null
-                        ? void 0
-                        : _.referenced_appids) != null &&
-                    _.length
-                  )
+                  if (_.jsondata?.referenced_appids?.length)
                     _ = _.jsondata.referenced_appids[0];
-                  else return (_ = _.avatar_full_url) != null ? _ : null;
+                  else return _.avatar_full_url ?? null;
                 const _ = await _.ensureQueryData(
                   (0, _._)(_, {
                     appid: _,
                   }),
                 );
                 return _
-                  ? (_ = (0, _._)(_, "main_capsule")) != null
-                    ? _
-                    : null
-                  : _ != null && _.avatar_full_url
+                  ? ((0, _._)(_, "main_capsule") ?? null)
+                  : _?.avatar_full_url
                     ? _.avatar_full_url
                     : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/header.jpg`;
               }
               return _ == "background" &&
                 _ &&
                 ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-                ? (_ = _.creator_page_bg_url) != null
-                  ? _
-                  : null
+                ? (_.creator_page_bg_url ?? null)
                 : await _.ensureQueryData((0, _._)(_, _, _));
             },
           };
@@ -6393,17 +6072,15 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const _ = (0, _._)(),
             _ = (0, _._)();
-          return (_ = (0, _._)(_(_, _, _)).data) != null ? _ : void 0;
+          return (0, _._)(_(_, _, _)).data ?? void 0;
         }
         function _(_, _, _) {
           return {
             queryKey: _(_),
-            enabled: !!(_ != null && _.GID),
+            enabled: !!_?.GID,
             queryFn: async () => {
-              var _;
               if (!_) return null;
               const _ = _.appid
                   ? await _.ensureQueryData(
@@ -6436,15 +6113,14 @@
                 } else return "";
               return _.GetEventType() != _.ajI &&
                 _ &&
-                ((_.is_creator_home && !_.is_ogg) || _.is_curator) &&
-                (_ = _.avatar_full_url) != null
-                ? _
+                ((_.is_creator_home && !_.is_ogg) || _.is_curator)
+                ? (_.avatar_full_url ?? null)
                 : null;
             },
           };
         }
         function _(_) {
-          return ["useFallbackArtworkScreenshot", _ == null ? void 0 : _.GID];
+          return ["useFallbackArtworkScreenshot", _?.GID];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -6512,8 +6188,7 @@
           return ["EventCalendarTrackingProgress"];
         }
         function _(_) {
-          var _;
-          return (_ = _.getQueryData(_())) != null ? _ : _;
+          return _.getQueryData(_()) ?? _;
         }
         function _(_, _) {
           _.setQueryDefaults(_(), {
@@ -6521,7 +6196,7 @@
             gcTime: 1 / 0,
           }),
             _.setQueryData(_(), (_) => ({
-              ...(_ != null ? _ : _),
+              ...(_ ?? _),
               ..._,
             }));
         }
@@ -6700,15 +6375,11 @@
           };
         }
         function _(_, _) {
-          var _;
-          return (_ = (0, _._)(_(_, _)).data) == null ? void 0 : _.qrcode;
+          return (0, _._)(_(_, _)).data?.qrcode;
         }
         function _(_, _ = Intl.DateTimeFormat().resolvedOptions().timeZone) {
-          var _;
           return _.location_type === "in_person"
-            ? (_ = _.in_person_time_zone) != null
-              ? _
-              : _
+            ? (_.in_person_time_zone ?? _)
             : _;
         }
         function _(_) {
@@ -6800,8 +6471,7 @@
             _ = _.useRef(null),
             _ = _.useRef(null),
             _ = _.useCallback(() => {
-              var _;
-              (_ = _.current) == null || _.Hide(), _(!1);
+              _.current?.Hide(), _(!1);
             }, []),
             _ = () => {
               const _ = {
@@ -6818,11 +6488,11 @@
               (_.current = (0, _._)(_(_), _.current, _)),
                 _.current.SetOnHideCallback(_),
                 _(!0),
-                _ == null || _("opened");
+                _?.("opened");
             },
             _ = (_) => {
               if (!_) {
-                _ == null || _();
+                _?.();
                 return;
               }
               _ ? _() : _(), _.stopPropagation(), _.preventDefault();
@@ -6892,9 +6562,7 @@
                 _(!0);
                 try {
                   await _(_, _),
-                    _ &&
-                      (_ == null ||
-                        _(_ == "email" ? "notify-email" : "notify-push"));
+                    _ && _?.(_ == "email" ? "notify-email" : "notify-push");
                 } catch (_) {
                   _(_ instanceof Error ? _.message : String(_)), _();
                 }
@@ -7035,8 +6703,7 @@ ${_}`;
                           children: (0, _.jsx)("a", {
                             href: _._.STORE_BASE_URL + "account/",
                             target: _._.IN_CLIENT ? void 0 : "_blank",
-                            onClick: () =>
-                              _ == null ? void 0 : _("email-unverified"),
+                            onClick: () => _?.("email-unverified"),
                             rel: "noreferrer",
                             children: (0, _._)(
                               "#EventReminder_NotifyByEmail_Missing_Add",
@@ -7071,8 +6738,7 @@ ${_}`;
                           children: (0, _.jsx)("a", {
                             href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
                             target: _._.IN_CLIENT ? void 0 : "_blank",
-                            onClick: () =>
-                              _ == null ? void 0 : _("push-missing"),
+                            onClick: () => _?.("push-missing"),
                             rel: "noreferrer",
                             children: (0, _._)(
                               "#EventReminder_NotifyByMobile_Install",
@@ -7095,8 +6761,7 @@ ${_}`;
                           (0, _.jsx)("a", {
                             className: _.ReminderOption,
                             href: _("ics"),
-                            onClick: () =>
-                              _ == null ? void 0 : _("calendar-apple"),
+                            onClick: () => _?.("calendar-apple"),
                             children: (0, _._)(
                               "#EventDisplay_Reminder_AppleCalendar_Short",
                             ),
@@ -7105,8 +6770,7 @@ ${_}`;
                             className: _.ReminderOption,
                             target: _._.IN_CLIENT ? void 0 : "_blank",
                             href: _(),
-                            onClick: () =>
-                              _ == null ? void 0 : _("calendar-google"),
+                            onClick: () => _?.("calendar-google"),
                             rel: "noreferrer",
                             children: (0, _._)(
                               "#EventDisplay_Reminder_GoogleCalendar_Short",
@@ -7115,8 +6779,7 @@ ${_}`;
                           (0, _.jsx)("a", {
                             className: _.ReminderOption,
                             href: _("outlook"),
-                            onClick: () =>
-                              _ == null ? void 0 : _("calendar-outlook"),
+                            onClick: () => _?.("calendar-outlook"),
                             children: (0, _._)(
                               "#EventDisplay_Reminder_OutlookCalendar_Short",
                             ),
@@ -7197,23 +6860,8 @@ ${_}`;
           };
         }
         function _(_, _) {
-          var _, _, _, _;
-          const _ =
-            _ &&
-            (_ =
-              (_ = _ == null ? void 0 : _.event_followed) == null
-                ? void 0
-                : _.indexOf(_)) != null
-              ? _
-              : -1;
-          return _ == -1
-            ? 0
-            : (_ =
-                  (_ = _ == null ? void 0 : _.event_followed_flags) == null
-                    ? void 0
-                    : _[_]) != null
-              ? _
-              : 0;
+          const _ = _ ? (_?.event_followed?.indexOf(_) ?? -1) : -1;
+          return _ == -1 ? 0 : (_?.event_followed_flags?.[_] ?? 0);
         }
         async function _(_, _, _) {
           const _ = _ == 0,
@@ -7258,7 +6906,6 @@ ${_}`;
           });
         }
         function _(_) {
-          var _;
           const {
               eventModel: _,
               lang: _,
@@ -7273,7 +6920,7 @@ ${_}`;
             _ = _.clanSteamID.GetAccountID(),
             _ = _(_, _.GID),
             _ = _(_, _.GID),
-            _ = (_ = _.GetNameWithFallback(_)) != null ? _ : "",
+            _ = _.GetNameWithFallback(_) ?? "",
             _ = _ ? `${_}: ${_}` : _;
           return (0, _.jsx)(_, {
             eventModel: _,
@@ -7314,15 +6961,7 @@ ${_}`;
             _ = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_ ? void 0 : _.clanSteamID.GetAccountID());
-          return (
-            (_
-              ? _ == null
-                ? void 0
-                : _.name
-              : _ == null
-                ? void 0
-                : _.group_name) || void 0
-          );
+          return (_ ? _?.name : _?.group_name) || void 0;
         }
         const _ = {
           opened: _._.k_eReminder_Opened,
@@ -7358,7 +6997,7 @@ ${_}`;
         };
         function _() {
           const { data: _ } = (0, _._)(_());
-          return _ != null ? _ : _;
+          return _ ?? _;
         }
         function _(_) {
           return ["useUserContactMethods", _];
@@ -7375,11 +7014,9 @@ ${_}`;
           };
         }
         function _(_) {
-          var _;
           return {
             bHasValidatedEmail: !!_.email_validated,
-            bHasPushNotification:
-              ((_ = _.mobile_device_count) != null ? _ : 0) > 0,
+            bHasPushNotification: (_.mobile_device_count ?? 0) > 0,
           };
         }
         function _(_) {
@@ -7449,44 +7086,40 @@ ${_}`;
           return await _.json();
         }
         async function _(_) {
-          var _;
-          return (_ = (
-            await _(_, {
-              gid: _,
-            })
-          ).availability) != null
-            ? _
-            : [];
+          return (
+            (
+              await _(_, {
+                gid: _,
+              })
+            ).availability ?? []
+          );
         }
         async function _(_) {
-          var _;
-          return (_ = (
-            await _(_, {
-              gid: _,
-            })
-          ).registrations) != null
-            ? _
-            : [];
+          return (
+            (
+              await _(_, {
+                gid: _,
+              })
+            ).registrations ?? []
+          );
         }
         async function _(_) {
-          var _;
-          return (_ = (
-            await _(_, {
-              gid: _,
-            })
-          ).strJSONData) != null
-            ? _
-            : "";
+          return (
+            (
+              await _(_, {
+                gid: _,
+              })
+            ).strJSONData ?? ""
+          );
         }
         async function _() {
-          var _;
-          return (_ = (await _(_, {})).info) != null
-            ? _
-            : {
-                realname: "",
-                email: "",
-                partners: [],
-              };
+          return (
+            (await _(_, {})).info ?? {
+              realname: "",
+              email: "",
+              partners: [],
+            }
+          );
         }
         async function _(_, _) {
           return await _(_, {
@@ -8164,17 +7797,6 @@ ${_}`;
           _ = 0,
           _ = 1,
           _ = 2;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EBroadcastChatPermission ( " + _ + " )";
         }
@@ -8187,13 +7809,15 @@ ${_}`;
         function _(_) {
           return "unknown EBroadcastRestriction ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.permission || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8286,16 +7910,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BeginBroadcastSession_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8368,16 +7992,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BeginBroadcastSession_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8430,9 +8054,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_EndBroadcastSession_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -8474,13 +8096,15 @@ ${_}`;
             return "CBroadcast_EndBroadcastSession_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8569,16 +8193,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StartBroadcastUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.upload_token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8651,16 +8275,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StartBroadcastUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8743,16 +8367,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BroadcastUploadStarted_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8810,16 +8434,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8937,16 +8561,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9004,16 +8628,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastThumbnail_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.thumbnail_url || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9081,16 +8705,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastThumbnail_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9168,16 +8792,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WatchBroadcast_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.response || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9325,9 +8949,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WatchBroadcast_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown CBroadcast_WatchBroadcast_Response_EWatchResponse ( " +
@@ -9335,13 +8957,15 @@ ${_}`;
             " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9409,16 +9033,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_HeartbeatBroadcast_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9481,16 +9105,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StopWatchingBroadcast_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9548,16 +9172,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_InviteToBroadcast_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.success || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9610,16 +9234,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_InviteToBroadcast_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.permission || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9687,9 +9311,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_SendBroadcastStateToServer_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -9731,13 +9353,15 @@ ${_}`;
             return "CBroadcast_SendBroadcastStateToServer_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9795,9 +9419,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BroadcastViewerState_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown CBroadcast_BroadcastViewerState_Notification_EViewerState ( " +
@@ -9805,13 +9427,15 @@ ${_}`;
             " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9864,16 +9488,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WaitingBroadcastViewer_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9941,16 +9565,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StopBroadcastUpload_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10003,16 +9627,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_SessionClosed_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10070,16 +9694,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BroadcastStatus_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_channel_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10142,16 +9766,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_BroadcastChannelLive_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.thumbnail_upload_token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10224,16 +9848,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_SendThumbnailToRelay_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_upload_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10291,16 +9915,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_NotifyBroadcastUploadStop_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcaster_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10353,16 +9977,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_ViewerBroadcastInvite_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10415,16 +10039,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_NotifyBroadcastSessionHeartbeat_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10492,16 +10116,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastChatInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10567,16 +10191,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastChatInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10650,16 +10274,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_PostChatMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.persona_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10727,16 +10351,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_PostChatMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10794,16 +10418,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_UpdateChatMessageFlair_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10866,16 +10490,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_UpdateChatMessageFlair_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10938,9 +10562,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_MuteBroadcastChatUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -10982,13 +10604,15 @@ ${_}`;
             return "CBroadcast_MuteBroadcastChatUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11046,9 +10670,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_RemoveUserChatText_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11090,13 +10712,15 @@ ${_}`;
             return "CBroadcast_RemoveUserChatText_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11157,16 +10781,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastChatUserNames_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.persona_names || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11220,16 +10844,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastChatUserNames_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steam_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11287,16 +10911,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastChatUserNames_Response_PersonaName";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11369,16 +10993,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StartBuildClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11431,16 +11055,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_StartBuildClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11493,9 +11117,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBuildClipStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11537,13 +11159,15 @@ ${_}`;
             return "CBroadcast_GetBuildClipStatus_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11611,9 +11235,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_SetClipDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11655,13 +11277,15 @@ ${_}`;
             return "CBroadcast_SetClipDetails_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11714,16 +11338,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetClipDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11821,16 +11445,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetClipDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_permission || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11939,9 +11563,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_SetRTMPInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11983,13 +11605,15 @@ ${_}`;
             return "CBroadcast_SetRTMPInfo_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12047,16 +11671,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetRTMPInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_permission || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12169,16 +11793,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetRTMPInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.row_limit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12253,16 +11877,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastUploadStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.upload_stats || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12316,16 +11940,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastUploadStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.upload_result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12473,16 +12097,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastUploadStats_Response_UploadStats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.upload_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12540,16 +12164,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastViewerStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.viewer_stats || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12609,16 +12233,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastViewerStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.time || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12676,16 +12300,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastViewerStats_Response_ViewerStats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12743,16 +12367,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_GetBroadcastViewerStats_Response_CountryStats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.webrtc_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12830,9 +12454,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCStartResult_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -12874,13 +12496,15 @@ ${_}`;
             return "CBroadcast_WebRTCStartResult_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.webrtc_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12933,9 +12557,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCStopped_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -12977,13 +12599,15 @@ ${_}`;
             return "CBroadcast_WebRTCStopped_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcaster_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13046,9 +12670,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCSetAnswer_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -13090,13 +12712,15 @@ ${_}`;
             return "CBroadcast_WebRTCSetAnswer_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sdp_mid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13159,16 +12783,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTC_Candidate";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.webrtc_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13225,9 +12849,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCAddHostCandidate_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -13269,13 +12891,15 @@ ${_}`;
             return "CBroadcast_WebRTCAddHostCandidate_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcaster_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13337,9 +12961,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCAddViewerCandidate_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -13381,13 +13003,15 @@ ${_}`;
             return "CBroadcast_WebRTCAddViewerCandidate_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcaster_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13450,16 +13074,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCGetHostCandidates_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.candidate_generation || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13518,16 +13142,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCGetHostCandidates_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13580,16 +13204,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCNeedTURNServer_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cellid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13642,16 +13266,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCLookupTURNServer_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.turn_server || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13704,16 +13328,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCLookupTURNServer_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13771,16 +13395,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCHaveTURNServer_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13848,16 +13472,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCStart_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13920,16 +13544,16 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCSetAnswer_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.broadcast_session_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13991,9 +13615,7 @@ ${_}`;
           getClassName() {
             return "CBroadcast_WebRTCAddViewerCandidate_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -14438,25 +14060,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.context || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14531,16 +14144,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14598,16 +14211,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [15], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14723,16 +14336,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response_CartItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.owned_appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 11], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14859,16 +14472,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response_CartItem_Errors";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.owned_appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14953,16 +14566,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response_CartItem_Warnings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart_appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15020,16 +14633,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response_CartItem_Warnings_AppInMasterSub";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.subtotal || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15093,16 +14706,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_ValidateCart_Response_EstimatedTotals";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15156,16 +14769,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_GetFriendOwnershipForGifting_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ownership_info || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15219,16 +14832,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_GetFriendOwnershipForGifting_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15307,16 +14920,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_GetFriendOwnershipForGifting_Response_FriendOwnership";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15374,16 +14987,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_GetFriendOwnershipForGifting_Response_OwnershipInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15435,16 +15048,16 @@ ${_}`;
           getClassName() {
             return "CCheckout_AddFreeLicense_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageids_added || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15513,9 +15126,7 @@ ${_}`;
           getClassName() {
             return "CCheckout_AddFreeLicense_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -15595,17 +15206,6 @@ ${_}`;
           _ = 17,
           _ = 18,
           _ = 19;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EProductPageAction ( " + _ + " )";
         }
@@ -15626,13 +15226,15 @@ ${_}`;
         function _(_) {
           return "unknown EUnifedProductInteractionActions ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.impressions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15686,16 +15288,16 @@ ${_}`;
           getClassName() {
             return "CProductImpressionsFromClient_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15758,9 +15360,7 @@ ${_}`;
           getClassName() {
             return "CProductImpressionsFromClient_Notification_Impression";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _) {
@@ -15798,25 +15398,16 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15974,9 +15565,7 @@ ${_}`;
           getClassName() {
             return "CommunityItemDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         const _ = 0,
           _ = 1,
           _ = 2,
@@ -15984,30 +15573,21 @@ ${_}`;
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown ESaleRewardDefType ( " + _ + " )";
         }
         function _(_) {
           return "unknown ERewardDefinitionsAction ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16074,16 +15654,16 @@ ${_}`;
           getClassName() {
             return "SaleReward_ItemDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16145,16 +15725,16 @@ ${_}`;
           getClassName() {
             return "SaleItemRewardGrant";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16207,16 +15787,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_ClaimItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16278,16 +15858,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_ClaimItem_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16340,16 +15920,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_CanClaimItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.can_claim || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16411,16 +15991,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_CanClaimItem_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_reward_def_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16503,16 +16083,16 @@ ${_}`;
           getClassName() {
             return "CSteamItemRewardDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.virtual_item_reward_event_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16565,16 +16145,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetRewardDefinitions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.definitions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16628,16 +16208,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetRewardDefinitions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.definitions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16696,16 +16276,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_SetRewardDefinitions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.definitions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16759,16 +16339,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_SetRewardDefinitions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_def_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16831,16 +16411,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetClaimedSaleRewards_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.num_items_granted || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16908,16 +16488,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetClaimedSaleRewards_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_def_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16980,16 +16560,16 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetCurrentDefinition_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.definition || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17047,9 +16627,7 @@ ${_}`;
           getClassName() {
             return "CSaleItemRewards_GetCurrentDefinition_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -17235,17 +16813,6 @@ ${_}`;
           _ = 1007,
           _ = 1008,
           _ = 1009;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EUserTagReportType ( " + _ + " )";
         }
@@ -17310,13 +16877,15 @@ ${_}`;
         function _(_) {
           return "unknown EPlaytestLicenseChangeType ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.activation_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17379,16 +16948,16 @@ ${_}`;
           getClassName() {
             return "CStore_RegisterCDKey_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.transactionid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17527,16 +17096,16 @@ ${_}`;
           getClassName() {
             return "CStore_PurchaseReceiptInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17599,16 +17168,16 @@ ${_}`;
           getClassName() {
             return "CStore_PurchaseReceiptInfo_LineItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.purchase_result_details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17665,16 +17234,16 @@ ${_}`;
           getClassName() {
             return "CStore_RegisterCDKey_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17737,16 +17306,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetRecommendedTagsForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tags || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17800,16 +17369,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetRecommendedTagsForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17872,16 +17441,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetRecommendedTagsForUser_Response_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17934,16 +17503,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetMostPopularTags_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tags || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17997,16 +17566,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetMostPopularTags_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18064,16 +17633,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetMostPopularTags_Response_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18134,16 +17703,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetLocalizedNameForTags_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tags || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18197,16 +17766,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetLocalizedNameForTags_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18274,16 +17843,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetLocalizedNameForTags_Response_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18341,16 +17910,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTagList_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.version_hash || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18409,16 +17978,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTagList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18476,16 +18045,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTagList_Response_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.os_win || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [10, 16], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18604,16 +18173,16 @@ ${_}`;
           getClassName() {
             return "CStoreDiscoveryQueueSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.queue_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18722,16 +18291,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueue_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18822,16 +18391,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueue_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.queue_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18888,16 +18457,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueueSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18954,16 +18523,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueueSettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.queue_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19025,9 +18594,7 @@ ${_}`;
           getClassName() {
             return "CStore_SkipDiscoveryQueueItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -19069,13 +18636,15 @@ ${_}`;
             return "CStore_SkipDiscoveryQueueItem_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19138,16 +18707,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetUserGameInterestState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.owned || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 6, 7, 8, 10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19268,16 +18837,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetUserGameInterestState_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19350,16 +18919,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetUserGameInterestState_Response_InQueue";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19412,16 +18981,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetGamesFollowed_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19477,16 +19046,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetGamesFollowed_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19539,16 +19108,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetGamesFollowedCount_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.followed_game_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19601,16 +19170,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetGamesFollowedCount_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19673,9 +19242,7 @@ ${_}`;
           getClassName() {
             return "CStore_ReportApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -19717,13 +19284,15 @@ ${_}`;
             return "CStore_ReportApp_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.primary_language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19841,16 +19410,16 @@ ${_}`;
           getClassName() {
             return "CStore_UserPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tags_to_exclude || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19904,16 +19473,16 @@ ${_}`;
           getClassName() {
             return "CStore_UserTagPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19976,16 +19545,16 @@ ${_}`;
           getClassName() {
             return "CStore_UserTagPreferences_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20038,16 +19607,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetStorePreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20107,16 +19676,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetStorePreferences_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.num_apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20174,16 +19743,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTrendingAppsAmongFriends_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.trending_apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20237,16 +19806,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTrendingAppsAmongFriends_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20312,16 +19881,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packages_to_reserve || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20390,16 +19959,16 @@ ${_}`;
           getClassName() {
             return "CStore_UpdatePackageReservations_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reservation_status || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20453,16 +20022,16 @@ ${_}`;
           getClassName() {
             return "CStore_UpdatePackageReservations_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.edistributor || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20545,16 +20114,16 @@ ${_}`;
           getClassName() {
             return "CReservationPositionMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20608,9 +20177,7 @@ ${_}`;
           getClassName() {
             return "CStore_SetReservationPositionMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -20652,13 +20219,15 @@ ${_}`;
             return "CStore_SetReservationPositionMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.edistributor || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20721,9 +20290,7 @@ ${_}`;
           getClassName() {
             return "CStore_DeleteReservationPositionMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -20806,13 +20373,15 @@ ${_}`;
             return "CStore_GetAllReservationPositionMessages_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20866,9 +20435,7 @@ ${_}`;
           getClassName() {
             return "CStore_GetAllReservationPositionMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -20910,13 +20477,15 @@ ${_}`;
             return "CStore_ReloadAllReservationPositionMessages_Notification";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -20979,16 +20548,16 @@ ${_}`;
           getClassName() {
             return "CStore_MigratePartnerLinkTracking_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21051,9 +20620,7 @@ ${_}`;
           getClassName() {
             return "CSteamDeckCompatibility_SetFeedback_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -21095,13 +20662,15 @@ ${_}`;
             return "CSteamDeckCompatibility_SetFeedback_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21154,16 +20723,16 @@ ${_}`;
           getClassName() {
             return "CSteamDeckCompatibility_ShouldPrompt_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.prompt || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21226,16 +20795,16 @@ ${_}`;
           getClassName() {
             return "CSteamDeckCompatibility_ShouldPrompt_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21298,16 +20867,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetWishlistDemoEmailStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.can_fire || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21371,16 +20940,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetWishlistDemoEmailStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21443,9 +21012,7 @@ ${_}`;
           getClassName() {
             return "CStore_QueueWishlistDemoEmailToFire_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -21487,13 +21054,15 @@ ${_}`;
             return "CStore_QueueWishlistDemoEmailToFire_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21555,16 +21124,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueueSkippedApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21620,16 +21189,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetDiscoveryQueueSkippedApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21689,16 +21258,16 @@ ${_}`;
           getClassName() {
             return "CStore_StorePreferencesChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21756,16 +21325,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_RequestInvite_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invites_remaining || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21823,16 +21392,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_RequestInvite_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21893,16 +21462,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_UpdateInvites_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invites_updated || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21955,16 +21524,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_UpdateInvites_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22017,16 +21586,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInvites_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invites || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22080,16 +21649,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInvites_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22167,16 +21736,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInvites_Response_Invite";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.limit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22234,16 +21803,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInviteHistory_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invites || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22297,16 +21866,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInviteHistory_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22374,16 +21943,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInviteHistory_Response_Invite";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22436,16 +22005,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetUserStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22499,16 +22068,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetUserStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22586,16 +22155,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetUserStatus_Response_AppStatus";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22648,16 +22217,16 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInviteOptions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ineligible_friends || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22713,9 +22282,7 @@ ${_}`;
           getClassName() {
             return "CPlaytest_GetInviteOptions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -23082,17 +22649,6 @@ ${_}`;
           _ = 2,
           _ = 3,
           _ = 4;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown ERecommendationIgnoreReason ( " + _ + " )";
         }
@@ -23137,13 +22693,15 @@ ${_}`;
             return "CStorePreferences_GetIgnoreList_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ignore_list || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23197,16 +22755,16 @@ ${_}`;
           getClassName() {
             return "CStorePreferences_GetIgnoreList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23269,9 +22827,7 @@ ${_}`;
           getClassName() {
             return "CStorePreferences_GetIgnoreList_Response_IgnoreListEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -23310,6 +22866,7 @@ ${_}`;
         var _ = {};
         __webpack_require__._(_),
           __webpack_require__._(_, {
+            _: () => _,
             _: () => _,
             _: () => _,
             _: () => _,
@@ -23410,6 +22967,7 @@ ${_}`;
           _ = 1,
           _ = 2,
           _ = 3,
+          _ = 4,
           _ = 0,
           _ = 1,
           _ = 2,
@@ -23418,17 +22976,6 @@ ${_}`;
           _ = 5,
           _ = 6,
           _ = 7;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown ESteamAwardVoteCategoryID ( " + _ + " )";
         }
@@ -23438,13 +22985,15 @@ ${_}`;
         function _(_) {
           return "unknown ESteamAwardsNominationSource ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voteid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23568,16 +23117,16 @@ ${_}`;
           getClassName() {
             return "CStore_VoteDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23635,16 +23184,16 @@ ${_}`;
           getClassName() {
             return "CStore_VoteDefinition_AppDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23708,16 +23257,16 @@ ${_}`;
           getClassName() {
             return "CStore_VoteDefinition_GroupDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.title || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23785,16 +23334,16 @@ ${_}`;
           getClassName() {
             return "CStore_VoteDefinition_Localization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23852,16 +23401,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetVoteDefinitions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.votes || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23923,16 +23472,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetVoteDefinitions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voteid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23995,16 +23544,16 @@ ${_}`;
           getClassName() {
             return "SteamAwardsUserVote";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24057,16 +23606,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetUserVotes_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.user_votes || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24120,16 +23669,16 @@ ${_}`;
           getClassName() {
             return "CStore_GetUserVotes_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voteid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24192,16 +23741,16 @@ ${_}`;
           getClassName() {
             return "CStore_SetVote_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.user_votes || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24255,16 +23804,16 @@ ${_}`;
           getClassName() {
             return "CStore_SetVote_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.category_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24327,9 +23876,7 @@ ${_}`;
           getClassName() {
             return "CSteamAwardsNomination";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -24371,13 +23918,15 @@ ${_}`;
             return "CSteamAwards_GetUserNominations_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.nominations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24431,16 +23980,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetUserNominations_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24498,16 +24047,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetOtherUserNominations_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.category_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24570,16 +24119,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_Nominate_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.nominations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24633,16 +24182,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_Nominate_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.category_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24695,16 +24244,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationRecommendations_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.played_app || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24775,16 +24324,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationRecommendations_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24842,16 +24391,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationRecommendations_Response_PlayedApps";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clanid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24914,16 +24463,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationRecommendations_Response_SuggestedEvent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24976,16 +24525,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationRecommendations_Response_SuggestedApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.generate_new || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -25038,16 +24587,16 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationShareLink_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -25100,9 +24649,7 @@ ${_}`;
           getClassName() {
             return "CSteamAwards_GetNominationShareLink_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -25266,15 +24813,8 @@ ${_}`;
           };
         }
         function _(_, _, _) {
-          var _, _;
-          const _ =
-              (_ = (0, _._)(_, "header_2x")) != null
-                ? _
-                : (0, _._)(_, "header"),
-            _ =
-              (_ = (0, _._)(_, "main_capsule_2x")) != null
-                ? _
-                : (0, _._)(_, "main_capsule");
+          const _ = (0, _._)(_, "header_2x") ?? (0, _._)(_, "header"),
+            _ = (0, _._)(_, "main_capsule_2x") ?? (0, _._)(_, "main_capsule");
           _ ? _.push(_, _) : _.push(_, _);
         }
       },
@@ -25300,7 +24840,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const {
               _: _,
               bShowDemoButton: _,
@@ -25319,20 +24858,13 @@ ${_}`;
             [_, _] = (0, _._)(_, _);
           if (!_) return null;
           const _ =
-              (_.type === _._._ && !(_ != null && _.is_coming_soon)) ||
-              (((_ = _.related_items) == null ? void 0 : _.demo_appid) &&
-                ((_ = _.related_items) == null ? void 0 : _.demo_appid.length) >
-                  0),
+              (_.type === _._._ && !_?.is_coming_soon) ||
+              (_.related_items?.demo_appid &&
+                _.related_items?.demo_appid.length > 0),
             _ = (0, _._)(_.type),
             _ = _ && _ && _;
           let _ = null;
-          if (
-            !_ &&
-            _ != null &&
-            _.is_free_to_keep &&
-            _ != null &&
-            _.free_to_keep_ends
-          ) {
+          if (!_ && _?.is_free_to_keep && _?.free_to_keep_ends) {
             const _ = _.free_to_keep_ends,
               _ = (0, _._)(
                 "#Sale_default_label_Free_Promo_Description_Short",
@@ -25444,16 +24976,15 @@ ${_}`;
           _ = __webpack_require__("chunkid");
         const _ = 6;
         function _(_) {
-          var _;
           const { _: _, bHideInLibraryApps: _ } = _,
             { data: _ } = (0, _._)(_),
-            _ = (_ == null ? void 0 : _.item_type) == _._._,
+            _ = _?.item_type == _._._,
             { data: _ } = (0, _._)(),
             _ = _.useMemo(() => {
               if (_)
                 return _.item_type === _._._ || _.item_type === _._._
                   ? (_.included_appids || [])
-                      .filter((_) => !_ || !_ || !(_ != null && _.has(_)))
+                      .filter((_) => !_ || !_ || !_?.has(_))
                       .map((_) => ({
                         appid: _,
                       }))
@@ -25467,8 +24998,7 @@ ${_}`;
           const _ = _.length;
           let _ = _._.LocalizePlural("#Sale_ContentPreview", _);
           if (_ && _) {
-            const _ =
-              ((_ = _.included_appids) == null ? void 0 : _.length) || 0;
+            const _ = _.included_appids?.length || 0;
             _ != _ &&
               (_ = _._.Localize("#Sale_Bundle_CompletePartialSet", _ - _, _));
           }
@@ -25539,13 +25069,11 @@ ${_}`;
             _ = (0, _._)();
           return (
             (0, _.useEffect)(() => {
-              var _, _;
               if (_) {
                 if (_ && _.length > 0) _(_);
-                else if ((_ = _.related_items) != null && _.parent_appid) {
+                else if (_.related_items?.parent_appid) {
                   const _ = {
-                    appid:
-                      (_ = _.related_items) == null ? void 0 : _.parent_appid,
+                    appid: _.related_items?.parent_appid,
                   };
                   (async () => {
                     const _ = await _.fetchQuery((0, _._)(_, _));
@@ -25591,7 +25119,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _, _;
           const {
               _: _,
               type: _,
@@ -25641,22 +25168,16 @@ ${_}`;
                   is_item_browser: !0,
                 })
               : null;
-          const _ = ((_ = _.included_appids) == null ? void 0 : _.length) || 0,
-            _ =
-              ((_ =
-                (_ = _.included_appids) == null
-                  ? void 0
-                  : _.filter((_) => (_ == null ? void 0 : _.has(_)))) == null
-                ? void 0
-                : _.length) || 0,
-            _ = _.item_type == _._._ && !!(_ != null && _.must_purchase_as_set),
+          const _ = _.included_appids?.length || 0,
+            _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0,
+            _ = _.item_type == _._._ && !!_?.must_purchase_as_set,
             _ = !_ && _ > 1,
             _ = _.item_type == _._._ && _ == 1,
             _ = _.item_type == _._._ || _,
             _ = _ && _.appid,
             _ = _.name || "",
             _ = (0, _._)(_, _),
-            _ = _ || !(_ != null && _.is_coming_soon) || _,
+            _ = _ || !_?.is_coming_soon || _,
             [_, _] = (0, _._)(_, _);
           return (0, _.jsxs)(_._, {
             className: (0, _._)({
@@ -25862,25 +25383,18 @@ ${_}`;
             : null;
         }
         function _(_) {
-          var _, _, _;
           const { _: _ } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)();
           if (!_ || !_ || !_.short_description || !_) return null;
-          const _ = (_ == null ? void 0 : _.discount_pct) || 0,
-            _ = ((_ = _.included_appids) == null ? void 0 : _.length) || 0,
-            _ =
-              ((_ =
-                (_ = _.included_appids) == null
-                  ? void 0
-                  : _.filter((_) => (_ == null ? void 0 : _.has(_)))) == null
-                ? void 0
-                : _.length) || 0;
+          const _ = _?.discount_pct || 0,
+            _ = _.included_appids?.length || 0,
+            _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0;
           let _ = _.short_description;
           const _ = _.item_type == _._._ && _ == 1,
-            _ = _.item_type == _._._ && !!(_ != null && _.must_purchase_as_set);
+            _ = _.item_type == _._._ && !!_?.must_purchase_as_set;
           return (
             (_.item_type == _._._ || (_.item_type == _._._ && !_)) &&
               (!_ && _ > 0 && _ < _
@@ -26284,7 +25798,7 @@ ${_}`;
                 );
               }
               return () => {};
-            }, [_, _ == null ? void 0 : _.ownerDocument.defaultView]),
+            }, [_, _?.ownerDocument.defaultView]),
             !_ || !_ || !_)
           )
             return null;
@@ -26300,7 +25814,7 @@ ${_}`;
                 minHeight: _() == "hiding" ? void 0 : 300,
                 height:
                   _() == "hiding" ? _.clientWidth * 1.15 * (125 / 184) : void 0,
-                ...(_ == null ? void 0 : _.style),
+                ..._?.style,
               },
               target: _,
             };
@@ -26313,7 +25827,7 @@ ${_}`;
         }
         function _(_) {
           const { hoverProps: _, children: _ } = _,
-            _ = _.useCallback((_) => (_ == null ? void 0 : _.focus()), []);
+            _ = _.useCallback((_) => _?.focus(), []);
           return (0, _.jsx)(_._, {
             ..._,
             children: (0, _.jsx)(_, {
@@ -26335,11 +25849,7 @@ ${_}`;
           });
         }
         function _() {
-          var _;
-          return (
-            ((_ = window.sessionStorage) == null ? void 0 : _.getItem(_)) ||
-            "default"
-          );
+          return window.sessionStorage?.getItem(_) || "default";
         }
         const _ = "DEBUG_UseNewGameHover";
         function _(_) {
@@ -26478,7 +25988,7 @@ ${_}`;
           const _ = [];
           _ && _.push(_(_, _)),
             _ && _.length > 0 && _.push(..._(_, _.name, _, _));
-          const _ = _ - ((_ == null ? void 0 : _.length) || 0);
+          const _ = _ - (_?.length || 0);
           return (
             _ > 0 && _ && _.length > 0 && _.push(..._(_, _.name, _, _)),
             _ && _.length == 0,
@@ -26590,9 +26100,7 @@ ${_}`;
             [_] = _.useState(new _._()),
             _ = (0, _.useCallback)(
               (_ = !1) => {
-                if (
-                  (_ && (_.current = 0), (_ == null ? void 0 : _.length) > 0)
-                ) {
+                if ((_ && (_.current = 0), _?.length > 0)) {
                   const _ = _[_.current].nDurationMs;
                   _.Schedule(_, () => {
                     const _ = _.current;
@@ -26610,22 +26118,19 @@ ${_}`;
             ),
             (0, _.jsx)("div", {
               className: _().TrailerCtn,
-              children:
-                _ == null
-                  ? void 0
-                  : _.map((_, _) =>
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className: (0, _._)({
-                            [_().FullDivImage]: !0,
-                            [_().Transparent]: _ != _.current,
-                          }),
-                          children: _.rctImage,
-                        },
-                        "e-" + _ + "-" + _.stringifyID,
-                      ),
-                    ),
+              children: _?.map((_, _) =>
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: (0, _._)({
+                      [_().FullDivImage]: !0,
+                      [_().Transparent]: _ != _.current,
+                    }),
+                    children: _.rctImage,
+                  },
+                  "e-" + _ + "-" + _.stringifyID,
+                ),
+              ),
             })
           );
         }
@@ -26684,15 +26189,12 @@ ${_}`;
             _ =
               _ &&
               (() => {
-                _ == null || _(), _();
+                _?.(), _();
               }),
             [_, _] = (0, _.useState)(!1),
             _ = "",
             [_, _] = (0, _.useState)(_),
-            _ = (_) =>
-              _(
-                `translateY( -${(_ == null ? void 0 : _.clientHeight) || 0}px )`,
-              ),
+            _ = (_) => _(`translateY( -${_?.clientHeight || 0}px )`),
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             _ = !_ && !_ && !_,
@@ -26727,7 +26229,7 @@ ${_}`;
                         children: (0, _.jsx)("img", {
                           loading: "lazy",
                           src: (0, _._)(_, "header"),
-                          alt: _ == null ? void 0 : _.name,
+                          alt: _?.name,
                         }),
                       }),
                     }),
@@ -26756,7 +26258,7 @@ ${_}`;
                       "aria-disabled": _,
                       children: (0, _.jsx)("div", {
                         className: _().GameTitle,
-                        children: (_ == null ? void 0 : _.name) || _,
+                        children: _?.name || _,
                       }),
                     }),
                     _ &&
@@ -26830,7 +26332,7 @@ ${_}`;
           return _
             ? (0, _.jsx)("div", {
                 className: _().ShortDescription,
-                children: _ == null ? void 0 : _.short_description,
+                children: _?.short_description,
               })
             : null;
         }
@@ -26884,7 +26386,6 @@ ${_}`;
           });
         }
         function _(_) {
-          var _;
           const {
               _: _,
               name: _,
@@ -26916,7 +26417,7 @@ ${_}`;
           let _ = _;
           _ &&
             _.item_type == _._._ &&
-            ((_ = _.included_appids) == null ? void 0 : _.length) == 1 &&
+            _.included_appids?.length == 1 &&
             (_ = {
               appid: _.included_appids[0],
             });
@@ -26924,11 +26425,7 @@ ${_}`;
             _ = _ || !_ ? void 0 : _,
             [, _] = (0, _._)(_, _);
           let _;
-          _ != _._ &&
-            _ != null &&
-            _.appid &&
-            (_ == null ? void 0 : _.item_type) == _._._ &&
-            (_ = _.appid);
+          _ != _._ && _?.appid && _?.item_type == _._._ && (_ = _.appid);
           const _ = {
               _: _,
               displayID: _,
@@ -26969,7 +26466,7 @@ ${_}`;
               _ &&
                 (0, _.jsx)(_._, {
                   nAppID: _,
-                  appName: (_ == null ? void 0 : _.name) || _,
+                  appName: _?.name || _,
                   startingTab: _,
                   active: _,
                   closeModal: _,
@@ -27045,7 +26542,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _, bTruncateTotalReviews: _, bShowTooltip: _ } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
@@ -27058,11 +26554,7 @@ ${_}`;
             _ = !1;
           const _ = _._.Localize("#Language_" + _._.LANGUAGE);
           if (
-            (_(
-              (_ = _ == null ? void 0 : _.preferences) == null
-                ? void 0
-                : _.review_score_preference,
-            ) &&
+            (_(_?.preferences?.review_score_preference) &&
               (_.summary_language_specific
                 ? ((_ = !0),
                   (_ = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
@@ -27190,14 +26682,12 @@ ${_}`;
             { data: _ } = (0, _._)(_),
             { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
             [_, _] = (0, _.useState)(() => {
-              var _, _;
               if (
                 _ &&
                 (_.type == _._._ || _.type == _._._) &&
-                (_ = _.related_items) != null &&
-                _.parent_appid
+                _.related_items?.parent_appid
               )
-                return (_ = _.related_items) == null ? void 0 : _.parent_appid;
+                return _.related_items?.parent_appid;
               if (_ && "appid" in _) return _.appid;
             }),
             _ = (0, _._)(_),
@@ -27207,15 +26697,10 @@ ${_}`;
             _ = (0, _._)("GameHoverWishlistButton"),
             { mutateAsync: _ } = (0, _._)(_, !_, _);
           (0, _.useEffect)(() => {
-            var _;
             _ &&
               "appid" in _ &&
-              ((_ == null ? void 0 : _.type) == _._._ ||
-                (_ == null ? void 0 : _.type) == _._._) &&
-              _(
-                ((_ = _.related_items) == null ? void 0 : _.parent_appid) ||
-                  _.appid,
-              );
+              (_?.type == _._._ || _?.type == _._._) &&
+              _(_.related_items?.parent_appid || _.appid);
           }, [_, _]);
           const _ = (0, _.useCallback)(
             async (_) => {
@@ -27229,7 +26714,7 @@ ${_}`;
             },
             [_.token.reason, _, _],
           );
-          return _ && (_ == null ? void 0 : _.type) != _._._
+          return _ && _?.type != _._._
             ? null
             : (0, _.jsxs)(_._, {
                 className: (0, _._)(
@@ -27498,7 +26983,7 @@ ${_}`;
           return (0, _.jsx)(_.Provider, {
             value: {
               ..._,
-              eLocation: _ != null ? _ : _,
+              eLocation: _ ?? _,
             },
             children: _,
           });
@@ -27528,10 +27013,7 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          return (0, _.useMemo)(
-            () => _(_),
-            [_ == null ? void 0 : _._, _ == null ? void 0 : _.type],
-          );
+          return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
         }
         function _(_, _) {
           return (0, _.useMemo)(() => _(_, _), [_, _]);
@@ -27698,7 +27180,7 @@ ${_}`;
               ],
             });
           let _ = (0, _._)("#Sale_ClaimableReward_generic");
-          switch ((_ == null ? void 0 : _.community_item_class) || _) {
+          switch (_?.community_item_class || _) {
             case _._:
               _ = (0, _._)("#Sale_ClaimableReward_sticker");
               break;
@@ -27726,8 +27208,7 @@ ${_}`;
                 .then((_) => {
                   if ((_(_), _.appid)) {
                     let _ = (0, _._)("#Sale_ClaimableReward_completed_generic");
-                    const _ =
-                      (_ == null ? void 0 : _.community_item_class) || _;
+                    const _ = _?.community_item_class || _;
                     switch (_) {
                       case _._:
                         _ = (0, _._)("#Sale_ClaimableReward_completed_sticker");
@@ -27765,9 +27246,9 @@ ${_}`;
                 .catch(() =>
                   _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy")),
                 ));
-          }, [_ == null ? void 0 : _.community_item_class, _, _, _]);
+          }, [_?.community_item_class, _, _, _]);
           let _ = (0, _._)("#Sale_ClaimableReward_generic");
-          switch ((_ == null ? void 0 : _.community_item_class) || _) {
+          switch (_?.community_item_class || _) {
             case _._:
               _ = (0, _._)("#Sale_ClaimableReward_sticker");
               break;
@@ -27888,11 +27369,8 @@ ${_}`;
         async function _(_, _, _, _) {
           if (!_._) throw new Error(_ + " answered " + _.status);
           const _ = await _.json();
-          if ((_ == null ? void 0 : _.success) == _._ && _.registration)
-            return _.registration;
-          throw new Error(
-            _ + " on " + _ + " answered " + (_ == null ? void 0 : _.success),
-          );
+          if (_?.success == _._ && _.registration) return _.registration;
+          throw new Error(_ + " on " + _ + " answered " + _?.success);
         }
         const _ = {
           registered: !1,
@@ -27952,7 +27430,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
-          var _;
           const { rgDefIDs: _, strCategory: _, itemClass: _ } = _,
             _ = await _._.QueryRewardItems(_, {
               definitionids: _,
@@ -27963,7 +27440,7 @@ ${_}`;
             throw new Error(
               "LoyaltyRewards.QueryRewardItems answered " + _.GetEResult(),
             );
-          return (_ = _.Body().toObject().definitions) != null ? _ : [];
+          return _.Body().toObject().definitions ?? [];
         }
         let _;
         function _() {
@@ -28024,10 +27501,9 @@ ${_}`;
             { data: _ } = (0, _._)(_(_, _));
           return (
             (0, _.useEffect)(() => {
-              _ == null ||
-                _.forEach((_) => {
-                  _.defid !== void 0 && _.setQueryData(_(_.defid), _);
-                });
+              _?.forEach((_) => {
+                _.defid !== void 0 && _.setQueryData(_(_.defid), _);
+              });
             }, [_, _]),
             _
           );
@@ -28046,7 +27522,7 @@ ${_}`;
           _ = "appid",
           _ = "editor";
         function _() {
-          return (typeof self != "undefined" ? self.origin + "/" : "") ===
+          return (typeof self < "u" ? self.origin + "/" : "") ===
             _._.STORE_BASE_URL
             ? _._.STORE_BASE_URL
             : _._.COMMUNITY_BASE_URL;
@@ -28064,13 +27540,13 @@ ${_}`;
             });
           if (!_._) throw new Error(`${_} answered ${_.status}`);
           const _ = await _.json();
-          if ((_ == null ? void 0 : _.success) == _._ && _.item_definitions)
+          if (_?.success == _._ && _.item_definitions)
             return _.item_definitions;
           throw new Error(
             "Community item definitions for app " +
               _ +
               " answered " +
-              (_ == null ? void 0 : _.success),
+              _?.success,
           );
         }
         function _(_, _) {
@@ -28092,11 +27568,9 @@ ${_}`;
           const _ = _(_, _);
           return (0, _.useMemo)(
             () =>
-              _ == null
-                ? void 0
-                : _.find(
-                    (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
-                  ),
+              _?.find(
+                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
+              ),
             [_, _, _, _],
           );
         }
@@ -28121,7 +27595,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
-          var _;
           const _ = await _._.GetCommunityInventory(_, {
             filter_appids: [_],
           });
@@ -28132,7 +27605,7 @@ ${_}`;
                 " answered " +
                 _.GetEResult(),
             );
-          return (_ = _.Body().toObject().items) != null ? _ : [];
+          return _.Body().toObject().items ?? [];
         }
         let _;
         function _() {
@@ -28170,10 +27643,7 @@ ${_}`;
           const _ = _(_);
           return {
             communityItem: (0, _.useMemo)(
-              () =>
-                _ == null
-                  ? void 0
-                  : _.find((_) => _.appid == _ && _.item_type == _),
+              () => _?.find((_) => _.appid == _ && _.item_type == _),
               [_, _, _],
             ),
             bLoaded: _ != null,
@@ -28187,19 +27657,12 @@ ${_}`;
         }
         const _ = new WeakMap();
         function _(_, _, _) {
-          var _;
-          if (!_ || _((_ = _.getQueryData(_(_))) != null ? _ : []))
-            return Promise.resolve();
+          if (!_ || _(_.getQueryData(_(_)) ?? [])) return Promise.resolve();
           let _ = _.get(_);
           _ || ((_ = new Map()), _.set(_, _));
           let _ = _.get(_);
           return (
-            _ ||
-              ((_ = _(_, _, _).finally(() =>
-                _ == null ? void 0 : _.delete(_),
-              )),
-              _.set(_, _)),
-            _
+            _ || ((_ = _(_, _, _).finally(() => _?.delete(_))), _.set(_, _)), _
           );
         }
         async function _(_, _, _) {
@@ -28215,7 +27678,7 @@ ${_}`;
                 _,
               );
             }
-            if (_(_ != null ? _ : [])) return;
+            if (_(_ ?? [])) return;
           }
         }
         function _() {
@@ -28315,16 +27778,9 @@ ${_}`;
               });
         }
         function _(_) {
-          var _, _, _, _;
           const { section: _, rewardDef: _, language: _ } = _,
-            _ = (0, _._)(
-              (_ = _.appid) != null ? _ : 0,
-              (_ = _.community_item_type) != null ? _ : 0,
-            ),
-            [_] = (0, _._)(() => {
-              var _;
-              return [!!((_ = _.rewards) != null && _.show_reward_item_name)];
-            });
+            _ = (0, _._)(_.appid ?? 0, _.community_item_type ?? 0),
+            [_] = (0, _._)(() => [!!_.rewards?.show_reward_item_name]);
           let _;
           switch (_.community_class) {
             case _._:
@@ -28349,13 +27805,12 @@ ${_}`;
             href: _,
             children: [
               (0, _.jsx)(_, {
-                appid: (_ = _.appid) != null ? _ : 0,
-                community_item_type:
-                  (_ = _.community_item_type) != null ? _ : 0,
+                appid: _.appid ?? 0,
+                community_item_type: _.community_item_type ?? 0,
               }),
               !!_ &&
                 (0, _.jsx)("span", {
-                  children: _ == null ? void 0 : _.item_name,
+                  children: _?.item_name,
                 }),
             ],
           });
@@ -28389,7 +27844,6 @@ ${_}`;
           bAlreadyClaimedCurrentItem: !1,
         };
         async function _(_, _) {
-          var _, _;
           const _ = await _._.CanClaimItem(_, {
             language: _,
           });
@@ -28398,21 +27852,18 @@ ${_}`;
               "SaleItemRewards.CanClaimItem answered " + _.GetEResult(),
             );
           const _ = _.Body().toObject(),
-            _ = (_ = _.reward_item) != null && _.defid ? _.reward_item : void 0;
+            _ = _.reward_item?.defid ? _.reward_item : void 0;
           return {
             bCanClaimNewItem: !!_.can_claim,
             bAlreadyClaimedCurrentItem: !!_,
-            appid: _ == null ? void 0 : _.appid,
-            community_item_type: _ == null ? void 0 : _.community_item_type,
-            community_item_class: _ == null ? void 0 : _.community_item_class,
+            appid: _?.appid,
+            community_item_type: _?.community_item_type,
+            community_item_class: _?.community_item_class,
             rtNextClaimTime:
-              ((_ = _.next_claim_time) != null ? _ : 0) > 0
-                ? _.next_claim_time
-                : void 0,
+              (_.next_claim_time ?? 0) > 0 ? _.next_claim_time : void 0,
           };
         }
         async function _(_, _) {
-          var _;
           const _ = await _._.ClaimItem(_, {
             language: _,
           });
@@ -28425,11 +27876,11 @@ ${_}`;
           return {
             bCanClaimNewItem: !1,
             bAlreadyClaimedCurrentItem: !0,
-            appid: _ == null ? void 0 : _.appid,
-            community_item_type: _ == null ? void 0 : _.community_item_type,
-            community_item_class: _ == null ? void 0 : _.community_item_class,
+            appid: _?.appid,
+            community_item_type: _?.community_item_type,
+            community_item_class: _?.community_item_class,
             rtNextClaimTime:
-              ((_ = _.Body().next_claim_time()) != null ? _ : 0) > 0
+              (_.Body().next_claim_time() ?? 0) > 0
                 ? _.Body().next_claim_time()
                 : void 0,
           };
@@ -28511,7 +27962,7 @@ ${_}`;
           const _ = _._.LANGUAGE,
             _ = (0, _._)(),
             { data: _, isLoading: _ } = (0, _._)(_(_)),
-            _ = _ == null ? void 0 : _.rtNextClaimTime;
+            _ = _?.rtNextClaimTime;
           return (
             (0, _.useEffect)(() => {
               let _ = 0;
@@ -28531,7 +27982,7 @@ ${_}`;
               return () => window.clearTimeout(_);
             }, [_, _, _]),
             {
-              ...(_ != null ? _ : _),
+              ...(_ ?? _),
               bLoading: _,
             }
           );
@@ -28540,15 +27991,12 @@ ${_}`;
           const _ = (0, _._)(),
             { mutateAsync: _ } = (0, _._)({
               mutationFn: () => {
-                var _;
                 if (_) {
                   const _ = _;
                   return (_ = null), Promise.resolve(_);
                 }
                 return _
-                  ? Promise.resolve(
-                      (_ = _.getQueryData(_(_._.LANGUAGE))) != null ? _ : _,
-                    )
+                  ? Promise.resolve(_.getQueryData(_(_._.LANGUAGE)) ?? _)
                   : _(_._.LANGUAGE);
               },
               onSuccess: (_) => _.setQueryData(_(_._.LANGUAGE), _),
@@ -28633,8 +28081,7 @@ ${_}`;
           _ = 940,
           _ = 1920;
         function _() {
-          var _;
-          return (_ = window.innerWidth) != null ? _ : _;
+          return window.innerWidth ?? _;
         }
         function _() {
           return _() >= _;
@@ -28713,10 +28160,8 @@ ${_}`;
           _ = `${_}.avif`,
           _ = /^([0-9a-f]{32})(?:_2x)?\.[a-z0-9.]+$/i;
         function _(_) {
-          var _;
           const _ = _.video_webm_src || _.video_mp4_src;
-          if (!_ || ((_ = _.image) != null && _.includes(`.${_}.`)))
-            return _.image;
+          if (!_ || _.image?.includes(`.${_}.`)) return _.image;
           const _ = _.exec(_);
           return _ ? `${_[1]}.${_}` : _.image;
         }
@@ -28802,25 +28247,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clanid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -28878,16 +28314,16 @@ ${_}`;
           getClassName() {
             return "CUserInterface_CuratorData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.domain || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -28994,9 +28430,7 @@ ${_}`;
           getClassName() {
             return "CUserInterface_NavData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         const _ = 0,
           _ = 1,
           _ = 2,
@@ -29004,30 +28438,21 @@ ${_}`;
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EAccountCartLineItemType ( " + _ + " )";
         }
         function _(_) {
           return "unknown EAccountCartValidationFailure ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.validation_failure || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29081,16 +28506,16 @@ ${_}`;
           getClassName() {
             return "AccountCartValidationDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_gift || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29148,16 +28573,16 @@ ${_}`;
           getClassName() {
             return "AccountCartLineItemFlags";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29256,16 +28681,16 @@ ${_}`;
           getClassName() {
             return "AccountCartLineItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29332,16 +28757,16 @@ ${_}`;
           getClassName() {
             return "AccountCartContents";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.user_country || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29394,16 +28819,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_GetCart_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29455,16 +28880,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_GetCart_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.user_country || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29527,16 +28952,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_AddItemsToCart_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29602,16 +29027,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_AddItemsToCart_Request_ItemToAdd";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29689,16 +29114,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_AddItemsToCart_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29769,16 +29194,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_ModifyLineItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29830,16 +29255,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_ModifyLineItem_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29897,16 +29322,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_RemoveItemFromCart_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -29958,16 +29383,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_RemoveItemFromCart_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30025,16 +29450,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_MergeShoppingCartContents_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30086,9 +29511,7 @@ ${_}`;
           getClassName() {
             return "CAccountCart_MergeShoppingCartContents_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -30171,13 +29594,15 @@ ${_}`;
             return "CAccountCart_DeleteCart_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30230,16 +29655,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_GetRelevantCoupons_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30293,16 +29718,16 @@ ${_}`;
           getClassName() {
             return "CAccountCart_GetRelevantCoupons_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.line_item_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30361,9 +29786,7 @@ ${_}`;
           getClassName() {
             return "CAccountCart_GetRelevantCoupons_Response_LineItemCoupons";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -30472,22 +29895,12 @@ ${_}`;
         }
         function _(_) {
           return _({
-            select: (_) => {
-              var _, _;
-              return (_ = (_ = _.line_items) == null ? void 0 : _.length) !=
-                null
-                ? _
-                : 0;
-            },
+            select: (_) => _.line_items?.length ?? 0,
             ..._,
           });
         }
         function _(_, _, _, _, _, _) {
-          const {
-            navData: _,
-            nAccountIDGiftee: _,
-            bIsGift: _ = !1,
-          } = _ != null ? _ : {};
+          const { navData: _, nAccountIDGiftee: _, bIsGift: _ = !1 } = _ ?? {};
           if (BIsAccountCart(_)) {
             const _ = (_ || []).map((_) => ({
               packageid: _,
@@ -30529,35 +29942,15 @@ ${_}`;
             );
           } else
             return _(_, _, _, _, _).then(([_, _]) => {
-              var _;
               if ((InvalidateDynamicStoreVersion(), _)) {
                 ReplaceShoppingCart(_, _, _(_));
-                const _ = (_ || []).map((_) => {
-                  var _;
-                  return (_ = _ == null ? void 0 : _.lineitems) == null
-                    ? void 0
-                    : _.find((_) => {
-                        var _;
-                        return (
-                          ((_ = _.package_item) == null
-                            ? void 0
-                            : _.packageid) === _
-                        );
-                      });
-                });
+                const _ = (_ || []).map((_) =>
+                  _?.lineitems?.find((_) => _.package_item?.packageid === _),
+                );
                 return (
                   _ &&
                     _.push(
-                      (_ = _ == null ? void 0 : _.lineitems) == null
-                        ? void 0
-                        : _.find((_) => {
-                            var _;
-                            return (
-                              ((_ = _.bundle_item) == null
-                                ? void 0
-                                : _.bundleid) === _
-                            );
-                          }),
+                      _?.lineitems?.find((_) => _.bundle_item?.bundleid === _),
                     ),
                   {
                     success: !0,
@@ -30587,10 +29980,7 @@ ${_}`;
           });
           if (!_._) throw new Error("Failed to fetch /cart/addtocart");
           const _ = await _.json();
-          return [
-            _ != null && _.success ? _._ : _._,
-            _ == null ? void 0 : _.contents,
-          ];
+          return [_?.success ? _._ : _._, _?.contents];
         }
         async function _(_, _, _, _) {
           return _(_, _, [_], _);
@@ -30630,14 +30020,13 @@ ${_}`;
           );
         }
         async function _(_, _) {
-          var _;
           if (BIsAccountCart(_)) {
             const _ = CProtoBufMsg.Init(CAccountCart_GetCart_Request);
             _.Body().set_user_country(UserConfig.country_code);
             const _ = await AccountCartService.GetCart(_, _);
             if (!_.BSuccess())
               throw `Error loading AccountCart: ${_.GetErrorMessage()}`;
-            return (_ = _.Body().toObject()) == null ? void 0 : _.cart;
+            return _.Body().toObject()?.cart;
           } else if (BIsReplayCart(_)) {
             const _ = CProtoBufMsg.Init(CCheckout_ValidateCart_Request);
             SetStoreBrowseContext(
@@ -30663,33 +30052,25 @@ ${_}`;
           }
         }
         function _(_) {
-          var _;
           const _ = {
             line_items: [],
           };
           return (
-            (_ = _ == null ? void 0 : _.lineitems) != null &&
-              _.length &&
+            _?.lineitems?.length &&
               (_.line_items = _.lineitems
-                .map((_) => {
-                  var _;
-                  return (_ = _.package_item) != null && _.gidbundle
-                    ? null
-                    : _(_);
-                })
+                .map((_) => (_.package_item?.gidbundle ? null : _(_)))
                 .filter(_)),
             _
           );
         }
         function _(_) {
-          var _, _, _, _, _;
           const _ = {
             price_when_added: {},
             flags: {},
           };
           return (
             (_.line_item_id = _.gidlineitem),
-            (_ = _.bundle_item) != null && _.bundleid
+            _.bundle_item?.bundleid
               ? ((_.bundleid = _.bundle_item.bundleid),
                 (_.type = _),
                 _.bundle_item.is_gift &&
@@ -30698,19 +30079,9 @@ ${_}`;
               : _.package_item &&
                 ((_.packageid = _.package_item.packageid),
                 (_.price_when_added.amount_in_cents =
-                  (_ =
-                    (_ = _.package_item.costwhenadded) == null
-                      ? void 0
-                      : _.amount) != null
-                    ? _
-                    : ""),
+                  _.package_item.costwhenadded?.amount ?? ""),
                 (_.price_when_added.currency_code =
-                  (_ =
-                    (_ = _.package_item.costwhenadded) == null
-                      ? void 0
-                      : _.currencycode) != null
-                    ? _
-                    : 0),
+                  _.package_item.costwhenadded?.currencycode ?? 0),
                 (_.type = _),
                 _.package_item.is_gift &&
                   ((_.flags.is_gift = _.package_item.is_gift),
@@ -30719,42 +30090,34 @@ ${_}`;
           );
         }
         function _(_) {
-          var _;
           const _ = {
             subtotal: _.estimated_totals.subtotal,
             line_items: [],
           };
           return (
-            (_.line_items =
-              (_ = _.cart_items) == null
-                ? void 0
-                : _.map((_) => {
-                    var _, _, _, _;
-                    let _;
-                    if ((_ = _.item_id) != null && _.packageid)
-                      _ =
-                        EAccountCartLineItemType.k_EAccountCartLineItem_Package;
-                    else if ((_ = _.item_id) != null && _.bundleid)
-                      _ =
-                        EAccountCartLineItemType.k_EAccountCartLineItem_Bundle;
-                    else return;
-                    return {
-                      line_item_id: _.line_item_id,
-                      type: _,
-                      packageid: _.item_id.packageid,
-                      bundleid: _.item_id.bundleid,
-                      is_valid: !0,
-                      price_when_added: _.price_when_added,
-                      gift_info: _.gift_info,
-                      flags: {
-                        is_gift: !!(
-                          (_ = _.gift_info) != null && _.accountid_giftee
-                        ),
-                      },
-                      gidcoupon_applied:
-                        (_ = _.coupon_applied) == null ? void 0 : _.gidcoupon,
-                    };
-                  }).filter(isTruthy)),
+            (_.line_items = _.cart_items
+              ?.map((_) => {
+                let _;
+                if (_.item_id?.packageid)
+                  _ = EAccountCartLineItemType.k_EAccountCartLineItem_Package;
+                else if (_.item_id?.bundleid)
+                  _ = EAccountCartLineItemType.k_EAccountCartLineItem_Bundle;
+                else return;
+                return {
+                  line_item_id: _.line_item_id,
+                  type: _,
+                  packageid: _.item_id.packageid,
+                  bundleid: _.item_id.bundleid,
+                  is_valid: !0,
+                  price_when_added: _.price_when_added,
+                  gift_info: _.gift_info,
+                  flags: {
+                    is_gift: !!_.gift_info?.accountid_giftee,
+                  },
+                  gidcoupon_applied: _.coupon_applied?.gidcoupon,
+                };
+              })
+              .filter(isTruthy)),
             _
           );
         }
@@ -30804,11 +30167,7 @@ ${_}`;
         function _(_, _) {
           return BIsAccountCart(_)
             ? ["validate_checkout", _(_), UserConfig.accountid]
-            : [
-                "validate_checkout",
-                _(_),
-                _ == null ? void 0 : _.accountid_giftee,
-              ];
+            : ["validate_checkout", _(_), _?.accountid_giftee];
         }
         function _(_, _) {
           _.invalidateQueries({
@@ -30847,7 +30206,6 @@ ${_}`;
             _ = (0, _._)(_);
           return (0, _._)({
             mutationFn: async () => {
-              var _, _;
               if (_.length == 0 || !_.every((_) => _.packageid || _.bundleid))
                 throw "Every item must have a valid package or bundle id";
               let _;
@@ -30865,25 +30223,21 @@ ${_}`;
                   _.length > 0 ? _ : void 0,
                   _[0],
                   _.some((_) => _.bIsGift),
-                  (_ = _.find((_) => _.nAccountIDGiftee)) == null
-                    ? void 0
-                    : _.nAccountIDGiftee,
+                  _.find((_) => _.nAccountIDGiftee)?.nAccountIDGiftee,
                 );
                 if (_ == _._ && _) {
                   const _ = new Set(_),
-                    _ = new Set(_),
-                    _ =
-                      (_ = _.lineitems) == null
-                        ? void 0
-                        : _.filter(
-                            (_) =>
-                              (_.package_item &&
-                                !_.package_item.gidbundle &&
-                                _.has(_.package_item.packageid)) ||
-                              (_.bundle_item && _.has(_.bundle_item.bundleid)),
-                          );
+                    _ = new Set(_);
                   (_ =
-                    (_ == null ? void 0 : _.map((_) => _.gidlineitem)) || []),
+                    _.lineitems
+                      ?.filter(
+                        (_) =>
+                          (_.package_item &&
+                            !_.package_item.gidbundle &&
+                            _.has(_.package_item.packageid)) ||
+                          (_.bundle_item && _.has(_.bundle_item.bundleid)),
+                      )
+                      ?.map((_) => _.gidlineitem) || []),
                     _(_, _, _(_));
                 } else throw `AddItemsToAnonymousCart failed with ${_}`;
               } else throw "Invalid cart type";
@@ -30903,11 +30257,8 @@ ${_}`;
                 (
                   await Promise.all(_.map((_) => _.fetchQuery((0, _._)(_, _))))
                 ).forEach((_, _) => {
-                  var _;
                   const _ =
-                    ((_ = _ == null ? void 0 : _.included_appids) == null
-                      ? void 0
-                      : _.length) == 1
+                    _?.included_appids?.length == 1
                       ? {
                           appid: _.included_appids[0],
                         }
@@ -30922,25 +30273,16 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -30998,16 +30340,16 @@ ${_}`;
           getClassName() {
             return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.inventory_available || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -31065,9 +30407,7 @@ ${_}`;
           getClassName() {
             return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -31096,9 +30436,9 @@ ${_}`;
             { data: _ } = (0, _._)(_),
             _ = (0, _._)({
               queryKey: [
-                (_ == null ? void 0 : _._) || _._,
-                (_ == null ? void 0 : _.type) || "invalid",
-                (_ == null ? void 0 : _.item_type) || "invalid",
+                _?._ || _._,
+                _?.type || "invalid",
+                _?.item_type || "invalid",
               ],
               queryFn: () => _(_, _),
               enabled: !!(_ && _.type === _._._),
@@ -31140,11 +30480,9 @@ ${_}`;
             { bIsOwned: _ } = (0, _._)(_),
             _ = (0, _._)(_),
             _ = (0, _.useCallback)(() => {
-              var _;
               if (_) {
                 let _ = _.appid;
-                (_ = _.related_items) != null &&
-                  _.parent_appid &&
+                _.related_items?.parent_appid &&
                   _.type != _._._ &&
                   (_ = _.related_items.parent_appid),
                   (0, _._)(window, `steam://run/${_}`);
@@ -31255,13 +30593,7 @@ ${_}`;
               storeItemDefaultData: _,
             } = _,
             _ = (0, _._)(),
-            { mutate: _ } = _(
-              _ == null ? void 0 : _.packageid,
-              _ == null ? void 0 : _.bundleid,
-              !1,
-              void 0,
-              _.feature,
-            );
+            { mutate: _ } = _(_?.packageid, _?.bundleid, !1, void 0, _.feature);
           return (0, _.jsx)("div", {
             className: (0, _._)(_().Action, _),
             onClick: () => _(),
@@ -31678,25 +31010,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_instanceid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -31749,16 +31072,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientLogonInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.protocol_version || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -31821,9 +31144,7 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientLogonInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -31865,13 +31186,15 @@ ${_}`;
             return "CClientComm_GetAllClientLogonInfo_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sessions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -31930,16 +31253,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetAllClientLogonInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_instanceid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32022,16 +31345,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetAllClientLogonInfo_Response_Session";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_instanceid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32084,16 +31407,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.package_version || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7, 10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32195,16 +31518,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_ClientData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32267,16 +31590,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_ClientData_RunningGames";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_info || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32328,16 +31651,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.fields || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32418,16 +31741,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientAppList_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bytes_available || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32505,16 +31828,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientAppList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [17], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32694,16 +32017,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientAppList_Response_AppData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32766,16 +32089,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_GetClientAppList_Response_AppData_DLCData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32834,9 +32157,7 @@ ${_}`;
           getClassName() {
             return "CClientComm_InstallClientApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -32878,13 +32199,15 @@ ${_}`;
             return "CClientComm_InstallClientApp_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -32943,9 +32266,7 @@ ${_}`;
           getClassName() {
             return "CClientComm_UninstallClientApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -32987,13 +32308,15 @@ ${_}`;
             return "CClientComm_UninstallClientApp_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -33058,16 +32381,16 @@ ${_}`;
           getClassName() {
             return "CClientComm_SetClientAppUpdateState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_instanceid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -33131,9 +32454,7 @@ ${_}`;
           getClassName() {
             return "CClientComm_LaunchClientApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -33216,13 +32537,15 @@ ${_}`;
             return "CClientComm_SetClientAppUpdateState_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_instanceid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -33280,9 +32603,7 @@ ${_}`;
           getClassName() {
             return "CClientComm_EnableOrDisableDownloads_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -33430,25 +32751,15 @@ ${_}`;
           }
           _.EnableOrDisableDownloads = _;
         })(_ || (_ = {}));
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         const _ = "RemoteDownload_OnlineClient",
           _ = "RemoteDownload_ClientAppList",
           _ = "RemoteDownload_ClientAppData",
           _ = "RemoteDownload_PatchNotes";
         class _ extends Error {
           constructor(_, _) {
-            super(_), _(this, "result"), (this.result = _);
+            super(_), (this.result = _);
           }
+          result;
         }
         function _() {
           const _ = (0, _._)(),
@@ -33478,59 +32789,43 @@ ${_}`;
               };
             },
             staleTime: 300 * 1e3,
-            refetchInterval: (_) => {
-              var _;
-              return (
-                (((_ = _.state.data) == null ? void 0 : _.refetchInterval) ||
-                  300) * 1e3
-              );
-            },
+            refetchInterval: (_) =>
+              (_.state.data?.refetchInterval || 300) * 1e3,
           });
         }
         class _ {
           constructor(_) {
-            _(this, "appid"),
-              _(this, "app"),
-              _(this, "category"),
-              _(this, "app_type"),
-              _(this, "num_downloading"),
-              _(this, "bytes_download_rate"),
-              _(this, "bytes_downloaded"),
-              _(this, "bytes_to_download"),
-              _(this, "favorite"),
-              _(this, "auto_update"),
-              _(this, "installed"),
-              _(this, "download_paused"),
-              _(this, "changing"),
-              _(this, "available_on_platform"),
-              _(this, "bytes_staged"),
-              _(this, "bytes_to_stage"),
-              _(this, "bytes_required"),
-              _(this, "source_buildid"),
-              _(this, "target_buildid"),
-              _(this, "estimated_seconds_remaining"),
-              _(this, "queue_position"),
-              _(this, "uninstalling"),
-              _(this, "rt_time_scheduled"),
-              _(this, "update_percentage");
-            var _, _, _, _, _;
             Object.assign(this, _.toObject()),
-              (this.bytes_to_download = parseInt(
-                (_ = _.bytes_to_download()) != null ? _ : "0",
-              )),
-              (this.bytes_downloaded = parseInt(
-                (_ = _.bytes_downloaded()) != null ? _ : "0",
-              )),
-              (this.bytes_staged = parseInt(
-                (_ = _.bytes_staged()) != null ? _ : "0",
-              )),
-              (this.bytes_to_stage = parseInt(
-                (_ = _.bytes_to_stage()) != null ? _ : "0",
-              )),
-              (this.bytes_required = parseInt(
-                (_ = _.bytes_required()) != null ? _ : "0",
-              ));
+              (this.bytes_to_download = parseInt(_.bytes_to_download() ?? "0")),
+              (this.bytes_downloaded = parseInt(_.bytes_downloaded() ?? "0")),
+              (this.bytes_staged = parseInt(_.bytes_staged() ?? "0")),
+              (this.bytes_to_stage = parseInt(_.bytes_to_stage() ?? "0")),
+              (this.bytes_required = parseInt(_.bytes_required() ?? "0"));
           }
+          appid;
+          app;
+          category;
+          app_type;
+          num_downloading;
+          bytes_download_rate;
+          bytes_downloaded;
+          bytes_to_download;
+          favorite;
+          auto_update;
+          installed;
+          download_paused;
+          changing;
+          available_on_platform;
+          bytes_staged;
+          bytes_to_stage;
+          bytes_required;
+          source_buildid;
+          target_buildid;
+          estimated_seconds_remaining;
+          queue_position;
+          uninstalling;
+          rt_time_scheduled;
+          update_percentage;
           BIsDownloading() {
             return this.num_downloading !== void 0 && this.num_downloading > 0;
           }
@@ -33570,7 +32865,6 @@ ${_}`;
           }
         }
         async function _(_, _, _) {
-          var _;
           const _ = _.client_instanceid,
             _ = _._.Init(_);
           _.Body().set_fields("games"),
@@ -33598,8 +32892,7 @@ ${_}`;
           return {
             session: _,
             mapApps: _,
-            clientInfo:
-              (_ = _.Body().client_info()) == null ? void 0 : _.toObject(),
+            clientInfo: _.Body().client_info()?.toObject(),
             refetchIntervals: {
               full: _.Body().refetch_interval_sec_full() || 3600,
               changing: _.Body().refetch_interval_sec_changing() || 60,
@@ -33620,7 +32913,6 @@ ${_}`;
           return [_, _, _, _];
         }
         function _(_, _ = !0) {
-          var _, _;
           const _ = _(),
             _ = (0, _._)(),
             _ = (0, _._)(),
@@ -33628,35 +32920,22 @@ ${_}`;
               _ && (_.result == _._ || _.result == _._) && _.refetch();
             },
             _ = (0, _._)({
-              queries: (((_ = _.data) == null ? void 0 : _.sessions) || []).map(
-                (_) => ({
-                  queryKey: _(_, _.client_instanceid, "none"),
-                  queryFn: async () => _(_, _, "none"),
-                  staletime: 3600 * 1e3,
-                  refetchInterval: (_) => {
-                    var _;
-                    return (
-                      (((_ = _.state.data) == null
-                        ? void 0
-                        : _.refetchIntervals.full) || 3600) * 1e3
-                    );
-                  },
-                  enabled: _.isSuccess && !_.isFetching,
-                  onError: _,
-                  retry: _,
-                }),
-              ),
+              queries: (_.data?.sessions || []).map((_) => ({
+                queryKey: _(_, _.client_instanceid, "none"),
+                queryFn: async () => _(_, _, "none"),
+                staletime: 3600 * 1e3,
+                refetchInterval: (_) =>
+                  (_.state.data?.refetchIntervals.full || 3600) * 1e3,
+                enabled: _.isSuccess && !_.isFetching,
+                onError: _,
+                retry: _,
+              })),
             }),
             _ = (0, _.useCallback)(
               (_) => {
-                var _;
                 if (!_) return _;
                 const _ = new Map(
-                  Array.from(
-                    (_ = _ == null ? void 0 : _.mapApps.entries()) != null
-                      ? _
-                      : [],
-                  ).filter(_),
+                  Array.from(_?.mapApps.entries() ?? []).filter(_),
                 );
                 return {
                   ..._,
@@ -33667,34 +32946,30 @@ ${_}`;
             ),
             _ = (0, _._)(),
             _ = (0, _._)({
-              queries: (((_ = _.data) == null ? void 0 : _.sessions) || []).map(
-                (_, _) => ({
-                  queryKey: _(_, _.client_instanceid, "changing"),
-                  queryFn: async () => _(_, _, "changing", _[_].data),
-                  enabled: _[_].isSuccess && !_[_].isFetching,
-                  staletime: 10 * 1e3,
-                  select: _,
-                  refetchInterval: (_) => {
-                    const _ = _.state.data;
-                    if (!_) return 60 * 1e3;
-                    let _ = !1;
-                    for (const _ of _.mapApps.values())
-                      if (_.BIsDownloading() || _.uninstalling) {
-                        _ = !0;
-                        break;
-                      }
-                    const _ = _.refetchIntervals;
-                    return (_ ? _.updating : _.changing) * 1e3;
-                  },
-                  onError: _,
-                  retry: _,
-                }),
-              ),
+              queries: (_.data?.sessions || []).map((_, _) => ({
+                queryKey: _(_, _.client_instanceid, "changing"),
+                queryFn: async () => _(_, _, "changing", _[_].data),
+                enabled: _[_].isSuccess && !_[_].isFetching,
+                staletime: 10 * 1e3,
+                select: _,
+                refetchInterval: (_) => {
+                  const _ = _.state.data;
+                  if (!_) return 60 * 1e3;
+                  let _ = !1;
+                  for (const _ of _.mapApps.values())
+                    if (_.BIsDownloading() || _.uninstalling) {
+                      _ = !0;
+                      break;
+                    }
+                  const _ = _.refetchIntervals;
+                  return (_ ? _.updating : _.changing) * 1e3;
+                },
+                onError: _,
+                retry: _,
+              })),
             }),
             _ = () => {
-              var _;
-              for (const _ of ((_ = _.data) == null ? void 0 : _.sessions) ||
-                []) {
+              for (const _ of _.data?.sessions || []) {
                 const _ = _(_, _.client_instanceid, "changing");
                 _.removeQueries({
                   queryKey: _,
@@ -33718,16 +32993,11 @@ ${_}`;
           return (0, _._)({
             queryKey: _(_, _),
             queryFn: () => {
-              var _, _, _;
               const _ = new Map();
               for (const _ of _)
                 if (_.isSuccess) {
-                  const _ =
-                      (_ = (_ = _.data) == null ? void 0 : _.session) == null
-                        ? void 0
-                        : _.client_instanceid,
-                    _ = (_ = _.data) == null ? void 0 : _.mapApps,
-                    _ = _ == null ? void 0 : _.get(_);
+                  const _ = _.data?.session?.client_instanceid,
+                    _ = _.data?.mapApps?.get(_);
                   _ &&
                     _.set(_, {
                       session: _.data.session,
@@ -33748,7 +33018,6 @@ ${_}`;
           return useQuery({
             queryKey: [_, _, _, _, _],
             queryFn: async () => {
-              var _;
               if (!_ || !_ || _ == _) return {};
               const _ = CProtoBufMsg.Init(
                   CClan_GetPartnerEventsByBuildIDRange_Request,
@@ -33772,10 +33041,9 @@ ${_}`;
                 appid: _,
                 source_buildid: _,
                 target_buildid: _,
-                patch_notes:
-                  (_ = _.Body().toObject().matches) == null
-                    ? void 0
-                    : _.sort((_, _) => _.build_id - _.build_id),
+                patch_notes: _.Body()
+                  .toObject()
+                  .matches?.sort((_, _) => _.build_id - _.build_id),
               };
             },
           });
@@ -33798,7 +33066,7 @@ ${_}`;
                   ),
                   new Error(`Error from InstallClientApp: ${_.GetEResult()}`))
                 );
-              const _ = _ == null ? void 0 : _.data;
+              const _ = _?.data;
               _ && _.get(_) && _.get(_).app.SetDownloading(),
                 _.setQueryData(_(_, _), _),
                 _.refetch();
@@ -33826,7 +33094,7 @@ ${_}`;
                   ),
                   new Error(`Error from UninstallClientApp: ${_.GetEResult()}`))
                 );
-              const _ = _ == null ? void 0 : _.data;
+              const _ = _?.data;
               _ && _.get(_) && (_.get(_).app.uninstalling = !0),
                 _.setQueryData(_(_, _), _),
                 _.refetch();
@@ -33841,7 +33109,7 @@ ${_}`;
             _ = useQueryClient();
           return useMutation({
             mutationFn: async () => {
-              const _ = _ == null ? void 0 : _.data,
+              const _ = _?.data,
                 _ = _ && _.get(_),
                 _ = CProtoBufMsg.Init(
                   CClientComm_SetClientAppUpdateState_Request,
@@ -33874,12 +33142,10 @@ ${_}`;
             _ = useQueryClient();
           return useMutation({
             mutationFn: async () => {
-              var _, _;
-              const _ = _ == null ? void 0 : _.data,
+              const _ = _?.data,
                 _ = _ && _.get(_);
               if (
-                (_ = _ == null ? void 0 : _.clientInfo) != null &&
-                _.clientcomm_version &&
+                _?.clientInfo?.clientcomm_version &&
                 _.clientInfo.clientcomm_version >= 1
               ) {
                 const _ = CProtoBufMsg.Init(
@@ -33919,7 +33185,7 @@ ${_}`;
                     ))
                   );
               }
-              _ && ((_ = _.get(_)) == null || _.app.SetPaused(_)),
+              _ && _.get(_)?.app.SetPaused(_),
                 _.setQueryData(_(_, _), _),
                 _.refetch();
             },
@@ -33959,8 +33225,7 @@ ${_}`;
           const { setRemoteClientID: _, rgSessions: _ } = _,
             _ = (0, _.useCallback)(
               (_) => {
-                _ != null &&
-                  _.length &&
+                _?.length &&
                   (0, _._)(
                     (0, _.jsx)(_, {
                       sessions: _,
@@ -33972,7 +33237,7 @@ ${_}`;
               },
               [_, _],
             );
-          return _ != null && _.length
+          return _?.length
             ? (0, _.jsx)("button", {
                 onClick: _,
                 className: _().ClientSelectDropdown,
@@ -33983,9 +33248,8 @@ ${_}`;
         function _({ sessions: _, setRemoteDownloadClientId: _ }) {
           return (0, _.jsx)("ul", {
             className: _().ClientListDropdownMenu,
-            children: _.map((_) => {
-              var _;
-              return (0, _.jsx)(
+            children: _.map((_) =>
+              (0, _.jsx)(
                 _._,
                 {
                   onSelected: () => {
@@ -33993,13 +33257,13 @@ ${_}`;
                   },
                   children: (0, _._)(
                     "#GamesList_Client_Indicator",
-                    (_ = _(_.device_type)) != null ? _ : "",
+                    _(_.device_type) ?? "",
                     _.machine_name,
                   ),
                 },
                 _.client_instanceid,
-              );
-            }),
+              ),
+            ),
           });
         }
         function _(_) {
@@ -34092,34 +33356,30 @@ ${_}`;
               });
         }
         function _(_) {
-          var _, _;
           const { _: _ } = _,
             _ = _(),
             [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(!1),
             { data: _ } = (0, _._)(_);
           if (!_ || !("appid" in _) || _._.IN_CLIENT || !_) return null;
-          const _ =
-            (_ = (_ = _.data) == null ? void 0 : _.sessions) == null
-              ? void 0
-              : _.filter((_) => {
-                  switch (_.device_type) {
-                    default:
-                    case _.g0U:
-                      {
-                        if (!_.os_type) return !1;
-                        const _ = _(_.os_type);
-                        if (_.windows && _.includes("Windows")) return !0;
-                        if (_.mac && _.includes("Mac")) return !0;
-                        if (_.steamos_linux && _.includes("Linux")) return !0;
-                      }
-                      break;
-                    case _.LS$:
-                      return _.windows || _.steamos_linux;
-                  }
-                  return !1;
-                });
-          if (_ && (_ == null ? void 0 : _.length) > 0) {
+          const _ = _.data?.sessions?.filter((_) => {
+            switch (_.device_type) {
+              default:
+              case _.g0U:
+                {
+                  if (!_.os_type) return !1;
+                  const _ = _(_.os_type);
+                  if (_.windows && _.includes("Windows")) return !0;
+                  if (_.mac && _.includes("Mac")) return !0;
+                  if (_.steamos_linux && _.includes("Linux")) return !0;
+                }
+                break;
+              case _.LS$:
+                return _.windows || _.steamos_linux;
+            }
+            return !1;
+          });
+          if (_ && _?.length > 0) {
             const _ = _[_];
             return (0, _.jsx)("div", {
               className: _().RemoteOptions,
@@ -34215,14 +33475,11 @@ ${_}`;
         }
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _, className: _ } = _,
             { data: _ } = (0, _._)(_);
           if (!_) return null;
           const _ =
-              (_ = _.related_items) != null &&
-              _.demo_appid &&
-              _.related_items.demo_appid
+              _.related_items?.demo_appid && _.related_items.demo_appid
                 ? _.related_items.demo_appid
                 : [],
             _ = _.length > 0,
@@ -34297,7 +33554,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const {
               _: _,
               strClassName: _,
@@ -34309,7 +33565,7 @@ ${_}`;
           if (_) {
             let _ = _
               ? null
-              : (_ == null ? void 0 : _.windows) &&
+              : _?.windows &&
                 (0, _.jsx)("span", {
                   title: _._.Localize("#Platform_Windows"),
                   children: (0, _.jsx)(_.Xz0, {
@@ -34317,22 +33573,21 @@ ${_}`;
                   }),
                 });
             return (
-              _._.PLATFORM === "linux" && _ != null && _.steamos_linux
+              _._.PLATFORM === "linux" && _?.steamos_linux
                 ? (_ = (0, _.jsx)("span", {
                     title: _._.Localize("#Platform_Linux"),
                     children: (0, _.jsx)(_.Qte, {
                       "aria-label": _._.Localize("#Platform_Linux"),
                     }),
                   }))
-                : _._.PLATFORM === "macos" && _ != null && _.mac
+                : _._.PLATFORM === "macos" && _?.mac
                   ? (_ = (0, _.jsx)("span", {
                       title: _._.Localize("#Platform_Mac"),
                       children: (0, _.jsx)(_.kPc, {
                         "aria-label": _._.Localize("#Platform_Mac"),
                       }),
                     }))
-                  : (_ = _.vr_support) != null &&
-                    _.vrhmd &&
+                  : _.vr_support?.vrhmd &&
                     (_ = (0, _.jsx)("span", {
                       title: _._.Localize("#Platform_VR"),
                       children: (0, _.jsx)(_._, {
@@ -34372,7 +33627,7 @@ ${_}`;
                     "aria-label": _._.Localize("#Platform_Linux"),
                   }),
                 }),
-              ((_ = _.vr_support) == null ? void 0 : _.vrhmd) &&
+              _.vr_support?.vrhmd &&
                 (0, _.jsx)("span", {
                   title: _._.Localize("#Platform_VR"),
                   children: (0, _.jsx)(_._, {
@@ -34447,7 +33702,7 @@ ${_}`;
               StoreSalePriceWidgetContainer: !0,
               [_().NewItem]: _,
               [_().PurchaseOption]: _,
-              [_ != null ? _ : ""]: !!_,
+              [_ ?? ""]: !!_,
             });
           if (_.bShowInLibrary)
             return (0, _.jsx)("div", {
@@ -34588,7 +33843,7 @@ ${_}`;
               [_().PrePurchaseBesidePrice]: !!_,
               [_().NewItem]: !!_,
               [_().PurchaseOption]: _,
-              [_ != null ? _ : ""]: !!_,
+              [_ ?? ""]: !!_,
             }),
             "aria-label": _,
             children: [
@@ -34676,7 +33931,7 @@ ${_}`;
                         className: (0, _._)({
                           [_().StoreSalePriceBox]: !0,
                           [_().SingleLineMode]: _,
-                          [_ != null ? _ : ""]: !!_,
+                          [_ ?? ""]: !!_,
                         }),
                         children: _,
                       }),
@@ -34685,7 +33940,7 @@ ${_}`;
                 : (0, _.jsx)("div", {
                     className: (0, _._)({
                       [_().StoreSalePriceBox]: !0,
-                      [_ != null ? _ : ""]: !!_,
+                      [_ ?? ""]: !!_,
                     }),
                     children: _,
                   }),
@@ -34728,15 +33983,13 @@ ${_}`;
           return (0, _._)(_());
         }
         function _(_) {
-          var _;
           const { data: _ } = _(),
             _ = useStoreItemKeyFromAppID(_),
             { data: _ } = useStoreItemDefaultInfo(_);
           return !!(
             _ &&
             (_.has(_) ||
-              ((_ = _ == null ? void 0 : _.related_items) != null &&
-                _.parent_appid &&
+              (_?.related_items?.parent_appid &&
                 _.has(_.related_items.parent_appid)))
           );
         }
@@ -34759,16 +34012,12 @@ ${_}`;
                   ),
                 );
                 _(
-                  _.some((_) => {
-                    var _;
-                    return (
+                  _.some(
+                    (_) =>
                       (_ && _.appid && _.has(_.appid)) ||
-                      (((_ = _ == null ? void 0 : _.related_items) == null
-                        ? void 0
-                        : _.parent_appid) &&
-                        _.has(_.related_items.parent_appid))
-                    );
-                  }),
+                      (_?.related_items?.parent_appid &&
+                        _.has(_.related_items.parent_appid)),
+                  ),
                 );
               })();
             }, [_, _, _, _]),
@@ -35097,7 +34346,7 @@ ${_}`;
               children: _,
             });
           }
-          return (_ == null ? void 0 : _.length) == 1
+          return _?.length == 1
             ? _[0] == 1
               ? (0, _.jsx)(_, {
                   children: (0, _.jsx)("div", {
@@ -35143,7 +34392,7 @@ ${_}`;
                       ],
                     }),
                   })
-            : (_ == null ? void 0 : _.length) == 2
+            : _?.length == 2
               ? _[0] == 3 && _[1] == 3
                 ? (0, _.jsx)(_, {
                     children: (0, _.jsxs)("div", {
@@ -35293,7 +34542,7 @@ ${_}`;
             bLargeText: _,
             bNoStoreLinks: _,
           } = _;
-          return (_ == null ? void 0 : _.length) > 0 || _
+          return _?.length > 0 || _
             ? (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().SaleTagBlockCtn,
@@ -35306,7 +34555,7 @@ ${_}`;
                       className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
                       children: _._.Localize("#GameHover_Tags"),
                     }),
-                  (_ == null ? void 0 : _.length) > 0
+                  _?.length > 0
                     ? (0, _.jsx)("div", {
                         className: (0, _._)(_().TagBox, "TagBox"),
                         children: _.map((_) =>
@@ -35390,8 +34639,8 @@ ${_}`;
             { data: _ } = (0, _._)(_);
           return (0, _.jsx)(_, {
             appid: _,
-            bIsFree: !!(_ != null && _.is_free),
-            bIsComingSoon: !!(_ != null && _.is_coming_soon),
+            bIsFree: !!_?.is_free,
+            bIsComingSoon: !!_?.is_coming_soon,
             bTextMode: _,
             className: _,
           });
@@ -35451,17 +34700,14 @@ ${_}`;
           );
         }
         function _(_) {
-          var _, _;
           const { possibleDemoAppID: _, className: _ } = _,
             _ = (0, _._)(_),
             { data: _ } = (0, _._)(_);
           return _ &&
             (_.type == _._._ || _.type == _._._) &&
-            (_ = _.related_items) != null &&
-            _.parent_appid
+            _.related_items?.parent_appid
             ? (0, _.jsx)(_, {
-                parentAppID:
-                  (_ = _.related_items) == null ? void 0 : _.parent_appid,
+                parentAppID: _.related_items?.parent_appid,
                 className: _,
               })
             : null;
@@ -35503,8 +34749,7 @@ ${_}`;
             { data: _ } = (0, _._)(_),
             { mutate: _ } = (0, _._)(_),
             _ = (_) => {
-              _.preventDefault(),
-                _ ? (0, _._)(_, _ == null ? void 0 : _.name) : _();
+              _.preventDefault(), _ ? (0, _._)(_, _?.name) : _();
             },
             _ = (0, _._)(
               _().CapsuleBottomBar,
@@ -35624,12 +34869,7 @@ ${_}`;
           );
         }
         function _(_, _) {
-          var _;
-          return (
-            !!_ &&
-            !!_.is_creator_home &&
-            ((_ = _.createTime) != null ? _ : 0) > _
-          );
+          return !!_ && !!_.is_creator_home && (_.createTime ?? 0) > _;
         }
         function _(_) {
           const _ = (0, _._)(_.clanSteamID.GetAccountID());
@@ -35645,12 +34885,11 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _ = !1) {
-          var _;
           const { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_, _);
           let _;
           _ &&
-            ((_ = _.included_appids) == null ? void 0 : _.length) == 1 &&
+            _.included_appids?.length == 1 &&
             !_(_, _) &&
             _.item_type &&
             [_._._, _._._].includes(_.item_type) &&
@@ -35659,9 +34898,9 @@ ${_}`;
             });
           const { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_, _),
-            _ = _ != null && _.visible ? _ : _;
+            _ = _?.visible ? _ : _;
           return {
-            storeItemAsset: _ != null && _.visible ? _ : _,
+            storeItemAsset: _?.visible ? _ : _,
             storeItemDefaultInfo: _,
           };
         }
@@ -35792,7 +35031,6 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _, bPopOutTrailerPlayback: _ } = _,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
@@ -35800,11 +35038,8 @@ ${_}`;
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)(),
-            _ =
-              (_ = _ == null ? void 0 : _.highlights) == null
-                ? void 0
-                : _.filter((_) => !_ || _.all_ages),
-            _ = _ && (_ == null ? void 0 : _.length) > 0 ? _[0] : void 0,
+            _ = _?.highlights?.filter((_) => !_ || _.all_ages),
+            _ = _ && _?.length > 0 ? _[0] : void 0,
             _ = _.useCallback(() => {
               _ && (_ ? _(!0) : _((_) => !_));
             }, [_, _]);
@@ -35852,7 +35087,6 @@ ${_}`;
               });
         }
         function _(_) {
-          var _;
           const {
               elFeaturedInCenter: _,
               _: _,
@@ -35905,74 +35139,66 @@ ${_}`;
                 "trail_inline",
               ),
             ));
-          const _ =
-            (_ = _
-              ? _ == null
-                ? void 0
-                : _.all_ages_screenshots
-              : _ == null
-                ? void 0
-                : _.mature_content_screenshots) == null
-              ? void 0
-              : _.filter(Boolean);
+          const _ = (
+            _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
+          )?.filter(Boolean);
           if (
-            (_ == null ||
-              _.forEach((_, _) => {
-                if ((_ || _ > 0) && _.length < 3) {
-                  const _ = (0, _._)(_, "thumb"),
-                    _ = (0, _._)(_, "600x338"),
-                    _ = _.length;
+            (_?.forEach((_, _) => {
+              if ((_ || _ > 0) && _.length < 3) {
+                const _ = (0, _._)(_, "thumb"),
+                  _ = (0, _._)(_, "600x338"),
+                  _ = _.length;
+                _.push(
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_().ThumbnailCtn]: !0,
+                        [_().ThumbnialClickable]: !_,
+                      }),
+                      onMouseEnter: () => _(_),
+                      children: _
+                        ? (0, _.jsx)("img", {
+                            src: _,
+                            alt: _,
+                          })
+                        : (0, _.jsx)("button", {
+                            type: "button",
+                            className: _().ThumbnailButton,
+                            onClick: () => {
+                              const _ = [...(_ || [])];
+                              if (_.length > 0) {
+                                for (let _ = 0; _ < _; ++_) {
+                                  const _ = _.shift();
+                                  _ && _.push(_);
+                                }
+                                _(_.map((_) => (0, _._)(_, "full")));
+                              }
+                            },
+                            children: (0, _.jsx)("img", {
+                              src: _,
+                              alt: _,
+                            }),
+                          }),
+                    },
+                    _ + "_small_" + _,
+                  ),
+                ),
                   _.push(
                     (0, _.jsx)(
                       "div",
                       {
-                        className: (0, _._)({
-                          [_().ThumbnailCtn]: !0,
-                          [_().ThumbnialClickable]: !_,
+                        className: _().ScreenshotDisplayCtn,
+                        children: (0, _.jsx)("img", {
+                          src: _,
+                          alt: _,
                         }),
-                        onMouseEnter: () => _(_),
-                        children: _
-                          ? (0, _.jsx)("img", {
-                              src: _,
-                              alt: _,
-                            })
-                          : (0, _.jsx)("button", {
-                              type: "button",
-                              className: _().ThumbnailButton,
-                              onClick: () => {
-                                const _ = [...(_ || [])];
-                                if (_.length > 0) {
-                                  for (let _ = 0; _ < _; ++_) {
-                                    const _ = _.shift();
-                                    _ && _.push(_);
-                                  }
-                                  _(_.map((_) => (0, _._)(_, "full")));
-                                }
-                              },
-                              children: (0, _.jsx)("img", {
-                                src: _,
-                                alt: _,
-                              }),
-                            }),
                       },
-                      _ + "_small_" + _,
+                      _ + "_big_" + _,
                     ),
-                  ),
-                    _.push(
-                      (0, _.jsx)(
-                        "div",
-                        {
-                          className: _().ScreenshotDisplayCtn,
-                          children: (0, _.jsx)("img", {
-                            src: _,
-                            alt: _,
-                          }),
-                        },
-                        _ + "_big_" + _,
-                      ),
-                    );
-                }
-              }),
+                  );
+              }
+            }),
             !_ && (!_ || _.length == 0))
           )
             return null;
@@ -36015,7 +35241,6 @@ ${_}`;
           });
         }
         function _(_) {
-          var _;
           const {
             ref: _,
             name: _,
@@ -36027,7 +35252,7 @@ ${_}`;
           } = _;
           if (
             ((0, _.useEffect)(() => {
-              const _ = _ == null ? void 0 : _.current;
+              const _ = _?.current;
               if (_ != null && _ > 0 && _) {
                 const _ = () => {
                   _.currentTime = _ || 0;
@@ -36064,21 +35289,18 @@ ${_}`;
                   loop: !0,
                   muted: !0,
                   poster: _ != null && _ > 0 ? void 0 : _.screenshot_full,
-                  children:
-                    (_ = _.microtrailer) == null
-                      ? void 0
-                      : _.map((_) =>
-                          _._.IN_CLIENT && _.type == "video/mp4"
-                            ? null
-                            : (0, _.jsx)(
-                                "source",
-                                {
-                                  src: (0, _._)(_, _.filename || ""),
-                                  type: _.type,
-                                },
-                                _.filename,
-                              ),
+                  children: _.microtrailer?.map((_) =>
+                    _._.IN_CLIENT && _.type == "video/mp4"
+                      ? null
+                      : (0, _.jsx)(
+                          "source",
+                          {
+                            src: (0, _._)(_, _.filename || ""),
+                            type: _.type,
+                          },
+                          _.filename,
                         ),
+                  ),
                 }),
               _ &&
                 (0, _.jsx)("button", {
@@ -36159,7 +35381,7 @@ ${_}`;
                       style: {
                         display: "none",
                       },
-                      children: (_ == null ? void 0 : _.name) || "",
+                      children: _?.name || "",
                     }),
                     (0, _.jsx)("div", {
                       _: _,
@@ -36357,10 +35579,9 @@ ${_}`;
           return [_, _];
         }
         function _(_) {
-          var _;
           const { closeModal: _, rgImageURL: _ } = _,
             [_, _] = _.useState(0),
-            _ = (_ = _ == null ? void 0 : _.length) != null ? _ : 0,
+            _ = _?.length ?? 0,
             _ = _.useCallback(() => {
               _ == 0 ? _(_ - 1) : _(_ - 1);
             }, [_, _]),
@@ -36377,7 +35598,7 @@ ${_}`;
             children: [
               (0, _.jsx)(_, {
                 index: _,
-                numElements: (_ == null ? void 0 : _.length) || 0,
+                numElements: _?.length || 0,
                 fnForward: _,
                 fnBackwards: _,
                 fnClose: _,
@@ -36387,7 +35608,7 @@ ${_}`;
                 className: _().PopupScreenshotContainer,
                 children: (0, _.jsx)("img", {
                   className: _().PopupScreenshot,
-                  src: _ == null ? void 0 : _[_],
+                  src: _?.[_],
                   alt: "",
                 }),
               }),
@@ -36403,10 +35624,10 @@ ${_}`;
             fnClose: _,
             bCircular: _,
           } = _;
-          _("ArrowLeft", () => (_ == null ? void 0 : _()), !0, !0),
-            _("Left", () => (_ == null ? void 0 : _()), !0, !0),
-            _("ArrowRight", () => (_ == null ? void 0 : _()), !0, !0),
-            _("Right", () => (_ == null ? void 0 : _()), !0, !0),
+          _("ArrowLeft", () => _?.(), !0, !0),
+            _("Left", () => _?.(), !0, !0),
+            _("ArrowRight", () => _?.(), !0, !0),
+            _("Right", () => _?.(), !0, !0),
             _("Escape", () => _ && _(), !0, !0),
             _("Esc", () => _ && _(), !0, !0);
           let _ = _ > 1;
@@ -36567,47 +35788,15 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "m_observer", null),
-              _(this, "m_refElement", _.createRef()),
-              _(this, "m_elTracked", null),
-              _(this, "m_bPreviouslyIntersecting", !1),
-              _(this, "HandleRef", (_) => {
-                (0, _._)(this.m_refElement, _),
-                  this.props.containerRef &&
-                    (0, _._)(this.props.containerRef, _);
-              }),
-              _(this, "OnIntersection", (_) => {
-                let _ = !1;
-                for (const _ of _)
-                  if (_.isIntersecting) {
-                    _ = !0;
-                    break;
-                  }
-                this.m_bPreviouslyIntersecting != _ &&
-                  ((this.m_bPreviouslyIntersecting = _),
-                  this.props.onVisibilityChange &&
-                    this.props.onVisibilityChange(_),
-                  _ && this.BTriggerOnce() && this.DestroyObserver());
-              });
-          }
           static GetScrollableClassname() {
             return "vt-scrollable";
           }
+          m_observer = null;
+          m_refElement = _.createRef();
+          m_elTracked = null;
+          m_bPreviouslyIntersecting = !1;
           BTriggerOnce() {
             return (this.props.trigger || "once") == "once";
           }
@@ -36671,6 +35860,22 @@ ${_}`;
               );
             });
           }
+          HandleRef = (_) => {
+            (0, _._)(this.m_refElement, _),
+              this.props.containerRef && (0, _._)(this.props.containerRef, _);
+          };
+          OnIntersection = (_) => {
+            let _ = !1;
+            for (const _ of _)
+              if (_.isIntersecting) {
+                _ = !0;
+                break;
+              }
+            this.m_bPreviouslyIntersecting != _ &&
+              ((this.m_bPreviouslyIntersecting = _),
+              this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+              _ && this.BTriggerOnce() && this.DestroyObserver());
+          };
           render() {
             let {
               onVisibilityChange: _,
@@ -36700,7 +35905,6 @@ ${_}`;
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -36711,18 +35915,29 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = _()("2026-11-23T09:30:00-08:00").unix(),
-          _ = _()("2026-11-30T10:00:00-08:00").unix(),
-          _ = "store/promo/steamawards2025/";
+          _ = _()("2026-11-30T10:00:00-08:00").unix();
         function _() {
           return 2025;
         }
         function _(_) {
-          return `${Config.MEDIA_CDN_URL}store/promo/${_}`;
+          return `${_._.MEDIA_CDN_URL}store/promo/${_}`;
         }
         const _ = "#173471",
           _ = "#ee6c5d",
-          _ = "#FFFFFF",
-          _ = _()("2026-12-17T09:30:00-08:00").unix(),
+          _ = "#FFFFFF";
+        function _() {
+          return {
+            strBackgroundColor: "red",
+            strBackgroundImageURL: _("steamawards2025/header_notrophy.webp"),
+            strTrophyImageURL: _("steamawards2025/trophy_220.png?v=1"),
+            strButtonColor: "blue",
+            strTextColor: "white",
+          };
+        }
+        function _() {
+          return `${_._.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
+        }
+        const _ = _()("2026-12-17T09:30:00-08:00").unix(),
           _ = _()("2027-01-02T10:00:00-08:00").unix(),
           _ = {
             2023: 2640290,
@@ -36730,7 +35945,7 @@ ${_}`;
             2025: 4147080,
             2026: 5350740,
           },
-          _ = 4147080,
+          _ = 5350740,
           _ = 2215130;
         function _(_) {
           switch (_) {
@@ -36746,12 +35961,16 @@ ${_}`;
         function _(_) {
           return _ >= _ && _ < _;
         }
+        function _(_, _) {
+          return (
+            _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds()
+          );
+        }
         function _(_) {
           return _ >= _;
         }
         function _(_, _, _, _) {
-          const _ = _(_),
-            _ = _(_, _),
+          const _ = _(_, _),
             _ = _(_, _);
           if (!(!_.length && !_.length))
             return {
@@ -36779,17 +35998,14 @@ ${_}`;
           return _ > 0;
         }
         function _(_, _) {
-          var _, _;
           const _ = [];
           for (const _ of _.filter(_)) {
             const _ = _.find((_) => _.voteid == _);
-            (_ = _ == null ? void 0 : _.localization) != null &&
-              _.title &&
+            _?.localization?.title &&
               _.push({
                 eCategoryID: _,
                 strTitle: _.localization.title,
-                strDescription:
-                  (_ = _.localization.award_description) != null ? _ : "",
+                strDescription: _.localization.award_description ?? "",
                 bLaborOfLove: _.flag == _._._,
               });
           }
@@ -36802,7 +36018,6 @@ ${_}`;
           return ["StoreSales.GetUserVotes", _, _];
         }
         function _(_, _) {
-          var _;
           const _ = (0, _._)(),
             _ = _(_._.accountid),
             { data: _, isPending: _ } = (0, _._)({
@@ -36814,11 +36029,13 @@ ${_}`;
               mutationFn: async (_) => {
                 const _ = await _.NominateForSteamAward(_, _);
                 if (_ != _._)
-                  throw new Error(`SteamAwards.Nominate failed with ${_}`);
+                  throw new Error(
+                    `SteamAwards.Nominate failed with ${_} for ${_} and appid ${_}`,
+                  );
               },
               onMutate: (_) =>
                 _.setQueryData(_, (_) => [
-                  ...(_ != null ? _ : []).filter((_) => _.category_id != _),
+                  ...(_ ?? []).filter((_) => _.category_id != _),
                   {
                     category_id: _,
                     appid: _,
@@ -36830,17 +36047,12 @@ ${_}`;
                 }),
             });
           return {
-            unNominatedAppID:
-              (_ = _ == null ? void 0 : _.find((_) => _.category_id == _)) ==
-              null
-                ? void 0
-                : _.appid,
+            unNominatedAppID: _?.find((_) => _.category_id == _)?.appid,
             bAnswered: _ != null || !_._.accountid || !_,
             Nominate: _,
           };
         }
         function _(_, _) {
-          var _;
           const _ = (0, _._)(),
             _ = _(_._.accountid),
             { data: _, isPending: _ } = (0, _._)({
@@ -36856,7 +36068,7 @@ ${_}`;
               },
               onMutate: (_) =>
                 _.setQueryData(_, (_) => [
-                  ...(_ != null ? _ : []).filter((_) => _.voteid != _),
+                  ...(_ ?? []).filter((_) => _.voteid != _),
                   {
                     voteid: _,
                     appid: _,
@@ -36868,10 +36080,7 @@ ${_}`;
                 }),
             });
           return {
-            unVotedAppID:
-              (_ = _ == null ? void 0 : _.find((_) => _.voteid == _)) == null
-                ? void 0
-                : _.appid,
+            unVotedAppID: _?.find((_) => _.voteid == _)?.appid,
             bAnswered: _ != null || !_._.accountid || !_,
             Vote: _,
           };
@@ -36892,15 +36101,6 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -36909,32 +36109,31 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
           constructor() {
-            _(this, "accountid"),
-              _(this, "steamid"),
-              _(this, "appid"),
-              _(this, "hub_popular"),
-              _(this, "popular"),
-              _(this, "relay_broadcast_id"),
-              _(this, "rowversion"),
-              _(this, "thumbnail_http_address"),
-              _(this, "nAppIDVOD"),
-              _(this, "title"),
-              _(this, "viewer_count"),
-              _(this, "whitelist_rank"),
-              _(this, "gamedata_subtitle"),
-              _(this, "store_title"),
-              _(this, "left_panel"),
-              _(this, "right_panel"),
-              _(this, "snr"),
-              _(this, "broadcast_chat_visibility"),
-              _(this, "default_selection_priority", 0),
-              _(this, "current_selection_priority", 0),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          accountid;
+          steamid;
+          appid;
+          hub_popular;
+          popular;
+          relay_broadcast_id;
+          rowversion;
+          thumbnail_http_address;
+          nAppIDVOD;
+          title = void 0;
+          viewer_count = void 0;
+          whitelist_rank;
+          gamedata_subtitle = void 0;
+          store_title;
+          left_panel;
+          right_panel;
+          snr;
+          broadcast_chat_visibility;
+          default_selection_priority = 0;
+          current_selection_priority = 0;
         }
         _([_._], _.prototype, "title", 2),
           _([_._], _.prototype, "viewer_count", 2),
@@ -37004,7 +36203,6 @@ ${_}`;
             _
           ))(_ || {});
         function _(_) {
-          var _;
           const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
             { data: _ } = (0, _._)(_),
             _ = _.useRef(0),
@@ -37022,8 +36220,7 @@ ${_}`;
           );
           if (_.length === 0)
             return _ &&
-              (_ = _.related_items) != null &&
-              _.parent_appid &&
+              _.related_items?.parent_appid &&
               (_.type == _._._ || _.type == _._._)
               ? (0, _.jsx)(_, {
                   ..._,
@@ -37057,26 +36254,22 @@ ${_}`;
           });
         }
         function _(_) {
-          var _;
           const { trailer: _ } = _;
           return !_ || !_.microtrailer
             ? null
             : (0, _.jsx)(_.Fragment, {
-                children:
-                  (_ = _.microtrailer) == null
-                    ? void 0
-                    : _.map((_) =>
-                        _._.IN_CLIENT && _.type == "video/mp4"
-                          ? null
-                          : (0, _.jsx)(
-                              "source",
-                              {
-                                src: (0, _._)(_, _.filename || ""),
-                                type: _.type,
-                              },
-                              _.filename,
-                            ),
+                children: _.microtrailer?.map((_) =>
+                  _._.IN_CLIENT && _.type == "video/mp4"
+                    ? null
+                    : (0, _.jsx)(
+                        "source",
+                        {
+                          src: (0, _._)(_, _.filename || ""),
+                          type: _.type,
+                        },
+                        _.filename,
                       ),
+                ),
               });
         }
       },
@@ -37097,13 +36290,9 @@ ${_}`;
             : !1;
         }
         function _(_) {
-          var _, _;
-          return !_ ||
-            !((_ = _.related_items) != null && _.standalone_demo_appid)
+          return !_ || !_.related_items?.standalone_demo_appid
             ? []
-            : (_ = _.related_items) == null
-              ? void 0
-              : _.standalone_demo_appid;
+            : _.related_items?.standalone_demo_appid;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -37125,8 +36314,7 @@ ${_}`;
               (_) => {
                 _.isIntersecting &&
                   _((_) =>
-                    (_ == null ? void 0 : _.appID) == _ &&
-                    (_ == null ? void 0 : _.snr) == _
+                    _?.appID == _ && _?.snr == _
                       ? _
                       : {
                           appID: _,
@@ -37180,13 +36368,13 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          return _ != null && _.is_coming_soon
+          return _?.is_coming_soon
             ? _(
                 _.coming_soon_display,
                 _.steam_release_date,
                 _.custom_release_date_message,
               )
-            : _ != null && _.steam_release_date
+            : _?.steam_release_date
               ? (0, _._)(_.steam_release_date)
               : "";
         }
@@ -37357,16 +36545,28 @@ ${_}`;
             _ = (0, _._)();
           return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
         }
+        function _(_) {
+          return `LocalizedTagNames2_${_}`;
+        }
+        function _(_) {
+          const _ = {};
+          return (
+            (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
+          );
+        }
+        async function _(_, _) {
+          const _ = await _.GetObject(_(_));
+          return _ ? _(_) : void 0;
+        }
         function _(_, _, _) {
           return {
             queryKey: ["LocalizedTagNames", _],
             queryFn: async () => {
-              const _ = `LocalizedTagNames2_${_}`,
+              const _ = _(_),
                 _ = await _.GetObject(_),
                 _ = _._.Init(_._);
               _.Body().set_language(_),
-                _ != null &&
-                  _.version_hash &&
+                _?.version_hash &&
                   _.Body().set_have_version_hash(_.version_hash);
               const _ = await _._.GetTagList(_, _);
               let _;
@@ -37379,13 +36579,7 @@ ${_}`;
                 ),
                   (_ = _);
               else throw _.GetErrorMessage();
-              const _ = {};
-              return (
-                ((_ == null ? void 0 : _.tags) || []).forEach(
-                  ({ tagid: _, name: _ }) => (_[_] = _),
-                ),
-                _
-              );
+              return _(_);
             },
             staleTime: 3600 * 1e3,
           };
@@ -37428,7 +36622,7 @@ ${_}`;
           );
         }
         function _(_) {
-          if (!(_ != null && _.length)) return [];
+          if (!_?.length) return [];
           const _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
           return Array.from(new Set(_));
         }
@@ -37436,7 +36630,7 @@ ${_}`;
           const { data: _ } = useStoreItemDefaultInfo({
             appid: _,
           });
-          return (_ == null ? void 0 : _.appid) || _;
+          return _?.appid || _;
         }
         function _(_) {
           const { data: _ } = (0, _._)(_);
@@ -37530,7 +36724,7 @@ ${_}`;
           };
         }
         function _(_) {
-          return ["AccountFollowApps", _ != null ? _ : 0];
+          return ["AccountFollowApps", _ ?? 0];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -37628,7 +36822,7 @@ ${_}`;
           };
         }
         function _(_) {
-          return ["AccountIgnoreApps", _ != null ? _ : 0];
+          return ["AccountIgnoreApps", _ ?? 0];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -37779,7 +36973,7 @@ ${_}`;
           );
         }
         function _(_) {
-          return ["AccountOwnedApps", _ != null ? _ : 0];
+          return ["AccountOwnedApps", _ ?? 0];
         }
         function _(_) {
           const { data: _ } = (0, _._)(_ && "appid" in _ ? void 0 : _),
@@ -37816,21 +37010,18 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_, _) {
-          var _, _, _, _, _;
           const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
             _ = await (await fetch(_)).json(),
             _ = new Set();
-          (_ = _.rgCreatorsIgnored) == null || _.forEach((_) => _.add(_)),
-            (_ = _.rgCreatorsFollowed) == null || _.forEach((_) => _.add(_));
+          _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
+            _.rgCreatorsFollowed?.forEach((_) => _.add(_));
           const _ = new Set();
           return (
-            (_ = _.rgCreatorsIgnored) == null || _.forEach((_) => _.add(_)),
+            _.rgCreatorsIgnored?.forEach((_) => _.add(_)),
             [
-              ...((_ = _.rgCuratorsIgnored) != null ? _ : []),
+              ...(_.rgCuratorsIgnored ?? []),
               ...(_.rgCurators
-                ? Object.values((_ = _.rgCurators) != null ? _ : {}).map(
-                    (_) => _.clanid,
-                  )
+                ? Object.values(_.rgCurators ?? {}).map((_) => _.clanid)
                 : []),
             ].map((_) => {
               const _ = _.has(_);
@@ -37865,18 +37056,12 @@ ${_}`;
           };
         }
         function _(_) {
-          var _;
           const { data: _ } = _();
-          return _ === void 0 || _ == null
-            ? void 0
-            : !!((_ = _.get(_)) != null && _.followed);
+          return _ === void 0 || _ == null ? void 0 : !!_.get(_)?.followed;
         }
         function _(_) {
-          var _;
           const { data: _ } = _();
-          return _ === void 0 || _ == null
-            ? void 0
-            : !!((_ = _.get(_)) != null && _.ignored);
+          return _ === void 0 || _ == null ? void 0 : !!_.get(_)?.ignored;
         }
         function _(_) {
           const { data: _ } = _();
@@ -37904,41 +37089,38 @@ ${_}`;
               if (!_) return;
               const _ = new Map(_);
               return (
-                _ == null ||
-                  _.forEach((_) => {
-                    _.has(_.clanAccountID)
-                      ? (_.get(_.clanAccountID).followed = !0)
-                      : _.set(_.clanAccountID, {
-                          clanid: _.clanAccountID,
-                          followed: !0,
-                          ignored: !1,
-                          is_creator: !1,
-                        });
-                  }),
-                _ == null ||
-                  _.forEach((_) => {
-                    _.has(_.clanAccountID)
-                      ? (_.get(_.clanAccountID).ignored = !0)
-                      : _.set(_.clanAccountID, {
-                          clanid: _.clanAccountID,
-                          followed: !1,
-                          ignored: !0,
-                          is_creator: !1,
-                        });
-                  }),
-                _ == null || _.forEach((_) => _.delete(_.clanAccountID)),
-                _ == null ||
-                  _.forEach((_) => {
-                    let _ = _.get(_.clanAccountID);
-                    _ && (_.is_creator = !0);
-                  }),
+                _?.forEach((_) => {
+                  _.has(_.clanAccountID)
+                    ? (_.get(_.clanAccountID).followed = !0)
+                    : _.set(_.clanAccountID, {
+                        clanid: _.clanAccountID,
+                        followed: !0,
+                        ignored: !1,
+                        is_creator: !1,
+                      });
+                }),
+                _?.forEach((_) => {
+                  _.has(_.clanAccountID)
+                    ? (_.get(_.clanAccountID).ignored = !0)
+                    : _.set(_.clanAccountID, {
+                        clanid: _.clanAccountID,
+                        followed: !1,
+                        ignored: !0,
+                        is_creator: !1,
+                      });
+                }),
+                _?.forEach((_) => _.delete(_.clanAccountID)),
+                _?.forEach((_) => {
+                  let _ = _.get(_.clanAccountID);
+                  _ && (_.is_creator = !0);
+                }),
                 _
               );
             });
           };
         }
         function _(_) {
-          return ["CuratorAffinityQueryKey", _ != null ? _ : 0];
+          return ["CuratorAffinityQueryKey", _ ?? 0];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -38000,11 +37182,7 @@ ${_}`;
           };
         }
         function _(_) {
-          var _;
-          const _ =
-            (_ = _ == null ? void 0 : _.preferences) == null
-              ? void 0
-              : _.primary_language;
+          const _ = _?.preferences?.primary_language;
           return _ === void 0 || _ <= k_ELanguage_None || _ >= k_ELanguage_MAX
             ? PchLanguageToELanguage(Config.LANGUAGE)
             : _;
@@ -38050,15 +37228,11 @@ ${_}`;
           return _;
         }
         function _(_) {
-          var _, _, _;
-          return (_ = _ == null ? void 0 : _.content_descriptor_preferences) !=
-            null && _.content_descriptors_to_exclude
-            ? ((_ =
-                (_ = _.content_descriptor_preferences) == null
-                  ? void 0
-                  : _.content_descriptors_to_exclude) == null
-                ? void 0
-                : _.map((_) => _.content_descriptorid)) || []
+          return _?.content_descriptor_preferences
+            ?.content_descriptors_to_exclude
+            ? _.content_descriptor_preferences?.content_descriptors_to_exclude?.map(
+                (_) => _.content_descriptorid,
+              ) || []
             : _;
         }
         function _() {
@@ -38074,7 +37248,7 @@ ${_}`;
           };
         }
         function _(_) {
-          return ["StorePreferencesQueryKey", _ != null ? _ : 0];
+          return ["StorePreferencesQueryKey", _ ?? 0];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -38175,7 +37349,7 @@ ${_}`;
           };
         }
         function _(_) {
-          return ["AccountWishlistApps", _ != null ? _ : 0];
+          return ["AccountWishlistApps", _ ?? 0];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -38297,15 +37471,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -38314,8 +37479,7 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 5;
         var _ = ((_) => (
           (_[(_.None = 0)] = "None"),
@@ -38324,33 +37488,32 @@ ${_}`;
           _
         ))(_ || {});
         class _ {
+          m_elVideo = null;
+          m_player = null;
+          m_listeners = new _._();
+          m_persistState = {};
+          m_fnOnPlaybackEnd;
+          m_fnOnPlayPauseChange;
+          m_fnOnMuteChange;
+          m_bMuteWhenAutoplayBlocked = !1;
+          m_strStatsURL = "";
+          m_bSentStats = !1;
+          m_bPaused = !1;
+          m_bUserInputNeeded = !1;
+          m_bMuted = !1;
+          m_nVolume = 1;
+          m_eFailureReason = _._.Invalid;
+          m_maxDimensions = null;
+          m_bPlaybackStarted = !1;
+          m_bBuffering = !0;
+          m_bHasCaptions = !1;
+          m_bShowingCaption = !1;
+          m_nPlaybackTime = 0;
+          m_nVideoStartTime = 0;
+          m_nVideoDuration = 0;
+          m_nBufferedEndTime = 0;
           constructor(_) {
-            _(this, "m_elVideo", null),
-              _(this, "m_player", null),
-              _(this, "m_listeners", new _._()),
-              _(this, "m_persistState", {}),
-              _(this, "m_fnOnPlaybackEnd"),
-              _(this, "m_fnOnPlayPauseChange"),
-              _(this, "m_fnOnMuteChange"),
-              _(this, "m_bMuteWhenAutoplayBlocked", !1),
-              _(this, "m_strStatsURL", ""),
-              _(this, "m_bSentStats", !1),
-              _(this, "m_bPaused", !1),
-              _(this, "m_bUserInputNeeded", !1),
-              _(this, "m_bMuted", !1),
-              _(this, "m_nVolume", 1),
-              _(this, "m_eFailureReason", _._.Invalid),
-              _(this, "m_maxDimensions", null),
-              _(this, "m_bPlaybackStarted", !1),
-              _(this, "m_bBuffering", !0),
-              _(this, "m_bHasCaptions", !1),
-              _(this, "m_bShowingCaption", !1),
-              _(this, "m_nPlaybackTime", 0),
-              _(this, "m_nVideoStartTime", 0),
-              _(this, "m_nVideoDuration", 0),
-              _(this, "m_nBufferedEndTime", 0),
-              (0, _._)(this),
-              (this.m_persistState = _ || {});
+            (0, _._)(this), (this.m_persistState = _ || {});
           }
           IsPaused() {
             return this.m_bPaused;
@@ -38729,7 +37892,7 @@ ${_}`;
           );
         }
         function _(_, _, _) {
-          if (!navigator || typeof navigator.sendBeacon == "undefined") return;
+          if (!navigator || typeof navigator.sendBeacon > "u") return;
           let _ = _.GetDASHPlayerStats().GetPlayerStatsSummary(),
             _ = _.GetAndCloseWatchedIntervals();
           if (_.reduce((_, _) => _ + (_[1] - _[0]), 0) < _ && _ == _._.Invalid)
@@ -39106,12 +38269,10 @@ ${_}`;
           ];
         }
         function _(_) {
-          var _;
           let _ = _.target,
             _ = _.currentTarget;
           for (; _ && _ != _; ) {
-            if (((_ = _.dataset) == null ? void 0 : _.keepcontrols) == "true")
-              return !0;
+            if (_.dataset?.keepcontrols == "true") return !0;
             _ = _.parentElement;
           }
           return !1;
@@ -39281,12 +38442,11 @@ ${_}`;
                 if (_.ownerDocument.defaultView)
                   return (
                     _.ownerDocument.defaultView.addEventListener("mouseup", _),
-                    () => {
-                      var _;
-                      return (_ = _.ownerDocument.defaultView) == null
-                        ? void 0
-                        : _.removeEventListener("mouseup", _);
-                    }
+                    () =>
+                      _.ownerDocument.defaultView?.removeEventListener(
+                        "mouseup",
+                        _,
+                      )
                   );
               },
               [_, _, _],
@@ -40952,15 +40112,9 @@ ${_}`;
             });
           if (!_._) throw new Error(_ + " answered " + _.status);
           const _ = await _.json();
-          if (
-            (_ == null ? void 0 : _.success) != _._ &&
-            (_ == null ? void 0 : _.success) != "ready"
-          )
+          if (_?.success != _._ && _?.success != "ready")
             throw new Error(
-              "video/details on " +
-                _ +
-                " answered " +
-                (_ == null ? void 0 : _.success),
+              "video/details on " + _ + " answered " + _?.success,
             );
           return {
             appid: _,
@@ -41086,15 +40240,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -41103,8 +40248,7 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = null,
           _ = {
             bScheduleEnabled: !1,
@@ -41117,8 +40261,9 @@ ${_}`;
             duration_seconds: 3600,
           };
         class _ {
+          m_eventModel;
           constructor(_) {
-            _(this, "m_eventModel"), (this.m_eventModel = _);
+            this.m_eventModel = _;
           }
           BHasScheduleEnabled() {
             return this.m_eventModel.jsondata.bScheduleEnabled;
@@ -41137,20 +40282,16 @@ ${_}`;
           }
         }
         class _ {
+          m_eventModel;
+          m_entry;
           constructor(_, _) {
-            _(this, "m_eventModel"),
-              _(this, "m_entry"),
-              (this.m_eventModel = _),
-              (this.m_entry = _);
+            (this.m_eventModel = _), (this.m_entry = _);
           }
           GetEventStartTime() {
-            var _, _;
             return this.m_entry.rtime_start_specific
               ? this.m_entry.rtime_start_specific
-              : ((_ = this.m_eventModel.startTime) != null ? _ : 0) +
-                  ((_ = this.m_entry.delta_from_event_start_seconds) != null
-                    ? _
-                    : 0);
+              : (this.m_eventModel.startTime ?? 0) +
+                  (this.m_entry.delta_from_event_start_seconds ?? 0);
           }
         }
         _([_._], _.prototype, "GetEventStartTime", 1);
@@ -41159,15 +40300,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -41176,8 +40308,7 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = [
           _._,
           _.zeJ,
@@ -41239,12 +40370,11 @@ ${_}`;
           return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
         }
         function _(_, _ = (0, _._)()) {
-          var _;
           const _ = 60 * _._.PerDay;
           return (
             _.BIsVisibleEvent(_) &&
             _.BIsOGGEvent() &&
-            ((_ = _.rtime32_last_modified) != null ? _ : 0) > _ - _ &&
+            (_.rtime32_last_modified ?? 0) > _ - _ &&
             !_(_)
           );
         }
@@ -41387,9 +40517,7 @@ ${_}`;
                 : 0;
         }
         function _(_) {
-          return _ != null && _.store_filter
-            ? JSON.stringify(_.store_filter)
-            : void 0;
+          return _?.store_filter ? JSON.stringify(_.store_filter) : void 0;
         }
         function _(_) {
           switch (_) {
@@ -41426,27 +40554,25 @@ ${_}`;
           return !1;
         }
         function _(_, _ = !1) {
-          var _, _;
           return !_ || !_(_.section_type)
             ? !1
             : _
-              ? (_ = (_ = _.sale_tag_filter) == null ? void 0 : _.clauses) !=
-                  null && _.length
+              ? _.sale_tag_filter?.clauses?.length
                 ? !0
                 : !!_.smart_section
               : !!_.smart_section && _.smart_section_type != null;
         }
         function _(_) {
-          return _(_) ? (_ == null ? void 0 : _.smart_section_type) : void 0;
+          return _(_) ? _?.smart_section_type : void 0;
         }
         function _(_) {
-          var _;
-          const _ =
-            _.jsondata.sale_ml_recommender_delay_hours &&
-            ((_ = _.startTime) != null ? _ : 0) +
-              _.jsondata.sale_ml_recommender_delay_hours * _._.PerHour -
-              new Date().getTime() / 1e3;
-          return _ != null ? _ : 0;
+          return (
+            (_.jsondata.sale_ml_recommender_delay_hours &&
+              (_.startTime ?? 0) +
+                _.jsondata.sale_ml_recommender_delay_hours * _._.PerHour -
+                new Date().getTime() / 1e3) ??
+            0
+          );
         }
         const _ = 2.5;
         function _(_, _, _) {
@@ -41491,14 +40617,11 @@ ${_}`;
         ))(_ || {});
         function _(_) {
           return {
-            arrowFill: _ == null ? void 0 : _.sale_carousel_arrow_color,
-            arrowStyle: _ == null ? void 0 : _.sale_carousel_arrow_style,
-            breadcrumbActiveColor:
-              _ == null ? void 0 : _.sale_carousel_active_breadcrumb_color,
-            breadcrumbColor:
-              _ == null ? void 0 : _.sale_carousel_breadcrumb_color,
-            breadcrumbStyle:
-              _ == null ? void 0 : _.sale_carousel_breadcrumb_style,
+            arrowFill: _?.sale_carousel_arrow_color,
+            arrowStyle: _?.sale_carousel_arrow_style,
+            breadcrumbActiveColor: _?.sale_carousel_active_breadcrumb_color,
+            breadcrumbColor: _?.sale_carousel_breadcrumb_color,
+            breadcrumbStyle: _?.sale_carousel_breadcrumb_style,
           };
         }
         function _(_, _, _) {
@@ -41615,70 +40738,65 @@ ${_}`;
           _ = [],
           _ = class _ {
             constructor() {
-              _(this, "GID"),
-                _(this, "AnnouncementGID"),
-                _(this, "clanSteamID", new _._()),
-                _(this, "forumTopicGID"),
-                _(this, "clanSteamIDOriginal"),
-                _(this, "type", _.DRF),
-                _(this, "appid", 0),
-                _(this, "name", new Map()),
-                _(this, "description", new Map()),
-                _(this, "timestamp_loc_updated", new Map()),
-                _(this, "createTime"),
-                _(this, "startTime"),
-                _(this, "endTime"),
-                _(this, "visibilityStartTime"),
-                _(this, "visibilityEndTime"),
-                _(this, "m_nBuildID"),
-                _(this, "m_strBuildBranch"),
-                _(this, "postTime"),
-                _(this, "visibility_state", 0),
-                _(this, "broadcaster"),
-                _(this, "jsondata", _),
-                _(this, "nCommentCount", 0),
-                _(this, "nVotesUp", 0),
-                _(this, "nVotesDown", 0),
-                _(this, "comment_type"),
-                _(this, "gidfeature"),
-                _(this, "gidfeature2"),
-                _(this, "featured_app_tagid"),
-                _(this, "bOldAnnouncement", !1),
-                _(this, "announcementClanSteamID"),
-                _(this, "loadedAllLanguages", !1),
-                _(this, "bLoaded", !1),
-                _(this, "deleteInProgress", !1),
-                _(this, "vecTags", new Array()),
-                _(this, "creator_steamid"),
-                _(this, "last_update_steamid"),
-                _(this, "rtime32_last_modified"),
-                _(this, "rtime32_last_solr_search_col_updated"),
-                _(this, "rtime32_last_local_modification"),
-                _(this, "rtime32_moderator_reviewed"),
-                _(this, "video_preview_type"),
-                _(this, "video_preview_id"),
-                _(this, "has_live_stream"),
-                _(this, "live_stream_viewer_count"),
-                _(this, "m_overrideCurrentDay"),
-                _(this, "fnGetLocalizedGroupImages"),
-                (0, _._)(this);
+              (0, _._)(this);
             }
+            GID = void 0;
+            AnnouncementGID = void 0;
+            clanSteamID = new _._();
+            forumTopicGID = void 0;
+            clanSteamIDOriginal = void 0;
+            type = _.DRF;
+            appid = 0;
+            name = new Map();
+            description = new Map();
+            timestamp_loc_updated = new Map();
+            createTime = void 0;
+            startTime = void 0;
+            endTime = void 0;
+            visibilityStartTime = void 0;
+            visibilityEndTime = void 0;
+            m_nBuildID = void 0;
+            m_strBuildBranch = void 0;
+            postTime = void 0;
+            visibility_state = 0;
+            broadcaster = void 0;
+            jsondata = _;
+            nCommentCount = 0;
+            nVotesUp = 0;
+            nVotesDown = 0;
+            comment_type;
+            gidfeature;
+            gidfeature2;
+            featured_app_tagid;
+            bOldAnnouncement = !1;
+            announcementClanSteamID = void 0;
+            loadedAllLanguages = !1;
+            bLoaded = !1;
+            deleteInProgress = !1;
+            vecTags = new Array();
+            creator_steamid;
+            last_update_steamid = void 0;
+            rtime32_last_modified = void 0;
+            rtime32_last_solr_search_col_updated = void 0;
+            rtime32_last_local_modification = void 0;
+            rtime32_moderator_reviewed = void 0;
+            video_preview_type = void 0;
+            video_preview_id = void 0;
+            has_live_stream;
+            live_stream_viewer_count;
+            m_overrideCurrentDay = void 0;
+            fnGetLocalizedGroupImages;
             BIsPartnerEvent() {
               return !this.bOldAnnouncement && !!this.GID;
             }
             static FromJSON(_) {
-              var _, _;
               let _ = new _(),
                 _ = JSON.parse(_);
               return (
                 Object.assign(_, _),
                 (_.name = new Map(_.name)),
                 (_.description = new Map(_.description)),
-                (_.vecTags = [
-                  ...((_ = (_ = _.vecTags) != null ? _ : _.tags) != null
-                    ? _
-                    : []),
-                ]),
+                (_.vecTags = [...(_.vecTags ?? _.tags ?? [])]),
                 (_.clanSteamID = new _._(_.clanSteamID)),
                 (0, _._)(
                   _.clanSteamID && _.clanSteamID.BIsValid(),
@@ -41696,19 +40814,18 @@ ${_}`;
               );
             }
             static FromCClanEventData(_, _) {
-              var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
               let _ = new _();
               (_.GID = _.gid),
                 (_.clanSteamID = new _._(_.clan_steamid)),
-                _.name.set(_, (_ = _.event_name) != null ? _ : ""),
+                _.name.set(_, _.event_name ?? ""),
                 (_.type = _.event_type),
-                (_.appid = (_ = _.appid) != null ? _ : 0),
+                (_.appid = _.appid ?? 0),
                 (_.startTime = _.rtime32_start_time),
                 (_.endTime = _.rtime32_end_time),
-                (_.nCommentCount = (_ = _.comment_count) != null ? _ : 0),
+                (_.nCommentCount = _.comment_count ?? 0),
                 (_.creator_steamid = _.creator_steamid),
                 (_.last_update_steamid = _.last_update_steamid),
-                (_.jsondata = JSON.parse((_ = _.jsondata) != null ? _ : "{}")),
+                (_.jsondata = JSON.parse(_.jsondata ?? "{}")),
                 (_.rtime32_last_local_modification = _.rtime32_last_modified),
                 _.published
                   ? _.hidden
@@ -41726,63 +40843,24 @@ ${_}`;
                   (_.broadcaster = _._.InitFromAccountID(
                     _.broadcaster_accountid,
                   )),
-                (_.AnnouncementGID =
-                  (_ = (_ = _.announcement_body) == null ? void 0 : _.gid) !=
-                  null
-                    ? _
-                    : "0");
+                (_.AnnouncementGID = _.announcement_body?.gid ?? "0");
               const _ = _.clan_steamid_original;
               return (
                 _
                   ? (_.clanSteamIDOriginal = new _._(_))
-                  : (_ = _.announcement_body) != null &&
-                    _.clanid &&
+                  : _.announcement_body?.clanid &&
                     (_.clanSteamIDOriginal = _._.InitFromClanID(
                       Number(_.announcement_body.clanid),
                     )),
-                (_.postTime =
-                  (_ = _.announcement_body) == null ? void 0 : _.posttime),
+                (_.postTime = _.announcement_body?.posttime),
                 (_.forumTopicGID = _.forum_topic_id),
-                _.name.set(
-                  _,
-                  (_ =
-                    (_ = _.announcement_body) == null ? void 0 : _.headline) !=
-                    null
-                    ? _
-                    : "",
-                ),
-                _.description.set(
-                  _,
-                  (_ = (_ = _.announcement_body) == null ? void 0 : _.body) !=
-                    null
-                    ? _
-                    : "",
-                ),
-                (_.nCommentCount = (_ = _.comment_count) != null ? _ : 0),
-                (_.vecTags = [
-                  ...((_ =
-                    (_ = _.announcement_body) == null ? void 0 : _.tags) != null
-                    ? _
-                    : []),
-                ]),
-                (_.forumTopicGID =
-                  (_ = _.announcement_body) == null
-                    ? void 0
-                    : _.forum_topic_id),
-                (_.nVotesUp =
-                  (_ =
-                    (_ = _.announcement_body) == null
-                      ? void 0
-                      : _.voteupcount) != null
-                    ? _
-                    : 0),
-                (_.nVotesDown =
-                  (_ =
-                    (_ = _.announcement_body) == null
-                      ? void 0
-                      : _.votedowncount) != null
-                    ? _
-                    : 0),
+                _.name.set(_, _.announcement_body?.headline ?? ""),
+                _.description.set(_, _.announcement_body?.body ?? ""),
+                (_.nCommentCount = _.comment_count ?? 0),
+                (_.vecTags = [...(_.announcement_body?.tags ?? [])]),
+                (_.forumTopicGID = _.announcement_body?.forum_topic_id),
+                (_.nVotesUp = _.announcement_body?.voteupcount ?? 0),
+                (_.nVotesDown = _.announcement_body?.votedowncount ?? 0),
                 _
               );
             }
@@ -41801,7 +40879,6 @@ ${_}`;
               );
             }
             clone(_ = !1) {
-              var _;
               let _ = new _();
               if (
                 ((_.GID = this.GID),
@@ -41838,7 +40915,7 @@ ${_}`;
                 this.timestamp_loc_updated.forEach((_, _) => {
                   _.timestamp_loc_updated.set(_, _);
                 }),
-                (_.createTime = (_ = this.createTime) != null ? _ : 0),
+                (_.createTime = this.createTime ?? 0),
                 (_.startTime = this.startTime),
                 (_.endTime = this.endTime),
                 (_.visibilityStartTime = this.visibilityStartTime),
@@ -41870,28 +40947,22 @@ ${_}`;
             GetLastReferencedSaleDayFromCapsules(_, _) {
               let _ = _;
               return (
-                _ == null ||
-                  _.forEach((_) => {
-                    _.visibility_index !== void 0 &&
-                      (_ =
-                        _ === void 0
-                          ? _.visibility_index
-                          : Math.max(_, _.visibility_index));
-                  }),
+                _?.forEach((_) => {
+                  _.visibility_index !== void 0 &&
+                    (_ =
+                      _ === void 0
+                        ? _.visibility_index
+                        : Math.max(_, _.visibility_index));
+                }),
                 _
               );
             }
             GetLastReferencedSaleDay() {
-              var _, _, _, _, _;
               let _;
               for (const _ of this.GetSaleSections())
                 if (_.section_type === "tabs") {
-                  if (
-                    ((_ = (_ = _.tabs) == null ? void 0 : _.length) != null
-                      ? _
-                      : 0) > 0
-                  )
-                    for (const _ of (_ = _.tabs) != null ? _ : [])
+                  if ((_.tabs?.length ?? 0) > 0)
+                    for (const _ of _.tabs ?? [])
                       _ = this.GetLastReferencedSaleDayFromCapsules(
                         _.capsules,
                         _,
@@ -41899,10 +40970,8 @@ ${_}`;
                 } else
                   _ = this.GetLastReferencedSaleDayFromCapsules(_.capsules, _);
               return (
-                ((_ = this.jsondata.sale_num_headers) != null ? _ : 0) > 1 &&
-                  (_ == null ||
-                    _ <
-                      ((_ = this.jsondata.sale_num_headers) != null ? _ : 0)) &&
+                (this.jsondata.sale_num_headers ?? 0) > 1 &&
+                  (_ == null || _ < (this.jsondata.sale_num_headers ?? 0)) &&
                   (_ = this.jsondata.sale_num_headers),
                 _
               );
@@ -41937,7 +41006,6 @@ ${_}`;
               );
             }
             GetImgArray(_) {
-              var _, _, _, _;
               let _ = [];
               if (
                 ((_ === "background" || _ == "localized_title_image") &&
@@ -41956,17 +41024,12 @@ ${_}`;
               else if (_ === "broadcast_right")
                 _ = this.jsondata.localized_broadcast_right_image;
               else if (_ === "sale_header")
-                if (
-                  ((_ = this.jsondata.sale_num_headers) != null ? _ : 0) > 1
-                ) {
+                if ((this.jsondata.sale_num_headers ?? 0) > 1) {
                   const _ = Math.min(
-                    ((_ = this.jsondata.sale_num_headers) != null ? _ : 0) - 1,
+                    (this.jsondata.sale_num_headers ?? 0) - 1,
                     this.GetDayIndexFromEventStart(),
                   );
-                  _ =
-                    (_ = this.jsondata.localized_per_day_sales_header) == null
-                      ? void 0
-                      : _[_];
+                  _ = this.jsondata.localized_per_day_sales_header?.[_];
                 } else _ = this.jsondata.localized_sale_header;
               else
                 _ === "sale_logo"
@@ -41974,10 +41037,7 @@ ${_}`;
                   : _ === "sale_overlay"
                     ? (_ = this.jsondata.localized_sale_overlay)
                     : _._.includes(_)
-                      ? (_ =
-                          (_ = this.fnGetLocalizedGroupImages) == null
-                            ? void 0
-                            : _.call(this))
+                      ? (_ = this.fnGetLocalizedGroupImages?.())
                       : _ === "product_banner"
                         ? (_ = this.jsondata.localized_sale_product_banner)
                         : _ === "product_mobile_banner"
@@ -42001,15 +41061,14 @@ ${_}`;
               return _;
             }
             GetImageURL(_, _ = _.Bhc, _ = _._.full) {
-              var _, _;
               const _ = this.GetImgArray(_),
                 _ = _ && _.length > _ && _[_] != null;
-              return _ && (_ = _[_]) != null && _.startsWith("http")
+              return _ && _[_]?.startsWith("http")
                 ? _[_]
                 : _
                   ? _._.GenerateURLFromHashAndExt(
                       this.clanSteamID,
-                      (_ = _[_]) != null ? _ : "",
+                      _[_] ?? "",
                       _,
                     )
                   : void 0;
@@ -42076,9 +41135,7 @@ ${_}`;
                 : this.GetLegacyAnnouncementCommentsURL();
             }
             GetLegacyAnnouncementCommentsURL() {
-              var _;
-              const _ =
-                (_ = this.clanSteamIDOriginal) != null ? _ : this.clanSteamID;
+              const _ = this.clanSteamIDOriginal ?? this.clanSteamID;
               return !this.BHasAnnouncementGID() || !_ || !_.BIsValid()
                 ? ""
                 : _._.COMMUNITY_BASE_URL +
@@ -42088,12 +41145,10 @@ ${_}`;
                     this.AnnouncementGID;
             }
             BIsEventInFuture(_ = (0, _._)()) {
-              var _;
-              return _ < ((_ = this.startTime) != null ? _ : 0);
+              return _ < (this.startTime ?? 0);
             }
             BHasEventEnded(_ = (0, _._)()) {
-              var _;
-              return ((_ = this.endTime) != null ? _ : 0) < _;
+              return (this.endTime ?? 0) < _;
             }
             UpdateVoteCount(_, _) {
               _ == "up"
@@ -42126,15 +41181,9 @@ ${_}`;
               return null;
             }
             GetAppIDOrReferenceAppID() {
-              var _, _;
               return this.appid
                 ? this.appid
-                : (_ =
-                      (_ = this.jsondata) == null
-                        ? void 0
-                        : _.referenced_appids) == null
-                  ? void 0
-                  : _[0];
+                : this.jsondata?.referenced_appids?.[0];
             }
             BImageNeedScreenshotFallback(_, _) {
               let _ = this.GetImageURL(_, _);
@@ -42161,14 +41210,13 @@ ${_}`;
               );
             }
             BIsVisibleEvent(_ = (0, _._)()) {
-              var _, _, _;
               let _ = Math.floor(_);
               return (
                 this.visibility_state == 3 ||
                 (this.visibility_state == 2 &&
-                  _ > ((_ = this.visibilityStartTime) != null ? _ : 0) &&
-                  (((_ = this.visibilityEndTime) != null ? _ : 0) < 10 ||
-                    _ < ((_ = this.visibilityEndTime) != null ? _ : 0)))
+                  _ > (this.visibilityStartTime ?? 0) &&
+                  ((this.visibilityEndTime ?? 0) < 10 ||
+                    _ < (this.visibilityEndTime ?? 0)))
               );
             }
             BIsStagedEvent() {
@@ -42178,20 +41226,16 @@ ${_}`;
               return this.visibility_state == 3;
             }
             GetStartTimeAndDateUnixSeconds() {
-              var _;
-              return (_ = this.startTime) != null ? _ : 0;
+              return this.startTime ?? 0;
             }
             GetEndTimeAndDateUnixSeconds() {
-              var _;
-              return (_ = this.endTime) != null ? _ : 0;
+              return this.endTime ?? 0;
             }
             GetPostTimeAndDateUnixSeconds() {
-              var _;
-              return (_ = this.postTime) != null ? _ : 0;
+              return this.postTime ?? 0;
             }
             GetVisibilityStartTimeAndDateUnixSeconds() {
-              var _;
-              return (_ = this.visibilityStartTime) != null ? _ : 0;
+              return this.visibilityStartTime ?? 0;
             }
             BIsEventActionEnabled(_ = (0, _._)()) {
               return (
@@ -42227,35 +41271,19 @@ ${_}`;
                 : "";
             }
             GetSubTitleWithSummaryFallback(_) {
-              var _;
               return (
-                _._.GetWithFallback(
-                  (_ = this.jsondata) == null ? void 0 : _.localized_subtitle,
-                  _,
-                ) ||
+                _._.GetWithFallback(this.jsondata?.localized_subtitle, _) ||
                 _.GenerateSummaryFromText(this.GetDescriptionWithFallback(_))
               );
             }
             GetSummaryWithFallback(_, _) {
-              var _;
               return (
-                _._.GetWithFallback(
-                  (_ = this.jsondata) == null ? void 0 : _.localized_summary,
-                  _,
-                ) ||
+                _._.GetWithFallback(this.jsondata?.localized_summary, _) ||
                 _.GenerateSummaryFromText(this.GetDescriptionWithFallback(_), _)
               );
             }
             GetSummary(_) {
-              var _, _;
-              return _._.Get(
-                (_ =
-                  (_ = this.jsondata) == null ? void 0 : _.localized_summary) !=
-                  null
-                  ? _
-                  : [],
-                _,
-              );
+              return _._.Get(this.jsondata?.localized_summary ?? [], _);
             }
             BHasSummary(_) {
               return !!this.GetSummary(_);
@@ -42284,9 +41312,7 @@ ${_}`;
               return this.vecTags.indexOf(_) != -1;
             }
             BHasTagStartingWith(_) {
-              return this.vecTags.some((_) =>
-                _ == null ? void 0 : _.startsWith(_),
-              );
+              return this.vecTags.some((_) => _?.startsWith(_));
             }
             BIsOGGEvent() {
               return !!this.appid && this.appid > 0;
@@ -42308,7 +41334,6 @@ ${_}`;
               return !!this.jsondata.bBroadcastEnabled;
             }
             BEventCanShowBroadcastWidget(_, _ = (0, _._)()) {
-              var _;
               if (this.jsondata.bSaleEnabled)
                 return this.BHasBroadcastEnabled();
               const _ = this.endTime ? this.endTime : _ + 3600;
@@ -42316,8 +41341,7 @@ ${_}`;
                 this.BHasBroadcastEnabled() &&
                 !!this.jsondata.broadcast_whitelist &&
                 this.jsondata.broadcast_whitelist.length > 0 &&
-                (_ ||
-                  (((_ = this.startTime) != null ? _ : 0) - 600 <= _ && _ < _))
+                (_ || ((this.startTime ?? 0) - 600 <= _ && _ < _))
               );
             }
             BHasBroadcastForceBanner() {
@@ -42343,33 +41367,26 @@ ${_}`;
               return this.jsondata.broadcastChatSetting || "hide";
             }
             GetBroadcastTitle(_) {
-              var _;
               return (
                 _._.GetWithFallback(
                   this.jsondata.localized_broadcast_title,
                   _,
                 ) ||
                 (0, _._)(
-                  (_ = this.jsondata.default_broadcast_title) != null
-                    ? _
-                    : "#Broadcast_default_title_dev",
+                  this.jsondata.default_broadcast_title ??
+                    "#Broadcast_default_title_dev",
                 )
               );
             }
             GetBroadcastWhitelist() {
-              var _;
-              return (_ = this.jsondata.broadcast_whitelist) != null ? _ : [];
+              return this.jsondata.broadcast_whitelist ?? [];
             }
             GetBroadcastWhitelistAsSteamIDs() {
-              var _, _;
-              return (_ =
-                (_ = this.jsondata.broadcast_whitelist) == null
-                  ? void 0
-                  : _.map((_) =>
-                      _._.InitFromAccountID(_).ConvertTo64BitString(),
-                    )) != null
-                ? _
-                : [];
+              return (
+                this.jsondata.broadcast_whitelist?.map((_) =>
+                  _._.InitFromAccountID(_).ConvertTo64BitString(),
+                ) ?? []
+              );
             }
             BIsBroadcastAccountIDWhiteListed(_) {
               return (this.jsondata.broadcast_whitelist || []).includes(
@@ -42385,8 +41402,7 @@ ${_}`;
               );
             }
             GetSaleVanity() {
-              var _;
-              return (_ = this.jsondata.sale_vanity_id) != null ? _ : "";
+              return this.jsondata.sale_vanity_id ?? "";
             }
             BHasSaleUpdateLandingPageVanity() {
               return (
@@ -42395,11 +41411,7 @@ ${_}`;
               );
             }
             GetSaleUpdateLandingPageVanity() {
-              var _;
-              return (_ = this.jsondata.sale_update_landing_page_vanity_id) !=
-                null
-                ? _
-                : "";
+              return this.jsondata.sale_update_landing_page_vanity_id ?? "";
             }
             GetSaleURL(_) {
               if (!this.jsondata.bSaleEnabled) return null;
@@ -42454,8 +41466,7 @@ ${_}`;
               );
             }
             GetSaleSections() {
-              var _;
-              return (_ = this.jsondata.sale_sections) != null ? _ : [];
+              return this.jsondata.sale_sections ?? [];
             }
             GenerateDynamicSaleSections(_, _, _, _, _, _) {
               const _ = [],
@@ -42506,9 +41517,7 @@ ${_}`;
               );
             }
             GetSaleSectionIncludingFooterSections(_ = 0) {
-              var _;
-              const _ =
-                  (_ = this.jsondata) == null ? void 0 : _.sale_show_creator,
+              const _ = this.jsondata?.sale_show_creator,
                 _ = this.jsondata.sale_browse_more_button,
                 _ =
                   this.GetSaleSectionsByType("social_share").length == 0 &&
@@ -42524,50 +41533,30 @@ ${_}`;
                 : this.GetSaleSections();
             }
             GetSaleSectionByID(_, _ = 0) {
-              var _;
               return _ > _._
                 ? this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0, _).find(
                     (_) => _.unique_id == _,
                   )
-                : (_ = this.jsondata.sale_sections) == null
-                  ? void 0
-                  : _.find((_) => _.unique_id == _);
+                : this.jsondata.sale_sections?.find((_) => _.unique_id == _);
             }
             GetSaleSectionCount() {
-              var _, _;
-              return (_ =
-                (_ = this.jsondata.sale_sections) == null
-                  ? void 0
-                  : _.length) != null
-                ? _
-                : 0;
+              return this.jsondata.sale_sections?.length ?? 0;
             }
             GetSaleSectionsByType(_) {
-              var _, _;
-              return (_ =
-                (_ = this.jsondata.sale_sections) == null
-                  ? void 0
-                  : _.filter((_) => _.section_type == _)) != null
-                ? _
-                : [];
+              return (
+                this.jsondata.sale_sections?.filter(
+                  (_) => _.section_type == _,
+                ) ?? []
+              );
             }
             GetLastUpdateTime() {
-              var _;
-              return (_ = this.rtime32_last_modified) != null ? _ : 0;
+              return this.rtime32_last_modified ?? 0;
             }
             GetLastUpdaterSteamIDStr() {
-              var _;
-              return (_ = this.last_update_steamid) != null ? _ : "";
+              return this.last_update_steamid ?? "";
             }
             GetSaleSectionFirstMatchByType(_) {
-              var _, _;
-              const _ =
-                (_ =
-                  (_ = this.jsondata.sale_sections) == null
-                    ? void 0
-                    : _.length) != null
-                  ? _
-                  : 0;
+              const _ = this.jsondata.sale_sections?.length ?? 0;
               if (_ != 0) {
                 for (let _ = 0; _ < _; ++_)
                   if (this.jsondata.sale_sections[_].section_type === _)
@@ -42581,7 +41570,6 @@ ${_}`;
                 });
             }
             GetSaleItemOfType(_, _) {
-              var _;
               if (!this.jsondata.sale_sections) return new Set();
               const _ = new Set(_),
                 _ = new Set();
@@ -42591,10 +41579,9 @@ ${_}`;
                   "Cannot find all items in optimized json",
                 ),
                 this.jsondata.bOptimizedForSize,
-                (_ = this.jsondata.tagged_items) == null ||
-                  _.forEach((_) => {
-                    _.AccumulateCapsuleListIDs([_.capsule], _, _, _);
-                  }),
+                this.jsondata.tagged_items?.forEach((_) => {
+                  _.AccumulateCapsuleListIDs([_.capsule], _, _, _);
+                }),
                 this.jsondata.sale_sections.forEach((_) => {
                   if (_(_.section_type))
                     _.AccumulateCapsuleListIDs(_.capsules, _, _, _);
@@ -42679,10 +41666,9 @@ ${_}`;
             BMatchesAllTags(_) {
               let _ = !0;
               return (
-                _ == null ||
-                  _.forEach((_) => {
-                    this.vecTags.includes(_) || (_ = !1);
-                  }),
+                _?.forEach((_) => {
+                  this.vecTags.includes(_) || (_ = !1);
+                }),
                 _
               );
             }
@@ -42700,23 +41686,14 @@ ${_}`;
               );
             }
             GetSteamAwardCategory() {
-              var _;
-              return (_ = this.jsondata.steam_award_category_suggestion) != null
-                ? _
-                : _._._;
+              return this.jsondata.steam_award_category_suggestion ?? _._._;
             }
             GetSteamAwardNomineeCategories() {
-              var _;
-              return (_ = this.jsondata.steam_award_category_voteids) != null
-                ? _
-                : [];
+              return this.jsondata.steam_award_category_voteids ?? [];
             }
             BIsLockedToGameOwners() {
-              var _;
-              return !!(
-                (_ = this.jsondata.ownership_requirement_info) != null &&
-                _.bLockedToAppOwners
-              );
+              return !!this.jsondata.ownership_requirement_info
+                ?.bLockedToAppOwners;
             }
             GetRequiredAppIDs() {
               return this.jsondata.ownership_requirement_info
@@ -42732,11 +41709,8 @@ ${_}`;
               return !!this.jsondata.sale_use_subscription_layout;
             }
             BIsLockedToPartnerAppRights() {
-              var _;
-              return !!(
-                (_ = this.jsondata.app_right_requirement_info) != null &&
-                _.bLockedToPartnerAppRights
-              );
+              return !!this.jsondata.app_right_requirement_info
+                ?.bLockedToPartnerAppRights;
             }
             GetRequiredPartnerAppRights() {
               return this.jsondata.app_right_requirement_info;
@@ -42784,40 +41758,24 @@ ${_}`;
               return !!this.jsondata.content_hub_discounted_only;
             }
             BIsBackgroundImageGroupingEnabled() {
-              var _;
-              return !!(
-                (_ = this.jsondata.sale_background_img_groups) != null &&
-                _.enabled
-              );
+              return !!this.jsondata.sale_background_img_groups?.enabled;
             }
             GetSalePageGroupDefinition() {
               return this.jsondata.sale_background_img_groups;
             }
             GetSalePageBackgroundImageGroupCount() {
-              var _, _, _;
-              return (_ = this.jsondata.sale_background_img_groups) != null &&
-                _.enabled &&
-                (_ =
-                  (_ = this.jsondata.sale_background_img_groups.groups) == null
-                    ? void 0
-                    : _.length) != null
-                ? _
+              return this.jsondata.sale_background_img_groups?.enabled
+                ? (this.jsondata.sale_background_img_groups.groups?.length ?? 0)
                 : 0;
             }
             GetAllSalePageGroups() {
-              var _;
-              return (_ = this.jsondata.sale_background_img_groups) != null &&
-                _.enabled
+              return this.jsondata.sale_background_img_groups?.enabled
                 ? this.jsondata.sale_background_img_groups.groups
                 : [];
             }
             GetSalePageBackgroundGroup(_) {
-              var _, _;
-              return (_ = this.jsondata.sale_background_img_groups) != null &&
-                _.enabled
-                ? (_ = this.jsondata.sale_background_img_groups.groups) == null
-                  ? void 0
-                  : _[_]
+              return this.jsondata.sale_background_img_groups?.enabled
+                ? this.jsondata.sale_background_img_groups.groups?.[_]
                 : void 0;
             }
             GetIncludedRealmList() {
@@ -42835,12 +41793,8 @@ ${_}`;
               return this.GetIncludedRealmList().includes(_);
             }
             BIsNextFest(_ = !1) {
-              var _;
               const _ = "nextfest",
-                _ =
-                  (_ = this.jsondata.sale_vanity_id) == null
-                    ? void 0
-                    : _.toLowerCase(),
+                _ = this.jsondata.sale_vanity_id?.toLowerCase(),
                 _ = new _._(this.clanSteamID).GetAccountID();
               return !(
                 !_ ||
@@ -42949,7 +41903,7 @@ ${_}`;
           _([_._], _.prototype, "m_overrideCurrentDay", 2);
         let _ = _;
         function _(_) {
-          if (_) return _ == null ? void 0 : _.replace(/[()]/g, "\\$&");
+          if (_) return _?.replace(/[()]/g, "\\$&");
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -42985,7 +41939,7 @@ ${_}`;
             _ = useCancelTokenSource("usePartnerEventByAnnouncementGID");
           return (
             useEffect(() => {
-              if ((_ == null ? void 0 : _.AnnouncementGID) != _) {
+              if (_?.AnnouncementGID != _) {
                 g_PartnerEventStore.Init();
                 const _ = new CSteamID(CommunityConfig.CLANSTEAMID);
                 g_PartnerEventStore
@@ -43004,17 +41958,14 @@ ${_}`;
           return (
             (0, _.useEffect)(() => {
               _ &&
-                (_ == null ? void 0 : _.GID) != _ &&
+                _?.GID != _ &&
                 (_._.Init(),
                 _._.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   [_],
                   [],
                   _,
                 ).then((_) => {
-                  (_ == null ? void 0 : _.length) == 1 &&
-                    _[0].GID == _ &&
-                    !_.token.reason &&
-                    _(_[0]);
+                  _?.length == 1 && _[0].GID == _ && !_.token.reason && _(_[0]);
                 }));
             }, [_, _, _]),
             _
@@ -43047,9 +41998,8 @@ ${_}`;
           return (
             (0, _.useEffect)(() => {
               (async () => {
-                var _, _, _, _;
                 try {
-                  if ((_ == null ? void 0 : _.GID) != _ && _ && _) {
+                  if (_?.GID != _ && _ && _) {
                     _._.Init();
                     const _ = _._.InitFromClanID(_);
                     let _;
@@ -43062,22 +42012,8 @@ ${_}`;
                           _,
                         );
                     } catch (_) {
-                      _(
-                        (_ =
-                          (_ = _ == null ? void 0 : _.response) == null
-                            ? void 0
-                            : _.data) == null
-                          ? void 0
-                          : _.err_msg,
-                      ),
-                        _(
-                          ((_ =
-                            (_ = _ == null ? void 0 : _.response) == null
-                              ? void 0
-                              : _.data) == null
-                            ? void 0
-                            : _.success) || _._,
-                        );
+                      _(_?.response?.data?.err_msg),
+                        _(_?.response?.data?.success || _._);
                     }
                     _.token.reason || _(_);
                   }
@@ -43100,7 +42036,7 @@ ${_}`;
           return (
             useEffect(() => {
               _ &&
-                (!_ || (_ == null ? void 0 : _.appid) != _) &&
+                (!_ || _?.appid != _) &&
                 (g_PartnerEventStore.Init(),
                 g_PartnerEventStore
                   .LoadAdjacentPartnerEvents(
@@ -43115,7 +42051,7 @@ ${_}`;
                     _,
                   )
                   .then((_) => {
-                    _ != null && _.length && !_.token.reason && _(_[0]);
+                    _?.length && !_.token.reason && _(_[0]);
                   }));
             }, [_, _, _, _]),
             _
@@ -43126,7 +42062,7 @@ ${_}`;
             _ = typeof _ == "number" ? _ : k_nAppIdInvalid,
             _ = typeof _ == "object" ? _ : void 0,
             _ = useCallback(async () => {
-              if (!(_ != null && _.length)) return null;
+              if (!_?.length) return null;
               g_PartnerEventStore.Init();
               const _ = await g_PartnerEventStore.LoadAdjacentPartnerEvents(
                 void 0,
@@ -43139,7 +42075,7 @@ ${_}`;
                 },
                 _,
               );
-              return _ != null && _.length ? _[0] : null;
+              return _?.length ? _[0] : null;
             }, [_, _, _, _]),
             _ = ["LatestPatchNote2", _, _, _, _];
           return useQuery({
@@ -43153,7 +42089,6 @@ ${_}`;
           return _ != _ && (_ += "_" + _), _;
         }
         async function _(_, _, _, _) {
-          var _, _, _;
           const _ = new Array(),
             _ = {
               clan_accountid: _ ? _.GetAccountID() : void 0,
@@ -43167,23 +42102,14 @@ ${_}`;
             _ = _._.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/",
             _ = await _().get(_, {
               params: _,
-              cancelToken: _ == null ? void 0 : _.token,
+              cancelToken: _?.token,
             });
-          if (
-            ((_ = _ == null ? void 0 : _.data) == null ? void 0 : _.success) ==
-            _._
-          ) {
+          if (_?.data?.success == _._) {
             const _ = _ == null ? _.data.events : _.data.events.slice(1);
             for (let _ of _)
-              !_.gid ||
-                !(
-                  ((_ = (_ = _.jsondata) == null ? void 0 : _.length) != null
-                    ? _
-                    : 0) > 0
-                ) ||
-                _.push(_);
+              !_.gid || !((_.jsondata?.length ?? 0) > 0) || _.push(_);
           } else {
-            const _ = (0, _._)(_ == null ? void 0 : _.data);
+            const _ = (0, _._)(_?.data);
             throw (
               (console.error(
                 "LoadAdjacentPartnerEvents Success but empty response: clanAccount:" +
@@ -43192,7 +42118,7 @@ ${_}`;
                   _.strErrorMsg,
                 _,
               ),
-              _ == null ? void 0 : _.data)
+              _?.data)
             );
           }
           return _;
@@ -43247,13 +42173,9 @@ ${_}`;
           );
         }
         function _(_) {
-          var _;
-          return _(_)
-            ? _._ + ((_ = _.announcement_body) == null ? void 0 : _.gid)
-            : _.gid;
+          return _(_) ? _._ + _.announcement_body?.gid : _.gid;
         }
         function _(_, _) {
-          var _, _, _, _, _, _, _;
           let _ = new _._();
           if (
             ((_.clanSteamID = _),
@@ -43266,16 +42188,16 @@ ${_}`;
             ),
             (_.GID = _(_)),
             (_.bOldAnnouncement = _(_)),
-            (_.appid = (_ = _.appid) != null ? _ : 0),
+            (_.appid = _.appid ?? 0),
             (_.createTime = _.rtime_created),
             (_.startTime = _.rtime32_start_time),
             (_.endTime = _.rtime32_end_time),
             (_.visibilityStartTime = _.rtime32_visibility_start),
             (_.visibilityEndTime = _.rtime32_visibility_end),
             (_.loadedAllLanguages = !1),
-            (_.type = (_ = _.event_type) != null ? _ : _.DRF),
-            (_.nVotesUp = (_ = _.votes_up) != null ? _ : 0),
-            (_.nVotesDown = (_ = _.votes_down) != null ? _ : 0),
+            (_.type = _.event_type ?? _.DRF),
+            (_.nVotesUp = _.votes_up ?? 0),
+            (_.nVotesDown = _.votes_down ?? 0),
             (_.comment_type = _.comment_type),
             (_.gidfeature = _.gidfeature),
             (_.gidfeature2 = _.gidfeature2),
@@ -43318,9 +42240,9 @@ ${_}`;
               _.description.clear(),
               _.timestamp_loc_updated.clear(),
               (_.postTime = _.rtime32_start_time),
-              (_.nCommentCount = (_ = _.comment_count) != null ? _ : 0),
-              _.name.set(_.Bhc, (_ = _.event_name) != null ? _ : ""),
-              _.description.set(_.Bhc, (_ = _.event_notes) != null ? _ : "");
+              (_.nCommentCount = _.comment_count ?? 0),
+              _.name.set(_.Bhc, _.event_name ?? ""),
+              _.description.set(_.Bhc, _.event_notes ?? "");
           _.broadcaster_accountid &&
             (_.broadcaster = new _._(_.broadcaster_accountid));
           const _ = _._;
@@ -43769,7 +42691,7 @@ ${_}`;
         }
         let _;
         function _() {
-          return _ != null ? _ : (_ = _());
+          return (_ ??= _());
         }
         function _() {
           return !!(0, _._)("wants_mature_content");
@@ -43852,7 +42774,7 @@ ${_}`;
           return [_, _];
         }
         function _(_) {
-          return (_ == null ? void 0 : _[0]) == _;
+          return _?.[0] == _;
         }
         async function _(_) {
           try {
@@ -43889,8 +42811,7 @@ ${_}`;
           return (0, _._)(_());
         }
         function _(_) {
-          var _;
-          return (_ = _.getQueryData(_(_._.accountid))) != null ? _ : _();
+          return _.getQueryData(_(_._.accountid)) ?? _();
         }
         async function _(_) {
           return _.fetchQuery(_());
@@ -43907,33 +42828,19 @@ ${_}`;
               : _;
           });
         }
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
-          constructor() {
-            _(this, "m_queryClient", _._),
-              _(this, "m_boxCacheVersion", _._.box(0)),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_boxAjaxInFlight", _._.box(!1));
-          }
+        class _ {
+          m_queryClient = _._;
+          m_boxCacheVersion = _._.box(0);
+          m_bInitialized = !1;
+          m_boxAjaxInFlight = _._.box(!1);
           LazyInit() {
             this.m_bInitialized ||
               ((this.m_bInitialized = !0),
               this.m_queryClient.getQueryCache().subscribe((_) => {
-                var _;
-                ((_ == null ? void 0 : _.type) != "added" &&
-                  (_ == null ? void 0 : _.type) != "updated" &&
-                  (_ == null ? void 0 : _.type) != "removed") ||
-                  (_((_ = _.query) == null ? void 0 : _.queryKey) &&
+                (_?.type != "added" &&
+                  _?.type != "updated" &&
+                  _?.type != "removed") ||
+                  (_(_.query?.queryKey) &&
                     (0, _._)(() =>
                       this.m_boxCacheVersion.set(
                         this.m_boxCacheVersion.get() + 1,
@@ -44142,7 +43049,7 @@ ${_}`;
           }
           async AddToCart(_, _, _, _, _, _, _) {
             if (
-              typeof window.g_bUseNewCartAPI != "undefined" &&
+              typeof window.g_bUseNewCartAPI < "u" &&
               window.g_bUseNewCartAPI &&
               typeof window.AddItemToCart == "function"
             ) {
@@ -44166,7 +43073,7 @@ ${_}`;
                 withCredentials: !0,
               }),
                 this.InvalidateCache(),
-                _ != null && _.fnSetURL ? _.fnSetURL(_) : (_.location.href = _);
+                _?.fnSetURL ? _.fnSetURL(_) : (_.location.href = _);
             } catch (_) {
               return console.log("HandleOnAddToCart", _), !1;
             }
@@ -44175,6 +43082,7 @@ ${_}`;
           InvalidateCache() {
             (0, _._)();
           }
+          static s_globalSingletonStore;
           static Get() {
             return (
               _.s_globalSingletonStore || (_.s_globalSingletonStore = new _()),
@@ -44184,9 +43092,8 @@ ${_}`;
           static BConfirmedAdultContentAgeGate() {
             return _();
           }
-        };
-        _(_, "s_globalSingletonStore");
-        let _ = _;
+          constructor() {}
+        }
         function _(_) {
           return typeof _ == "object" && "GetAccountID" in _
             ? _.GetAccountID()
@@ -44225,15 +43132,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -44242,20 +43140,19 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = null;
         class _ {
+          appid;
+          date;
+          can_play;
+          playtime;
+          announcementid;
           constructor(_) {
-            _(this, "appid"),
-              _(this, "date"),
-              _(this, "can_play"),
-              _(this, "playtime"),
-              _(this, "announcementid"),
-              (0, _._)(
-                typeof _.appid == "number",
-                "AJAX updated app returned a non-numeric AppID! Did the PHP change?",
-              ),
+            (0, _._)(
+              typeof _.appid == "number",
+              "AJAX updated app returned a non-numeric AppID! Did the PHP change?",
+            ),
               (this.appid = _.appid),
               (this.date = _.date),
               (this.can_play = _.can_play),
@@ -44267,25 +43164,24 @@ ${_}`;
           _ = null;
         class _ {
           constructor(_ = !1) {
-            _(this, "m_bOnlySummary", !1),
-              _(this, "m_mapExistingEvents", new Map()),
-              _(this, "m_mapEventUpdateCallback", new Map()),
-              _(this, "m_mapAnnouncementBodyToEvent", new Map()),
-              _(this, "m_mapClanToGIDs", new Map()),
-              _(this, "m_mapAppIDToGIDs", new Map()),
-              _(this, "m_mapAdjacentAnnouncementGIDs", new Map()),
-              _(this, "m_mapUpdatedApps", new Map()),
-              _(this, "m_tsUpdatedAppsQueryTime", 0),
-              _(this, "m_rgQueuedEventsClanIDs", new Array()),
-              _(this, "m_rgQueuedEventsUniqueIDs", new Array()),
-              _(this, "m_rgQueuedEventsForEditFlags", new Array()),
-              _(this, "m_QueuedEventTimeout", new _._()),
-              _(this, "m_PendingInfoPromise"),
-              _(this, "m_PendingInfoResolve"),
-              _(this, "m_bLoadedFromConfig", !1),
-              (0, _._)(this),
-              (this.m_bOnlySummary = _);
+            (0, _._)(this), (this.m_bOnlySummary = _);
           }
+          m_bOnlySummary = !1;
+          m_mapExistingEvents = new Map();
+          m_mapEventUpdateCallback = new Map();
+          m_mapAnnouncementBodyToEvent = new Map();
+          m_mapClanToGIDs = new Map();
+          m_mapAppIDToGIDs = new Map();
+          m_mapAdjacentAnnouncementGIDs = new Map();
+          m_mapUpdatedApps = new Map();
+          m_tsUpdatedAppsQueryTime = 0;
+          m_rgQueuedEventsClanIDs = new Array();
+          m_rgQueuedEventsUniqueIDs = new Array();
+          m_rgQueuedEventsForEditFlags = new Array();
+          m_QueuedEventTimeout = new _._();
+          m_PendingInfoPromise;
+          m_PendingInfoResolve;
+          m_bLoadedFromConfig = !1;
           Init() {
             if (!this.m_bLoadedFromConfig) {
               let _ = (0, _._)("PartnerEventStore");
@@ -44391,14 +43287,9 @@ ${_}`;
             return _ ? this.m_mapExistingEvents.get(_) : void 0;
           }
           DefaultEventSortFunction(_, _) {
-            var _, _, _, _;
             return _.startTime == _.startTime
-              ? (0, _._)(
-                  (_ = _.GID) != null ? _ : "",
-                  (_ = _.GID) != null ? _ : "",
-                )
-              : ((_ = _.startTime) != null ? _ : 0) -
-                  ((_ = _.startTime) != null ? _ : 0);
+              ? (0, _._)(_.GID ?? "", _.GID ?? "")
+              : (_.startTime ?? 0) - (_.startTime ?? 0);
           }
           RegisterClanEvents(_) {
             if (_)
@@ -44436,14 +43327,9 @@ ${_}`;
             );
           }
           HelperInitializeNumSalesHeaderArray(_) {
-            var _, _;
-            if (((_ = _.jsondata.sale_num_headers) != null ? _ : 0) > 1) {
+            if ((_.jsondata.sale_num_headers ?? 0) > 1) {
               _.jsondata.localized_per_day_sales_header = [];
-              for (
-                let _ = 0;
-                _ < ((_ = _.jsondata.sale_num_headers) != null ? _ : 0);
-                ++_
-              )
+              for (let _ = 0; _ < (_.jsondata.sale_num_headers ?? 0); ++_)
                 _.jsondata.localized_per_day_sales_header.push(
                   (0, _._)([], _.bP9, null),
                 );
@@ -44480,9 +43366,7 @@ ${_}`;
                   (this.m_rgQueuedEventsClanIDs = new Array()),
                   (this.m_rgQueuedEventsUniqueIDs = new Array()),
                   (this.m_rgQueuedEventsForEditFlags = new Array()),
-                  this.InternalLoadPartnerEventList(_, _, _).then(() =>
-                    _ == null ? void 0 : _(),
-                  );
+                  this.InternalLoadPartnerEventList(_, _, _).then(() => _?.());
               };
             return (
               this.m_rgQueuedEventsClanIDs.length >= 30
@@ -44566,14 +43450,12 @@ ${_}`;
                 );
           }
           async InternalLoadAdjacentPartnerEvents(_, _, _, _, _, _, _, _) {
-            var _;
             let _ = new Array();
             if (!_ || !this.m_mapAdjacentAnnouncementGIDs.has(_)) {
               let _ =
                 _._.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
               const _ = (0, _._)((0, _.sfN)(_._.LANGUAGE));
-              _ != null &&
-                _.only_summaries &&
+              _?.only_summaries &&
                 !this.m_bOnlySummary &&
                 ((0, _._)(
                   this.m_bOnlySummary,
@@ -44608,13 +43490,9 @@ ${_}`;
               try {
                 let _ = await _().get(_, {
                   params: _,
-                  cancelToken: _ == null ? void 0 : _.token,
+                  cancelToken: _?.token,
                 });
-                if (
-                  ((_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.success) == _._
-                )
+                if (_?.data?.success == _._)
                   (0, _._)(() => {
                     for (let _ of _.data.events) {
                       let _ = (0, _._)(_);
@@ -44635,7 +43513,7 @@ ${_}`;
                     }
                   });
                 else {
-                  let _ = (0, _._)(_ == null ? void 0 : _.data);
+                  let _ = (0, _._)(_?.data);
                   console.error(
                     "LoadAdjacentPartnerEvents Success but empty response:" +
                       _ +
@@ -44662,15 +43540,14 @@ ${_}`;
             } else {
               let _ = this.m_mapAdjacentAnnouncementGIDs.get(_),
                 _ = new Array();
-              _ == null ||
-                _.forEach((_) => {
-                  if (this.m_mapAnnouncementBodyToEvent.has(_)) {
-                    let _ = this.m_mapAnnouncementBodyToEvent.get(_);
-                    _ &&
-                      this.m_mapExistingEvents.get(_) &&
-                      _.push(this.m_mapExistingEvents.get(_));
-                  } else _.push(_);
-                }),
+              _?.forEach((_) => {
+                if (this.m_mapAnnouncementBodyToEvent.has(_)) {
+                  let _ = this.m_mapAnnouncementBodyToEvent.get(_);
+                  _ &&
+                    this.m_mapExistingEvents.get(_) &&
+                    _.push(this.m_mapExistingEvents.get(_));
+                } else _.push(_);
+              }),
                 _.length > 0 &&
                   (
                     await this.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
@@ -44692,12 +43569,7 @@ ${_}`;
                 count: _,
                 _: _._.LANGUAGE,
                 origin: self.origin,
-                exclude_tags:
-                  _ && _.length > 0
-                    ? _ == null
-                      ? void 0
-                      : _.join(",")
-                    : void 0,
+                exclude_tags: _ && _.length > 0 ? _?.join(",") : void 0,
               };
             try {
               let _ = await _().get(_, {
@@ -44721,7 +43593,6 @@ ${_}`;
             return _;
           }
           async GetBestEventsForCurrentUser(_, _, _) {
-            var _, _;
             let _ = new Array(),
               _ = {
                 _: _._.LANGUAGE,
@@ -44735,8 +43606,8 @@ ${_}`;
                 withCredentials: !0,
                 cancelToken: _ ? _.token : void 0,
               });
-            if (!((_ = _.data) != null && _.events)) {
-              let _ = ((_ = _.data) == null ? void 0 : _.err_msg) || "";
+            if (!_.data?.events) {
+              let _ = _.data?.err_msg || "";
               throw new Error(
                 `GetBestEventsForCurrentUser request failed (${_})`,
               );
@@ -44869,7 +43740,6 @@ ${_}`;
             _,
             _ = !1,
           ) {
-            var _, _, _, _;
             let _ = (0, _._)(_ ? _.Bhc : (0, _.sfN)(_._.LANGUAGE)),
               _ = {
                 appid: _,
@@ -44911,15 +43781,10 @@ ${_}`;
                 _ = (0, _._)(_);
               if (
                 !this.m_mapExistingEvents.has(_) ||
-                ((_ = this.m_mapExistingEvents.get(_).rtime32_last_modified) !=
-                null
-                  ? _
-                  : 0) < ((_ = _.rtime32_last_modified) != null ? _ : 0) ||
-                ((_ =
-                  this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed) !=
-                null
-                  ? _
-                  : 0) < ((_ = _.rtime_mod_reviewed) != null ? _ : 0)
+                (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
+                  (_.rtime32_last_modified ?? 0) ||
+                (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ??
+                  0) < (_.rtime_mod_reviewed ?? 0)
               ) {
                 (0, _._)(
                   _.clan_steamid,
@@ -45047,11 +43912,8 @@ ${_}`;
               _.data.apps &&
                 _.data.apps.length > 0 &&
                 (0, _._)(() => {
-                  var _;
                   const _ = new Map(
-                    (_ = _.data.apps) == null
-                      ? void 0
-                      : _.map((_) => [_.appid, new _(_)]),
+                    _.data.apps?.map((_) => [_.appid, new _(_)]),
                   );
                   this.m_mapUpdatedApps = _;
                 });
@@ -45061,11 +43923,7 @@ ${_}`;
           GetAppImportantUpdate(_) {
             return (
               this.HintLoadImportantUpdates().catch((_) => {
-                var _;
-                console.log(
-                  "UpdatedApps failed to load: ",
-                  (_ = _.response) == null ? void 0 : _.data,
-                );
+                console.log("UpdatedApps failed to load: ", _.response?.data);
               }),
               this.m_mapUpdatedApps && this.m_mapUpdatedApps.get(_)
             );
@@ -45080,7 +43938,6 @@ ${_}`;
             return (await _().get(_)).data.localization;
           }
           async LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(_, _, _) {
-            var _, _, _, _;
             const _ = new Array(),
               _ = _._.STORE_BASE_URL + "events/ajaxgetbatchedpartnerevent/",
               _ = (0, _._)((0, _.sfN)(_._.LANGUAGE));
@@ -45119,24 +43976,12 @@ ${_}`;
             if (!_ && !_) return _;
             const _ = new Array(),
               _ = 100;
-            for (
-              ;
-              ((_ = _ == null ? void 0 : _.length) != null ? _ : 0) > 0 ||
-              ((_ = _ == null ? void 0 : _.length) != null ? _ : 0) > 0;
-            ) {
+            for (; (_?.length ?? 0) > 0 || (_?.length ?? 0) > 0; ) {
               let _ = {
                 event_gids:
-                  ((_ = _ == null ? void 0 : _.length) != null ? _ : 0) > 0
-                    ? _ == null
-                      ? void 0
-                      : _.splice(0, _).join(",")
-                    : void 0,
+                  (_?.length ?? 0) > 0 ? _?.splice(0, _).join(",") : void 0,
                 announcement_gids:
-                  ((_ = _ == null ? void 0 : _.length) != null ? _ : 0) > 0
-                    ? _ == null
-                      ? void 0
-                      : _.splice(0, _).join(",")
-                    : void 0,
+                  (_?.length ?? 0) > 0 ? _?.splice(0, _).join(",") : void 0,
                 lang_list: _,
                 origin: self.origin,
               };
@@ -45183,7 +44028,6 @@ ${_}`;
             return _;
           }
           async SavePartnerEventSaleAssets(_, _, _, _) {
-            var _;
             let _ = null;
             if (!this.m_mapExistingEvents.has(_)) return !1;
             try {
@@ -45196,11 +44040,7 @@ ${_}`;
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              if (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.success) == _._
-              ) {
+              if (_?.data?.success == _._) {
                 const _ = this.m_mapExistingEvents.get(_);
                 if (_ && _.jsondata) {
                   for (const _ in _)
@@ -45219,7 +44059,7 @@ ${_}`;
             return (
               console.error(
                 "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
-                  (_ == null ? void 0 : _.strErrorMsg),
+                  _?.strErrorMsg,
                 _,
               ),
               !1
@@ -45393,10 +44233,7 @@ ${_}`;
           {
             const _ = (0, _._)(),
               _ = new FileReader();
-            (_.onload = () => {
-              var _;
-              return _.resolve((_ = _.result) != null ? _ : void 0);
-            }),
+            (_.onload = () => _.resolve(_.result ?? void 0)),
               (_.onerror = () => {
                 console.error(
                   "GetMediaElementFromFile failed to load the image, details",
@@ -45455,15 +44292,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -45473,7 +44301,6 @@ ${_}`;
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_._ = 0)] = "A"),
             (_[(_._ = 1)] = "B"),
@@ -45598,13 +44425,12 @@ ${_}`;
           }
         }
         const _ = class _ {
-          constructor() {
-            _(this, "m_boundActions", new Map()),
-              _(this, "m_defaultActions", new Map()),
-              _(this, "m_globalActionsSubscriptions", []),
-              _(this, "m_actionDescriptionChangedCallbackRegistrations", []),
-              _(this, "m_nodeForCurrentDescriptions");
-          }
+          m_boundActions = new Map();
+          m_defaultActions = new Map();
+          m_globalActionsSubscriptions = [];
+          m_actionDescriptionChangedCallbackRegistrations = [];
+          static Log = new _._("ActionDescription").Debug;
+          m_nodeForCurrentDescriptions;
           InitContext(_) {
             const _ = new _._();
             return (
@@ -45621,19 +44447,17 @@ ${_}`;
             );
           }
           BFromActiveNavTree(_, _) {
-            let _ = _ == null ? void 0 : _.Tree;
+            let _ = _?.Tree;
             return (
-              _ || (_ = _ == null ? void 0 : _.Tree),
-              _ && _.Controller.IsActiveFocusNavTree(_)
+              _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_)
             );
           }
           OnFocusNavigationChanged(_, _, _) {
             this.BFromActiveNavTree(_, _) && this.UpdateForFocusedNode(_);
           }
           OnActiveNavTreeChanged(_) {
-            var _;
             if (!_.Controller.IsActiveFocusNavTree(_)) return;
-            const _ = (_ = _.GetLastFocusedNode()) != null ? _ : _.Root;
+            const _ = _.GetLastFocusedNode() ?? _.Root;
             _ != this.m_nodeForCurrentDescriptions &&
               this.UpdateForFocusedNode(_);
           }
@@ -45646,12 +44470,10 @@ ${_}`;
               (this.m_actionDescriptionChangedCallbackRegistrations = []),
               _)
             ) {
-              const _ = () => {
-                var _;
-                return this.SetActionDescriptionsFromMap(
-                  (_ = _.GetActiveActionDescriptions()) != null ? _ : {},
+              const _ = () =>
+                this.SetActionDescriptionsFromMap(
+                  _.GetActiveActionDescriptions() ?? {},
                 );
-              };
               _();
               for (let _ = _; _ != null; _ = _.Parent)
                 this.m_actionDescriptionChangedCallbackRegistrations.push(
@@ -45744,11 +44566,7 @@ ${_}`;
               this.m_globalActionsSubscriptions.push(_),
               _(this.GetActionDescriptions()),
               () => {
-                var _;
-                const _ =
-                  (_ = this.m_globalActionsSubscriptions) == null
-                    ? void 0
-                    : _.indexOf(_);
+                const _ = this.m_globalActionsSubscriptions?.indexOf(_);
                 this.m_globalActionsSubscriptions && _ != null && _ >= 0
                   ? this.m_globalActionsSubscriptions.splice(_, 1)
                   : console.error(
@@ -45758,8 +44576,7 @@ ${_}`;
             );
           }
         };
-        _(_, "Log", new _._("ActionDescription").Debug),
-          _([_._], _.prototype, "OnFocusNavigationChanged", 1),
+        _([_._], _.prototype, "OnFocusNavigationChanged", 1),
           _([_._], _.prototype, "OnActiveNavTreeChanged", 1),
           _([_._], _.prototype, "SetActionDescriptionsFromMap", 1);
         let _ = null;
@@ -45807,7 +44624,7 @@ ${_}`;
             } = _,
             _ = _.useMemo(() => {
               const _ = (0, _._)(_);
-              return !_ || (_ == null ? void 0 : _.toLowerCase()) === "true";
+              return !_ || _?.toLowerCase() === "true";
             }, []),
             [_, _] = _.useState(_),
             _ = _ !== void 0 ? _ : _,
@@ -45962,7 +44779,7 @@ ${_}`;
                 ? (0, _.jsx)(_._, {
                     rootMargin: "0px 50% 0px 50%",
                     horizontal: !0,
-                    placeholderWidth: _ != null ? _ : 1,
+                    placeholderWidth: _ ?? 1,
                     placeholderHeight: 1,
                     holdGamepadFocus: _,
                     children: (0, _.jsx)(_, {
@@ -46001,7 +44818,7 @@ ${_}`;
                 rootMargin: "50% 0px 50% 0px",
                 horizontal: !1,
                 placeholderWidth: 1,
-                placeholderHeight: _ != null ? _ : 1,
+                placeholderHeight: _ ?? 1,
                 children: _,
               })
             : _;
@@ -46120,7 +44937,6 @@ ${_}`;
               });
         }
         function _(_) {
-          var _;
           const _ = (0, _._)(),
             [_, _] = _.useState(!1),
             { bTabHidden: _, bOffscreen: _, refIntersection: _ } = (0, _._)(),
@@ -46128,15 +44944,12 @@ ${_}`;
             _ = () => Math.min(_(), _.visibleElements),
             _ = () =>
               _.Children.map(_.children, (_, _) => {
-                var _, _;
                 const _ = _.bLazyRenderChildren
                   ? (0, _.jsx)(_._, {
                       rootMargin: "0px 100% 0px 100%",
                       horizontal: !0,
-                      placeholderWidth:
-                        (_ = _.lazyRenderPlaceholderWidth) != null ? _ : 1,
-                      placeholderHeight:
-                        (_ = _.lazyRenderPlaceholderHeight) != null ? _ : 1,
+                      placeholderWidth: _.lazyRenderPlaceholderWidth ?? 1,
+                      placeholderHeight: _.lazyRenderPlaceholderHeight ?? 1,
                       holdGamepadFocus: _,
                       children: _,
                     })
@@ -46205,9 +45018,7 @@ ${_}`;
                         className: _()({
                           [_.breadcrumbContainer]: !0,
                           [_.breadcrumbContainerTemplate]:
-                            (_ = _.className) == null
-                              ? void 0
-                              : _.includes("template-carousel"),
+                            _.className?.includes("template-carousel"),
                         }),
                         children: (0, _.jsx)(_, {
                           ..._,
@@ -46409,15 +45220,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -46426,21 +45228,11 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
-          constructor() {
-            if (
-              (_(this, "m_mapAppResults", new Map()),
-              _(this, "m_mapAppCallbackList", new Map()),
-              _(this, "m_mapAppResultsPromises", new Map()),
-              document.getElementById("application_config"))
-            ) {
-              let _ = (0, _._)("hardwarecompatibility", "application_config");
-              _.ValidateCompatabilityResult(_) &&
-                this.AddCompatabilityResult(_);
-            }
-          }
+          m_mapAppResults = new Map();
+          m_mapAppCallbackList = new Map();
+          m_mapAppResultsPromises = new Map();
           GetCompatabilityResultForApp(_) {
             return this.m_mapAppResults.get(_);
           }
@@ -46470,7 +45262,6 @@ ${_}`;
                 this.m_mapAppResultsPromises.get(_));
           }
           async InternalLoadAppCompatability(_) {
-            var _, _;
             let _ = null;
             try {
               const _ = {
@@ -46485,12 +45276,7 @@ ${_}`;
                 params: _,
                 withCredentials: !0,
               });
-              if (
-                (_ == null ? void 0 : _.status) == 200 &&
-                ((_ = _.data) == null ? void 0 : _.success) == _._ &&
-                (_ = _.data) != null &&
-                _.results
-              )
+              if (_?.status == 200 && _.data?.success == _._ && _.data?.results)
                 return this.AddCompatabilityResult(_.data.results), !0;
               _ = (0, _._)(_);
             } catch (_) {
@@ -46499,14 +45285,22 @@ ${_}`;
             return (
               console.error(
                 "CDeckVerifiedDetailsStore.InternalLoadAppCompatability failed: " +
-                  (_ == null ? void 0 : _.strErrorMsg),
+                  _?.strErrorMsg,
                 _,
               ),
               !1
             );
           }
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+          }
+          constructor() {
+            if (document.getElementById("application_config")) {
+              let _ = (0, _._)("hardwarecompatibility", "application_config");
+              _.ValidateCompatabilityResult(_) &&
+                this.AddCompatabilityResult(_);
+            }
           }
           static ValidateCompatabilityResult(_) {
             const _ = _;
@@ -46518,8 +45312,7 @@ ${_}`;
             );
           }
         };
-        _(_, "s_Singleton"),
-          _([_._], _.prototype, "LoadAppCompabitilityResult", 1);
+        _([_._], _.prototype, "LoadAppCompabitilityResult", 1);
         let _ = _;
         function _(_) {
           const [_, _] = _.useState(_.Get().GetCompatabilityResultForApp(_));
@@ -46557,25 +45350,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46628,16 +45412,16 @@ ${_}`;
           getClassName() {
             return "CGamePerformanceStats_GetGameFrameRateStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.frame_rates || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46691,16 +45475,16 @@ ${_}`;
           getClassName() {
             return "CGamePerformanceStats_GetGameFrameRateStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clusterid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46786,9 +45570,7 @@ ${_}`;
           getClassName() {
             return "CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -46826,7 +45608,6 @@ ${_}`;
         }
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _, _;
           const {
             results: _,
             titleId: _,
@@ -46845,7 +45626,7 @@ ${_}`;
               : _.steam_deck_blog_url &&
                 (window.location.href = _.steam_deck_blog_url);
           };
-          let _ = _ != null ? _ : {},
+          let _ = _ ?? {},
             _ = null,
             _ = null;
           if (
@@ -46862,9 +45643,9 @@ ${_}`;
                 blogURL: _.steam_deck_blog_url,
                 eHWCompatibiltyDisplay: _._,
               }))),
-            !((_ = _.resolved_items) != null && _.length) &&
-              !((_ = _.machine_resolved_items) != null && _.length) &&
-              !((_ = _.frame_resolved_items) != null && _.length))
+            !_.resolved_items?.length &&
+              !_.machine_resolved_items?.length &&
+              !_.frame_resolved_items?.length)
           ) {
             let _ = "",
               _ = null,
@@ -47093,24 +45874,12 @@ ${_}`;
             _ = _.useCallback(() => _, [_]),
             _ = _.useRef(null),
             _ = (0, _._)();
-          let _ = _ != null ? _ : {};
+          let _ = _ ?? {};
           return (
             _.useEffect(() => {
-              var _, _, _, _;
-              ((_ = _ == null ? void 0 : _.current) == null
-                ? void 0
-                : _.scrollHeight) !== void 0 &&
-                ((_ = _ == null ? void 0 : _.current) == null
-                  ? void 0
-                  : _.clientHeight) !== void 0 &&
-                _(
-                  ((_ = _ == null ? void 0 : _.current) == null
-                    ? void 0
-                    : _.scrollHeight) >
-                    ((_ = _ == null ? void 0 : _.current) == null
-                      ? void 0
-                      : _.clientHeight),
-                );
+              _?.current?.scrollHeight !== void 0 &&
+                _?.current?.clientHeight !== void 0 &&
+                _(_?.current?.scrollHeight > _?.current?.clientHeight);
             }, []),
             (0, _.jsxs)(_._, {
               className: _().CompatibilityDetailsContainer,
@@ -47153,24 +45922,22 @@ ${_}`;
           );
         }
         function _(_) {
-          var _, _, _, _;
           const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
             _ =
               _.steamos_resolved_items &&
-              ((_ = _.steamos_resolved_items) == null
-                ? void 0
-                : _.findIndex((_) => _.display_type == _)) !== -1,
+              _.steamos_resolved_items?.findIndex(
+                (_) => _.display_type == _,
+              ) !== -1,
             _ = (0, _.jsx)(_, {
               _: _,
-              category: (_ = _.steamos_resolved_category) != null ? _ : _._,
+              category: _.steamos_resolved_category ?? _._,
               appName: _,
             }),
             _ = (0, _.jsx)(_, {
               category: _.steamos_resolved_category,
             }),
             _ =
-              _.steamos_resolved_items &&
-              ((_ = _.steamos_resolved_items) == null ? void 0 : _.length) > 0;
+              _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
           return (0, _.jsx)(_, {
             titleId: _,
             title: _._.Localize(
@@ -47208,38 +45975,33 @@ ${_}`;
                 _ &&
                   (0, _.jsx)("div", {
                     className: _().CompatibilityNotes,
-                    children:
-                      (_ = _.steamos_resolved_items) == null
-                        ? void 0
-                        : _.filter((_) => _.display_type == _).map((_) =>
-                            (0, _.jsxs)(
-                              "div",
-                              {
-                                className: _().CompatibilityDetailsRow,
-                                children: [
-                                  (0, _.jsx)(_, {
-                                    displaytype: _.display_type,
-                                  }),
-                                  (0, _.jsx)("span", {
-                                    children: _._.Localize(_.loc_token),
-                                  }),
-                                ],
-                              },
-                              _.loc_token + _.display_type,
-                            ),
-                          ),
+                    children: _.steamos_resolved_items
+                      ?.filter((_) => _.display_type == _)
+                      .map((_) =>
+                        (0, _.jsxs)(
+                          "div",
+                          {
+                            className: _().CompatibilityDetailsRow,
+                            children: [
+                              (0, _.jsx)(_, {
+                                displaytype: _.display_type,
+                              }),
+                              (0, _.jsx)("span", {
+                                children: _._.Localize(_.loc_token),
+                              }),
+                            ],
+                          },
+                          _.loc_token + _.display_type,
+                        ),
+                      ),
                   }),
               ],
             }),
           });
         }
         function _(_) {
-          var _, _;
           const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
-            _ =
-              ((_ = _.resolved_items) == null
-                ? void 0
-                : _.findIndex((_) => _.display_type == _)) !== -1,
+            _ = _.resolved_items?.findIndex((_) => _.display_type == _) !== -1,
             _ = (0, _.jsx)(_, {
               _: _,
               category: _.resolved_category,
@@ -47248,9 +46010,7 @@ ${_}`;
             _ = (0, _.jsx)(_, {
               category: _.resolved_category,
             }),
-            _ =
-              _.resolved_items &&
-              ((_ = _.resolved_items) == null ? void 0 : _.length) > 0;
+            _ = _.resolved_items && _.resolved_items?.length > 0;
           return (0, _.jsx)(_, {
             titleId: _,
             title: _._.Localize(
@@ -47313,12 +46073,11 @@ ${_}`;
           });
         }
         function _(_) {
-          var _, _;
           const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
             _ =
-              ((_ = _.machine_resolved_items) == null
-                ? void 0
-                : _.findIndex((_) => _.display_type == _)) !== -1,
+              _.machine_resolved_items?.findIndex(
+                (_) => _.display_type == _,
+              ) !== -1,
             _ = (0, _.jsx)(_, {
               _: _,
               category: _.machine_resolved_category,
@@ -47328,8 +46087,7 @@ ${_}`;
               category: _.machine_resolved_category,
             }),
             _ =
-              _.machine_resolved_items &&
-              ((_ = _.machine_resolved_items) == null ? void 0 : _.length) > 0;
+              _.machine_resolved_items && _.machine_resolved_items?.length > 0;
           return (0, _.jsx)(_, {
             titleId: _,
             title: _._.Localize(
@@ -47388,23 +46146,19 @@ ${_}`;
           });
         }
         function _(_) {
-          var _, _, _, _;
           const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
             _ =
-              ((_ = _.frame_resolved_items) == null
-                ? void 0
-                : _.findIndex((_) => _.display_type == _)) !== -1,
+              _.frame_resolved_items?.findIndex((_) => _.display_type == _) !==
+              -1,
             _ = (0, _.jsx)(_, {
               _: _,
-              category: (_ = _.frame_resolved_category) != null ? _ : _._,
+              category: _.frame_resolved_category ?? _._,
               appName: _,
             }),
             _ = (0, _.jsx)(_, {
-              category: (_ = _.frame_resolved_category) != null ? _ : _._,
+              category: _.frame_resolved_category ?? _._,
             }),
-            _ =
-              _.frame_resolved_items &&
-              ((_ = _.frame_resolved_items) == null ? void 0 : _.length) > 0;
+            _ = _.frame_resolved_items && _.frame_resolved_items?.length > 0;
           return (0, _.jsx)(_, {
             titleId: _,
             title: _._.Localize(
@@ -47545,21 +46299,13 @@ ${_}`;
         }
         function _(_) {
           const _ = usePerformanceStats(_.appid);
-          return useMemo(() => {
-            var _, _, _, _;
-            return (_ =
-              (_ =
-                (_ =
-                  (_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.frame_rates) == null
-                  ? void 0
-                  : _.find((_) => _.clusterid == "1")) == null
-                ? void 0
-                : _.mean_frame_rate) == null
-              ? void 0
-              : _.toFixed(0);
-          }, [_])
+          return useMemo(
+            () =>
+              _?.data?.frame_rates
+                ?.find((_) => _.clusterid == "1")
+                ?.mean_frame_rate?.toFixed(0),
+            [_],
+          )
             ? jsx("div", {
                 className: styles.GamePerformance,
                 children: null,
@@ -47608,7 +46354,7 @@ ${_}`;
               _,
               (0, _.jsx)(_._, {
                 onClick: (_) => {
-                  _.preventDefault(), (_ != null ? _ : _)();
+                  _.preventDefault(), (_ ?? _)();
                 },
                 children: (0, _.jsx)("span", {
                   className: _().LearnMorePC,
@@ -48024,6 +46770,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -48058,15 +46805,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -48075,8 +46813,7 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 56,
           _ = 136,
           _ = _.lazy(() =>
@@ -48091,7 +46828,6 @@ ${_}`;
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           );
         function _(_) {
-          var _;
           const [_, _] = (0, _._)(_.appid, {
               include_assets: !0,
             }),
@@ -48099,11 +46835,8 @@ ${_}`;
           let _ = "";
           return (
             _.appid
-              ? (_ =
-                  ((_ = _ == null ? void 0 : _.GetAssets()) == null
-                    ? void 0
-                    : _.GetCommunityIconURL()) || "")
-              : _.clanID && (_ = _ ? _.avatar_full_url : ""),
+              ? (_ = _?.GetAssets()?.GetCommunityIconURL() || "")
+              : _.clanID && (_ = _?.avatar_full_url ?? ""),
             (0, _.jsx)("div", {
               className: (0, _._)(_().ScrollButton, _().GameArt, _().AnimIn),
               onClick: _.onAppIconClick,
@@ -48111,35 +46844,36 @@ ${_}`;
                 !!_ &&
                 (0, _.jsx)("img", {
                   src: _,
+                  alt: "",
                 }),
             })
           );
         }
         let _ = class extends _.Component {
+          m_loader;
+          m_refPage = _.createRef();
+          m_refContent = _.createRef();
+          m_refScroll = _.createRef();
+          m_refScrollAnchor = _.createRef();
+          m_scrollAnimation = null;
+          m_nTouchStartClientY;
+          m_nPreviousRenderCount = 0;
+          m_nCurrentRenderCount = 0;
           constructor(_) {
             super(_),
-              _(this, "m_loader", null),
-              _(this, "m_refPage", _.createRef()),
-              _(this, "m_refContent", _.createRef()),
-              _(this, "m_refScroll", _.createRef()),
-              _(this, "m_refScrollAnchor", _.createRef()),
-              _(this, "m_scrollAnimation", null),
-              _(this, "m_nTouchStartClientY"),
-              _(this, "m_nPreviousRenderCount", 0),
-              _(this, "m_nCurrentRenderCount", 0),
+              (this.m_loader = new _(this.props.partnerEventStore)),
               !this.props.bShowOnlyInitialEvent &&
                 this.props.initialEvent &&
-                ((this.m_loader = new _(this.props.partnerEventStore)),
                 this.m_loader.InitAroundEvent(
                   this.props.initialEvent,
                   this.props.additionalParams,
-                ));
+                );
           }
           FindCurrentlyViewedEventIndex() {
-            if (!this.m_refContent.current || !this.m_refScroll.current)
-              return -1;
+            const _ = this.m_refScroll.current;
+            if (!this.m_refContent.current || !_) return -1;
             let _ = this.m_refContent.current.children,
-              _ = this.GetScrollTopForComparison();
+              _ = this.GetScrollTopForComparison(_);
             for (let _ = 0; _ < _.length; _++) {
               let _ = _[_],
                 _ = _.offsetTop,
@@ -48151,10 +46885,8 @@ ${_}`;
           GetPaddingTop() {
             return this.props.showAppHeader ? _ : _;
           }
-          GetScrollTopForComparison() {
-            return Math.ceil(
-              this.m_refScroll.current.scrollTop + this.GetPaddingTop() + 24,
-            );
+          GetScrollTopForComparison(_) {
+            return Math.ceil(_.scrollTop + this.GetPaddingTop() + 24);
           }
           ScrollToEvent(_) {
             let _ = this.m_refContent.current;
@@ -48201,12 +46933,13 @@ ${_}`;
               this.ScrollToOffset(0);
               return;
             }
-            let _ = this.m_refContent.current;
-            if (_) {
+            let _ = this.m_refContent.current,
+              _ = this.m_refScroll.current;
+            if (_ && _) {
               let _ = _.children[_],
                 _ = _.offsetTop,
                 _ = _ + _.clientHeight,
-                _ = this.GetScrollTopForComparison();
+                _ = this.GetScrollTopForComparison(_);
               (_ = _ - (_ - _) * 0.3), _ <= _ && (_ = _);
             }
             this.ScrollToEvent(_);
@@ -48252,30 +46985,31 @@ ${_}`;
           }
           OnTouchMove(_) {
             if (!this.m_refScroll.current || _.touches.length == 0) return;
-            const _ = this.m_nTouchStartClientY - _.touches[0].clientY;
-            this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
+            let _ = 0;
+            this.m_nTouchStartClientY !== void 0 &&
+              (_ = this.m_nTouchStartClientY - _.touches[0].clientY),
+              this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
           }
           OnWheel(_) {
             this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _.deltaY);
           }
           SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _) {
-            const _ = _._(_.target) && _._(this.m_refScroll.current, _.target),
-              _ = _ < 0 && this.m_refScroll.current.scrollTop < 1,
-              _ =
-                this.m_refScroll.current.scrollHeight -
-                  this.m_refScroll.current.scrollTop <=
-                this.m_refScroll.current.clientHeight,
+            const _ = this.m_refScroll.current;
+            if (!_) return;
+            const _ = _._(_.target) && _._(_, _.target),
+              _ = _ < 0 && _.scrollTop < 1,
+              _ = _.scrollHeight - _.scrollTop <= _.clientHeight,
               _ = _ > 0 && _;
             (!_ || _ || _) && _.cancelable && _.preventDefault();
           }
           SetGlobalHeaderHidden(_) {
             const _ = document.getElementsByClassName("responsive_header");
             (0, _._)(_.length <= 1, "Must have at most one responsive_header"),
-              _.length >= 1 && (_[0].style.display = _ ? "none" : null);
+              _.length >= 1 && (_[0].style.display = _ ? "none" : "");
           }
           SetFooterPinnedToBottom(_) {
             const _ = document.getElementById("footer");
-            _ && (_.style.position = _ ? "absolute" : null);
+            _ && (_.style.position = _ ? "absolute" : "");
           }
           componentDidMount() {
             const _ = this.m_refScroll.current;
@@ -48293,14 +47027,14 @@ ${_}`;
               this.SetFooterPinnedToBottom(!0);
           }
           componentDidUpdate(_, _, _) {
-            if (_ !== null) {
-              let _ = this.m_refScroll.current;
-              _ && !_._(_, _.ownerDocument.activeElement) && _.focus();
-              let _ = this.m_refScrollAnchor.current
-                ? this.m_refScrollAnchor.current.GetDOM()
-                : null;
-              _ && (_.scrollTop = _.offsetTop - _);
-            }
+            if (_ === null) return;
+            const _ = this.m_refScroll.current;
+            if (!_) return;
+            _._(_, _.ownerDocument.activeElement) || _.focus();
+            let _ = this.m_refScrollAnchor.current
+              ? this.m_refScrollAnchor.current.GetDOM()
+              : null;
+            _ && (_.scrollTop = _.offsetTop - _);
           }
           componentWillUnmount() {
             const _ = this.m_refPage.current;
@@ -48312,18 +47046,14 @@ ${_}`;
               this.SetFooterPinnedToBottom(!1);
           }
           render() {
-            var _;
             const { initialEvent: _, bShowOnlyInitialEvent: _ } = this.props,
               _ = !_,
-              _ = _ ? [] : _ ? [_] : this.m_loader.GetEvents(),
+              _ = _ ? (_ ? [_] : this.m_loader.GetEvents()) : [],
               _ = [];
             let _ = this.props.appid,
-              _ =
-                (_ = this.props.clanSteamID) == null
-                  ? void 0
-                  : _.GetAccountID();
+              _ = this.props.clanSteamID?.GetAccountID();
             for (const _ of _) {
-              const _ = _.GID == this.props.initialEvent.GID,
+              const _ = _ !== void 0 && _.GID == _.GID,
                 _ = _;
               _.push(
                 (0, _.jsx)(
@@ -48355,8 +47085,8 @@ ${_}`;
                 children: [
                   this.props.showAppHeader &&
                     (0, _.jsx)(_._, {
-                      appId: _,
-                      clanId: _,
+                      appId: _ ?? 0,
+                      clanId: _ ?? 0,
                     }),
                   (0, _.jsx)(_._, {
                     className: (0, _._)(
@@ -48423,7 +47153,7 @@ ${_}`;
                                     this.props.onAppIconClick &&
                                       (0, _.jsx)(_, {
                                         appid: _,
-                                        clanID: _,
+                                        clanID: _ ?? 0,
                                         onAppIconClick:
                                           this.props.onAppIconClick,
                                       }),
@@ -48500,12 +47230,9 @@ ${_}`;
             });
           });
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "m_refContent", _.createRef()),
-              _(this, "m_sendReadInfo", new _._()),
-              _(this, "m_bSentRead", !1);
-          }
+          m_refContent = _.createRef();
+          m_sendReadInfo = new _._();
+          m_bSentRead = !1;
           OnEnterVisible() {
             if (this.m_bSentRead || this.m_sendReadInfo.IsScheduled()) return;
             const _ = 750,
@@ -48541,197 +47268,203 @@ ${_}`;
               _ = _.GetCategoryAsString(),
               _ = _.type;
             let _ = "";
-            if (_.appid) _ = (_ == null ? void 0 : _.GetName()) || "";
-            else if (_.clanSteamID) {
-              const _ = _._.GetClanInfoByClanAccountID(
-                _.clanSteamID.GetAccountID(),
-              );
-              _ = _ ? _.group_name : "";
-            }
+            _.appid
+              ? (_ = _?.GetName() || "")
+              : _.clanSteamID &&
+                (_ =
+                  _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID())
+                    ?.group_name ?? "");
             const _ = _._.GetTimeNowWithOverride(),
               _ = _ !== _.uYK && _ < _.GetStartTimeAndDateUnixSeconds() && !_;
-            return (0, _.jsx)(_._, {
-              children: (0, _.jsxs)("div", {
-                ref: this.m_refContent,
-                className: (0, _._)(
-                  _,
-                  _().PartnerEvent,
-                  _().InLibraryView,
-                  _ == "editor" ? _().InEditor : "",
-                ),
-                children: [
-                  (0, _.jsx)(_, {
-                    ...this.props,
-                    eLanguage: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().LibraryEventTitleContainer,
-                    children: (0, _.jsxs)("div", {
-                      className: _().EventDetailTitleContainer,
-                      children: [
-                        this.props.headerElement,
-                        (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            _().EventTypeAndTimeRow,
-                            _ && _().WithReminder,
-                          ),
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: _().TimeandPostedBy,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  className: _().EventType,
-                                  children: _,
-                                }),
-                                (0, _.jsxs)("span", {
-                                  className: _().PostedBy,
-                                  children: [
-                                    " ",
-                                    (0, _._)("#EventDisplay_PostedBy"),
-                                    _,
-                                    " ",
-                                  ],
-                                }),
-                                (0, _.jsx)(_._, {
-                                  event: _,
-                                  className: _().EventDetailTimeInfo,
-                                }),
-                              ],
-                            }),
-                            _ &&
-                              !_ &&
-                              (0, _.jsx)("div", {
-                                className: _().ReminderContainer,
-                                children: (0, _.jsx)(_._, {
-                                  eventModel: _,
-                                  lang: _,
-                                  bExpandLeft: !0,
-                                }),
-                              }),
-                            !_ && _,
-                          ],
-                        }),
-                        !this.props.disableReadTracking &&
-                          !_ &&
-                          (0, _.jsx)(_._, {
-                            onEnter: this.OnEnterVisible,
-                            onLeave: this.OnLeaveVisible,
-                            options: {
-                              rootMargin: `0px 0px -${_} 0px`,
-                            },
-                          }),
-                        this.props.bInGamepadUI
-                          ? (0, _.jsx)("div", {
-                              className: _().EventDetailTitle,
-                              children: _.GetNameWithFallback(_),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _,
-                              route: _._.k_eView,
-                              className: _().EventDetailTitle,
-                              children: _.GetNameWithFallback(_),
-                            }),
-                        _.BHasSubTitle(_) &&
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().EventDetailsSubTitle,
-                              _().LibraryViewSubtitle,
-                            ),
-                            children: _.GetSubTitle(_),
-                          }),
-                        (0, _.jsx)("div", {
-                          className: _().EventDetailUserType,
-                        }),
-                      ],
+            let _ = null;
+            return (
+              _.jsondata.bSaleEnabled &&
+                _.jsondata.sale_vanity_id &&
+                (_ = (0, _._)(_)),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsxs)("div", {
+                  ref: this.m_refContent,
+                  className: (0, _._)(
+                    _,
+                    _().PartnerEvent,
+                    _().InLibraryView,
+                    _ == "editor" ? _().InEditor : "",
+                  ),
+                  children: [
+                    (0, _.jsx)(_, {
+                      ...this.props,
+                      eLanguage: _,
                     }),
-                  }),
-                  !!(
-                    _.BEventCanShowBroadcastWidget() &&
-                    !this.props.bDisableBroadcastPlayer
-                  ) &&
                     (0, _.jsx)("div", {
-                      className: _().EventBroadcastCtn,
-                      children: (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {
-                          event: this.props.event,
-                        }),
-                      }),
-                    }),
-                  _.BHasTag("steam_award_nomination_request") &&
-                    (0, _.jsx)(_._, {
-                      event: _,
-                      lang: _,
-                    }),
-                  _.BHasTag("steam_award_vote_request") &&
-                    (0, _.jsx)(_._, {
-                      appID: _.appid,
-                      bIsEventActionEnabled: _.BIsEventActionEnabled(),
-                      voteCategories: _.GetSteamAwardNomineeCategories(),
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _().LibraryEventBodyContainer,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().EventDetailsBody,
-                          _().EventDetailsBody,
-                          _ && _().MaskImages,
-                        ),
-                        onContextMenu: _._.IN_CLIENT ? _._ : void 0,
+                      className: _().LibraryEventTitleContainer,
+                      children: (0, _.jsxs)("div", {
+                        className: _().EventDetailTitleContainer,
                         children: [
-                          (0, _.jsx)(_._, {
-                            text: _,
-                            event: _,
+                          this.props.headerElement,
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(
+                              _().EventTypeAndTimeRow,
+                              _ && _().WithReminder,
+                            ),
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: _().TimeandPostedBy,
+                                children: [
+                                  (0, _.jsx)("span", {
+                                    className: _().EventType,
+                                    children: _,
+                                  }),
+                                  (0, _.jsxs)("span", {
+                                    className: _().PostedBy,
+                                    children: [
+                                      " ",
+                                      (0, _._)("#EventDisplay_PostedBy"),
+                                      _,
+                                      " ",
+                                    ],
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    event: _,
+                                    className: _().EventDetailTimeInfo,
+                                  }),
+                                ],
+                              }),
+                              _ &&
+                                !_ &&
+                                (0, _.jsx)("div", {
+                                  className: _().ReminderContainer,
+                                  children: (0, _.jsx)(_._, {
+                                    eventModel: _,
+                                    lang: _,
+                                    bExpandLeft: !0,
+                                  }),
+                                }),
+                              !_ && _,
+                            ],
                           }),
-                          (0, _.jsx)("span", {
-                            className: _().Clear,
+                          !this.props.disableReadTracking &&
+                            !_ &&
+                            (0, _.jsx)(_._, {
+                              onEnter: this.OnEnterVisible,
+                              onLeave: this.OnLeaveVisible,
+                              options: {
+                                rootMargin: `0px 0px -${_} 0px`,
+                              },
+                            }),
+                          this.props.bInGamepadUI
+                            ? (0, _.jsx)("div", {
+                                className: _().EventDetailTitle,
+                                children: _.GetNameWithFallback(_),
+                              })
+                            : (0, _.jsx)(_._, {
+                                eventModel: _,
+                                route: _._.k_eView,
+                                className: _().EventDetailTitle,
+                                children: _.GetNameWithFallback(_),
+                              }),
+                          _.BHasSubTitle(_) &&
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(
+                                _().EventDetailsSubTitle,
+                                _().LibraryViewSubtitle,
+                              ),
+                              children: _.GetSubTitle(_),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _().EventDetailUserType,
                           }),
                         ],
                       }),
-                      (0, _.jsx)(_._, {
-                        event: this.props.event,
-                      }),
-                      !!_.jsondata.read_more_link &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().ReadMoreCnt),
-                          children: (0, _.jsx)(_._, {
-                            className: (0, _._)(_().Button),
-                            href: _.jsondata.read_more_link,
-                            children: (0, _._)(
-                              "#EventEmail_Button_ClickForMoreDetails",
-                            ),
+                    }),
+                    !!(
+                      _.BEventCanShowBroadcastWidget() &&
+                      !this.props.bDisableBroadcastPlayer
+                    ) &&
+                      (0, _.jsx)("div", {
+                        className: _().EventBroadcastCtn,
+                        children: (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {
+                            event: this.props.event,
                           }),
                         }),
-                      !!(
-                        _.jsondata.bSaleEnabled && _.jsondata.sale_vanity_id
-                      ) &&
+                      }),
+                    _.BHasTag("steam_award_nomination_request") &&
+                      (0, _.jsx)(_._, {
+                        event: _,
+                        lang: _,
+                      }),
+                    _.BHasTag("steam_award_vote_request") &&
+                      (0, _.jsx)(_._, {
+                        appID: _.appid,
+                        bIsEventActionEnabled: _.BIsEventActionEnabled(),
+                        voteCategories: _.GetSteamAwardNomineeCategories(),
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _().LibraryEventBodyContainer,
+                      children: [
                         (0, _.jsxs)("div", {
-                          className: (0, _._)(_().ReadMoreCnt),
+                          className: (0, _._)(
+                            _().EventDetailsBody,
+                            _().EventDetailsBody,
+                            _ && _().MaskImages,
+                          ),
+                          onContextMenu: _._.IN_CLIENT ? _._ : void 0,
                           children: [
                             (0, _.jsx)(_._, {
-                              gidEvent: _.GID,
+                              text: _,
+                              event: _,
                             }),
-                            (0, _.jsx)("a", {
-                              className: (0, _._)(_().Button, "LinkButton"),
-                              href: (0, _._)((0, _._)(_)),
-                              children: (0, _._)("#Event_Button_VisitSalePage"),
+                            (0, _.jsx)("span", {
+                              className: _().Clear,
                             }),
                           ],
                         }),
-                      (0, _.jsx)(_._, {
-                        appid: _.appid,
-                      }),
-                    ],
-                  }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      eventModel: _,
-                      emoticonStore: _,
+                        (0, _.jsx)(_._, {
+                          event: this.props.event,
+                        }),
+                        !!_.jsondata.read_more_link &&
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(_().ReadMoreCnt),
+                            children: (0, _.jsx)(_._, {
+                              className: (0, _._)(_().Button),
+                              href: _.jsondata.read_more_link,
+                              children: (0, _._)(
+                                "#EventEmail_Button_ClickForMoreDetails",
+                              ),
+                            }),
+                          }),
+                        _ &&
+                          _.GID &&
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(_().ReadMoreCnt),
+                            children: [
+                              (0, _.jsx)(_._, {
+                                gidEvent: _.GID,
+                              }),
+                              (0, _.jsx)("a", {
+                                className: (0, _._)(_().Button, "LinkButton"),
+                                href: (0, _._)(_),
+                                children: (0, _._)(
+                                  "#Event_Button_VisitSalePage",
+                                ),
+                              }),
+                            ],
+                          }),
+                        (0, _.jsx)(_._, {
+                          appid: _.appid,
+                        }),
+                      ],
                     }),
-                ],
-              }),
-            });
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        emoticonStore: _,
+                      }),
+                  ],
+                }),
+              })
+            );
           }
         };
         _([_._], _.prototype, "OnEnterVisible", 1),
@@ -48754,6 +47487,7 @@ ${_}`;
               children: [
                 _ != _.Fwr &&
                   !_ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     className: (0, _._)(
                       _().EventCoverImageBackground,
@@ -48780,17 +47514,16 @@ ${_}`;
           _
         ))(_ || {});
         class _ {
+          k_nMaxPerDirection = 3;
+          m_nAppID = 0;
+          m_clanSteamID = new _._();
+          m_partnerEventStore;
+          m_additionalParams;
+          m_rgEvents = [];
+          m_eOlderDirection = 1;
+          m_eNewerDirection = 1;
           constructor(_) {
-            _(this, "k_nMaxPerDirection", 3),
-              _(this, "m_nAppID", 0),
-              _(this, "m_clanSteamID"),
-              _(this, "m_partnerEventStore"),
-              _(this, "m_additionalParams"),
-              _(this, "m_rgEvents", []),
-              _(this, "m_eOlderDirection", 1),
-              _(this, "m_eNewerDirection", 1),
-              (0, _._)(this),
-              (this.m_partnerEventStore = _);
+            (0, _._)(this), (this.m_partnerEventStore = _);
           }
           GetEvents() {
             return this.m_rgEvents;
@@ -48813,7 +47546,7 @@ ${_}`;
               (this.m_eNewerDirection = 2),
               (this.m_additionalParams = _),
               this.m_rgEvents.push(_);
-            let _ = null;
+            let _;
             try {
               _ = await _.LoadAdjacentPartnerEventsByEvent(
                 _,
@@ -48842,7 +47575,7 @@ ${_}`;
               return;
             let _ = this.m_rgEvents[this.m_rgEvents.length - 1];
             this.m_eOlderDirection = 2;
-            let _ = null;
+            let _;
             try {
               _ =
                 await this.m_partnerEventStore.LoadAdjacentPartnerEventsByEvent(
@@ -48859,9 +47592,13 @@ ${_}`;
                 this.m_eOlderDirection = 1;
                 return;
               }
-              const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-              for (let _ of _)
-                _.has(_.GID) || (this.m_rgEvents.push(_), _.add(_.GID));
+              const _ = new Set(
+                this.m_rgEvents.map((_) => _.GID).filter((_) => _ !== void 0),
+              );
+              for (let _ of _) {
+                const _ = _.GID;
+                _ && !_.has(_) && (this.m_rgEvents.push(_), _.add(_));
+              }
               this.m_eOlderDirection =
                 _.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
@@ -48871,7 +47608,7 @@ ${_}`;
               return;
             let _ = this.m_rgEvents[0];
             this.m_eNewerDirection = 2;
-            let _ = null;
+            let _;
             try {
               _ =
                 await this.m_partnerEventStore.LoadAdjacentPartnerEventsByEvent(
@@ -48887,9 +47624,13 @@ ${_}`;
                 this.m_eNewerDirection = 1;
                 return;
               }
-              const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-              for (let _ of _.reverse())
-                _.has(_.GID) || (this.m_rgEvents.unshift(_), _.add(_.GID));
+              const _ = new Set(
+                this.m_rgEvents.map((_) => _.GID).filter((_) => _ !== void 0),
+              );
+              for (let _ of _.reverse()) {
+                const _ = _.GID;
+                _ && !_.has(_) && (this.m_rgEvents.unshift(_), _.add(_));
+              }
               this.m_eNewerDirection =
                 _.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
@@ -48910,182 +47651,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
-          constructor() {
-            _(this, "m_mapClanReposted", new Set()),
-              _(this, "m_mapSourceEventGIDToPostedClans", new Map()),
-              (0, _._)(this);
-          }
-          static Get() {
-            return (
-              _.s_EventRepost ||
-                ((_.s_EventRepost = new _()), _.s_EventRepost.Initialize()),
-              _.s_EventRepost
-            );
-          }
-          static ValidateRepostData(_) {
-            const _ = _;
-            return _ &&
-              _.repost_clan_account_ids &&
-              Array.isArray(_.repost_clan_account_ids) &&
-              _.repost_clan_account_ids.length > 0
-              ? typeof _.repost_clan_account_ids[0] == "number"
-              : !1;
-          }
-          Initialize() {
-            if (document.getElementById("application_config")) {
-              let _ = (0, _._)("repostcontrols", "application_config");
-              _.ValidateRepostData(_) &&
-                _.repost_clan_account_ids.forEach((_) =>
-                  this.m_mapClanReposted.add(_),
-                );
-            }
-          }
-          BCanRepostPartnerEvent() {
-            return this.m_mapClanReposted.size > 0;
-          }
-          GetRepostClanAccountID() {
-            return Array.from(this.m_mapClanReposted);
-          }
-          async LoadClansAlreadyRepostedTo(_, _, _) {
-            var _, _, _;
-            if (this.m_mapSourceEventGIDToPostedClans.has(_))
-              return this.m_mapSourceEventGIDToPostedClans.get(_);
-            const _ = _._.STORE_BASE_URL + "events/ajaxgetrepostedevent",
-              _ = {
-                sessionid: (0, _._)(),
-                source_clan_accountid: _.GetAccountID(),
-                source_event_gid: _,
-              };
-            try {
-              const _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
-              });
-              if (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.success) == _._
-              )
-                return (
-                  this.m_mapSourceEventGIDToPostedClans.set(
-                    _,
-                    _.data.repost_clan_accountid || [],
-                  ),
-                  _.data.repost_clan_accountid
-                );
-              console.error(
-                "GetRepostClanAccountID: failed " +
-                  ((_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.success) +
-                  " and msg: " +
-                  ((_ = _ == null ? void 0 : _.data) == null ? void 0 : _.msg),
-              );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "GetRepostClanAccountID: fail repost with " + _.strErrorMsg,
-                _,
-              );
-            }
-            return new Array();
-          }
-          async RepostEvent(_, _, _, _, _) {
-            var _, _, _;
-            const _ = _._.STORE_BASE_URL + "events/ajaxrepostevent",
-              _ = new FormData();
-            _.append("sessionid", (0, _._)()),
-              _.append("source_clan_accountid", "" + _.GetAccountID()),
-              _.append("source_event_gid", "" + _),
-              _.append("repost_clan_accountid", "" + _.GetAccountID()),
-              _.append("add", "" + _);
-            try {
-              let _ = await _().post(_, _, {
-                withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
-              });
-              if (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.success) == _._ &&
-                _.data.repost_gid
-              ) {
-                this.m_mapSourceEventGIDToPostedClans.has(_) ||
-                  this.m_mapSourceEventGIDToPostedClans.set(_, []);
-                const _ = this.m_mapSourceEventGIDToPostedClans
-                  .get(_)
-                  .findIndex((_) => _.GetAccountID() == _);
-                return (
-                  _ && _ == -1
-                    ? this.m_mapSourceEventGIDToPostedClans
-                        .get(_)
-                        .push(_.GetAccountID())
-                    : !_ &&
-                      _ !== -1 &&
-                      this.m_mapSourceEventGIDToPostedClans.get(_).splice(_, 1),
-                  _.data.repost_gid
-                );
-              } else
-                console.error(
-                  "RepostEvent: failed " +
-                    ((_ = _ == null ? void 0 : _.data) == null
-                      ? void 0
-                      : _.success) +
-                    " and msg: " +
-                    ((_ = _ == null ? void 0 : _.data) == null
-                      ? void 0
-                      : _.msg),
-                );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "RepostEvent: fail repost with " + _.strErrorMsg,
-                _,
-              );
-            }
-            return null;
-          }
-        };
-        _(_, "s_EventRepost"), _([_._], _.prototype, "m_mapClanReposted", 2);
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
@@ -49114,7 +47689,7 @@ ${_}`;
               }),
               (0, _.jsx)(_._, {
                 eventModel: _,
-                strEventLink: _ != null ? _ : "",
+                strEventLink: _ ?? "",
                 bActive: _,
                 closeModal: _,
                 emoticonStore: _,
@@ -49125,212 +47700,6 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (0, _._)((_) => {
-          const { eventModel: _ } = _,
-            [_, _] = (0, _.useState)(!0),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(null),
-            [_, _] = (0, _.useState)(null),
-            _ = (0, _.useRef)(null);
-          (0, _.useEffect)(
-            () => (
-              _ &&
-                (async () => {
-                  const _ = _().CancelToken.source();
-                  _.current = _.cancel;
-                  const _ = _.Get().LoadClansAlreadyRepostedTo(
-                    _.clanSteamID,
-                    _.GID,
-                    _,
-                  );
-                  _.then((_) => {
-                    const _ = new Set();
-                    _.forEach((_) => _.add(_)), _(_);
-                  });
-                  let _ = new Array();
-                  _.push(_),
-                    _.Get()
-                      .GetRepostClanAccountID()
-                      .forEach((_) => {
-                        const _ = _._.InitFromClanID(_);
-                        _.push(_._.LoadClanInfoForClanSteamID(_));
-                      }),
-                    await Promise.all(_),
-                    _(!1);
-                })(),
-              () => _.current && _.current()
-            ),
-            [_, _.GID, _.clanSteamID],
-          );
-          const _ = new Array();
-          return (
-            _.Get()
-              .GetRepostClanAccountID()
-              .forEach((_) => {
-                const _ = _._.GetClanInfoByClanAccountID(_);
-                if (_ && _ != _.clanSteamID.GetAccountID()) {
-                  const _ = _.has(_),
-                    _ = _.has(_) || (_ && !_.has(_));
-                  _.push(
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        label: _
-                          ? (0, _._)(
-                              "#EventRepost_Dialog_Existing",
-                              _.group_name,
-                            )
-                          : _.group_name,
-                        checked: _,
-                        disabled: _ !== null,
-                        onChange: (_) => {
-                          _.has(_)
-                            ? (_ ? _.delete(_) : _.add(_), _(new Set(_)))
-                            : (_ ? _.add(_) : _.delete(_), _(new Set(_)));
-                        },
-                      },
-                      "checkbox" + _,
-                    ),
-                  );
-                }
-              }),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                onEscKeypress: () => _.closeModal && _.closeModal(),
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#EventRepost_Dialog_Title"),
-                    }),
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          children: (0, _._)("#EventRepost_Dialog_Desc"),
-                        }),
-                        _
-                          ? (0, _.jsx)(_._, {
-                              string: (0, _._)("#Loading"),
-                            })
-                          : (0, _.jsx)("div", {
-                              children: _,
-                            }),
-                        !!(_.size || _.size) &&
-                          (0, _.jsxs)("div", {
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventRepost_Dialog_Action_Desc",
-                                ),
-                              }),
-                              (0, _.jsxs)("ul", {
-                                children: [
-                                  !!_.size &&
-                                    (0, _.jsx)("li", {
-                                      children: (0, _._)(
-                                        "#EventRepost_Dialog_Action_Add",
-                                        _.size,
-                                      ),
-                                    }),
-                                  !!_.size &&
-                                    (0, _.jsx)("li", {
-                                      children: (0, _._)(
-                                        "#EventRepost_Dialog_Action_Remove",
-                                        _.size,
-                                      ),
-                                    }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        !!_ &&
-                          (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                        !!_ &&
-                          (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        onCancel: () => _.closeModal && _.closeModal(),
-                        strOKText: (0, _._)("#EventRepost_Dialog_OK"),
-                        bOKDisabled:
-                          (_.size == 0 && _.size == 0) ||
-                          _ !== null ||
-                          _ !== null,
-                        onOK: async () => {
-                          _.current && _.current();
-                          const _ = _().CancelToken.source();
-                          _.current = _.cancel;
-                          const _ = _.size + _.size;
-                          let _ = 1;
-                          _((0, _._)("#EventRepost_Dialog_Progress", _, _));
-                          for (const _ of Array.from(_)) {
-                            const _ = _._.InitFromClanID(_);
-                            if (
-                              await _.Get().RepostEvent(
-                                _.clanSteamID,
-                                _.GID,
-                                _,
-                                !0,
-                                _,
-                              )
-                            )
-                              _(
-                                (0, _._)(
-                                  "#EventRepost_Dialog_Progress",
-                                  ++_,
-                                  _,
-                                ),
-                              );
-                            else {
-                              _((0, _._)("#EventRepost_Dialog_ResultFail"));
-                              return;
-                            }
-                          }
-                          for (const _ of Array.from(_)) {
-                            const _ = _._.InitFromClanID(_);
-                            if (
-                              await _.Get().RepostEvent(
-                                _.clanSteamID,
-                                _.GID,
-                                _,
-                                !1,
-                                _,
-                              )
-                            )
-                              _(
-                                (0, _._)(
-                                  "#EventRepost_Dialog_Progress",
-                                  ++_,
-                                  _,
-                                ),
-                              );
-                            else {
-                              _((0, _._)("#EventRepost_Dialog_ResultFail"));
-                              return;
-                            }
-                          }
-                          _((0, _._)("#EventRepost_Dialog_ResultSuccess"));
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-            })
-          );
-        });
-        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -49500,55 +47869,32 @@ ${_}`;
             },
             [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = (_) => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_CommentMigrationInProcess",
-                  ),
-                }),
-                (0, _._)(_),
-              );
-            },
-            _ = (_) => {
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  eventModel: _,
-                }),
-                (0, _._)(_),
-              );
+              const _ = (0, _._)(_);
+              _ &&
+                (0, _._)(
+                  (0, _.jsx)(_._, {
+                    strDescription: (0, _._)(
+                      "#EventDisplay_Share_CommentMigrationInProcess",
+                    ),
+                  }),
+                  _,
+                );
             },
             [_, _, _, _] = (0, _._)(() => [
               (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
-              (0, _._)(_.GetDiscussionURL(_ == null ? void 0 : _.vanity_url)),
+              (0, _._)(_.GetDiscussionURL(_?.vanity_url)),
               _.BIsUnlistedEvent(),
               _.nCommentCount,
             ]),
-            _ = (0, _._)(),
-            _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
+            _ = (0, _._)();
           return (0, _.jsx)(_, {
             nVoteCount: _,
             nCommentCount: _,
-            myVote: _ != null ? _ : void 0,
+            myVote: _ ?? void 0,
             onVote: _,
             strDiscussionURL: _,
             onDiscussionUnavailable: _,
             bShowDiscussion: !_ && !_,
-            repost:
-              _ &&
-              (0, _.jsx)("div", {
-                className: _().VoteContainer,
-                children: (0, _.jsx)(_._, {
-                  focusable: !0,
-                  className: (0, _._)(
-                    _().Button,
-                    _().Icon,
-                    _().DiscussionButton,
-                    _ == "down" ? _().VoteButtonSelected : "",
-                  ),
-                  onActivate: _,
-                  children: (0, _._)("#EventRepost_Dialog_Title"),
-                }),
-              }),
             share:
               !_ &&
               (0, _.jsx)(_, {
@@ -49576,7 +47922,7 @@ ${_}`;
           const { MissingEventFallback: _ } = _,
             { event: _, showErrorInfo: _ } = _.context,
             _ = (0, _._)(_.args),
-            _ = !!_ && _ != (_ == null ? void 0 : _.GID),
+            _ = !!_ && _ != _?.GID,
             { data: _, isPending: _ } = (0, _._)(
               _ && _
                 ? {
@@ -49848,21 +48194,10 @@ ${_}`;
         }
         const _ = /\bname\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s\]]+))/i;
         function _(_) {
-          var _, _, _;
           const _ = new Set();
           for (const _ of _.matchAll(/\[giveawayeligible\b([^\]]*)\]/gi)) {
-            const _ = _.exec((_ = _[1]) != null ? _ : ""),
-              _ =
-                (_ =
-                  (_ = _ == null ? void 0 : _[1]) != null
-                    ? _
-                    : _ == null
-                      ? void 0
-                      : _[2]) != null
-                  ? _
-                  : _ == null
-                    ? void 0
-                    : _[3];
+            const _ = _.exec(_[1] ?? ""),
+              _ = _?.[1] ?? _?.[2] ?? _?.[3];
             _ && _.add(_);
           }
           return Array.from(_);
@@ -49886,9 +48221,9 @@ ${_}`;
               : null;
           if (_) return null;
           const _ =
-            (_ == null ? void 0 : _.success) == _._
+            _?.success == _._
               ? !!(_.visible && _.best_purchase_option)
-              : !(_ != null && _.unvailable_for_country_restriction);
+              : !_?.unvailable_for_country_restriction;
           return (!_ && !_) || (_ && _)
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
@@ -49897,25 +48232,10 @@ ${_}`;
         }
         const _ = /\bid\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s\]]+))/i;
         function _(_) {
-          var _, _, _, _;
           const _ = new Set();
           for (const _ of _.matchAll(/\[packagepurchaseable\b([^\]]*)\]/gi)) {
-            const _ = _.exec((_ = _[1]) != null ? _ : ""),
-              _ = Number.parseInt(
-                (_ =
-                  (_ =
-                    (_ = _ == null ? void 0 : _[1]) != null
-                      ? _
-                      : _ == null
-                        ? void 0
-                        : _[2]) != null
-                    ? _
-                    : _ == null
-                      ? void 0
-                      : _[3]) != null
-                  ? _
-                  : "",
-              );
+            const _ = _.exec(_[1] ?? ""),
+              _ = Number.parseInt(_?.[1] ?? _?.[2] ?? _?.[3] ?? "");
             _ && _.add(_);
           }
           return Array.from(_);
@@ -49926,18 +48246,7 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = 0,
           _ = 1,
           _ = 2,
@@ -49977,23 +48286,23 @@ ${_}`;
           });
         }
         class _ {
+          m_Callbacks;
+          m_fileUploadProps = _();
+          m_onComplete;
           constructor(_) {
-            _(this, "m_Callbacks"),
-              _(this, "m_fileUploadProps", _()),
-              _(this, "m_onComplete"),
-              (0, _._)(this, {
-                SetUploadFileError: _._,
-                StartFileExportToUpload: _._,
-                SetImageFileToUpload: _._,
-                SetOtherFileToUpload: _._,
-                SetFileToUpload: _._,
-                RetryFileUpload: _._,
-                BeginFileUpload: _._,
-                DoFileUpload: _._,
-                CommitFileUpload: _._,
-                ClearFileUploadError: _._,
-                Reset: _._,
-              }),
+            (0, _._)(this, {
+              SetUploadFileError: _._,
+              StartFileExportToUpload: _._,
+              SetImageFileToUpload: _._,
+              SetOtherFileToUpload: _._,
+              SetFileToUpload: _._,
+              RetryFileUpload: _._,
+              BeginFileUpload: _._,
+              DoFileUpload: _._,
+              CommitFileUpload: _._,
+              ClearFileUploadError: _._,
+              Reset: _._,
+            }),
               (this.m_Callbacks = _);
           }
           get file_upload_props() {
@@ -50024,20 +48333,13 @@ ${_}`;
               (this.m_fileUploadProps.displayFileName = _);
           }
           async SetImageFileToUpload(_, _ = {}) {
-            var _, _, _, _, _;
             const { processor: _ = _, info: _ } = _;
             if (!_) {
               this.SetFileToUpload(void 0);
               return;
             }
             this.m_fileUploadProps.fileInfo = _;
-            const _ =
-              (_ =
-                (_ = (_ = this.m_Callbacks).GetFileNameOverride) == null
-                  ? void 0
-                  : _.call(_)) != null
-                ? _
-                : _.name;
+            const _ = this.m_Callbacks.GetFileNameOverride?.() ?? _.name;
             if (_.size > this.m_Callbacks.GetMaxFileSizeMB() * 1024 * 1024) {
               this.SetUploadFileError(
                 _,
@@ -50062,13 +48364,7 @@ ${_}`;
                 "webp",
                 "avif",
               ],
-              _ =
-                (_ =
-                  (_ = _.name.split(".").pop()) == null
-                    ? void 0
-                    : _.toLowerCase()) != null
-                  ? _
-                  : "";
+              _ = _.name.split(".").pop()?.toLowerCase() ?? "";
             if (_.indexOf(_) == -1) {
               let _ = _ || _;
               this.SetUploadFileError(
@@ -50086,19 +48382,12 @@ ${_}`;
               (this.m_fileUploadProps.imageWidth = _.width);
           }
           async SetOtherFileToUpload(_, _ = {}) {
-            var _, _, _, _, _;
             if (!_) {
               this.SetFileToUpload(void 0);
               return;
             }
             this.m_fileUploadProps.fileInfo = _.info;
-            const _ =
-              (_ =
-                (_ = (_ = this.m_Callbacks).GetFileNameOverride) == null
-                  ? void 0
-                  : _.call(_)) != null
-                ? _
-                : _.name;
+            const _ = this.m_Callbacks.GetFileNameOverride?.() ?? _.name;
             if (_.size > this.m_Callbacks.GetMaxFileSizeMB() * 1024 * 1024) {
               this.SetUploadFileError(
                 _,
@@ -50111,13 +48400,7 @@ ${_}`;
               return;
             }
             let _ = ["zip"],
-              _ =
-                (_ =
-                  (_ = _.name.split(".").pop()) == null
-                    ? void 0
-                    : _.toLowerCase()) != null
-                  ? _
-                  : "";
+              _ = _.name.split(".").pop()?.toLowerCase() ?? "";
             if (_.indexOf(_) == -1) {
               let _ = _ || _;
               this.SetUploadFileError(
@@ -50249,8 +48532,8 @@ ${_}`;
                   ((0, _._)(() => {
                     (this.m_fileUploadProps.eUploadState = _),
                       this.LogFileUploadMessage(_),
-                      _ != null && _.message
-                        ? (_ = _ == null ? void 0 : _.message)
+                      _?.message
+                        ? (_ = _?.message)
                         : (_ = (0, _._)("#Chat_Settings_Error_ServerError")),
                       (this.m_fileUploadProps.strErrorDescription = (0, _._)(
                         "#Chat_Upload_ErrorStart",
@@ -50502,8 +48785,7 @@ ${_}`;
                 ref: _,
                 onChange: (_) => {
                   const _ = _.currentTarget.files;
-                  _ != null &&
-                    _.length &&
+                  _?.length &&
                     (_.SetImageFileToUpload(_[0]),
                     (_.currentTarget.value = ""));
                 },
@@ -50512,10 +48794,7 @@ ${_}`;
                 type: "button",
                 title: (0, _._)("#Button_Upload"),
                 onOKActionDescription: (0, _._)("#Button_Upload"),
-                onClick: () => {
-                  var _;
-                  return (_ = _.current) == null ? void 0 : _.click();
-                },
+                onClick: () => _.current?.click(),
                 children: (0, _.jsx)(_.xv8, {}),
               }),
             ],
@@ -50582,7 +48861,7 @@ ${_}`;
               _.file_upload_props.displayFileName,
               _.file_upload_props.uploadProgress,
             ]),
-            _ = _ ? (0, _._)("#Uploading_Item", _ != null ? _ : "") : "",
+            _ = _ ? (0, _._)("#Uploading_Item", _ ?? "") : "",
             _ = {
               width: _ + "%",
             };
@@ -50650,12 +48929,8 @@ ${_}`;
         }
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { showErrorInfo: _, event: _ } = _.context,
-            _ =
-              (_ = _ == null ? void 0 : _.clanSteamID.GetAccountID()) != null
-                ? _
-                : 0;
+            _ = _?.clanSteamID.GetAccountID() ?? 0;
           return _ == _._ ||
             _ == _._ ||
             (_._.EUNIVERSE == _._ && _ == _._) ||
@@ -50771,19 +49046,10 @@ ${_}`;
               });
         };
         function _(_) {
-          var _, _, _, _;
           const _ = new Set();
           for (const _ of _.matchAll(/\[vod\b([^\]]*)\]/gi)) {
-            const _ = k_BBCodeAppIDArgRegExp.exec((_ = _[1]) != null ? _ : ""),
-              _ = _
-                ? Number.parseInt(
-                    (_ =
-                      (_ = (_ = _[1]) != null ? _ : _[2]) != null ? _ : _[3]) !=
-                      null
-                      ? _
-                      : "",
-                  )
-                : 0;
+            const _ = k_BBCodeAppIDArgRegExp.exec(_[1] ?? ""),
+              _ = _ ? Number.parseInt(_[1] ?? _[2] ?? _[3] ?? "") : 0;
             _ && _.add(_);
           }
           return Array.from(_);
@@ -51045,18 +49311,10 @@ ${_}`;
               ? _
                 ? StoreAssetURL(_, "header")
                 : void 0
-              : _ == null
-                ? void 0
-                : _.avatar_full_url,
-            _ = _
-              ? _ == null
-                ? void 0
-                : _.name
-              : _ == null
-                ? void 0
-                : _.group_name;
+              : _?.avatar_full_url,
+            _ = _ ? _?.name : _?.group_name;
           return jsx(_, {
-            appId: _ != null ? _ : 0,
+            appId: _ ?? 0,
             clanId: _,
             strCapsuleUrl: _,
             strGroupTitle: _,
@@ -51068,8 +49326,8 @@ ${_}`;
                     className: styles.HeaderWishlistButton,
                     children: jsx(WishlistButton, {
                       appid: _,
-                      bIsFree: !!(_ != null && _.is_free),
-                      bIsComingSoon: !!(_ != null && _.is_coming_soon),
+                      bIsFree: !!_?.is_free,
+                      bIsComingSoon: !!_?.is_coming_soon,
                       className: classnames(
                         styles.ActionButton,
                         styles.WishlistBtnShort,
@@ -51096,7 +49354,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
-          var _;
           const [_, _] = (0, _.useState)({}),
             _ = (0, _._)("useEventHeaderData");
           return (
@@ -51108,14 +49365,11 @@ ${_}`;
                     include_screenshots: !0,
                   })
                   .then(() => {
-                    var _;
                     const _ = _._.Get().GetApp(_);
                     _ &&
-                      !(
-                        (_ = _ == null ? void 0 : _.token) != null && _.reason
-                      ) &&
+                      !_?.token?.reason &&
                       _({
-                        strCapsuleUrl: _.GetAssets().GetHeaderURL(),
+                        strCapsuleUrl: _.GetAssets()?.GetHeaderURL(),
                         strGroupTitle: _.GetName(),
                         strStoreURL:
                           (_._.IN_CLIENT ? "steam://openurl/" : "") +
@@ -51131,8 +49385,8 @@ ${_}`;
               else if (_) {
                 const _ = _._.InitFromClanID(_);
                 _._.LoadClanInfoForClanSteamID(_).then((_) => {
-                  var _;
-                  ((_ = _ == null ? void 0 : _.token) != null && _.reason) ||
+                  !_ ||
+                    _?.token?.reason ||
                     _({
                       strCapsuleUrl: _.avatar_full_url,
                       strGroupTitle: _.group_name,
@@ -51151,11 +49405,7 @@ ${_}`;
                     });
                 });
               }
-            }, [
-              _,
-              (_ = _ == null ? void 0 : _.token) == null ? void 0 : _.reason,
-              _,
-            ]),
+            }, [_, _?.token?.reason, _]),
             _
           );
         }
@@ -51174,7 +49424,7 @@ ${_}`;
               "&l=" +
               _._.LANGUAGE,
             { data: _ } = (0, _._)(_),
-            _ = !!((_ != null && _.can_edit) || (_ != null && _.support_user)),
+            _ = !!(_?.can_edit || _?.support_user),
             _ = _._.Get().BOwnsApp(_),
             _ = (0, _.useMemo)(() => {
               const _ = [];
@@ -51185,17 +49435,19 @@ ${_}`;
                     label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
                     data: "steam://nav/games/details/" + _,
                   }),
-                _.push({
-                  label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
-                  data: (0, _._)(_),
-                }),
-                _ ||
-                  (_.push({
-                    label: (0, _._)(
-                      "#EventDisplay_ViewCommunityPage_ExtraShort",
-                    ),
+                _ &&
+                  _.push({
+                    label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
                     data: (0, _._)(_),
                   }),
+                _ ||
+                  (_ &&
+                    _.push({
+                      label: (0, _._)(
+                        "#EventDisplay_ViewCommunityPage_ExtraShort",
+                      ),
+                      data: (0, _._)(_),
+                    }),
                   _ &&
                     _.push({
                       label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
@@ -51230,7 +49482,9 @@ ${_}`;
             },
             arrowClassName: _().DDButtonArrow,
             rgOptions: _,
-            onChange: (_, _, _) => (0, _._)(_, _.data),
+            onChange: (_, _, _) => {
+              _ && (0, _._)(_, _.data);
+            },
           });
         }
         const _ = (0, _._)((_) => {
@@ -51266,8 +49520,8 @@ ${_}`;
                     className: _().HeaderWishlistButton,
                     children: (0, _.jsx)(_._, {
                       appid: _,
-                      bIsFree: !!(_ != null && _.is_free),
-                      bIsComingSoon: !!(_ != null && _.is_coming_soon),
+                      bIsFree: !!_?.is_free,
+                      bIsComingSoon: !!_?.is_coming_soon,
                       className: (0, _._)(
                         _().ActionButton,
                         _().WishlistBtnShort,
@@ -51316,16 +49570,14 @@ ${_}`;
         const _ = "partnereventaction/myvote",
           _ = "partnereventaction/rateevent";
         async function _(_) {
-          var _;
           const _ = _._.STORE_BASE_URL + _ + "?gid=" + encodeURIComponent(_),
             _ = await fetch(_, {
               credentials: "include",
             });
           if (!_._) throw new Error(`${_} answered ${_.status}`);
-          return (_ = (await _.json()).vote) != null ? _ : null;
+          return (await _.json()).vote ?? null;
         }
         async function _(_, _, _) {
-          var _;
           const _ = _._.STORE_BASE_URL + _,
             _ = {
               gid: _,
@@ -51338,7 +49590,7 @@ ${_}`;
               body: new URLSearchParams(_),
             });
           if (!_._) throw new Error(`${_} answered ${_.status}`);
-          return (_ = (await _.json()).success) != null ? _ : _._;
+          return (await _.json()).success ?? _._;
         }
         const _ = {
           GetMyEventVote: _,
@@ -51351,12 +49603,8 @@ ${_}`;
           _ = __webpack_require__("chunkid");
         let _;
         function _(_, _) {
-          var _;
-          const _ = _ == null ? void 0 : _.AnnouncementGID,
-            _ =
-              (_ = _ == null ? void 0 : _.clanSteamID.GetAccountID()) != null
-                ? _
-                : 0,
+          const _ = _?.AnnouncementGID,
+            _ = _?.clanSteamID.GetAccountID() ?? 0,
             _ = _(),
             { myVote: _, Vote: _ } = (0, _._)(_, _, _, {
               initialVote: _(_),
@@ -51412,23 +49660,22 @@ ${_}`;
             : _._;
         }
         function _(_) {
-          if (typeof window == "undefined") {
+          if (typeof window > "u") {
             (0, _._)(!1, "GetVoteFromPageConfig is browser only");
             return;
           }
-          if (!_) {
-            _ = new Map();
-            const _ = (0, _._)("uservotes", "application_config");
-            _ == null ||
-              _.forEach((_) => {
+          return (
+            _ ||
+              ((_ = new Map()),
+              (0, _._)("uservotes", "application_config")?.forEach((_) => {
                 _.clanAnnouncementGID &&
                   _.set(
                     _.clanAnnouncementGID,
                     _.voted_up ? "up" : _.voted_down ? "down" : null,
                   );
-              });
-          }
-          return _ ? _.get(_) : void 0;
+              })),
+            _ ? _.get(_) : void 0
+          );
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -51450,13 +49697,21 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = _.createContext(void 0);
         function _(_) {
-          return `${_._.MEDIA_CDN_URL}${_._}${_}`;
+          return (0, _.jsx)(_.Provider, {
+            value: _.widgetStyle,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_) ?? (0, _._)();
         }
         function _(_) {
           const {
@@ -51467,10 +49722,11 @@ ${_}`;
               children: _,
               footer: _,
             } = _,
+            _ = _(),
             _ = {
-              backgroundColor: _._,
-              backgroundImage: `url( ${_("header_notrophy.webp")} )`,
-              color: _._,
+              backgroundColor: _.strBackgroundColor,
+              backgroundImage: `url( ${_.strBackgroundImageURL} )`,
+              color: _.strTextColor,
             };
           return (0, _.jsxs)("div", {
             style: _,
@@ -51481,7 +49737,7 @@ ${_}`;
                 children: [
                   (0, _.jsx)("img", {
                     className: _().SteamAwardHeaderImage,
-                    src: _("trophy_220.png?v=1"),
+                    src: _.strTrophyImageURL,
                     alt: "",
                   }),
                   (0, _.jsxs)("div", {
@@ -51604,11 +49860,11 @@ ${_}`;
                     : "#SteamAward_NominationConflictWarning_Explanation",
                   (0, _.jsx)("span", {
                     className: _().SteamAwardModalGameTitle,
-                    children: _ == null ? void 0 : _.name,
+                    children: _?.name,
                   }),
                   (0, _.jsx)("span", {
                     className: _().SteamAwardModalGameTitle,
-                    children: _ == null ? void 0 : _.name,
+                    children: _?.name,
                   }),
                 ),
                 _ && _
@@ -51638,7 +49894,6 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const { unAppID: _, widget: _, actions: _, bNominationsOpen: _ } = _,
             _ = _.rgCategories[0],
             { data: _ } = (0, _._)({
@@ -51650,6 +49905,7 @@ ${_}`;
               Nominate: _,
             } = (0, _._)(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!1),
+            { strButtonColor: _ } = _(),
             [_, _, _] = (0, _._)();
           if (!_.bNominationsLive) return null;
           if (!_) return (0, _.jsx)(_, {});
@@ -51693,14 +49949,14 @@ ${_}`;
               ? _
                 ? _._.Localize(
                     "#SteamAwards_EventNominateGamePrompt_Long",
-                    (_ = _ == null ? void 0 : _.name) != null ? _ : "",
+                    _?.name ?? "",
                   )
                 : (0, _.jsx)("a", {
                     className: _().LinkText,
                     href: _,
                     children: _._.Localize(
                       "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                      (_ = _ == null ? void 0 : _.name) != null ? _ : "",
+                      _?.name ?? "",
                     ),
                   })
               : _._.Localize("#SteamAwards_Event_NominationsClosed"),
@@ -51724,7 +49980,7 @@ ${_}`;
                     children: [
                       (0, _.jsx)("div", {
                         style: {
-                          background: _._,
+                          background: _,
                         },
                         className: (0, _._)(
                           _().SteamAwardNominateButton,
@@ -51774,7 +50030,6 @@ ${_}`;
           });
         }
         function _(_) {
-          var _;
           const {
               unAppID: _,
               widget: _,
@@ -51791,7 +50046,7 @@ ${_}`;
             headerText: _
               ? _._.Localize(
                   "#SteamAwards_EventVoteForGamePrompt",
-                  (_ = _ == null ? void 0 : _.name) != null ? _ : "",
+                  _?.name ?? "",
                 )
               : (0, _.jsx)("a", {
                   href: _,
@@ -51834,6 +50089,7 @@ ${_}`;
               Vote: _,
             } = (0, _._)(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!0),
+            { strButtonColor: _ } = _(),
             [_, _, _] = (0, _._)(),
             _ = _ == _;
           if (!_ && !_) return null;
@@ -51848,7 +50104,7 @@ ${_}`;
           };
           return (0, _.jsxs)("div", {
             style: {
-              backgroundColor: _._,
+              backgroundColor: _,
             },
             className: _().SteamAwardVoteWidget,
             children: [
@@ -51907,7 +50163,7 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -51917,7 +50173,7 @@ ${_}`;
           _ = __webpack_require__("chunkid");
         const _ = 2640290,
           _ = 3334340,
-          _ = null,
+          _ = 4147080,
           _ = 2215130;
         let _;
         function _() {
@@ -51938,50 +50194,34 @@ ${_}`;
                 (await _._.GetVoteDefinitions(_, _)).Body().toObject()
               );
             },
-            initialData: () => {
-              var _;
-              return (_ = _()) == null ? void 0 : _.definitions;
-            },
-            enabled: _ > 0,
+            initialData: () => _()?.definitions,
+            enabled: _ !== void 0 && _ > 0,
           });
         }
         async function _(_) {
-          var _, _;
           const _ = _._.Init(_._);
-          return (_ =
-            (_ = (await _._.GetUserNominations(_, _)).Body().toObject()) == null
-              ? void 0
-              : _.nominations) != null
-            ? _
-            : [];
+          return (
+            (await _._.GetUserNominations(_, _)).Body().toObject()
+              ?.nominations ?? []
+          );
         }
         function _() {
           const _ = useActiveServiceTransport();
           return useQuery({
             queryKey: [`SteamAwardNominations_${UserConfig.accountid}`],
             queryFn: () => _(_),
-            initialData: () => {
-              var _, _;
-              return (_ = (_ = _()) == null ? void 0 : _.user_nominations) ==
-                null
-                ? void 0
-                : _.nominations;
-            },
+            initialData: () => _()?.user_nominations?.nominations,
             enabled: UserConfig.logged_in,
           });
         }
         function _(_) {
-          var _;
           const _ = _();
           return _.isLoading
             ? {
                 bLoadingNominationForCategory: !0,
               }
             : {
-                currentNomination:
-                  (_ = _.data) == null
-                    ? void 0
-                    : _.find((_) => _.category_id == _),
+                currentNomination: _.data?.find((_) => _.category_id == _),
                 bLoadingNominationForCategory: !1,
               };
         }
@@ -52004,10 +50244,7 @@ ${_}`;
                   .toObject()
               );
             },
-            initialData: () => {
-              var _;
-              return (_ = _()) == null ? void 0 : _.badge_progress;
-            },
+            initialData: () => _()?.badge_progress,
             enabled: UserConfig.logged_in,
           });
         }
@@ -52040,7 +50277,9 @@ ${_}`;
           const _ = await _._.Nominate(_, _);
           return (
             _.BSuccess() ||
-              console.warn(`Failed to nominate app: ${_.GetEResult()}`),
+              console.warn(
+                `Failed to nominate app ${_} for category ${_}: ${_.GetEResult()}`,
+              ),
             [_.GetEResult(), _.Body().toObject()]
           );
         }
@@ -52051,7 +50290,7 @@ ${_}`;
             mutationFn: () => _(_, _, _, _),
             onSuccess: ([_, _]) => {
               _ == k_EResultOK
-                ? (_(_, _.nominations),
+                ? (_.nominations && _(_, _.nominations),
                   window.setTimeout(
                     () =>
                       _.invalidateQueries({
@@ -52068,7 +50307,6 @@ ${_}`;
           });
         }
         async function _(_, _, _) {
-          var _;
           let _ = {
             _: Config.COUNTRY,
             _: Config.LANGUAGE,
@@ -52100,14 +50338,14 @@ ${_}`;
                 ESteamDeckCompatibilityCategory.k_ESteamDeckCompatibilityCategory_Verified,
               ]);
           const _ = `${Config.STORE_BASE_URL}search/suggest`;
-          return (_ = (
-            await axios.get(_, {
-              params: _,
-              withCredentials: !0,
-            })
-          ).data) != null
-            ? _
-            : [];
+          return (
+            (
+              await axios.get(_, {
+                params: _,
+                withCredentials: !0,
+              })
+            ).data ?? []
+          );
         }
         function _(_, _, _) {
           return useQuery({
@@ -52140,8 +50378,8 @@ ${_}`;
             queryKey: [`GetNominationShareLink_${UserConfig.accountid}`],
             queryFn: async () => _(_, !1),
             initialData: () => {
-              var _;
-              return [k_EResultOK, (_ = _()) == null ? void 0 : _.share_link];
+              const _ = _()?.share_link;
+              if (_) return [k_EResultOK, _];
             },
             staleTime: 1 / 0,
             enabled: UserConfig.logged_in,
@@ -52190,14 +50428,13 @@ ${_}`;
           });
         }
         async function _(_, _) {
-          var _;
           const _ = _._.Init(_._);
           _.Body().set_sale_appid(_);
           const _ = await _._.GetUserVotes(_, _);
           return (
             _.BSuccess() ||
               console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
-            (_ = _.Body().toObject()) == null ? void 0 : _.user_votes
+            _.Body().toObject()?.user_votes ?? []
           );
         }
         function _(_) {
@@ -52205,23 +50442,16 @@ ${_}`;
           return useQuery({
             queryKey: [`SteamAwardUserVotes_${UserConfig.accountid}`],
             queryFn: () => _(_, _),
-            initialData: () => {
-              var _;
-              return (_ = _()) == null ? void 0 : _.user_votes;
-            },
+            initialData: () => _()?.user_votes,
             enabled: UserConfig.logged_in,
           });
         }
         function _(_, _) {
           const _ = _(_);
-          return useMemo(() => {
-            var _, _;
-            return (_ =
-              (_ = _.data) == null ? void 0 : _.find((_) => _.voteid == _)) ==
-              null
-              ? void 0
-              : _.appid;
-          }, [_, _.data]);
+          return useMemo(
+            () => _.data?.find((_) => _.voteid == _)?.appid,
+            [_, _.data],
+          );
         }
         function _(_) {
           const _ = useActiveServiceTransport();
@@ -52240,24 +50470,21 @@ ${_}`;
               );
             },
             staleTime: 1 / 0,
-            initialData: () => {
-              var _;
-              return (_ = _()) == null ? void 0 : _.item_definitions;
-            },
+            initialData: () => _()?.item_definitions,
           });
         }
         function _(_, _) {
-          var _;
           const _ = _(_),
             _ = _(_);
           if (!_.data || !_.data) return null;
-          const _ = _.data.votes.find((_) => _.voteid == _);
-          return (_ = _.data.item_definitions) == null
-            ? void 0
-            : _.find((_) => _.item_type == _.item_type);
+          const _ = _.data.votes?.find((_) => _.voteid == _);
+          return _
+            ? _.data.item_definitions?.find((_) => _.item_type == _.item_type)
+            : null;
         }
         function _() {
-          return React.useContext(_).yearStyles;
+          const _ = React.useContext(_);
+          return _ ? _.yearStyles : {};
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -52312,18 +50539,12 @@ ${_}`;
         }
         const _ = [];
         function _(_, _, _) {
-          var _;
           const _ = _.some(_._) || _.some(_._),
             _ = _(_ ? _._ : void 0);
           return _
             ? _.data
               ? {
-                  widgets: (0, _._)(
-                    (_ = _.data.votes) != null ? _ : [],
-                    _,
-                    _,
-                    _,
-                  ),
+                  widgets: (0, _._)(_.data.votes ?? [], _, _, _),
                   bLoading: !1,
                 }
               : {
@@ -52332,6 +50553,24 @@ ${_}`;
             : {
                 bLoading: !1,
               };
+        }
+        function _(_) {
+          const { data: _, isPending: _ } = (0, _._)({
+            queryKey: ["SteamAwards.WidgetStyle"],
+            queryFn: async () =>
+              (
+                await _().get((0, _._)(), {
+                  withCredentials: !1,
+                })
+              ).data,
+            enabled: _,
+            staleTime: 1 / 0,
+            retry: !1,
+          });
+          return {
+            widgetStyle: _,
+            bLoading: _ && _,
+          };
         }
         function _(_, _) {
           return _
@@ -52348,19 +50587,23 @@ ${_}`;
           const { event: _, previewMode: _ } = _,
             [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
             _ = (0, _._)(),
+            _ = (0, _._)(_, _),
             { widgets: _, bLoading: _ } = _([_], _, _),
+            { widgetStyle: _, bLoading: _ } = _(!!_?.nomination),
             _ = _(_(_));
-          if (_) return (0, _.jsx)(_, {});
-          if (!(_ != null && _.nomination)) return null;
-          const _ =
-            _.BIsEventActionEnabled(_) ||
-            _ < _.GetStartTimeAndDateUnixSeconds();
-          return (0, _.jsx)(_, {
-            unAppID: _,
-            actions: _,
-            widget: _(_.nomination, !!_),
-            bNominationsOpen: _,
-          });
+          return _ || _
+            ? (0, _.jsx)(_, {})
+            : _?.nomination
+              ? (0, _.jsx)(_, {
+                  widgetStyle: _,
+                  children: (0, _.jsx)(_, {
+                    unAppID: _,
+                    actions: _,
+                    widget: _(_.nomination, !!_),
+                    bNominationsOpen: _,
+                  }),
+                })
+              : null;
         }
         function _(_) {
           const {
@@ -52370,27 +50613,29 @@ ${_}`;
               previewMode: _,
               bRenderFromStorePage: _,
             } = _,
-            _ = (0, _._)(),
-            { widgets: _, bLoading: _ } = _(_, _ != null ? _ : _, _),
+            { widgets: _, bLoading: _ } = _(_, _ ?? _, !1),
+            { widgetStyle: _, bLoading: _ } = _(!!_?.vote),
             _ = _(_(_));
-          return _
+          return _ || _
             ? (0, _.jsx)(_, {})
-            : _ != null && _.vote
+            : _?.vote
               ? (0, _.jsx)(_, {
-                  unAppID: _,
-                  widget: _.vote,
-                  actions: _,
-                  bVotesOpen: _ || !!_,
-                  bHideCategoryDescriptions: _,
+                  widgetStyle: _,
+                  children: (0, _.jsx)(_, {
+                    unAppID: _,
+                    widget: _.vote,
+                    actions: _,
+                    bVotesOpen: _ || !!_,
+                    bHideCategoryDescriptions: _,
+                  }),
                 })
               : null;
         }
         function _(_) {
-          var _;
-          const _ =
-            (_ = GetConfigJSON("steamwawards", "application_config")) == null
-              ? void 0
-              : _.votecategories;
+          const _ = GetConfigJSON(
+            "steamwawards",
+            "application_config",
+          )?.votecategories;
           return _
             ? jsx(_, {
                 appID: _.appID,
@@ -52473,7 +50718,7 @@ ${_}`;
           return _
             ? (0, _.jsx)(_, {
                 strURL: (0, _._)(_.GetStorePageURL()),
-                strImgUrl: _.GetAssets().GetSmallCapsuleURL(),
+                strImgUrl: _.GetAssets()?.GetSmallCapsuleURL(),
                 strName: _.GetName(),
               })
             : null;
@@ -52531,15 +50776,6 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -52548,8 +50784,7 @@ ${_}`;
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = (0, _._)((_) => {
             const _ = (0, _._)(_.photo, (0, _.sfN)(_._.LANGUAGE)),
               _ = _ ? (typeof _ == "string" ? _ : _[1]) : void 0,
@@ -52610,12 +50845,12 @@ ${_}`;
             });
           }),
           _ = class _ extends _.Component {
-            constructor() {
-              super(...arguments),
-                _(this, "m_refAnchor", _.createRef()),
-                _(this, "m_fnHidePopup", null),
-                _(this, "m_nScrollPosAtHoverStart", 0);
-            }
+            static sm_embeddedElements = new _._(
+              "presenter-hover-source-elements",
+            );
+            m_refAnchor = _.createRef();
+            m_fnHidePopup = null;
+            m_nScrollPosAtHoverStart = 0;
             ClosePopup() {
               (0, _._)() ||
                 (this.m_fnHidePopup &&
@@ -52675,8 +50910,7 @@ ${_}`;
               });
             }
           };
-        _(_, "sm_embeddedElements", new _._("presenter-hover-source-elements")),
-          _([_._], _.prototype, "ClosePopup", 1),
+        _([_._], _.prototype, "ClosePopup", 1),
           _([_._], _.prototype, "OnScroll", 1),
           _([_._], _.prototype, "OnHover", 1),
           _([_._], _.prototype, "OnLeave", 1);
@@ -52757,14 +50991,13 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { gidEvent: _ } = _,
             _ = usePartnerEventByEventGID(_);
           return _
             ? jsx(_, {
                 event: _,
                 lang: PchLanguageToELanguage(Config.LANGUAGE),
-                href: NavLink((_ = GetEventSaleURL(_)) != null ? _ : ""),
+                href: NavLink(GetEventSaleURL(_) ?? ""),
               })
             : null;
         }
@@ -52773,10 +51006,10 @@ ${_}`;
             [_, _] = (0, _.useMemo)(() => {
               const _ = _.jsondata.localized_sale_product_banner,
                 _ = _.jsondata.localized_sale_product_mobile_banner;
-              if (_ != null && _.length && _ != null && _.length) {
+              if (_?.length && _?.length) {
                 const _ = _._.GetWithFallback(_, _),
                   _ = _._.GetWithFallback(_, _);
-                if (_ != null && _.length && _ != null && _.length)
+                if (_?.length && _?.length)
                   return [
                     _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
                     _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
@@ -52784,7 +51017,7 @@ ${_}`;
               }
               return [void 0, void 0];
             }, [_, _]);
-          return !(_ != null && _.length) || !(_ != null && _.length)
+          return !_?.length || !_?.length
             ? null
             : (0, _.jsxs)("a", {
                 href: _,
@@ -52804,14 +51037,13 @@ ${_}`;
               });
         }
         function _(_) {
-          var _;
           const { gidEvent: _ } = _,
             _ = (0, _._)(_);
           return _
             ? (0, _.jsx)(_, {
                 event: _,
                 lang: (0, _.sfN)(_._.LANGUAGE),
-                href: (0, _._)((_ = (0, _._)(_)) != null ? _ : ""),
+                href: (0, _._)((0, _._)(_) ?? ""),
               })
             : null;
         }
@@ -54280,7 +52512,7 @@ ${_}`;
                 _ && (0, _.jsx)(_, {}),
                 _ && (0, _.jsx)(_, {}),
                 _ && (0, _.jsx)(_, {}),
-                (_ == null ? void 0 : _.vrhmd) && (0, _.jsx)(_, {}),
+                _?.vrhmd && (0, _.jsx)(_, {}),
               ],
             });
           }),
@@ -54296,7 +52528,7 @@ ${_}`;
                 null
               );
             if (_ == _._) {
-              const _ = _ == null ? void 0 : _.steam_os_compat_category;
+              const _ = _?.steam_os_compat_category;
               if (_ === void 0) return null;
               switch (_) {
                 case _._:
@@ -54315,10 +52547,10 @@ ${_}`;
               let _;
               if (
                 (_ == _._
-                  ? (_ = _ == null ? void 0 : _.steam_machine_compat_category)
+                  ? (_ = _?.steam_machine_compat_category)
                   : _ == _._
-                    ? (_ = _ == null ? void 0 : _.steam_frame_compat_category)
-                    : (_ = _ == null ? void 0 : _.steam_deck_compat_category),
+                    ? (_ = _?.steam_frame_compat_category)
+                    : (_ = _?.steam_deck_compat_category),
                 _ === void 0)
               )
                 return null;
@@ -54859,15 +53091,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -54877,7 +53100,6 @@ ${_}`;
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_.topleft = "topleft"),
             (_.top = "top"),
@@ -54891,18 +53113,20 @@ ${_}`;
             _
           ))(_ || {});
         let _ = class extends _.Component {
+          m_rectLinkRegion;
+          m_elLinkRegionBox;
+          m_nLocalOffsetXPct;
+          m_nLocalOffsetYPct;
+          m_fnMouseUp = null;
+          m_fnMouseMove = null;
+          m_listeners = new _._();
+          m_strDescription = "";
+          m_aspectRatio = 1;
+          componentWillUnmount() {
+            this.m_listeners.Unregister();
+          }
           constructor(_) {
-            var _;
             super(_),
-              _(this, "m_rectLinkRegion"),
-              _(this, "m_elLinkRegionBox"),
-              _(this, "m_nLocalOffsetXPct"),
-              _(this, "m_nLocalOffsetYPct"),
-              _(this, "m_fnMouseUp", null),
-              _(this, "m_fnMouseMove", null),
-              _(this, "m_listeners", new _._()),
-              _(this, "m_strDescription", ""),
-              _(this, "m_aspectRatio", 1),
               (this.state = {
                 curLeftPosPct: this.props.xPosPct,
                 curTopPosPct: this.props.yPosPct,
@@ -54918,23 +53142,17 @@ ${_}`;
                 bEditingLink: !1,
                 valid_link: this.validateUrl(this.props.link_url),
               }),
-              (this.m_strDescription =
-                (_ = this.props.link_description) != null ? _ : ""),
+              (this.m_strDescription = this.props.link_description ?? ""),
               (this.m_aspectRatio =
                 this.props.heightPct > 0 && this.props.widthPct > 0
                   ? this.props.widthPct / this.props.heightPct
                   : 1);
           }
-          componentWillUnmount() {
-            this.m_listeners.Unregister();
-          }
           LinkRegionBoxRef(_) {
             this.m_elLinkRegionBox = _;
           }
           OnMouseDown(_, _) {
-            var _;
-            (_ = this.m_elLinkRegionBox) != null &&
-              _.parentElement &&
+            this.m_elLinkRegionBox?.parentElement &&
               this.m_elLinkRegionBox.ownerDocument.defaultView &&
               ((this.m_fnMouseUp = (_) => {
                 this.OnMouseUp(_, _);
@@ -55109,21 +53327,19 @@ ${_}`;
               });
           }
           GetXPercent(_) {
-            var _;
             return this.m_rectLinkRegion
               ? ((_ - this.m_rectLinkRegion.left) /
                   (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
                   100 -
-                  ((_ = this.m_nLocalOffsetXPct) != null ? _ : 0)
+                  (this.m_nLocalOffsetXPct ?? 0)
               : 0;
           }
           GetYPercent(_) {
-            var _;
             return this.m_rectLinkRegion
               ? ((_ - this.m_rectLinkRegion.top) /
                   (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
                   100 -
-                  ((_ = this.m_nLocalOffsetYPct) != null ? _ : 0)
+                  (this.m_nLocalOffsetYPct ?? 0)
               : 0;
           }
           CalcLeftEdge(_) {
@@ -55190,9 +53406,7 @@ ${_}`;
               : !1;
           }
           OnSaveLink() {
-            var _;
-            (this.m_strDescription =
-              (_ = this.state.text_link_description) != null ? _ : ""),
+            (this.m_strDescription = this.state.text_link_description ?? ""),
               this.setState({
                 bEditingLink: !this.state.bEditingLink,
               }),
@@ -55439,15 +53653,11 @@ ${_}`;
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
-            [_, _] = (0, _.useState)(() => {
-              var _;
-              return (
+            [_, _] = (0, _.useState)(
+              () =>
                 _ ||
-                (!_ && (0, _._)(_, "tab") && (_ = (0, _._)(_, "tab")) != null
-                  ? _
-                  : "")
-              );
-            });
+                (!_ && (0, _._)(_, "tab") ? ((0, _._)(_, "tab") ?? "") : ""),
+            );
           (0, _.useEffect)(() => {
             if (!_.bDisableRouting && _) {
               const _ = (0, _._)(_, "tab");
@@ -55458,16 +53668,16 @@ ${_}`;
               (_) => {
                 _(_.key),
                   _ || (0, _._)(_, "tab", _.key),
-                  _ == null || _(_.key),
+                  _?.(_.key),
                   _.onClick && _.onClick(_);
               },
               [_, _, _],
             ),
             _ = _.filter((_) => !_.hidden);
           if (!_.length) return null;
-          const _ = _ != null ? _ : _,
+          const _ = _ ?? _,
             _ = _.find((_) => _.key === _) || _[0],
-            _ = _ ? (_ != null ? _ : _[0].key) : void 0,
+            _ = _ ? (_ ?? _[0].key) : void 0,
             _ = (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
@@ -55792,6 +54002,7 @@ ${_}`;
           DevSummaryWidgetCtn: "_3-CiOktJBVfuAsdgT4OW_f",
           DevSummaryContent: "_2jbedard-PdnyO3XpMLNPg",
           DevSummaryBackground: "_3F7LyeepqJvGpcXjroux4j",
+          Compact: "_3EyNy0J0P9KNWQmLHtcesh",
           AvatarLink: "Y9lYkfS_6GRwnSuFBgyQz",
           Avatar: "_3x-VF5_m6i66QQrJJ-WgoN",
           CreatorTitleCtn: "_141X0qDDTpudXQuTa1cYJG",
@@ -55989,18 +54200,6 @@ ${_}`;
           CapsuleName: "_16nzXvpmoPX2AHcWtWHQsU",
           DiscountIconCtn: "_12oL_Na-4ZnfDriQ80BEBc",
           MaxActionButtonWidth: "_1AiAr0lqTfJuoAry1CmxyW",
-          BackgroundAnimation: "_1CIMWCeT1o82vKuoVFS0Or",
-          "ItemFocusAnim-darkerGrey-nocolor": "QmvtbjNkXhoFsHYRkJ8pk",
-          "ItemFocusAnim-darkerGrey": "_2muPTTrVake-UfXJizQg6g",
-          "ItemFocusAnim-darkGreySettings": "_15cm3kzIBv3fn2fxYuqTJR",
-          "ItemFocusAnim-darkGrey": "_3WidOXfqJtMrQ7t9WsTNx",
-          "ItemFocusAnim-grey": "_3TjvvuiDzTihqHMxswC7z_",
-          "ItemFocusAnim-translucent-white-10": "_3u6erDX_vfSreCNiukX2S",
-          "ItemFocusAnim-translucent-white-20": "_1pBe5-hUwVCsRu0ZWAS7NK",
-          "ItemFocusAnimBorder-darkGrey": "_11_f57sto7UJFfYAgmuQ8_",
-          "ItemFocusAnim-green": "_1pwlLApsSR1PWl1ys4T9Ka",
-          focusAnimation: "XOkNr-sTpt-rrz1iaVQv4",
-          hoverAnimation: "_2A0UXZtbRj2Hc7vKFjV9xl",
         };
       },
       chunkid: (module) => {
@@ -56063,18 +54262,6 @@ ${_}`;
           ReviewScorePercentage: "_2jmj3hWBpHbR2XUcZaAXFp",
           ReviewScoreLabel: "uEsfJ0VAuX37ItihZkK2J",
           GameHoverCreatorFollowButtonCtn: "_1RMWITT8PsJOgR4SoIR3Sw",
-          BackgroundAnimation: "_2-NF7UzSGK3WLmqugAW3EM",
-          "ItemFocusAnim-darkerGrey-nocolor": "bfQTK-Cop8MYUAa9j7rQb",
-          "ItemFocusAnim-darkerGrey": "_1_wN_hVuLwcfYlTDIE-HTs",
-          "ItemFocusAnim-darkGreySettings": "YO_BEpx_0vuXWdgMFEjkL",
-          "ItemFocusAnim-darkGrey": "_32cDe-nAMlG7JYrA6niEGN",
-          "ItemFocusAnim-grey": "_2LnPTi1cPqqxqvII8cqnlh",
-          "ItemFocusAnim-translucent-white-10": "-jNJst4AtmAMI-o6ETEiC",
-          "ItemFocusAnim-translucent-white-20": "_1dwebsW8iZHHqsEF46LGhs",
-          "ItemFocusAnimBorder-darkGrey": "wiEMwKtkhMy1kSbxfOR43",
-          "ItemFocusAnim-green": "PJqmv3PnTw0P2SQBGF3nn",
-          focusAnimation: "_2mMG8YO1MWnzaegzgcISk2",
-          hoverAnimation: "_2aCSOFWsYITdHt3aWn3-vu",
         };
       },
       chunkid: (module) => {
@@ -56083,18 +54270,6 @@ ${_}`;
           IgnoreButton: "_2TD7UsjzdR3Zr5ZOZ09n1J",
           IgnoreButtonText: "_2L6vwdfaFPRJ1zesEu6_Bf",
           IgnoreLoadingText: "uh8VGMa5zc623SZkB_hEQ",
-          BackgroundAnimation: "_10sTNSs7WhNZPw6GdPTOJX",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1MdU34KFhJRKlGMaHngbls",
-          "ItemFocusAnim-darkerGrey": "G_fmZBeNGKwyXP6EjOOZ_",
-          "ItemFocusAnim-darkGreySettings": "_3n4qtxFhgpKOJlGlGVcI1H",
-          "ItemFocusAnim-darkGrey": "_20-FW4mkUJEpsgtwPjoMD6",
-          "ItemFocusAnim-grey": "_1QVohJAkrDR6QXMK3fZLMu",
-          "ItemFocusAnim-translucent-white-10": "_2vttABcjIJHbd-xXLvTfgb",
-          "ItemFocusAnim-translucent-white-20": "_2uyItrki6ohcX2MO3FPcKx",
-          "ItemFocusAnimBorder-darkGrey": "_8sJgPArY-c3-X6w3X3la9",
-          "ItemFocusAnim-green": "_3ZGmJEBxcg9Rgo7ObB8qJ0",
-          focusAnimation: "_23SWPBJXy3Zmgp6Guu_3nw",
-          hoverAnimation: "_3BrzCFDf-VVWJEnHMnE5xt",
         };
       },
       chunkid: (module) => {
@@ -56209,18 +54384,6 @@ ${_}`;
           CloseButton: "_2dgOJd4j8-hJA92PrLWqZT",
           VideoPopupContainers: "_1_L84gO810flUzqiuUkG7H",
           VideoLarge: "_3AL75Io6tlvBgexvKuaPG0",
-          BackgroundAnimation: "_2YqbTh9tmcEZ5Jnz39bkD9",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2Z_byUU724LC7VmBpwzXvB",
-          "ItemFocusAnim-darkerGrey": "_79YB3jhA36yeyMiLstJi",
-          "ItemFocusAnim-darkGreySettings": "_1lSn5OE1oc5-oQjPkjBIYj",
-          "ItemFocusAnim-darkGrey": "CFIUukdHjcI69ga9Z8nTA",
-          "ItemFocusAnim-grey": "_3rAbB1f0HQs0x4Hqa5CdEA",
-          "ItemFocusAnim-translucent-white-10": "_9gKqKsdvXOoawIPGtFkRF",
-          "ItemFocusAnim-translucent-white-20": "_3zG2IKWY48X67SEt1vSIhf",
-          "ItemFocusAnimBorder-darkGrey": "_1etJfunIGxvr5ni3LVgo74",
-          "ItemFocusAnim-green": "_2y66jXVD5R6zd5LqMTWYVl",
-          focusAnimation: "rfbikUhNdMJp8YaaOMaCW",
-          hoverAnimation: "_2kGcR5txA30fIqTtD8sBNS",
         };
       },
       chunkid: (module) => {
@@ -56431,18 +54594,6 @@ ${_}`;
           pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
           innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
           DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
-          BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
-          "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
-          "ItemFocusAnim-darkGreySettings": "KiXqOP4sNGGqLzPFjAa3D",
-          "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
-          "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
-          "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
-          "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
-          "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
-          "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
-          focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
-          hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
         };
       },
       chunkid: (module) => {
@@ -56511,18 +54662,6 @@ ${_}`;
           SteamMachineDeviceIcon: "_1nTDsg_9olpJdf7qqVpGfL",
           SteamFrameDeviceIcon: "_34S3mEk7xRyS1Lnlnkd0hu",
           SteamDeckDeviceIcon: "_3IOFFIoATruXDCEVO_7Jqd",
-          BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
-          "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
-          "ItemFocusAnim-darkGreySettings": "_1rM6kybplpPqKeO6oRkrNQ",
-          "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
-          "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
-          "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
-          "ItemFocusAnim-translucent-white-20": "_1qTgWOW3x6-b_CW5qQoSSo",
-          "ItemFocusAnimBorder-darkGrey": "_1Lxbh0NQsK7RWCdF8QEIej",
-          "ItemFocusAnim-green": "_1ZB1uzf3hgyFkekpi0xZg5",
-          focusAnimation: "WewegkENW7QZMuoX3r_v8",
-          hoverAnimation: "NCIvCtzfGkBvu5KDz_CE1",
         };
       },
       chunkid: (module) => {
@@ -56579,18 +54718,6 @@ ${_}`;
           PostedBy: "_2VqeQaZVaUkkEWaiLkmqmT",
           ReminderContainer: "_3Vf2MkZ_LWIoNVv36RwJtO",
           ReadMoreCnt: "_1YmaiDiNhC33cL5DKj05KQ",
-          BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
-          "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
-          "ItemFocusAnim-darkGreySettings": "AcW48fP-EnfyD8bO6anBj",
-          "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
-          "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
-          "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
-          "ItemFocusAnim-translucent-white-20": "_1UaaS_yXA7SqNdxVDXCD9W",
-          "ItemFocusAnimBorder-darkGrey": "_1V7Z378RTDEmk3dXXGXsQa",
-          "ItemFocusAnim-green": "_2ldXxMP_HINQZvEbjgDdbf",
-          focusAnimation: "_3zr66n761wV-ZHFKw_Yvbn",
-          hoverAnimation: "_1MvZ2haWg8XTcl8VHKnoS0",
         };
       },
       chunkid: (module) => {
@@ -56848,18 +54975,6 @@ ${_}`;
           DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
           EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
           SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
-          BackgroundAnimation: "_1iEXo2C5dYh1sLdEds2zo_",
-          "ItemFocusAnim-darkerGrey-nocolor": "_6ALY2cB6oP10XwjHy38XP",
-          "ItemFocusAnim-darkerGrey": "_15R1kTQu4fktTozfpKwx_x",
-          "ItemFocusAnim-darkGreySettings": "_25-J06c8AyBhzEbrxt0OlL",
-          "ItemFocusAnim-darkGrey": "_3yxHI8TA-jq3Ka361SNOoS",
-          "ItemFocusAnim-grey": "HdE5j3QJ5wzLUrUd8A9S6",
-          "ItemFocusAnim-translucent-white-10": "_3Pg_mdzZKHlcgBMGWoeuM-",
-          "ItemFocusAnim-translucent-white-20": "OZ_TTGcJc45o9tMuXjaVs",
-          "ItemFocusAnimBorder-darkGrey": "_36t4Gu0DFfDO9-hIb82st6",
-          "ItemFocusAnim-green": "_30VQHyiQ7SgMZgv2Q9RwMo",
-          focusAnimation: "_1bLCgV4sZsGIHim8xs3go9",
-          hoverAnimation: "_3--MfPAMg27VUuOckksz2m",
         };
       },
       chunkid: (module) => {

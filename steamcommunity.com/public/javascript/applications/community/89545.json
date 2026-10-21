@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Odemknout témata (%1$s)",
     "moderation_actions_sustain": "Zachovat moderaci",
     "moderation_actions_sustain_multiple": "Zachovat moderaci (%1$s)",
+    "moderation_actions_sustain_short": "Zachovat",
     "moderation_actions_suspicious": "Označit jako podezřelý",
     "moderation_actions_suspicious_multiple": "Označit jako podezřelý (%1$s)",
     "moderation_actions_unknown": "Neznámé",

@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktive Elemente",
     "GameRating_OnlineMusicNotice": "Online-Musik nicht von ESRB bewertet",
     "GameRating_OnlineInteractionsNotice": "Online-Interaktionen nicht von ESRB bewertet",
-    "GameRating_ContentCategoryDescriptor_64": "Gefilterter Chat im Spiel"
+    "GameRating_ContentCategoryDescriptor_64": "Gefilterter Chat im Spiel",
+    "GameRating_ContentCategories_Title": "Inhalte",
+    "GameRating_Ratings_Title": "Bewertungen"
 }

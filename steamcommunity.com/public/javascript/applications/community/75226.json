@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Riapri la discussione (%1$s)",
     "moderation_actions_sustain": "Riconferma la moderazione",
     "moderation_actions_sustain_multiple": "Riconferma la moderazione (%1$s)",
+    "moderation_actions_sustain_short": "Conferma",
     "moderation_actions_suspicious": "Contrassegna come sospetto",
     "moderation_actions_suspicious_multiple": "Contrassegna come sospetto (%1$s)",
     "moderation_actions_unknown": "Sconosciuta",

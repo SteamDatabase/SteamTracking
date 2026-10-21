@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "本產品與使用 Intel 處理器的 macOS 系統不相容。<1>按此</1>了解詳情。",
     "AppPage_PurchaseNote_Mod_Title": "社群製作的模組",
     "AppPage_PurchaseNote_Mod_LearnMore": "點擊<1>此處</1>了解更多關於 Steam 模組的資訊。",
+    "AppPage_Franchise_SeeAll": "在 Steam 上查看 %1$s 系列的所有作品",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "在 Steam 上查看整套 %1$s",
     "AppPage_Series_ContentTitle": "影集內容",
     "AppPage_Series_ExtraContent": "額外內容",
     "AppPage_Series_SeasonName_Season": "第 %1$s 季",

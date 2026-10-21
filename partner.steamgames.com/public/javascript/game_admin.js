@@ -508,11 +508,12 @@ function OnImageSelectTypeChanged( target )
 	return false;
 }
 
+// monotonically increasing so radio group names stay unique even after previews are removed
+var g_nNextUploadPreviewID = 0;
+
 // called when images have been loaded from disk
 function OnImagesLoadComplete( images )
 {
-	var previews = $J( '#game_image_drop_preview div.screenshot_upload_preview' );
-
 	for ( var i = 0; i < images.length; i++ )
 	{
 		if ( !images[i]['image'] )
@@ -589,6 +590,16 @@ function OnImagesLoadComplete( images )
 		if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{
 			targetDiv.append( $J( '<div/>', { style: 'color:orange'  } ).text( "Dimensions provided do not match any known assets. This image will not be saved." ) );
+
+			// let the user discard the unusable image so it doesn't block uploading the rest
+			const elRemove = $J( '<div/>', { 'class': 'screenshot_upload_preview_remove' } ).text( 'X' );
+			elRemove.on( 'click', function()
+			{
+				$J( this ).closest( '.screenshot_upload_preview' ).remove();
+				if ( $J( '#game_image_drop_preview div.screenshot_upload_preview' ).length == 0 )
+					$J( '#game_image_drop' ).removeClass( 'has_files' );
+			} );
+			targetDiv.append( elRemove );
 		}
 		else
 		{
@@ -606,8 +617,9 @@ function OnImagesLoadComplete( images )
 		// add all-ages appropriate radio buttons
 		var divAllAgesAppropriate = $J( '<div class="image_all_ages_appropriate" id="screenshot_appropriate_section"></div>' );
 		var labelAllAgesAppropriate = $J( '<div class="image_all_ages_appropriate_label">Is this screenshot suitable for all ages?</div>' );
-		var radioAllAgesAppropriateYes = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + ( i + previews.length ) + ']" id="screenshot_appropriate_yes[' + ( i + previews.length ) + ']" value="yes"><label for="yes">YES</label>' );
-		var radioAllAgesAppropriateNo = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + ( i + previews.length ) + ']" id="screenshot_appropriate_no[' + ( i + previews.length ) + ']" value="no"><label for="no">NO</label>' );
+		const nPreviewID = g_nNextUploadPreviewID++;
+		var radioAllAgesAppropriateYes = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + nPreviewID + ']" id="screenshot_appropriate_yes[' + nPreviewID + ']" value="yes"><label for="yes">YES</label>' );
+		var radioAllAgesAppropriateNo = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + nPreviewID + ']" id="screenshot_appropriate_no[' + nPreviewID + ']" value="no"><label for="no">NO</label>' );
 		labelAllAgesAppropriate.appendTo( divAllAgesAppropriate );
 		radioAllAgesAppropriateYes.appendTo( divAllAgesAppropriate );
 		radioAllAgesAppropriateNo.appendTo( divAllAgesAppropriate );
@@ -760,7 +772,7 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 				strKey = strKey + cScreenshots++ + '|english[]';
 
 				// Screenshots must specify whether they are all-ages appropriate.
-				var strAllAgesAppropriate = $J( preview.find( 'input[name="screenshot_appropriate[' + i + ']"]:checked' ) ).val();
+				var strAllAgesAppropriate = $J( preview.find( 'input.image_all_ages_appropriate_radio:checked' ) ).val();
 				if( strAllAgesAppropriate == 'yes' || strAllAgesAppropriate == 'no' )
 				{
 					var bAllAges = strAllAgesAppropriate == 'yes' ? true:false;

@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Διαδραστικά στοιχεία",
     "GameRating_OnlineMusicNotice": "Η διαδικτυακή μουσική δεν αξιολογείται από το ESRB",
     "GameRating_OnlineInteractionsNotice": "Οι διαδικτυακές αλληλεπιδράσεις δεν αξιολογούνται από το ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Φιλτραρισμένη συνομιλία εντός παιχνιδιού"
+    "GameRating_ContentCategoryDescriptor_64": "Φιλτραρισμένη συνομιλία εντός παιχνιδιού",
+    "GameRating_ContentCategories_Title": "Περιεχόμενο",
+    "GameRating_Ratings_Title": "Χαρακτηρισμοί"
 }

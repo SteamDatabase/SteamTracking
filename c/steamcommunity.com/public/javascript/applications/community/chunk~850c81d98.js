@@ -13,18 +13,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EMarketBucketLevel ( " + _ + " )";
         }
@@ -37,13 +26,15 @@
         function _(_) {
           return "unknown ETradeOfferConfirmationMethod ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -116,16 +107,16 @@
           getClassName() {
             return "CEconItem_DescriptionLine";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.link || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -183,16 +174,16 @@
           getClassName() {
             return "CEconItem_Action";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -270,16 +261,16 @@
           getClassName() {
             return "CEconItem_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.contained_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -339,16 +330,16 @@
           getClassName() {
             return "CEconItem_ContainerProperties";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.classid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -406,10 +397,8 @@
           getClassName() {
             return "CEconItem_ClassIdentifiers";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
@@ -423,6 +412,8 @@
                 null,
               );
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -661,16 +652,16 @@
           getClassName() {
             return "CEconItem_Description";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.propertyid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -738,16 +729,16 @@
           getClassName() {
             return "CEconItem_AssetProperty";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.classid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -778,7 +769,7 @@
                     },
                     nested_accessories: {
                       _: 5,
-                      _,
+                      _: _,
                       _: !0,
                       _: !0,
                     },
@@ -823,16 +814,16 @@
           getClassName() {
             return "CEconItem_AssetAccessory";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -907,16 +898,16 @@
           getClassName() {
             return "CEconItem_AssetProperties";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1009,16 +1000,16 @@
           getClassName() {
             return "CEconItem_AssetPropertySchema";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1076,16 +1067,16 @@
           getClassName() {
             return "CEcon_GetAssetPropertySchema_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.property_schemas || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1139,16 +1130,16 @@
           getClassName() {
             return "CEcon_GetAssetPropertySchema_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1241,16 +1232,16 @@
           getClassName() {
             return "CEcon_Asset";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1347,16 +1338,16 @@
           getClassName() {
             return "CEcon_GetInventoryItemsWithDescriptions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.assetids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1430,16 +1421,16 @@
           getClassName() {
             return "CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.assets || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1526,16 +1517,16 @@
           getClassName() {
             return "CEcon_GetInventoryItemsWithDescriptions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.generate_new_token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1588,16 +1579,16 @@
           getClassName() {
             return "CEcon_GetTradeOfferAccessToken_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.trade_offer_access_token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1650,16 +1641,16 @@
           getClassName() {
             return "CEcon_GetTradeOfferAccessToken_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.return_url || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1712,16 +1703,16 @@
           getClassName() {
             return "CEcon_ClientGetItemShopOverlayAuthURL_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.url || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1774,16 +1765,16 @@
           getClassName() {
             return "CEcon_ClientGetItemShopOverlayAuthURL_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1852,16 +1843,16 @@
           getClassName() {
             return "CEcon_GetAssetClassInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.descriptions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1915,9 +1906,7 @@
           getClassName() {
             return "CEcon_GetAssetClassInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -1929,7 +1918,7 @@
                 bConstMethod: !0,
                 ePrivilege: 2,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }

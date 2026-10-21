@@ -55,7 +55,7 @@
               publisher_fee: _,
               steam_fee: _,
             } = _,
-            _ = _ != null && _.appid ? _[_.appid] : void 0;
+            _ = _?.appid ? _[_.appid] : void 0;
           return _
             ? {
                 strHash: _,
@@ -104,7 +104,7 @@
         }
         function _(_) {
           const { enhanced_appearances: _, description: _ } = _;
-          return (_ == null ? void 0 : _.length) > 0 ? _[0].url : _(_);
+          return _?.length > 0 ? _[0].url : _(_);
         }
         function _(_) {
           const { icon_url: _, icon_url_large: _ } = _;
@@ -141,7 +141,7 @@
           return (0, _._)(_(_, _, _));
         }
         function _(_, _, _) {
-          const _ = `${_ == null ? void 0 : _.classid}_${_ == null ? void 0 : _.instanceid}`;
+          const _ = `${_?.classid}_${_?.instanceid}`;
           return {
             queryKey: ["AssetClassInfo", _, _],
             queryFn: async () => _.load(_),
@@ -153,7 +153,6 @@
         }
         function _(_, _, _, _ = _._.GetAssetClassInfo) {
           return new (_())(async (_) => {
-            var _;
             let _ = _._.Init(_._);
             _.Body().set_language(_),
               _.Body().set_appid(_),
@@ -165,7 +164,7 @@
             const _ = await _(_, _);
             if (_.GetEResult() != _._)
               throw `Error loading econ items: ${_.GetErrorMessage()}`;
-            return (_ = _.Body().toObject().descriptions) != null ? _ : [];
+            return _.Body().toObject().descriptions ?? [];
           });
         }
         var _ = __webpack_require__("chunkid"),
@@ -220,7 +219,6 @@
         }
         const _ = 346;
         function _(_) {
-          var _;
           const {
             description: _,
             asset: _,
@@ -228,11 +226,10 @@
             refHover: _,
           } = _;
           let _,
-            _ = _ == null ? void 0 : _.appid;
-          "identifiers" in _ &&
-            ((_ = _.identifiers), (_ = (_ = _.appid) != null ? _ : _));
+            _ = _?.appid;
+          "identifiers" in _ && ((_ = _.identifiers), (_ = _.appid ?? _));
           const { data: _ } = _(_, _ ? void 0 : _),
-            _ = _ != null ? _ : _;
+            _ = _ ?? _;
           return _
             ? (0, _.jsx)(_.Root, {
                 description: _,
@@ -294,7 +291,6 @@
           return {
             queryKey: ["AssetPropertySchema", _, _],
             queryFn: async () => {
-              var _;
               const _ = await _._.GetAssetPropertySchema(_, {
                 appid: _,
                 language: _,
@@ -302,8 +298,7 @@
               if (!_.BSuccess() && _.GetEResult() != _._)
                 throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
               return {
-                property_schemas:
-                  (_ = _.Body().toObject().property_schemas) != null ? _ : [],
+                property_schemas: _.Body().toObject().property_schemas ?? [],
               };
             },
           };
@@ -387,7 +382,7 @@
         function _(_) {
           const { appid: _, property: _, ..._ } = _,
             { data: _ } = _(_),
-            _ = _ == null ? void 0 : _.get(_.propertyid);
+            _ = _?.get(_.propertyid);
           return !_ || _.hide_from_description
             ? null
             : (0, _.jsx)(_._, {
@@ -409,7 +404,7 @@
         function _(_) {
           const { appid: _, property: _ } = _,
             { data: _ } = _(_),
-            _ = _ == null ? void 0 : _.get(_.propertyid);
+            _ = _?.get(_.propertyid);
           return _ ? _.localized_label : null;
         }
         function _(_) {
@@ -525,11 +520,7 @@
         }
         function _(_, _, _) {
           const _ =
-              typeof (_ == null ? void 0 : _.amount) == "string"
-                ? parseInt(_.amount)
-                : _ == null
-                  ? void 0
-                  : _.amount,
+              typeof _?.amount == "string" ? parseInt(_.amount) : _?.amount,
             _ = _ || _.name;
           return (_ && _ > 1 ? `${(0, _._)(_)} ` : "") + _;
         }
@@ -547,7 +538,7 @@
             contrast: "note",
             ..._,
             style: {
-              ...(_ != null ? _ : {}),
+              ...(_ ?? {}),
               color: _,
             },
             children: _(_, _, _),
@@ -568,17 +559,15 @@
             underline: "hover",
             ..._,
             style: {
-              ...(_ != null ? _ : {}),
+              ...(_ ?? {}),
               color: _,
             },
             children: _(_, _, _),
           });
         }
         function _(_) {
-          var _;
           const _ = _.context.itemDescription;
-          if (!((_ = _.container_properties) != null && _.contained_items))
-            return null;
+          if (!_.container_properties?.contained_items) return null;
           const _ = _.appid,
             _ = _.container_properties.contained_items;
           return (0, _.jsx)("ul", {
@@ -595,17 +584,15 @@
           });
         }
         function _(_) {
-          var _, _;
           const _ = _.context.itemDescription,
             _ = parseInt(_.args.index || "-1");
           let _;
-          (_ = _.container_properties) != null &&
-            _.contained_items &&
+          _.container_properties?.contained_items &&
             _ >= 0 &&
             _ < _.container_properties.contained_items.length &&
             (_ = _.container_properties.contained_items[_]);
           const _ = _.appid,
-            _ = (_ = _.children) == null ? void 0 : _.toString(),
+            _ = _.children?.toString(),
             _ = _.context.line.color && `#${_.context.line.color}`,
             { data: _ } = _(_, _);
           return _
@@ -669,15 +656,9 @@
           });
         }
         function _(_, _) {
-          var _, _;
-          return (_ = _ == null ? void 0 : _.public_data) != null &&
-            _.profile_url
+          return _?.public_data?.profile_url
             ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
-            : _(
-                ((_ = _ == null ? void 0 : _.public_data) == null
-                  ? void 0
-                  : _.steamid) || _,
-              );
+            : _(_?.public_data?.steamid || _);
         }
         function _(_) {
           return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
@@ -685,12 +666,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
-          const _ = parseInt(
-              (_ = (_ = _.children) == null ? void 0 : _.toString()) != null
-                ? _
-                : "0",
-            ),
+          const _ = parseInt(_.children?.toString() ?? "0"),
             _ = _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString(),
             { data: _, isLoading: _ } = (0, _._)(_);
           if (!_ && _) return null;
@@ -743,12 +719,7 @@
           return _.useMemo(() => _.ParseBBCode(_, _), [_, _, _]);
         }
         function _(_) {
-          var _, _;
-          const _ = parseInt(
-            (_ = (_ = _.children) == null ? void 0 : _.toString()) != null
-              ? _
-              : "0",
-          );
+          const _ = parseInt(_.children?.toString() ?? "0");
           return _ ? new Date(_ * 1e3).toLocaleString((0, _._)()) : null;
         }
         var _ = __webpack_require__("chunkid");
@@ -794,13 +765,12 @@
           if (!_) return null;
           const _ = _.link.match(
               /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
-            ),
-            _ = _ == null ? void 0 : _.groups,
+            )?.groups,
             { contextid: _, assetid: _ } = _;
           if (
             !_ ||
             !_ ||
-            (_ == null ? void 0 : _.appid) != 753 ||
+            _?.appid != 753 ||
             _ != "6" ||
             !_.appid ||
             !_.item_type
@@ -816,7 +786,6 @@
           });
         }
         function _(_) {
-          var _;
           const {
               contextid: _,
               assetid: _,
@@ -844,12 +813,7 @@
                         color: "sky-11",
                         children: _.Localize(
                           "#ItemDescription_XGems",
-                          (_ =
-                            _ == null
-                              ? void 0
-                              : _.toLocaleString((0, _._)())) != null
-                            ? _
-                            : "",
+                          _?.toLocaleString((0, _._)()) ?? "",
                         ),
                       }),
                     ),
@@ -936,8 +900,7 @@
                 _ = [];
               return (
                 _.forEach((_, _) => {
-                  var _;
-                  (_ = _.link) != null && _.startsWith("javascript:GetGooValue")
+                  _.link?.startsWith("javascript:GetGooValue")
                     ? _.push(
                         (0, _.jsx)(
                           _,
@@ -1012,20 +975,12 @@
             });
         }
         function _(_, _, _, _, _) {
-          var _, _;
-          let _ = _.replace(
-            /%assetid%/,
-            (_ = _ == null ? void 0 : _.assetid) != null ? _ : "",
-          )
-            .replace(
-              /%contextid%/,
-              (_ = _ == null ? void 0 : _.contextid) != null ? _ : "",
-            )
-            .replace(/%owner_steamid%/, _ != null ? _ : "")
-            .replace(/%listingid%/, _ != null ? _ : "");
+          let _ = _.replace(/%assetid%/, _?.assetid ?? "")
+            .replace(/%contextid%/, _?.contextid ?? "")
+            .replace(/%owner_steamid%/, _ ?? "")
+            .replace(/%listingid%/, _ ?? "");
           return (
-            _ != null &&
-              _.asset_properties &&
+            _?.asset_properties &&
               _.asset_properties.forEach((_) => {
                 let _ = "";
                 _.float_value !== void 0
@@ -1059,25 +1014,21 @@
           }
           return (0, _.jsx)(_._, {
             direction: "column",
-            children:
-              _ == null
-                ? void 0
-                : _.map((_, _) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        line: _,
-                        description: _,
-                        asset: _,
-                        ..._,
-                      },
-                      _,
-                    ),
-                  ),
+            children: _?.map((_, _) =>
+              (0, _.jsx)(
+                _,
+                {
+                  line: _,
+                  description: _,
+                  asset: _,
+                  ..._,
+                },
+                _,
+              ),
+            ),
           });
         }
         function _(_) {
-          var _, _;
           const { line: _, description: _, asset: _, ..._ } = _,
             _ = {
               _: "div",
@@ -1087,8 +1038,7 @@
                 color: _.color ? `#${_.color}` : void 0,
               },
             };
-          let _ =
-            (_ = (_ = _.value) == null ? void 0 : _.trim()) != null ? _ : "";
+          let _ = _.value?.trim() ?? "";
           switch ((_ || (_ = "\xA0"), (_ = _(_, _, _)), _.type)) {
             case "html":
               return (0, _.jsx)(_._, {
@@ -1152,7 +1102,7 @@
                 hashName: _,
                 bCanInteract: _,
                 bItemSealed: _,
-                assetid: _ == null ? void 0 : _.assetid,
+                assetid: _?.assetid,
               })
             : null;
         }
@@ -1166,10 +1116,7 @@
               assetid: _,
             } = _,
             { data: _, isLoading: _ } = _(_, _, _);
-          return !_ &&
-            !(_ != null && _.lowest_price) &&
-            !(_ != null && _.volume) &&
-            !_
+          return !_ && !_?.lowest_price && !_?.volume && !_
             ? null
             : _
               ? (0, _.jsx)(_._, {
@@ -1207,26 +1154,22 @@
         }
         function _(_) {
           const { isLoading: _, priceOverview: _ } = _;
-          return !_ &&
-            !(_ != null && _.lowest_price) &&
-            !(_ != null && _.volume)
+          return !_ && !_?.lowest_price && !_?.volume
             ? null
             : (0, _.jsxs)(_._, {
                 paddingStart: "3",
                 children: [
                   (0, _.jsx)(_._, {
                     _: "div",
-                    children:
-                      _ != null && _.lowest_price
-                        ? _("#SellOnMarket_LowestPrice", _.lowest_price)
-                        : "\xA0",
+                    children: _?.lowest_price
+                      ? _("#SellOnMarket_LowestPrice", _.lowest_price)
+                      : "\xA0",
                   }),
                   (0, _.jsx)(_._, {
                     _: "div",
-                    children:
-                      _ != null && _.volume
-                        ? _("#SellOnMarket_Volume", _.volume)
-                        : "\xA0",
+                    children: _?.volume
+                      ? _("#SellOnMarket_Volume", _.volume)
+                      : "\xA0",
                   }),
                 ],
               });
@@ -1468,16 +1411,9 @@
             _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
             _ = (0, _._)(_);
           return {
-            gameURL:
-              _ != null
-                ? _
-                : _ != null &&
-                    _.visible &&
-                    (_ == null ? void 0 : _.type) !== _._._
-                  ? _
-                  : void 0,
+            gameURL: _ ?? (_?.visible && _?.type !== _._._ ? _ : void 0),
             iconURL: _,
-            strName: _ == null ? void 0 : _.name,
+            strName: _?.name,
           };
         }
         function _(_) {
@@ -1508,7 +1444,7 @@
                 href: _,
                 children: _
                   ? (0, _.jsx)(_._, {
-                      alt: _ != null ? _ : "",
+                      alt: _ ?? "",
                       src: _,
                       className: _.GameImage,
                     })
@@ -1752,7 +1688,6 @@
           });
         }
         function _(_) {
-          var _;
           const { description: _, asset: _, bHideActionsForUnique: _ } = _,
             _ = !(_ && !_.commodity);
           return (0, _.jsx)(_.Root, {
@@ -1788,7 +1723,7 @@
                   children: [
                     (0, _.jsx)(_.Name, {}),
                     (0, _.jsx)(_.GameInfo, {
-                      hrefGame: `${_._.COMMUNITY_BASE_URL}market/search?appid=${((_ = _.appid)) != null ? _ : 0}`,
+                      hrefGame: `${_._.COMMUNITY_BASE_URL}market/search?appid=${_.appid ?? 0}`,
                     }),
                     (0, _.jsx)(_.Descriptions, {}),
                     (0, _.jsx)(_.AssetAccessories, {}),
@@ -1801,7 +1736,6 @@
         }
         const _ = new Map();
         function _(_, _) {
-          var _;
           const _ = window;
           if (
             (_.UpdateReactItemInfo ||
@@ -1809,7 +1743,7 @@
                 const _ = _.get(_);
                 _ ? _(_, _) : (0, _._)(!1, `Updater not registered: ${_}`);
               }),
-            (_ = _.g_mapPendingItemInfo) != null && _.has(_))
+            _.g_mapPendingItemInfo?.has(_))
           ) {
             const { description: _, asset: _ } = _.g_mapPendingItemInfo.get(_);
             _(_, _), _.g_mapPendingItemInfo.delete(_);
@@ -1841,11 +1775,7 @@
         function _(_) {
           const { rgApps: _, rgAppData: _, ..._ } = _,
             _ = (0, _.useMemo)(
-              () =>
-                (0, _._)(_ || [], (_) => {
-                  var _;
-                  return (_ = (_ || {})[_]) == null ? void 0 : _.name;
-                }),
+              () => (0, _._)(_ || [], (_) => (_ || {})[_]?.name),
               [_, _],
             );
           return (0, _.jsx)(_, {
@@ -1855,10 +1785,7 @@
           });
         }
         function _(_) {
-          var _;
-          const [_, _] = (0, _.useState)(
-            !!((_ = history.state) != null && _.bAdvancedSearch),
-          );
+          const [_, _] = (0, _.useState)(!!history.state?.bAdvancedSearch);
           return (
             (0, _.useEffect)(
               () => (
@@ -2110,7 +2037,7 @@
             } = _,
             _ = [_],
             _ = (0, _.useCallback)((_) => _(_[0]), [_]),
-            _ = (0, _.useCallback)((_) => (_ == null ? void 0 : _(_[0])), [_]);
+            _ = (0, _.useCallback)((_) => _?.(_[0]), [_]);
           return (0, _.jsxs)(_, {
             ..._,
             min: _,
@@ -2190,11 +2117,10 @@
                 }
               },
               onPointerUp: (_) => {
-                var _;
                 const _ = _.target;
                 _.hasPointerCapture(_.pointerId) &&
                   (_.releasePointerCapture(_.pointerId),
-                  _ && (_ = _.current) != null && _.bMoved && _(_),
+                  _ && _.current?.bMoved && _(_),
                   _(!1));
               },
               onPointerMove: (_) => {
@@ -2220,8 +2146,7 @@
                 }
               },
               onClick: (_) => {
-                var _;
-                if (!_.current || ((_ = _.current) != null && _.bMoved)) return;
+                if (!_.current || _.current?.bMoved) return;
                 const _ = _.current.getBoundingClientRect(),
                   _ = _(_.clientX - _.left, [0, _.width], [_, _]),
                   _ = _({
@@ -2419,7 +2344,6 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(
@@ -2429,10 +2353,7 @@
               },
               _,
             ),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)(_, {
               ref: _,
               ..._,
@@ -2548,22 +2469,9 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "reactNodes", []);
-          }
+          reactNodes = [];
           AppendText(_, _ = !1) {
             _.length &&
               (_
@@ -2588,9 +2496,9 @@
           }
         }
         class _ {
+          m_decoratedAccumulator;
           constructor(_) {
-            _(this, "m_decoratedAccumulator"),
-              (0, _._)(_, "decorated accumulator cannot be null"),
+            (0, _._)(_, "decorated accumulator cannot be null"),
               (this.m_decoratedAccumulator = _);
           }
           AppendText(_, _ = !1) {
@@ -2639,24 +2547,13 @@
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
+          m_fnAccumulatorFactory;
+          m_dictComponents;
           constructor(_, _) {
-            _(this, "m_fnAccumulatorFactory"),
-              _(this, "m_dictComponents"),
-              _ instanceof Map
-                ? (this.m_dictComponents = _)
-                : (this.m_dictComponents = new Map(Object.entries(_))),
+            _ instanceof Map
+              ? (this.m_dictComponents = _)
+              : (this.m_dictComponents = new Map(Object.entries(_))),
               (this.m_fnAccumulatorFactory = _);
           }
           Parse(_, _, _ = !0) {
@@ -2668,10 +2565,7 @@
             const _ = [],
               _ = () => (_.length < 1 ? void 0 : _[_.length - 1]),
               _ = this.m_dictComponents,
-              _ = (_) => {
-                var _;
-                return !!(_.tag && (_ = _.get(_.tag)) != null && _.autocloses);
-              };
+              _ = (_) => !!(_.tag && _.get(_.tag)?.autocloses);
             let _ = !1,
               _ = !0;
             const _ = (_, _) => {
@@ -2701,7 +2595,6 @@
             };
             for (
               _.forEach((_, _) => {
-                var _, _;
                 if (_.type == _) {
                   const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
                   _.AppendText(_, _), (_ = !1);
@@ -2724,7 +2617,7 @@
                     }),
                       (_ = this.m_fnAccumulatorFactory(_)),
                       (_ = !!_.skipInternalNewline),
-                      (_ = (_ = _.allowWrapTextForCopying) != null ? _ : !1);
+                      (_ = _.allowWrapTextForCopying ?? !1);
                   }
                 } else if (_.type == _) {
                   let _ = _.text.toLowerCase();
@@ -2732,7 +2625,7 @@
                     const _ = _.pop();
                     _(_, _.node);
                   }
-                  if (((_ = _()) == null ? void 0 : _.node.tag) == _) {
+                  if (_()?.node.tag == _) {
                     const _ = _.pop();
                     _(_, _);
                   } else _.AppendText("[/" + _.text + "]", _.length == 0);
@@ -2748,7 +2641,7 @@
         }
         function _(_, _, _ = !1) {
           let _ = "[" + _;
-          _ != null && _[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
+          _?.[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
           for (const _ in _) _ !== "" && (_ += ` ${_(_)}=${_("" + _[_])}`);
           return (_ += "]"), _;
         }
@@ -2797,18 +2690,16 @@
           };
         }
         function _(_) {
-          var _;
           let _ = "";
           return (
             _.type == _ ? (_ = "[/") : _.type == _ && (_ = "["),
             {
               type: _,
-              text: _ + ((_ = _.text) != null ? _ : ""),
+              text: _ + (_.text ?? ""),
             }
           );
         }
         function _(_, _) {
-          var _, _, _;
           const _ = [];
           let _ = {
               type: _,
@@ -2831,13 +2722,8 @@
                 else if (_ == "[" && !_) (_ = _(_, _(_), _)), (_ = !0);
                 else if (_ == "]" && !_) {
                   const _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse",
-                    _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse";
+                      _.type == _ && _.text?.toLocaleLowerCase() == "noparse",
+                    _ = _.type == _ && _.text?.toLocaleLowerCase() == "noparse";
                   _ || (_ && !_)
                     ? ((_ = _(_)), (_.text += _))
                     : _
@@ -2865,7 +2751,7 @@
                 ? _.push(_(_))
                 : _.push({
                     type: _.type,
-                    text: (_ = _.text) != null ? _ : "",
+                    text: _.text ?? "",
                   })),
             _
           );
@@ -2936,22 +2822,11 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _._ {
+          m_renderingLanguage;
           constructor(_, _, _) {
-            super(_, _ != null ? _ : () => new _._()),
-              _(this, "m_renderingLanguage"),
+            super(_, _ ?? (() => new _._())),
               (this.m_renderingLanguage =
                 typeof _ == "string" ? (0, _.sfN)(_) : _);
           }
@@ -3008,10 +2883,7 @@
                     const _ = _.toObject();
                     _.set(_.public_data.steamid, _);
                   }),
-                _.map((_) => {
-                  var _;
-                  return (_ = _.get(_)) != null ? _ : null;
-                })
+                _.map((_) => _.get(_) ?? null)
               );
             },
             {
@@ -3037,20 +2909,12 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _, _, _, _;
           return (
-            (_ = _ == null ? void 0 : _.private_data) == null ||
-              delete _.account_name,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.account_flags,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.ban_expires_time,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.privacy_state,
-            ((_ = _ == null ? void 0 : _.public_data) == null
-              ? void 0
-              : _.profile_state) !== _.IiA &&
-              (_ == null || delete _.private_data),
+            delete _?.private_data?.account_name,
+            delete _?.public_data?.account_flags,
+            delete _?.public_data?.ban_expires_time,
+            delete _?.public_data?.privacy_state,
+            _?.public_data?.profile_state !== _.IiA && delete _?.private_data,
             _
           );
         }
@@ -3081,9 +2945,7 @@
         }
         function _(_, _) {
           _.forEach((_) => {
-            var _;
-            (_ = _ == null ? void 0 : _.public_data) != null &&
-              _.steamid &&
+            _?.public_data?.steamid &&
               _.setQueryData(_(_.public_data.steamid), _);
           });
         }
@@ -3945,7 +3807,6 @@
           });
         }
         function _(_) {
-          var _, _;
           const {
               value: _,
               onTextChange: _,
@@ -3955,7 +3816,7 @@
               ..._
             } = _,
             _ = (0, _._)(),
-            _ = _ == null ? void 0 : _.appid,
+            _ = _?.appid,
             _ = !!_ && _.length > 2,
             _ = (0, _._)({
               queryKey: ["market_search_suggestions", _, _],
@@ -3969,11 +3830,8 @@
               enabled: _,
               staleTime: _ ? 0 : 1 / 0,
             }),
-            _ = ((_ = _.data) == null ? void 0 : _.apps) || [],
-            _ = (((_ = _.data) == null ? void 0 : _.results) || []).slice(
-              0,
-              10,
-            ),
+            _ = _.data?.apps || [],
+            _ = (_.data?.results || []).slice(0, 10),
             _ = _.map((_) => `app|${_.appid}`).concat(
               _.map((_) => `item|${_.market_hash_name}`),
             ),
@@ -4223,7 +4081,6 @@
           });
         }
         function _(_) {
-          var _;
           const {
               rgApps: _ = [],
               rgAppData: _ = {},
@@ -4251,10 +4108,7 @@
                 facets: {},
               }),
             _ = (0, _.useMemo)(
-              () =>
-                __webpack_require__
-                  .filter((_) => _ !== _ && _[_])
-                  .map((_) => _[_]),
+              () => _.filter((_) => _ !== _ && _[_]).map((_) => _[_]),
               [_, _],
             );
           return (0, _.jsxs)(_.Fragment, {
@@ -4272,7 +4126,7 @@
               _ &&
                 (0, _.jsx)(_, {
                   loading: _.isLoading,
-                  apps: (_ = _.data) == null ? void 0 : _.rgInGame,
+                  apps: _.data?.rgInGame,
                   filterBy: _,
                   onSelect: _,
                 }),
@@ -4288,7 +4142,6 @@
         const _ = 753,
           _ = "Game";
         function _(_) {
-          var _, _, _;
           const { filter: _, onFilterChange: _, suggestedInitialApp: _ } = _,
             [_, _] = (0, _.useState)(!1),
             _ = !_.app && _,
@@ -4303,7 +4156,7 @@
                 (_(!0),
                 _ &&
                   _[_.appid] &&
-                  _({
+                  __webpack_require__({
                     ..._,
                     app: _,
                   }));
@@ -4319,19 +4172,14 @@
               }),
             });
           const _ = (_) =>
-              _({
+              __webpack_require__({
                 ..._,
                 app: _.find((_) => _.appid === _) || null,
                 facets: {},
               }),
-            _ =
-              (_ = _.data) != null && _.rgPlaytime.length
-                ? (_ = _.data) == null
-                  ? void 0
-                  : _.rgPlaytime
-                : (_ = _.data) == null
-                  ? void 0
-                  : _.rgInGame;
+            _ = _.data?.rgPlaytime.length
+              ? _.data?.rgPlaytime
+              : _.data?.rgInGame;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               _ &&
@@ -4339,7 +4187,7 @@
                   apps: _,
                   selectedApp: _.app,
                   onSelectionChange: (_) =>
-                    _({
+                    __webpack_require__({
                       ..._,
                       app: _,
                       facets: {},
@@ -11672,12 +11520,11 @@
           const _ = useMemo(() => {
             const _ = {};
             return (
-              _ == null ||
-                _.forEach((_) => {
-                  _.facet === _.category &&
-                    _.internal_name &&
-                    (_[_.internal_name] = !0);
-                }),
+              _?.forEach((_) => {
+                _.facet === _.category &&
+                  _.internal_name &&
+                  (_[_.internal_name] = !0);
+              }),
               _
             );
           }, [_, _]);
@@ -12121,7 +11968,7 @@
             );
           let _ = _;
           const _ = _[0];
-          if (_ != null && _.tag && _.tag.startsWith("weapon_")) {
+          if (_?.tag && _.tag.startsWith("weapon_")) {
             const _ = _.tag.slice(7),
               _ = _();
             _ in _ && (_ = _[_]);
@@ -12223,7 +12070,7 @@
             }, [_, _]);
           let _ = _;
           const _ = _ ? [void 0, ..._] : _;
-          if (_ != null && _.tag && _.tag.startsWith("weapon_")) {
+          if (_?.tag && _.tag.startsWith("weapon_")) {
             const _ = _.tag.slice(7),
               _ = _();
             _ in _ && (_ = _[_]);
@@ -12345,7 +12192,7 @@
             );
           let _ = _;
           const _ = _[0];
-          if (_ != null && _.tag && _.tag.startsWith("weapon_")) {
+          if (_?.tag && _.tag.startsWith("weapon_")) {
             const _ = _.tag.slice(7),
               _ = _();
             _ in _ && (_ = _[_]);
@@ -13120,7 +12967,6 @@
           }
         }
         function _(_, _, _, _, _, _) {
-          var _, _, _;
           let _ = [],
             _ = 0,
             _ = 2;
@@ -13128,10 +12974,8 @@
             _ = _.tags || {};
           for (const _ of Object.keys(_)) {
             let _;
-            _ &&
-              (_ =
-                (_ = _.counts[_.name] && _.counts[_.name][_]) != null ? _ : 0),
-              (_ += _ != null ? _ : 0);
+            _ && (_ = (_.counts[_.name] && _.counts[_.name][_]) ?? 0),
+              (_ += _ ?? 0);
             const _ = _(_.name, _, _[_], _);
             if (_)
               if (!_[_.strLabel]) _.push(_), (_[_.strLabel] = _);
@@ -13142,9 +12986,7 @@
                 (_.tag = _.concat(..._)),
                   _.matches !== void 0 &&
                     _.matches !== void 0 &&
-                    (_.matches =
-                      ((_ = _.matches) != null ? _ : 0) +
-                      ((_ = _.matches) != null ? _ : 0)),
+                    (_.matches = (_.matches ?? 0) + (_.matches ?? 0)),
                   _.color === void 0 && _.color && (_.color = _.color);
               } else {
                 let _;
@@ -13167,13 +13009,7 @@
           if (_) _.sort(_);
           else if (!(_ === "select")) _ = (0, _._)(_, (_) => _.strLabel);
           else {
-            _.sort((_, _) => {
-              var _, _;
-              return (
-                ((_ = _.matches) != null ? _ : 0) -
-                ((_ = _.matches) != null ? _ : 0)
-              );
-            });
+            _.sort((_, _) => (_.matches ?? 0) - (_.matches ?? 0));
             let _ = -1;
             for (let _ = _.length - 1; _ >= 0 && _[_].matches === 0; _--) _ = _;
             if (_ === -1) _ = (0, _._)(_, (_) => _.strLabel);
@@ -13541,8 +13377,7 @@
         function _(_, _ = {}) {
           let _ = "";
           return (
-            _ != null &&
-              _.search &&
+            _?.search &&
               (typeof _.search == "string"
                 ? (_ = _.search)
                 : (_ = _.search.toString())),
@@ -13573,7 +13408,7 @@
         function _(_) {
           if (!_(_)) return !1;
           const _ = _.constructor;
-          if (typeof _ == "undefined") return !0;
+          if (typeof _ > "u") return !0;
           const _ = _.prototype;
           return !(
             !_(_) || !Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
@@ -13622,7 +13457,6 @@
           });
         }
         function _(_, _) {
-          var _;
           const _ = (0, _.useContext)(_),
             _ = typeof _ == "string" ? _ : _(..._);
           let _ = _;
@@ -13631,10 +13465,8 @@
             if (_ in _.factories) break;
             _ = _.parent;
           }
-          const _ = (
-            (_ = _ == null ? void 0 : _.factories[_]) != null ? _ : _
-          )();
-          return ((_ != null ? _ : _).instances[_] = _), _;
+          const _ = (_?.factories[_] ?? _)();
+          return ((_ ?? _).instances[_] = _), _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -13717,7 +13549,7 @@
           return _(_, ..._);
         }
         function _(_, ..._) {
-          if (!(_ != null && _.asset_url_format)) return;
+          if (!_?.asset_url_format) return;
           const _ = _.find((_) => {
             const _ = _[_];
             return typeof _ == "string" && _.trim() !== "";

@@ -367,6 +367,7 @@ message CPlayer_GetOwnedGames_Request {
 	optional string language = 7;
 	optional bool include_extended_appinfo = 8;
 	optional bool include_family_licenses = 9;
+	optional bool include_all_free_games = 10;
 }
 
 message CPlayer_GetOwnedGames_Response {

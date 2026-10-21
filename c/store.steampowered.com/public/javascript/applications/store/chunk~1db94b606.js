@@ -2431,6 +2431,71 @@
             },
           };
         }
+        function _(_, _, _, _, _) {
+          if (!_ || _.BImageNeedScreenshotFallback(_, _)) return;
+          const _ = GetImageFromEventDirectly(_, _, _, _);
+          if (!_) return;
+          const _ = [_];
+          if (_ != EArtworkSizes.full) {
+            const _ = GetImageFromEventDirectly(_, _, _, EArtworkSizes.full);
+            if (!_) return;
+            _.push(_);
+          }
+          return _;
+        }
+        function _(_, _, _, _) {
+          const _ = useQueryClient(),
+            _ = useStoreBrowseDataLoader();
+          return useQuery(_(_, _, _, _, _, _)).data ?? void 0;
+        }
+        function _(_, _, _, _) {
+          const _ = {};
+          for (const _ of _) {
+            if (!_.eventModel.GID) continue;
+            const _ = _(_.eventModel, _, _, _, _.bIgnoreArtworkScreenshot);
+            if (!_) return;
+            _[_.eventModel.GID] = _;
+          }
+          return _;
+        }
+        function _(_, _, _, _, _, _) {
+          return {
+            queryKey: [
+              "useEventImagesForSizeAsArrayWithFallback",
+              _.map(
+                (_) => `${_.eventModel.GID}:${!!_.bIgnoreArtworkScreenshot}`,
+              ),
+              _,
+              _,
+              _,
+            ],
+            enabled: _.length > 0,
+            initialData: () => _(_, _, _, _),
+            placeholderData: keepPreviousData,
+            queryFn: async () => {
+              const _ = {};
+              return (
+                await Promise.all(
+                  _.map(async (_) => {
+                    const { eventModel: _, bIgnoreArtworkScreenshot: _ } = _;
+                    if (!_.GID) return;
+                    let _ = _(_, _, _, _, _);
+                    if (!_)
+                      try {
+                        _ =
+                          (await _.ensureQueryData(_(_, _, _, _, _, _, _))) ??
+                          void 0;
+                      } catch {
+                        _ = void 0;
+                      }
+                    _ && (_[_.GID] = _);
+                  }),
+                ),
+                _
+              );
+            },
+          };
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -11904,183 +11969,6 @@ ${_}`;
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        const _ = _()("2026-11-23T09:30:00-08:00").unix(),
-          _ = _()("2026-11-30T10:00:00-08:00").unix(),
-          _ = "store/promo/steamawards2025/";
-        function _() {
-          return 2025;
-        }
-        function _(_) {
-          return `${Config.MEDIA_CDN_URL}store/promo/${_}`;
-        }
-        const _ = "#173471",
-          _ = "#ee6c5d",
-          _ = "#FFFFFF",
-          _ = _()("2026-12-17T09:30:00-08:00").unix(),
-          _ = _()("2027-01-02T10:00:00-08:00").unix(),
-          _ = {
-            2023: 2640290,
-            2024: 3334340,
-            2025: 4147080,
-            2026: 5350740,
-          },
-          _ = 4147080,
-          _ = 2215130;
-        function _(_) {
-          switch (_) {
-            case 2023:
-            case 2024:
-            case 2025:
-              return !0;
-            case 2026:
-              return !1;
-          }
-          return !1;
-        }
-        function _(_) {
-          return _ >= _ && _ < _;
-        }
-        function _(_) {
-          return _ >= _;
-        }
-        function _(_, _, _, _) {
-          const _ = _(_),
-            _ = _(_, _),
-            _ = _(_, _);
-          if (!(!_.length && !_.length))
-            return {
-              nomination: _.length
-                ? {
-                    rgCategories: _,
-                    bNominationsLive: _,
-                  }
-                : void 0,
-              vote: _.length
-                ? {
-                    rgCategories: _,
-                    bNominationsLive: _,
-                  }
-                : void 0,
-            };
-        }
-        function _(_) {
-          return _ >= _ && _ < _;
-        }
-        function _(_) {
-          return _ >= _;
-        }
-        function _(_) {
-          return _ > 0;
-        }
-        function _(_, _) {
-          const _ = [];
-          for (const _ of _.filter(_)) {
-            const _ = _.find((_) => _.voteid == _);
-            _?.localization?.title &&
-              _.push({
-                eCategoryID: _,
-                strTitle: _.localization.title,
-                strDescription: _.localization.award_description ?? "",
-                bLaborOfLove: _.flag == _._._,
-              });
-          }
-          return _;
-        }
-        function _(_) {
-          return ["SteamAwards.GetUserNominations", _];
-        }
-        function _(_) {
-          return ["StoreSales.GetUserVotes", _, _];
-        }
-        function _(_, _) {
-          const _ = (0, _._)(),
-            _ = _(_._.accountid),
-            { data: _, isPending: _ } = (0, _._)({
-              queryKey: _,
-              queryFn: async () => await _.GetMySteamAwardNominations(),
-              enabled: !!_._.accountid,
-            }),
-            { mutate: _ } = (0, _._)({
-              mutationFn: async (_) => {
-                const _ = await _.NominateForSteamAward(_, _);
-                if (_ != _._)
-                  throw new Error(`SteamAwards.Nominate failed with ${_}`);
-              },
-              onMutate: (_) =>
-                _.setQueryData(_, (_) => [
-                  ...(_ ?? []).filter((_) => _.category_id != _),
-                  {
-                    category_id: _,
-                    appid: _,
-                  },
-                ]),
-              onError: () =>
-                _.invalidateQueries({
-                  queryKey: _,
-                }),
-            });
-          return {
-            unNominatedAppID: _?.find((_) => _.category_id == _)?.appid,
-            bAnswered: _ != null || !_._.accountid || !_,
-            Nominate: _,
-          };
-        }
-        function _(_, _) {
-          const _ = (0, _._)(),
-            _ = _(_._.accountid),
-            { data: _, isPending: _ } = (0, _._)({
-              queryKey: _,
-              queryFn: async () => await _.GetMySteamAwardVotes(),
-              enabled: !!_._.accountid,
-            }),
-            { mutate: _ } = (0, _._)({
-              mutationFn: async (_) => {
-                const _ = await _.SetSteamAwardVote(_, _);
-                if (_ != _._)
-                  throw new Error(`StoreSales.SetVote failed with ${_}`);
-              },
-              onMutate: (_) =>
-                _.setQueryData(_, (_) => [
-                  ...(_ ?? []).filter((_) => _.voteid != _),
-                  {
-                    voteid: _,
-                    appid: _,
-                  },
-                ]),
-              onError: () =>
-                _.invalidateQueries({
-                  queryKey: _,
-                }),
-            });
-          return {
-            unVotedAppID: _?.find((_) => _.voteid == _)?.appid,
-            bAnswered: _ != null || !_._.accountid || !_,
-            Vote: _,
-          };
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -12514,11 +12402,10 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 2640290,
           _ = 3334340,
-          _ = _._,
+          _ = 4147080,
           _ = 2215130;
         let _;
         function _() {
@@ -12540,7 +12427,7 @@ ${_}`;
               );
             },
             initialData: () => _()?.definitions,
-            enabled: _ > 0,
+            enabled: _ !== void 0 && _ > 0,
           });
         }
         async function _(_) {
@@ -12614,7 +12501,9 @@ ${_}`;
           const _ = await _._.Nominate(_, _);
           return (
             _.BSuccess() ||
-              console.warn(`Failed to nominate app: ${_.GetEResult()}`),
+              console.warn(
+                `Failed to nominate app ${_} for category ${_}: ${_.GetEResult()}`,
+              ),
             [_.GetEResult(), _.Body().toObject()]
           );
         }
@@ -12625,7 +12514,7 @@ ${_}`;
             mutationFn: () => _(_, _, _, _),
             onSuccess: ([_, _]) => {
               _ == _._
-                ? (_(_, _.nominations),
+                ? (_.nominations && _(_, _.nominations),
                   window.setTimeout(
                     () =>
                       _.invalidateQueries({
@@ -12704,7 +12593,10 @@ ${_}`;
           return (0, _._)({
             queryKey: [`GetNominationShareLink_${_._.accountid}`],
             queryFn: async () => _(_, !1),
-            initialData: () => [_._, _()?.share_link],
+            initialData: () => {
+              const _ = _()?.share_link;
+              if (_) return [_._, _];
+            },
             staleTime: 1 / 0,
             enabled: _._.logged_in,
           });
@@ -12758,7 +12650,7 @@ ${_}`;
           return (
             _.BSuccess() ||
               console.warn(`Failed to get votes for user: ${_.GetEResult()}`),
-            _.Body().toObject()?.user_votes
+            _.Body().toObject()?.user_votes ?? []
           );
         }
         function _(_) {
@@ -12797,13 +12689,14 @@ ${_}`;
           const _ = _(_),
             _ = _(_);
           if (!_.data || !_.data) return null;
-          const _ = _.data.votes.find((_) => _.voteid == _);
-          return _.data.item_definitions?.find(
-            (_) => _.item_type == _.item_type,
-          );
+          const _ = _.data.votes?.find((_) => _.voteid == _);
+          return _
+            ? _.data.item_definitions?.find((_) => _.item_type == _.item_type)
+            : null;
         }
         function _() {
-          return _.useContext(_).yearStyles;
+          const _ = _.useContext(_);
+          return _ ? _.yearStyles : {};
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -12930,10 +12823,11 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -12948,7 +12842,6 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -13011,7 +12904,7 @@ ${_}`;
           return _
             ? jsx(_, {
                 strURL: NavLink(_.GetStorePageURL()),
-                strImgUrl: _.GetAssets().GetSmallCapsuleURL(),
+                strImgUrl: _.GetAssets()?.GetSmallCapsuleURL(),
                 strName: _.GetName(),
               })
             : null;
@@ -13088,7 +12981,6 @@ ${_}`;
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           );
         function _(_) {
@@ -13100,7 +12992,7 @@ ${_}`;
           return (
             _.appid
               ? (_ = _?.GetAssets()?.GetCommunityIconURL() || "")
-              : _.clanID && (_ = _ ? _.avatar_full_url : ""),
+              : _.clanID && (_ = _?.avatar_full_url ?? ""),
             (0, _.jsx)("div", {
               className: (0, _._)(_().ScrollButton, _().GameArt, _().AnimIn),
               onClick: _.onAppIconClick,
@@ -13108,12 +13000,13 @@ ${_}`;
                 !!_ &&
                 (0, _.jsx)("img", {
                   src: _,
+                  alt: "",
                 }),
             })
           );
         }
         let _ = class extends _.Component {
-          m_loader = null;
+          m_loader;
           m_refPage = _.createRef();
           m_refContent = _.createRef();
           m_refScroll = _.createRef();
@@ -13124,19 +13017,19 @@ ${_}`;
           m_nCurrentRenderCount = 0;
           constructor(_) {
             super(_),
+              (this.m_loader = new _(this.props.partnerEventStore)),
               !this.props.bShowOnlyInitialEvent &&
                 this.props.initialEvent &&
-                ((this.m_loader = new _(this.props.partnerEventStore)),
                 this.m_loader.InitAroundEvent(
                   this.props.initialEvent,
                   this.props.additionalParams,
-                ));
+                );
           }
           FindCurrentlyViewedEventIndex() {
-            if (!this.m_refContent.current || !this.m_refScroll.current)
-              return -1;
+            const _ = this.m_refScroll.current;
+            if (!this.m_refContent.current || !_) return -1;
             let _ = this.m_refContent.current.children,
-              _ = this.GetScrollTopForComparison();
+              _ = this.GetScrollTopForComparison(_);
             for (let _ = 0; _ < _.length; _++) {
               let _ = _[_],
                 _ = _.offsetTop,
@@ -13148,10 +13041,8 @@ ${_}`;
           GetPaddingTop() {
             return this.props.showAppHeader ? _ : _;
           }
-          GetScrollTopForComparison() {
-            return Math.ceil(
-              this.m_refScroll.current.scrollTop + this.GetPaddingTop() + 24,
-            );
+          GetScrollTopForComparison(_) {
+            return Math.ceil(_.scrollTop + this.GetPaddingTop() + 24);
           }
           ScrollToEvent(_) {
             let _ = this.m_refContent.current;
@@ -13198,12 +13089,13 @@ ${_}`;
               this.ScrollToOffset(0);
               return;
             }
-            let _ = this.m_refContent.current;
-            if (_) {
+            let _ = this.m_refContent.current,
+              _ = this.m_refScroll.current;
+            if (_ && _) {
               let _ = _.children[_],
                 _ = _.offsetTop,
                 _ = _ + _.clientHeight,
-                _ = this.GetScrollTopForComparison();
+                _ = this.GetScrollTopForComparison(_);
               (_ = _ - (_ - _) * 0.3), _ <= _ && (_ = _);
             }
             this.ScrollToEvent(_);
@@ -13249,30 +13141,31 @@ ${_}`;
           }
           OnTouchMove(_) {
             if (!this.m_refScroll.current || _.touches.length == 0) return;
-            const _ = this.m_nTouchStartClientY - _.touches[0].clientY;
-            this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
+            let _ = 0;
+            this.m_nTouchStartClientY !== void 0 &&
+              (_ = this.m_nTouchStartClientY - _.touches[0].clientY),
+              this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _);
           }
           OnWheel(_) {
             this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _.deltaY);
           }
           SuppressUnwantedScrollEventsBecauseSafariIsDumb(_, _) {
-            const _ = _._(_.target) && _._(this.m_refScroll.current, _.target),
-              _ = _ < 0 && this.m_refScroll.current.scrollTop < 1,
-              _ =
-                this.m_refScroll.current.scrollHeight -
-                  this.m_refScroll.current.scrollTop <=
-                this.m_refScroll.current.clientHeight,
+            const _ = this.m_refScroll.current;
+            if (!_) return;
+            const _ = _._(_.target) && _._(_, _.target),
+              _ = _ < 0 && _.scrollTop < 1,
+              _ = _.scrollHeight - _.scrollTop <= _.clientHeight,
               _ = _ > 0 && _;
             (!_ || _ || _) && _.cancelable && _.preventDefault();
           }
           SetGlobalHeaderHidden(_) {
             const _ = document.getElementsByClassName("responsive_header");
             (0, _._)(_.length <= 1, "Must have at most one responsive_header"),
-              _.length >= 1 && (_[0].style.display = _ ? "none" : null);
+              _.length >= 1 && (_[0].style.display = _ ? "none" : "");
           }
           SetFooterPinnedToBottom(_) {
             const _ = document.getElementById("footer");
-            _ && (_.style.position = _ ? "absolute" : null);
+            _ && (_.style.position = _ ? "absolute" : "");
           }
           componentDidMount() {
             const _ = this.m_refScroll.current;
@@ -13290,14 +13183,14 @@ ${_}`;
               this.SetFooterPinnedToBottom(!0);
           }
           componentDidUpdate(_, _, _) {
-            if (_ !== null) {
-              let _ = this.m_refScroll.current;
-              _ && !_._(_, _.ownerDocument.activeElement) && _.focus();
-              let _ = this.m_refScrollAnchor.current
-                ? this.m_refScrollAnchor.current.GetDOM()
-                : null;
-              _ && (_.scrollTop = _.offsetTop - _);
-            }
+            if (_ === null) return;
+            const _ = this.m_refScroll.current;
+            if (!_) return;
+            _._(_, _.ownerDocument.activeElement) || _.focus();
+            let _ = this.m_refScrollAnchor.current
+              ? this.m_refScrollAnchor.current.GetDOM()
+              : null;
+            _ && (_.scrollTop = _.offsetTop - _);
           }
           componentWillUnmount() {
             const _ = this.m_refPage.current;
@@ -13311,12 +13204,12 @@ ${_}`;
           render() {
             const { initialEvent: _, bShowOnlyInitialEvent: _ } = this.props,
               _ = !_,
-              _ = _ ? [] : _ ? [_] : this.m_loader.GetEvents(),
+              _ = _ ? (_ ? [_] : this.m_loader.GetEvents()) : [],
               _ = [];
             let _ = this.props.appid,
               _ = this.props.clanSteamID?.GetAccountID();
             for (const _ of _) {
-              const _ = _.GID == this.props.initialEvent.GID,
+              const _ = _ !== void 0 && _.GID == _.GID,
                 _ = _;
               _.push(
                 (0, _.jsx)(
@@ -13348,8 +13241,8 @@ ${_}`;
                 children: [
                   this.props.showAppHeader &&
                     (0, _.jsx)(_._, {
-                      appId: _,
-                      clanId: _,
+                      appId: _ ?? 0,
+                      clanId: _ ?? 0,
                     }),
                   (0, _.jsx)(_._, {
                     className: (0, _._)(
@@ -13416,7 +13309,7 @@ ${_}`;
                                     this.props.onAppIconClick &&
                                       (0, _.jsx)(_, {
                                         appid: _,
-                                        clanID: _,
+                                        clanID: _ ?? 0,
                                         onAppIconClick:
                                           this.props.onAppIconClick,
                                       }),
@@ -13531,197 +13424,203 @@ ${_}`;
               _ = _.GetCategoryAsString(),
               _ = _.type;
             let _ = "";
-            if (_.appid) _ = _?.GetName() || "";
-            else if (_.clanSteamID) {
-              const _ = _._.GetClanInfoByClanAccountID(
-                _.clanSteamID.GetAccountID(),
-              );
-              _ = _ ? _.group_name : "";
-            }
+            _.appid
+              ? (_ = _?.GetName() || "")
+              : _.clanSteamID &&
+                (_ =
+                  _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID())
+                    ?.group_name ?? "");
             const _ = _._.GetTimeNowWithOverride(),
               _ = _ !== _.uYK && _ < _.GetStartTimeAndDateUnixSeconds() && !_;
-            return (0, _.jsx)(_, {
-              children: (0, _.jsxs)("div", {
-                ref: this.m_refContent,
-                className: (0, _._)(
-                  _,
-                  _().PartnerEvent,
-                  _().InLibraryView,
-                  _ == "editor" ? _().InEditor : "",
-                ),
-                children: [
-                  (0, _.jsx)(_, {
-                    ...this.props,
-                    eLanguage: _,
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().LibraryEventTitleContainer,
-                    children: (0, _.jsxs)("div", {
-                      className: _().EventDetailTitleContainer,
-                      children: [
-                        this.props.headerElement,
-                        (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            _().EventTypeAndTimeRow,
-                            _ && _().WithReminder,
-                          ),
-                          children: [
-                            (0, _.jsxs)("div", {
-                              className: _().TimeandPostedBy,
-                              children: [
-                                (0, _.jsx)("span", {
-                                  className: _().EventType,
-                                  children: _,
-                                }),
-                                (0, _.jsxs)("span", {
-                                  className: _().PostedBy,
-                                  children: [
-                                    " ",
-                                    (0, _._)("#EventDisplay_PostedBy"),
-                                    _,
-                                    " ",
-                                  ],
-                                }),
-                                (0, _.jsx)(_._, {
-                                  event: _,
-                                  className: _().EventDetailTimeInfo,
-                                }),
-                              ],
-                            }),
-                            _ &&
-                              !_ &&
-                              (0, _.jsx)("div", {
-                                className: _().ReminderContainer,
-                                children: (0, _.jsx)(_._, {
-                                  eventModel: _,
-                                  lang: _,
-                                  bExpandLeft: !0,
-                                }),
-                              }),
-                            !_ && _,
-                          ],
-                        }),
-                        !this.props.disableReadTracking &&
-                          !_ &&
-                          (0, _.jsx)(_._, {
-                            onEnter: this.OnEnterVisible,
-                            onLeave: this.OnLeaveVisible,
-                            options: {
-                              rootMargin: `0px 0px -${_} 0px`,
-                            },
-                          }),
-                        this.props.bInGamepadUI
-                          ? (0, _.jsx)("div", {
-                              className: _().EventDetailTitle,
-                              children: _.GetNameWithFallback(_),
-                            })
-                          : (0, _.jsx)(_._, {
-                              eventModel: _,
-                              route: _._.k_eView,
-                              className: _().EventDetailTitle,
-                              children: _.GetNameWithFallback(_),
-                            }),
-                        _.BHasSubTitle(_) &&
-                          (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().EventDetailsSubTitle,
-                              _().LibraryViewSubtitle,
-                            ),
-                            children: _.GetSubTitle(_),
-                          }),
-                        (0, _.jsx)("div", {
-                          className: _().EventDetailUserType,
-                        }),
-                      ],
+            let _ = null;
+            return (
+              _.jsondata.bSaleEnabled &&
+                _.jsondata.sale_vanity_id &&
+                (_ = (0, _._)(_)),
+              (0, _.jsx)(_, {
+                children: (0, _.jsxs)("div", {
+                  ref: this.m_refContent,
+                  className: (0, _._)(
+                    _,
+                    _().PartnerEvent,
+                    _().InLibraryView,
+                    _ == "editor" ? _().InEditor : "",
+                  ),
+                  children: [
+                    (0, _.jsx)(_, {
+                      ...this.props,
+                      eLanguage: _,
                     }),
-                  }),
-                  !!(
-                    _.BEventCanShowBroadcastWidget() &&
-                    !this.props.bDisableBroadcastPlayer
-                  ) &&
                     (0, _.jsx)("div", {
-                      className: _().EventBroadcastCtn,
-                      children: (0, _.jsx)(_.Suspense, {
-                        fallback: null,
-                        children: (0, _.jsx)(_, {
-                          event: this.props.event,
-                        }),
-                      }),
-                    }),
-                  _.BHasTag("steam_award_nomination_request") &&
-                    (0, _.jsx)(_.EventDisplaySteamAwardNomination, {
-                      event: _,
-                      lang: _,
-                    }),
-                  _.BHasTag("steam_award_vote_request") &&
-                    (0, _.jsx)(_.WinterSaleSteamAwardVoteWrapper, {
-                      appID: _.appid,
-                      bIsEventActionEnabled: _.BIsEventActionEnabled(),
-                      voteCategories: _.GetSteamAwardNomineeCategories(),
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _().LibraryEventBodyContainer,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(
-                          _().EventDetailsBody,
-                          _().EventDetailsBody,
-                          _ && _().MaskImages,
-                        ),
-                        onContextMenu: _._.IN_CLIENT ? _._ : void 0,
+                      className: _().LibraryEventTitleContainer,
+                      children: (0, _.jsxs)("div", {
+                        className: _().EventDetailTitleContainer,
                         children: [
-                          (0, _.jsx)(_._, {
-                            text: _,
-                            event: _,
+                          this.props.headerElement,
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(
+                              _().EventTypeAndTimeRow,
+                              _ && _().WithReminder,
+                            ),
+                            children: [
+                              (0, _.jsxs)("div", {
+                                className: _().TimeandPostedBy,
+                                children: [
+                                  (0, _.jsx)("span", {
+                                    className: _().EventType,
+                                    children: _,
+                                  }),
+                                  (0, _.jsxs)("span", {
+                                    className: _().PostedBy,
+                                    children: [
+                                      " ",
+                                      (0, _._)("#EventDisplay_PostedBy"),
+                                      _,
+                                      " ",
+                                    ],
+                                  }),
+                                  (0, _.jsx)(_._, {
+                                    event: _,
+                                    className: _().EventDetailTimeInfo,
+                                  }),
+                                ],
+                              }),
+                              _ &&
+                                !_ &&
+                                (0, _.jsx)("div", {
+                                  className: _().ReminderContainer,
+                                  children: (0, _.jsx)(_._, {
+                                    eventModel: _,
+                                    lang: _,
+                                    bExpandLeft: !0,
+                                  }),
+                                }),
+                              !_ && _,
+                            ],
                           }),
-                          (0, _.jsx)("span", {
-                            className: _().Clear,
+                          !this.props.disableReadTracking &&
+                            !_ &&
+                            (0, _.jsx)(_._, {
+                              onEnter: this.OnEnterVisible,
+                              onLeave: this.OnLeaveVisible,
+                              options: {
+                                rootMargin: `0px 0px -${_} 0px`,
+                              },
+                            }),
+                          this.props.bInGamepadUI
+                            ? (0, _.jsx)("div", {
+                                className: _().EventDetailTitle,
+                                children: _.GetNameWithFallback(_),
+                              })
+                            : (0, _.jsx)(_._, {
+                                eventModel: _,
+                                route: _._.k_eView,
+                                className: _().EventDetailTitle,
+                                children: _.GetNameWithFallback(_),
+                              }),
+                          _.BHasSubTitle(_) &&
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(
+                                _().EventDetailsSubTitle,
+                                _().LibraryViewSubtitle,
+                              ),
+                              children: _.GetSubTitle(_),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _().EventDetailUserType,
                           }),
                         ],
                       }),
-                      (0, _.jsx)(_._, {
-                        event: this.props.event,
-                      }),
-                      !!_.jsondata.read_more_link &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().ReadMoreCnt),
-                          children: (0, _.jsx)(_._, {
-                            className: (0, _._)(_().Button),
-                            href: _.jsondata.read_more_link,
-                            children: (0, _._)(
-                              "#EventEmail_Button_ClickForMoreDetails",
-                            ),
+                    }),
+                    !!(
+                      _.BEventCanShowBroadcastWidget() &&
+                      !this.props.bDisableBroadcastPlayer
+                    ) &&
+                      (0, _.jsx)("div", {
+                        className: _().EventBroadcastCtn,
+                        children: (0, _.jsx)(_.Suspense, {
+                          fallback: null,
+                          children: (0, _.jsx)(_, {
+                            event: this.props.event,
                           }),
                         }),
-                      !!(
-                        _.jsondata.bSaleEnabled && _.jsondata.sale_vanity_id
-                      ) &&
+                      }),
+                    _.BHasTag("steam_award_nomination_request") &&
+                      (0, _.jsx)(_.EventDisplaySteamAwardNomination, {
+                        event: _,
+                        lang: _,
+                      }),
+                    _.BHasTag("steam_award_vote_request") &&
+                      (0, _.jsx)(_.WinterSaleSteamAwardVoteWrapper, {
+                        appID: _.appid,
+                        bIsEventActionEnabled: _.BIsEventActionEnabled(),
+                        voteCategories: _.GetSteamAwardNomineeCategories(),
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _().LibraryEventBodyContainer,
+                      children: [
                         (0, _.jsxs)("div", {
-                          className: (0, _._)(_().ReadMoreCnt),
+                          className: (0, _._)(
+                            _().EventDetailsBody,
+                            _().EventDetailsBody,
+                            _ && _().MaskImages,
+                          ),
+                          onContextMenu: _._.IN_CLIENT ? _._ : void 0,
                           children: [
                             (0, _.jsx)(_._, {
-                              gidEvent: _.GID,
+                              text: _,
+                              event: _,
                             }),
-                            (0, _.jsx)("a", {
-                              className: (0, _._)(_().Button, "LinkButton"),
-                              href: (0, _._)((0, _._)(_)),
-                              children: (0, _._)("#Event_Button_VisitSalePage"),
+                            (0, _.jsx)("span", {
+                              className: _().Clear,
                             }),
                           ],
                         }),
-                      (0, _.jsx)(_._, {
-                        appid: _.appid,
-                      }),
-                    ],
-                  }),
-                  !_ &&
-                    (0, _.jsx)(_._, {
-                      eventModel: _,
-                      emoticonStore: _,
+                        (0, _.jsx)(_._, {
+                          event: this.props.event,
+                        }),
+                        !!_.jsondata.read_more_link &&
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(_().ReadMoreCnt),
+                            children: (0, _.jsx)(_._, {
+                              className: (0, _._)(_().Button),
+                              href: _.jsondata.read_more_link,
+                              children: (0, _._)(
+                                "#EventEmail_Button_ClickForMoreDetails",
+                              ),
+                            }),
+                          }),
+                        _ &&
+                          _.GID &&
+                          (0, _.jsxs)("div", {
+                            className: (0, _._)(_().ReadMoreCnt),
+                            children: [
+                              (0, _.jsx)(_._, {
+                                gidEvent: _.GID,
+                              }),
+                              (0, _.jsx)("a", {
+                                className: (0, _._)(_().Button, "LinkButton"),
+                                href: (0, _._)(_),
+                                children: (0, _._)(
+                                  "#Event_Button_VisitSalePage",
+                                ),
+                              }),
+                            ],
+                          }),
+                        (0, _.jsx)(_._, {
+                          appid: _.appid,
+                        }),
+                      ],
                     }),
-                ],
-              }),
-            });
+                    !_ &&
+                      (0, _.jsx)(_._, {
+                        eventModel: _,
+                        emoticonStore: _,
+                      }),
+                  ],
+                }),
+              })
+            );
           }
         };
         _([_._], _.prototype, "OnEnterVisible", 1),
@@ -13744,6 +13643,7 @@ ${_}`;
               children: [
                 _ != _.Fwr &&
                   !_ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     className: (0, _._)(
                       _().EventCoverImageBackground,
@@ -13772,7 +13672,7 @@ ${_}`;
         class _ {
           k_nMaxPerDirection = 3;
           m_nAppID = 0;
-          m_clanSteamID;
+          m_clanSteamID = new _._();
           m_partnerEventStore;
           m_additionalParams;
           m_rgEvents = [];
@@ -13802,7 +13702,7 @@ ${_}`;
               (this.m_eNewerDirection = 2),
               (this.m_additionalParams = _),
               this.m_rgEvents.push(_);
-            let _ = null;
+            let _;
             try {
               _ = await _.LoadAdjacentPartnerEventsByEvent(
                 _,
@@ -13831,7 +13731,7 @@ ${_}`;
               return;
             let _ = this.m_rgEvents[this.m_rgEvents.length - 1];
             this.m_eOlderDirection = 2;
-            let _ = null;
+            let _;
             try {
               _ =
                 await this.m_partnerEventStore.LoadAdjacentPartnerEventsByEvent(
@@ -13848,9 +13748,13 @@ ${_}`;
                 this.m_eOlderDirection = 1;
                 return;
               }
-              const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-              for (let _ of _)
-                _.has(_.GID) || (this.m_rgEvents.push(_), _.add(_.GID));
+              const _ = new Set(
+                this.m_rgEvents.map((_) => _.GID).filter((_) => _ !== void 0),
+              );
+              for (let _ of _) {
+                const _ = _.GID;
+                _ && !_.has(_) && (this.m_rgEvents.push(_), _.add(_));
+              }
               this.m_eOlderDirection =
                 _.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
@@ -13860,7 +13764,7 @@ ${_}`;
               return;
             let _ = this.m_rgEvents[0];
             this.m_eNewerDirection = 2;
-            let _ = null;
+            let _;
             try {
               _ =
                 await this.m_partnerEventStore.LoadAdjacentPartnerEventsByEvent(
@@ -13876,9 +13780,13 @@ ${_}`;
                 this.m_eNewerDirection = 1;
                 return;
               }
-              const _ = new Set(this.m_rgEvents.map((_) => _.GID));
-              for (let _ of _.reverse())
-                _.has(_.GID) || (this.m_rgEvents.unshift(_), _.add(_.GID));
+              const _ = new Set(
+                this.m_rgEvents.map((_) => _.GID).filter((_) => _ !== void 0),
+              );
+              for (let _ of _.reverse()) {
+                const _ = _.GID;
+                _ && !_.has(_) && (this.m_rgEvents.unshift(_), _.add(_));
+              }
               this.m_eNewerDirection =
                 _.length >= this.k_nMaxPerDirection ? 1 : 3;
             });
@@ -14073,7 +13981,7 @@ ${_}`;
                     _ &&
                       !_?.token?.reason &&
                       _({
-                        strCapsuleUrl: _.GetAssets().GetHeaderURL(),
+                        strCapsuleUrl: _.GetAssets()?.GetHeaderURL(),
                         strGroupTitle: _.GetName(),
                         strStoreURL:
                           (_._.IN_CLIENT ? "steam://openurl/" : "") +
@@ -14089,7 +13997,8 @@ ${_}`;
               else if (_) {
                 const _ = _._.InitFromClanID(_);
                 _._.LoadClanInfoForClanSteamID(_).then((_) => {
-                  _?.token?.reason ||
+                  !_ ||
+                    _?.token?.reason ||
                     _({
                       strCapsuleUrl: _.avatar_full_url,
                       strGroupTitle: _.group_name,
@@ -14138,17 +14047,19 @@ ${_}`;
                     label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
                     data: "steam://nav/games/details/" + _,
                   }),
-                _.push({
-                  label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
-                  data: (0, _._)(_),
-                }),
-                _ ||
-                  (_.push({
-                    label: (0, _._)(
-                      "#EventDisplay_ViewCommunityPage_ExtraShort",
-                    ),
+                _ &&
+                  _.push({
+                    label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
                     data: (0, _._)(_),
                   }),
+                _ ||
+                  (_ &&
+                    _.push({
+                      label: (0, _._)(
+                        "#EventDisplay_ViewCommunityPage_ExtraShort",
+                      ),
+                      data: (0, _._)(_),
+                    }),
                   _ &&
                     _.push({
                       label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
@@ -14183,7 +14094,9 @@ ${_}`;
             },
             arrowClassName: _().DDButtonArrow,
             rgOptions: _,
-            onChange: (_, _, _) => (0, _._)(_, _.data),
+            onChange: (_, _, _) => {
+              _ && (0, _._)(_, _.data);
+            },
           });
         }
         const _ = (0, _._)((_) => {
@@ -14352,156 +14265,16 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = class _ {
-          constructor() {
-            (0, _._)(this);
-          }
-          m_mapClanReposted = new Set();
-          m_mapSourceEventGIDToPostedClans = new Map();
-          static s_EventRepost;
-          static Get() {
-            return (
-              _.s_EventRepost ||
-                ((_.s_EventRepost = new _()), _.s_EventRepost.Initialize()),
-              _.s_EventRepost
-            );
-          }
-          static ValidateRepostData(_) {
-            const _ = _;
-            return _ &&
-              _.repost_clan_account_ids &&
-              Array.isArray(_.repost_clan_account_ids) &&
-              _.repost_clan_account_ids.length > 0
-              ? typeof _.repost_clan_account_ids[0] == "number"
-              : !1;
-          }
-          Initialize() {
-            if (document.getElementById("application_config")) {
-              let _ = (0, _._)("repostcontrols", "application_config");
-              _.ValidateRepostData(_) &&
-                _.repost_clan_account_ids.forEach((_) =>
-                  this.m_mapClanReposted.add(_),
-                );
-            }
-          }
-          BCanRepostPartnerEvent() {
-            return this.m_mapClanReposted.size > 0;
-          }
-          GetRepostClanAccountID() {
-            return Array.from(this.m_mapClanReposted);
-          }
-          async LoadClansAlreadyRepostedTo(_, _, _) {
-            if (this.m_mapSourceEventGIDToPostedClans.has(_))
-              return this.m_mapSourceEventGIDToPostedClans.get(_);
-            const _ = _._.STORE_BASE_URL + "events/ajaxgetrepostedevent",
-              _ = {
-                sessionid: (0, _._)(),
-                source_clan_accountid: _.GetAccountID(),
-                source_event_gid: _,
-              };
-            try {
-              const _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _?.token,
-              });
-              if (_?.data?.success == _._)
-                return (
-                  this.m_mapSourceEventGIDToPostedClans.set(
-                    _,
-                    _.data.repost_clan_accountid || [],
-                  ),
-                  _.data.repost_clan_accountid
-                );
-              console.error(
-                "GetRepostClanAccountID: failed " +
-                  _?.data?.success +
-                  " and msg: " +
-                  _?.data?.msg,
-              );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "GetRepostClanAccountID: fail repost with " + _.strErrorMsg,
-                _,
-              );
-            }
-            return new Array();
-          }
-          async RepostEvent(_, _, _, _, _) {
-            const _ = _._.STORE_BASE_URL + "events/ajaxrepostevent",
-              _ = new FormData();
-            _.append("sessionid", (0, _._)()),
-              _.append("source_clan_accountid", "" + _.GetAccountID()),
-              _.append("source_event_gid", "" + _),
-              _.append("repost_clan_accountid", "" + _.GetAccountID()),
-              _.append("add", "" + _);
-            try {
-              let _ = await _().post(_, _, {
-                withCredentials: !0,
-                cancelToken: _?.token,
-              });
-              if (_?.data?.success == _._ && _.data.repost_gid) {
-                this.m_mapSourceEventGIDToPostedClans.has(_) ||
-                  this.m_mapSourceEventGIDToPostedClans.set(_, []);
-                const _ = this.m_mapSourceEventGIDToPostedClans
-                  .get(_)
-                  .findIndex((_) => _.GetAccountID() == _);
-                return (
-                  _ && _ == -1
-                    ? this.m_mapSourceEventGIDToPostedClans
-                        .get(_)
-                        .push(_.GetAccountID())
-                    : !_ &&
-                      _ !== -1 &&
-                      this.m_mapSourceEventGIDToPostedClans.get(_).splice(_, 1),
-                  _.data.repost_gid
-                );
-              } else
-                console.error(
-                  "RepostEvent: failed " +
-                    _?.data?.success +
-                    " and msg: " +
-                    _?.data?.msg,
-                );
-            } catch (_) {
-              const _ = (0, _._)(_);
-              console.error(
-                "RepostEvent: fail repost with " + _.strErrorMsg,
-                _,
-              );
-            }
-            return null;
-          }
-        };
-        _([_._], _.prototype, "m_mapClanReposted", 2);
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
@@ -14541,212 +14314,6 @@ ${_}`;
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (0, _._)((_) => {
-          const { eventModel: _ } = _,
-            [_, _] = (0, _.useState)(!0),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(new Set()),
-            [_, _] = (0, _.useState)(null),
-            [_, _] = (0, _.useState)(null),
-            _ = (0, _.useRef)(null);
-          (0, _.useEffect)(
-            () => (
-              _ &&
-                (async () => {
-                  const _ = _().CancelToken.source();
-                  _.current = _.cancel;
-                  const _ = _.Get().LoadClansAlreadyRepostedTo(
-                    _.clanSteamID,
-                    _.GID,
-                    _,
-                  );
-                  _.then((_) => {
-                    const _ = new Set();
-                    _.forEach((_) => _.add(_)), _(_);
-                  });
-                  let _ = new Array();
-                  _.push(_),
-                    _.Get()
-                      .GetRepostClanAccountID()
-                      .forEach((_) => {
-                        const _ = _._.InitFromClanID(_);
-                        _.push(_._.LoadClanInfoForClanSteamID(_));
-                      }),
-                    await Promise.all(_),
-                    _(!1);
-                })(),
-              () => _.current && _.current()
-            ),
-            [_, _.GID, _.clanSteamID],
-          );
-          const _ = new Array();
-          return (
-            _.Get()
-              .GetRepostClanAccountID()
-              .forEach((_) => {
-                const _ = _._.GetClanInfoByClanAccountID(_);
-                if (_ && _ != _.clanSteamID.GetAccountID()) {
-                  const _ = _.has(_),
-                    _ = _.has(_) || (_ && !_.has(_));
-                  _.push(
-                    (0, _.jsx)(
-                      _._,
-                      {
-                        label: _
-                          ? (0, _._)(
-                              "#EventRepost_Dialog_Existing",
-                              _.group_name,
-                            )
-                          : _.group_name,
-                        checked: _,
-                        disabled: _ !== null,
-                        onChange: (_) => {
-                          _.has(_)
-                            ? (_ ? _.delete(_) : _.add(_), _(new Set(_)))
-                            : (_ ? _.add(_) : _.delete(_), _(new Set(_)));
-                        },
-                      },
-                      "checkbox" + _,
-                    ),
-                  );
-                }
-              }),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                onEscKeypress: () => _.closeModal && _.closeModal(),
-                children: (0, _.jsxs)(_._, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#EventRepost_Dialog_Title"),
-                    }),
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        (0, _.jsx)(_._, {
-                          children: (0, _._)("#EventRepost_Dialog_Desc"),
-                        }),
-                        _
-                          ? (0, _.jsx)(_._, {
-                              string: (0, _._)("#Loading"),
-                            })
-                          : (0, _.jsx)("div", {
-                              children: _,
-                            }),
-                        !!(_.size || _.size) &&
-                          (0, _.jsxs)("div", {
-                            children: [
-                              (0, _.jsx)("span", {
-                                children: (0, _._)(
-                                  "#EventRepost_Dialog_Action_Desc",
-                                ),
-                              }),
-                              (0, _.jsxs)("ul", {
-                                children: [
-                                  !!_.size &&
-                                    (0, _.jsx)("li", {
-                                      children: (0, _._)(
-                                        "#EventRepost_Dialog_Action_Add",
-                                        _.size,
-                                      ),
-                                    }),
-                                  !!_.size &&
-                                    (0, _.jsx)("li", {
-                                      children: (0, _._)(
-                                        "#EventRepost_Dialog_Action_Remove",
-                                        _.size,
-                                      ),
-                                    }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        !!_ &&
-                          (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                        !!_ &&
-                          (0, _.jsx)("div", {
-                            children: _,
-                          }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      children: (0, _.jsx)(_._, {
-                        onCancel: () => _.closeModal && _.closeModal(),
-                        strOKText: (0, _._)("#EventRepost_Dialog_OK"),
-                        bOKDisabled:
-                          (_.size == 0 && _.size == 0) ||
-                          _ !== null ||
-                          _ !== null,
-                        onOK: async () => {
-                          _.current && _.current();
-                          const _ = _().CancelToken.source();
-                          _.current = _.cancel;
-                          const _ = _.size + _.size;
-                          let _ = 1;
-                          _((0, _._)("#EventRepost_Dialog_Progress", _, _));
-                          for (const _ of Array.from(_)) {
-                            const _ = _._.InitFromClanID(_);
-                            if (
-                              await _.Get().RepostEvent(
-                                _.clanSteamID,
-                                _.GID,
-                                _,
-                                !0,
-                                _,
-                              )
-                            )
-                              _(
-                                (0, _._)(
-                                  "#EventRepost_Dialog_Progress",
-                                  ++_,
-                                  _,
-                                ),
-                              );
-                            else {
-                              _((0, _._)("#EventRepost_Dialog_ResultFail"));
-                              return;
-                            }
-                          }
-                          for (const _ of Array.from(_)) {
-                            const _ = _._.InitFromClanID(_);
-                            if (
-                              await _.Get().RepostEvent(
-                                _.clanSteamID,
-                                _.GID,
-                                _,
-                                !1,
-                                _,
-                              )
-                            )
-                              _(
-                                (0, _._)(
-                                  "#EventRepost_Dialog_Progress",
-                                  ++_,
-                                  _,
-                                ),
-                              );
-                            else {
-                              _((0, _._)("#EventRepost_Dialog_ResultFail"));
-                              return;
-                            }
-                          }
-                          _((0, _._)("#EventRepost_Dialog_ResultSuccess"));
-                        },
-                      }),
-                    }),
-                  ],
-                }),
-              }),
-            })
-          );
-        });
-        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -14916,22 +14483,16 @@ ${_}`;
             },
             [, _] = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = (_) => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_CommentMigrationInProcess",
-                  ),
-                }),
-                (0, _._)(_),
-              );
-            },
-            _ = (_) => {
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  eventModel: _,
-                }),
-                (0, _._)(_),
-              );
+              const _ = (0, _._)(_);
+              _ &&
+                (0, _._)(
+                  (0, _.jsx)(_._, {
+                    strDescription: (0, _._)(
+                      "#EventDisplay_Share_CommentMigrationInProcess",
+                    ),
+                  }),
+                  _,
+                );
             },
             [_, _, _, _] = (0, _._)(() => [
               (0, _._)(_.nVotesUp - _.nVotesDown, 0, Number.MAX_SAFE_INTEGER),
@@ -14939,8 +14500,7 @@ ${_}`;
               _.BIsUnlistedEvent(),
               _.nCommentCount,
             ]),
-            _ = (0, _._)(),
-            _ = _._.logged_in && _.Get().BCanRepostPartnerEvent();
+            _ = (0, _._)();
           return (0, _.jsx)(_, {
             nVoteCount: _,
             nCommentCount: _,
@@ -14949,22 +14509,6 @@ ${_}`;
             strDiscussionURL: _,
             onDiscussionUnavailable: _,
             bShowDiscussion: !_ && !_,
-            repost:
-              _ &&
-              (0, _.jsx)("div", {
-                className: _().VoteContainer,
-                children: (0, _.jsx)(_._, {
-                  focusable: !0,
-                  className: (0, _._)(
-                    _().Button,
-                    _().Icon,
-                    _().DiscussionButton,
-                    _ == "down" ? _().VoteButtonSelected : "",
-                  ),
-                  onActivate: _,
-                  children: (0, _._)("#EventRepost_Dialog_Title"),
-                }),
-              }),
             share:
               !_ &&
               (0, _.jsx)(_, {
@@ -18010,7 +17554,6 @@ ${_}`;
                           __webpack_require__._("chunkid"),
                           __webpack_require__._("chunkid"),
                           __webpack_require__._("chunkid"),
-                          __webpack_require__._("chunkid"),
                         ]).then(
                           __webpack_require__.bind(
                             __webpack_require__,
@@ -18322,6 +17865,183 @@ ${_}`;
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = _()("2026-11-23T09:30:00-08:00").unix(),
+          _ = _()("2026-11-30T10:00:00-08:00").unix();
+        function _() {
+          return 2025;
+        }
+        function _(_) {
+          return `${_._.MEDIA_CDN_URL}store/promo/${_}`;
+        }
+        const _ = "#173471",
+          _ = "#ee6c5d",
+          _ = "#FFFFFF";
+        function _() {
+          return {
+            strBackgroundColor: "red",
+            strBackgroundImageURL: _("steamawards2025/header_notrophy.webp"),
+            strTrophyImageURL: _("steamawards2025/trophy_220.png?v=1"),
+            strButtonColor: "blue",
+            strTextColor: "white",
+          };
+        }
+        function _() {
+          return `${_._.STORE_BASE_URL}steamawards/ajaxgetwidgetstyle`;
+        }
+        const _ = _()("2026-12-17T09:30:00-08:00").unix(),
+          _ = _()("2027-01-02T10:00:00-08:00").unix(),
+          _ = {
+            2023: 2640290,
+            2024: 3334340,
+            2025: 4147080,
+            2026: 5350740,
+          },
+          _ = 5350740,
+          _ = 2215130;
+        function _(_) {
+          switch (_) {
+            case 2023:
+            case 2024:
+            case 2025:
+              return !0;
+            case 2026:
+              return !1;
+          }
+          return !1;
+        }
+        function _(_) {
+          return _ >= _ && _ < _;
+        }
+        function _(_, _) {
+          return (
+            _.BIsEventActionEnabled(_) || _ < _.GetStartTimeAndDateUnixSeconds()
+          );
+        }
+        function _(_) {
+          return _ >= _;
+        }
+        function _(_, _, _, _) {
+          const _ = _(_, _),
+            _ = _(_, _);
+          if (!(!_.length && !_.length))
+            return {
+              nomination: _.length
+                ? {
+                    rgCategories: _,
+                    bNominationsLive: _,
+                  }
+                : void 0,
+              vote: _.length
+                ? {
+                    rgCategories: _,
+                    bNominationsLive: _,
+                  }
+                : void 0,
+            };
+        }
+        function _(_) {
+          return _ >= _ && _ < _;
+        }
+        function _(_) {
+          return _ >= _;
+        }
+        function _(_) {
+          return _ > 0;
+        }
+        function _(_, _) {
+          const _ = [];
+          for (const _ of _.filter(_)) {
+            const _ = _.find((_) => _.voteid == _);
+            _?.localization?.title &&
+              _.push({
+                eCategoryID: _,
+                strTitle: _.localization.title,
+                strDescription: _.localization.award_description ?? "",
+                bLaborOfLove: _.flag == _._._,
+              });
+          }
+          return _;
+        }
+        function _(_) {
+          return ["SteamAwards.GetUserNominations", _];
+        }
+        function _(_) {
+          return ["StoreSales.GetUserVotes", _, _];
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = _(_._.accountid),
+            { data: _, isPending: _ } = (0, _._)({
+              queryKey: _,
+              queryFn: async () => await _.GetMySteamAwardNominations(),
+              enabled: !!_._.accountid,
+            }),
+            { mutate: _ } = (0, _._)({
+              mutationFn: async (_) => {
+                const _ = await _.NominateForSteamAward(_, _);
+                if (_ != _._)
+                  throw new Error(
+                    `SteamAwards.Nominate failed with ${_} for ${_} and appid ${_}`,
+                  );
+              },
+              onMutate: (_) =>
+                _.setQueryData(_, (_) => [
+                  ...(_ ?? []).filter((_) => _.category_id != _),
+                  {
+                    category_id: _,
+                    appid: _,
+                  },
+                ]),
+              onError: () =>
+                _.invalidateQueries({
+                  queryKey: _,
+                }),
+            });
+          return {
+            unNominatedAppID: _?.find((_) => _.category_id == _)?.appid,
+            bAnswered: _ != null || !_._.accountid || !_,
+            Nominate: _,
+          };
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = _(_._.accountid),
+            { data: _, isPending: _ } = (0, _._)({
+              queryKey: _,
+              queryFn: async () => await _.GetMySteamAwardVotes(),
+              enabled: !!_._.accountid,
+            }),
+            { mutate: _ } = (0, _._)({
+              mutationFn: async (_) => {
+                const _ = await _.SetSteamAwardVote(_, _);
+                if (_ != _._)
+                  throw new Error(`StoreSales.SetVote failed with ${_}`);
+              },
+              onMutate: (_) =>
+                _.setQueryData(_, (_) => [
+                  ...(_ ?? []).filter((_) => _.voteid != _),
+                  {
+                    voteid: _,
+                    appid: _,
+                  },
+                ]),
+              onError: () =>
+                _.invalidateQueries({
+                  queryKey: _,
+                }),
+            });
+          return {
+            unVotedAppID: _?.find((_) => _.voteid == _)?.appid,
+            bAnswered: _ != null || !_._.accountid || !_,
+            Vote: _,
+          };
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -18331,8 +18051,15 @@ ${_}`;
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = _.createContext(void 0);
         function _(_) {
-          return `${_._.MEDIA_CDN_URL}${_._}${_}`;
+          return (0, _.jsx)(_.Provider, {
+            value: _.widgetStyle,
+            children: _.children,
+          });
+        }
+        function _() {
+          return _.useContext(_) ?? _();
         }
         function _(_) {
           const {
@@ -18343,10 +18070,11 @@ ${_}`;
               children: _,
               footer: _,
             } = _,
+            _ = _(),
             _ = {
-              backgroundColor: _._,
-              backgroundImage: `url( ${_("header_notrophy.webp")} )`,
-              color: _._,
+              backgroundColor: _.strBackgroundColor,
+              backgroundImage: `url( ${_.strBackgroundImageURL} )`,
+              color: _.strTextColor,
             };
           return (0, _.jsxs)("div", {
             style: _,
@@ -18357,7 +18085,7 @@ ${_}`;
                 children: [
                   (0, _.jsx)("img", {
                     className: _().SteamAwardHeaderImage,
-                    src: _("trophy_220.png?v=1"),
+                    src: _.strTrophyImageURL,
                     alt: "",
                   }),
                   (0, _.jsxs)("div", {
@@ -18523,8 +18251,9 @@ ${_}`;
               unNominatedAppID: _,
               bAnswered: _,
               Nominate: _,
-            } = (0, _._)(_.eCategoryID, _),
+            } = _(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!1),
+            { strButtonColor: _ } = _(),
             [_, _, _] = (0, _._)();
           if (!_.bNominationsLive) return null;
           if (!_) return (0, _.jsx)(_, {});
@@ -18548,10 +18277,7 @@ ${_}`;
               children: [
                 _
                   ? _._.Localize("#SteamAwards_EventCallToAction")
-                  : _._.Localize(
-                      "#SteamAwards_EventVotingDateTeaser",
-                      (0, _._)(),
-                    ),
+                  : _._.Localize("#SteamAwards_EventVotingDateTeaser", _()),
                 _ &&
                   (0, _.jsxs)("a", {
                     href: _,
@@ -18599,7 +18325,7 @@ ${_}`;
                     children: [
                       (0, _.jsx)("div", {
                         style: {
-                          background: _._,
+                          background: _,
                         },
                         className: (0, _._)(
                           _().SteamAwardNominateButton,
@@ -18702,12 +18428,9 @@ ${_}`;
               bVotesOpen: _,
               bHideDescription: _,
             } = _,
-            {
-              unVotedAppID: _,
-              bAnswered: _,
-              Vote: _,
-            } = (0, _._)(_.eCategoryID, _),
+            { unVotedAppID: _, bAnswered: _, Vote: _ } = _(_.eCategoryID, _),
             { elDialogElement: _, BCanTakeAction: _ } = _(!0),
+            { strButtonColor: _ } = _(),
             [_, _, _] = (0, _._)(),
             _ = _ == _;
           if (!_ && !_) return null;
@@ -18722,7 +18445,7 @@ ${_}`;
           };
           return (0, _.jsxs)("div", {
             style: {
-              backgroundColor: _._,
+              backgroundColor: _,
             },
             className: _().SteamAwardVoteWidget,
             children: [
@@ -18779,7 +18502,7 @@ ${_}`;
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -18825,10 +18548,10 @@ ${_}`;
                 const [_] = await (0, _._)(_, _, _, _._._);
                 return _;
               },
-              GetMySteamAwardVotes: () => (0, _._)(_, _._),
+              GetMySteamAwardVotes: () => (0, _._)(_, _),
               SetSteamAwardVote: async (_, _) => {
                 if (_) return _._;
-                const [_] = await (0, _._)(_, _, _, _._);
+                const [_] = await (0, _._)(_, _, _, _);
                 return _;
               },
             }),
@@ -18837,12 +18560,12 @@ ${_}`;
         }
         const _ = [];
         function _(_, _, _) {
-          const _ = _.some(_._) || _.some(_._),
-            _ = (0, _._)(_ ? _._ : void 0);
+          const _ = _.some(_) || _.some(_),
+            _ = (0, _._)(_ ? _ : void 0);
           return _
             ? _.data
               ? {
-                  widgets: (0, _._)(_.data.votes ?? [], _, _, _),
+                  widgets: _(_.data.votes ?? [], _, _, _),
                   bLoading: !1,
                 }
               : {
@@ -18851,6 +18574,24 @@ ${_}`;
             : {
                 bLoading: !1,
               };
+        }
+        function _(_) {
+          const { data: _, isPending: _ } = (0, _._)({
+            queryKey: ["SteamAwards.WidgetStyle"],
+            queryFn: async () =>
+              (
+                await _().get(_(), {
+                  withCredentials: !1,
+                })
+              ).data,
+            enabled: _,
+            staleTime: 1 / 0,
+            retry: !1,
+          });
+          return {
+            widgetStyle: _,
+            bLoading: _ && _,
+          };
         }
         function _(_, _) {
           return _
@@ -18867,19 +18608,23 @@ ${_}`;
           const { event: _, previewMode: _ } = _,
             [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
             _ = (0, _._)(),
+            _ = _(_, _),
             { widgets: _, bLoading: _ } = _([_], _, _),
+            { widgetStyle: _, bLoading: _ } = _(!!_?.nomination),
             _ = _(_(_));
-          if (_) return (0, _.jsx)(_, {});
-          if (!_?.nomination) return null;
-          const _ =
-            _.BIsEventActionEnabled(_) ||
-            _ < _.GetStartTimeAndDateUnixSeconds();
-          return (0, _.jsx)(_, {
-            unAppID: _,
-            actions: _,
-            widget: _(_.nomination, !!_),
-            bNominationsOpen: _,
-          });
+          return _ || _
+            ? (0, _.jsx)(_, {})
+            : _?.nomination
+              ? (0, _.jsx)(_, {
+                  widgetStyle: _,
+                  children: (0, _.jsx)(_, {
+                    unAppID: _,
+                    actions: _,
+                    widget: _(_.nomination, !!_),
+                    bNominationsOpen: _,
+                  }),
+                })
+              : null;
         }
         function _(_) {
           const {
@@ -18889,18 +18634,21 @@ ${_}`;
               previewMode: _,
               bRenderFromStorePage: _,
             } = _,
-            _ = (0, _._)(),
-            { widgets: _, bLoading: _ } = _(_, _ ?? _, _),
+            { widgets: _, bLoading: _ } = _(_, _ ?? _, !1),
+            { widgetStyle: _, bLoading: _ } = _(!!_?.vote),
             _ = _(_(_));
-          return _
+          return _ || _
             ? (0, _.jsx)(_, {})
             : _?.vote
               ? (0, _.jsx)(_, {
-                  unAppID: _,
-                  widget: _.vote,
-                  actions: _,
-                  bVotesOpen: _ || !!_,
-                  bHideCategoryDescriptions: _,
+                  widgetStyle: _,
+                  children: (0, _.jsx)(_, {
+                    unAppID: _,
+                    widget: _.vote,
+                    actions: _,
+                    bVotesOpen: _ || !!_,
+                    bHideCategoryDescriptions: _,
+                  }),
                 })
               : null;
         }
@@ -19599,18 +19347,6 @@ ${_}`;
           CloseButton: "_2dgOJd4j8-hJA92PrLWqZT",
           VideoPopupContainers: "_1_L84gO810flUzqiuUkG7H",
           VideoLarge: "_3AL75Io6tlvBgexvKuaPG0",
-          BackgroundAnimation: "_2YqbTh9tmcEZ5Jnz39bkD9",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2Z_byUU724LC7VmBpwzXvB",
-          "ItemFocusAnim-darkerGrey": "_79YB3jhA36yeyMiLstJi",
-          "ItemFocusAnim-darkGreySettings": "_1lSn5OE1oc5-oQjPkjBIYj",
-          "ItemFocusAnim-darkGrey": "CFIUukdHjcI69ga9Z8nTA",
-          "ItemFocusAnim-grey": "_3rAbB1f0HQs0x4Hqa5CdEA",
-          "ItemFocusAnim-translucent-white-10": "_9gKqKsdvXOoawIPGtFkRF",
-          "ItemFocusAnim-translucent-white-20": "_3zG2IKWY48X67SEt1vSIhf",
-          "ItemFocusAnimBorder-darkGrey": "_1etJfunIGxvr5ni3LVgo74",
-          "ItemFocusAnim-green": "_2y66jXVD5R6zd5LqMTWYVl",
-          focusAnimation: "rfbikUhNdMJp8YaaOMaCW",
-          hoverAnimation: "_2kGcR5txA30fIqTtD8sBNS",
         };
       },
       chunkid: (module) => {
@@ -19693,18 +19429,6 @@ ${_}`;
           PostedBy: "_2VqeQaZVaUkkEWaiLkmqmT",
           ReminderContainer: "_3Vf2MkZ_LWIoNVv36RwJtO",
           ReadMoreCnt: "_1YmaiDiNhC33cL5DKj05KQ",
-          BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
-          "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
-          "ItemFocusAnim-darkGreySettings": "AcW48fP-EnfyD8bO6anBj",
-          "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
-          "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
-          "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
-          "ItemFocusAnim-translucent-white-20": "_1UaaS_yXA7SqNdxVDXCD9W",
-          "ItemFocusAnimBorder-darkGrey": "_1V7Z378RTDEmk3dXXGXsQa",
-          "ItemFocusAnim-green": "_2ldXxMP_HINQZvEbjgDdbf",
-          focusAnimation: "_3zr66n761wV-ZHFKw_Yvbn",
-          hoverAnimation: "_1MvZ2haWg8XTcl8VHKnoS0",
         };
       },
       chunkid: (module) => {

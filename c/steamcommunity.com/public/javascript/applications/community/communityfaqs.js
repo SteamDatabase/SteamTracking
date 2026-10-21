@@ -201,20 +201,11 @@
         const _ = "title",
           _ = "content";
         function _(_, _) {
-          var _, _;
           let _ = new _._();
           for (let _ = _.Bhc; _ < _.bP9; ++_)
             (_.BHasSomeTextForLanguage(_) || _.Bhc == _) &&
-              (_.SetLocalization(
-                _,
-                _,
-                (_ = _.GetDraftTitle(_)) != null ? _ : "",
-              ),
-              _.SetLocalization(
-                _,
-                _,
-                (_ = _.GetDraftContent(_)) != null ? _ : "",
-              ));
+              (_.SetLocalization(_, _, _.GetDraftTitle(_) ?? ""),
+              _.SetLocalization(_, _, _.GetDraftContent(_) ?? ""));
           return _;
         }
         function _(_, _, _) {
@@ -464,23 +455,21 @@
                 (0, _.jsx)("div", {
                   className: _.ChecklistRows,
                   children:
-                    _ != null
-                      ? _
-                      : (0, _.jsx)("div", {
-                          children: (0, _._)("#FAQCrowdin_NoDraftFound"),
-                        }),
+                    _ ??
+                    (0, _.jsx)("div", {
+                      children: (0, _._)("#FAQCrowdin_NoDraftFound"),
+                    }),
                 }),
               ],
             });
           },
           _ = (_) => {
-            var _;
             const { draft: _, eLang: _, bInitialState: _, fnOnChecked: _ } = _,
               _ = _.GetLastSavedDraftVersion(_),
               _ = _
                 ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
                 : null,
-              { data: _ } = (0, _._)(_ == null ? void 0 : _.GetAccountID()),
+              { data: _ } = (0, _._)(_?.GetAccountID()),
               _ = _
                 ? (0, _._)(
                     "#FAQCrowdin_SavedAtTimeByAuthor",
@@ -489,9 +478,7 @@
                       (0, _._)(_.timestamp, {
                         bForce24HourClock: !1,
                       }),
-                    (_ = _ == null ? void 0 : _.m_strPlayerName) != null
-                      ? _
-                      : _.author_account_id,
+                    _?.m_strPlayerName ?? _.author_account_id,
                   )
                 : (0, _._)("#FAQCrowdin_NoDraftFound"),
               _ = (0, _.jsxs)("div", {
@@ -550,7 +537,7 @@
               for (let _ = 0; _ < _.current.length; _++) {
                 const _ = _[_],
                   _ = _.current[_];
-                if ((_ == null ? void 0 : _.length) > 0) {
+                if (_?.length > 0) {
                   _(_);
                   const _ = await _._.Get().PublishDraftByLanguage(_.faq_id, _);
                   if (_.token.reason) return;
@@ -720,8 +707,9 @@
             const [_, _] = (0, _._)(),
               [_, _] = _.useState(1),
               _ = _.map((_) => {
-                const _ = _.per_language_info.find((_) => _.language == _.Bhc),
-                  _ = (_ == null ? void 0 : _.last_update_timestamp) || 0,
+                const _ =
+                    _.per_language_info.find((_) => _.language == _.Bhc)
+                      ?.last_update_timestamp || 0,
                   _ = Array.from(
                     _.per_language_info.filter(
                       (_) =>
@@ -1033,36 +1021,28 @@
           _ = (_) => {
             _.useEffect(
               () => (
-                (window.onbeforeunload = () => {
-                  var _;
-                  const _ = _._.Get().GetLoadedDraftObjs();
-                  return ((_ =
-                    _ == null ? void 0 : _.filter((_) => _.BNeedsSaving())) ==
-                  null
-                    ? void 0
-                    : _.length) > 0
+                (window.onbeforeunload = () =>
+                  _._.Get()
+                    .GetLoadedDraftObjs()
+                    ?.filter((_) => _.BNeedsSaving())?.length > 0
                     ? (0, _._)("#EventEditor_UnsavedChanges")
-                    : null;
-                }),
+                    : null),
                 () => {
                   window.onbeforeunload = () => {};
                 }
               ),
               [],
             );
-            const _ = (_) => {
-              var _, _;
-              const _ = _._.Get().GetLoadedDraftObjs();
-              return ((_ =
-                _ == null ? void 0 : _.filter((_) => _.BNeedsSaving())) == null
-                ? void 0
-                : _.length) > 0 &&
-                (_.pathname == _.DashboardFAQ(_._.VANITY_ID) ||
-                  ((_ = _.pathname) != null &&
-                    _.startsWith(_.ViewFAQ(_._.VANITY_ID, "").slice(0, -1))))
+            const _ = (_) =>
+              _._.Get()
+                .GetLoadedDraftObjs()
+                ?.filter((_) => _.BNeedsSaving())?.length > 0 &&
+              (_.pathname == _.DashboardFAQ(_._.VANITY_ID) ||
+                _.pathname?.startsWith(
+                  _.ViewFAQ(_._.VANITY_ID, "").slice(0, -1),
+                ))
                 ? (0, _._)("#EventEditor_UnsavedChanges")
                 : !0;
-            };
             return (0, _.jsx)(_._, {
               message: _,
             });
@@ -1203,7 +1183,6 @@
             });
           }),
           _ = (_) => {
-            var _;
             const { draft: _ } = _,
               _ = () => _.closeModal && _.closeModal(),
               [_, _] = _.useState(!1),
@@ -1241,12 +1220,11 @@
                 children: (0, _._)("#FAQPublish_LoadError"),
               });
             else {
-              const _ =
-                (_ = _.per_language_info) == null
-                  ? void 0
-                  : _.filter(
-                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
-                    ).map((_) => _.language);
+              const _ = _.per_language_info
+                ?.filter(
+                  (_) => _.last_publish_timestamp < _.last_update_timestamp,
+                )
+                .map((_) => _.language);
               _ = (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("div", {
@@ -1429,42 +1407,29 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = (0, _._)((_) => {
-            var _, _, _, _, _;
             const { draft: _, eLanguage: _ } = _,
               _ = _.GetFAQID(),
               [_, _] = (0, _._)(_);
             if (!_) return null;
-            const _ =
-                (_ =
-                  (_ = _ == null ? void 0 : _.per_language_info) == null
-                    ? void 0
-                    : _.find((_) => _.language == _.Bhc)) == null
-                  ? void 0
-                  : _.last_update_timestamp,
-              _ =
-                (_ = _ == null ? void 0 : _.per_language_info) == null
-                  ? void 0
-                  : _.some(
-                      (_) => _.last_publish_timestamp < _.last_update_timestamp,
-                    ),
-              _ =
-                (_ =
-                  (_ = _ == null ? void 0 : _.per_language_info) == null
-                    ? void 0
-                    : _.slice().sort(
-                        (_, _) => _[_.language] - _[_.language],
-                      )) == null
-                  ? void 0
-                  : _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          info: _,
-                          rtEnglishUpdateTime: _,
-                        },
-                        _.language,
-                      ),
-                    );
+            const _ = _?.per_language_info?.find(
+                (_) => _.language == _.Bhc,
+              )?.last_update_timestamp,
+              _ = _?.per_language_info?.some(
+                (_) => _.last_publish_timestamp < _.last_update_timestamp,
+              ),
+              _ = _?.per_language_info
+                ?.slice()
+                .sort((_, _) => _[_.language] - _[_.language])
+                ?.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      info: _,
+                      rtEnglishUpdateTime: _,
+                    },
+                    _.language,
+                  ),
+                );
             return (0, _.jsx)(_._, {
               children: (0, _.jsxs)("div", {
                 className: _.LeftMenu,
@@ -2057,7 +2022,7 @@
                   _.visible_in_global_realm) ||
                   (_._.EREALM == _._.k_ESteamRealmChina &&
                     _.visible_in_china_realm)) &&
-                !!(_ != null && _.last_publish_timestamp);
+                !!_?.last_publish_timestamp;
             return (0, _.jsx)(_._, {
               children: (0, _.jsx)("div", {
                 className: (0, _._)(_().SaveBackground),
@@ -2171,8 +2136,7 @@
                     appid: void 0,
                     clanSteamID: _,
                     imageInsertCallBack: (_, _) =>
-                      _.current &&
-                      (0, _._)(_ == null ? void 0 : _.current, _, _),
+                      _.current && (0, _._)(_?.current, _, _),
                     fnSetImageURL: () => {},
                     rgRealmList: _.GetIncludedRealmList(),
                     fnLangHasData: _.BHasSomeTextForLanguage,
@@ -2263,23 +2227,14 @@
               _ = (0, _._)();
             return (
               _.useEffect(() => {
-                var _, _, _;
-                const _ =
-                  (_ = _ == null ? void 0 : _.hash) == null
-                    ? void 0
-                    : _.substr(
-                        ((_ = _ == null ? void 0 : _.hash) == null
-                          ? void 0
-                          : _.substr(0, 1)) === "#"
-                          ? 1
-                          : 0,
-                      );
+                const _ = _?.hash?.substr(
+                  _?.hash?.substr(0, 1) === "#" ? 1 : 0,
+                );
                 _ &&
-                  ((_ = document.getElementById(_)) == null ||
-                    _.scrollIntoView({
-                      block: "start",
-                      behavior: "smooth",
-                    }));
+                  document.getElementById(_)?.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                  });
               }, [_]),
               (0, _.jsxs)("div", {
                 className: (0, _._)(_.FAQViewPage, _._.LANGUAGE),
@@ -2356,7 +2311,7 @@
                       className: _.InfoRow,
                       children: (0, _._)(
                         "#FAQViewer_Admin_LastUpdate",
-                        _ != null && _.author_account_id
+                        _?.author_account_id
                           ? (0, _.jsx)(_._, {
                               accountID: Number.parseInt(_.author_account_id),
                             })
@@ -2535,11 +2490,10 @@
             });
           },
           _ = (_) => {
-            var _;
             const _ =
               _._.COMMUNITY_BASE_URL +
               (_._.APPID
-                ? "app/" + ((_ = _._.VANITY_ID) != null ? _ : _._.APPID)
+                ? "app/" + (_._.VANITY_ID ?? _._.APPID)
                 : "gid/" + _._.CLANSTEAMID);
             return (0, _.jsxs)("div", {
               className: _().ErrorCtn,
@@ -2700,7 +2654,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const { editModel: _ } = _,
             [_, _] = _.useState(_.xPp),
             [_, _] = _.useState(!1),
@@ -2719,10 +2672,8 @@
             [, _] = _.useReducer((_) => _ + 1, 0),
             _ =
               _.isSuccess &&
-              (_ = _.data) != null &&
-              _.crowdin_project_id &&
-              (_ = _.data) != null &&
-              _.crowdin_file_id
+              _.data?.crowdin_project_id &&
+              _.data?.crowdin_file_id
                 ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
                 : null,
             _ = (_) => {
@@ -3183,22 +3134,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_mapTokens", new Map());
-          }
+          m_mapTokens = new Map();
           GetLocalization(_, _) {
             const _ = this.m_mapTokens.get(_);
             if (!(!_ || !_[_])) return _[_];
@@ -3252,34 +3190,18 @@
         }
         class _ {
           DetectAndFormatCSV(_) {
-            var _, _, _, _, _, _;
             let _ = null;
             return (
-              ((_ =
-                (_ = _ == null ? void 0 : _.meta) == null
-                  ? void 0
-                  : _.fields) == null
-                ? void 0
-                : _.length) >= 3 &&
+              _?.meta?.fields?.length >= 3 &&
               _.meta.fields[0] === "field" &&
               _.meta.fields[1] === "language" &&
               _.meta.fields[2] === "value"
                 ? (_ = this.ReadLocalizationData_CSV_TokenLanguageList(_))
-                : ((_ =
-                      (_ = _ == null ? void 0 : _.meta) == null
-                        ? void 0
-                        : _.fields) == null
-                      ? void 0
-                      : _.length) >= 2 &&
+                : _?.meta?.fields?.length >= 2 &&
                     _.meta.fields[0] === "field" &&
                     (0, _.sfN)(_.meta.fields[1], _.xPp) != _.xPp
                   ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
-                  : ((_ =
-                      (_ = _ == null ? void 0 : _.meta) == null
-                        ? void 0
-                        : _.fields) == null
-                      ? void 0
-                      : _.length) >= 2 &&
+                  : _?.meta?.fields?.length >= 2 &&
                     _.meta.fields[0] === "language" &&
                     (_ = this.ReadLocalizationData_CSV_LanguageRows(_)),
               _
@@ -3585,9 +3507,9 @@
             _ !== void 0 && (_.exports = _);
         })(this, function _() {
           var _ =
-              typeof self != "undefined"
+              typeof self < "u"
                 ? self
-                : typeof window != "undefined"
+                : typeof window < "u"
                   ? window
                   : _ !== void 0
                     ? _
@@ -3776,7 +3698,7 @@
               _.call(this, _);
             var _,
               _,
-              _ = typeof FileReader != "undefined";
+              _ = typeof FileReader < "u";
             (this.stream = function (_) {
               (this._input = _),
                 (_ = _.slice || _.webkitSlice || _.mozSlice),

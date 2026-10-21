@@ -1806,7 +1806,7 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
-        const _ = "localhost",
+        const _ = "127.0.0.1",
           _ = new _._("WebUITransport");
         class _ {
           m_iMsgSeq = 1;

@@ -40,15 +40,6 @@
           ))(_ || {}),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -57,8 +48,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = "23B7-49AD-4A28-9590";
         function _(_, _) {
           switch (_) {
@@ -77,27 +67,27 @@
         }
         class _ {
           constructor() {
-            _(this, "m_rgAppsWithBackgroundVideo", []),
-              _(this, "m_mapTimelineLoaders", new Map()),
-              _(this, "m_mapClipLoaders", new Map()),
-              _(this, "m_mapSharedClipLoaders", new Map()),
-              _(this, "m_mapActiveTimelines", new Map()),
-              _(this, "m_mapManualRecordingCallbacks", new Map()),
-              _(this, "m_fnGetAchievementInfo"),
-              _(this, "m_strLastClipID"),
-              _(this, "m_bEnableH265Recording", !1),
-              _(this, "m_transport"),
-              _(this, "m_bLoadingClips", !0),
-              _(this, "m_bLoadingAppsWithBackgroundVideo", !0),
-              _(this, "m_bClipLoadingTriggered", !1),
-              _(this, "m_clips", new Map()),
-              _(this, "m_clipsGroupByGame", new Map()),
-              _(this, "m_clipExportProgress", new Map()),
-              _(this, "m_currentlyExportingClip", null),
-              _(this, "m_recordingState", null),
-              _(this, "m_bEnoughDiskSpace", !1),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_rgAppsWithBackgroundVideo = [];
+          m_mapTimelineLoaders = new Map();
+          m_mapClipLoaders = new Map();
+          m_mapSharedClipLoaders = new Map();
+          m_mapActiveTimelines = new Map();
+          m_mapManualRecordingCallbacks = new Map();
+          m_fnGetAchievementInfo;
+          m_strLastClipID;
+          m_bEnableH265Recording = !1;
+          m_transport;
+          m_bLoadingClips = !0;
+          m_bLoadingAppsWithBackgroundVideo = !0;
+          m_bClipLoadingTriggered = !1;
+          m_clips = new Map();
+          m_clipsGroupByGame = new Map();
+          m_clipExportProgress = new Map();
+          m_currentlyExportingClip = null;
+          m_recordingState = null;
+          m_bEnoughDiskSpace = !1;
           async Init(_, _) {
             (this.m_transport = _),
               (this.m_fnGetAchievementInfo = _),
@@ -121,15 +111,13 @@
                 await this.UpdateState());
           }
           async UpdateState() {
-            var _;
             const _ = await _._.GetState({});
             if (!_.BSuccess()) {
               console.warn("Failed to initialize game recording state");
               return;
             }
             const _ = _.Body().toObject();
-            this.m_bEnableH265Recording =
-              (_ = _ == null ? void 0 : _.is_h265_enabled) != null ? _ : !1;
+            this.m_bEnableH265Recording = _?.is_h265_enabled ?? !1;
           }
           OnStateChanged() {
             return this.UpdateState(), _._;
@@ -550,14 +538,12 @@
             return this.m_bLoadingAppsWithBackgroundVideo;
           }
           GetClipIDs(_) {
-            var _;
             if ((this.LazyLoadClips(), _)) {
               const _ = new _._(_);
               return (
-                ((_ = this.m_clipsGroupByGame.get(_.ConvertTo64BitString())) ==
-                null
-                  ? void 0
-                  : _.map((_) => _.clip_id)) || []
+                this.m_clipsGroupByGame
+                  .get(_.ConvertTo64BitString())
+                  ?.map((_) => _.clip_id) || []
               );
             }
             const _ = [];
@@ -682,10 +668,7 @@
               .thumbnails();
           }
           GetAchievementInfo(_, _) {
-            var _;
-            return (_ = this.m_fnGetAchievementInfo) == null
-              ? void 0
-              : _.call(this, _, _);
+            return this.m_fnGetAchievementInfo?.(_, _);
           }
           GetLastClip() {
             if (this.m_strLastClipID)

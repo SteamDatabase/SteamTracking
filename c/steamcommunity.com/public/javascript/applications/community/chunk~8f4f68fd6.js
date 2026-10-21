@@ -4,48 +4,48 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
         });
-        const __webpack_require__ = null,
-          __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2;
+        const _ = null,
+          _ = 0,
+          _ = 1,
+          _ = 2;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        const __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 5,
-          __webpack_require__ = 6,
-          __webpack_require__ = 7,
-          __webpack_require__ = 8,
-          __webpack_require__ = 9,
-          __webpack_require__ = 10,
-          __webpack_require__ = 11,
-          __webpack_require__ = 12,
-          __webpack_require__ = 13,
-          __webpack_require__ = 14,
-          __webpack_require__ = 15,
-          __webpack_require__ = 16,
-          __webpack_require__ = 17,
-          __webpack_require__ = 18,
-          __webpack_require__ = 19,
-          __webpack_require__ = 20,
-          __webpack_require__ = 21;
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 14,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 20,
+          _ = 21;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -55,9 +55,9 @@
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
             _: () => _,
@@ -86,60 +86,48 @@
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
           });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 5,
-          __webpack_require__ = 6,
-          __webpack_require__ = 7,
-          __webpack_require__ = 8,
-          __webpack_require__ = 9,
-          __webpack_require__ = 10,
-          __webpack_require__ = 11,
-          __webpack_require__ = 12,
-          __webpack_require__ = 13,
-          __webpack_require__ = 14,
-          __webpack_require__ = 15,
-          __webpack_require__ = 16,
-          __webpack_require__ = 17,
-          __webpack_require__ = 18,
-          __webpack_require__ = 19,
-          __webpack_require__ = 20,
-          __webpack_require__ = 21,
-          __webpack_require__ = 22,
-          __webpack_require__ = 23,
-          __webpack_require__ = 24,
-          __webpack_require__ = 25,
-          __webpack_require__ = 26,
-          __webpack_require__ = 27,
-          __webpack_require__ = 28,
-          __webpack_require__ = 29,
-          __webpack_require__ = 30,
-          __webpack_require__ = 0,
-          __webpack_require__ = 1;
-        var __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 14,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 20,
+          _ = 21,
+          _ = 22,
+          _ = 23,
+          _ = 24,
+          _ = 25,
+          _ = 26,
+          _ = 27,
+          _ = 28,
+          _ = 29,
+          _ = 30,
+          _ = 0,
+          _ = 1;
         function _(_) {
           return "unknown ESteamNotificationType ( " + _ + " )";
         }
@@ -149,13 +137,15 @@
         function _(_) {
           return "unknown ESteamNotificationTargetClientType ( " + _ + " )";
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notification_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -248,16 +238,16 @@
           getClassName() {
             return "SteamNotificationData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_hidden || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -341,16 +331,16 @@
           getClassName() {
             return "CSteamNotification_GetSteamNotifications_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notifications || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -429,16 +419,16 @@
           getClassName() {
             return "CSteamNotification_GetSteamNotifications_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -509,16 +499,16 @@
           getClassName() {
             return "CSteamNotification_MarkNotificationsRead_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.remote_client_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -576,16 +566,16 @@
           getClassName() {
             return "CSteamNotification_MarkNotificationsViewed_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notification_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -643,16 +633,16 @@
           getClassName() {
             return "SteamNotificationPreference";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -706,9 +696,7 @@
           getClassName() {
             return "CSteamNotification_SetPreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -791,13 +779,15 @@
             return "CSteamNotification_GetPreferences_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -851,16 +841,16 @@
           getClassName() {
             return "CSteamNotification_GetPreferences_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notification_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -916,16 +906,16 @@
           getClassName() {
             return "CSteamNotification_HideNotification_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notifications || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -994,16 +984,16 @@
           getClassName() {
             return "CSteamNotification_NotificationsReceived_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1057,10 +1047,8 @@
           getClassName() {
             return "CSteamNotification_PreferencesUpdated_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        var __webpack_require__;
+        }
+        var _;
         ((_) => {
           function _(_, _, _) {
             return _.SendMsg(
@@ -1070,7 +1058,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -1081,7 +1069,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -1092,7 +1080,7 @@
               (0, _._)(_, _),
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -1134,7 +1122,7 @@
           }
           _.GetPreferences = _;
         })(_ || (_ = {}));
-        var __webpack_require__;
+        var _;
         ((_) => {
           (_.NotificationsReceivedHandler = {
             name: "SteamNotificationClient.NotificationsReceived#1",
@@ -1148,7 +1136,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -1171,73 +1159,61 @@
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 5,
-          __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 6,
-          __webpack_require__ = 7,
-          __webpack_require__ = 8,
-          __webpack_require__ = 9,
-          __webpack_require__ = 10,
-          __webpack_require__ = 11,
-          __webpack_require__ = 12,
-          __webpack_require__ = 13,
-          __webpack_require__ = 15,
-          __webpack_require__ = 16,
-          __webpack_require__ = 17,
-          __webpack_require__ = 18,
-          __webpack_require__ = 19,
-          __webpack_require__ = 20,
-          __webpack_require__ = 21,
-          __webpack_require__ = 22,
-          __webpack_require__ = 23,
-          __webpack_require__ = 24,
-          __webpack_require__ = 25,
-          __webpack_require__ = 26,
-          __webpack_require__ = 27,
-          __webpack_require__ = 28,
-          __webpack_require__ = 29,
-          __webpack_require__ = 30;
-        var __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 20,
+          _ = 21,
+          _ = 22,
+          _ = 23,
+          _ = 24,
+          _ = 25,
+          _ = 26,
+          _ = 27,
+          _ = 28,
+          _ = 29,
+          _ = 30;
         function _(_) {
           return "unknown EFamilyGroupRole ( " + _ + " )";
         }
@@ -1256,13 +1232,15 @@
         function _(_) {
           return "unknown ESharedLibraryExcludeReason ( " + _ + " )";
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1320,16 +1298,16 @@
           getClassName() {
             return "CFamilyGroups_CreateFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1387,16 +1365,16 @@
           getClassName() {
             return "CFamilyGroups_CreateFamilyGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1454,16 +1432,16 @@
           getClassName() {
             return "CFamilyGroups_GetFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1531,16 +1509,16 @@
           getClassName() {
             return "FamilyGroupMember";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1598,16 +1576,16 @@
           getClassName() {
             return "FamilyGroupPendingInvite";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1660,16 +1638,16 @@
           getClassName() {
             return "FamilyGroupFormerMember";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1760,16 +1738,16 @@
           getClassName() {
             return "CFamilyGroups_GetFamilyGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1842,16 +1820,16 @@
           getClassName() {
             return "FamilyGroupPendingInviteForUser";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1909,16 +1887,16 @@
           getClassName() {
             return "CFamilyGroups_GetFamilyGroupForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1991,16 +1969,16 @@
           getClassName() {
             return "FamilyGroupMembership";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2099,16 +2077,16 @@
           getClassName() {
             return "CFamilyGroups_GetFamilyGroupForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2166,9 +2144,7 @@
           getClassName() {
             return "CFamilyGroups_ModifyFamilyGroupDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2210,13 +2186,15 @@
             return "CFamilyGroups_ModifyFamilyGroupDetails_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2279,16 +2257,16 @@
           getClassName() {
             return "CFamilyGroups_InviteToFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2346,16 +2324,16 @@
           getClassName() {
             return "CFamilyGroups_InviteToFamilyGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2413,16 +2391,16 @@
           getClassName() {
             return "CFamilyGroups_JoinFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.two_factor_method || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2490,16 +2468,16 @@
           getClassName() {
             return "CFamilyGroups_JoinFamilyGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2557,9 +2535,7 @@
           getClassName() {
             return "CFamilyGroups_RemoveFromFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2601,13 +2577,15 @@
             return "CFamilyGroups_RemoveFromFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2665,9 +2643,7 @@
           getClassName() {
             return "CFamilyGroups_CancelFamilyGroupInvite_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2709,13 +2685,15 @@
             return "CFamilyGroups_CancelFamilyGroupInvite_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2768,9 +2746,7 @@
           getClassName() {
             return "CFamilyGroups_DeleteFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2812,13 +2788,15 @@
             return "CFamilyGroups_DeleteFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2876,16 +2854,16 @@
           getClassName() {
             return "CFamilyGroups_GetUsersSharingDevice_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.users || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2941,16 +2919,16 @@
           getClassName() {
             return "CFamilyGroups_GetUsersSharingDevice_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3018,16 +2996,16 @@
           getClassName() {
             return "CFamilyGroups_RequestPurchase_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3085,16 +3063,16 @@
           getClassName() {
             return "CFamilyGroups_RequestPurchase_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3160,16 +3138,16 @@
           getClassName() {
             return "CFamilyGroups_GetPurchaseRequests_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requester_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [9, 10, 11, 12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3289,16 +3267,16 @@
           getClassName() {
             return "PurchaseRequest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requests || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3352,16 +3330,16 @@
           getClassName() {
             return "CFamilyGroups_GetPurchaseRequests_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3424,9 +3402,7 @@
           getClassName() {
             return "CFamilyGroups_RespondToRequestedPurchase_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3468,13 +3444,15 @@
             return "CFamilyGroups_RespondToRequestedPurchase_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3533,16 +3511,16 @@
           getClassName() {
             return "CFamilyGroupsClient_NotifyRunningApps_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.member_steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3600,16 +3578,16 @@
           getClassName() {
             return "CFamilyGroupsClient_NotifyRunningApps_Notification_PlayingMember";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3668,9 +3646,7 @@
           getClassName() {
             return "CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3712,13 +3688,15 @@
             return "CFamilyGroupsClient_InviteStatus_Notification";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3771,16 +3749,16 @@
           getClassName() {
             return "CFamilyGroupsClient_GroupChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3833,16 +3811,16 @@
           getClassName() {
             return "CFamilyGroups_GetChangeLog_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.changes || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3896,16 +3874,16 @@
           getClassName() {
             return "CFamilyGroups_GetChangeLog_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3978,16 +3956,16 @@
           getClassName() {
             return "CFamilyGroups_GetChangeLog_Response_Change";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4060,16 +4038,16 @@
           getClassName() {
             return "CFamilyGroups_PlaytimeEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4122,16 +4100,16 @@
           getClassName() {
             return "CFamilyGroups_GetPlaytimeSummary_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entries || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4191,16 +4169,16 @@
           getClassName() {
             return "CFamilyGroups_GetPlaytimeSummary_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4258,9 +4236,7 @@
           getClassName() {
             return "CFamilyGroups_SetFamilyCooldownOverrides_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4302,13 +4278,15 @@
             return "CFamilyGroups_SetFamilyCooldownOverrides_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4391,16 +4369,16 @@
           getClassName() {
             return "CFamilyGroups_GetSharedLibraryApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4459,16 +4437,16 @@
           getClassName() {
             return "CFamilyGroups_GetSharedLibraryApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 15], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4584,16 +4562,16 @@
           getClassName() {
             return "CFamilyGroups_GetSharedLibraryApps_Response_SharedApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4656,9 +4634,7 @@
           getClassName() {
             return "CFamilyGroups_ConfirmInviteToFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4700,13 +4676,15 @@
             return "CFamilyGroups_ConfirmInviteToFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4769,9 +4747,7 @@
           getClassName() {
             return "CFamilyGroups_ConfirmJoinFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4813,13 +4789,15 @@
             return "CFamilyGroups_ConfirmJoinFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4877,9 +4855,7 @@
           getClassName() {
             return "CFamilyGroups_ResendInvitationToFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4921,13 +4897,15 @@
             return "CFamilyGroups_ResendInvitationToFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4990,9 +4968,7 @@
           getClassName() {
             return "CFamilyGroups_SetPreferredLender_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5034,13 +5010,15 @@
             return "CFamilyGroups_SetPreferredLender_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5093,16 +5071,16 @@
           getClassName() {
             return "CFamilyGroups_GetPreferredLenders_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.members || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5156,16 +5134,16 @@
           getClassName() {
             return "CFamilyGroups_GetPreferredLenders_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5226,16 +5204,16 @@
           getClassName() {
             return "CFamilyGroups_GetPreferredLenders_Response_FamilyMember";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5288,9 +5266,7 @@
           getClassName() {
             return "CFamilyGroups_UndeleteFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5332,13 +5308,15 @@
             return "CFamilyGroups_UndeleteFamilyGroup_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5396,9 +5374,7 @@
           getClassName() {
             return "CFamilyGroups_ForceAcceptInvite_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5440,13 +5416,15 @@
             return "CFamilyGroups_ForceAcceptInvite_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5504,16 +5482,16 @@
           getClassName() {
             return "CFamilyGroups_GetInviteCheckResults_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.wallet_country_matches || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5576,16 +5554,16 @@
           getClassName() {
             return "CFamilyGroups_GetInviteCheckResults_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5643,9 +5621,7 @@
           getClassName() {
             return "CFamilyGroups_ClearCooldownSkip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5687,13 +5663,15 @@
             return "CFamilyGroups_ClearCooldownSkip_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.family_groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5751,9 +5729,7 @@
           getClassName() {
             return "CFamilyGroups_RollbackFamilyGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5795,7 +5771,7 @@
             return "CFamilyGroups_RollbackFamilyGroup_Response";
           }
         }
-        var __webpack_require__;
+        var _;
         ((_) => {
           function _(_, _, _) {
             return _.SendMsg(
@@ -6123,7 +6099,7 @@
           }
           _.RollbackFamilyGroup = _;
         })(_ || (_ = {}));
-        var __webpack_require__;
+        var _;
         ((_) => {
           (_.NotifyRunningAppsHandler = {
             name: "FamilyGroupsClient.NotifyRunningApps#1",
@@ -6138,22 +6114,22 @@
               request: _,
             });
         })(_ || (_ = {}));
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = (_, _) =>
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_, _) =>
             _ === void 0
               ? ["get_family_group_for_user ", _]
               : ["get_family_group_for_user ", _, _],
-          __webpack_require__ = (_) => ["get_family_group", _],
-          __webpack_require__ = (_) => ["get_family_history", _],
-          __webpack_require__ = (_) => ["get_users_sharing_device", _],
-          __webpack_require__ = (_) => ["get_shopping_cart_contents", _],
-          __webpack_require__ = (_) => ["recent_playtime_sessions", _],
-          __webpack_require__ = (_) => ["get_playtime_summary", _],
-          __webpack_require__ = (_, _) => ["get_invite_check_results", _, _];
+          _ = (_) => ["get_family_group", _],
+          _ = (_) => ["get_family_history", _],
+          _ = (_) => ["get_users_sharing_device", _],
+          _ = (_) => ["get_shopping_cart_contents", _],
+          _ = (_) => ["recent_playtime_sessions", _],
+          _ = (_) => ["get_playtime_summary", _],
+          _ = (_, _) => ["get_invite_check_results", _, _];
         function _(_, _, _) {
           return _
             ? ["get_purchase_requests", _, _, _]
@@ -6164,14 +6140,14 @@
         function _(_, _) {
           if (_ != k_EResultOK) throw _;
         }
-        const __webpack_require__ = _.createContext({
+        const _ = _.createContext({
           staleTimeMs: 1 / 0,
         });
         function _(_) {
           const { staleTimeMs: _, children: _ } = _,
             _ = React.useMemo(
               () => ({
-                staleTimeMs: _ != null ? _ : 3e3,
+                staleTimeMs: _ ?? 3e3,
               }),
               [_],
             );
@@ -6419,7 +6395,7 @@
                   FGS.CFamilyGroups_GetUsersSharingDevice_Request,
                 );
               _.Body().set_family_groupid(_),
-                _.Body().set_client_instance_id(_ != null ? _ : void 0);
+                _.Body().set_client_instance_id(_ ?? void 0);
               const _ = await FGS.FamilyGroupsService.GetUsersSharingDevice(
                 _,
                 _,
@@ -6429,14 +6405,11 @@
           });
         }
         function _(_) {
-          var _, _;
           const _ = useActiveAccount();
-          return (_ =
-            (_ = _(_).data) == null
-              ? void 0
-              : _.members().find((_) => _.steamid() == _)) == null
-            ? void 0
-            : _.role();
+          return _(_)
+            .data?.members()
+            .find((_) => _.steamid() == _)
+            ?.role();
         }
         function _(_, _) {
           const _ = useActiveServiceTransport();
@@ -6482,12 +6455,8 @@
               const _ = await FGS.FamilyGroupsService.GetPurchaseRequests(_, _);
               return _(_.GetEResult(), "GetPurchaseRequests"), _.Body();
             },
-            select: (_) => {
-              var _;
-              return (_ = _.toObject().requests) == null
-                ? void 0
-                : _.find(({ request_id: _ }) => _ === _);
-            },
+            select: (_) =>
+              _.toObject().requests?.find(({ request_id: _ }) => _ === _),
           });
         }
         function _(_, _, _) {
@@ -6515,14 +6484,14 @@
             },
           });
         }
-        const __webpack_require__ = (0, _.createContext)({
+        const _ = (0, _.createContext)({
           errorMessage: null,
           setErrorMessage: (_) => {},
         });
         function _(_, _) {
           return _;
         }
-        var __webpack_require__ = ((_) => (
+        var _ = ((_) => (
           (_[(_.k_EFamilyQueryNone = 0)] = "k_EFamilyQueryNone"),
           (_[(_.k_EFamilyQueryLoadFamily = 1)] = "k_EFamilyQueryLoadFamily"),
           (_[(_.k_EFamilyQueryJoinFamily = 2)] = "k_EFamilyQueryJoinFamily"),
@@ -6554,45 +6523,41 @@
             "k_EFamilyQueryResendInvite"),
           _
         ))(_ || {});
-        const __webpack_require__ = {
-          [_.__webpack_require__]: "#FamilyManagement_ErrorInternalServerError",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorInternalServerError",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorInternalServerError",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorInternalServerError",
-          [_.__webpack_require__]: "#FamilyManagement_AccessDenied",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorNoMatch",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorAccountDisabled",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorNoActiveInvite",
-          [_.__webpack_require__]:
-            "#FamilyManagement_PartnerAccountCannotJoinAsChild",
-          [_.__webpack_require__]:
-            "#FamilyManagement_ErrorFamilySizeLimitExceeded",
-          [_.__webpack_require__]: "#FamilyManagement_ErrorLimitExceeded",
-          [_.__webpack_require__]:
-            "#FamilyManagement_ErrorAccountActivityLimitExceeded",
-          [_.__webpack_require__]:
-            "#FamilyManagement_LimitedAccount_CreateFamily",
-          [_.__webpack_require__]: {
+        const _ = {
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_AccessDenied",
+          [_._]: "#FamilyManagement_ErrorNoMatch",
+          [_._]: "#FamilyManagement_ErrorAccountDisabled",
+          [_._]: "#FamilyManagement_ErrorNoActiveInvite",
+          [_._]: "#FamilyManagement_PartnerAccountCannotJoinAsChild",
+          [_._]: "#FamilyManagement_ErrorFamilySizeLimitExceeded",
+          [_._]: "#FamilyManagement_ErrorLimitExceeded",
+          [_._]: "#FamilyManagement_ErrorAccountActivityLimitExceeded",
+          [_._]: "#FamilyManagement_LimitedAccount_CreateFamily",
+          [_._]: {
             5: "#FamilyManagement_RateLimitExceeded_CreateFamily",
           },
-          [_.__webpack_require__]: {
+          [_._]: {
             5: "#FamilyManagement_RegionLocked_CreateFamily",
             2: "#FamilyManagement_RegionLocked_JoinFamily",
           },
-          [_.__webpack_require__]: {
+          [_._]: {
             2: "#FamilyManagement_Household_JoinFamily",
           },
-          [_.__webpack_require__]: {
+          [_._]: {
             5: "#FamilyManagement_ErrorAccountLimitExceeded_CreateFamily",
             2: "#FamilyManagement_ErrorAccountLimitExceeded_JoinFamily",
             8: "#FamilyManagement_ErrorAccountLimitExceeded_RemoveFromFamily",
           },
-          [_.__webpack_require__]: {
+          [_._]: {
             2: "#FamilyManagement_ErrorDuplicateRequest_JoinFamily",
             4: "#FamilyManagement_ErrorDuplicateRequest_InviteToFamily",
             8: "#FamilyManagement_ErrorDuplicateRequest_RemoveFromFamily",
           },
-          [_.__webpack_require__]: {
+          [_._]: {
             4: "#FamilyManagement_ErrorFailed_NoAdditionalDetails",
           },
         };
@@ -6736,10 +6701,10 @@
           return [
             "get_shared_library_apps",
             _,
-            _ == null ? void 0 : _.bIncludeOwn,
-            _ == null ? void 0 : _.bIncludeExcluded,
-            _ == null ? void 0 : _.bIncludeNonGames,
-            _ == null ? void 0 : _.for_account_id,
+            _?.bIncludeOwn,
+            _?.bIncludeExcluded,
+            _?.bIncludeNonGames,
+            _?.for_account_id,
             _,
             _,
           ];
@@ -6754,8 +6719,8 @@
               bIncludeExcluded: _,
               bIncludeNonGames: _,
               for_account_id: _,
-            } = _ != null ? _ : {},
-            _ = (_ == null ? void 0 : _.enabled) !== void 0 ? _.enabled : !0,
+            } = _ ?? {},
+            _ = _?.enabled !== void 0 ? _.enabled : !0,
             _ = _(_, _, _, _),
             _ = (_) => !BIsAppBlocked(_.appid(), _, _, _);
           return useQuery({
@@ -6789,15 +6754,13 @@
             },
             enabled: !!_ && _,
             placeholderData: keepPreviousData,
-            select: _ == null ? void 0 : _.select,
+            select: _?.select,
           });
         }
         function _(_, _) {
-          var _;
           const _ = useQueryClient(),
             _ = useActiveAccount(),
-            { settings: _ } =
-              (_ = useParentalSettings(_).data) != null ? _ : {},
+            { settings: _ } = useParentalSettings(_).data ?? {},
             _ = useIsCurrentUserParentalLocked(),
             _ = _(_, _, _, _);
           return useCallback(() => {
@@ -6815,13 +6778,10 @@
           return _.rt_time_acquired - _.rt_time_acquired || _(_, _);
         }
         function _(_, _, _) {
-          var _, _;
           if (!_ && _.length === 0) return !0;
-          const _ = (_ = _.name) == null ? void 0 : _.toLocaleLowerCase(),
+          const _ = _.name?.toLocaleLowerCase(),
             _ = _.toLocaleLowerCase(),
-            _ =
-              (_ == null ? void 0 : _.includes(_)) ||
-              ((_ = _.appid) == null ? void 0 : _.toString()) == _;
+            _ = _?.includes(_) || _.appid?.toString() == _;
           let _ = !0;
           if (_.content_descriptors) {
             for (const _ of _)
@@ -6834,7 +6794,7 @@
         }
         function _(_, _, _, _ = []) {
           const _ = useMemo(
-              () => (_ == null ? void 0 : _.filter((_) => _(_, _, _))) || [],
+              () => _?.filter((_) => _(_, _, _)) || [],
               [_, _, _],
             ),
             _ = useCallback(
@@ -6972,17 +6932,15 @@
           return useQuery({
             queryKey: _(_),
             queryFn: async () => {
-              var _, _;
               const _ = CProtoBufMsg.Init(
                 FGS.CFamilyGroups_GetPlaytimeSummary_Request,
               );
               _.Body().set_family_groupid(_);
               const _ = await FGS.FamilyGroupsService.GetPlaytimeSummary(_, _);
               _(_.GetEResult(), "GetPlaytimeSummary");
-              let _ = (_ = _.Body().toObject().entries) != null ? _ : [];
+              let _ = _.Body().toObject().entries ?? [];
               _.sort((_, _) => _.seconds_played - _.seconds_played);
-              let _ =
-                (_ = _.Body().toObject().entries_by_owner) != null ? _ : [];
+              let _ = _.Body().toObject().entries_by_owner ?? [];
               return (
                 _.sort((_, _) => _.seconds_played - _.seconds_played),
                 {
@@ -7067,20 +7025,11 @@
         function _(_, _) {
           return _.members().find((_) => _.steamid() == _);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -7088,18 +7037,15 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
-          const _ =
-            _ != null && _.reported_content_id
-              ? _.reported_content_id
-              : `${_ == null ? void 0 : _.subject_type}-${_ == null ? void 0 : _.subject_group_id}-${_ == null ? void 0 : _.subject_id}`;
+          const _ = _?.reported_content_id
+            ? _.reported_content_id
+            : `${_?.subject_type}-${_?.subject_group_id}-${_?.subject_id}`;
           return `${_._.COMMUNITY_BASE_URL}my/reportedcontent/${_}`;
         }
-        const __webpack_require__ = {
-          [_.__webpack_require__.__webpack_require__]: {
+        const _ = {
+          [_._._]: {
             displayNameLoc: "#SteamNotification_HelpRequest_Author",
             titleLoc: "#SteamNotification_HelpRequest_Title",
             bodyLoc: (_) => ({
@@ -7108,7 +7054,7 @@
             }),
             link: (_) => _._.HELP_BASE_URL + "wizard/HelpRequest/" + _.ticket,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             displayNameLoc: "#SteamNotifications_MajorSale",
             titleLoc: (_) => ({
               locString: _.title,
@@ -7126,19 +7072,19 @@
                   )
                 : _.link,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             displayNameLoc: (_) => _.display_name,
             titleLoc: (_) => _.title,
             bodyLoc: (_) => _.body,
             image: (_) => _.image,
             link: (_) => _.link,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             titleLoc: "#SteamNotification_ModeratorMessage_Title",
             link: (_) =>
               _._.COMMUNITY_BASE_URL + "my/moderatormessages/" + _.msgid,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             displayNameLoc: (_) =>
               _.is_limited_launch
                 ? "#Notification_LimitedLaunchInviteTitle"
@@ -7151,7 +7097,7 @@
             link: (_) =>
               _._.STORE_BASE_URL + "account/gatedaccess?appid=" + _.appid,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             titleLoc: (_) => {
               switch (_.status) {
                 case _._._:
@@ -7179,28 +7125,28 @@
         function _(_) {
           return !!_(_);
         }
-        const __webpack_require__ = {
-          [_.__webpack_require__.__webpack_require__]: {
+        const _ = {
+          [_._._]: {
             steamidAttribute: "inviter",
             titleLoc: "#SteamNotifications_FamilyInviteTitle",
             bodyLoc: "#SteamNotifications_FamilyInviteBody",
             url: (_) =>
               `${_._.STORE_BASE_URL}account/familymanagement/join?invitation=${_.familyid}`,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "steamid",
             titleLoc: "#SteamNotifications_ParentalFeatureRequestTitle",
             bodyLoc: "#SteamNotifications_ParentalFeatureRequestBody",
             url: () =>
               `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "requestor_steamid",
             titleLoc: "#SteamNotifications_FamilyPurchaseRequestTitle",
             bodyLoc: "#SteamNotifications_FamilyPurchaseRequestBody",
             url: (_) => _(_.familyid, _.request_id),
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "responder_steamid",
             titleLoc: (_) =>
               _.action == _
@@ -7213,14 +7159,14 @@
             url: () =>
               `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "steamid",
             titleLoc: "#SteamNotifications_ParentalPlaytimeRequestTitle",
             bodyLoc: "#SteamNotifications_ParentalPlaytimeRequestBody",
             url: () =>
               `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "steamid_approver",
             titleLoc: (_) =>
               _.approved
@@ -7233,7 +7179,7 @@
             url: () =>
               `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             steamidAttribute: "steamid_approver",
             titleLoc: (_) =>
               _.approved
@@ -7253,18 +7199,18 @@
         function _(_) {
           return !!_(_);
         }
-        const __webpack_require__ = [
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
-          _.__webpack_require__.__webpack_require__,
+        const _ = [
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
         ];
         function _(_) {
           return _.findIndex((_) => _ == _) != null;
@@ -7275,43 +7221,41 @@
         function _(_) {
           return _(_) || _(_) || _(_);
         }
-        var __webpack_require__ = ((_) => (
+        var _ = ((_) => (
           (_[(_.New = 0)] = "New"),
           (_[(_.Update = 1)] = "Update"),
           (_[(_.Remove = 2)] = "Remove"),
           _
         ))(_ || {});
-        const __webpack_require__ = "Test_",
-          __webpack_require__ = 3600 * 48,
-          __webpack_require__ = 600,
-          __webpack_require__ = !1,
-          __webpack_require__ = new _.__webpack_require__(
-            "SteamNotificationStore",
-          ),
-          __webpack_require__ = _.Debug,
-          __webpack_require__ = _.Error,
-          __webpack_require__ = _.Warning;
+        const _ = "Test_",
+          _ = 3600 * 48,
+          _ = 600,
+          _ = !1,
+          _ = new _._("SteamNotificationStore"),
+          _ = _.Debug,
+          _ = _.Error,
+          _ = _.Warning;
         class _ {
           constructor() {
-            _(this, "m_rgNotificationRollups", []),
-              _(this, "m_summary", _()),
-              _(this, "m_bLoaded", !1),
-              _(this, "m_nUnviewed", 0),
-              _(this, "m_rgNotifyServerRead", []),
-              _(this, "m_rgNotifyServerHidden", []),
-              _(this, "m_keyNotifyServerRead", ""),
-              _(this, "m_keyNotifyServerHidden", ""),
-              _(this, "m_steamid"),
-              _(this, "m_transport"),
-              _(this, "m_rgUnreadNotificationIDs", []),
-              _(this, "m_rgNewRollupIDs", new Map()),
-              _(this, "m_rgTestNotifications", []),
-              _(this, "m_currentNotificationsData", null),
-              _(this, "m_strRemoteClientID", ""),
-              _(this, "m_eTargetClientType", _._._),
-              _(this, "m_fnOnNotificationCallback", null),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_rgNotificationRollups = [];
+          m_summary = _();
+          m_bLoaded = !1;
+          m_nUnviewed = 0;
+          m_rgNotifyServerRead = [];
+          m_rgNotifyServerHidden = [];
+          m_keyNotifyServerRead = "";
+          m_keyNotifyServerHidden = "";
+          m_steamid;
+          m_transport;
+          m_rgUnreadNotificationIDs = [];
+          m_rgNewRollupIDs = new Map();
+          m_rgTestNotifications = [];
+          m_currentNotificationsData = null;
+          m_strRemoteClientID = "";
+          m_eTargetClientType = _._._;
+          m_fnOnNotificationCallback = null;
           BHasNotificationsData() {
             return this.m_currentNotificationsData != null;
           }
@@ -7361,7 +7305,6 @@
             }
           }
           MarkItemRead(_, _ = !1) {
-            var _;
             let _ = this.m_rgNotificationRollups.findIndex(
               (_) => _.item.notification_id == _,
             );
@@ -7378,10 +7321,7 @@
               _("Attempted to mark notification read that is already read");
               return;
             }
-            if (
-              ((_.item.read = !0),
-              ((_ = _.rgunread) == null ? void 0 : _.length) > 0)
-            ) {
+            if (((_.item.read = !0), _.rgunread?.length > 0)) {
               this.ReduceNewTotals(_.type, _.rgunread.length);
               let _ = [];
               _.rgunread.forEach((_) => {
@@ -7393,7 +7333,6 @@
             }
           }
           MarkItemHidden(_) {
-            var _, _;
             let _ = this.m_rgNotificationRollups.findIndex(
               (_) => _.item.notification_id == _,
             );
@@ -7405,11 +7344,8 @@
             }
             let _ = this.m_rgNotificationRollups[_];
             (_.item.hidden = !0),
-              ((_ = _.rgunread) == null ? void 0 : _.length) > 0 &&
-                this.ReduceNewTotals(
-                  _.type,
-                  (_ = _.rgunread) == null ? void 0 : _.length,
-                ),
+              _.rgunread?.length > 0 &&
+                this.ReduceNewTotals(_.type, _.rgunread?.length),
               this.NotifyServerNotificationsHidden([
                 ..._.rgunread,
                 ..._.rgread,
@@ -7429,7 +7365,7 @@
             let _ = [],
               _ = [],
               _ = 0;
-            const _ = _ != null ? _ : this.m_rgNotificationRollups;
+            const _ = _ ?? this.m_rgNotificationRollups;
             return (
               _.forEach((_, _) => {
                 _.rgunread.length > 0 &&
@@ -7453,11 +7389,10 @@
             );
           }
           ApplyNotificationsUpdate(_) {
-            var _, _;
             if (
               (_("ApplyNotificationsUpdate", _),
               !_ ||
-                (!((_ = _.notifications) != null && _.length) &&
+                (!_.notifications?.length &&
                   _.pending_friend_count === void 0 &&
                   _.pending_gift_count === void 0))
             ) {
@@ -7471,15 +7406,14 @@
               return;
             }
             const _ = this.m_currentNotificationsData;
-            (_ = _.notifications) == null ||
-              _.forEach((_) => {
-                const _ = _.notifications.findIndex(
-                  (_) => _.notification_id == _.notification_id,
-                );
-                _ != -1
-                  ? Object.assign(_.notifications[_], _)
-                  : _.notifications.push(_);
-              }),
+            _.notifications?.forEach((_) => {
+              const _ = _.notifications.findIndex(
+                (_) => _.notification_id == _.notification_id,
+              );
+              _ != -1
+                ? Object.assign(_.notifications[_], _)
+                : _.notifications.push(_);
+            }),
               _.pending_friend_count !== void 0 &&
                 (this.m_currentNotificationsData.pending_friend_count =
                   _.pending_friend_count),
@@ -7496,32 +7430,27 @@
               this.ProcessNotifications();
           }
           ProcessNotifications() {
-            var _, _, _, _, _, _, _, _;
             let _ = [],
               _ = _(),
               _ = 0;
             if (
-              ((_ =
-                (_ = this.m_currentNotificationsData) == null
-                  ? void 0
-                  : _.notifications) == null ||
-                _.forEach((_) => {
-                  this.BExcludeClientTargetedNotification(_) ||
-                    (this.m_rgNotifyServerHidden.length > 0 &&
-                      this.m_rgNotifyServerHidden.findIndex(
+              (this.m_currentNotificationsData?.notifications?.forEach((_) => {
+                this.BExcludeClientTargetedNotification(_) ||
+                  (this.m_rgNotifyServerHidden.length > 0 &&
+                    this.m_rgNotifyServerHidden.findIndex(
+                      (_) => _ == _.notification_id,
+                    ) !== -1 &&
+                    (_.hidden = !0),
+                  _(_) &&
+                    (this.m_rgNotifyServerRead.length > 0 &&
+                      this.m_rgNotifyServerRead.findIndex(
                         (_) => _ == _.notification_id,
                       ) !== -1 &&
-                      (_.hidden = !0),
-                    _(_) &&
-                      (this.m_rgNotifyServerRead.length > 0 &&
-                        this.m_rgNotifyServerRead.findIndex(
-                          (_) => _ == _.notification_id,
-                        ) !== -1 &&
-                        (_.read = !0),
-                      _.read || _(_, _.notification_type, 1),
-                      _.viewed || _++,
-                      this.AddNotificationToRollups(_, _)));
-                }),
+                      (_.read = !0),
+                    _.read || _(_, _.notification_type, 1),
+                    _.viewed || _++,
+                    this.AddNotificationToRollups(_, _)));
+              }),
               _.sort((_, _) => _.timestamp - _.timestamp),
               this.m_fnOnNotificationCallback)
             ) {
@@ -7549,26 +7478,12 @@
             }
             _.reverse(),
               (_.pending_gifts =
-                (_ =
-                  (_ = this.m_currentNotificationsData) == null
-                    ? void 0
-                    : _.pending_gift_count) != null
-                  ? _
-                  : 0),
+                this.m_currentNotificationsData?.pending_gift_count ?? 0),
               (_.pending_invites =
-                (_ =
-                  (_ = this.m_currentNotificationsData) == null
-                    ? void 0
-                    : _.pending_friend_count) != null
-                  ? _
-                  : 0),
+                this.m_currentNotificationsData?.pending_friend_count ?? 0),
               (_.pending_family_invites =
-                (_ =
-                  (_ = this.m_currentNotificationsData) == null
-                    ? void 0
-                    : _.pending_family_invite_count) != null
-                  ? _
-                  : 0),
+                this.m_currentNotificationsData?.pending_family_invite_count ??
+                0),
               (this.m_rgNotificationRollups = _.slice()),
               (this.m_summary = _),
               (this.m_bLoaded = !0),
@@ -7598,7 +7513,6 @@
                     : !1;
           }
           AddNotificationToRollups(_, _) {
-            var _, _;
             const _ = this.BSendToCallbackAsNew(_);
             _ && this.m_rgUnreadNotificationIDs.push(_.notification_id);
             let _ = _.notification_type;
@@ -7609,9 +7523,7 @@
                   if (!_) return;
                   const _ =
                     "comment_" +
-                    ((_ = _.owner_steam_id) == null
-                      ? void 0
-                      : _.GetAccountID()) +
+                    _.owner_steam_id?.GetAccountID() +
                     "_" +
                     _.forum_id +
                     "_" +
@@ -7652,7 +7564,7 @@
                 }
                 break;
               case _._._:
-                const _ = (_ = _(_)) == null ? void 0 : _.appid.toString();
+                const _ = _(_)?.appid.toString();
                 if (_) {
                   const _ = "asyncgame_" + _;
                   this.AddNotificationToRollupByAppID(_, _, _, _, _, _);
@@ -7660,7 +7572,7 @@
                 break;
               case _._._:
                 const _ = _(_),
-                  _ = _ == null ? void 0 : _.report_id,
+                  _ = _?.report_id,
                   _ = _(_),
                   _ = `contentreport_${_}`;
                 let _ = _.findIndex((_) => _.rollup_key == _);
@@ -7728,11 +7640,11 @@
             }
           }
         }
-        _([_.__webpack_require__], _.prototype, "m_rgNotificationRollups", 2),
-          _([_.__webpack_require__], _.prototype, "m_summary", 2),
-          _([_.__webpack_require__], _.prototype, "m_bLoaded", 2),
-          _([_.__webpack_require__], _.prototype, "m_nUnviewed", 2),
-          _([_.__webpack_require__], _.prototype, "ProcessNotifications", 1);
+        _([_._], _.prototype, "m_rgNotificationRollups", 2),
+          _([_._], _.prototype, "m_summary", 2),
+          _([_._], _.prototype, "m_bLoaded", 2),
+          _([_._], _.prototype, "m_nUnviewed", 2),
+          _([_._], _.prototype, "ProcessNotifications", 1);
         function _() {
           return {
             comments: 0,
@@ -7762,7 +7674,6 @@
           };
         }
         async function _(_, _, _, _, _, _ = !0, _ = !1) {
-          var _;
           if (!_) throw new Error("Invalid steamid for GetSteamNotifications");
           const _ = _._.Init(_._);
           _.Body().set_language(_),
@@ -7780,15 +7691,13 @@
           const _ = _.Body().toObject();
           return (
             _ &&
-              (_.notifications =
-                (_ = _.notifications) == null
-                  ? void 0
-                  : _.filter((_) => !_(_.notification_type, _, _))),
+              (_.notifications = _.notifications?.filter(
+                (_) => !_(_.notification_type, _, _),
+              )),
             _
           );
         }
         async function _(_, _) {
-          var _;
           if (!_ || !_.steamid || !_.contextid || !_.appid || !_.assetid)
             return _("Item notification missing required attributes"), null;
           const _ = _._.Init(_._);
@@ -7806,14 +7715,12 @@
                 _.GetEResult(),
               ),
               null)
-            : (_ = _.Body().toObject().descriptions[0]) != null
-              ? _
-              : null;
+            : (_.Body().toObject().descriptions[0] ?? null);
         }
-        const __webpack_require__ = "ItemMetadata";
+        const _ = "ItemMetadata";
         function _(_) {
           return [
-            `${_}_${_ == null ? void 0 : _.steamid}_${_ == null ? void 0 : _.appid}_${_ == null ? void 0 : _.contextid}_${_ == null ? void 0 : _.assetid}`,
+            `${_}_${_?.steamid}_${_?.appid}_${_?.contextid}_${_?.assetid}`,
           ];
         }
         async function _(_, _) {
@@ -7845,7 +7752,7 @@
           return _.comment_type == _._;
         }
         function _(_) {
-          return _ == null ? void 0 : _.bhas_friend;
+          return _?.bhas_friend;
         }
         function _(_) {
           return _.comment_type == _._;
@@ -7869,11 +7776,9 @@
           return _(_.notification_type, _.body_data);
         }
         function _(_) {
-          var _;
-          return _(_.type, (_ = _.item) == null ? void 0 : _.body_data);
+          return _(_.type, _.item?.body_data);
         }
         function _(_, _) {
-          var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
           let _ = _(_);
           if (!_) return null;
           switch (_) {
@@ -7890,8 +7795,8 @@
             case _._._:
               return {
                 appid: _.appid,
-                count: (_ = _.count) != null ? _ : 1,
-                appids: (_ = _.appids) != null ? _ : [],
+                count: _.count ?? 1,
+                appids: _.appids ?? [],
               };
             case _._._:
               return !_.appid || !_.state || (_.state != _._ && _.state != _._)
@@ -7939,31 +7844,28 @@
             case _._._:
               return {
                 appid: parseInt(_.app_id),
-                assetid: (_ = _.asset_id) != null ? _ : "",
-                contextid: (_ = _.context_id) != null ? _ : "",
+                assetid: _.asset_id ?? "",
+                contextid: _.context_id ?? "",
               };
             case _._._:
               return {
-                url: (_ = _.url) != null ? _ : "",
-                strGameName: (_ = _.content_app_name) != null ? _ : "",
-                mediaType: (_ = _.media_type) != null ? _ : "clip",
-                secDuration: parseFloat(
-                  (_ = _.duration_seconds) != null ? _ : 0,
-                ),
-                nSize: parseInt((_ = _.file_size) != null ? _ : 0),
+                url: _.url ?? "",
+                strGameName: _.content_app_name ?? "",
+                mediaType: _.media_type ?? "clip",
+                secDuration: parseFloat(_.duration_seconds ?? 0),
+                nSize: parseInt(_.file_size ?? 0),
                 strMachineName: _.machine_name,
                 rtExpiration: _.expiration,
                 thumbnailURL: _.thumbnail_url,
               };
             case _._._:
               return {
-                report_id: (_ = _.report_id) != null ? _ : "",
-                reported_content_id:
-                  (_ = _.reported_content_id) != null ? _ : "",
-                subject_type: (_ = _.subject_type) != null ? _ : 0,
-                subject_group_id: (_ = _.subject_group_id) != null ? _ : "0",
-                subject_id: (_ = _.subject_id) != null ? _ : "0",
-                status: (_ = _.status) != null ? _ : 0,
+                report_id: _.report_id ?? "",
+                reported_content_id: _.reported_content_id ?? "",
+                subject_type: _.subject_type ?? 0,
+                subject_group_id: _.subject_group_id ?? "0",
+                subject_id: _.subject_id ?? "0",
+                status: _.status ?? 0,
               };
             default:
               return (
@@ -7977,11 +7879,10 @@
           }
         }
         function _(_) {
-          var _;
-          if (typeof _ == "undefined") return !1;
+          if (typeof _ > "u") return !1;
           if (typeof _ == "number") return _ > 0;
           if (typeof _ == "string")
-            switch ((_ = _.toLowerCase()) == null ? void 0 : _.trim()) {
+            switch (_.toLowerCase()?.trim()) {
               case "true":
               case "1":
                 return !0;
@@ -8001,114 +7902,114 @@
             _
           );
         }
-        const __webpack_require__ = {
-          [_.__webpack_require__.__webpack_require__]: {
+        const _ = {
+          [_._._]: {
             rollup_field: void 0,
             eFeature: void 0,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
             eFeature: void 0,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "gifts",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "comments",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "inventory_items",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "invites",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "major_sale",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
             eFeature: void 0,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "wishlist",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "trade_offers",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "general",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "help_request_replies",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "async_game_updates",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "moderator_messages",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "parental_feature_requests",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "family_invites",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "family_purchase_requests",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "parental_playtime_requests",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "family_purchase_request_responses",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "parental_feature_access_responses",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "parental_playtime_responses",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "requested_game_added",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: "playtest_invites",
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
-          [_.__webpack_require__.__webpack_require__]: {
+          [_._._]: {
             rollup_field: void 0,
-            eFeature: _.__webpack_require__,
+            eFeature: _._,
           },
         };
         function _(_) {
@@ -8116,20 +8017,14 @@
           return (0, _._)(!!_, `Missing notification type data for ${_}`), _;
         }
         function _(_, _, _) {
-          var _;
           if (!_) return !1;
           const _ = _(_);
-          return (0, _._)(
-            _,
-            (_ = _ == null ? void 0 : _.eFeature) != null ? _ : _._,
-            _,
-          );
+          return (0, _._)(_, _?.eFeature ?? _._, _);
         }
         function _(_, _, _) {
           (0, _._)(() => {
             const _ = _(_);
-            _ != null &&
-              _.rollup_field &&
+            _?.rollup_field &&
               (_[_.rollup_field] = Math.max(0, _[_.rollup_field] + _));
           });
         }
@@ -8151,21 +8046,21 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           if (!_) return;
           const _ = typeof _ == "string" ? _ : _.locString,
@@ -8233,20 +8128,20 @@
         function _(_) {
           return _.useMemo(() => ((0, _._)(_.type) ? (0, _._)(_) : null), [_]);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_);
-        const __webpack_require__ = !0;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = !0;
         function _(_) {
           let {
               onActivate: _,
@@ -8303,7 +8198,7 @@
                 visible: _,
               });
         }
-        var __webpack_require__ = ((_) => (
+        var _ = ((_) => (
           (_[(_.none = 0)] = "none"),
           (_[(_.loadingActive = 1)] = "loadingActive"),
           (_[(_.loadingComplete = 2)] = "loadingComplete"),
@@ -8423,7 +8318,7 @@
           const _ = !!_ && (_ == _.B3I || _ == _.oYe);
           let _;
           return (
-            _ == _.oYe ? (_ = _) : (_ = _ != null ? _ : _),
+            _ == _.oYe ? (_ = _) : (_ = _ ?? _),
             (0, _.jsxs)("div", {
               className: _().Header,
               children: [
@@ -8543,9 +8438,9 @@
             ],
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return _ == _.PN1;
         }
@@ -8557,8 +8452,8 @@
             [_, _],
           );
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
         function _(_) {
           let {
               onActivate: _,
@@ -8615,11 +8510,11 @@
             ],
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           switch (_) {
             case _._._:
@@ -8631,7 +8526,6 @@
           }
         }
         function _(_) {
-          var _, _;
           let {
             fallbackLogo: _,
             data: _,
@@ -8641,7 +8535,7 @@
             fnRenderTimestamp: _,
             onHide: _,
           } = _;
-          const _ = typeof (_ == null ? void 0 : _.image) == "number",
+          const _ = typeof _?.image == "number",
             _ = _
               ? {
                   appid: _.image,
@@ -8649,14 +8543,9 @@
               : void 0,
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_),
-            _ = (_ = _ == null ? void 0 : _.display_name) != null ? _ : "",
-            _ =
-              (_ = _ == null ? void 0 : _.title) != null
-                ? _
-                : _ == null
-                  ? void 0
-                  : _.body,
-            _ = _ != null && _.title ? _.body : null,
+            _ = _?.display_name ?? "",
+            _ = _?.title ?? _?.body,
+            _ = _?.title ? _.body : null,
             _ = _(_),
             _ = _ && (!_ || !_),
             [_, _] = _.useState(!1),
@@ -8666,7 +8555,7 @@
           else {
             const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
             _ =
-              _ != null && _.image && !_
+              _?.image && !_
                 ? (0, _.jsx)("img", {
                     className: _,
                     src: _.image,
@@ -8724,15 +8613,9 @@
           const _ = _(_),
             _ = (0, _._)("#SteamNotifications_TradeOffer_Title"),
             _ = _
-              ? (0, _._)(
-                  "#SteamNotifications_TradeOffer_Body_Short",
-                  _ != null ? _ : "",
-                )
+              ? (0, _._)("#SteamNotifications_TradeOffer_Body_Short", _ ?? "")
               : (0, _._)("#SteamNotifications_TradeOffer_Body"),
-            _ = (0, _._)(
-              "#SteamNotifications_TradeOffer_Description",
-              _ != null ? _ : "",
-            ),
+            _ = (0, _._)("#SteamNotifications_TradeOffer_Description", _ ?? ""),
             _ = !_;
           return _
             ? (0, _.jsx)(_, {
@@ -8769,7 +8652,7 @@
                 }),
               });
         }
-        const __webpack_require__ = (_) => {
+        const _ = (_) => {
           let {
             location: _,
             icon: _,
@@ -8828,10 +8711,7 @@
           } = _;
           const _ = _(_),
             _ = _
-              ? (0, _._)(
-                  "#Notification_GiftReceived_Body_Short",
-                  _ != null ? _ : "",
-                )
+              ? (0, _._)("#Notification_GiftReceived_Body_Short", _ ?? "")
               : (0, _._)("#Notification_GiftReceived_Body"),
             _ = _
               ? (0, _._)("#Notification_GiftReceived_Description", _)
@@ -8980,7 +8860,7 @@
             _ = () => _(!0),
             _ = _(_);
           let _ = _;
-          if (_ != null && _.icon_url && !_) {
+          if (_?.icon_url && !_) {
             let _ = `${_._.COMMUNITY_CDN_URL}economy/image/${_.icon_url}`,
               _ = _.background_color ? "#" + _.background_color : null;
             const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
@@ -8991,7 +8871,7 @@
               children: (0, _.jsx)("img", {
                 className: _,
                 style: {
-                  backgroundColor: _ != null ? _ : void 0,
+                  backgroundColor: _ ?? void 0,
                   justifyContent: "center",
                 },
                 src: _,
@@ -9011,10 +8891,9 @@
           } else
             _ &&
               (_ = _ ? _ : (0, _._)("#Notification_Item_Single_GameName", _));
-          const _ =
-              _ != null && _.name
-                ? _.name
-                : (0, _._)("#Notification_Item_Body_Generic"),
+          const _ = _?.name
+              ? _.name
+              : (0, _._)("#Notification_Item_Body_Generic"),
             _ = !_;
           if (_) {
             let _ = "";
@@ -9088,7 +8967,7 @@
           return (
             _.state == _._
               ? (_ =
-                  _ && _ != null && _.name
+                  _ && _?.name
                     ? (0, _._)(
                         "#SteamNotification_AsyncGame_Action_Short",
                         _.name,
@@ -9096,7 +8975,7 @@
                     : (0, _._)("#SteamNotification_AsyncGame_Action"))
               : _.state == _._ &&
                 (_ =
-                  _ && _ != null && _.name
+                  _ && _?.name
                     ? (0, _._)(
                         "#SteamNotification_AsyncGame_Done_Short",
                         _.name,
@@ -9127,7 +9006,7 @@
                         children: _,
                       }),
                       (0, _.jsx)(_, {
-                        children: _ == null ? void 0 : _.name,
+                        children: _?.name,
                       }),
                       _
                         ? (0, _.jsx)(_, {
@@ -9205,7 +9084,6 @@
               });
         }
         function _(_) {
-          var _, _, _, _, _;
           let {
               currentUserSteamID: _,
               fallbackLogo: _,
@@ -9228,18 +9106,12 @@
             [_, _] = _.useState(!1),
             _ = () => _(!0),
             [_, _] = (0, _._)(
-              _.bclan_account
-                ? (_ = _.owner_steam_id) == null
-                  ? void 0
-                  : _.GetAccountID()
-                : void 0,
+              _.bclan_account ? _.owner_steam_id?.GetAccountID() : void 0,
             ),
             _ = (0, _._)(_) ? _ : null,
             _ = (0, _._)(_) ? _ : null;
           _.comment_type == _._
-            ? ((_ = _.owner_steam_id) == null
-                ? void 0
-                : _.ConvertTo64BitString()) == _
+            ? _.owner_steam_id?.ConvertTo64BitString() == _
               ? _ == _.oYe && _
                 ? (_ = (0, _._)(
                     "#SteamNotifications_Comment_Your_Profile_By",
@@ -9258,11 +9130,8 @@
                       _,
                     ))
                 : (_ = (0, _._)("#SteamNotifications_Comment_Profile"))
-            : _.comment_type == _._ &&
-                ((_ = _.json_data) == null ? void 0 : _.file_type) == _.pmA
-              ? ((_ = _.owner_steam_id) == null
-                  ? void 0
-                  : _.ConvertTo64BitString()) == _
+            : _.comment_type == _._ && _.json_data?.file_type == _.pmA
+              ? _.owner_steam_id?.ConvertTo64BitString() == _
                 ? _
                   ? (_ = (0, _._)(
                       "#SteamNotifications_Comment_Your_Screenshot_Game",
@@ -9277,10 +9146,7 @@
                       _,
                     ))
                   : (_ = (0, _._)("#SteamNotifications_Comment_Screenshot"))
-              : !_ &&
-                (_ = _.json_data) != null &&
-                _.title &&
-                (_ = _.json_data.title);
+              : !_ && _.json_data?.title && (_ = _.json_data.title);
           let _ = null;
           _.brate_limited
             ? _.comment_type == _._ && _.bis_forum && _
@@ -9332,8 +9198,7 @@
                 ],
               });
             } else
-              _ != null &&
-                _.avatar_medium_url &&
+              _?.avatar_medium_url &&
                 (_ = (0, _.jsx)("img", {
                   className: _,
                   src: _.avatar_medium_url,
@@ -9375,7 +9240,6 @@
               });
         }
         function _(_) {
-          var _;
           let {
             fallbackLogo: _,
             data: _,
@@ -9399,7 +9263,7 @@
           let _ = "",
             _ = null;
           if (_) {
-            const _ = (_ = _.name) != null ? _ : "";
+            const _ = _.name ?? "";
             (_ = _),
               _.count == 1
                 ? _
@@ -9412,7 +9276,7 @@
                         style: {
                           color: "#FFFFFF",
                         },
-                        children: _ == null ? void 0 : _.formatted_final_price,
+                        children: _?.formatted_final_price,
                       }),
                     ))
                   : (_ = (0, _._)(
@@ -9421,7 +9285,7 @@
                         style: {
                           color: "#FFFFFF",
                         },
-                        children: _ == null ? void 0 : _.formatted_final_price,
+                        children: _?.formatted_final_price,
                       }),
                     ))
                 : _.count == 2
@@ -9548,10 +9412,10 @@
             children: _.children,
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        let __webpack_require__ = null,
-          __webpack_require__ = !1;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        let _ = null,
+          _ = !1;
         function _() {
           return (
             _ ||
@@ -9594,7 +9458,6 @@
             : null;
         }
         function _(_) {
-          var _, _;
           const {
               rollup: _,
               onNotificationClick: _,
@@ -9603,22 +9466,17 @@
               onHide: _,
             } = _,
             _ = _(_.item.notification_type, _.item.body_data),
-            _ =
-              (_ = (0, _._)(_.type).replace("k_ESteamNotificationType_", "")) ==
-              null
-                ? void 0
-                : _.toLowerCase(),
-            _ = (0, _._)(
-              (_ = _ == null ? void 0 : _.link) != null ? _ : "#",
-              _,
-            ),
+            _ = (0, _._)(_.type)
+              .replace("k_ESteamNotificationType_", "")
+              ?.toLowerCase(),
+            _ = (0, _._)(_?.link ?? "#", _),
             _ = () =>
               _(() => {
-                _ != null && _.link && _ && window.location.assign(_);
+                _?.link && _ && window.location.assign(_);
               }, _.item),
             _ = (_) => _(() => {}, _.item, _);
           return (0, _.jsx)("a", {
-            href: _ != null && _.link ? _ : "#",
+            href: _?.link ? _ : "#",
             onMouseDown: _,
             children: (0, _.jsx)(_, {
               icon: _(_.type),
@@ -9664,7 +9522,6 @@
           });
         }
         function _(_) {
-          var _, _;
           const {
               steamid: _,
               url: _,
@@ -9681,14 +9538,8 @@
             _ = () => _(() => window.location.assign(_), _.item);
           if (!_) return null;
           const _ = !_,
-            _ = (0, _._)(
-              _,
-              (_ = _ == null ? void 0 : _.m_strPlayerName) != null ? _ : "",
-            ),
-            _ = (0, _._)(
-              _,
-              (_ = _ == null ? void 0 : _.m_strPlayerName) != null ? _ : "",
-            );
+            _ = (0, _._)(_, _?.m_strPlayerName ?? ""),
+            _ = (0, _._)(_, _?.m_strPlayerName ?? "");
           return (0, _.jsx)("a", {
             href: _,
             onMouseDown: _,
@@ -9696,7 +9547,7 @@
               title: _,
               body: _,
               bDataLoading: _,
-              logoUrl: _ == null ? void 0 : _.avatar_url_medium,
+              logoUrl: _?.avatar_url_medium,
               icon: (0, _.jsx)(_.Qte, {}),
               onActivate: _,
               location: _,
@@ -9748,13 +9599,13 @@
               eUIMode: _,
               timestamp: _.timestamp,
               nUnread: _.rgunread.length,
-              displayName: _ == null ? void 0 : _.m_strPlayerName,
+              displayName: _?.m_strPlayerName,
               bNewIndicator: (0, _._)(_.item),
               onHide: _,
             }),
           });
         }
-        const __webpack_require__ = (_) => {
+        const _ = (_) => {
           const {
               rollup: _,
               onNotificationClick: _,
@@ -9807,14 +9658,13 @@
               eUIMode: _,
               timestamp: _.timestamp,
               nUnread: _.rgunread.length,
-              senderName: _ == null ? void 0 : _.m_strPlayerName,
+              senderName: _?.m_strPlayerName,
               bNewIndicator: (0, _._)(_.item),
               onHide: _,
             }),
           });
         }
         function _(_) {
-          var _;
           const {
               rollup: _,
               onNotificationClick: _,
@@ -9842,7 +9692,7 @@
             _ = _
               ? (0, _._)(
                   "#SteamNotifications_RequestedGameAddedBody",
-                  (_ = _.name) != null ? _ : "",
+                  _.name ?? "",
                 )
               : "";
           return (0, _.jsx)("a", {
@@ -9852,7 +9702,7 @@
               title: _,
               body: _,
               bDataLoading: _,
-              logoUrl: _ == null ? void 0 : _.avatar_url_medium,
+              logoUrl: _?.avatar_url_medium,
               icon: (0, _.jsx)(_.Qte, {}),
               onActivate: _,
               location: _,
@@ -9877,7 +9727,7 @@
             _ = (0, _._)(_.item, _, _),
             _ = _(_),
             { data: _ } = (0, _._)(
-              _ != null && _.appid
+              _?.appid
                 ? {
                     appid: _.appid,
                   }
@@ -9890,7 +9740,7 @@
             href: _,
             onMouseDown: _,
             children: (0, _.jsx)(_, {
-              appName: _ == null ? void 0 : _.name,
+              appName: _?.name,
               icon: (0, _.jsx)(_.rI_, {}),
               fallbackLogo: (0, _.jsx)(_.Qte, {}),
               onActivate: _,
@@ -9931,15 +9781,14 @@
               data: _,
               timestamp: _.timestamp,
               nUnread: _.rgunread.length,
-              requestorAvatarURL: _ == null ? void 0 : _.avatar_url_medium,
-              requestorName: _ == null ? void 0 : _.m_strPlayerName,
+              requestorAvatarURL: _?.avatar_url_medium,
+              requestorName: _?.m_strPlayerName,
               bNewIndicator: (0, _._)(_.item),
               onHide: _,
             }),
           });
         }
         function _(_) {
-          var _, _, _, _;
           const {
               rollup: _,
               onNotificationClick: _,
@@ -9954,24 +9803,15 @@
             _ = (_) => {
               _(() => {}, _.item, _);
             },
-            _ = (0, _._)(_)
-              ? (_ = _ == null ? void 0 : _.account_steam_id) == null
-                ? void 0
-                : _.GetAccountID()
-              : null,
+            _ = (0, _._)(_) ? _?.account_steam_id?.GetAccountID() : null,
             { data: _ } = (0, _._)(_),
-            _ = (0, _._)(_)
-              ? (_ = _ == null ? void 0 : _.owner_steam_id) == null
-                ? void 0
-                : _.GetAccountID()
-              : null,
+            _ = (0, _._)(_) ? _?.owner_steam_id?.GetAccountID() : null,
             { data: _ } = (0, _._)(_),
-            _ =
-              (_ = _.json_data) != null && _.app_id
-                ? {
-                    appid: (_ = _.json_data) == null ? void 0 : _.app_id,
-                  }
-                : void 0,
+            _ = _.json_data?.app_id
+              ? {
+                  appid: _.json_data?.app_id,
+                }
+              : void 0,
             { data: _ } = (0, _._)(_),
             [_, _] = _(),
             _ = _
@@ -9993,11 +9833,11 @@
               data: _,
               timestamp: _.timestamp,
               nUnread: _.rgunread.length,
-              postedByAvatarURL: _ == null ? void 0 : _.avatar_url_medium,
-              postedByDisplayName: _ == null ? void 0 : _.m_strPlayerName,
-              ownerDisplayName: _ == null ? void 0 : _.m_strPlayerName,
+              postedByAvatarURL: _?.avatar_url_medium,
+              postedByDisplayName: _?.m_strPlayerName,
+              ownerDisplayName: _?.m_strPlayerName,
               bNewIndicator: (0, _._)(_.item),
-              appName: _ == null ? void 0 : _.name,
+              appName: _?.name,
               onHide: _,
               commentTitle: _,
               commentBody: _,
@@ -10020,8 +9860,7 @@
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
           (0, _.useEffect)(() => {
-            var _;
-            if (_.count > 1 && (_ = _.appids) != null && _.length)
+            if (_.count > 1 && _.appids?.length)
               return _(
                 _._.STORE_BASE_URL +
                   `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
@@ -10067,16 +9906,16 @@
                 }),
               });
         }
-        const __webpack_require__ = {
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
-          [_.__webpack_require__.__webpack_require__]: _,
+        const _ = {
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
+          [_._._]: _,
         };
       },
       chunkid: (module) => {
@@ -10134,17 +9973,6 @@
           ShortTemplate: "fntOoeLPSTpmyXGGmgf99",
           TwoLine: "P1FhGdWv2NCXZXWsaKqqY",
           FullWidth: "_6EcDVXFHtdirTkETQjKOK",
-          BackgroundAnimation: "_3w9sEc9GApj44Kg099SX99",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3zMKq0Ov9QZXkvzuZaEgKn",
-          "ItemFocusAnim-darkGreySettings": "qadlYXxqgL7iZI-3WagQW",
-          "ItemFocusAnim-darkGrey": "_1bS3_eEfJQL1uvh9ueXwHc",
-          "ItemFocusAnim-grey": "K14jHOeux9t-cKLHsLZ_R",
-          "ItemFocusAnim-translucent-white-10": "_14krbCetggqySSjN1tprjy",
-          "ItemFocusAnim-translucent-white-20": "_3aWvV_8F4oUsZSPZ67nkhH",
-          "ItemFocusAnimBorder-darkGrey": "_3o2RzV2UyrY6P95PvLN1XB",
-          "ItemFocusAnim-green": "_3UOE3rRpe9MNf7xTX3P_FD",
-          focusAnimation: "_3CquyV6pQpz_ZeEYyhu-6r",
-          hoverAnimation: "X3tjvkOeBNndhakzDz7bk",
         };
       },
       chunkid: (module) => {
@@ -10199,17 +10027,6 @@
           loading: "_2PdZZCNo176UV7FcPPdqTt",
           BottomBar: "_3yiWpBXwEmDLlaIupVXjUt",
           NewIndicator: "_1pIhbqWsrCVPaGGYc6fT-H",
-          BackgroundAnimation: "_2THWJm_DP4_8_21tEsXSSj",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3TDFCqwgSFsXL90HH5PmyQ",
-          "ItemFocusAnim-darkGreySettings": "_2V49icFFKCzM2imCbWVQKz",
-          "ItemFocusAnim-darkGrey": "_22M7t0tCHSgmIcx2rwkyDn",
-          "ItemFocusAnim-grey": "lhtmiPnDLy_PH3nWN5N8F",
-          "ItemFocusAnim-translucent-white-10": "xPu5sAUAb9KZcZojHZeok",
-          "ItemFocusAnim-translucent-white-20": "_35HEPLHufn9k-5gTKvZYrO",
-          "ItemFocusAnimBorder-darkGrey": "TQ99CK6pDp4hhQZWjAgGz",
-          "ItemFocusAnim-green": "Rxe4URLYwNKRWJ2UaiQq2",
-          focusAnimation: "_1vcir9Vcuml6I0DWyCei3i",
-          hoverAnimation: "_3dGxvxYZPEwyYDQfin8FOd",
         };
       },
       chunkid: (module) => {
@@ -10268,17 +10085,6 @@
           FriendIndicator: "_2Hphxk564S5yQHog-MFXfN",
           HideButton: "_3M-7E5Nj8iNX_jL5pAQDy_",
           SteamNotificationWrapper: "UmtNgXD92RoDeYjxKEskk",
-          BackgroundAnimation: "CHduhRYQLY29chQ5oLbsR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3bOlzQnTJZnV9rTU3NSxJh",
-          "ItemFocusAnim-darkGreySettings": "_1bdnqXVo31tiUrXoxNB3wW",
-          "ItemFocusAnim-darkGrey": "uOdBxiMFNvmWe8MWKL2vT",
-          "ItemFocusAnim-grey": "_9s1knb2MNj9uD9M1SCh2u",
-          "ItemFocusAnim-translucent-white-10": "_1YVG7HtpgQ26Yx-8ZWKCBi",
-          "ItemFocusAnim-translucent-white-20": "_3AcQtXPws6yWb9XuDRcDvV",
-          "ItemFocusAnimBorder-darkGrey": "_2pMCkkW6W_xYaepnqR1QDg",
-          "ItemFocusAnim-green": "_8sFcRF04vIhk1ou7_oMSI",
-          focusAnimation: "_1etMKTqAtC0g5-7msByztO",
-          hoverAnimation: "_3iNzRmuVGoWKgoa3u41Fdz",
         };
       },
       chunkid: (module) => {

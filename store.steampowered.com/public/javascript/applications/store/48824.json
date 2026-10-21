@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Produsul acesta nu este compatibil cu sistemele macOS echipate cu procesoare Intel. <1>Apasă aici</1> pentru mai multe informații.",
     "AppPage_PurchaseNote_Mod_Title": "Modificare creată de comunitate",
     "AppPage_PurchaseNote_Mod_LearnMore": "Apasă <1>aici</1> pentru a afla mai multe despre modificările de pe Steam.",
+    "AppPage_Franchise_SeeAll": "Vezi întreaga colecție %1$s pe Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Vezi întreaga %1$s pe Steam",
     "AppPage_Series_ContentTitle": "Conținutul serialului",
     "AppPage_Series_ExtraContent": "Conținut extra",
     "AppPage_Series_SeasonName_Season": "Sezonul %1$s",

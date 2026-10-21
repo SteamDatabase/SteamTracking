@@ -48,7 +48,8 @@
 	html.responsive #languageTable,
 	html.responsive .queue_ctn,
 	html.responsive .responsive_apppage_details_left,
-	html.responsive .responsive_apppage_details_right {
+	html.responsive .responsive_apppage_details_right,
+	html.responsive .responsive_apppage_details_right[data-featuretarget="game-rating-block"] > .block {
 		background: #121A24 !important;
 	}
 
@@ -409,7 +410,9 @@
 	html.responsive .responsive_apppage_details_right a {
 		font-size: 14px;
 	}
-	html.responsive .responsive_apppage_details_right {
+	/* The rating block draws its .block inside a target that carries the right column class. */
+	html.responsive .responsive_apppage_details_right,
+	html.responsive .responsive_apppage_details_right[data-featuretarget="game-rating-block"] > .block {
 		padding-left: 0px !important;
 		padding-right: 0px !important;
 		padding-top: 0px !important;

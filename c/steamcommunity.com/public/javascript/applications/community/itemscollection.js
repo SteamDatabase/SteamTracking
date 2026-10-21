@@ -115,10 +115,9 @@
                 _.add(`${_.appid}_${_.item_type}`);
               });
               const _ = new Set();
-              _ == null ||
-                _.forEach((_) => {
-                  _.add(_.community_item_type);
-                });
+              _?.forEach((_) => {
+                _.add(_.community_item_type);
+              });
               const _ = new Map();
               return (
                 _.filter(
@@ -171,16 +170,10 @@
               [_],
             ),
             [_, _, _] = _.useMemo(() => {
-              const _ =
-                  _ == null
-                    ? void 0
-                    : _.filter((_) => {
-                        const _ = _.get(_.item_type);
-                        return !(
-                          _ &&
-                          (_.item_class == _._ || _.item_class == _._)
-                        );
-                      }),
+              const _ = _?.filter((_) => {
+                  const _ = _.get(_.item_type);
+                  return !(_ && (_.item_class == _._ || _.item_class == _._));
+                }),
                 _ = _.filter((_) => _.item_class != _._ && _.item_class != _._),
                 _ = _.length || 0,
                 _ = _.length || 0;
@@ -288,12 +281,11 @@
             } = _,
             _ = (0, _.useMemo)(() => {
               const _ = new Set();
-              _ == null ||
-                _.forEach((_) => {
-                  _.add(
-                    `${_.item_definition.appid}_${_.item_definition.community_item_type}`,
-                  );
-                });
+              _?.forEach((_) => {
+                _.add(
+                  `${_.item_definition.appid}_${_.item_definition.community_item_type}`,
+                );
+              });
               const _ = new Set();
               _.forEach((_) => {
                 _.add(`${_.appid}_${_.community_item_type}`);
@@ -603,7 +595,7 @@
           _ = "appid",
           _ = "editor";
         function _() {
-          return (typeof self != "undefined" ? self.origin + "/" : "") ===
+          return (typeof self < "u" ? self.origin + "/" : "") ===
             _._.STORE_BASE_URL
             ? _._.STORE_BASE_URL
             : _._.COMMUNITY_BASE_URL;
@@ -621,13 +613,13 @@
             });
           if (!_._) throw new Error(`${_} answered ${_.status}`);
           const _ = await _.json();
-          if ((_ == null ? void 0 : _.success) == _._ && _.item_definitions)
+          if (_?.success == _._ && _.item_definitions)
             return _.item_definitions;
           throw new Error(
             "Community item definitions for app " +
               _ +
               " answered " +
-              (_ == null ? void 0 : _.success),
+              _?.success,
           );
         }
         function _(_, _) {
@@ -649,11 +641,9 @@
           const _ = _(_, _);
           return (0, _.useMemo)(
             () =>
-              _ == null
-                ? void 0
-                : _.find(
-                    (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
-                  ),
+              _?.find(
+                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
+              ),
             [_, _, _, _],
           );
         }
@@ -745,16 +735,9 @@
               });
         }
         function _(_) {
-          var _, _, _, _;
           const { section: _, rewardDef: _, language: _ } = _,
-            _ = (0, _._)(
-              (_ = _.appid) != null ? _ : 0,
-              (_ = _.community_item_type) != null ? _ : 0,
-            ),
-            [_] = (0, _._)(() => {
-              var _;
-              return [!!((_ = _.rewards) != null && _.show_reward_item_name)];
-            });
+            _ = (0, _._)(_.appid ?? 0, _.community_item_type ?? 0),
+            [_] = (0, _._)(() => [!!_.rewards?.show_reward_item_name]);
           let _;
           switch (_.community_class) {
             case _._:
@@ -779,13 +762,12 @@
             href: _,
             children: [
               (0, _.jsx)(_, {
-                appid: (_ = _.appid) != null ? _ : 0,
-                community_item_type:
-                  (_ = _.community_item_type) != null ? _ : 0,
+                appid: _.appid ?? 0,
+                community_item_type: _.community_item_type ?? 0,
               }),
               !!_ &&
                 (0, _.jsx)("span", {
-                  children: _ == null ? void 0 : _.item_name,
+                  children: _?.item_name,
                 }),
             ],
           });
@@ -810,8 +792,7 @@
               (_) => {
                 _.isIntersecting &&
                   _((_) =>
-                    (_ == null ? void 0 : _.appID) == _ &&
-                    (_ == null ? void 0 : _.snr) == _
+                    _?.appID == _ && _?.snr == _
                       ? _
                       : {
                           appID: _,
@@ -883,19 +864,17 @@
             [_, _] = useState(null),
             [_, _] = _(_, _, _);
           useEffect(() => {
-            (_ == null ? void 0 : _.GetAppType()) ===
-              EStoreAppType.k_EStoreAppType_Demo && _(_.GetParentAppID());
+            _?.GetAppType() === EStoreAppType.k_EStoreAppType_Demo &&
+              _(_.GetParentAppID());
           }, [_]);
-          let _ =
-            _ != null && _.GetShortDescription()
-              ? StripBBCodeTags(_.GetShortDescription())
-              : "";
+          let _ = _?.GetShortDescription()
+            ? StripBBCodeTags(_.GetShortDescription())
+            : "";
           (!_ || _.length === 0) &&
             _ &&
-            (_ =
-              _ != null && _.GetShortDescription()
-                ? StripBBCodeTags(_.GetShortDescription())
-                : "");
+            (_ = _?.GetShortDescription()
+              ? StripBBCodeTags(_.GetShortDescription())
+              : "");
           const _ = _ == _ && (!_ || _ == _);
           return [_, _];
         }
@@ -961,13 +940,9 @@
                   _._.Get()
                     .QueueStoreItemRequest(_, _, _)
                     .then((_) => {
-                      !(_ != null && _.token.reason) &&
-                        _.current === _ &&
-                        _(_ == _._),
-                        _();
+                      !_?.token.reason && _.current === _ && _(_ == _._), _();
                     })),
-                () =>
-                  _ == null ? void 0 : _.cancel("useStoreItemCache: unmounting")
+                () => _?.cancel("useStoreItemCache: unmounting")
               );
             }, [
               _,
@@ -1013,15 +988,14 @@
           return _(_, _._._, _, _);
         }
         function _(_, _, _) {
-          var _;
           const [_, _] = _(_, _, _);
           let _;
-          (_ == null ? void 0 : _.GetStoreItemType()) == _._._ &&
-            !((_ = _.GetAssets()) != null && _.GetHeaderURL()) &&
-            (_ == null ? void 0 : _.GetIncludedAppIDs().length) == 1 &&
+          _?.GetStoreItemType() == _._._ &&
+            !_.GetAssets()?.GetHeaderURL() &&
+            _?.GetIncludedAppIDs().length == 1 &&
             (_ = _.GetIncludedAppIDs()[0]);
           const [_, _] = _(_, _);
-          return _ && _ != null && _.BIsVisible() ? [_, _] : [_, _];
+          return _ && _?.BIsVisible() ? [_, _] : [_, _];
         }
         function _(_, _, _, _) {
           const _ = (0, _._)(),

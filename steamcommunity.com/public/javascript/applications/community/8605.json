@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "解鎖文章（%1$s）",
     "moderation_actions_sustain": "維持原處理決定",
     "moderation_actions_sustain_multiple": "維持原處理決定（%1$s）",
+    "moderation_actions_sustain_short": "維持",
     "moderation_actions_suspicious": "標記可疑內容",
     "moderation_actions_suspicious_multiple": "標記可疑內容（%1$s）",
     "moderation_actions_unknown": "不明",

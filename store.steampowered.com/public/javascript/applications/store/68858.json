@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "상호 작용 요소",
     "GameRating_OnlineMusicNotice": "온라인 음악에는 ESRB 등급이 적용되지 않습니다.",
     "GameRating_OnlineInteractionsNotice": "온라인 상호 작용에는 ESRB 등급이 적용되지 않습니다.",
-    "GameRating_ContentCategoryDescriptor_64": "게임 내 채팅 필터링"
+    "GameRating_ContentCategoryDescriptor_64": "게임 내 채팅 필터링",
+    "GameRating_ContentCategories_Title": "콘텐츠",
+    "GameRating_Ratings_Title": "등급"
 }

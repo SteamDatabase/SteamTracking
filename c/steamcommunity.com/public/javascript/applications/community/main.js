@@ -154,7 +154,7 @@
         function _(_) {
           const { managerOverride: _ } = _,
             _ = (0, _._)(),
-            _ = _ != null ? _ : _,
+            _ = _ ?? _,
             _ = (0, _._)();
           return (
             (0, _._)(_.OnMenusChanged, _),
@@ -169,9 +169,9 @@
         function _(_) {
           const { ActiveMenu: _ } = _,
             _ = _.useCallback(() => {
-              _ == null || _.OnCancel();
+              _?.OnCancel();
             }, [_]);
-          _.useEffect(() => () => (_ == null ? void 0 : _.Hide()), [_]);
+          _.useEffect(() => () => _?.Hide(), [_]);
           let _ = [],
             _ = null;
           (0, _._)(() => {
@@ -624,17 +624,10 @@
         const _ = new _._("FocusHistory").Debug;
         function _(_) {
           const _ = (_) => {
-              var _, _;
               _(
                 `preserving state and suppressing focus for tree ${_._} for navigation type ${_.navigationType}`,
               );
-              const _ =
-                (_ =
-                  (_ = window.navigation.currentEntry) == null
-                    ? void 0
-                    : _.getState()) != null
-                  ? _
-                  : {};
+              const _ = window.navigation.currentEntry?.getState() ?? {};
               if (_.navigationType != "replace") {
                 const _ = (0, _._)(_.Root);
                 window.navigation.updateCurrentEntry({
@@ -647,8 +640,7 @@
                 _[_] &&
                   _.intercept({
                     async handler() {
-                      var _;
-                      const _ = (_ = _.destination.getState()) != null ? _ : {},
+                      const _ = _.destination.getState() ?? {},
                         { [_(_)]: _, ..._ } = _;
                       window.navigation.updateCurrentEntry({
                         state: {
@@ -680,7 +672,7 @@
           );
         }
         function _(_, _) {
-          const _ = _ != null ? _ : _(_);
+          const _ = _ ?? _(_);
           return (
             _(
               `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
@@ -692,12 +684,7 @@
           return `FocusHistory_${_._}`;
         }
         function _(_) {
-          var _;
-          const _ =
-            (_ = window.navigation.currentEntry) == null
-              ? void 0
-              : _.getState();
-          return _ == null ? void 0 : _[_(_)];
+          return window.navigation.currentEntry?.getState()?.[_(_)];
         }
         let _;
         function _() {
@@ -749,68 +736,42 @@
         }
         const _ = "FocusHistoryWaitForPage";
         function _() {
-          var _;
-          const _ =
-            (_ = window.navigation.currentEntry) == null
-              ? void 0
-              : _.getState();
-          return (
-            _(`Wait for page? ${_ != null && _[_] ? "wait" : "no"} `, _),
-            !!(_ != null && _[_])
-          );
+          const _ = window.navigation.currentEntry?.getState();
+          return _(`Wait for page? ${_?.[_] ? "wait" : "no"} `, _), !!_?.[_];
         }
         function _() {
-          var _;
           window.navigation.updateCurrentEntry({
             state: {
-              ...((_ = window.navigation.currentEntry) == null
-                ? void 0
-                : _.getState()),
+              ...window.navigation.currentEntry?.getState(),
               [_]: !0,
             },
           });
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         const _ = new _._("FocusNavigation").Debug,
           _ = new _._("GamepadEvents").Debug;
         class _ {
+          m_Controller;
+          m_context;
+          m_window;
+          m_ParentNavTree;
+          m_rgChildNavTrees = [];
+          m_ID;
+          m_valueIsMounted = (0, _._)(!1);
+          m_bIsEnabled = !1;
+          m_tsLastActivated;
+          m_Root;
+          m_onActivateCallbacks = new _._();
+          m_onDeactivateCallbacks = new _._();
+          m_onActiveFocusStateChangedCallbacks = new _._();
+          m_onChildTreesChanged = new _._();
+          m_Properties;
+          m_bExcludeFromScrollRegionSearch = !1;
+          m_onGlobalButtonDown;
+          m_rgOnUnhandledButton = [];
+          m_rgGlobalButtonHandlers = [];
           constructor(_, _, _, _, _) {
-            _(this, "m_Controller"),
-              _(this, "m_context"),
-              _(this, "m_window"),
-              _(this, "m_ParentNavTree"),
-              _(this, "m_rgChildNavTrees", []),
-              _(this, "m_ID"),
-              _(this, "m_valueIsMounted", (0, _._)(!1)),
-              _(this, "m_bIsEnabled", !1),
-              _(this, "m_tsLastActivated"),
-              _(this, "m_Root"),
-              _(this, "m_onActivateCallbacks", new _._()),
-              _(this, "m_onDeactivateCallbacks", new _._()),
-              _(this, "m_onActiveFocusStateChangedCallbacks", new _._()),
-              _(this, "m_onChildTreesChanged", new _._()),
-              _(this, "m_Properties"),
-              _(this, "m_bExcludeFromScrollRegionSearch", !1),
-              _(this, "m_onGlobalButtonDown"),
-              _(this, "m_rgOnUnhandledButton", []),
-              _(this, "m_rgGlobalButtonHandlers", []),
-              _(this, "m_lastFocusNode"),
-              _(this, "m_bWasActiveForLastFocusChange"),
-              _(this, "m_lastFocusNodeXMovement", new _()),
-              _(this, "m_lastFocusNodeYMovement", new _()),
-              _(this, "m_DeferredFocus", new _(this)),
-              (this.m_Controller = _),
+            (this.m_Controller = _),
               (this.m_context = _),
               (this.m_ID = _),
               (this.m_ParentNavTree = _),
@@ -842,12 +803,10 @@
             return this.m_window;
           }
           BUseVirtualFocus() {
-            var _;
-            return (_ = this.m_Properties.virtualFocus) != null ? _ : !1;
+            return this.m_Properties.virtualFocus ?? !1;
           }
           BIsModal() {
-            var _;
-            return (_ = this.m_Properties.modal) != null ? _ : !1;
+            return this.m_Properties.modal ?? !1;
           }
           FindModalDescendant() {
             for (const _ of this.m_rgChildNavTrees) {
@@ -869,6 +828,10 @@
             this.m_valueIsMounted.Value &&
               this.m_Controller.OnGamepadNavigationTreeFocused(this, _);
           }
+          m_lastFocusNode;
+          m_bWasActiveForLastFocusChange;
+          m_lastFocusNodeXMovement = new _();
+          m_lastFocusNodeYMovement = new _();
           GetLastFocusedNode() {
             return this.m_lastFocusNode;
           }
@@ -921,9 +884,8 @@
               _ || this.TransferFocus(_, this.Root);
           }
           Activate(_ = !1) {
-            var _;
             this.m_Controller.OnGamepadNavigationTreeActivated(
-              (_ = this.FindModalDescendant()) != null ? _ : this,
+              this.FindModalDescendant() ?? this,
               _,
             );
           }
@@ -1061,6 +1023,7 @@
               _
             );
           }
+          m_DeferredFocus = new _(this);
           get DeferredFocus() {
             return this.m_DeferredFocus;
           }
@@ -1075,8 +1038,8 @@
             );
           }
           TransferFocus(_, _, _, _) {
-            (_ = _ != null ? _ : _._.INVALID),
-              (_ = _ != null ? _ : !1),
+            (_ = _ ?? _._.INVALID),
+              (_ = _ ?? !1),
               this.m_Controller.BatchedUpdate(() =>
                 this.TransferFocusInternal(_, _, _, _),
               );
@@ -1091,8 +1054,8 @@
               return;
             _(
               `Transfer focus in ${this._}, source: ${_ && _._[_]}, from/to:`,
-              _ == null ? void 0 : _.m_element,
-              _ == null ? void 0 : _.m_element,
+              _?.m_element,
+              _?.m_element,
             );
             const _ = {
                 blurredNode: _,
@@ -1124,13 +1087,9 @@
               (this.m_lastFocusNode = _),
               (this.m_bWasActiveForLastFocusChange = this.BIsActive()),
               _ == "x"
-                ? this.m_lastFocusNodeXMovement.SetNode(
-                    _ == null ? void 0 : _.Element,
-                  )
+                ? this.m_lastFocusNodeXMovement.SetNode(_?.Element)
                 : _ == "y"
-                  ? this.m_lastFocusNodeYMovement.SetNode(
-                      _ == null ? void 0 : _.Element,
-                    )
+                  ? this.m_lastFocusNodeYMovement.SetNode(_?.Element)
                   : (this.m_lastFocusNodeXMovement.Reset(),
                     this.m_lastFocusNodeYMovement.Reset()),
               this.m_context.OnFocusChangeComplete(_);
@@ -1146,9 +1105,8 @@
           return _;
         }
         class _ {
-          constructor() {
-            _(this, "m_element"), _(this, "m_rect");
-          }
+          m_element;
+          m_rect;
           SetNode(_) {
             (this.m_element = _),
               (this.m_rect = _ ? _.getBoundingClientRect() : void 0);
@@ -1157,20 +1115,19 @@
             this.SetNode(void 0);
           }
           GetRect() {
-            var _;
-            return (_ = this.m_element) != null && _.isConnected
+            return this.m_element?.isConnected
               ? this.m_element.getBoundingClientRect()
               : this.m_rect;
           }
         }
         class _ {
+          m_tree;
+          m_target;
+          m_interval;
+          m_schExecuteQueuedFocus = new _._();
+          m_bSuppressed = !1;
           constructor(_) {
-            _(this, "m_tree"),
-              _(this, "m_target"),
-              _(this, "m_interval"),
-              _(this, "m_schExecuteQueuedFocus", new _._()),
-              _(this, "m_bSuppressed", !1),
-              (this.m_tree = _);
+            this.m_tree = _;
           }
           RequestFocus(_, _) {
             if (!_) {
@@ -1219,39 +1176,26 @@
             }
           }
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         const _ = new _._("FocusNavigation").Debug;
         class _ {
+          m_rootWindow;
+          m_activeWindow;
+          m_activeBrowserView;
+          m_valueIsActive = (0, _._)(!1);
+          m_controller;
+          m_rgGamepadNavigationTrees = [];
+          m_LastActiveNavTree;
+          m_LastActiveFocusNavTree;
+          m_bMounted = !0;
+          m_schDeferredActivate = new _._();
+          m_FocusChangedCallbacks = new _._();
+          m_NavTreeActivatedOrReactivatedCallbacks = new _._();
+          m_bIsGamepadInputSuppressed = !1;
+          m_bVR = !1;
+          m_fnGetNavTreeToActivateOverride;
           constructor(_, _, _, _) {
-            _(this, "m_rootWindow"),
-              _(this, "m_activeWindow"),
-              _(this, "m_activeBrowserView"),
-              _(this, "m_valueIsActive", (0, _._)(!1)),
-              _(this, "m_controller"),
-              _(this, "m_rgGamepadNavigationTrees", []),
-              _(this, "m_LastActiveNavTree"),
-              _(this, "m_LastActiveFocusNavTree"),
-              _(this, "m_bMounted", !0),
-              _(this, "m_schDeferredActivate", new _._()),
-              _(this, "m_FocusChangedCallbacks", new _._()),
-              _(this, "m_NavTreeActivatedOrReactivatedCallbacks", new _._()),
-              _(this, "m_bIsGamepadInputSuppressed", !1),
-              _(this, "m_bVR", !1),
-              _(this, "m_fnGetNavTreeToActivateOverride"),
-              _(this, "m_iFocusChangeStack", 0),
-              _(this, "m_ActiveFocusChange"),
-              (this.m_controller = _),
+            (this.m_controller = _),
               (this.m_rootWindow = _),
               (this.m_activeWindow = _),
               (this.m_bIsGamepadInputSuppressed = _),
@@ -1264,14 +1208,13 @@
             return this.m_activeWindow;
           }
           FindNavTreeInFocusedWindow() {
-            var _;
             for (
               let _ = this.m_rgGamepadNavigationTrees.length - 1;
               _ >= 0;
               _--
             ) {
               const _ = this.m_rgGamepadNavigationTrees[_];
-              if ((_ = _.Window) != null && _.document.hasFocus()) return _;
+              if (_.Window?.document.hasFocus()) return _;
             }
           }
           FindNavTreeInWindow(_, _ = !0) {
@@ -1298,7 +1241,6 @@
           }
           SetActive(_, _, _ = void 0) {
             this.m_controller.BatchedUpdate(() => {
-              var _, _;
               if (_ && !this.m_controller.BCanActivateContext(this)) {
                 _(
                   `${this.LogName(_)} Skipping context activation due to CFocusNavWindowContext`,
@@ -1314,23 +1256,13 @@
                   this.m_controller.OnContextDeactivated(this, !1)),
                 this.m_valueIsActive.Set(_),
                 _ &&
-                  ((_ = this.m_LastActiveFocusNavTree) == null ||
-                    _.OnContextActiveStateChanged(_));
+                  this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
               const _ = this.m_LastActiveFocusNavTree;
-              if (
+              if (_ && _ === void 0 && _?.Window == (_ ?? this.m_rootWindow)) {
+                const _ = _?.GetLastFocusedNode()?.Element,
+                  _ = _?.ownerDocument.activeElement;
                 _ &&
-                _ === void 0 &&
-                (_ == null ? void 0 : _.Window) ==
-                  (_ != null ? _ : this.m_rootWindow)
-              ) {
-                const _ =
-                    (_ = _ == null ? void 0 : _.GetLastFocusedNode()) == null
-                      ? void 0
-                      : _.Element,
-                  _ = _ == null ? void 0 : _.ownerDocument.activeElement;
-                _ &&
-                  _ != null &&
-                  _.BIsActiveFocus() &&
+                  _?.BIsActiveFocus() &&
                   (!_ || _ == _.ownerDocument.body) &&
                   _.focus({
                     preventScroll: !0,
@@ -1355,12 +1287,11 @@
               this.SetActive(!0, _, _));
           }
           OnDeactivate(_) {
-            var _;
             this.m_activeWindow == _
               ? (_(`${this.LogName(_)} Deactivate context for window`),
                 this.SetActive(!1, _))
               : _(
-                  `${this.LogName(_)} Blurred, but not deactivating because (${((_ = this.m_activeWindow)) == null ? void 0 : _.name}) has focus.`,
+                  `${this.LogName(_)} Blurred, but not deactivating because (${this.m_activeWindow?.name}) has focus.`,
                 );
           }
           OnDeactivateBrowserView(_, _) {
@@ -1394,13 +1325,9 @@
             this.m_fnGetNavTreeToActivateOverride = _;
           }
           FindNavTreeToActivate() {
-            var _, _;
             let _;
-            const _ =
-              (_ = this.m_fnGetNavTreeToActivateOverride) == null
-                ? void 0
-                : _.call(this);
-            if (_ != null && _.BIsEnabled()) _ = _;
+            const _ = this.m_fnGetNavTreeToActivateOverride?.();
+            if (_?.BIsEnabled()) _ = _;
             else
               for (
                 let _ = this.m_rgGamepadNavigationTrees.length - 1;
@@ -1413,9 +1340,7 @@
                   break;
                 }
               }
-            return (_ = _ == null ? void 0 : _.FindModalDescendant()) != null
-              ? _
-              : _;
+            return _?.FindModalDescendant() ?? _;
           }
           SetActiveNavTree(_, _ = !1) {
             if (_ && this.m_LastActiveNavTree == _) {
@@ -1431,7 +1356,7 @@
               (!_ || !_.BUseVirtualFocus()) &&
                 (this.m_LastActiveFocusNavTree = _),
               _(
-                `${this.LogName(_ == null ? void 0 : _.Window)} Move from nav tree ${_ == null ? void 0 : _._} to nav tree ${_ == null ? void 0 : _._} ${_ ? "taking focus" : "no focus"}`,
+                `${this.LogName(_?.Window)} Move from nav tree ${_?._} to nav tree ${_?._} ${_ ? "taking focus" : "no focus"}`,
               ),
               _ && this.m_rgGamepadNavigationTrees.push(_),
               _ &&
@@ -1452,7 +1377,7 @@
           async UnregisterGamepadNavigationTree(_) {
             _._(this.m_rgGamepadNavigationTrees, _),
               _(
-                `(${this.m_rootWindow.name}) Unregister tree ${_ == null ? void 0 : _._} ${this.m_LastActiveFocusNavTree == _ ? "(was active)" : "(inactive)"}`,
+                `(${this.m_rootWindow.name}) Unregister tree ${_?._} ${this.m_LastActiveFocusNavTree == _ ? "(was active)" : "(inactive)"}`,
               ),
               _.SetIsEnabled(!1),
               this.m_LastActiveNavTree == _ &&
@@ -1469,6 +1394,8 @@
           get NavTreeActivatedOrReactivatedCallbacks() {
             return this.m_NavTreeActivatedOrReactivatedCallbacks;
           }
+          m_iFocusChangeStack = 0;
+          m_ActiveFocusChange;
           OnFocusChangeStart(_, _, _, _) {
             return (
               this.m_iFocusChangeStack == 0
@@ -1486,7 +1413,6 @@
             );
           }
           OnFocusChangeComplete(_) {
-            var _;
             if (
               (this.m_iFocusChangeStack--,
               (0, _._)(_ == this.m_iFocusChangeStack, "out of order focus pop"),
@@ -1496,7 +1422,7 @@
                 source: _,
                 from: _,
                 _: _,
-              } = (_ = this.m_ActiveFocusChange) != null ? _ : {};
+              } = this.m_ActiveFocusChange ?? {};
               this.m_FocusChangedCallbacks.Dispatch(_, _, _);
             }
           }
@@ -1508,15 +1434,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1525,8 +1442,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new _._("FocusNavigation").Debug,
           _ = new _._("FocusNavigation").Assert,
           _ = "focus-nav-show-debug-focus-ring";
@@ -1538,57 +1454,43 @@
         }
         function _(_, _) {
           return (
-            (_ == null ? void 0 : _.eActivationSourceType) ===
-              (_ == null ? void 0 : _.eActivationSourceType) &&
-            (_ == null ? void 0 : _.nActiveGamepadIndex) ===
-              (_ == null ? void 0 : _.nActiveGamepadIndex) &&
-            (_ == null ? void 0 : _.nLastActiveGamepadIndex) ===
-              (_ == null ? void 0 : _.nLastActiveGamepadIndex)
+            _?.eActivationSourceType === _?.eActivationSourceType &&
+            _?.nActiveGamepadIndex === _?.nActiveGamepadIndex &&
+            _?.nLastActiveGamepadIndex === _?.nLastActiveGamepadIndex
           );
         }
         class _ {
+          m_rgGamepadInputSources = [];
+          m_DefaultContext;
+          m_rgAllContexts = [];
+          m_ActiveContext;
+          m_LastActiveContext;
+          m_ContextSetChangedCallbacks = new _._();
+          m_rgCatchAllGamepadInput = [];
+          m_UnhandledButtonEventsCallbacks = new _._();
+          m_navigationSource = (0, _._)(
+            {
+              eActivationSourceType: _._.UNKNOWN,
+              nActiveGamepadIndex: -1,
+              nLastActiveGamepadIndex: -1,
+            },
+            _,
+          );
+          m_navigationSourceSupportsFocus = (0, _._)(
+            this.m_navigationSource,
+            (_) => (0, _._)(_?.eActivationSourceType),
+          );
+          m_bShowDebugFocusRing = (0, _._)(!1);
+          m_glyphInfo = (0, _._)({
+            nControllerType: _._,
+            nControllerStyle: _._,
+          });
+          m_bRestoringHistory = !1;
+          m_nSystemKeyAppIDHint;
+          m_fnSystemKeyContextResolver;
+          m_fnGamepadEventUpdateBatcher = (_) => _();
           constructor() {
-            _(this, "m_rgGamepadInputSources", []),
-              _(this, "m_DefaultContext"),
-              _(this, "m_rgAllContexts", []),
-              _(this, "m_ActiveContext"),
-              _(this, "m_LastActiveContext"),
-              _(this, "m_ContextSetChangedCallbacks", new _._()),
-              _(this, "m_rgCatchAllGamepadInput", []),
-              _(this, "m_UnhandledButtonEventsCallbacks", new _._()),
-              _(
-                this,
-                "m_navigationSource",
-                (0, _._)(
-                  {
-                    eActivationSourceType: _._.UNKNOWN,
-                    nActiveGamepadIndex: -1,
-                    nLastActiveGamepadIndex: -1,
-                  },
-                  _,
-                ),
-              ),
-              _(
-                this,
-                "m_navigationSourceSupportsFocus",
-                (0, _._)(this.m_navigationSource, (_) =>
-                  (0, _._)(_ == null ? void 0 : _.eActivationSourceType),
-                ),
-              ),
-              _(this, "m_bShowDebugFocusRing", (0, _._)(!1)),
-              _(
-                this,
-                "m_glyphInfo",
-                (0, _._)({
-                  nControllerType: _._,
-                  nControllerStyle: _._,
-                }),
-              ),
-              _(this, "m_bRestoringHistory", !1),
-              _(this, "m_nSystemKeyAppIDHint"),
-              _(this, "m_fnSystemKeyContextResolver"),
-              _(this, "m_fnGamepadEventUpdateBatcher", (_) => _()),
-              (window.FocusNavController = this);
+            window.FocusNavController = this;
           }
           Init() {
             this.m_bShowDebugFocusRing.Set(_());
@@ -1616,16 +1518,12 @@
             return this.m_ActiveContext;
           }
           BHasVRGamepadNavigationContext() {
-            var _;
-            return (_ = this.m_rgAllContexts) == null
-              ? void 0
-              : _.some((_) => _.BIsVR() && !_.BIsGamepadInputSuppressed());
+            return this.m_rgAllContexts?.some(
+              (_) => _.BIsVR() && !_.BIsGamepadInputSuppressed(),
+            );
           }
           FindContextForRootWindow(_) {
-            var _;
-            return (_ = this.m_rgAllContexts) == null
-              ? void 0
-              : _.find((_) => _.RootWindow == _);
+            return this.m_rgAllContexts?.find((_) => _.RootWindow == _);
           }
           BCanActivateContext(_) {
             return !(
@@ -1634,7 +1532,6 @@
             );
           }
           FindAnActiveContext() {
-            var _;
             if (!this.m_ActiveContext && this.m_rgAllContexts.length != 0) {
               console.warn("No active context; finding one");
               for (const _ of this.m_rgAllContexts) {
@@ -1658,10 +1555,7 @@
                 ),
                 (this.m_ActiveContext = this.m_LastActiveContext),
                 this.m_ActiveContext.OnActivate(
-                  (_ = this.m_LastActiveContext.m_LastActiveFocusNavTree) ==
-                    null
-                    ? void 0
-                    : _.Window,
+                  this.m_LastActiveContext.m_LastActiveFocusNavTree?.Window,
                 )),
               this.m_ActiveContext
             );
@@ -1685,15 +1579,7 @@
                 _.RegisterForNavigationTypeChange(this.OnNavigationTypeChange)
                   .Unregister,
               ),
-              _.SetRepeatAllowed(() => {
-                var _, _;
-                return (_ =
-                  (_ = this.m_ActiveContext) == null
-                    ? void 0
-                    : _.BIsActive()) != null
-                  ? _
-                  : !1;
-              }),
+              _.SetRepeatAllowed(() => this.m_ActiveContext?.BIsActive() ?? !1),
               _.Push(() => _.SetRepeatAllowed()),
               _.GetSourceType() == _._.GAMEPAD && this.UpdateSourceToGamepad(),
               _.Push(_.Init(this).Unregister),
@@ -1722,19 +1608,11 @@
             return this.m_glyphInfo;
           }
           DispatchVirtualButtonClick(_, _, _) {
-            var _, _;
             let _;
-            if (_)
-              _ =
-                (_ = this.GetActiveContext()) != null
-                  ? _
-                  : this.FindAnActiveContext();
+            if (_) _ = this.GetActiveContext() ?? this.FindAnActiveContext();
             else if (_ && !(0, _._)(_)) {
-              const _ =
-                  (_ = this.GetActiveContext()) != null
-                    ? _
-                    : this.FindAnActiveContext(),
-                _ = _ == null ? void 0 : _.m_LastActiveNavTree;
+              const _ = this.GetActiveContext() ?? this.FindAnActiveContext(),
+                _ = _?.m_LastActiveNavTree;
               _ &&
                 !_.GetLastFocusedNode() &&
                 _.Root.Element &&
@@ -1742,7 +1620,7 @@
             }
             this.OnButtonDown(
               _,
-              _ != null ? _ : _._.GAMEPAD,
+              _ ?? _._.GAMEPAD,
               -1,
               void 0,
               void 0,
@@ -1753,7 +1631,7 @@
             ),
               this.OnButtonUp(
                 _,
-                _ != null ? _ : _._.GAMEPAD,
+                _ ?? _._.GAMEPAD,
                 -1,
                 void 0,
                 void 0,
@@ -1781,48 +1659,32 @@
             );
           }
           GetEventTarget(_, _, _ = !1) {
-            var _, _, _, _, _, _, _, _, _;
             let _ = this.GetActiveContext();
             if (
               this.m_nSystemKeyAppIDHint &&
-              !(_ != null && _.FindNavTreeInFocusedWindow())
+              !_?.FindNavTreeInFocusedWindow()
             ) {
-              const _ =
-                (_ = this.m_fnSystemKeyContextResolver) == null
-                  ? void 0
-                  : _.call(this, this.m_nSystemKeyAppIDHint);
+              const _ = this.m_fnSystemKeyContextResolver?.(
+                this.m_nSystemKeyAppIDHint,
+              );
               _ &&
                 _ != _ &&
                 this.BCanActivateContext(_) &&
                 (_(
-                  `GetEventTarget: using ${_.LogName()} for system key AppID ${this.m_nSystemKeyAppIDHint} instead of ${((_ = _ == null ? void 0 : _.LogName())) != null ? _ : "no context"}`,
+                  `GetEventTarget: using ${_.LogName()} for system key AppID ${this.m_nSystemKeyAppIDHint} instead of ${_?.LogName() ?? "no context"}`,
                 ),
-                _ != null && _.ActiveWindow && _.OnDeactivate(_.ActiveWindow),
+                _?.ActiveWindow && _.OnDeactivate(_.ActiveWindow),
                 _.OnActivate(
-                  (_ =
-                    (_ = _.m_LastActiveFocusNavTree) == null
-                      ? void 0
-                      : _.Window) != null
-                    ? _
-                    : _.RootWindow,
+                  _.m_LastActiveFocusNavTree?.Window ?? _.RootWindow,
                 ),
                 (_ = _));
             }
             !_ && _ && (_ = this.FindAnActiveContext());
-            let _ =
-              (_ = _ == null ? void 0 : _.ActiveWindow) == null
-                ? void 0
-                : _.document.activeElement;
-            if (_ != null && _.m_LastActiveNavTree) {
+            let _ = _?.ActiveWindow?.document.activeElement;
+            if (_?.m_LastActiveNavTree) {
               if (
                 (_ ||
-                  (_ =
-                    (_ =
-                      (_ = this.m_navigationSource) == null
-                        ? void 0
-                        : _.Value) == null
-                      ? void 0
-                      : _.eActivationSourceType),
+                  (_ = this.m_navigationSource?.Value?.eActivationSourceType),
                 !_.m_LastActiveNavTree.GetLastFocusedNode() &&
                   (0, _._)(_) &&
                   (_(
@@ -1833,13 +1695,7 @@
               )
                 return [void 0, _];
               _.m_LastActiveNavTree.GetLastFocusedNode()
-                ? (_ =
-                    (_ =
-                      (_ = _.m_LastActiveNavTree) == null
-                        ? void 0
-                        : _.GetLastFocusedNode()) == null
-                      ? void 0
-                      : _.Element)
+                ? (_ = _.m_LastActiveNavTree?.GetLastFocusedNode()?.Element)
                 : _(
                     `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} still has no focused node - will fall back to document.activeElement`,
                   );
@@ -1876,9 +1732,8 @@
             );
           }
           OnButtonActionInternal(_, _, _, _, _, _, _, _, _, _) {
-            var _, _;
             for (let _ = this.m_rgCatchAllGamepadInput.length - 1; _ >= 0; _--)
-              if (this.m_rgCatchAllGamepadInput[_](_, _, _ != null ? _ : !1)) {
+              if (this.m_rgCatchAllGamepadInput[_](_, _, _ ?? !1)) {
                 _ &&
                   _(
                     "Ignoring button press - gamepad input is suppressed by parent window",
@@ -1894,17 +1749,17 @@
             if (
               ((_ == null || _ == null) &&
                 ([_, _] = this.GetEventTarget(_, _, _)),
-              _ != null && _.BIsGamepadInputSuppressed() && !_)
+              _?.BIsGamepadInputSuppressed() && !_)
             ) {
               _(
-                `Suppressing ${_._[_]} input on element ${_ == null ? void 0 : _.className} because tree ${((_ = _ == null ? void 0 : _.m_LastActiveNavTree)) == null ? void 0 : _._} has it disabled`,
+                `Suppressing ${_._[_]} input on element ${_?.className} because tree ${_?.m_LastActiveNavTree?._} has it disabled`,
               );
               return;
             }
             this.ChangeNavigationSource(_, _, _, _),
               _ &&
                 _(
-                  `Firing ${_._[_]} in tree ${((_ = _ == null ? void 0 : _.m_LastActiveNavTree)) == null ? void 0 : _._} at `,
+                  `Firing ${_._[_]} in tree ${_?.m_LastActiveNavTree?._} at `,
                   _,
                 ),
               this.BatchedUpdate(() =>
@@ -1925,22 +1780,19 @@
             this.m_fnGamepadEventUpdateBatcher(_);
           }
           OnNavigationTypeChange(_) {
-            var _, _, _;
             if (
               this.ChangeNavigationSource(_, -1) &&
-              !(
-                !document.hasFocus() &&
-                !((_ = this.m_LastActiveContext) != null && _.BIsVR())
-              ) &&
+              !(!document.hasFocus() && !this.m_LastActiveContext?.BIsVR()) &&
               (_ == _._.MOUSE || _ == _._.TOUCH) &&
-              (_ = this.m_ActiveContext) != null &&
-              _.m_LastActiveNavTree
+              this.m_ActiveContext?.m_LastActiveNavTree
             ) {
               const _ =
                   this.m_ActiveContext.m_LastActiveNavTree.GetLastFocusedNode(),
-                _ = _(_ == null ? void 0 : _.Element) ? _ : null;
-              (_ = this.m_ActiveContext.m_LastActiveNavTree) == null ||
-                _.TransferFocus(_._.APPLICATION, _);
+                _ = _(_?.Element) ? _ : null;
+              this.m_ActiveContext.m_LastActiveNavTree?.TransferFocus(
+                _._.APPLICATION,
+                _,
+              );
             }
           }
           NewGamepadNavigationTree(_, _, _, _) {
@@ -1966,58 +1818,37 @@
             _.WindowContext.SetActiveNavTree(_, _);
           }
           OnGamepadNavigationTreeFocused(_, _, _ = !1) {
-            var _, _, _, _;
             const _ = _.WindowContext;
             _ != this.m_ActiveContext &&
               _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
               _ != _.m_LastActiveFocusNavTree &&
                 _ != _.m_LastActiveNavTree &&
-                (((_ = _.m_LastActiveFocusNavTree) == null
-                  ? void 0
-                  : _.GetParentEmbeddedNavTree()) == _ ||
+                (_.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == _ ||
                 _.GetParentEmbeddedNavTree() == _.m_LastActiveFocusNavTree
                   ? _ == _._.AUTOFOCUS &&
-                    (_ = _.m_LastActiveNavTree) != null &&
-                    _.GetLastFocusedNode()
+                    _.m_LastActiveNavTree?.GetLastFocusedNode()
                     ? _(
-                        `There was an autofocus event in ${_._}, but the active nav tree is ${((_ = _.m_LastActiveFocusNavTree)) == null ? void 0 : _._} and we already have something focused.  Source: ${_ && _._[_]}.`,
+                        `There was an autofocus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} and we already have something focused.  Source: ${_ && _._[_]}.`,
                       )
                     : (_(
                         `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
                       ),
                       _.Activate())
                   : _(
-                      `There was a focus event in ${_._}, but the active nav tree is ${((_ = _.m_LastActiveFocusNavTree)) == null ? void 0 : _._} so it is being ignored.  Source: ${_ && _._[_]}.`,
+                      `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _._[_]}.`,
                     ));
           }
           BlurNavTree(_) {
             _.WindowContext.BlurNavTree(_);
           }
           IsActiveFocusNavTree(_) {
-            var _;
-            return !!(
-              _ &&
-              _ ==
-                ((_ = this.m_ActiveContext) == null
-                  ? void 0
-                  : _.m_LastActiveFocusNavTree)
-            );
+            return !!(_ && _ == this.m_ActiveContext?.m_LastActiveFocusNavTree);
           }
           IsActiveNavTree(_) {
-            var _;
-            return !!(
-              _ &&
-              _ ==
-                ((_ = this.m_ActiveContext) == null
-                  ? void 0
-                  : _.m_LastActiveNavTree)
-            );
+            return !!(_ && _ == this.m_ActiveContext?.m_LastActiveNavTree);
           }
           GetActiveNavTree() {
-            var _;
-            return (_ = this.m_ActiveContext) == null
-              ? void 0
-              : _.m_LastActiveNavTree;
+            return this.m_ActiveContext?.m_LastActiveNavTree;
           }
           BIsInActiveContext(_) {
             return !!(_ && _.WindowContext == this.m_ActiveContext);
@@ -2051,15 +1882,10 @@
             );
           }
           TakeFocusChangingIFrame() {
-            var _, _;
             window.focus();
             let _ =
-              ((_ = this.m_ActiveContext) == null
-                ? void 0
-                : _.m_LastActiveFocusNavTree) ||
-              ((_ = this.m_ActiveContext) == null
-                ? void 0
-                : _.m_LastActiveNavTree);
+              this.m_ActiveContext?.m_LastActiveFocusNavTree ||
+              this.m_ActiveContext?.m_LastActiveNavTree;
             _ && _.TakeFocus(_._.APPLICATION);
           }
           OnContextActivated(_) {
@@ -2097,15 +1923,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -2114,16 +1931,14 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = "VirtualKeyboardMessage";
         function _(_) {
           return _ && _.type === _;
         }
         class _ {
-          constructor() {
-            _(this, "m_ownerWindow");
-          }
+          m_ownerWindow;
+          constructor() {}
           Init(_) {
             return (
               (this.m_ownerWindow = _),
@@ -2198,11 +2013,11 @@
           _([_._], _.prototype, "OnBrowserViewMessage", 1),
           _([_._], _.prototype, "OnMessage", 1);
         class _ {
+          m_showKeyboard;
+          m_showModalKeyboard;
+          m_hideKeyboard;
           constructor(_, _, _, _) {
-            _(this, "m_showKeyboard"),
-              _(this, "m_showModalKeyboard"),
-              _(this, "m_hideKeyboard"),
-              (this.m_showKeyboard = _),
+            (this.m_showKeyboard = _),
               (this.m_showModalKeyboard = _),
               (this.m_hideKeyboard = _),
               _._("message", this.OnMessage);
@@ -2251,9 +2066,7 @@
                 const _ = (0, _._)("legacyWebFocusNavController");
                 if (
                   (_(_),
-                  _((_) =>
-                    _ != null ? _ : (0, _._)("__virtual_keyboard_client"),
-                  ),
+                  _((_) => _ ?? (0, _._)("__virtual_keyboard_client")),
                   !_)
                 ) {
                   const _ = window.setTimeout(() => {
@@ -2261,8 +2074,8 @@
                       !1,
                       "Waited 2000ms for legacy web to initialize, constructing a placeholder controller.",
                     ),
-                      _((_) => (_ != null ? _ : new _())),
-                      _((_) => (_ != null ? _ : new _()));
+                      _((_) => _ ?? new _()),
+                      _((_) => _ ?? new _());
                   }, 2e3);
                   return () => window.clearTimeout(_);
                 }
@@ -2349,7 +2162,6 @@
           _ = __webpack_require__._(_);
         const _ = new Set();
         function _(_) {
-          var _, _;
           const { reportMutation: _, onClose: _ } = _,
             [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)("reason"),
@@ -2375,17 +2187,8 @@
                 text: _,
               })
                 .then(() => _("submitted"))
-                .then(() => {
-                  var _;
-                  return (_ = _.onSubmitted) == null ? void 0 : _.call(_);
-                })
-                .catch((_) =>
-                  _(
-                    (_ == null ? void 0 : _.eResult) === _._
-                      ? "cooldown"
-                      : "error",
-                  ),
-                );
+                .then(() => _.onSubmitted?.())
+                .catch((_) => _(_?.eResult === _._ ? "cooldown" : "error"));
             },
             _ = (_) => {
               const _ =
@@ -2407,8 +2210,8 @@
           let _ = [];
           _ && (0, _._)(_)
             ? (_ = _.children)
-            : _ || (_ = (_ = _.rgReportReasonTree) != null ? _ : _._);
-          const _ = (_ = _.excludedReasons) != null ? _ : _,
+            : _ || (_ = _.rgReportReasonTree ?? _._);
+          const _ = _.excludedReasons ?? _,
             _ = _.filter((_) => !(0, _._)(_, _)).map((_) =>
               (0, _.jsx)(
                 _,
@@ -2658,17 +2461,6 @@
           _ = 2,
           _ = 3,
           _ = 4;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EChatRoomGroupType ( " + _ + " )";
         }
@@ -2784,13 +2576,15 @@
             return "CChat_RequestFriendPersonaStates_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2853,16 +2647,16 @@
           getClassName() {
             return "ServerMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_partner || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2943,16 +2737,16 @@
           getClassName() {
             return "CChatRoom_CreateChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3013,16 +2807,16 @@
           getClassName() {
             return "CChatRoom_CreateChatRoomGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3080,16 +2874,16 @@
           getClassName() {
             return "CChatRoom_RenameChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3142,16 +2936,16 @@
           getClassName() {
             return "CChatRoom_RenameChatRoomGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3209,9 +3003,7 @@
           getClassName() {
             return "CChatRoom_SaveChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3253,13 +3045,15 @@
             return "CChatRoom_SaveChatRoomGroup_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3317,9 +3111,7 @@
           getClassName() {
             return "CChatRoom_SetChatRoomGroupTagline_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3361,13 +3153,15 @@
             return "CChatRoom_SetChatRoomGroupTagline_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3425,9 +3219,7 @@
           getClassName() {
             return "CChatRoom_SetChatRoomGroupAvatar_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3469,13 +3261,15 @@
             return "CChatRoom_SetChatRoomGroupAvatar_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3538,9 +3332,7 @@
           getClassName() {
             return "CChatRoom_SetChatRoomGroupWatchingBroadcast_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3582,13 +3374,15 @@
             return "CChatRoom_SetChatRoomGroupWatchingBroadcast_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3646,16 +3440,16 @@
           getClassName() {
             return "CChatRoom_JoinMiniGameForChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.minigame_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3708,16 +3502,16 @@
           getClassName() {
             return "CChatRoom_JoinMiniGameForChatRoomGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3780,9 +3574,7 @@
           getClassName() {
             return "CChatRoom_EndMiniGameForChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3824,13 +3616,15 @@
             return "CChatRoom_EndMiniGameForChatRoomGroup_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3893,9 +3687,7 @@
           getClassName() {
             return "CChatRoom_MuteUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -3937,13 +3729,15 @@
             return "CChatRoom_MuteUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4006,9 +3800,7 @@
           getClassName() {
             return "CChatRoom_KickUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4050,13 +3842,15 @@
             return "CChatRoom_KickUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4119,9 +3913,7 @@
           getClassName() {
             return "CChatRoom_SetUserBanState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4163,13 +3955,15 @@
             return "CChatRoom_SetUserBanState_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4227,9 +4021,7 @@
           getClassName() {
             return "CChatRoom_RevokeInvite_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4271,13 +4063,15 @@
             return "CChatRoom_RevokeInvite_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.role_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4340,16 +4134,16 @@
           getClassName() {
             return "CChatRole";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.role_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4457,16 +4251,16 @@
           getClassName() {
             return "CChatRoleActions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4524,16 +4318,16 @@
           getClassName() {
             return "CChatRoom_CreateRole_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.actions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4585,16 +4379,16 @@
           getClassName() {
             return "CChatRoom_CreateRole_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4662,16 +4456,16 @@
           getClassName() {
             return "CChatPartyBeacon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4724,16 +4518,16 @@
           getClassName() {
             return "CChatRoom_GetRoles_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.roles || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4787,16 +4581,16 @@
           getClassName() {
             return "CChatRoom_GetRoles_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4859,9 +4653,7 @@
           getClassName() {
             return "CChatRoom_RenameRole_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4903,13 +4695,15 @@
             return "CChatRoom_RenameRole_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4972,9 +4766,7 @@
           getClassName() {
             return "CChatRoom_ReorderRole_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5016,13 +4808,15 @@
             return "CChatRoom_ReorderRole_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5080,9 +4874,7 @@
           getClassName() {
             return "CChatRoom_DeleteRole_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5124,13 +4916,15 @@
             return "CChatRoom_DeleteRole_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5188,16 +4982,16 @@
           getClassName() {
             return "CChatRoom_GetRoleActions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.actions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5251,16 +5045,16 @@
           getClassName() {
             return "CChatRoom_GetRoleActions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5322,9 +5116,7 @@
           getClassName() {
             return "CChatRoom_ReplaceRoleActions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5366,13 +5158,15 @@
             return "CChatRoom_ReplaceRoleActions_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5435,9 +5229,7 @@
           getClassName() {
             return "CChatRoom_AddRoleToUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5479,13 +5271,15 @@
             return "CChatRoom_AddRoleToUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5543,16 +5337,16 @@
           getClassName() {
             return "CChatRoom_GetRolesForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.role_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5608,16 +5402,16 @@
           getClassName() {
             return "CChatRoom_GetRolesForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5680,9 +5474,7 @@
           getClassName() {
             return "CChatRoom_DeleteRoleFromUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -5724,13 +5516,15 @@
             return "CChatRoom_DeleteRoleFromUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.header_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5782,16 +5576,16 @@
           getClassName() {
             return "CChatRoom_ChatRoomHeaderState_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5867,16 +5661,16 @@
           getClassName() {
             return "CChatRoomMember";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 10, 14, 15, 18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6043,16 +5837,16 @@
           getClassName() {
             return "CChatRoom_GetChatRoomGroupSummary_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6110,16 +5904,16 @@
           getClassName() {
             return "CChatRoomMemberNotice";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6178,16 +5972,16 @@
           getClassName() {
             return "CChatRoomGroupMemberNotices";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6245,16 +6039,16 @@
           getClassName() {
             return "CChatRoom_SetAppChatRoomGroupForceActive_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6315,16 +6109,16 @@
           getClassName() {
             return "CChatRoom_SetAppChatRoomGroupForceActive_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6382,16 +6176,16 @@
           getClassName() {
             return "CChatRoom_SetAppChatRoomGroupStopForceActive_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6482,16 +6276,16 @@
           getClassName() {
             return "CChatRoomState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [18, 19, 22], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6622,16 +6416,16 @@
           getClassName() {
             return "CChatRoomGroupHeaderState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.header_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 5, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6706,16 +6500,16 @@
           getClassName() {
             return "CChatRoomGroupState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6807,16 +6601,16 @@
           getClassName() {
             return "CUserChatRoomGroupState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6907,16 +6701,16 @@
           getClassName() {
             return "CUserChatRoomState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.user_chat_group_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -6972,16 +6766,16 @@
           getClassName() {
             return "CChatRoomSummaryPair";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7044,16 +6838,16 @@
           getClassName() {
             return "CChatRoom_CreateChatRoom_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_room || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7105,16 +6899,16 @@
           getClassName() {
             return "CChatRoom_CreateChatRoom_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7172,9 +6966,7 @@
           getClassName() {
             return "CChatRoom_DeleteChatRoom_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7216,13 +7008,15 @@
             return "CChatRoom_DeleteChatRoom_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7285,9 +7079,7 @@
           getClassName() {
             return "CChatRoom_RenameChatRoom_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7329,13 +7121,15 @@
             return "CChatRoom_RenameChatRoom_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7398,9 +7192,7 @@
           getClassName() {
             return "CChatRoom_ReorderChatRoom_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7442,13 +7234,15 @@
             return "CChatRoom_ReorderChatRoom_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.mention_all || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7514,16 +7308,16 @@
           getClassName() {
             return "CChatMentions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7576,16 +7370,16 @@
           getClassName() {
             return "CChatRoom_GetChatRoomGroupState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7637,9 +7431,7 @@
           getClassName() {
             return "CChatRoom_GetChatRoomGroupState_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -7681,13 +7473,15 @@
             return "CChatRoom_GetMyChatRoomGroups_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_room_groups || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7741,16 +7535,16 @@
           getClassName() {
             return "CChatRoom_GetMyChatRoomGroups_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7813,16 +7607,16 @@
           getClassName() {
             return "CChatRoom_JoinChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7888,16 +7682,16 @@
           getClassName() {
             return "CChatRoom_JoinChatRoomGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -7965,9 +7759,7 @@
           getClassName() {
             return "CChatRoom_InviteFriendToChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -8009,13 +7801,15 @@
             return "CChatRoom_InviteFriendToChatRoomGroup_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8068,9 +7862,7 @@
           getClassName() {
             return "CChatRoom_LeaveChatRoomGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -8112,13 +7904,15 @@
             return "CChatRoom_LeaveChatRoomGroup_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8176,16 +7970,16 @@
           getClassName() {
             return "CChatRoom_JoinVoiceChat_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voice_chatid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8238,16 +8032,16 @@
           getClassName() {
             return "CChatRoom_JoinVoiceChat_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8305,9 +8099,7 @@
           getClassName() {
             return "CChatRoom_LeaveVoiceChat_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -8349,13 +8141,15 @@
             return "CChatRoom_LeaveVoiceChat_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8413,16 +8207,16 @@
           getClassName() {
             return "CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8490,16 +8284,16 @@
           getClassName() {
             return "CChatRoom_SendChatMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.modified_message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8567,16 +8361,16 @@
           getClassName() {
             return "CChatRoom_SendChatMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8677,16 +8471,16 @@
           getClassName() {
             return "CChatRoom_IncomingChatMessage_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8749,16 +8543,16 @@
           getClassName() {
             return "CChatRoom_DismissChatRoomNotice_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8826,16 +8620,16 @@
           getClassName() {
             return "CChatRoom_ChatRoomNotice_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8899,16 +8693,16 @@
           getClassName() {
             return "CChatRoom_ChatMessageModified_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.server_timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -8971,16 +8765,16 @@
           getClassName() {
             return "CChatRoom_ChatMessageModified_Notification_ChatMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9063,16 +8857,16 @@
           getClassName() {
             return "CChatRoom_GetMessageHistory_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9131,16 +8925,16 @@
           getClassName() {
             return "CChatRoom_GetMessageHistory_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sender || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9223,16 +9017,16 @@
           getClassName() {
             return "CChatRoom_GetMessageHistory_Response_ChatMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reaction_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9300,16 +9094,16 @@
           getClassName() {
             return "CChatRoom_GetMessageHistory_Response_ChatMessage_MessageReaction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9371,16 +9165,16 @@
           getClassName() {
             return "CChatRoom_MemberStateChange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9444,16 +9238,16 @@
           getClassName() {
             return "CChatRoom_ChatRoomGroupRoomsChange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9516,16 +9310,16 @@
           getClassName() {
             return "CChatRoom_AckChatMessage_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9588,16 +9382,16 @@
           getClassName() {
             return "CChatRoom_CreateInviteLink_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9655,16 +9449,16 @@
           getClassName() {
             return "CChatRoom_CreateInviteLink_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9717,16 +9511,16 @@
           getClassName() {
             return "CChatRoom_GetInviteLinkInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_sender || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9807,16 +9601,16 @@
           getClassName() {
             return "CChatRoom_GetInviteLinkInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_invitee || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9884,16 +9678,16 @@
           getClassName() {
             return "CChatRoom_GetInviteInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.group_summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -9955,16 +9749,16 @@
           getClassName() {
             return "CChatRoom_GetInviteInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10017,16 +9811,16 @@
           getClassName() {
             return "CChatRoom_GetInviteLinksForGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_links || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10080,16 +9874,16 @@
           getClassName() {
             return "CChatRoom_GetInviteLinksForGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10157,16 +9951,16 @@
           getClassName() {
             return "CChatRoom_GetInviteLinksForGroup_Response_LinkInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10224,9 +10018,7 @@
           getClassName() {
             return "CChatRoom_DeleteInviteLink_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -10268,13 +10060,15 @@
             return "CChatRoom_DeleteInviteLink_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10327,16 +10121,16 @@
           getClassName() {
             return "CChatRoom_GetBanList_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bans || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10390,16 +10184,16 @@
           getClassName() {
             return "CChatRoom_GetBanList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10467,16 +10261,16 @@
           getClassName() {
             return "CChatRoom_GetBanList_Response_BanInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10539,16 +10333,16 @@
           getClassName() {
             return "CChatRoomGroupInvite";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10601,16 +10395,16 @@
           getClassName() {
             return "CChatRoom_GetInviteList_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invites || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10664,16 +10458,16 @@
           getClassName() {
             return "CChatRoom_GetInviteList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10742,16 +10536,16 @@
           getClassName() {
             return "CChatRoom_SetSessionActiveChatRoomGroups_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_states || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10819,16 +10613,16 @@
           getClassName() {
             return "CChatRoom_SetSessionActiveChatRoomGroups_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10891,16 +10685,16 @@
           getClassName() {
             return "CChatRoom_SetUserChatGroupPreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.desktop_notification_level || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -10968,16 +10762,16 @@
           getClassName() {
             return "CChatRoom_SetUserChatGroupPreferences_Request_ChatGroupPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11045,9 +10839,7 @@
           getClassName() {
             return "CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11089,13 +10881,15 @@
             return "CChatRoom_SetUserChatGroupPreferences_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11159,16 +10953,16 @@
           getClassName() {
             return "CChatRoom_DeleteChatMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.server_timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11226,9 +11020,7 @@
           getClassName() {
             return "CChatRoom_DeleteChatMessages_Request_Message";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11270,13 +11062,15 @@
             return "CChatRoom_DeleteChatMessages_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11370,16 +11164,16 @@
           getClassName() {
             return "CChatRoom_UpdateMemberListView_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.start || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11452,16 +11246,16 @@
           getClassName() {
             return "CChatRoomMemberListView";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ingame || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11524,16 +11318,16 @@
           getClassName() {
             return "CChatRoomMemberSummaryCounts";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11601,16 +11395,16 @@
           getClassName() {
             return "CChatRoom_SearchMembers_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.matching_members || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11669,16 +11463,16 @@
           getClassName() {
             return "CChatRoom_SearchMembers_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11735,16 +11529,16 @@
           getClassName() {
             return "CChatRoom_SearchMembers_Response_MemberMatch";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11827,16 +11621,16 @@
           getClassName() {
             return "CChatRoom_UpdateMessageReaction_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.num_reactors || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11889,16 +11683,16 @@
           getClassName() {
             return "CChatRoom_UpdateMessageReaction_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -11986,16 +11780,16 @@
           getClassName() {
             return "CChatRoom_MessageReaction_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12078,16 +11872,16 @@
           getClassName() {
             return "CChatRoom_GetMessageReactionReactors_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reactors || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12143,16 +11937,16 @@
           getClassName() {
             return "CChatRoom_GetMessageReactionReactors_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12245,9 +12039,7 @@
           getClassName() {
             return "CChatRoom_ReportMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -12289,13 +12081,15 @@
             return "CChatRoom_ReportMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.subject_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12388,9 +12182,7 @@
           getClassName() {
             return "CChatRoom_ResolveReport_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -12432,13 +12224,15 @@
             return "CChatRoom_ResolveReport_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12497,16 +12291,16 @@
           getClassName() {
             return "CClanChatRooms_GetClanChatRoomInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12558,16 +12352,16 @@
           getClassName() {
             return "CClanChatRooms_GetClanChatRoomInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12625,16 +12419,16 @@
           getClassName() {
             return "CClanChatRooms_SetClanChatRoomPrivate_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_room_private || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12687,16 +12481,16 @@
           getClassName() {
             return "CClanChatRooms_SetClanChatRoomPrivate_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12762,16 +12556,16 @@
           getClassName() {
             return "ChatRoomClient_NotifyChatGroupUserStateChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12827,16 +12621,16 @@
           getClassName() {
             return "ChatRoomClient_NotifyChatRoomDisconnect_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12919,16 +12713,16 @@
           getClassName() {
             return "CChatRoomClient_MemberListViewUpdated_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rank || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12990,16 +12784,16 @@
           getClassName() {
             return "CChatRoomClient_MemberListViewUpdated_Notification_MemberListViewEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.metrics_run_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13052,16 +12846,16 @@
           getClassName() {
             return "CChatUsability_RequestClientUsabilityMetrics_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.metrics_run_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13145,16 +12939,16 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notifications_show_ingame || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13327,16 +13121,16 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification_Settings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voice_input_gain || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13439,16 +13233,16 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification_VoiceSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friends_list_height || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13575,16 +13369,16 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification_UIState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.in_game_collapsed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13657,16 +13451,16 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friends_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13764,9 +13558,7 @@
           getClassName() {
             return "CChatUsability_ClientUsabilityMetrics_Notification_Metrics";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -14418,31 +14210,22 @@
           };
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EMessageReactionType ( " + _ + " )";
         }
         function _(_) {
           return "unknown EChatSessionNotice ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid1 || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14535,16 +14318,16 @@
           getClassName() {
             return "CFriendMessages_GetRecentMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14603,16 +14386,16 @@
           getClassName() {
             return "CFriendMessages_GetRecentMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14686,16 +14469,16 @@
           getClassName() {
             return "CFriendMessages_GetRecentMessages_Response_FriendMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reaction_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14761,16 +14544,16 @@
           getClassName() {
             return "CFriendMessages_GetRecentMessages_Response_FriendMessage_MessageReaction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.lastmessage_since || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14828,16 +14611,16 @@
           getClassName() {
             return "CFriendsMessages_GetActiveMessageSessions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message_sessions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14896,16 +14679,16 @@
           getClassName() {
             return "CFriendsMessages_GetActiveMessageSessions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14981,16 +14764,16 @@
           getClassName() {
             return "CFriendsMessages_GetActiveMessageSessions_Response_FriendMessageSession";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15073,16 +14856,16 @@
           getClassName() {
             return "CFriendMessages_SendMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.modified_message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15150,16 +14933,16 @@
           getClassName() {
             return "CFriendMessages_SendMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15252,16 +15035,16 @@
           getClassName() {
             return "CFriendMessages_IncomingMessage_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_partner || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15319,16 +15102,16 @@
           getClassName() {
             return "CFriendMessages_AckMessage_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15391,16 +15174,16 @@
           getClassName() {
             return "CFriendMessages_SessionNotice_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15453,16 +15236,16 @@
           getClassName() {
             return "CFriendMessages_IsInFriendsUIBeta_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.online_in_friendsui || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15520,16 +15303,16 @@
           getClassName() {
             return "CFriendMessages_IsInFriendsUIBeta_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15582,16 +15365,16 @@
           getClassName() {
             return "CFriendMessages_GetPartnerSharedChatGroup_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.chat_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15644,16 +15427,16 @@
           getClassName() {
             return "CFriendMessages_GetPartnerSharedChatGroup_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15731,16 +15514,16 @@
           getClassName() {
             return "CFriendMessages_UpdateMessageReaction_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reactors || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15796,16 +15579,16 @@
           getClassName() {
             return "CFriendMessages_UpdateMessageReaction_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15888,16 +15671,16 @@
           getClassName() {
             return "CFriendMessages_MessageReaction_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_from || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15980,9 +15763,7 @@
           getClassName() {
             return "CFriendMessages_ReportMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -16024,13 +15805,15 @@
             return "CFriendMessages_ReportMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_from || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16118,9 +15901,7 @@
           getClassName() {
             return "CFriendMessages_ResolveReport_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -16162,13 +15943,15 @@
             return "CFriendMessages_ResolveReport_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16226,9 +16009,7 @@
           getClassName() {
             return "CFriendMessages_DismissSessionNotice_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -16377,10 +16158,7 @@
               const _ = (_) => _(_);
               return (
                 _.push(_),
-                (window.ShowContentReportDialog = (_) => {
-                  var _;
-                  return (_ = _[_.length - 1]) == null ? void 0 : _.call(_, _);
-                }),
+                (window.ShowContentReportDialog = (_) => _[_.length - 1]?.(_)),
                 () => {
                   _.splice(_.indexOf(_), 1),
                     _.length || delete window.ShowContentReportDialog;
@@ -16403,7 +16181,6 @@
           );
         }
         function _(_) {
-          var _, _;
           switch (_.type) {
             case "ugcfile":
               return {
@@ -16416,13 +16193,13 @@
                 steamid: _.clanSteamId,
                 forum: _.gidForum,
                 topic: _.gidTopic,
-                comment: (_ = _.gidComment) != null ? _ : _._,
+                comment: _.gidComment ?? _._,
               };
             case "comment":
               return {
                 subject_type: _._,
                 steamid: _.steamidOwner,
-                comment_thread_id: (_ = _.commentThreadId) != null ? _ : void 0,
+                comment_thread_id: _.commentThreadId ?? void 0,
                 comment: _.gidComment,
               };
           }
@@ -16434,17 +16211,16 @@
           const _ = (0, _._)();
           return (0, _._)({
             mutationFn: async (_) => {
-              var _, _;
               let _ = _._;
-              if ((_ == null ? void 0 : _.type) === "ugcfile") {
+              if (_?.type === "ugcfile") {
                 const _ = new FormData();
                 _.append("sessionid", (0, _._)()),
                   _.append("id", _.publishedFileId),
                   _.append("description", _.text),
                   _.append("reason", _.reason.toString()),
                   (_ =
-                    (_ =
-                      (_ = await (
+                    (
+                      await (
                         await fetch(
                           `${_._.COMMUNITY_BASE_URL}sharedfiles/reportitem`,
                           {
@@ -16452,12 +16228,9 @@
                             body: _,
                           },
                         )
-                      ).json()) == null
-                        ? void 0
-                        : _.success) != null
-                      ? _
-                      : _._);
-              } else if ((_ == null ? void 0 : _.type) === "forumpost") {
+                      ).json()
+                    )?.success ?? _._);
+              } else if (_?.type === "forumpost") {
                 const _ = _._.Init(_._);
                 _.Body().set_steamid(_.clanSteamId),
                   _.Body().set_gidforum(_.gidForum),
@@ -16467,7 +16240,7 @@
                   _.Body().set_report(_.text),
                   _.Body().set_report_reason(_.reason),
                   (_ = (await _._.ReportPost(_, _)).GetEResult());
-              } else if ((_ == null ? void 0 : _.type) === "comment") {
+              } else if (_?.type === "comment") {
                 const _ = _._.Init(_._);
                 _.Body().set_steamid(_.steamidOwner),
                   _.Body().set_commentthreadtype(_.strCommentThreadType),
@@ -16485,7 +16258,7 @@
                 };
             },
             onSuccess: () => {
-              (_ == null ? void 0 : _.type) === "comment" &&
+              _?.type === "comment" &&
                 window.dispatchEvent(
                   new CustomEvent("ContentModerationCommentReported", {
                     detail: {
@@ -16521,7 +16294,7 @@
                       rgReportReasonTree: GetChatReportReasonTree(),
                       landingDescription: jsx(_, {}),
                       onSubmitted: _,
-                      onClose: () => (_ == null ? void 0 : _()),
+                      onClose: () => _?.(),
                     }),
                   jsx(_, {
                     showDialog: _,
@@ -16576,10 +16349,10 @@
             [_, _] = React.useState(!!_),
             [_, _] = React.useState(!!_),
             _ = async () => {
-              _ && (await (_ == null ? void 0 : _())), _ == null || _();
+              _ && (await _?.()), _?.();
             },
             _ = async () => {
-              (await (_ == null ? void 0 : _())) && _(!1);
+              (await _?.()) && _(!1);
             },
             _ = _ ? Dialog.Button : Dialog.PrimaryButton;
           return jsxs(DialogModal, {
@@ -16693,7 +16466,7 @@
                   rgReportReasonTree: GetChatReportReasonTree(),
                   landingDescription: jsx(_, {}),
                   onSubmitted: _,
-                  onClose: () => (_ == null ? void 0 : _()),
+                  onClose: () => _?.(),
                 }),
               jsx(_, {
                 showDialog: _,
@@ -16729,14 +16502,10 @@
               _.Body().set_timestamp(_),
                 _.Body().set_ordinal(_),
                 _.Body().set_steamid_to(
-                  CSteamID.InitFromAccountID(
-                    _ != null ? _ : 0,
-                  ).ConvertTo64BitString(),
+                  CSteamID.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
                 ),
                 _.Body().set_steamid_from(
-                  CSteamID.InitFromAccountID(
-                    _ != null ? _ : 0,
-                  ).ConvertTo64BitString(),
+                  CSteamID.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
                 ),
                 _.Body().set_report_reason(_.reason),
                 _.Body().set_report_text(_.text),
@@ -16764,9 +16533,7 @@
                 _ ==
                   EContentReportSubjectType.k_EContentReportSubjectType_ChatRoomMsg &&
                   _.Body().set_steamid_from(
-                    CSteamID.InitFromAccountID(
-                      _ != null ? _ : 0,
-                    ).ConvertTo64BitString(),
+                    CSteamID.InitFromAccountID(_ ?? 0).ConvertTo64BitString(),
                   );
               const _ = await ChatRoomService.ReportMessage(_, _);
               if (_.GetEResult() !== k_EResultOK)
@@ -17925,7 +17692,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const {
               variant: _,
               size: _ = "2",
@@ -17949,10 +17715,7 @@
                 })
               : _,
             _ = _ ? void 0 : _,
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_,
+            _ = _ ?? _?.focusable ?? !!_,
             _ = (0, _._)("Button", _),
             _ = {
               type: "button",
@@ -18063,7 +17826,6 @@
           return _.useContext(_);
         }
         function _(_) {
-          var _;
           const {
             snr: _,
             focusable: _,
@@ -18081,10 +17843,7 @@
           const _ = (0, _._)(),
             _ = _(),
             _ = _(_, _),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_;
+            _ = _ ?? _?.focusable ?? !!_;
           let _ = _ ? "_blank" : _;
           !_ && _ && (_ = "_top");
           let _ = _;
@@ -18182,7 +17941,6 @@
           _ && _.showPopover && _.showPopover();
         }
         function _(_) {
-          var _, _, _;
           const {
               ref: _,
               presentation: _,
@@ -18211,15 +17969,7 @@
               ..._,
             });
           const _ =
-            (_ =
-              (_ =
-                (_ = _ == null ? void 0 : _.ownerDocument) == null
-                  ? void 0
-                  : _.defaultView) == null
-                ? void 0
-                : _.innerHeight) != null
-              ? _
-              : window.innerHeight;
+            _?.ownerDocument?.defaultView?.innerHeight ?? window.innerHeight;
           return (0, _.jsxs)("div", {
             popover: "manual",
             ref: _,
@@ -18445,7 +18195,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(
@@ -18455,10 +18204,7 @@
               },
               _,
             ),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)(_, {
               ref: _,
               ..._,
@@ -18493,9 +18239,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(
@@ -18505,23 +18251,26 @@
               },
               _,
             ),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)(_, {
               ref: _,
               ..._,
             }),
-            _ = (0, _._)((_ = _.direction) != null ? _ : "row");
-          return _
-            ? (0, _.jsx)(_._, {
+            _ = (0, _._)();
+          if (_) {
+            const _ = (0, _._)(_.wrap, _);
+            let _ = (0, _._)(_.direction, _) ?? "row";
+            return (
+              _ === "wrap" && _ === "row" && (_ = "grid"),
+              (0, _.jsx)(_._, {
                 ...(_ || {}),
                 focusable: _,
                 "flow-children": _,
                 children: _,
               })
-            : _;
+            );
+          }
+          return _;
         }
         const _ = [
           ..._._,
@@ -19086,12 +18835,11 @@
             _: "lg",
           });
         function _(_ = {}) {
-          var _, _, _, _;
           const _ = (0, _.useContext)(_),
-            _ = (_ = _._) != null ? _ : _._,
-            _ = (_ = _._) != null ? _ : _._,
-            _ = (_ = _._) != null ? _ : _._,
-            _ = (_ = _._) != null ? _ : _._;
+            _ = _._ ?? _._,
+            _ = _._ ?? _._,
+            _ = _._ ?? _._,
+            _ = _._ ?? _._;
           return (0, _.useMemo)(
             () => ({
               _: _,
@@ -19136,7 +18884,7 @@
             _ = (0, _.useMemo)(
               () => ({
                 ..._,
-                _: _ != null ? _ : _._,
+                _: _ ?? _._,
               }),
               [_, _],
             );
@@ -19302,7 +19050,7 @@
                   jsx(Select, {
                     selectedValue: _.popoverPresentationOverride,
                     options: [void 0, "anchor", "modal"],
-                    getOptionLabel: (_) => (_ != null ? _ : "None"),
+                    getOptionLabel: (_) => _ ?? "None",
                     onSelectionChange: (_) =>
                       _({
                         ..._,
@@ -19427,30 +19175,17 @@
           _: () => _,
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          _ = ((_) => (
-            (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-            (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-            (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina"),
-            _
-          ))(_ || {});
+        var _ = ((_) => (
+          (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+          (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina"),
+          _
+        ))(_ || {});
         function _(_) {
           return _ === 2;
         }
         class _ {
-          constructor() {
-            _(this, "m_rgHandles", []);
-          }
+          m_rgHandles = [];
           Add(_) {
             _ && this.m_rgHandles.push(_);
           }
@@ -20258,22 +19993,12 @@
             eAdditionalLanguage: _[2],
           }));
         function _(_, _ = _) {
-          var _, _;
-          return (_ =
-            (_ = _.find((_) => _.shortName == _)) == null
-              ? void 0
-              : _.eAdditionalLanguage) != null
-            ? _
-            : _;
+          return _.find((_) => _.shortName == _)?.eAdditionalLanguage ?? _;
         }
         function _(_) {
-          var _, _;
-          return (_ =
-            (_ = _.find((_) => _.eAdditionalLanguage == _)) == null
-              ? void 0
-              : _.shortName) != null
-            ? _
-            : "unknown";
+          return (
+            _.find((_) => _.eAdditionalLanguage == _)?.shortName ?? "unknown"
+          );
         }
         function _(_, _ = "en") {
           switch (_) {
@@ -21148,31 +20873,22 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown ETritonPairType ( " + _ + " )";
         }
         function _(_) {
           return "unknown ETritonConnectionType ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21405,16 +21121,16 @@
           getClassName() {
             return "CSteamInputService_ControllerButtonStateChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21472,16 +21188,16 @@
           getClassName() {
             return "ControllerVector2";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21544,16 +21260,16 @@
           getClassName() {
             return "ControllerVector3";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21621,16 +21337,16 @@
           getClassName() {
             return "ControllerQuaternion";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.pitch || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21693,16 +21409,16 @@
           getClassName() {
             return "ControllerGyroEulerAngles";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21795,16 +21511,16 @@
           getClassName() {
             return "CSteamInputService_ControllerAxesStateChange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21880,16 +21596,16 @@
           getClassName() {
             return "CSteamInputService_GyroQuaternionChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -21955,16 +21671,16 @@
           getClassName() {
             return "CSteamInputService_GyroSpeedChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22030,16 +21746,16 @@
           getClassName() {
             return "CSteamInputService_GyroAccelerometerChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22127,16 +21843,16 @@
           getClassName() {
             return "CSteamInputService_GyroCalibration_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22194,9 +21910,7 @@
           getClassName() {
             return "CSteamInputService_ControllerStateFlow_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -22238,13 +21952,15 @@
             return "CSteamInputService_ControllerStateFlow_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22302,9 +22018,7 @@
           getClassName() {
             return "CSteamInputService_GyroSoftwareCalibration_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -22346,13 +22060,15 @@
             return "CSteamInputService_GyroSoftwareCalibration_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22415,9 +22131,7 @@
           getClassName() {
             return "CSteamInputService_PairDongleTritonConnected_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -22500,13 +22214,15 @@
             return "CSteamInputService_SteamDonglesChanged_Notification";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22559,16 +22275,16 @@
           getClassName() {
             return "CSteamInputService_UnpairedTritonPluggedIn_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.docked_puck_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22621,16 +22337,16 @@
           getClassName() {
             return "CSteamInputService_UnpairedTritonDocked_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.docked_puck_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22683,16 +22399,16 @@
           getClassName() {
             return "CSteamInputService_TritonUndocked_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22745,16 +22461,16 @@
           getClassName() {
             return "CSteamInputService_ControllerPairingChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_bonds || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22807,16 +22523,16 @@
           getClassName() {
             return "CSteamInputService_GetDongles_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steam_controller_v1 || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22881,16 +22597,16 @@
           getClassName() {
             return "CSteamInputService_GetDongles_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -22963,9 +22679,7 @@
           getClassName() {
             return "CSteamInputService_GetDongles_Response_Dongle";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -23089,13 +22803,15 @@
             return "CSteamInputService_WaitInitialControllerStateEnumerated_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.pair_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23158,16 +22874,16 @@
           getClassName() {
             return "CSteamInputService_ShouldTritonPairInOobe_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23235,16 +22951,16 @@
           getClassName() {
             return "CControllerOriginKey";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23301,9 +23017,7 @@
           getClassName() {
             return "CControllerAccessibilityString";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -23345,13 +23059,15 @@
             return "CSteamInputService_ControllerAccessibilityStrings_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.strings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23405,16 +23121,16 @@
           getClassName() {
             return "CSteamInputService_ControllerAccessibilityStrings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.idx || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23467,16 +23183,16 @@
           getClassName() {
             return "CSteamInputService_ControllerPowerMenu_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23529,16 +23245,16 @@
           getClassName() {
             return "CSteamInputService_ControllerDisconnected_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23591,16 +23307,16 @@
           getClassName() {
             return "CSteamInputService_GetTritonPairingInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.slot || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23659,16 +23375,16 @@
           getClassName() {
             return "CSteamInputService_GetTritonPairingInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.serial_number || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23731,16 +23447,16 @@
           getClassName() {
             return "CSteamInputService_GetTritonPairingInfo_Response_Slot";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23798,9 +23514,7 @@
           getClassName() {
             return "CSteamInputService_ForgetTritonPairingBond_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -23842,13 +23556,15 @@
             return "CSteamInputService_ForgetTritonPairingBond_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.dongle_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -23901,9 +23617,7 @@
           getClassName() {
             return "CSteamInputService_ForgetDonglePairingBond_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -23945,13 +23659,15 @@
             return "CSteamInputService_ForgetDonglePairingBond_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.serial_number || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24004,16 +23720,16 @@
           getClassName() {
             return "CSteamInputService_GetControllerName_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24066,16 +23782,16 @@
           getClassName() {
             return "CSteamInputService_GetControllerName_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24133,9 +23849,7 @@
           getClassName() {
             return "CSteamInputService_EnableDockedInput_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -24177,13 +23891,15 @@
             return "CSteamInputService_EnableDockedInput_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24483,9 +24199,7 @@
           getClassName() {
             return "CSteamInputService_RawControllerDetailItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -24568,13 +24282,15 @@
             return "CSteamInputService_GetControllerList_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controllers || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24628,9 +24344,7 @@
           getClassName() {
             return "CSteamInputService_GetControllerList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -24672,13 +24386,15 @@
             return "CSteamInputService_FirstSteamControllerConnection_Notification";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.period_ms || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24766,16 +24482,16 @@
           getClassName() {
             return "CTritonQosStatus";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24832,16 +24548,16 @@
           getClassName() {
             return "CSteamInputService_TritonQos_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -24899,9 +24615,7 @@
           getClassName() {
             return "CSteamInputService_EnableQosStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -24943,13 +24657,15 @@
             return "CSteamInputService_EnableQosStatus_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.controller_index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -25012,9 +24728,7 @@
           getClassName() {
             return "CSteamInputService_ControllerBatteryState_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           _.NotifyButtonStateChangedHandler = {
@@ -26992,117 +26706,60 @@
           };
         }
         function _(_) {
-          var _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _;
           return {
-            strName: (_ = _.name) != null ? _ : "",
-            eControllerType: (_ = _.controller_type) != null ? _ : _,
+            strName: _.name ?? "",
+            eControllerType: _.controller_type ?? _,
             eControllerStyle:
-              (_ = _.controller_style) != null
-                ? _
-                : EControllerStyle.k_eControllerStyle_Unknown,
-            nXInputIndex: (_ = _.xinput_index) != null ? _ : _,
-            nControllerIndex: (_ = _.controller_index) != null ? _ : 16,
-            eRumblePreference: (_ = _.rumble_setting) != null ? _ : _,
-            eRumbleIntensity: (_ = _.rumble_intensity) != null ? _ : _,
-            bWireless: (_ = _.is_wireless_steam_dongle) != null ? _ : !1,
-            unVendorID: (_ = _.vendor_id) != null ? _ : 0,
-            unProductID: (_ = _.product_id) != null ? _ : 0,
-            unCapabilities: BigInt((_ = _.capabilities) != null ? _ : 0),
-            strFirmwareBuildTime: (_ = _.firmware_build_time) != null ? _ : "",
-            strSerialNumber: (_ = _.serial_number) != null ? _ : "",
-            strChipID: (_ = _.cpu_id) != null ? _ : "",
-            flLEDBrightness: (_ = _.led_brightness) != null ? _ : 0,
-            flLEDSaturation: (_ = _.led_saturation) != null ? _ : 0,
-            nTurnOnSound: (_ = _.turn_on_sound) != null ? _ : 0,
-            nTurnOffSound: (_ = _.turn_off_sound) != null ? _ : 0,
-            nLEDColorR: (_ = _.led_red) != null ? _ : 0,
-            nLEDColorG: (_ = _.led_green) != null ? _ : 0,
-            nLEDColorB: (_ = _.led_blue) != null ? _ : 0,
-            nLStickDeadzone: (_ = _.deadzone_left_stick) != null ? _ : 0,
-            nRStickDeadzone: (_ = _.deadzone_right_stick) != null ? _ : 0,
-            bHaptics: (_ = _.haptics_enabled) != null ? _ : !1,
-            bSWAntiDrift: (_ = _.gyro_sw_antidrift_enabled) != null ? _ : !1,
-            bIMUOneEuroFilter:
-              (_ = _.gyro_one_euro_filter_enabled) != null ? _ : !1,
-            nTritonGyroHWCalValue: (_ = _.triton_gyro_hw_cal) != null ? _ : 100,
-            bUseSWBiases: (_ = _.use_gyro_sw_biases) != null ? _ : !0,
-            nLHapticStrength: (_ = _.haptic_strength_left) != null ? _ : 0,
-            nRHapticStrength: (_ = _.haptic_strength_right) != null ? _ : 0,
-            flLPadPressureCurve:
-              (_ = _.pad_pressure_curve_left) != null ? _ : 0,
-            flRPadPressureCurve:
-              (_ = _.pad_pressure_curve_right) != null ? _ : 0,
+              _.controller_style ?? EControllerStyle.k_eControllerStyle_Unknown,
+            nXInputIndex: _.xinput_index ?? _,
+            nControllerIndex: _.controller_index ?? 16,
+            eRumblePreference: _.rumble_setting ?? _,
+            eRumbleIntensity: _.rumble_intensity ?? _,
+            bWireless: _.is_wireless_steam_dongle ?? !1,
+            unVendorID: _.vendor_id ?? 0,
+            unProductID: _.product_id ?? 0,
+            unCapabilities: BigInt(_.capabilities ?? 0),
+            strFirmwareBuildTime: _.firmware_build_time ?? "",
+            strSerialNumber: _.serial_number ?? "",
+            strChipID: _.cpu_id ?? "",
+            flLEDBrightness: _.led_brightness ?? 0,
+            flLEDSaturation: _.led_saturation ?? 0,
+            nTurnOnSound: _.turn_on_sound ?? 0,
+            nTurnOffSound: _.turn_off_sound ?? 0,
+            nLEDColorR: _.led_red ?? 0,
+            nLEDColorG: _.led_green ?? 0,
+            nLEDColorB: _.led_blue ?? 0,
+            nLStickDeadzone: _.deadzone_left_stick ?? 0,
+            nRStickDeadzone: _.deadzone_right_stick ?? 0,
+            bHaptics: _.haptics_enabled ?? !1,
+            bSWAntiDrift: _.gyro_sw_antidrift_enabled ?? !1,
+            bIMUOneEuroFilter: _.gyro_one_euro_filter_enabled ?? !1,
+            nTritonGyroHWCalValue: _.triton_gyro_hw_cal ?? 100,
+            bUseSWBiases: _.use_gyro_sw_biases ?? !0,
+            nLHapticStrength: _.haptic_strength_left ?? 0,
+            nRHapticStrength: _.haptic_strength_right ?? 0,
+            flLPadPressureCurve: _.pad_pressure_curve_left ?? 0,
+            flRPadPressureCurve: _.pad_pressure_curve_right ?? 0,
             bLeftStickTouchDisablesLeftTrackPad:
-              (_ = _.left_stick_touch_disable_lpad) != null ? _ : !1,
+              _.left_stick_touch_disable_lpad ?? !1,
             bRightStickTouchDisablesRightTrackPad:
-              (_ = _.right_stick_touch_disable_rpad) != null ? _ : !1,
-            ePlayerSlotLEDSetting:
-              (_ = _.player_slot_led_setting) != null ? _ : 0,
-            bNintendoLayout: (_ = _.has_nintendo_layout) != null ? _ : !1,
-            bUseReversedLayout: (_ = _.has_reversed_layout) != null ? _ : !1,
+              _.right_stick_touch_disable_rpad ?? !1,
+            ePlayerSlotLEDSetting: _.player_slot_led_setting ?? 0,
+            bNintendoLayout: _.has_nintendo_layout ?? !1,
+            bUseReversedLayout: _.has_reversed_layout ?? !1,
             bUseUniversalFaceButtonGlyphs:
-              (_ = _.has_universal_face_button_glyphs) != null ? _ : !1,
-            flGyroStationaryTolerance:
-              (_ = _.gyro_stationary_tolerance) != null ? _ : 0,
+              _.has_universal_face_button_glyphs ?? !1,
+            flGyroStationaryTolerance: _.gyro_stationary_tolerance ?? 0,
             flAccelerometerStationaryTolerance:
-              (_ = _.accel_stationary_tolerance) != null ? _ : 0,
-            nAuxCapSenseThreshold:
-              (_ = _.aux_capsense_threshold) != null ? _ : 0,
-            nAuxCapSenseHysteresis:
-              (_ = _.aux_capsense_hysterisis) != null ? _ : 0,
-            bRemoteDevice: (_ = _.is_remote_device) != null ? _ : !1,
-            bBluetooth: (_ = _.is_bluetooth) != null ? _ : !1,
-            vecMacAddrs: (_ = _.mac_addr) != null ? _ : [],
-            ucBatteryLevel: (_ = _.battery_level) != null ? _ : 1,
-            bCharging: (_ = _.is_charging) != null ? _ : !1,
-            bHasTouchscreen: (_ = _.has_touchscreen) != null ? _ : !1,
+              _.accel_stationary_tolerance ?? 0,
+            nAuxCapSenseThreshold: _.aux_capsense_threshold ?? 0,
+            nAuxCapSenseHysteresis: _.aux_capsense_hysterisis ?? 0,
+            bRemoteDevice: _.is_remote_device ?? !1,
+            bBluetooth: _.is_bluetooth ?? !1,
+            vecMacAddrs: _.mac_addr ?? [],
+            ucBatteryLevel: _.battery_level ?? 1,
+            bCharging: _.is_charging ?? !1,
+            bHasTouchscreen: _.has_touchscreen ?? !1,
           };
         }
         function _() {
@@ -27112,12 +26769,11 @@
           return {
             queryKey: _(),
             queryFn: async () => {
-              var _;
               const _ = await SteamInputManagerService.GetControllerList({});
               return _.BSuccess()
-                ? (_ = _.Body().toObject().controllers) == null
-                  ? void 0
-                  : _.map((_) => _(_))
+                ? _.Body()
+                    .toObject()
+                    .controllers?.map((_) => _(_))
                 : [];
             },
           };
@@ -27390,13 +27046,8 @@
             },
             preferenceControls: {
               isTechnicallyNecessary: !1,
-              IsAllowed: (_) => {
-                var _;
-                return !!(
-                  (_ = _.valve_analytics) != null &&
-                  _.product_impressions_tracking
-                );
-              },
+              IsAllowed: (_) =>
+                !!_.valve_analytics?.product_impressions_tracking,
             },
           },
           _ = {
@@ -27444,13 +27095,7 @@
             preferenceControls: {
               isTechnicallyNecessary: !1,
               IsAllowed(_) {
-                var _, _;
-                return (_ =
-                  (_ = _.valve_analytics) == null
-                    ? void 0
-                    : _.product_impressions_tracking) != null
-                  ? _
-                  : !1;
+                return _.valve_analytics?.product_impressions_tracking ?? !1;
               },
             },
           },
@@ -27518,17 +27163,14 @@
           if (_ && _[2]) return decodeURIComponent(_[2]);
         }
         function _(_, _) {
-          var _, _, _, _, _;
           if (!("document" in globalThis) || !(0, _._)(_)) return;
-          const _ =
-            (_ = (_ = _.options) == null ? void 0 : _.path) != null ? _ : "/";
+          const _ = _.options?.path ?? "/";
           let _ = "";
-          (_ = _.options) != null && _.expires
+          _.options?.expires
             ? (_ += ";expires=" + _.options.expires.toUTCString())
-            : (_ = _.options) != null &&
-              _.maxAge &&
+            : _.options?.maxAge &&
               (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
-            (_ = _.options) != null && _.secure && (_ += ";secure"),
+            _.options?.secure && (_ += ";secure"),
             (document.cookie =
               encodeURIComponent(_.name) +
               "=" +
@@ -27550,11 +27192,7 @@
           );
         }
         function _() {
-          var _, _;
-          return (_ = (_ = window.SSR) == null ? void 0 : _.renderContext) ==
-            null
-            ? void 0
-            : _.cookiePrefs;
+          return window.SSR?.renderContext?.cookiePrefs;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -27634,10 +27272,7 @@
           return (
             useGamepadEvents(
               {
-                onOKButton: useCallback(() => {
-                  var _;
-                  return (_ = _.current) == null || _.click(), !0;
-                }, [_]),
+                onOKButton: useCallback(() => (_.current?.click(), !0), [_]),
               },
               _,
             ),
@@ -27663,7 +27298,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { children: _, "flow-children": _, ..._ } = _,
             { gamepadEvents: _ } = (0, _._)(_);
           _ && (_.layout = (0, _._)(_)),
@@ -27674,7 +27308,7 @@
           const { ref: _, node: _ } = (0, _._)(_);
           (0, _._)(_, _);
           const _ = (0, _._)(_),
-            _ = (0, _._)(_, (_ = _.props) == null ? void 0 : _.ref, _);
+            _ = (0, _._)(_, _.props?.ref, _);
           return (0, _.jsx)(_._.Provider, {
             value: _,
             children: _.cloneElement(_, {
@@ -27745,12 +27379,7 @@
           return _.useContext(_);
         }
         function _() {
-          var _, _;
-          return (_ = (0, _._)(
-            (_ = _()) == null ? void 0 : _.GetShowDebugFocusRing(),
-          )) != null
-            ? _
-            : !1;
+          return (0, _._)(_()?.GetShowDebugFocusRing()) ?? !1;
         }
         function _(_) {
           const _ = _();
@@ -27789,7 +27418,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _,
               disabledRoot: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
               "flow-children": _,
               ..._
             } = _,
@@ -27808,7 +27437,7 @@
                 onGlobalButtonDown: _,
                 disableFocusClasses: _,
                 disabledRoot: _,
-                excludeFromScrollRegionSearch: _,
+                excludeTreeFromScrollRegionSearch: _,
                 "flow-children": _,
                 ..._,
                 ..._,
@@ -27837,7 +27466,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _ = !1,
               disabledRoot: _ = !1,
-              excludeFromScrollRegionSearch: _ = !1,
+              excludeTreeFromScrollRegionSearch: _ = !1,
               "flow-children": _,
               ..._
             } = _,
@@ -27852,7 +27481,7 @@
               virtualFocus: _,
               modal: _,
               historyMode: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
             });
           (0, _._)(_.OnActivateCallbacks, _),
             (0, _._)(_.OnDeactivateCallbacks, _),
@@ -27883,7 +27512,7 @@
               navID: _,
               parentEmbeddedNavTree: _,
               disabledRoot: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
               enabled: _,
               navTreeRef: _,
               onGlobalButtonDown: _,
@@ -27893,15 +27522,10 @@
             _ = (0, _._)() || _.GetDefaultContext(),
             _ = _.useContext(_._),
             [_] = _.useState(() =>
-              _.NewGamepadNavigationTree(
-                _,
-                _,
-                _ != null ? _ : _ == null ? void 0 : _.Tree,
-                {
-                  ..._,
-                  bIsEmbeddedInLegacyTree: !!_,
-                },
-              ),
+              _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree, {
+                ..._,
+                bIsEmbeddedInLegacyTree: !!_,
+              }),
             );
           let _ = _.useRef(null);
           return (
@@ -27940,17 +27564,10 @@
           bIsMounted: !1,
         });
         function _(_) {
-          var _;
           const { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
-            [_, _] = _.useState((_ == null ? void 0 : _.BIsActive()) || !1),
-            [_, _] = _.useState(
-              (_ == null ? void 0 : _.BIsActiveWithinContext()) || !1,
-            ),
-            _ =
-              (_ = (0, _._)(_ == null ? void 0 : _.SubscribableIsMounted)) !=
-              null
-                ? _
-                : !1;
+            [_, _] = _.useState(_?.BIsActive() || !1),
+            [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
+            _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
           _.useEffect(() => {
             if (!_) {
               _(!1), _(!1);
@@ -27996,7 +27613,6 @@
           bSupportsFocus: !0,
         });
         function _(_) {
-          var _;
           const {
               ownerWindow: _,
               refFocusNavContext: _,
@@ -28007,27 +27623,20 @@
             _ = useFocusNavController(),
             _ = React.useContext(_),
             _ = useInVR(),
-            [_] = React.useState(() => {
-              var _;
-              return (_ = _ != null ? _ : _.focusNavWindow) != null
-                ? _
-                : _.CreateContext(_, _, _);
-            }),
-            _ =
-              (_ = useSubscribableValue(_.NavigationSourceSupportsFocus)) !=
-              null
-                ? _
-                : !1;
-          React.useEffect(() => {
-            var _;
-            return (
+            [_] = React.useState(
+              () => _ ?? _.focusNavWindow ?? _.CreateContext(_, _, _),
+            ),
+            _ = useSubscribableValue(_.NavigationSourceSupportsFocus) ?? !1;
+          React.useEffect(
+            () => (
               _.OnMount(_),
-              (_ = _.document) != null && _.hasFocus() && _.OnActivate(_),
+              _.document?.hasFocus() && _.OnActivate(_),
               () => {
                 _.Destroy(_);
               }
-            );
-          }, [_, _]),
+            ),
+            [_, _],
+          ),
             useSetRef(_, _);
           const _ = React.useMemo(
             () => ({
@@ -28039,7 +27648,7 @@
           return jsxs(_.Provider, {
             value: _,
             children: [
-              !(_ != null && _.BIsVR()) &&
+              !_?.BIsVR() &&
                 jsx(_, {
                   ownerWindow: _,
                   context: _,
@@ -28060,25 +27669,16 @@
               capture: !0,
             }),
             useGlobalEventListener(_, "focus", _),
-            useGlobalEventListener(
-              _ == null ? void 0 : _.document,
-              "focusin",
-              _,
-            ),
+            useGlobalEventListener(_?.document, "focusin", _),
             useGlobalEventListener(_, "blur", _),
             null
           );
         }
         function _() {
-          var _;
-          return (_ = _.useContext(_)) == null ? void 0 : _.focusNavWindow;
+          return _.useContext(_)?.focusNavWindow;
         }
         function _(_ = !0) {
-          var _, _;
-          return (_ =
-            (_ = _.useContext(_)) == null ? void 0 : _.bSupportsFocus) != null
-            ? _
-            : _;
+          return _.useContext(_)?.bSupportsFocus ?? _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -28178,17 +27778,15 @@
           return (
             _.useEffect(
               () => () => {
-                var _;
-                (_ = _.current) == null || _.call(_);
+                _.current?.();
               },
               [],
             ),
             _.useCallback(
               (_) => {
-                var _;
                 _.current !== _ &&
                   ((_.current = _),
-                  (_ = _.current) == null || _.call(_),
+                  _.current?.(),
                   (_.current = null),
                   _ &&
                     (_.current = (0, _._)(_, (_) =>
@@ -28272,6 +27870,7 @@
               scrollIntoViewType: _,
               resetNavOnEntry: _,
               scrollRegionToStartOrEnd: _,
+              excludeFromScrollRegionSearch: _,
               ..._
             } = _,
             { gamepadEvents: _, actionDescriptions: _, props: _ } = _(_),
@@ -28299,6 +27898,7 @@
               scrollIntoViewType: _,
               resetNavOnEntry: _,
               scrollRegionToStartOrEnd: _,
+              excludeFromScrollRegionSearch: _,
               actionDescriptionMap: {
                 ..._,
                 ..._,
@@ -28357,7 +27957,6 @@
         const _ = _.createContext(void 0),
           _ = _.Provider;
         function _(_, _, _, _, _) {
-          var _, _, _;
           const {
               elemProps: {
                 focusClassName: _,
@@ -28384,18 +27983,16 @@
               (_.onOKButton = _)),
             _.focusable && !_
               ? (_.tabIndex = _.tabIndex || 0)
-              : !_.focusable &&
-                _ &&
-                (_.tabIndex = (_ = _.tabIndex) != null ? _ : -1),
+              : !_.focusable && _ && (_.tabIndex = _.tabIndex ?? -1),
             (0, _._)(_, _);
           const _ = _(_),
             _ = (0, _._)(_, _, _),
-            _ = (_ = (0, _.useContext)(_)) == null ? void 0 : _.Component;
+            _ = (0, _.useContext)(_)?.Component;
           let _ = {
             ..._,
           };
           return (
-            "onClick" in _ && ((_ = _.role) != null || (_.role = "button")),
+            "onClick" in _ && (_.role ??= "button"),
             _
               ? ((_ = {
                   ..._,
@@ -28500,8 +28097,7 @@
                   });
                 },
                 OnForceMeasureFocusRing: () => {
-                  var _;
-                  (_ = _.current) == null || _.MeasureElementAndUpdate();
+                  _.current?.MeasureElementAndUpdate();
                 },
               }),
               [_],
@@ -28549,28 +28145,19 @@
               });
         }
         function _(_, _) {
-          var _, _, _, _, _, _, _, _;
           return (
             _.left == _.left &&
             _.top == _.top &&
             _.height == _.height &&
             _.width == _.width &&
-            ((_ = _.borderRadius) == null ? void 0 : _.borderTopLeftRadius) ==
-              ((_ = _.borderRadius) == null ? void 0 : _.borderTopLeftRadius) &&
-            ((_ = _.borderRadius) == null ? void 0 : _.borderTopRightRadius) ==
-              ((_ = _.borderRadius) == null
-                ? void 0
-                : _.borderTopRightRadius) &&
-            ((_ = _.borderRadius) == null
-              ? void 0
-              : _.borderBottomRightRadius) ==
-              ((_ = _.borderRadius) == null
-                ? void 0
-                : _.borderBottomRightRadius) &&
-            ((_ = _.borderRadius) == null
-              ? void 0
-              : _.borderBottomLeftRadius) ==
-              ((_ = _.borderRadius) == null ? void 0 : _.borderBottomLeftRadius)
+            _.borderRadius?.borderTopLeftRadius ==
+              _.borderRadius?.borderTopLeftRadius &&
+            _.borderRadius?.borderTopRightRadius ==
+              _.borderRadius?.borderTopRightRadius &&
+            _.borderRadius?.borderBottomRightRadius ==
+              _.borderRadius?.borderBottomRightRadius &&
+            _.borderRadius?.borderBottomLeftRadius ==
+              _.borderRadius?.borderBottomLeftRadius
           );
         }
         function _(_) {
@@ -28665,8 +28252,8 @@
             } = _,
             _ = 0,
             _ = {
-              left: (_ != null ? _ : 0) - _ + "px",
-              top: (_ != null ? _ : 0) - _ + "px",
+              left: (_ ?? 0) - _ + "px",
+              top: (_ ?? 0) - _ + "px",
               height: _ + "px",
               width: _ + "px",
               ..._,
@@ -28686,11 +28273,8 @@
                 const _ = _.ownerDocument.defaultView,
                   _ = (_) =>
                     _.getComputedStyle(_).display == "none" ||
-                    ((_ == null ? void 0 : _.width) == 0 &&
-                      _.height == 0 &&
-                      _._ == 0 &&
-                      _._ == 0);
-                for (; _(_) && _ != null && _.parentElement; )
+                    (_?.width == 0 && _.height == 0 && _._ == 0 && _._ == 0);
+                for (; _(_) && _?.parentElement; )
                   (_ = _.parentElement), (_ = _.getBoundingClientRect());
                 let _ = _.Element != _;
                 _(
@@ -28844,7 +28428,6 @@
           });
         }
         function _(_) {
-          var _;
           const {
               "flow-children": _,
               onActivate: _,
@@ -28877,9 +28460,7 @@
           (_.focusable || _.focusableIfEmpty) &&
             (!_ || !_.Tree.BUseVirtualFocus()) &&
             (_.tabIndex = _.tabIndex || 0),
-            _.focusable &&
-              (_ || _.onOKButton) &&
-              ((_ = _.role) != null || (_.role = "button"));
+            _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
           const _ = (0, _.useContext)(_).Component;
           return (0, _.jsx)(_._.Provider, {
             value: _,
@@ -28968,7 +28549,7 @@
             _ = (0, _._)(_, _);
           return (0, _.jsx)(_._, {
             ..._,
-            onOKButton: (_) => (_ == null ? void 0 : _(_)),
+            onOKButton: (_) => _?.(_),
             onCancelButton: _,
             navRef: _,
             ref: _,
@@ -28983,11 +28564,11 @@
             onExplicitFocusLevelChanged: _,
             fnFocusChildren: _,
           } = _;
-          _ = _ != null ? _ : _;
+          _ = _ ?? _;
           const _ = _.useCallback(
               (_) => {
                 const _ = _.current;
-                return _ != null && _.BHasFocus() && _(_, _.detail.button)
+                return _?.BHasFocus() && _(_, _.detail.button)
                   ? (_ && _(!0), !0)
                   : _
                     ? _(_)
@@ -29217,14 +28798,7 @@
           _
         ))(_ || {});
         function _(_) {
-          var _, _;
-          return (_ =
-            typeof _ == "object" &&
-            ((_ = _ == null ? void 0 : _.type) == null
-              ? void 0
-              : _.startsWith("vgp_"))) != null
-            ? _
-            : !1;
+          return (typeof _ == "object" && _?.type?.startsWith("vgp_")) ?? !1;
         }
         let _ = {
           [_._._]: "vgp_onok",
@@ -29334,7 +28908,7 @@
         }
         function _(_, _, _, _) {
           React.useEffect(() => {
-            const _ = _ == null ? void 0 : _.current;
+            const _ = _?.current;
             if (!(!_ || !_)) return _(_, _, _);
           }, [_, _, _]);
         }
@@ -29354,18 +28928,7 @@
           _: () => _,
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          _ = ((_) => (
+        var _ = ((_) => (
             (_[(_.INVALID = 0)] = "INVALID"),
             (_[(_._ = 1)] = "OK"),
             (_[(_.CANCEL = 2)] = "CANCEL"),
@@ -29412,26 +28975,20 @@
           return _ === 1 || _ === 2;
         }
         class _ {
-          constructor() {
-            _(this, "m_OnGamepadDetectedCallbacks", new CCallbackList()),
-              _(this, "m_ButtonDownCallbacks", new CCallbackList()),
-              _(this, "m_ButtonUpCallbacks", new CCallbackList()),
-              _(this, "m_AnalogCallbacks", new CCallbackList()),
-              _(this, "m_NavigationTypeChangeCallbacks", new CCallbackList()),
-              _(this, "m_eNavigationSourceType"),
-              _(this, "m_fLastActiveTime"),
-              _(this, "m_nLastActiveControllerIndex", -1),
-              _(
-                this,
-                "m_ButtonRepeatHandler",
-                new CButtonRepeatStateManager({
-                  inputsThatRepeat: new Set([9, 10, 11, 12]),
-                  firstRepeatInterval_ms: 400,
-                  repeatInterval_ms: 50,
-                }),
-              ),
-              _(this, "m_bGamepadDetected", !1);
-          }
+          m_OnGamepadDetectedCallbacks = new CCallbackList();
+          m_ButtonDownCallbacks = new CCallbackList();
+          m_ButtonUpCallbacks = new CCallbackList();
+          m_AnalogCallbacks = new CCallbackList();
+          m_NavigationTypeChangeCallbacks = new CCallbackList();
+          m_eNavigationSourceType;
+          m_fLastActiveTime;
+          m_nLastActiveControllerIndex = -1;
+          m_ButtonRepeatHandler = new CButtonRepeatStateManager({
+            inputsThatRepeat: new Set([9, 10, 11, 12]),
+            firstRepeatInterval_ms: 400,
+            repeatInterval_ms: 50,
+          });
+          m_bGamepadDetected = !1;
           Init(_) {
             return {
               Unregister: () => {},
@@ -29531,26 +29088,16 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = new _._("FocusHistory"),
           _ = _.Debug,
           _ = 0,
           _ = 1,
           _ = 2;
         class _ {
+          m_root;
           constructor(_) {
-            _(this, "m_root"), (this.m_root = _);
+            this.m_root = _;
           }
           static SerializeNavState(_, _ = !0, _ = !0) {
             return {
@@ -29582,7 +29129,6 @@
             });
           }
           static RestoreSerializedNavNode(_, _, _ = 0) {
-            var _;
             const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
             _ && (0, _._)(_ == _.NavKey, "navkey mismatch"),
               _.SetActiveChild(_);
@@ -29604,7 +29150,7 @@
                 const _ = _.get(_.sNavKey);
                 _ && _.RestoreSerializedNavNode(_, _, _ + 1);
               }
-              if (_ != -1 && (_ = _[_]) != null && _.sNavKey) {
+              if (_ != -1 && _[_]?.sNavKey) {
                 const _ = _.get(_[_].sNavKey);
                 _(
                   `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${_ === void 0 ? "MISSING!!" : ""}`,
@@ -29629,9 +29175,7 @@
           return _.RestoreSerializedNavState(_, _, _);
         }
         class _ extends _ {
-          constructor() {
-            super(...arguments), _(this, "m_rgHistory", []);
-          }
+          m_rgHistory = [];
           PushState() {
             this.m_rgHistory.push(_.SerializeNavState(this.m_root));
           }
@@ -29645,9 +29189,7 @@
           }
         }
         class _ extends _ {
-          constructor() {
-            super(...arguments), _(this, "m_mapHistory", new Map());
-          }
+          m_mapHistory = new Map();
           SaveState(_) {
             this.m_mapHistory.set(_, _.SerializeNavState(this.m_root));
           }
@@ -29685,35 +29227,25 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_, _ = window) {
           return _[_];
         }
         class _ {
+          m_node;
+          m_History;
+          m_StateHistory;
           constructor(_) {
-            _(this, "m_node"),
-              _(this, "m_History"),
-              _(this, "m_StateHistory"),
-              (this.m_node = _);
+            this.m_node = _;
           }
           TakeFocus(_) {
             return this.m_node.BTakeFocus(_ ? _._.GAMEPAD : _._.APPLICATION, _);
           }
           ParentTakeFocus(_) {
-            var _;
-            (_ = this.m_node.Parent) == null ||
-              _.BTakeFocus(_ ? _._.GAMEPAD : _._.APPLICATION, _);
+            this.m_node.Parent?.BTakeFocus(
+              _ ? _._.GAMEPAD : _._.APPLICATION,
+              _,
+            );
           }
           ChildTakeFocus(_) {
             return this.m_node.BChildTakeFocus(
@@ -29872,7 +29404,7 @@
                 typeof _ != "object" ||
                 Object.keys(_).length !== Object.keys(_).length
               ? !1
-              : ((_ = _ != null ? _ : (_, _) => _ === _),
+              : ((_ = _ ?? ((_, _) => _ === _)),
                 Object.keys(_).every(
                   (_) => _.hasOwnProperty(_) && _(_[_], _[_]),
                 ));
@@ -29880,29 +29412,13 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_, _, _) {
-          var _;
           const _ = [],
             [_, _] = _.GetChildren(),
             _ = _.GetActiveChild();
           let _;
-          const _ = _
-            ? (_ = _.Element) == null
-              ? void 0
-              : _.getBoundingClientRect()
-            : null;
+          const _ = _ ? _.Element?.getBoundingClientRect() : null;
           if (_) {
             const _ = _(_, _, _);
             if (
@@ -29921,7 +29437,7 @@
           for (let _ = 0; _ < _.length; _++) {
             const _ = _[_];
             if (_ == _) continue;
-            const _ = _(_, _, _ != null ? _ : void 0);
+            const _ = _(_, _, _ ?? void 0);
             _ &&
               _.push({
                 child: _,
@@ -29939,8 +29455,7 @@
                 (_.distance && _.distance > _.visibility.distance))
             )
               break;
-            const _ =
-              _ == _ ? _ : _(_, _, _.overlap || _, _ != null ? _ : void 0);
+            const _ = _ == _ ? _ : _(_, _, _.overlap || _, _ ?? void 0);
             _ && (!_ || _(_, _) < 0) && (_ = _);
           }
           return _;
@@ -29970,9 +29485,7 @@
               : _.distance - _.distance;
         }
         function _(_, _, _) {
-          var _;
-          const _ =
-              (_ = _.Element) == null ? void 0 : _.getBoundingClientRect(),
+          const _ = _.Element?.getBoundingClientRect(),
             _ = _.GetFocusable();
           let _;
           if (_ == "none" || !_ || !_) return null;
@@ -30049,9 +29562,8 @@
           };
         }
         class _ {
-          constructor() {
-            _(this, "m_nTargetX", 0), _(this, "m_nTargetY", 0);
-          }
+          m_nTargetX = 0;
+          m_nTargetY = 0;
           GetBoundingRectAdjustedForScroll(_) {
             const _ = _.getBoundingClientRect(),
               _ = this.m_nTargetX - window.scrollX,
@@ -30071,27 +29583,16 @@
                 : NaN;
           }
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         class _ {
+          m_options;
+          m_msStart;
+          m_msEnd;
+          m_bActive = !1;
+          m_fnBoundAnimationFunc = void 0;
+          m_window;
           constructor(_, _) {
-            _(this, "m_options"),
-              _(this, "m_msStart"),
-              _(this, "m_msEnd"),
-              _(this, "m_bActive", !1),
-              _(this, "m_fnBoundAnimationFunc"),
-              _(this, "m_window"),
-              (this.m_window = _),
+            (this.m_window = _),
               (this.m_options = {
                 timing: "sine",
                 ..._,
@@ -30160,19 +29661,20 @@
           }
         }
         class _ extends _ {
+          m_fnCallback;
           constructor(_, _, _) {
-            super(_, _), _(this, "m_fnCallback"), (this.m_fnCallback = _);
+            super(_, _), (this.m_fnCallback = _);
           }
           Update(_) {
             this.m_fnCallback(_);
           }
         }
         class _ extends _ {
+          m_object;
+          m_propTargets;
+          m_props = {};
           constructor(_, _, _) {
             super("ownerDocument" in _ ? _._(_) : _, _),
-              _(this, "m_object"),
-              _(this, "m_propTargets"),
-              _(this, "m_props", {}),
               (this.m_object = _),
               (this.m_propTargets = _);
           }
@@ -30199,15 +29701,6 @@
         }
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -30216,8 +29709,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new _._("ScrollSnap").Debug;
         let _ = !1;
         function _(_) {
@@ -30227,22 +29719,17 @@
         let _;
         const _ = 500;
         function _(_, _, _, _, _) {
-          var _, _, _, _;
           const _ = _.Element;
           if (!_) return;
           let _ = [
             {
               node: _,
-              eScrollType:
-                (_ = _.m_Properties) == null ? void 0 : _.scrollIntoViewType,
+              eScrollType: _.m_Properties?.scrollIntoViewType,
             },
           ];
           for (let _ = _.Parent; _; _ = _.Parent) {
-            const _ =
-                (_ = _.m_Properties) == null
-                  ? void 0
-                  : _.scrollIntoViewWhenChildFocused,
-              _ = (_ = _.m_Properties) == null ? void 0 : _.scrollIntoViewType;
+            const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+              _ = _.m_Properties?.scrollIntoViewType;
             if (_) {
               const _ = {
                 node: _,
@@ -30263,8 +29750,7 @@
               _ = _.length == 0;
             if (
               (_ === void 0 && (_ ? (_ = _.NoTransform) : (_ = _.Standard)),
-              (_ = _ == null ? void 0 : _.m_Properties) != null &&
-                _.fnScrollIntoViewHandler &&
+              _?.m_Properties?.fnScrollIntoViewHandler &&
                 _.m_Properties.fnScrollIntoViewHandler(_, _, _) !== !1)
             )
               continue;
@@ -30278,12 +29764,11 @@
                       "Scrolling Into View ('auto' via browser scrollIntoView):",
                       _,
                     ),
-                    _ == null ||
-                      _.scrollIntoView({
-                        behavior: "auto",
-                        block: "nearest",
-                        inline: "nearest",
-                      }));
+                    _?.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    }));
             else {
               const _ = _ ? _(_) : _.getBoundingClientRect(),
                 _ = _.ownerDocument.defaultView.innerHeight,
@@ -30315,14 +29800,11 @@
           _(_, _);
         }
         function _(_, _) {
-          var _, _;
           const _ = (0, _._)(_);
           if (!_) return;
           let _ = null;
           for (let _ = _; _; _ = _.GetNavParentCrossingTrees())
-            (_ = _.m_Properties) != null &&
-              _.scrollRegionToStartOrEnd &&
-              (_ = _);
+            _.m_Properties?.scrollRegionToStartOrEnd && (_ = _);
           if (_)
             for (
               let _ = _;
@@ -30331,19 +29813,18 @@
                 _.BHasNavTargetInDirection(_, !0) ||
                 (_ != _ &&
                   _.Element &&
-                  (_ = _.m_Properties) != null &&
-                  _.scrollRegionToStartOrEnd &&
-                  _(_.Element, _, _),
+                  _.m_Properties?.scrollRegionToStartOrEnd &&
+                  _(_.Element, _, _, _ == _.Tree.Root),
                 _ == _)
               );
               _ = _.GetNavParentCrossingTrees()
             );
         }
-        function _(_, _, _) {
+        function _(_, _, _, _) {
           let _ = _,
             _ = _.ownerDocument;
           if (
-            (_ == _.body &&
+            ((_ || _ == _.body) &&
               _.defaultView &&
               !(0, _._)(_, _) &&
               (_ = _.defaultView),
@@ -30390,7 +29871,7 @@
             }
             (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
           }
-          for (_ = _ == null ? void 0 : _.parentElement; _; ) {
+          for (_ = _?.parentElement; _; ) {
             const { scrollTop: _, scrollLeft: _ } = _(_);
             if (((_ -= _), (_ -= _), "ownerDocument" in _)) {
               const _ = window.getComputedStyle(_);
@@ -30483,7 +29964,7 @@
           let _ = [],
             _ = _,
             _ = _(_),
-            _ = _ != null ? _ : Number.MAX_VALUE;
+            _ = _ ?? Number.MAX_VALUE;
           for (; _; ) {
             let _ = (0, _._)(_);
             _ || (_ = (0, _._)(_));
@@ -30570,8 +30051,8 @@
           const { top: _, left: _, behavior: _ } = _,
             _ = _(_);
           _.scrollTo({
-            top: _.scrollTop + (_ != null ? _ : 0),
-            left: _.scrollLeft + (_ != null ? _ : 0),
+            top: _.scrollTop + (_ ?? 0),
+            left: _.scrollLeft + (_ ?? 0),
             behavior: _,
           });
         }
@@ -30579,26 +30060,26 @@
           _(_).scrollTo(_);
         }
         class _ {
+          m_element;
+          m_fnOriginalScrollTo;
+          m_window;
+          m_scrollTopTarget = void 0;
+          m_scrollLeftTarget = void 0;
+          m_animation = void 0;
           constructor(_) {
-            _(this, "m_element"),
-              _(this, "m_fnOriginalScrollTo"),
-              _(this, "m_window"),
-              _(this, "m_scrollTopTarget"),
-              _(this, "m_scrollLeftTarget"),
-              _(this, "m_animation"),
-              "ownerDocument" in _
-                ? ((this.m_element = _),
-                  (this.m_fnOriginalScrollTo = _.scrollTo),
-                  (this.m_element.scrollTo = (_, _) => {
-                    typeof _ == "number"
-                      ? this.scrollTo({
-                          left: _,
-                          top: _,
-                        })
-                      : this.scrollTo(_);
-                  }))
-                : ((this.m_window = _),
-                  (this.m_element = _.document.documentElement));
+            "ownerDocument" in _
+              ? ((this.m_element = _),
+                (this.m_fnOriginalScrollTo = _.scrollTo),
+                (this.m_element.scrollTo = (_, _) => {
+                  typeof _ == "number"
+                    ? this.scrollTo({
+                        left: _,
+                        top: _,
+                      })
+                    : this.scrollTo(_);
+                }))
+              : ((this.m_window = _),
+                (this.m_element = _.document.documentElement));
           }
           ResetScrollState() {
             (this.m_scrollTopTarget = void 0),
@@ -30606,18 +30087,16 @@
               this.m_window || (this.m_element.style.scrollSnapType = "");
           }
           scrollTo(_) {
-            var _, _, _;
-            if ((_ == null ? void 0 : _.behavior) != "smooth")
+            if (_?.behavior != "smooth")
               this.m_animation &&
                 (this.m_animation.Cancel(), (this.m_animation = void 0)),
                 this.m_window
                   ? this.m_window.scrollTo(_)
-                  : (_ = this.m_fnOriginalScrollTo) == null ||
-                    _.apply(this.m_element, [_]),
+                  : this.m_fnOriginalScrollTo?.apply(this.m_element, [_]),
                 this.ResetScrollState();
             else {
-              const _ = (_ = _.left) != null ? _ : this.scrollLeft,
-                _ = (_ = _.top) != null ? _ : this.scrollTop;
+              const _ = _.left ?? this.scrollLeft,
+                _ = _.top ?? this.scrollTop;
               let _ = "sine";
               if (
                 (this.m_animation &&
@@ -30636,13 +30115,11 @@
                   const _ = this.currentScrollLeft,
                     _ = this.currentScrollTop;
                   this.m_animation = new _(this.m_window, _, (_) => {
-                    var _;
-                    (_ = this.m_window) == null ||
-                      _.scrollTo({
-                        left: _ + (_ - _) * _,
-                        top: _ + (_ - _) * _,
-                        behavior: "auto",
-                      });
+                    this.m_window?.scrollTo({
+                      left: _ + (_ - _) * _,
+                      top: _ + (_ - _) * _,
+                      behavior: "auto",
+                    });
                   });
                 } else
                   (this.m_element.style.scrollSnapType = "initial"),
@@ -30681,16 +30158,10 @@
               : this.m_element.scrollTop;
           }
           get scrollLeft() {
-            var _;
-            return (_ = this.m_scrollLeftTarget) != null
-              ? _
-              : this.currentScrollLeft;
+            return this.m_scrollLeftTarget ?? this.currentScrollLeft;
           }
           get scrollTop() {
-            var _;
-            return (_ = this.m_scrollTopTarget) != null
-              ? _
-              : this.currentScrollTop;
+            return this.m_scrollTopTarget ?? this.currentScrollTop;
           }
           get scrollWidth() {
             return this.m_element.scrollWidth;
@@ -30725,15 +30196,6 @@
         }
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -30742,8 +30204,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new _._("FocusNavigationMovement"),
           _ = _.Debug;
         var _ = ((_) => (
@@ -30777,26 +30238,26 @@
             _
           ))(_ || {});
         const _ = class _ {
+          m_Tree;
+          m_Parent;
+          m_rgChildren = [];
+          m_ActiveChild;
+          m_iLastActiveChildIndex = -1;
+          m_Properties;
+          m_element;
+          m_FocusRing;
+          m_bChildrenSorted = !1;
+          m_bAutoFocusChild = !1;
+          m_bMounted = !1;
+          m_nDepth;
+          m_Focused = (0, _._)(!1);
+          m_FocusWithin = (0, _._)(!1);
+          m_ActionDescriptionsChangedCallbackList = new _._();
+          m_FocusableIfEmptyAncestor = null;
+          m_rgNavigationHandlers = [];
+          m_rgFocusHandlers = [];
           constructor(_, _, _) {
-            _(this, "m_Tree"),
-              _(this, "m_Parent"),
-              _(this, "m_rgChildren", []),
-              _(this, "m_ActiveChild"),
-              _(this, "m_iLastActiveChildIndex", -1),
-              _(this, "m_Properties"),
-              _(this, "m_element"),
-              _(this, "m_FocusRing"),
-              _(this, "m_bChildrenSorted", !1),
-              _(this, "m_bAutoFocusChild", !1),
-              _(this, "m_bMounted", !1),
-              _(this, "m_nDepth"),
-              _(this, "m_Focused", (0, _._)(!1)),
-              _(this, "m_FocusWithin", (0, _._)(!1)),
-              _(this, "m_ActionDescriptionsChangedCallbackList", new _._()),
-              _(this, "m_FocusableIfEmptyAncestor", null),
-              _(this, "m_rgNavigationHandlers", []),
-              _(this, "m_rgFocusHandlers", []),
-              (this.m_Tree = _),
+            (this.m_Tree = _),
               (this.m_Parent = _),
               (this.m_FocusRing = _),
               (this.m_nDepth = _ ? _.m_nDepth + 1 : 0);
@@ -30808,9 +30269,7 @@
             return this.m_Tree;
           }
           get NavKey() {
-            var _;
-            if ((_ = this.m_Properties) != null && _.navKey)
-              return this.m_Properties.navKey;
+            if (this.m_Properties?.navKey) return this.m_Properties.navKey;
           }
           get Element() {
             return this.m_element;
@@ -30819,29 +30278,23 @@
             return this.m_Parent;
           }
           GetNavParentCrossingTrees() {
-            var _;
             return this.m_Parent
               ? this.m_Parent
-              : this.m_Tree.GetParentEmbeddedNavTree() &&
-                  this.Element &&
-                  (_ = this.Element.__nav_wrapper) != null
-                ? _
+              : this.m_Tree.GetParentEmbeddedNavTree() && this.Element
+                ? (this.Element.__nav_wrapper ?? null)
                 : null;
           }
           GetWrappedTree() {
             return null;
           }
           SetProperties(_) {
-            var _, _, _, _, _;
             const _ = !_(
-                (_ = this.m_Properties) == null
-                  ? void 0
-                  : _.actionDescriptionMap,
-                _ == null ? void 0 : _.actionDescriptionMap,
+                this.m_Properties?.actionDescriptionMap,
+                _?.actionDescriptionMap,
                 _._,
               ),
-              _ = (_ = this.m_Properties) == null ? void 0 : _.focusableIfEmpty,
-              _ = (_ = this.m_Properties) == null ? void 0 : _.noFocusRing;
+              _ = this.m_Properties?.focusableIfEmpty,
+              _ = this.m_Properties?.noFocusRing;
             (this.m_Properties = _ || {}),
               _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
               this.m_Properties.focusableIfEmpty && !_
@@ -30852,72 +30305,44 @@
                     this.m_FocusableIfEmptyAncestor,
                   ),
               this.m_Properties.noFocusRing && !_ && this.BHasFocus()
-                ? (_ = this.m_FocusRing) == null ||
-                  _.OnBlur(_._.APPLICATION, this, this)
+                ? this.m_FocusRing?.OnBlur(_._.APPLICATION, this, this)
                 : !this.m_Properties.noFocusRing &&
                   _ &&
                   this.BHasFocus() &&
-                  ((_ = this.m_FocusRing) == null ||
-                    _.OnFocus(_._.APPLICATION, this, this)),
+                  this.m_FocusRing?.OnFocus(_._.APPLICATION, this, this),
               this.m_element && this.RegisterDOMEvents();
           }
           BWantsAutoFocus() {
-            var _;
-            return (
-              ((_ = this.m_Properties) == null ? void 0 : _.autoFocus) ||
-              this.m_bAutoFocusChild
-            );
+            return this.m_Properties?.autoFocus || this.m_bAutoFocusChild;
           }
           BWantsPreferredFocus() {
-            var _;
-            return (_ = this.m_Properties) == null ? void 0 : _.preferredFocus;
+            return this.m_Properties?.preferredFocus;
           }
           BWantsFocusRing() {
-            var _;
             return (
-              !((_ = this.m_Properties) != null && _.noFocusRing) ||
+              !this.m_Properties?.noFocusRing ||
               this.m_Tree.Controller.GetShowDebugFocusRing().Value
             );
           }
           GetBoundingRect() {
-            var _;
-            return (_ = this.m_element) == null
-              ? void 0
-              : _.getBoundingClientRect();
+            return this.m_element?.getBoundingClientRect();
           }
           GetElementForFocusRingMeasure() {
-            var _, _, _;
             const _ = this.m_element;
-            return (_ = this.m_Properties) != null &&
-              _.focusRingSizeElementID &&
-              (_ =
-                (_ = _ == null ? void 0 : _.ownerDocument) == null
-                  ? void 0
-                  : _.getElementById(
-                      this.m_Properties.focusRingSizeElementID,
-                    )) != null
-              ? _
+            return this.m_Properties?.focusRingSizeElementID
+              ? (_?.ownerDocument?.getElementById(
+                  this.m_Properties.focusRingSizeElementID,
+                ) ?? _)
               : _;
           }
           GetBoundingRectForFocusRing() {
-            var _;
-            return (_ = this.GetElementForFocusRingMeasure()) == null
-              ? void 0
-              : _.getBoundingClientRect();
+            return this.GetElementForFocusRingMeasure()?.getBoundingClientRect();
           }
           GetBorderRadiusForFocusRing() {
-            var _, _, _;
-            if (
-              !((_ = this.m_Properties) != null && _.focusRingHasBorderRadius)
-            )
-              return;
+            if (!this.m_Properties?.focusRingHasBorderRadius) return;
             const _ = this.GetElementForFocusRingMeasure();
             if (!_) return;
-            const _ =
-              (_ = (_ = _.ownerDocument) == null ? void 0 : _.defaultView) ==
-              null
-                ? void 0
-                : _.getComputedStyle(_);
+            const _ = _.ownerDocument?.defaultView?.getComputedStyle(_);
             if (_)
               return {
                 borderTopLeftRadius: _.borderTopLeftRadius,
@@ -30930,10 +30355,8 @@
             this.m_Focused.Set(_);
           }
           SetFocusWithin(_) {
-            var _;
             this.m_FocusWithin.Set(_) &&
-              (_ = this.m_Properties) != null &&
-              _.onFocusWithin &&
+              this.m_Properties?.onFocusWithin &&
               this.m_Properties.onFocusWithin(_);
           }
           get SubscribableHasFocus() {
@@ -30949,8 +30372,7 @@
             return this.m_FocusWithin.Value;
           }
           ForceMeasureFocusRing() {
-            var _;
-            (_ = this.m_FocusRing) == null || _.OnForceMeasureFocusRing();
+            this.m_FocusRing?.OnForceMeasureFocusRing();
           }
           get ActionDescriptionChangedCallbackList() {
             return this.m_ActionDescriptionsChangedCallbackList;
@@ -30959,9 +30381,7 @@
             return this.BuildConsolidatedActionDescriptionMap({});
           }
           BuildConsolidatedActionDescriptionMap(_) {
-            var _;
-            const _ =
-              (_ = this.m_Properties) == null ? void 0 : _.actionDescriptionMap;
+            const _ = this.m_Properties?.actionDescriptionMap;
             if (_)
               for (const _ in _) {
                 const _ = _;
@@ -30976,11 +30396,10 @@
                 : _;
           }
           AddChild(_) {
-            var _;
             this.m_rgChildren.push(_),
               (this.m_bChildrenSorted = !1),
               this.m_element && this.RegisterDOMEvents(),
-              (_ = this.m_Properties) != null && _.focusableIfEmpty
+              this.m_Properties?.focusableIfEmpty
                 ? _.SetFocusableIfEmptyAncestor(this)
                 : this.m_FocusableIfEmptyAncestor &&
                   _.SetFocusableIfEmptyAncestor(
@@ -30995,7 +30414,6 @@
                 this.SetActiveChild(this.m_rgChildren.length - 1));
           }
           OnMount(_) {
-            var _, _;
             (this.m_element = _),
               this.m_Parent
                 ? this.m_Parent.AddChild(this)
@@ -31008,15 +30426,13 @@
             const _ =
                 this.m_FocusableIfEmptyAncestor &&
                 this.m_FocusableIfEmptyAncestor.BHasFocus(),
-              _ = ((_ = this.m_Properties) == null ? void 0 : _.autoFocus) || _;
+              _ = this.m_Properties?.autoFocus || _;
             if (this.BWantsAutoFocus() || _) {
               let _ = -1;
               this.m_rgChildren.length &&
                 (this.EnsureChildrenSorted(),
                 (_ = this.m_rgChildren.findIndex((_) => _.BWantsAutoFocus()))),
-                (((_ = this.m_Properties) != null && _.autoFocus) ||
-                  _ ||
-                  _ !== -1) &&
+                (this.m_Properties?.autoFocus || _ || _ !== -1) &&
                   (this.SetActiveChild(_),
                   !this.m_Parent || this.m_Parent.m_element
                     ? _
@@ -31039,13 +30455,9 @@
                 ));
             }
           }
-          DEV_SetDebugPropsOnElement() {
-            var _, _;
-          }
+          DEV_SetDebugPropsOnElement() {}
           OnUnmount() {
-            var _;
-            (_ = this.m_Properties) != null &&
-              _.focusableIfEmpty &&
+            this.m_Properties?.focusableIfEmpty &&
               this.PropagateFocusableIfEmptyAncestorToDescendants(
                 this.m_FocusableIfEmptyAncestor,
               ),
@@ -31071,11 +30483,10 @@
                   );
           }
           RegisterDOMEvents() {
-            var _, _, _, _, _;
             !this.m_rgNavigationHandlers.length &&
               this.m_element &&
               (this.m_rgChildren.length >= 2 ||
-                ((_ = this.m_Properties) == null ? void 0 : _.layout) != 0 ||
+                this.m_Properties?.layout != 0 ||
                 this.m_Properties.onMoveUp ||
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
@@ -31083,20 +30494,21 @@
               this.m_rgNavigationHandlers.push(
                 (0, _._)(this.m_element, this.OnNavigationEvent),
               ),
-              (((_ = this.m_Properties) != null && _.focusable) ||
-                ((_ = this.m_Properties) != null && _.focusableIfEmpty) ||
+              (this.m_Properties?.focusable ||
+                this.m_Properties?.focusableIfEmpty ||
                 this.m_rgChildren.length == 0) &&
                 (this.m_rgFocusHandlers.length ||
-                  ((_ = this.m_element) == null ||
-                    _.addEventListener("focus", this.OnDOMFocus),
-                  (_ = this.m_element) == null ||
-                    _.addEventListener("blur", this.OnDOMBlur),
+                  (this.m_element?.addEventListener("focus", this.OnDOMFocus),
+                  this.m_element?.addEventListener("blur", this.OnDOMBlur),
                   this.m_rgFocusHandlers.push(() => {
-                    var _, _;
-                    (_ = this.m_element) == null ||
-                      _.removeEventListener("focus", this.OnDOMFocus),
-                      (_ = this.m_element) == null ||
-                        _.removeEventListener("blur", this.OnDOMBlur);
+                    this.m_element?.removeEventListener(
+                      "focus",
+                      this.OnDOMFocus,
+                    ),
+                      this.m_element?.removeEventListener(
+                        "blur",
+                        this.OnDOMBlur,
+                      );
                   })));
           }
           RemoveChild(_) {
@@ -31183,10 +30595,8 @@
             }
           }
           OnDOMBlur(_) {
-            var _;
             this.BHasFocus() &&
-              (_ = this.m_element) != null &&
-              _.ownerDocument.hasFocus() &&
+              this.m_element?.ownerDocument.hasFocus() &&
               this.m_Tree.TransferFocus(_._.BROWSER, null);
           }
           UpdateParentActiveChild() {
@@ -31244,15 +30654,14 @@
             return this.InternalFocusDescendant(_, _);
           }
           FindFocusableDescendant(_, _) {
-            var _, _;
             const _ = (0, _._)(_),
               { focusableIfEmpty: _, childFocusDisabled: _ } =
-                (_ = this.m_Properties) != null ? _ : {};
+                this.m_Properties ?? {};
             if (_) return null;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
               const { navEntryPreferPosition: _, resetNavOnEntry: _ } =
-                (_ = this.m_Properties) != null ? _ : {};
+                this.m_Properties ?? {};
               let _ = this.GetActiveChildIndex();
               _ && _ !== void 0 && (_ = -1);
               const _ = this.GetLayout();
@@ -31315,15 +30724,7 @@
             return null;
           }
           BVisibleChildTakeFocus(_) {
-            var _, _, _, _, _;
-            const _ =
-                (_ =
-                  (_ = (_ = this.Element) == null ? void 0 : _.ownerDocument) ==
-                  null
-                    ? void 0
-                    : _.defaultView) != null
-                  ? _
-                  : window,
+            const _ = this.Element?.ownerDocument?.defaultView ?? window,
               _ = {
                 top: 0,
                 left: 0,
@@ -31333,35 +30734,28 @@
               _ = _(this, _);
             return (
               _(
-                `Focusing visible child, best child match is ${((_ = (_ = _ == null ? void 0 : _.child) == null ? void 0 : _.Element)) == null ? void 0 : _.className} - ${JSON.stringify(_ == null ? void 0 : _.visibility)}`,
+                `Focusing visible child, best child match is ${_?.child?.Element?.className} - ${JSON.stringify(_?.visibility)}`,
               ),
               _ ? _.child.BTakeFocus(_) : !1
             );
           }
           GetLayout() {
-            var _;
-            return (_ = this.m_Properties) != null && _.layout
+            return this.m_Properties?.layout
               ? this.m_Properties.layout
               : this.m_rgChildren.length < 2
                 ? 0
                 : (0, _._)(this.m_element);
           }
           OnNavigationEvent(_) {
-            var _, _;
             const _ = _.detail.button;
-            if (
-              this.BTryInternalNavigation(
-                _,
-                (_ = _.detail.is_repeat) != null ? _ : !1,
-              )
-            )
+            if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
               return !0;
             const {
               onMoveUp: _,
               onMoveRight: _,
               onMoveDown: _,
               onMoveLeft: _,
-            } = (_ = this.m_Properties) != null ? _ : {};
+            } = this.m_Properties ?? {};
             let _ = !1;
             switch (_) {
               case _._.DIR_UP:
@@ -31388,33 +30782,28 @@
             if (_ && _) {
               let _ = _.GetWrappedTree();
               if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+              for (let _ = _; _ && _ != this; _ = _.m_Parent)
+                if (_.m_Properties?.excludeFromScrollRegionSearch) return !1;
             }
             return !!_;
           }
           HasMovementHandler(_) {
-            var _, _, _, _;
             switch (_) {
               case _._.DIR_UP:
-                return !!((_ = this.m_Properties) != null && _.onMoveUp);
+                return !!this.m_Properties?.onMoveUp;
               case _._.DIR_DOWN:
-                return !!((_ = this.m_Properties) != null && _.onMoveDown);
+                return !!this.m_Properties?.onMoveDown;
               case _._.DIR_LEFT:
-                return !!((_ = this.m_Properties) != null && _.onMoveLeft);
+                return !!this.m_Properties?.onMoveLeft;
               case _._.DIR_RIGHT:
-                return !!((_ = this.m_Properties) != null && _.onMoveRight);
+                return !!this.m_Properties?.onMoveRight;
             }
             return !1;
           }
           FindNextFocusableChild(_) {
-            var _;
             const _ = this.GetLayout(),
               _ = this.ComputeRelativeDirection(_, _);
-            if (
-              _ == 0 ||
-              ((_ = this.m_Properties) != null &&
-                _.focusable &&
-                this.BHasFocus())
-            )
+            if (_ == 0 || (this.m_Properties?.focusable && this.BHasFocus()))
               return null;
             if ((this.EnsureChildrenSorted(!0), _ == 5))
               return this.FindNextFocusableChildInGrid(
@@ -31431,7 +30820,6 @@
             );
           }
           BTryInternalNavigation(_, _) {
-            var _;
             _(
               `Handling navigation event ${_._[_]} - ${_[this.GetLayout()]}`,
               this.m_element,
@@ -31444,8 +30832,7 @@
               this.GetScrollIntoViewType() == 2 ||
               _.GetScrollIntoViewType() == 2
             ) {
-              const _ =
-                (_ = _.Element) == null ? void 0 : _.ownerDocument.defaultView;
+              const _ = _.Element?.ownerDocument.defaultView;
               if (_) {
                 const _ =
                     (_ == "y" ? _.innerHeight : _.innerWidth) /
@@ -31475,13 +30862,8 @@
             return this.m_Tree.TransferFocus(_._.GAMEPAD, _, _), !0;
           }
           GetScrollIntoViewType() {
-            var _, _;
-            return ((_ = this.m_Properties) == null
-              ? void 0
-              : _.scrollIntoViewType) !== void 0 &&
-              ((_ = this.m_Properties) == null
-                ? void 0
-                : _.scrollIntoViewType) !== null
+            return this.m_Properties?.scrollIntoViewType !== void 0 &&
+              this.m_Properties?.scrollIntoViewType !== null
               ? this.m_Properties.scrollIntoViewType
               : this.m_Parent
                 ? this.m_Parent.GetScrollIntoViewType()
@@ -31701,10 +31083,8 @@
               _.IsDebugEnabled())
             ) {
               const _ = _.slice(0, 3).map(
-                ({ dist: _, overlap: _, child: _ }) => {
-                  var _;
-                  return `[ node: ${((_ = _.m_element)) == null ? void 0 : _.className} dist: ${_} overlap: ${_} ]`;
-                },
+                ({ dist: _, overlap: _, child: _ }) =>
+                  `[ node: ${_.m_element?.className} dist: ${_} overlap: ${_} ]`,
               );
               _(`Found nodes on axis, top 3 (of ${_.length}: ${_.join(", ")}`);
             }
@@ -31762,9 +31142,8 @@
             return this.m_nDepth;
           }
           SetFocusableIfEmptyAncestor(_) {
-            var _;
             (this.m_FocusableIfEmptyAncestor = _),
-              ((_ = this.m_Properties) != null && _.focusableIfEmpty) ||
+              this.m_Properties?.focusableIfEmpty ||
                 this.PropagateFocusableIfEmptyAncestorToDescendants(_);
           }
           PropagateFocusableIfEmptyAncestorToDescendants(_) {
@@ -31777,7 +31156,6 @@
             });
           }
           SetDOMFocusAndScroll(_, _, _, _) {
-            var _;
             this.UpdateParentActiveChild(),
               this.m_Tree.OnChildActivated(_),
               this.m_Tree.BIsActiveFocus()
@@ -31785,10 +31163,9 @@
                     !this.m_Tree.BUseVirtualFocus(),
                     "Virtual focus tree should not have browser focus",
                   ),
-                  (_ = this.m_element) == null ||
-                    _.focus({
-                      preventScroll: !0,
-                    }))
+                  this.m_element?.focus({
+                    preventScroll: !0,
+                  }))
                 : this.m_Tree.BUseVirtualFocus() ||
                   _(
                     `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
@@ -31928,7 +31305,7 @@
           );
         }
         function _(_, _ = "smooth", _, _) {
-          const _ = (_ != null ? _ : 30) / 100,
+          const _ = (_ ?? 30) / 100,
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
             _ = _.useCallback(() => {
@@ -31937,7 +31314,6 @@
             _ = _(_, _);
           return _.useCallback(
             (_) => {
-              var _, _;
               if ((_ && !_(_)) || _.defaultPrevented || !_.current) return !1;
               const {
                   scrollTop: _,
@@ -31947,8 +31323,8 @@
                   scrollWidth: _,
                   clientWidth: _,
                 } = _.current,
-                _ = (_ = _.current) != null ? _ : _,
-                _ = (_ = _.current) != null ? _ : _,
+                _ = _.current ?? _,
+                _ = _.current ?? _,
                 _ = 2;
               switch (_.detail.button) {
                 case _._.DIR_UP:
@@ -31972,7 +31348,7 @@
               }
               return (
                 _(
-                  `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ != null ? _ : "auto"} `,
+                  `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
                   _.current,
                 ),
                 !_ || _ == "smooth"
@@ -31997,8 +31373,7 @@
             _ = _.useRef(null),
             _ = _.useCallback(
               (_) => {
-                var _, _, _;
-                if (!((_ = _.current) != null && _.BFocusWithin())) return;
+                if (!_.current?.BFocusWithin()) return;
                 const _ = Math.round(_.contentRect.width),
                   _ = Math.round(_.contentRect.height),
                   _ = Math.abs(_ - _.current.width),
@@ -32012,14 +31387,10 @@
                     "KeepFocusedElementInViewOnResize scrolling focused element into view due to resize of",
                     _.target,
                   ),
-                  (_ =
-                    (_ = _.current.Node()) == null
-                      ? void 0
-                      : _.GetLastFocusElement()) == null ||
-                    _.scrollIntoView({
-                      behavior: "auto",
-                      block: "nearest",
-                    }));
+                  _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
+                    behavior: "auto",
+                    block: "nearest",
+                  }));
               },
               [_],
             );
@@ -32033,17 +31404,10 @@
             if (!_) return;
             let _ = !1;
             const _ = () => {
-                var _, _;
-                (_ = _.current) != null &&
-                  _.BFocusWithin() &&
-                  _ &&
-                  ((_ = _.current) == null || _.TakeFocus());
+                _.current?.BFocusWithin() && _ && _.current?.TakeFocus();
               },
               _ = () => {
-                var _, _;
-                (_ = _.current) != null &&
-                  _.BFocusWithin() &&
-                  ((_ = _.current) == null || _.TakeFocus());
+                _.current?.BFocusWithin() && _.current?.TakeFocus();
               },
               _ = () => (_ = !0),
               _ = () => (_ = !1);
@@ -32107,7 +31471,6 @@
           const _ = _(_.current),
             _ = _.useCallback(
               (_) => {
-                var _;
                 if (
                   !(!document.hasFocus() && document.activeElement == _.current)
                 ) {
@@ -32117,8 +31480,7 @@
                     );
                     return;
                   }
-                  ((_ = _.detail.focusedNode) == null ? void 0 : _.Element) !=
-                    _.current &&
+                  _.detail.focusedNode?.Element != _.current &&
                     ((!_.BIsActive() && !_.bInVR) ||
                       _.DelayHideVirtualKeyboard());
                 }
@@ -32204,7 +31566,7 @@
           _: () => _,
         });
         function _(_, _ = 0, _ = Math.random) {
-          if ((_ == null ? void 0 : _.length) > 1) {
+          if (_?.length > 1) {
             let _ = _ > 0 ? Math.min(_, _.length) : _.length;
             for (; _ !== 0; ) {
               const _ = Math.floor(_() * _);
@@ -32267,7 +31629,7 @@
           return _.filter((_) => _ !== _);
         }
         function _(_) {
-          return (_ != null ? _ : []).filter(Boolean);
+          return (_ ?? []).filter(Boolean);
         }
         function _(_, _) {
           if (_.length != _.length) return !1;
@@ -32643,18 +32005,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ =
           window.addEventListener ||
           (globalThis && globalThis.addEventListener) ||
@@ -32731,41 +32082,41 @@
           } catch {}
         }
         class _ {
+          m_strProduct;
+          m_strVersion;
+          m_transport = null;
+          m_rgErrorQueue = [];
+          m_sendTimer = null;
+          m_bReportingPaused = !1;
+          m_pauseTimer = void 0;
+          m_fnGetReportingInterval = _;
+          m_fnGetReportTags = () => [];
+          m_fnGetURL = () => location.href;
+          strDisplayVersion;
+          m_bEnabled = !0;
+          m_bInitialized = !1;
           constructor(_ = !0) {
-            _(this, "m_strProduct"),
-              _(this, "m_strVersion"),
-              _(this, "m_transport", null),
-              _(this, "m_rgErrorQueue", []),
-              _(this, "m_sendTimer", null),
-              _(this, "m_bReportingPaused", !1),
-              _(this, "m_pauseTimer"),
-              _(this, "m_fnGetReportingInterval", _),
-              _(this, "m_fnGetReportTags", () => []),
-              _(this, "m_fnGetURL", () => location.href),
-              _(this, "strDisplayVersion"),
-              _(this, "m_bEnabled", !0),
-              _(this, "m_bInitialized", !1),
-              _ &&
-                (_
-                  ? (_.forEach(
-                      ({
-                        error: _,
-                        cCallsitesToIgnore: _,
-                        strComponentStack: _,
-                      }) =>
-                        this.ReportError(_, {
-                          cCallsitesToIgnore: _,
-                          strComponentStack: _,
-                        }),
-                    ),
-                    (_ = (_, _, _) =>
+            _ &&
+              (_
+                ? (_.forEach(
+                    ({
+                      error: _,
+                      cCallsitesToIgnore: _,
+                      strComponentStack: _,
+                    }) =>
                       this.ReportError(_, {
                         cCallsitesToIgnore: _,
                         strComponentStack: _,
-                      })))
-                  : (_ = () => {}),
-                (_ = []),
-                clearTimeout(_)),
+                      }),
+                  ),
+                  (_ = (_, _, _) =>
+                    this.ReportError(_, {
+                      cCallsitesToIgnore: _,
+                      strComponentStack: _,
+                    })))
+                : (_ = () => {}),
+              (_ = []),
+              clearTimeout(_)),
               window.setTimeout(() => {
                 this.m_bInitialized ||
                   ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -32895,11 +32246,9 @@
                 let _;
                 return (
                   _.strComponentStack &&
-                    (_ != null || (_ = {}),
-                    (_.componentStack = _.strComponentStack)),
+                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
                   _.strDisplayVersion &&
-                    (_ != null || (_ = {}),
-                    (_.strDisplayVersion = _.strDisplayVersion)),
+                    ((_ ??= {}), (_.strDisplayVersion = _.strDisplayVersion)),
                   _ && _.set_context(JSON.stringify(_)),
                   _.strUrl && _.set_url(_.strUrl),
                   _
@@ -32959,17 +32308,11 @@
           }
         }
         async function _(_, _) {
-          var _;
           const { cCallsitesToIgnore: _, bIncludeMessageInIdentifier: _ } = _,
             { message: _, stack: _ } = _,
             _ =
-              (_ =
-                _ == null
-                  ? void 0
-                  : _.split(`
-`)) != null
-                ? _
-                : [],
+              _?.split(`
+`) ?? [],
             _ = _.filter((_) => !!_.match(_));
           let _ = _(_[_]);
           _ && (_ = `${_} ${_}`);
@@ -33012,16 +32355,10 @@
           return _ === -1 ? _ : _.slice(0, _) + _.slice(_);
         }
         async function _(_, _) {
-          var _, _;
           const { cCallsitesToIgnore: _, bIncludeMessageInIdentifier: _ } = _,
             _ =
-              (_ =
-                (_ = _.stack) == null
-                  ? void 0
-                  : _.split(`
-`)) != null
-                ? _
-                : [],
+              _.stack?.split(`
+`) ?? [],
             _ = _.filter((_) => !!_.match(_));
           let _ = _(_[_]);
           _ && (_ = `${_} ${_.message}`);
@@ -33043,16 +32380,10 @@
           };
         }
         async function _(_, _) {
-          var _, _;
           const { bIncludeMessageInIdentifier: _, cCallsitesToIgnore: _ } = _,
             _ =
-              (_ =
-                (_ = _.stack) == null
-                  ? void 0
-                  : _.split(`
-`)) != null
-                ? _
-                : [],
+              _.stack?.split(`
+`) ?? [],
             _ = _[_],
             _ = _.split("/");
           let _ = _[_.length - 1];
@@ -33093,22 +32424,9 @@
         __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_vecCallbacks", []);
-          }
+          m_vecCallbacks = [];
           Register(_) {
             return (
               this.m_vecCallbacks.push(_),
@@ -33275,7 +32593,6 @@
           return _.push(_.substr(_)), _.createElement(_.Fragment, null, ..._);
         }
         function _(_, _ = ["b", "i", "br"]) {
-          var _;
           const _ = _.join("|"),
             _ = [],
             _ = new RegExp(
@@ -33286,7 +32603,7 @@
             _;
           for (; (_ = _.exec(_)); ) {
             if (!_.groups) continue;
-            if (!((_ = _.groups) != null && _.endtag)) {
+            if (!_.groups?.endtag) {
               const _ = _.groups.before.length + _.groups.tagname.length + 2;
               (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
               const _ = _[2],
@@ -33427,7 +32744,7 @@
               (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
                 if (_ <= _.length && _ >= 1) {
                   const _ = _[_ - 1];
-                  return String(_ == null ? "" : _);
+                  return String(_ ?? "");
                 }
                 return _;
               })),
@@ -33490,17 +32807,10 @@
           }),
             (0, _._)(_);
           function _(_, _) {
-            var _, _, _, _;
             const [_, ..._] = _,
               _ =
-                (_ = (_ = _.get(_.strLanguage)) == null ? void 0 : _.get(_)) !=
-                null
-                  ? _
-                  : (_ = _.get(
-                        (_ = (0, _._)(_.strLanguage)) != null ? _ : "english",
-                      )) == null
-                    ? void 0
-                    : _.get(_);
+                _.get(_.strLanguage)?.get(_) ??
+                _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
             if (_ !== void 0) return _;
             if (_.length === 0) {
               if (_)
@@ -33610,13 +32920,13 @@
           _: () => _,
         });
         let _;
-        _ != null || (_ = new Set());
+        _ ??= new Set();
         let _;
         function _() {
-          return _ != null ? _ : (_ = Promise.all(_));
+          return (_ ??= Promise.all(_));
         }
         function _(_) {
-          _ != null || (_ = new Set()), _.add(_), (_ = Promise.all(_));
+          (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -33846,7 +33156,7 @@
           const _ = _.coordinates;
           switch (_.subject_type) {
             case EContentReportSubjectType.k_EContentReportSubjectType_ForumPost:
-              return _ != null && _.topic
+              return _?.topic
                 ? {
                     subject_type: _.subject_type,
                     steamid: _.steamid,
@@ -33855,7 +33165,7 @@
                   }
                 : null;
             case EContentReportSubjectType.k_EContentReportSubjectType_UGCFile:
-              return _ != null && _.published_file_id
+              return _?.published_file_id
                 ? {
                     subject_type: _.subject_type,
                     published_file_id: _.published_file_id,
@@ -33863,7 +33173,7 @@
                 : null;
             case EContentReportSubjectType.k_EContentReportSubjectType_ChatRoomMsg:
             case EContentReportSubjectType.k_EContentReportSubjectType_FriendChatMsg:
-              return _ != null && _.sender_account_id
+              return _?.sender_account_id
                 ? {
                     subject_type: _.subject_type,
                     sender_account_id: _.sender_account_id,
@@ -33892,8 +33202,7 @@
           return null;
         }
         function _(_) {
-          var _, _;
-          return `${_.subject_type}:${((_ = (_ = _.topic) != null ? _ : _.published_file_id)) != null ? _ : _.sender_account_id}`;
+          return `${_.subject_type}:${_.topic ?? _.published_file_id ?? _.sender_account_id}`;
         }
         function _(_) {
           switch (_.subject_type) {
@@ -33950,7 +33259,7 @@
         }
         function _(_) {
           return {
-            url: `${_._.COMMUNITY_BASE_URL}trademark/createtrademarkcomplaint/${_ != null ? _ : ""}`,
+            url: `${_._.COMMUNITY_BASE_URL}trademark/createtrademarkcomplaint/${_ ?? ""}`,
             strLocToken: "#ReportContent_TrademarkComplaint",
             strWarningBeforeNav: "#WarnBeforeNavigatingToTrademarkReportForm",
           };
@@ -34719,8 +34028,7 @@
           }
         }
         function _(_) {
-          var _;
-          const _ = _((_ = _.resolved) != null ? _ : _._),
+          const _ = _(_.resolved ?? _._),
             _ = _.content_moderated_reason;
           return _.resolved === _._ || !_ || _ === _._
             ? _._.Localize("#ugcsubjectpanel_status", _)
@@ -34997,17 +34305,17 @@
         }
         function _(_) {
           const { data: _ } = (0, _._)(_());
-          return _(_ != null ? _ : _(), _);
+          return _(_ ?? _(), _);
         }
         function _(_, _) {
-          const _ = _ != null ? _ : (0, _._)("BEventHasBeenRead");
+          const _ = _ ?? (0, _._)("BEventHasBeenRead");
           if (!_) return !1;
           const _ = _.getQueryData(_(_._.accountid));
-          return _(_ != null ? _ : _(), _);
+          return _(_ ?? _(), _);
         }
         function _(_, _) {
           if (_.length == 0) return;
-          const _ = _ != null ? _ : (0, _._)("MarkEventsAsRead");
+          const _ = _ ?? (0, _._)("MarkEventsAsRead");
           _ &&
             _.setQueryData(_(_._.accountid), (_) => {
               const _ = new Set(_);
@@ -35082,15 +34390,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -35099,19 +34398,18 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 60,
           _ = 30;
         class _ {
+          m_CMInterface;
+          m_setShownEvents = new Set();
+          m_setReadEvents = new Set();
+          m_rgPendingUpload = [];
+          m_schUpload = new _._();
+          m_bUploading = !1;
           constructor(_) {
-            _(this, "m_CMInterface"),
-              _(this, "m_setShownEvents", new Set()),
-              _(this, "m_setReadEvents", new Set()),
-              _(this, "m_rgPendingUpload", []),
-              _(this, "m_schUpload", new _._()),
-              _(this, "m_bUploading", !1),
-              (this.m_CMInterface = _);
+            this.m_CMInterface = _;
           }
           RecordEventShown(_, _) {
             !_ ||
@@ -35272,8 +34570,7 @@
           rednote: _._._,
         };
         function _(_) {
-          var _;
-          return (_ = _[_]) != null ? _ : _._._;
+          return _[_] ?? _._._;
         }
         const _ = new Map(Object.entries(_).map(([_, _]) => [_, _]));
         function _(_) {
@@ -35468,30 +34765,20 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = 8;
         class _ {
+          static InitHeaderFromPacket(_) {
+            return new _(void 0, _);
+          }
+          m_eMsg;
+          m_bValid;
+          m_netPacket;
+          m_cubHeader;
+          m_header;
+          m_body;
           constructor(_, _, _, _, _, _) {
-            if (
-              (_(this, "m_eMsg"),
-              _(this, "m_bValid"),
-              _(this, "m_netPacket"),
-              _(this, "m_cubHeader"),
-              _(this, "m_header"),
-              _(this, "m_body"),
-              _)
-            )
+            if (_)
               (this.m_eMsg = _.m_eMsg),
                 (this.m_bValid = _.m_bValid),
                 this.m_bValid &&
@@ -35532,9 +34819,6 @@
                     : _ && (this.m_body = new _());
               _ && this.m_header.set_jobid_target(_.Hdr().jobid_target());
             }
-          }
-          static InitHeaderFromPacket(_) {
-            return new _(void 0, _);
           }
           InitForType(_) {
             (this.m_body = new _()),
@@ -35650,7 +34934,7 @@
           let _;
           return (
             _ instanceof _ ? (_ = _) : (_ = _.InitFromObject(_, _)),
-            (_ == null ? void 0 : _.strDebugSource) !== void 0 &&
+            _?.strDebugSource !== void 0 &&
               _.Hdr().set_debug_source(_.strDebugSource),
             _
           );
@@ -35770,7 +35054,7 @@
               }
             else if (_) {
               const _ = _.Message.getField(_, _);
-              typeof _ != "undefined" && _.call(_, _, _);
+              typeof _ < "u" && _.call(_, _, _);
             } else
               console.assert(
                 !!_,
@@ -35851,27 +35135,18 @@
         const _ = 0,
           _ = 1,
           _ = 2;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EContentHubDiscountFilterType ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_filter || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -35933,16 +35208,16 @@
           getClassName() {
             return "CStorePageFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sale_tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -36000,16 +35275,16 @@
           getClassName() {
             return "CStorePageFilter_SalePageFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hub_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -36081,16 +35356,16 @@
           getClassName() {
             return "CStorePageFilter_ContentHubFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -36158,16 +35433,16 @@
           getClassName() {
             return "CStorePageFilter_ContentHubFilter_OptInInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filter_json || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -36225,9 +35500,7 @@
           getClassName() {
             return "CStorePageFilter_StoreFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -38044,30 +37317,21 @@
           _ = 0,
           _ = 1,
           _ = 1;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EPrivacyCookiePreferenceState ( " + _ + " )";
         }
         function _(_) {
           return "unknown EPrivacyCookiePreferencesVersion ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.version || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38147,16 +37411,16 @@
           getClassName() {
             return "CAccountPrivacyCookiePreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recentapps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38209,16 +37473,16 @@
           getClassName() {
             return "CAccountPrivacyCookiePreferences_ContentCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.product_impressions_tracking || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38271,16 +37535,16 @@
           getClassName() {
             return "CAccountPrivacyCookiePreferences_ValveAnalytics";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.google_analytics || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38333,16 +37597,16 @@
           getClassName() {
             return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.youtube || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38410,9 +37674,7 @@
           getClassName() {
             return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -38454,13 +37716,15 @@
             return "CAccountPrivacy_GetCookiePreferences_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38512,9 +37776,7 @@
           getClassName() {
             return "CAccountPrivacy_GetCookiePreferences_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -38525,7 +37787,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -38560,17 +37822,6 @@
           _ = 3,
           _ = 0,
           _ = 1;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EBanContentCheckResult ( " + _ + " )";
         }
@@ -38580,13 +37831,15 @@
         function _(_) {
           return "unknown PartnerEventNotificationType ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38644,16 +37897,16 @@
           getClassName() {
             return "CMsgIPAddress";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.original_ip_address || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38710,16 +37963,16 @@
           getClassName() {
             return "CMsgIPAddressBucket";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.dst_gcid_queue || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -38777,16 +38030,16 @@
           getClassName() {
             return "CMsgGCRoutingProtoBufHeader";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [27, 41], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39068,19 +38321,19 @@
           getClassName() {
             return "CMsgProtoBufHeader";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return "unknown CMsgProtoBufHeader_ESessionDisposition ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hdr || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39137,16 +38390,16 @@
           getClassName() {
             return "CMsgKubeRPCPacket";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.jobid_source || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39227,16 +38480,16 @@
           getClassName() {
             return "CMsgKubeRPCPacket_Hdr";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.size_unzipped || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39294,16 +38547,16 @@
           getClassName() {
             return "CMsgMulti";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message_body || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39356,16 +38609,16 @@
           getClassName() {
             return "CMsgProtobufWrapped";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.estate || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39459,16 +38712,16 @@
           getClassName() {
             return "CMsgAuthTicket";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [17, 18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39602,16 +38855,16 @@
           getClassName() {
             return "CCDDBAppDetailCommon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.edit_info || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39744,16 +38997,16 @@
           getClassName() {
             return "CMsgAppRights";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.platform_windows || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [9, 10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39872,16 +39125,16 @@
           getClassName() {
             return "CCuratorPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -39939,16 +39192,16 @@
           getClassName() {
             return "CLocalizationToken";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clanid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40046,16 +39299,16 @@
           getClassName() {
             return "CClanEventUserNewsTuple";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rtime_before || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40124,16 +39377,16 @@
           getClassName() {
             return "CClanMatchEventByRange";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40268,16 +39521,16 @@
           getClassName() {
             return "CCommunity_ClanAnnouncementInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [28], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40487,16 +39740,16 @@
           getClassName() {
             return "CClanEventData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.first_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40594,16 +39847,16 @@
           getClassName() {
             return "CBilling_Address";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40736,16 +39989,16 @@
           getClassName() {
             return "CPackageReservationStatus";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40803,16 +40056,16 @@
           getClassName() {
             return "CMsgKeyValuePair";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.pairs || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40866,16 +40119,16 @@
           getClassName() {
             return "CMsgKeyValueSet";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.content_descriptors_to_exclude || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40929,16 +40182,16 @@
           getClassName() {
             return "UserContentDescriptorPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.content_descriptorid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -40996,16 +40249,16 @@
           getClassName() {
             return "UserContentDescriptorPreferences_ContentDescriptor";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.manufacturer || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41148,16 +40401,16 @@
           getClassName() {
             return "UserSystemInformation";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.setting || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41220,9 +40473,7 @@
           getClassName() {
             return "GamePerformanceSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown GamePerformanceSettings_EGamePerformanceSetting ( " +
@@ -41254,25 +40505,16 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.original_hostname || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41370,16 +40612,16 @@
           getClassName() {
             return "CClientMetrics_ClientBootstrap_RequestInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.launcher_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41464,16 +40706,16 @@
           getClassName() {
             return "CClientMetrics_ClientBootstrap_Summary";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.class_100 || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41556,16 +40798,16 @@
           getClassName() {
             return "CClientMetrics_ContentDownloadResponse_Counts";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hostname || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41627,16 +40869,16 @@
           getClassName() {
             return "CClientMetrics_ContentDownloadResponse_HostCounts";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hosts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41690,9 +40932,7 @@
           getClassName() {
             return "CClientMetrics_ContentDownloadResponse_Hosts";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _ = __webpack_require__("chunkid");
         const _ = 1,
           _ = 2,
@@ -41701,17 +40941,6 @@
           _ = 5,
           _ = 6,
           _ = 7;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown ESteamPipeOperationType ( " + _ + " )";
         }
@@ -41724,13 +40953,15 @@
         function _(_) {
           return "unknown EClipRangeMethod ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.raw_version || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41788,16 +41019,16 @@
           getClassName() {
             return "CClientMetrics_AppInterfaceCreation";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.interface_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41860,16 +41091,16 @@
           getClassName() {
             return "CClientMetrics_AppInterfaceMethodCounts";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -41939,16 +41170,16 @@
           getClassName() {
             return "CClientMetrics_AppInterfaceStats_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.protocol_tested || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42006,16 +41237,16 @@
           getClassName() {
             return "CClientMetrics_IPv6Connectivity_Result";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cell_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42079,16 +41310,16 @@
           getClassName() {
             return "CClientMetrics_IPv6Connectivity_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.product || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42164,16 +41395,16 @@
           getClassName() {
             return "CClientMetrics_ReportReactUsage_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.route || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42231,16 +41462,16 @@
           getClassName() {
             return "CClientMetrics_ReportReactUsage_Notification_RouteData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.component || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42298,16 +41529,16 @@
           getClassName() {
             return "CClientMetrics_ReportReactUsage_Notification_ComponentData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.action || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42365,16 +41596,16 @@
           getClassName() {
             return "CClientMetrics_ReportReactUsage_Notification_ActionData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.product || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42445,16 +41676,16 @@
           getClassName() {
             return "CClientMetrics_ReportClientError_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.identifier || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42527,16 +41758,16 @@
           getClassName() {
             return "CClientMetrics_ReportClientError_Notification_Error";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42619,16 +41850,16 @@
           getClassName() {
             return "CClientMetrics_SteamPipeWorkStats_Operation";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42702,16 +41933,16 @@
           getClassName() {
             return "CClientMetrics_SteamPipeWorkStats_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42763,16 +41994,16 @@
           getClassName() {
             return "CClientMetrics_ClientBootstrap_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cell_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42846,16 +42077,16 @@
           getClassName() {
             return "CClientMetrics_DownloadRates_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.source_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -42973,16 +42204,16 @@
           getClassName() {
             return "CClientMetrics_DownloadRates_Notification_StatsInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.validation_result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43080,16 +42311,16 @@
           getClassName() {
             return "CClientMetrics_ContentValidation_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43242,16 +42473,16 @@
           getClassName() {
             return "CClientMetrics_CloudAppSyncStats_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cell_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43308,16 +42539,16 @@
           getClassName() {
             return "CClientMetrics_ContentDownloadResponse_Counts_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43391,16 +42622,16 @@
           getClassName() {
             return "CClientMetrics_ClipShare_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.original_range_method || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43471,16 +42702,16 @@
           getClassName() {
             return "CClientMetrics_ClipRange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.original_range_method || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43543,16 +42774,16 @@
           getClassName() {
             return "CClientMetrics_ClipRange_Notification_RelativeRangeEdge";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43625,16 +42856,16 @@
           getClassName() {
             return "CClientMetrics_EndGameRecording_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.frame_rates || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43692,16 +42923,16 @@
           getClassName() {
             return "CClientMetrics_GamePerformance_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43783,16 +43014,16 @@
           getClassName() {
             return "CClientMetrics_GamePerformance_Notification_FrameRate";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.client_args || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43892,16 +43123,16 @@
           getClassName() {
             return "CClientMetrics_ReportClientArgs_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accessibility_desktop_ui_scale || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -43974,16 +43205,16 @@
           getClassName() {
             return "CClientMetrics_ReportAccessibilitySettings_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.glibc_version_major || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44071,9 +43302,7 @@
           getClassName() {
             return "CClientMetrics_ReportLinuxStats_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _) {
@@ -44260,25 +43489,16 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44351,16 +43571,16 @@
           getClassName() {
             return "CMsgClientFriendMsg";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_from || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44433,16 +43653,16 @@
           getClassName() {
             return "CMsgClientFriendMsgIncoming";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_to_add || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44500,16 +43720,16 @@
           getClassName() {
             return "CMsgClientAddFriend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44573,16 +43793,16 @@
           getClassName() {
             return "CMsgClientAddFriendResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friendid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44635,16 +43855,16 @@
           getClassName() {
             return "CMsgClientRemoveFriend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friendid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44702,16 +43922,16 @@
           getClassName() {
             return "CMsgClientHideFriend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bincremental || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44785,16 +44005,16 @@
           getClassName() {
             return "CMsgClientFriendsList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ulfriendid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44852,16 +44072,16 @@
           getClassName() {
             return "CMsgClientFriendsList_Friend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bremoval || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44931,16 +44151,16 @@
           getClassName() {
             return "CMsgClientFriendsGroupsList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.nGroupID || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -44998,16 +44218,16 @@
           getClassName() {
             return "CMsgClientFriendsGroupsList_FriendGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ulSteamID || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45065,16 +44285,16 @@
           getClassName() {
             return "CMsgClientFriendsGroupsList_FriendGroupsMembership";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.removal || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45138,16 +44358,16 @@
           getClassName() {
             return "CMsgClientPlayerNicknameList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45205,16 +44425,16 @@
           getClassName() {
             return "CMsgClientPlayerNicknameList_PlayerNickname";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45272,16 +44492,16 @@
           getClassName() {
             return "CMsgClientSetPlayerNickname";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45334,16 +44554,16 @@
           getClassName() {
             return "CMsgClientSetPlayerNicknameResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.persona_state_requested || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45404,16 +44624,16 @@
           getClassName() {
             return "CMsgClientRequestFriendData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.persona_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45502,16 +44722,16 @@
           getClassName() {
             return "CMsgClientChangeStatus";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45569,16 +44789,16 @@
           getClassName() {
             return "CMsgPersonaChangeResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.status_flags || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45637,16 +44857,16 @@
           getClassName() {
             return "CMsgClientPersonaState";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friendid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [71, 82], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45865,16 +45085,16 @@
           getClassName() {
             return "CMsgClientPersonaState_Friend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ogg_app_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45932,16 +45152,16 @@
           getClassName() {
             return "CMsgClientPersonaState_Friend_ClanData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -45999,16 +45219,16 @@
           getClassName() {
             return "CMsgClientPersonaState_Friend_KV";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46067,16 +45287,16 @@
           getClassName() {
             return "CMsgClientPersonaState_Friend_OtherGameData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_friend || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46129,16 +45349,16 @@
           getClassName() {
             return "CMsgClientFriendProfileInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46232,16 +45452,16 @@
           getClassName() {
             return "CMsgClientFriendProfileInfoResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46307,16 +45527,16 @@
           getClassName() {
             return "CMsgClientCreateFriendsGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46374,16 +45594,16 @@
           getClassName() {
             return "CMsgClientCreateFriendsGroupResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46441,16 +45661,16 @@
           getClassName() {
             return "CMsgClientDeleteFriendsGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46503,16 +45723,16 @@
           getClassName() {
             return "CMsgClientDeleteFriendsGroupResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46586,16 +45806,16 @@
           getClassName() {
             return "CMsgClientManageFriendsGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46648,16 +45868,16 @@
           getClassName() {
             return "CMsgClientManageFriendsGroupResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46715,16 +45935,16 @@
           getClassName() {
             return "CMsgClientAddFriendToGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46777,16 +45997,16 @@
           getClassName() {
             return "CMsgClientAddFriendToGroupResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46844,16 +46064,16 @@
           getClassName() {
             return "CMsgClientRemoveFriendFromGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eresult || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -46906,9 +46126,7 @@
           getClassName() {
             return "CMsgClientRemoveFriendFromGroupResponse";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -46950,13 +46168,15 @@
             return "CMsgClientGetEmoticonList";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.emoticons || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47022,16 +46242,16 @@
           getClassName() {
             return "CMsgClientEmoticonList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = null;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47109,16 +46329,16 @@
           getClassName() {
             return "CMsgClientEmoticonList_Emoticon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47196,16 +46416,16 @@
           getClassName() {
             return "CMsgClientEmoticonList_Sticker";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47278,9 +46498,7 @@
           getClassName() {
             return "CMsgClientEmoticonList_Effect";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -47323,6 +46541,7 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
         var _ = {};
         __webpack_require__._(_),
@@ -47362,17 +46581,6 @@
           _ = 3,
           _ = 4,
           _ = 5;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown ECommunityWordFilterType ( " + _ + " )";
         }
@@ -47421,13 +46629,15 @@
         function _(_) {
           return "unknown EBannedVanityURLSource ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47488,16 +46698,16 @@
           getClassName() {
             return "CCommunity_GetApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47551,16 +46761,16 @@
           getClassName() {
             return "CCommunity_GetApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47618,16 +46828,16 @@
           getClassName() {
             return "CCommunity_GetAppRichPresenceLocalization_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47686,16 +46896,16 @@
           getClassName() {
             return "CCommunity_GetAppRichPresenceLocalization_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47753,16 +46963,16 @@
           getClassName() {
             return "CCommunity_GetAppRichPresenceLocalization_Response_Token";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47821,16 +47031,16 @@
           getClassName() {
             return "CCommunity_GetAppRichPresenceLocalization_Response_TokenList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -47938,16 +47148,16 @@
           getClassName() {
             return "CCommunity_GetCommentThread_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidcomment || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48065,16 +47275,16 @@
           getClassName() {
             return "CCommunity_Comment";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reactionid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48132,16 +47342,16 @@
           getClassName() {
             return "CCommunity_Comment_Reaction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.comments || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48284,16 +47494,16 @@
           getClassName() {
             return "CCommunity_GetCommentThread_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48371,16 +47581,16 @@
           getClassName() {
             return "CCommunity_GetComment_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.comment || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48447,16 +47657,16 @@
           getClassName() {
             return "CCommunity_GetComment_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48540,16 +47750,16 @@
           getClassName() {
             return "CCommunity_SanctionComment_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sanction || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48612,9 +47822,7 @@
           getClassName() {
             return "CCommunity_SanctionComment_Request_Sanction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -48656,13 +47864,15 @@
             return "CCommunity_SanctionComment_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48755,16 +47965,16 @@
           getClassName() {
             return "CCommunity_PostCommentToThread_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidcomment || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48832,16 +48042,16 @@
           getClassName() {
             return "CCommunity_PostCommentToThread_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -48919,9 +48129,7 @@
           getClassName() {
             return "CCommunity_DeleteCommentFromThread_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -48963,13 +48171,15 @@
             return "CCommunity_DeleteCommentFromThread_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.commentthreadtype || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49052,16 +48262,16 @@
           getClassName() {
             return "CCommunity_RateCommentThread_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidcomment || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49134,16 +48344,16 @@
           getClassName() {
             return "CCommunity_RateCommentThread_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.commentthreadtype || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49221,16 +48431,16 @@
           getClassName() {
             return "CCommunity_GetCommentThreadRatings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.commentthreadid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49306,16 +48516,16 @@
           getClassName() {
             return "CCommunity_GetCommentThreadRatings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49376,16 +48586,16 @@
           getClassName() {
             return "CCommunity_VerifyClanMembership_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamids_nonmembers || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49441,16 +48651,16 @@
           getClassName() {
             return "CCommunity_VerifyClanMembership_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.announcementid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49513,9 +48723,7 @@
           getClassName() {
             return "CCommunity_RateClanAnnouncement_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -49557,13 +48765,15 @@
             return "CCommunity_RateClanAnnouncement_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.announcementid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49616,16 +48826,16 @@
           getClassName() {
             return "CCommunity_GetClanAnnouncementVoteForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voted_up || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49683,16 +48893,16 @@
           getClassName() {
             return "CCommunity_GetClanAnnouncementVoteForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49745,16 +48955,16 @@
           getClassName() {
             return "CCommunity_GetClanMetadata_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_ogg || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49822,16 +49032,16 @@
           getClassName() {
             return "CCommunity_GetClanMetadata_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.loc_group_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49919,16 +49129,16 @@
           getClassName() {
             return "CCommunity_ClanLocGroupImage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -49999,16 +49209,16 @@
           getClassName() {
             return "CCommunity_GetClanLocGroupImages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.images || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50062,16 +49272,16 @@
           getClassName() {
             return "CCommunity_GetClanLocGroupImages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50129,16 +49339,16 @@
           getClassName() {
             return "CCommunity_GetAvatarHistory_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.avatars || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50192,16 +49402,16 @@
           getClassName() {
             return "CCommunity_GetAvatarHistory_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.avatar_sha1 || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50264,16 +49474,16 @@
           getClassName() {
             return "CCommunity_GetAvatarHistory_Response_AvatarData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.priority || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50334,16 +49544,16 @@
           getClassName() {
             return "CAppPriority";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 6, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50450,16 +49660,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventNews_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50513,16 +49723,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventNews_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_steam_blog || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50585,16 +49795,16 @@
           getClassName() {
             return "CCommunity_GetBestEventsForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clanid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50678,16 +49888,16 @@
           getClassName() {
             return "CCommunity_PartnerEventResult";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50741,9 +49951,7 @@
           getClassName() {
             return "CCommunity_GetBestEventsForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -50826,13 +50034,15 @@
             return "CCommunity_ClearUserPartnerEventsAppPriorities_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50890,9 +50100,7 @@
           getClassName() {
             return "CCommunity_PartnerEventsAppPriority";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -50934,13 +50142,15 @@
             return "CCommunity_GetUserPartnerEventsAppPriorities_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.priorities || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -50994,16 +50204,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventsAppPriorities_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51056,9 +50266,7 @@
           getClassName() {
             return "CCommunity_ClearSinglePartnerEventsAppPriority_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -51100,13 +50308,15 @@
             return "CCommunity_ClearSinglePartnerEventsAppPriority_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51159,9 +50369,7 @@
           getClassName() {
             return "CCommunity_PartnerEventsShowMoreForApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -51203,13 +50411,15 @@
             return "CCommunity_PartnerEventsShowMoreForApp_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51262,9 +50472,7 @@
           getClassName() {
             return "CCommunity_PartnerEventsShowLessForApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -51306,13 +50514,15 @@
             return "CCommunity_PartnerEventsShowLessForApp_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.markings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51366,16 +50576,16 @@
           getClassName() {
             return "CCommunity_MarkPartnerEventsForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clanid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51448,9 +50658,7 @@
           getClassName() {
             return "CCommunity_MarkPartnerEventsForUser_Request_PartnerEventMarking";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -51492,13 +50700,15 @@
             return "CCommunity_MarkPartnerEventsForUser_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.event_gids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51559,16 +50769,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventViewStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.events || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51622,16 +50832,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventViewStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.event_gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51699,16 +50909,16 @@
           getClassName() {
             return "CCommunity_GetUserPartnerEventViewStatus_Response_PartnerEvent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidfeature || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51796,9 +51006,7 @@
           getClassName() {
             return "CCommunity_HideAndReportComment_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -51840,13 +51048,15 @@
             return "CCommunity_HideAndReportComment_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51904,16 +51114,16 @@
           getClassName() {
             return "CCommunity_GetClanEventCrowdInMetadata_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.crowdin_project_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -51971,16 +51181,16 @@
           getClassName() {
             return "CCommunity_GetClanEventCrowdInMetadata_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52033,16 +51243,16 @@
           getClassName() {
             return "CCommunity_GetClanCrowdInMetadata_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.crowdin_project_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52105,16 +51315,16 @@
           getClassName() {
             return "CCommunity_GetClanCrowdInMetadata_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52177,9 +51387,7 @@
           getClassName() {
             return "CCommunity_FetchTranslationFromCrowdIn_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -52221,13 +51429,15 @@
             return "CCommunity_FetchTranslationFromCrowdIn_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.review_labels || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52281,16 +51491,16 @@
           getClassName() {
             return "CCommunity_SetRecommendationBotReviewStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52353,9 +51563,7 @@
           getClassName() {
             return "CCommunity_SetRecommendationBotReviewStatus_Request_ReviewLabel";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -52397,13 +51605,15 @@
             return "CCommunity_SetRecommendationBotReviewStatus_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.explicit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52481,16 +51691,16 @@
           getClassName() {
             return "CommentClassification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.resolve || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52608,16 +51818,16 @@
           getClassName() {
             return "CCommentModeration_UpdateCommentReportState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sanction || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -52680,9 +51890,7 @@
           getClassName() {
             return "CCommentModeration_UpdateCommentReportState_Request_Sanction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -52863,6 +52071,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["help"],
               },
             );
           }
@@ -53080,18 +52289,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EModeratorMessageType ( " + _ + " )";
         }
@@ -53104,13 +52302,15 @@
         function _(_) {
           return "unknown EReportedPostType ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.can_view || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53198,16 +52398,16 @@
           getClassName() {
             return "CForums_UserPermissions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid_ban_actor || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53275,16 +52475,16 @@
           getClassName() {
             return "CForums_UserBan";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidforum || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53400,16 +52600,16 @@
           getClassName() {
             return "CForums_GetForumDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidforumtopic || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [21], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53577,16 +52777,16 @@
           getClassName() {
             return "CForums_Topic";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reactionid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53644,16 +52844,16 @@
           getClassName() {
             return "CForums_Topic_Reaction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidtopic || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53715,16 +52915,16 @@
           getClassName() {
             return "CForums_Topic_TopicMoved";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53827,16 +53027,16 @@
           getClassName() {
             return "CForums_ReportPost_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidreportforum || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53894,16 +53094,16 @@
           getClassName() {
             return "CForums_ReportPost_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -53989,16 +53189,16 @@
           getClassName() {
             return "CForums_GetTopicDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.forum_details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54056,16 +53256,16 @@
           getClassName() {
             return "CForums_GetTopicDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54138,16 +53338,16 @@
           getClassName() {
             return "CForums_ResolveReportedPosts_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.resolved_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54200,16 +53400,16 @@
           getClassName() {
             return "CForums_ResolveReportedPosts_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54277,9 +53477,7 @@
           getClassName() {
             return "CForums_ResolveReportedPost_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -54321,13 +53519,15 @@
             return "CForums_ResolveReportedPost_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54416,16 +53616,16 @@
           getClassName() {
             return "CForums_SanctionReportedPost_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sanction || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54488,9 +53688,7 @@
           getClassName() {
             return "CForums_SanctionReportedPost_Request_Sanction";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -54597,25 +53795,16 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.getitems_request || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54672,16 +53861,16 @@
           getClassName() {
             return "CPartnerStoreBrowse_GetItems_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54735,16 +53924,16 @@
           getClassName() {
             return "CPartnerStoreBrowse_GetCountryRestrictions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54804,16 +53993,16 @@
           getClassName() {
             return "CPartnerStoreBrowse_GetCountryRestrictions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -54884,9 +54073,7 @@
           getClassName() {
             return "CPartnerStoreBrowse_GetCountryRestrictions_Response_CCountryRestrictions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -55041,17 +54228,6 @@
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EUserBadge ( " + _ + " )";
         }
@@ -55082,13 +54258,15 @@
         function _(_) {
           return "unknown ETextFilterOperation ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55141,16 +54319,16 @@
           getClassName() {
             return "CPlayer_GetRecentPlaytimeSessionsForChild_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sessions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55204,16 +54382,16 @@
           getClassName() {
             return "CPlayer_GetRecentPlaytimeSessionsForChild_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.time_start || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55286,16 +54464,16 @@
           getClassName() {
             return "CPlayer_GetRecentPlaytimeSessionsForChild_Response_PlaytimeSession";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.min_last_played || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55348,16 +54526,16 @@
           getClassName() {
             return "CPlayer_GetLastPlayedTimes_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.games || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55411,16 +54589,16 @@
           getClassName() {
             return "CPlayer_GetLastPlayedTimes_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55558,16 +54736,16 @@
           getClassName() {
             return "CPlayer_GetLastPlayedTimes_Response_Game";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55623,16 +54801,16 @@
           getClassName() {
             return "CPlayer_GetPlayerLinkDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accounts || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55686,16 +54864,16 @@
           getClassName() {
             return "CPlayer_GetPlayerLinkDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.public_data || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55751,16 +54929,16 @@
           getClassName() {
             return "CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -55859,16 +55037,16 @@
           getClassName() {
             return "CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPublicData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.persona_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56026,9 +55204,7 @@
           getClassName() {
             return "CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPrivateData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -56070,13 +55246,15 @@
             return "CPlayer_GetMutualFriendsForIncomingInvites_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56137,16 +55315,16 @@
           getClassName() {
             return "CPlayer_IncomingInviteMutualFriendList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.incoming_invite_mutual_friends_lists || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56200,16 +55378,16 @@
           getClassName() {
             return "CPlayer_GetMutualFriendsForIncomingInvites_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56265,6 +55443,11 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    include_all_free_games: {
+                      _: 10,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -56306,16 +55489,16 @@
           getClassName() {
             return "CPlayer_GetOwnedGames_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56374,16 +55557,16 @@
           getClassName() {
             return "CPlayer_GetOwnedGames_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [18], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56534,16 +55717,16 @@
           getClassName() {
             return "CPlayer_GetOwnedGames_Response_Game";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.max_age_seconds || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56604,16 +55787,16 @@
           getClassName() {
             return "CPlayer_GetPlayNext_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.last_update_time || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56674,16 +55857,16 @@
           getClassName() {
             return "CPlayer_GetPlayNext_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.play_sessions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56737,16 +55920,16 @@
           getClassName() {
             return "CPlayer_RecordDisconnectedPlaytime_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56819,9 +56002,7 @@
           getClassName() {
             return "CPlayer_RecordDisconnectedPlaytime_Request_PlayHistory";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -56863,13 +56044,15 @@
             return "CPlayer_RecordDisconnectedPlaytime_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56922,16 +56105,16 @@
           getClassName() {
             return "CPlayer_GetGameBadgeLevels_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.player_level || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -56990,16 +56173,16 @@
           getClassName() {
             return "CPlayer_GetGameBadgeLevels_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.level || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57062,16 +56245,16 @@
           getClassName() {
             return "CPlayer_GetGameBadgeLevels_Response_Badge";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [15], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57200,16 +56383,16 @@
           getClassName() {
             return "ProfileItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.style_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57267,16 +56450,16 @@
           getClassName() {
             return "ProfileItem_ProfileColor";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57334,16 +56517,16 @@
           getClassName() {
             return "CPlayer_GetProfileBackground_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_background || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57395,16 +56578,16 @@
           getClassName() {
             return "CPlayer_GetProfileBackground_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57457,9 +56640,7 @@
           getClassName() {
             return "CPlayer_SetProfileBackground_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -57501,13 +56682,15 @@
             return "CPlayer_SetProfileBackground_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57565,16 +56748,16 @@
           getClassName() {
             return "CPlayer_GetMiniProfileBackground_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_background || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57626,16 +56809,16 @@
           getClassName() {
             return "CPlayer_GetMiniProfileBackground_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57688,9 +56871,7 @@
           getClassName() {
             return "CPlayer_SetMiniProfileBackground_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -57732,13 +56913,15 @@
             return "CPlayer_SetMiniProfileBackground_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57796,16 +56979,16 @@
           getClassName() {
             return "CPlayer_GetAvatarFrame_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.avatar_frame || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57857,16 +57040,16 @@
           getClassName() {
             return "CPlayer_GetAvatarFrame_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -57919,9 +57102,7 @@
           getClassName() {
             return "CPlayer_SetAvatarFrame_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -57963,13 +57144,15 @@
             return "CPlayer_SetAvatarFrame_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58027,16 +57210,16 @@
           getClassName() {
             return "CPlayer_GetAnimatedAvatar_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.avatar || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58088,16 +57271,16 @@
           getClassName() {
             return "CPlayer_GetAnimatedAvatar_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58150,9 +57333,7 @@
           getClassName() {
             return "CPlayer_SetAnimatedAvatar_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -58194,13 +57375,15 @@
             return "CPlayer_SetAnimatedAvatar_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58258,16 +57441,16 @@
           getClassName() {
             return "CPlayer_GetSteamDeckKeyboardSkin_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steam_deck_keyboard_skin || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58319,16 +57502,16 @@
           getClassName() {
             return "CPlayer_GetSteamDeckKeyboardSkin_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58381,9 +57564,7 @@
           getClassName() {
             return "CPlayer_SetSteamDeckKeyboardSkin_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -58425,13 +57606,15 @@
             return "CPlayer_SetSteamDeckKeyboardSkin_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58492,16 +57675,16 @@
           getClassName() {
             return "CPlayer_GetProfileItemsOwned_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_backgrounds || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4, 5, 6, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58591,16 +57774,16 @@
           getClassName() {
             return "CPlayer_GetProfileItemsOwned_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58658,16 +57841,16 @@
           getClassName() {
             return "CPlayer_GetProfileItemsEquipped_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_background || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58739,16 +57922,16 @@
           getClassName() {
             return "CPlayer_GetProfileItemsEquipped_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58806,9 +57989,7 @@
           getClassName() {
             return "CPlayer_SetEquippedProfileItemFlags_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -58891,13 +58072,15 @@
             return "CPlayer_GetEmoticonList_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.emoticons || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -58951,16 +58134,16 @@
           getClassName() {
             return "CPlayer_GetEmoticonList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59038,16 +58221,16 @@
           getClassName() {
             return "CPlayer_GetEmoticonList_Response_Emoticon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59105,16 +58288,16 @@
           getClassName() {
             return "CPlayer_GetCommunityBadgeProgress_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.quests || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59168,16 +58351,16 @@
           getClassName() {
             return "CPlayer_GetCommunityBadgeProgress_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.questid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59235,16 +58418,16 @@
           getClassName() {
             return "CPlayer_GetCommunityBadgeProgress_Response_Quest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59302,9 +58485,7 @@
           getClassName() {
             return "CPlayer_PostStatusToFriends_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -59346,13 +58527,15 @@
             return "CPlayer_PostStatusToFriends_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59410,16 +58593,16 @@
           getClassName() {
             return "CPlayer_GetPostedStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59492,16 +58675,16 @@
           getClassName() {
             return "CPlayer_GetPostedStatus_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.postid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59554,9 +58737,7 @@
           getClassName() {
             return "CPlayer_DeletePostedStatus_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -59598,13 +58779,15 @@
             return "CPlayer_DeletePostedStatus_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59675,16 +58858,16 @@
           getClassName() {
             return "CPlayer_GetTopAchievementsForGames_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.games || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59738,16 +58921,16 @@
           getClassName() {
             return "CPlayer_GetTopAchievementsForGames_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.statid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59835,16 +59018,16 @@
           getClassName() {
             return "CPlayer_GetTopAchievementsForGames_Response_Achievement";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59908,16 +59091,16 @@
           getClassName() {
             return "CPlayer_GetTopAchievementsForGames_Response_Game";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -59995,16 +59178,16 @@
           getClassName() {
             return "CPlayer_GetUserStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sha_schema || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60078,16 +59261,16 @@
           getClassName() {
             return "CPlayer_GetUserStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.achievement_bit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60145,16 +59328,16 @@
           getClassName() {
             return "CPlayer_GetUserStats_Response_Unlock_Time";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stat_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60218,16 +59401,16 @@
           getClassName() {
             return "CPlayer_GetUserStats_Response_Stats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60298,16 +59481,16 @@
           getClassName() {
             return "CPlayer_GetAchievementsProgress_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.achievement_progress || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60361,16 +59544,16 @@
           getClassName() {
             return "CPlayer_GetAchievementsProgress_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60478,16 +59661,16 @@
           getClassName() {
             return "CPlayer_GetAchievementsProgress_Response_AchievementProgress";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60557,16 +59740,16 @@
           getClassName() {
             return "CPlayer_GetGamesWithAchievementProgress_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groups || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60620,16 +59803,16 @@
           getClassName() {
             return "CPlayer_GetGamesWithAchievementProgress_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60722,16 +59905,16 @@
           getClassName() {
             return "CPlayer_GetGamesWithAchievementProgress_Response_GroupProgress";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60794,16 +59977,16 @@
           getClassName() {
             return "CPlayer_GetGameAchievements_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.achievements || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -60873,16 +60056,16 @@
           getClassName() {
             return "CPlayer_GetGameAchievements_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.internal_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61005,16 +60188,16 @@
           getClassName() {
             return "CPlayer_GetGameAchievements_Response_Achievement";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61107,16 +60290,16 @@
           getClassName() {
             return "CPlayer_GetGameAchievements_Response_Group";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61174,16 +60357,16 @@
           getClassName() {
             return "CPlayer_GetUserAchievements_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.achievements || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61253,16 +60436,16 @@
           getClassName() {
             return "CPlayer_GetUserAchievements_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.internal_key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61335,16 +60518,16 @@
           getClassName() {
             return "CPlayer_GetUserAchievements_Response_Achievement";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61417,16 +60600,16 @@
           getClassName() {
             return "CPlayer_GetUserAchievements_Response_Group";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61479,16 +60662,16 @@
           getClassName() {
             return "CPlayer_GetGlobalAchievementPercentages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.achievements || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61548,16 +60731,16 @@
           getClassName() {
             return "CPlayer_GetGlobalAchievementPercentages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.internal_key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61615,16 +60798,16 @@
           getClassName() {
             return "CPlayer_GetGlobalAchievementPercentages_Response_Achievement";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.groupid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61682,16 +60865,16 @@
           getClassName() {
             return "CPlayer_GetGlobalAchievementPercentages_Response_Group";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61744,16 +60927,16 @@
           getClassName() {
             return "CPlayer_GetFavoriteBadge_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.has_favorite_badge || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61836,16 +61019,16 @@
           getClassName() {
             return "CPlayer_GetFavoriteBadge_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -61903,9 +61086,7 @@
           getClassName() {
             return "CPlayer_SetFavoriteBadge_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -61947,13 +61128,15 @@
             return "CPlayer_SetFavoriteBadge_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.slot || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62071,16 +61254,16 @@
           getClassName() {
             return "ProfileCustomizationSlot";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.customization_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62164,16 +61347,16 @@
           getClassName() {
             return "ProfileCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.theme_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62231,16 +61414,16 @@
           getClassName() {
             return "ProfileTheme";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hide_profile_awards || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62293,16 +61476,16 @@
           getClassName() {
             return "ProfilePreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62365,16 +61548,16 @@
           getClassName() {
             return "CPlayer_GetProfileCustomization_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.customizations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62447,16 +61630,16 @@
           getClassName() {
             return "CPlayer_GetProfileCustomization_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.purchaseid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62519,16 +61702,16 @@
           getClassName() {
             return "CPlayer_GetProfileCustomization_Response_PurchasedCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62581,16 +61764,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedProfileCustomizations_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.purchased_customizations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62644,16 +61827,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedProfileCustomizations_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.purchaseid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62711,16 +61894,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62773,16 +61956,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.purchased_customizations || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62842,16 +62025,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.customization_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62909,16 +62092,16 @@
           getClassName() {
             return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.customization_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -62976,9 +62159,7 @@
           getClassName() {
             return "CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -63020,13 +62201,15 @@
             return "CPlayer_GetProfileThemesAvailable_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_themes || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63080,16 +62263,16 @@
           getClassName() {
             return "CPlayer_GetProfileThemesAvailable_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.theme_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63142,9 +62325,7 @@
           getClassName() {
             return "CPlayer_SetProfileTheme_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -63186,13 +62367,15 @@
             return "CPlayer_SetProfileTheme_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.profile_preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63244,9 +62427,7 @@
           getClassName() {
             return "CPlayer_SetProfilePreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -63288,13 +62469,15 @@
             return "CPlayer_SetProfilePreferences_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63352,16 +62535,16 @@
           getClassName() {
             return "CPlayer_GetFriendsGameplayInfo_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.your_info || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63443,16 +62626,16 @@
           getClassName() {
             return "CPlayer_GetFriendsGameplayInfo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63515,16 +62698,16 @@
           getClassName() {
             return "CPlayer_GetFriendsGameplayInfo_Response_FriendsGameplayInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63597,9 +62780,7 @@
           getClassName() {
             return "CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -63641,13 +62822,15 @@
             return "CPlayer_GetTimeSSAAccepted_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.time_ssa_accepted || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63710,16 +62893,16 @@
           getClassName() {
             return "CPlayer_GetTimeSSAAccepted_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.agreement_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63777,9 +62960,7 @@
           getClassName() {
             return "CPlayer_AcceptSSA_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -63862,13 +63043,15 @@
             return "CPlayer_GetNicknameList_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.nicknames || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63922,16 +63105,16 @@
           getClassName() {
             return "CPlayer_GetNicknameList_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -63989,16 +63172,16 @@
           getClassName() {
             return "CPlayer_GetNicknameList_Response_PlayerNickname";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64091,9 +63274,7 @@
           getClassName() {
             return "PerFriendPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -64135,13 +63316,15 @@
             return "CPlayer_GetPerFriendPreferences_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64195,16 +63378,16 @@
           getClassName() {
             return "CPlayer_GetPerFriendPreferences_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64256,9 +63439,7 @@
           getClassName() {
             return "CPlayer_SetPerFriendPreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -64300,13 +63481,15 @@
             return "CPlayer_SetPerFriendPreferences_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64359,16 +63542,16 @@
           getClassName() {
             return "CPlayer_AddFriend_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.invite_sent || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64431,16 +63614,16 @@
           getClassName() {
             return "CPlayer_AddFriend_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64493,16 +63676,16 @@
           getClassName() {
             return "CPlayer_RemoveFriend_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friend_relationship || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64555,16 +63738,16 @@
           getClassName() {
             return "CPlayer_RemoveFriend_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64622,16 +63805,16 @@
           getClassName() {
             return "CPlayer_IgnoreFriend_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.friend_relationship || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64684,16 +63867,16 @@
           getClassName() {
             return "CPlayer_IgnoreFriend_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.parenthesize_nicknames || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64768,9 +63951,7 @@
           getClassName() {
             return "CPlayer_CommunityPreferences";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -64812,13 +63993,15 @@
             return "CPlayer_GetCommunityPreferences_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64874,16 +64057,16 @@
           getClassName() {
             return "CPlayer_GetCommunityPreferences_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -64935,9 +64118,7 @@
           getClassName() {
             return "CPlayer_SetCommunityPreferences_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -64979,13 +64160,15 @@
             return "CPlayer_SetCommunityPreferences_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.text_filter_custom_banned_words || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65052,9 +64235,7 @@
           getClassName() {
             return "CPlayer_TextFilterWords";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -65096,13 +64277,15 @@
             return "CPlayer_GetTextFilterWords_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.words || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65154,16 +64337,16 @@
           getClassName() {
             return "CPlayer_GetTextFilterWords_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65216,16 +64399,16 @@
           getClassName() {
             return "CPlayer_GetNewSteamAnnouncementState_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65298,16 +64481,16 @@
           getClassName() {
             return "CPlayer_GetNewSteamAnnouncementState_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.announcement_gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65365,9 +64548,7 @@
           getClassName() {
             return "CPlayer_UpdateSteamAnnouncementLastRead_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -65409,13 +64590,15 @@
             return "CPlayer_UpdateSteamAnnouncementLastRead_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.privacy_state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65493,9 +64676,7 @@
           getClassName() {
             return "CPrivacySettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -65537,13 +64718,15 @@
             return "CPlayer_GetPrivacySettings_Request";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.privacy_settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65595,16 +64778,16 @@
           getClassName() {
             return "CPlayer_GetPrivacySettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65657,16 +64840,16 @@
           getClassName() {
             return "CPlayer_GetDurationControl_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_enabled || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65754,16 +64937,16 @@
           getClassName() {
             return "CPlayer_GetDurationControl_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.games || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65817,16 +65000,16 @@
           getClassName() {
             return "CPlayer_LastPlayedTimes_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65889,16 +65072,16 @@
           getClassName() {
             return "CPlayer_FriendNicknameChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -65951,16 +65134,16 @@
           getClassName() {
             return "CPlayer_FriendEquippedProfileItemsChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.state || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -66033,16 +65216,16 @@
           getClassName() {
             return "CPlayer_NewSteamAnnouncementState_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.preferences || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -66098,16 +65281,16 @@
           getClassName() {
             return "CPlayer_CommunityPreferencesChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.words || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -66159,16 +65342,16 @@
           getClassName() {
             return "CPlayer_TextFilterWordsChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -66225,16 +65408,16 @@
           getClassName() {
             return "CPlayer_PerFriendPreferencesChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.privacy_settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -66286,9 +65469,7 @@
           getClassName() {
             return "CPlayer_PrivacySettingsChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -66313,7 +65494,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -66784,7 +65965,7 @@
             return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetNicknameList = _;
@@ -66836,7 +66017,7 @@
               _,
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -67073,25 +66254,16 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.title || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67144,16 +66316,16 @@
           getClassName() {
             return "SteamAward_Localization";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.voteid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67215,28 +66387,17 @@
           getClassName() {
             return "SteamAward";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        }
+        var _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rtime || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67294,16 +66455,16 @@
           getClassName() {
             return "CSeasonPassDateAndDisplay";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.milestone_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 5, 9, 10], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67410,16 +66571,16 @@
           getClassName() {
             return "CSeasonPassMilestone";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67478,9 +66639,7 @@
           getClassName() {
             return "CSeasonPass";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _ = __webpack_require__("chunkid");
         const _ = -1,
           _ = 0,
@@ -67555,17 +66714,6 @@
           _ = 30,
           _ = 40,
           _ = 50;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EStoreItemType ( " + _ + " )";
         }
@@ -67596,13 +66744,15 @@
         function _(_) {
           return "unknown EStoreAgeGateReason ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3, 9, 12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -67733,10 +66883,8 @@
           getClassName() {
             return "StoreGameRating";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
@@ -67750,6 +66898,8 @@
                 null,
               );
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68044,16 +67194,16 @@
           getClassName() {
             return "StoreItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68116,16 +67266,16 @@
           getClassName() {
             return "StoreItem_Demo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68183,16 +67333,16 @@
           getClassName() {
             return "StoreItem_Playtest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68255,16 +67405,16 @@
           getClassName() {
             return "StoreItem_RelatedF2P";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.parent_appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6, 9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68363,16 +67513,16 @@
           getClassName() {
             return "StoreItem_RelatedItems";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.included_apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68444,16 +67594,16 @@
           getClassName() {
             return "StoreItem_IncludedItems";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.supported_player_categoryids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68525,16 +67675,16 @@
           getClassName() {
             return "StoreItem_Categories";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary_filtered || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68594,16 +67744,16 @@
           getClassName() {
             return "StoreItem_Reviews";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.review_count || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68671,16 +67821,16 @@
           getClassName() {
             return "StoreItem_Reviews_StoreReviewSummary";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.short_description || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68756,16 +67906,16 @@
           getClassName() {
             return "StoreItem_BasicInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68823,16 +67973,16 @@
           getClassName() {
             return "StoreItem_BasicInfo_CreatorHomeLink";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -68890,16 +68040,16 @@
           getClassName() {
             return "StoreItem_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.asset_url_format || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69057,16 +68207,16 @@
           getClassName() {
             return "StoreItem_Assets";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steam_release_date || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69189,16 +68339,16 @@
           getClassName() {
             return "StoreItem_ReleaseInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.windows || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69285,16 +68435,16 @@
           getClassName() {
             return "StoreItem_Platforms";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.vrhmd || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69377,16 +68527,16 @@
           getClassName() {
             return "StoreItem_Platforms_VRSupport";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [20], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69594,16 +68744,16 @@
           getClassName() {
             return "StoreItem_PurchaseOption";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.discount_amount || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69671,16 +68821,16 @@
           getClassName() {
             return "StoreItem_PurchaseOption_Discount";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69758,16 +68908,16 @@
           getClassName() {
             return "StoreItem_PurchaseOption_RecurrenceInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.all_ages_screenshots || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69827,16 +68977,16 @@
           getClassName() {
             return "StoreItem_Screenshots";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filename || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69894,16 +69044,16 @@
           getClassName() {
             return "StoreItem_Screenshots_Screenshot";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.highlights || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -69963,16 +69113,16 @@
           getClassName() {
             return "StoreItem_Trailers";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filename || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70030,16 +69180,16 @@
           getClassName() {
             return "StoreItem_Trailers_VideoSource";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.cdn_path || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70097,16 +69247,16 @@
           getClassName() {
             return "StoreItem_Trailers_AdaptiveTrailer";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.trailer_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70206,16 +69356,16 @@
           getClassName() {
             return "StoreItem_Trailers_Trailer";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.elanguage || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70290,16 +69440,16 @@
           getClassName() {
             return "StoreItem_SupportedLanguage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.start_time || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70367,16 +69517,16 @@
           getClassName() {
             return "StoreItem_FreeWeekend";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.link_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70439,16 +69589,16 @@
           getClassName() {
             return "StoreItem_Link";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70521,9 +69671,7 @@
           getClassName() {
             return "StoreItem_PackageGroup";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_PackageGroup_EPackageGroupDisplayType ( " +
@@ -70531,7 +69679,7 @@
             " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
@@ -70545,6 +69693,8 @@
                 null,
               );
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70705,6 +69855,11 @@
                       _: _._.readEnum,
                       _: _._.writeEnum,
                     },
+                    has_community_hub: {
+                      _: 33,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -70746,21 +69901,21 @@
           getClassName() {
             return "StoreItem_ExtraDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_ExtraDetails_EVideoExtrasNote ( " + _ + " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.kernel_mode || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70838,16 +69993,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_Anticheat";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70905,16 +70060,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_Eula";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -70972,16 +70127,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_AIGeneratedContentService";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.label || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71044,9 +70199,7 @@
           getClassName() {
             return "StoreItem_ExtraDetails_PageSection";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_ExtraDetails_PageSection_EPageSectionBanner ( " +
@@ -71054,13 +70207,15 @@
             " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.quote || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71128,16 +70283,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_PressReview";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.why_bbcode || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71220,16 +70375,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_EarlyAccess";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.website || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 7, 8], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71335,16 +70490,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_LinksAndInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.score || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71407,16 +70562,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_Metacritic";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.directors || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71499,16 +70654,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_CastAndCrew";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.platforms || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71562,9 +70717,7 @@
           getClassName() {
             return "StoreItem_ExtraDetails_SystemRequirements";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_ExtraDetails_SystemRequirements_EUnsupportedOSNote ( " +
@@ -71579,13 +70732,15 @@
             " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.amount || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71643,16 +70798,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_SystemRequirements_Size";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.os_version || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71762,16 +70917,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_SystemRequirements_Requirements";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.platform || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71847,16 +71002,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_SystemRequirements_PlatformRequirements";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.number || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71919,21 +71074,21 @@
           getClassName() {
             return "StoreItem_ExtraDetails_Episode";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_ExtraDetails_Episode_EEpisodeType ( " + _ + " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.index || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -71999,16 +71154,16 @@
           getClassName() {
             return "StoreItem_ExtraDetails_Season";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.optin_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72068,16 +71223,16 @@
           getClassName() {
             return "StoreItem_OptInRegistrationTags";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72140,21 +71295,21 @@
           getClassName() {
             return "StoreItem_PurchaseNote";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown StoreItem_PurchaseNote_EPurchaseNoteType ( " + _ + " )"
           );
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_assets || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72302,16 +71457,16 @@
           getClassName() {
             return "StoreBrowseItemDataRequest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72374,16 +71529,16 @@
           getClassName() {
             return "StoreBrowseContext";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72466,16 +71621,16 @@
           getClassName() {
             return "StoreItemID";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72537,16 +71692,16 @@
           getClassName() {
             return "CStoreBrowse_GetItems_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.store_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72600,16 +71755,16 @@
           getClassName() {
             return "CStoreBrowse_GetItems_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72668,16 +71823,16 @@
           getClassName() {
             return "CStoreBrowse_GetStoreCategories_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.categories || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72731,16 +71886,16 @@
           getClassName() {
             return "CStoreBrowse_GetStoreCategories_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.categoryid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72833,16 +71988,16 @@
           getClassName() {
             return "CStoreBrowse_GetStoreCategories_Response_Category";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.context || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72902,16 +72057,16 @@
           getClassName() {
             return "CStoreBrowse_GetContentHubConfig_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hubconfigs || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -72965,16 +72120,16 @@
           getClassName() {
             return "CStoreBrowse_GetContentHubConfig_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.hubcategoryid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 7, 8, 9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73084,16 +72239,16 @@
           getClassName() {
             return "CStoreBrowse_GetContentHubConfig_Response_ContentHubConfig";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73151,16 +72306,16 @@
           getClassName() {
             return "CStoreBrowse_GetPriceStops_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.price_stops || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73219,16 +72374,16 @@
           getClassName() {
             return "CStoreBrowse_GetPriceStops_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.formatted_amount || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73286,16 +72441,16 @@
           getClassName() {
             return "CStoreBrowse_GetPriceStops_Response_PriceStop";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.context || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73362,16 +72517,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.dlc_data || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73431,16 +72586,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73523,16 +72678,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForApps_Response_DLCData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73595,16 +72750,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForApps_Response_PlaytimeForApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.context || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73678,16 +72833,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForAppsSolr_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.dlc_lists || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73741,16 +72896,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForAppsSolr_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.parent_appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73811,16 +72966,16 @@
           getClassName() {
             return "CStoreBrowse_GetDLCForAppsSolr_Response_DLCList";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -73880,16 +73035,16 @@
           getClassName() {
             return "CStoreBrowse_GetHardwareItems_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74067,16 +73222,16 @@
           getClassName() {
             return "CHardwarePackageDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74130,16 +73285,16 @@
           getClassName() {
             return "CStoreBrowse_GetHardwareItems_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filter_failure || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [21, 30], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74264,9 +73419,7 @@
           getClassName() {
             return "StoreBrowseFilterFailure";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -74274,7 +73427,7 @@
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetItems = _;
@@ -74399,23 +73552,13 @@
           _ = 20,
           _ = 21,
           _ = 22,
+          _ = 23,
           _ = 30,
           _ = 31,
           _ = 32,
           _ = 40,
           _ = 41,
           _ = 50;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EStoreQuerySort ( " + _ + " )";
         }
@@ -74431,7 +73574,7 @@
         function _(_) {
           return "unknown EStoreQueryCompatDevice ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
@@ -74445,6 +73588,8 @@
                 null,
               );
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74600,16 +73745,16 @@
           getClassName() {
             return "CStoreQueryFilters";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74722,16 +73867,16 @@
           getClassName() {
             return "CStoreQueryFilters_TypeFilters";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filter_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74792,16 +73937,16 @@
           getClassName() {
             return "CStoreQueryFilters_PredefinedFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74857,16 +74002,16 @@
           getClassName() {
             return "CStoreQueryFilters_TagFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.only_free_items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -74929,16 +74074,16 @@
           getClassName() {
             return "CStoreQueryFilters_PriceFilters";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.release_date_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75001,16 +74146,16 @@
           getClassName() {
             return "CStoreQueryFilters_ReleaseDateFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.start_date || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75073,16 +74218,16 @@
           getClassName() {
             return "CStoreQueryFilters_DiscountedDatesFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.device || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75143,16 +74288,16 @@
           getClassName() {
             return "CStoreQueryFilters_CompatibilityFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.min_score || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75210,16 +74355,16 @@
           getClassName() {
             return "CStoreQueryFilters_ReviewScoreFilter";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.start || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75289,16 +74434,16 @@
           getClassName() {
             return "CStoreQueryParams";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype._ || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75360,16 +74505,16 @@
           getClassName() {
             return "CStoreQueryPerResultMetadata";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.total_matching_records || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75445,16 +74590,16 @@
           getClassName() {
             return "CStoreQueryResultMetadata";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.query_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75524,16 +74669,16 @@
           getClassName() {
             return "CStoreQuery_Query_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.metadata || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75597,16 +74742,16 @@
           getClassName() {
             return "CStoreQuery_Query_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.query_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75655,6 +74800,11 @@
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
+                    use_name_match_scoring: {
+                      _: 11,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -75696,16 +74846,16 @@
           getClassName() {
             return "CStoreQuery_SearchSuggestions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.metadata || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75769,16 +74919,16 @@
           getClassName() {
             return "CStoreQuery_SearchSuggestions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.query_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75857,16 +75007,16 @@
           getClassName() {
             return "CStoreQuery_MoreLikeThis_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tag_weight || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75920,16 +75070,16 @@
           getClassName() {
             return "CStoreQuery_MoreLikeThis_Request_MoreLikeThisOptions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.metadata || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -75993,16 +75143,16 @@
           getClassName() {
             return "CStoreQuery_MoreLikeThis_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filters || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76064,16 +75214,16 @@
           getClassName() {
             return "CStoreQuery_GetItemsByUserRecommendedTags_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sort || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76159,16 +75309,16 @@
           getClassName() {
             return "CStoreQuery_GetItemsByUserRecommendedTags_Request_Section";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sections || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76222,16 +75372,16 @@
           getClassName() {
             return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76295,16 +75445,16 @@
           getClassName() {
             return "CStoreQuery_GetItemsByUserRecommendedTags_Response_Section";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sort || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76388,16 +75538,16 @@
           getClassName() {
             return "CStoreQuery_GetItemByUserCombinedTagsPriority_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tagid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -76466,9 +75616,7 @@
           getClassName() {
             return "CStoreQuery_GetItemByUserCombinedTagsPriority_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -76657,26 +75805,15 @@
           _: () => _,
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
+          m_nOffset;
+          m_nLength;
+          m_viewPacket;
+          m_rgubPacket;
+          m_iGet;
+          m_iPut;
           constructor(_, _ = 0, _) {
-            _(this, "m_nOffset"),
-              _(this, "m_nLength"),
-              _(this, "m_viewPacket"),
-              _(this, "m_rgubPacket"),
-              _(this, "m_iGet"),
-              _(this, "m_iPut"),
-              (this.m_nOffset = _ || 0),
+            (this.m_nOffset = _ || 0),
               _ instanceof Uint8Array || _ instanceof DataView
                 ? ((this.m_nLength = _ || _.byteLength - this.m_nOffset),
                   (this.m_nOffset += _.byteOffset),
@@ -76778,21 +75915,9 @@
         __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
-          constructor() {
-            _(this, "m_transport", null), _(this, "m_registry", null);
-          }
+          m_transport = null;
+          m_registry = null;
           SetDefaultTransport(_) {
             this.m_transport != null &&
               console.error(
@@ -76826,7 +75951,6 @@
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const [_, _] = (0, _.useState)(!0);
           return (
             (0, _.useEffect)(() => {
@@ -76834,7 +75958,7 @@
                 _(!0);
               });
             }, []),
-            _ ? _.children : (_ = _.fallback) != null ? _ : null
+            _ ? _.children : (_.fallback ?? null)
           );
         }
       },
@@ -76875,17 +75999,6 @@
           _: () => _,
           _: () => _,
         });
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return _ != null && _.focus !== void 0;
         }
@@ -76905,12 +76018,11 @@
           }
         }
         function _(_, _) {
-          var _;
           let _ = _;
           for (; _; ) {
             if (
-              (((_ = _.parentNode) == null ? void 0 : _.nodeType) ==
-                Node.DOCUMENT_FRAGMENT_NODE && (_ = _.parentNode.host),
+              (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
+                (_ = _.parentNode.host),
               _ == _)
             )
               return !0;
@@ -77113,43 +76225,46 @@
             : _();
         }
         class _ {
+          m_nBufferPx;
+          m_elParent;
+          m_bNeedSort = !1;
+          m_bOffsetsInvalidated = !1;
+          m_rgChildren = [];
+          m_nLastYMin;
+          m_nLastYMax;
           constructor(_) {
-            _(this, "m_nBufferPx"),
-              _(this, "m_elParent"),
-              _(this, "m_bNeedSort", !1),
-              _(this, "m_bOffsetsInvalidated", !1),
-              _(this, "m_rgChildren", []),
-              _(this, "m_nLastYMin"),
-              _(this, "m_nLastYMax"),
-              _(this, "RecomputeVisibility", () => {
-                const _ = this.m_elParent.scrollTop - this.m_nBufferPx,
-                  _ =
-                    this.m_elParent.scrollTop +
-                    this.m_elParent.clientHeight +
-                    this.m_nBufferPx;
-                this.EnsureSort();
-                for (const _ of this.m_rgChildren)
-                  if (!(_.yOffset < _)) {
-                    if (_.yOffset > _) break;
-                    _.fnCallback(!0);
-                  }
-                (this.m_nLastYMin = _), (this.m_nLastYMax = _);
-              }),
-              (this.m_nBufferPx = _);
+            this.m_nBufferPx = _;
           }
           SetParent(_) {
-            var _, _;
             this.m_elParent &&
-              ((_ = this.m_elParent.ownerDocument.defaultView) == null ||
-                _.removeEventListener("resize", this.RecomputeVisibility)),
+              this.m_elParent.ownerDocument.defaultView?.removeEventListener(
+                "resize",
+                this.RecomputeVisibility,
+              ),
               (this.m_elParent = _),
               this.m_elParent &&
-                ((_ = this.m_elParent.ownerDocument.defaultView) == null ||
-                  _.addEventListener("resize", this.RecomputeVisibility));
+                this.m_elParent.ownerDocument.defaultView?.addEventListener(
+                  "resize",
+                  this.RecomputeVisibility,
+                );
           }
           InvalidateOffsetsAndRecompute() {
             (this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility();
           }
+          RecomputeVisibility = () => {
+            const _ = this.m_elParent.scrollTop - this.m_nBufferPx,
+              _ =
+                this.m_elParent.scrollTop +
+                this.m_elParent.clientHeight +
+                this.m_nBufferPx;
+            this.EnsureSort();
+            for (const _ of this.m_rgChildren)
+              if (!(_.yOffset < _)) {
+                if (_.yOffset > _) break;
+                _.fnCallback(!0);
+              }
+            (this.m_nLastYMin = _), (this.m_nLastYMax = _);
+          };
           EnsureSort() {
             if (this.m_bOffsetsInvalidated) {
               for (let _ = 0; _ < this.m_rgChildren.length; _++)
@@ -77206,7 +76321,7 @@
           return _;
         }
         function _(_, _) {
-          let _ = _ == null ? void 0 : _.parentElement;
+          let _ = _?.parentElement;
           for (; _; ) {
             if (_(_)) {
               const _ = window.getComputedStyle(_);
@@ -77266,16 +76381,13 @@
           _(_.document, _, !0);
         }
         function _(_, _, _) {
-          var _;
           const _ = Object.assign({}, _),
             _ = _.getElementsByTagName("head")[0],
             _ = _.getElementsByTagName("link"),
             _ = _.length;
           for (let _ = 0; _ < _; ++_) {
             const _ = _[_];
-            _[_.href]
-              ? delete _[_.href]
-              : _ && ((_ = _.parentNode) == null || _.removeChild(_));
+            _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
           }
           const _ = [];
           for (const _ in _) {
@@ -77323,17 +76435,17 @@
             }
             for (let _ = 0; _ < _.removedNodes.length; _++) {
               const _ = _.removedNodes[_];
-              _.nodeType === Node.ELEMENT_NODE && (_ == null || _(_));
+              _.nodeType === Node.ELEMENT_NODE && _?.(_);
             }
           }
         }
         function _(_, _) {
-          let _ = _ != null ? _ : null;
+          let _ = _ ?? null;
           for (; _ && !_.contains(_); ) _ = _.parentElement;
           return _;
         }
         function _(_, _) {
-          let _ = _ != null ? _ : null;
+          let _ = _ ?? null;
           for (; _ && !_.contains(_); ) _ = _.parentNode;
           return _;
         }
@@ -77441,13 +76553,10 @@
           _.current = _;
           const _ = React.useRef(!1),
             _ = React.useCallback((_) => {
-              var _;
-              _.current || (_ = _.current) == null || _.call(_, _),
-                (_.current = !1);
+              _.current || _.current?.(_), (_.current = !1);
             }, []),
             _ = React.useCallback((_) => {
-              var _;
-              (_ = _.current) == null || _.call(_, _), (_.current = !0);
+              _.current?.(_), (_.current = !0);
             }, []),
             _ = [_("mousedown", _), _("touchstart", _)];
           return useMultipleRefs(..._);
@@ -77489,37 +76598,9 @@
             [_, _] = React.useState(!0),
             [_, _] = React.useState(!0),
             _ = React.useCallback(() => {
-              var _, _, _;
-              const _ =
-                  (_ = _
-                    ? _ == null
-                      ? void 0
-                      : _.scrollTop
-                    : _ == null
-                      ? void 0
-                      : _.scrollLeft) != null
-                    ? _
-                    : 0,
-                _ =
-                  (_ = _
-                    ? _ == null
-                      ? void 0
-                      : _.scrollHeight
-                    : _ == null
-                      ? void 0
-                      : _.scrollWidth) != null
-                    ? _
-                    : 0,
-                _ =
-                  (_ = _
-                    ? _ == null
-                      ? void 0
-                      : _.clientHeight
-                    : _ == null
-                      ? void 0
-                      : _.clientWidth) != null
-                    ? _
-                    : 0,
+              const _ = (_ ? _?.scrollTop : _?.scrollLeft) ?? 0,
+                _ = (_ ? _?.scrollHeight : _?.scrollWidth) ?? 0,
+                _ = (_ ? _?.clientHeight : _?.clientWidth) ?? 0,
                 _ = Math.round(_) == 0,
                 _ = Math.round(_ - _) == Math.round(_);
               _(_), _(_);
@@ -77552,9 +76633,7 @@
               if (!_.current) return;
               let _ = !1;
               const _ = (_) => {
-                  var _;
-                  const _ =
-                    (_ = _.current) == null ? void 0 : _.contains(_.target);
+                  const _ = _.current?.contains(_.target);
                   _(!!_),
                     _ ||
                       (window.removeEventListener("pointermove", _), (_ = !1));
@@ -78148,14 +77227,9 @@
         function _(_, _) {
           const _ = _.useRef(void 0);
           return _((_) => {
-            var _, _, _;
-            !_.current &&
-              _.isIntersecting &&
-              ((_ = _.onEnter) == null || _.call(_, _)),
-              _.current &&
-                !_.isIntersecting &&
-                ((_ = _.onLeave) == null || _.call(_, _)),
-              (_ = _.onIntersectionChange) == null || _.call(_, _),
+            !_.current && _.isIntersecting && _.onEnter?.(_),
+              _.current && !_.isIntersecting && _.onLeave?.(_),
+              _.onIntersectionChange?.(_),
               (_.current = _.isIntersecting);
           }, _);
         }
@@ -78183,15 +77257,13 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _,
-          _;
+          _ = __webpack_require__("chunkid");
         const _ = void 0;
         function _(_) {
           return _;
         }
-        const _ = (_ = window.Config) != null ? _ : _._,
-          _ = (_ = window.UserConfig) != null ? _ : _._,
+        const _ = window.Config ?? _._,
+          _ = window.UserConfig ?? _._,
           _ = window.Config ? () => Promise.resolve() : _._;
         window.Config && Object.assign(_._, window.Config),
           window.UserConfig && Object.assign(_._, window.UserConfig);
@@ -78215,10 +77287,8 @@
           const [_] = useState(ComputeClientHints);
           return (
             useEffect(() => {
-              var _, _;
-              const _ =
-                  ((_ = _.viewportWidth) == null ? void 0 : _.source) !== 1,
-                _ = ((_ = _.viewportHeight) == null ? void 0 : _.source) !== 1;
+              const _ = _.viewportWidth?.source !== 1,
+                _ = _.viewportHeight?.source !== 1;
               if (!_ && !_) return () => {};
               const _ = () =>
                 WriteClientHintsToCookie({
@@ -78388,27 +77458,16 @@
             return !1;
           }
         }
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return _(_.rgBrowserAPISites, "community");
         }
         class _ {
+          m_ServiceTransport;
+          m_AnonymousServiceTransport;
+          m_fallbackInterface;
+          m_refreshLoginCookiePromise;
           constructor(_) {
-            _(this, "m_ServiceTransport"),
-              _(this, "m_AnonymousServiceTransport"),
-              _(this, "m_fallbackInterface"),
-              _(this, "m_refreshLoginCookiePromise"),
-              (this.m_fallbackInterface = _),
+            (this.m_fallbackInterface = _),
               (this.m_ServiceTransport = {
                 SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
                   bSendAuth: !0,
@@ -78429,16 +77488,15 @@
               });
           }
           async SendMsgAndAwaitResponse(_, _, _, _, _) {
-            var _, _;
             if (!_(_)) {
               if (this.m_fallbackInterface)
                 return _.bSendAuth
-                  ? (_ = this.m_fallbackInterface) == null
-                    ? void 0
-                    : _.GetServiceTransport().SendMsg(_, _, _, _)
-                  : (_ = this.m_fallbackInterface) == null
-                    ? void 0
-                    : _.GetAnonymousServiceTransport().SendMsg(_, _, _, _);
+                  ? this.m_fallbackInterface
+                      ?.GetServiceTransport()
+                      .SendMsg(_, _, _, _)
+                  : this.m_fallbackInterface
+                      ?.GetAnonymousServiceTransport()
+                      .SendMsg(_, _, _, _);
               console.error("No browserapi version of", _, "and no fallback");
             }
             const _ = await this.SendMsgOnce(_, _, _, _, _);
@@ -78449,12 +77507,10 @@
               : (await this.SendMsgOnce(_, _, _, _, _)).msgResult;
           }
           BEnsureLoginCookieRefreshed() {
-            var _;
             return (
-              (_ = this.m_refreshLoginCookiePromise) != null ||
-                (this.m_refreshLoginCookiePromise = _().finally(() => {
-                  this.m_refreshLoginCookiePromise = void 0;
-                })),
+              (this.m_refreshLoginCookiePromise ??= _().finally(() => {
+                this.m_refreshLoginCookiePromise = void 0;
+              })),
               this.m_refreshLoginCookiePromise
             );
           }
@@ -78487,20 +77543,15 @@
             };
           }
           SendNotification(_, _, _, _) {
-            var _, _;
             if (!_(_)) {
               if (this.m_fallbackInterface)
                 return _.bSendAuth
-                  ? (_ = this.m_fallbackInterface) == null
-                    ? void 0
-                    : _.GetServiceTransport().SendNotification(_, _, _)
-                  : (_ = this.m_fallbackInterface) == null
-                    ? void 0
-                    : _.GetAnonymousServiceTransport().SendNotification(
-                        _,
-                        _,
-                        _,
-                      );
+                  ? this.m_fallbackInterface
+                      ?.GetServiceTransport()
+                      .SendNotification(_, _, _)
+                  : this.m_fallbackInterface
+                      ?.GetAnonymousServiceTransport()
+                      .SendNotification(_, _, _);
               console.error("No browserapi version of", _, "and no fallback");
             }
             return this.SendNotificationAndRetryIfUnauthorized(_, _, _, _), !0;
@@ -78652,12 +77703,7 @@
             _,
           );
         }
-        const _ = () => {
-            var _;
-            return (_ = _().useActiveSteamInterface()) == null
-              ? void 0
-              : _.GetServiceTransport();
-          },
+        const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
           _ = () =>
             _().useActiveSteamInterface().GetAnonymousServiceTransport(),
           _ = () => _().useStorage(),
@@ -78757,31 +77803,20 @@
           return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_ServiceTransport;
+          m_AnonymousServiceTransport;
+          m_strWebAPIBaseURL;
+          m_webApiAccessToken = "";
+          m_bJsonMode = !1;
+          m_bJWTToken = !1;
+          m_fnRequestNewAccessToken;
+          m_refreshAccessTokenPromise;
+          m_dtLastExpireCheck = 0;
+          m_strSpoofedSteamID = "";
           constructor(_, _ = "", _ = !1, _) {
-            _(this, "m_ServiceTransport"),
-              _(this, "m_AnonymousServiceTransport"),
-              _(this, "m_strWebAPIBaseURL"),
-              _(this, "m_webApiAccessToken", ""),
-              _(this, "m_bJsonMode", !1),
-              _(this, "m_bJWTToken", !1),
-              _(this, "m_fnRequestNewAccessToken"),
-              _(this, "m_refreshAccessTokenPromise"),
-              _(this, "m_dtLastExpireCheck", 0),
-              _(this, "m_strSpoofedSteamID", ""),
-              (this.m_strWebAPIBaseURL = _),
+            (this.m_strWebAPIBaseURL = _),
               (this.m_webApiAccessToken = _),
               (this.m_bJsonMode = _),
               (this.m_fnRequestNewAccessToken = _),
@@ -79014,7 +78049,7 @@
               [_],
             );
           return (0, _.jsx)(_, {
-            navID: _ != null ? _ : "ModalDialog",
+            navID: _ ?? "ModalDialog",
             onClose: _,
             children: (0, _.jsx)("dialog", {
               ref: _,
@@ -79036,7 +78071,7 @@
             (0, _._)(_, !0, !0),
             (0, _._)()
               ? (0, _.jsx)(_._, {
-                  navID: _ != null ? _ : "ModalDialog",
+                  navID: _ ?? "ModalDialog",
                   onCancelButton: _,
                   modal: !0,
                   navTreeRef: _,
@@ -79069,7 +78104,7 @@
           } = _;
           return (0, _.jsx)(_, {
             onClose: _,
-            navID: _ != null ? _ : "SimpleModalDialog",
+            navID: _ ?? "SimpleModalDialog",
             ..._,
             children: (0, _.jsxs)("div", {
               className: _()(_, _().SimpleModalDialog, _ && _().WideMode),
@@ -79231,30 +78266,19 @@
         const _ = null,
           _ = null;
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_ulSteamID = _._.UZERO;
           constructor(_ = 0, _, _, _) {
-            _(this, "m_ulSteamID", _._.UZERO),
-              _ instanceof _
-                ? (this.m_ulSteamID = _.m_ulSteamID)
-                : typeof _ == "string"
-                  ? (this.m_ulSteamID = _._.fromString(_, !0))
-                  : _ && _ && _ !== void 0
-                    ? this.SetFromComponents(_, _, _, _)
-                    : _
-                      ? (this.m_ulSteamID = _._.fromNumber(_, !0))
-                      : (this.m_ulSteamID = _._.UZERO);
+            _ instanceof _
+              ? (this.m_ulSteamID = _.m_ulSteamID)
+              : typeof _ == "string"
+                ? (this.m_ulSteamID = _._.fromString(_, !0))
+                : _ && _ && _ !== void 0
+                  ? this.SetFromComponents(_, _, _, _)
+                  : _
+                    ? (this.m_ulSteamID = _._.fromNumber(_, !0))
+                    : (this.m_ulSteamID = _._.UZERO);
           }
           static InitFromAccountID(_, _) {
             return new _(Number(_), _, _.W19, _.keb);
@@ -79475,8 +78499,7 @@
           });
         }
         function _(_) {
-          var _, _;
-          return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", (_ = (_ = _.screenshot_full) != null ? _ : _.screenshot_medium) != null ? _ : "")}`;
+          return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", _.screenshot_full ?? _.screenshot_medium ?? "")}`;
         }
         function _(_, _) {
           return `${_._.VIDEO_CDN_URL}store_trailers/${_.trailer_url_format.replace("${FILENAME}", _)}`;
@@ -79572,7 +78595,6 @@
           return _(_, _, "include_assets");
         }
         function _(_, _, _) {
-          var _;
           const _ = (0, _._)(),
             _ = (0, _._)(),
             _ = _ && "packageid" in _ && !!_.packageid;
@@ -79580,7 +78602,7 @@
           if (_) {
             const _ = _.getQueryData(_(_, "default_info", _.cacheScope));
             _ &&
-              ((_ = _.included_appids) == null ? void 0 : _.length) == 1 &&
+              _.included_appids?.length == 1 &&
               (_ = {
                 appid: _.included_appids[0],
               });
@@ -79601,10 +78623,7 @@
           const _ = useStoreBrowseDataLoader(),
             _ = useQueryClient();
           return useQuery({
-            queryKey: [
-              "resolvedSingleAppPackageIDs",
-              _ == null ? void 0 : _.map(StringifyItemKey),
-            ],
+            queryKey: ["resolvedSingleAppPackageIDs", _?.map(StringifyItemKey)],
             queryFn: async () =>
               await Promise.all(
                 _.map((_) =>
@@ -79627,25 +78646,18 @@
           const _ = _ && "appid" in _ && !!_.appid;
           return {
             queryKey: _(_, "include_included_items", _.cacheScope),
-            queryFn: async () => {
-              var _;
-              return (
-                _ && _(_, _, _).catch(() => {}),
-                (_ = (await _(_, _, "include_included_items"))
-                  .included_appids) != null
-                  ? _
-                  : []
-              );
-            },
+            queryFn: async () => (
+              _ && _(_, _, _).catch(() => {}),
+              (await _(_, _, "include_included_items")).included_appids ?? []
+            ),
             initialData: _ ? [_.appid] : void 0,
             enabled: !_,
           };
         }
         function _(_, _, _, _) {
-          var _;
           _.setQueryData(
             _(_, "include_included_items", _),
-            (_ = _.included_appids) != null ? _ : [],
+            _.included_appids ?? [],
           );
         }
         function _(_) {
@@ -79876,8 +78888,7 @@
           };
         }
         function _(_, _, _, _, _, _) {
-          var _;
-          _.setQueryData(_(_, _, _), (_ = _[_]) != null ? _ : null);
+          _.setQueryData(_(_, _, _), _[_] ?? null);
         }
         function _(_, _) {
           return {
@@ -79898,7 +78909,7 @@
           return {
             ..._(_, _),
             select: (_) =>
-              _ != null && _.purchase_options && _.purchase_options.length > 0
+              _?.purchase_options && _.purchase_options.length > 0
                 ? _.purchase_options[0]
                 : null,
             staleTime: 600 * 1e3,
@@ -79934,7 +78945,6 @@
           return _ && _.push(_), _;
         }
         function _(_, _, _, _) {
-          var _, _, _, _, _, _;
           const _ = (0, _._)(_);
           _ &&
             (_(_, _, _, _),
@@ -79958,19 +78968,18 @@
             _.include_included_items && _(_, _, _, _),
             _.include_included_items &&
               _.included_item_data_request &&
-              ((_ =
-                (_ = _.included_items) == null ? void 0 : _.included_apps) ==
-                null ||
-                _.forEach((_) => _(_, _, _.included_item_data_request, _)),
-              (_ =
-                (_ = _.included_items) == null
-                  ? void 0
-                  : _.included_packages) == null ||
-                _.forEach((_) => _(_, _, _.included_item_data_request, _)),
-              (_ =
-                (_ = _.included_items) == null ? void 0 : _.included_bundles) ==
-                null ||
-                _.forEach((_) => _(_, _, _.included_item_data_request, _))));
+              (_.included_items?.included_apps?.forEach((_) =>
+                _(_, _, _.included_item_data_request, _),
+              ),
+              _.included_items?.included_packages?.forEach((_) =>
+                _(_, _, _.included_item_data_request, _),
+              ),
+              _.included_items?.included_bundles?.forEach((_) =>
+                _(_, _, _.included_item_data_request, _),
+              ),
+              _.included_items?.included_creators?.forEach((_) =>
+                _(_, _, _.included_item_data_request, _),
+              )));
         }
         const _ = [
           "assets",
@@ -80080,15 +79089,11 @@
                 _.Body()
                   .store_items()
                   .forEach((_, _) => {
-                    var _;
                     const _ = _.item_type(),
-                      _ =
-                        _ !== void 0
-                          ? (0, _._)(_, (_ = _.gid()) != null ? _ : _._())
-                          : _[_];
+                      _ = _ !== void 0 ? (0, _._)(_, _.gid() ?? _._()) : _[_];
                     _ && _.set(_, _);
                   }),
-                _ && _(_, _, _, _),
+                _ && _(_, _, _, _.included_item_data_request, _),
                 _.map((_) => {
                   const [_] = (0, _._)(_, "|"),
                     _ = _.get(_);
@@ -80109,7 +79114,7 @@
           );
           return (_.cacheScope = (0, _._)(_)), _;
         }
-        function _(_, _, _, _) {
+        function _(_, _, _, _, _) {
           _.forEach((_, _) => {
             const _ = _.get(_);
             if (((0, _._)(_, `Missing request data for ${_}`), !_)) return;
@@ -80129,6 +79134,15 @@
               _.included_item_data_request = _;
             }
             _ && _(_, _);
+            const _ = _.included_items(!1);
+            if (_.has("include_included_items") && _ && _)
+              for (const _ of [
+                ..._.included_apps(),
+                ..._.included_packages(),
+                ..._.included_bundles(),
+                ..._.included_creators(),
+              ])
+                _(_, _);
           });
         }
         var _ = __webpack_require__("chunkid");
@@ -80417,8 +79431,7 @@
           };
         }
         function _(_) {
-          var _;
-          const _ = (_ = _.item_type) != null ? _ : _._._,
+          const _ = _.item_type ?? _._._,
             _ = _._ || 0;
           switch (_) {
             case _._._:
@@ -80525,13 +79538,13 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           if (_.bIncludeUnpublished) return "partner-unpublished";
           if (_.bUsePartnerAPI) return "partner";
-          if (_.bFixedCountry) return `country-${_.country}`;
         }
         function _(_, _) {
           _.Body().set_context(_(_));
@@ -81274,20 +80287,18 @@
             };
           }
           static GetSNRLinkParam(_, _ = null) {
-            var _;
             let _ = _.ComputeLinkPrefix(
               _.domain,
               _.controller,
               _.method,
               _.submethod,
             );
-            _ = (_ = _ != null ? _ : _.depth) != null ? _ : null;
+            _ = _ ?? _.depth ?? null;
             const _ = _.EncodeEventComponent(_.feature);
             return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
           }
           static GetCuratorClanIDParam(_) {
-            var _;
-            return (_ = _.curator_clanid) != null ? _ : null;
+            return _.curator_clanid ?? null;
           }
           static AddNavParamToURL(_, _, _) {
             if (!_ || _.length == 0) return _;
@@ -81295,12 +80306,8 @@
               const _ = new URL((0, _._)(_)),
                 _ = new URLSearchParams(_.search);
               return (
-                _.set("snr", encodeURIComponent(_ != null ? _ : "")),
-                _ &&
-                  _.set(
-                    "curator_clanid",
-                    encodeURIComponent(_ != null ? _ : ""),
-                  ),
+                _.set("snr", encodeURIComponent(_ ?? "")),
+                _ && _.set("curator_clanid", encodeURIComponent(_ ?? "")),
                 _.origin + _.pathname + "?" + _.toString() + _.hash
               );
             } catch (_) {
@@ -81394,33 +80401,27 @@
           });
         }
         function _(_) {
-          var _;
           const { uiData: _, children: _ } = _,
-            _ = React.useMemo(() => {
-              var _;
-              return {
+            _ = React.useMemo(
+              () => ({
                 domain: _.domain,
                 controller: _.controller,
                 method: _.method,
                 submethod: _.submethod,
                 feature: _.feature,
                 depth: _.depth,
-                curator_clanid:
-                  (_ = _ == null ? void 0 : _.curator_data) == null
-                    ? void 0
-                    : _.clanid,
-              };
-            }, [
-              _.domain,
-              _.controller,
-              _.method,
-              _.submethod,
-              _.feature,
-              _.depth,
-              (_ = _ == null ? void 0 : _.curator_data) == null
-                ? void 0
-                : _.clanid,
-            ]);
+                curator_clanid: _?.curator_data?.clanid,
+              }),
+              [
+                _.domain,
+                _.controller,
+                _.method,
+                _.submethod,
+                _.feature,
+                _.depth,
+                _?.curator_data?.clanid,
+              ],
+            );
           return jsx(_.Provider, {
             value: _,
             children: _,
@@ -81618,25 +80619,16 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -81694,16 +80686,16 @@
           getClassName() {
             return "ParentalApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.allowed_time_windows || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -81761,16 +80753,16 @@
           getClassName() {
             return "ParentalPlaytimeDay";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apply_playtime_restrictions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [15], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -81829,16 +80821,16 @@
           getClassName() {
             return "ParentalPlaytimeRestrictions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.restrictions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -81895,16 +80887,16 @@
           getClassName() {
             return "ParentalTemporaryPlaytimeRestrictions";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4, 5, 17, 18, 19], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82056,16 +81048,16 @@
           getClassName() {
             return "ParentalSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requestid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82153,16 +81145,16 @@
           getClassName() {
             return "ParentalFeatureRequest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requestid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82258,27 +81250,16 @@
           getClassName() {
             return "ParentalPlaytimeRequest";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.password || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82350,9 +81331,7 @@
           getClassName() {
             return "CParental_EnableParentalSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -82394,13 +81373,15 @@
             return "CParental_EnableParentalSettings_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.password || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82458,9 +81439,7 @@
           getClassName() {
             return "CParental_DisableParentalSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -82502,13 +81481,15 @@
             return "CParental_DisableParentalSettings_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82561,16 +81542,16 @@
           getClassName() {
             return "CParental_GetParentalSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82622,16 +81603,16 @@
           getClassName() {
             return "CParental_GetParentalSettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.priority || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82684,16 +81665,16 @@
           getClassName() {
             return "CParental_GetSignedParentalSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.serialized_settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82751,16 +81732,16 @@
           getClassName() {
             return "CParental_GetSignedParentalSettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.password || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82832,9 +81813,7 @@
           getClassName() {
             return "CParental_SetParentalSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -82876,13 +81855,15 @@
             return "CParental_SetParentalSettings_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.unlock_token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -82935,9 +81916,7 @@
           getClassName() {
             return "CParental_ValidateToken_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -82979,13 +81958,15 @@
             return "CParental_ValidateToken_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.password || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83048,16 +82029,16 @@
           getClassName() {
             return "CParental_ValidatePassword_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.token || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83110,16 +82091,16 @@
           getClassName() {
             return "CParental_ValidatePassword_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.session || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83172,9 +82153,7 @@
           getClassName() {
             return "CParental_LockClient_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -83298,13 +82277,15 @@
             return "CParental_RequestRecoveryCode_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.features || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83362,16 +82343,16 @@
           getClassName() {
             return "CParental_RequestFeatureAccess_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requestid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83424,16 +82405,16 @@
           getClassName() {
             return "CParental_RequestFeatureAccess_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.approve || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83506,9 +82487,7 @@
           getClassName() {
             return "CParental_ApproveFeatureAccess_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -83550,13 +82529,15 @@
             return "CParental_ApproveFeatureAccess_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.time_expires || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83618,16 +82599,16 @@
           getClassName() {
             return "CParental_RequestPlaytime_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requestid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83680,16 +82661,16 @@
           getClassName() {
             return "CParental_RequestPlaytime_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.approve || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83756,9 +82737,7 @@
           getClassName() {
             return "CParental_ApprovePlaytime_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -83800,13 +82779,15 @@
             return "CParental_ApprovePlaytime_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rt_include_completed_since || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83864,16 +82845,16 @@
           getClassName() {
             return "CParental_GetRequests_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.feature_requests || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -83933,16 +82914,16 @@
           getClassName() {
             return "CParental_GetRequests_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.day_of_week || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -84005,9 +82986,7 @@
           getClassName() {
             return "CParental_ReportPlaytimeAndNotify_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -84049,13 +83028,15 @@
             return "CParental_ReportPlaytimeAndNotify_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.serialized_settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -84123,16 +83104,16 @@
           getClassName() {
             return "CParental_ParentalSettingsChange_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.password || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -84190,16 +83171,16 @@
           getClassName() {
             return "CParental_ParentalUnlock_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.sessionid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -84252,16 +83233,16 @@
           getClassName() {
             return "CParental_ParentalLock_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.day_of_week || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -84319,9 +83300,7 @@
           getClassName() {
             return "CParental_PlaytimeUsed_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -84385,6 +83364,7 @@
           function _(_, _, _) {
             return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.ValidateToken = _;
@@ -84566,7 +83546,7 @@
             _ = (0, _._)("steamparental"),
             _ = _();
           let _ = _,
-            _ = (_ == null ? void 0 : _.split("||")) || [];
+            _ = _?.split("||") || [];
           _.length == 2 && (_ = _[1]);
           const _ = _ && _ !== "0" ? _ + "||" + _ : void 0,
             _ = (0, _._)({
@@ -84591,7 +83571,6 @@
           return _ ? (_ & (1 << _)) == 0 : !0;
         }
         function _(_, _, _, _) {
-          var _;
           if (!_ || !_) return !0;
           if (
             !_.is_enabled ||
@@ -84606,24 +83585,21 @@
               k_nGameIDSteamVRMonitorMain,
               k_nGameIDSteamVRMonitor,
             ].indexOf(_) !== -1 ||
-            ((_ = _.utility_appids) != null && _.includes(_))
+            _.utility_appids?.includes(_)
           )
             return !1;
           const _ = _.get(_);
           return _ !== void 0 ? !_ : !0;
         }
         function _(_) {
-          var _;
           const _ = (0, _._)(),
-            { settings: _ } = (_ = _(_).data) != null ? _ : {},
+            { settings: _ } = _(_).data ?? {},
             _ = _();
           return _(_, _, _);
         }
         function _(_) {
-          var _;
           const _ = useActiveAccount(),
-            { settings: _, mapAppsAllowed: _ } =
-              (_ = _(_).data) != null ? _ : {},
+            { settings: _, mapAppsAllowed: _ } = _(_).data ?? {},
             _ = _();
           return _(_, _, _, _);
         }
@@ -84734,7 +83710,7 @@
               _.Body().set_steamid(_),
                 _.Body().set_include_appinfo(!0),
                 _.Body().set_include_free_sub(!0),
-                _.Body().set_include_played_free_games(!0),
+                _.Body().set_include_all_free_games(!0),
                 _.Body().set_skip_unvetted_apps(!1),
                 _.Body().set_language(Config.LANGUAGE);
               const _ = await PlayerService.GetOwnedGames(_, _);
@@ -84923,28 +83899,11 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_mapManagers", new WeakMap());
-          }
+          m_mapManagers = new WeakMap();
           GetContextMenuManagerFromWindow(_) {
-            var _;
-            let _ =
-              ((_ = _ == null ? void 0 : _.ownerDocument) == null
-                ? void 0
-                : _.defaultView) || window;
+            let _ = _?.ownerDocument?.defaultView || window;
             return this.GetContextMenuManager(_);
           }
           GetContextMenuManager(_) {
@@ -84976,9 +83935,8 @@
             _,
             _,
             _ = _;
-          if (_ != null && _.preventDefault && _ != null && _.stopPropagation) {
-            if (_.shiftKey || (_.altKey && !(_ != null && _.bRootContextMenu)))
-              return null;
+          if (_?.preventDefault && _?.stopPropagation) {
+            if (_.shiftKey || (_.altKey && !_?.bRootContextMenu)) return null;
             _.preventDefault(),
               _.stopPropagation(),
               (_ = _.currentTarget),
@@ -84988,7 +83946,7 @@
           let _ = _.GetContextMenuManagerFromWindow(
             _,
           ).CreateContextMenuInstance(_, _, _, _, _);
-          return _.Show(), _ != null && _.bCreateHidden && _.Hide(), _;
+          return _.Show(), _?.bCreateHidden && _.Hide(), _;
         }
         function _(_, _, _, _) {
           let _ = _.GetContextMenuManagerFromWindow(
@@ -85013,15 +83971,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -85030,29 +83979,29 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 0,
           _ = 1,
           _ = class _ {
+            static s_nNextKeyValue = 1;
+            m_nKey = null;
+            m_ContextMenuManager;
+            m_bVisible = !1;
+            m_fnTakeFocus;
+            m_element;
+            m_rctElement;
+            m_rctLabel = void 0;
+            m_popupContextMenu;
+            m_timerHideMenu = 0;
+            m_options;
+            m_position;
+            m_submenu;
+            m_parentInstance;
+            m_elSubmenuItem = null;
+            m_timerHideSubMenu = 0;
+            m_fnOnHideCallback;
             constructor(_, _) {
-              _(this, "m_nKey", null),
-                _(this, "m_ContextMenuManager"),
-                _(this, "m_bVisible", !1),
-                _(this, "m_fnTakeFocus"),
-                _(this, "m_element"),
-                _(this, "m_rctElement"),
-                _(this, "m_rctLabel"),
-                _(this, "m_popupContextMenu"),
-                _(this, "m_timerHideMenu", 0),
-                _(this, "m_options"),
-                _(this, "m_position"),
-                _(this, "m_submenu"),
-                _(this, "m_parentInstance"),
-                _(this, "m_elSubmenuItem", null),
-                _(this, "m_timerHideSubMenu", 0),
-                _(this, "m_fnOnHideCallback"),
-                (0, _._)(this),
+              (0, _._)(this),
                 (this.m_ContextMenuManager = _),
                 (this.m_rctElement = _);
             }
@@ -85099,11 +84048,7 @@
                 this.m_ContextMenuManager.ShowMenu(this);
             }
             OnCancel(_ = 0) {
-              var _;
-              (_ = this.options) != null &&
-                _.onCancel &&
-                this.options.onCancel(),
-                this.Hide(_);
+              this.options?.onCancel && this.options.onCancel(), this.Hide(_);
             }
             Hide(_ = 0) {
               _ > 0
@@ -85146,10 +84091,9 @@
               this.m_fnTakeFocus = _;
             }
             ShowSubMenu(_, _) {
-              var _;
               return this.m_elSubmenuItem == _
                 ? (this.CancelHideSubMenuTimer(),
-                  (_ = this.m_submenu) == null || _.TakeFocus(),
+                  this.m_submenu?.TakeFocus(),
                   null)
                 : (this.InternalHideSubMenu(),
                   (this.m_elSubmenuItem = _),
@@ -85215,25 +84159,16 @@
               );
             }
             BIsChildElement(_) {
-              var _;
               return this.m_element
                 ? _._(this.m_element, _)
-                : _._(
-                    (_ = this.m_popupContextMenu) == null
-                      ? void 0
-                      : _.root_element,
-                    _,
-                  );
+                : _._(this.m_popupContextMenu?.root_element, _);
             }
             BHasFocus() {
-              var _;
               return this.m_popupContextMenu
                 ? this.m_popupContextMenu.focused
                 : _._(
                     this.m_element,
-                    (_ = this.m_element) == null
-                      ? void 0
-                      : _.ownerDocument.activeElement,
+                    this.m_element?.ownerDocument.activeElement,
                   );
             }
             BIsFocusInChildHierarchy() {
@@ -85256,8 +84191,7 @@
               this.m_rctLabel = _;
             }
           };
-        _(_, "s_nNextKeyValue", 1),
-          _([_._], _.prototype, "m_bVisible", 2),
+        _([_._], _.prototype, "m_bVisible", 2),
           _([_._.ref], _.prototype, "m_rctLabel", 2);
         let _ = _;
         class _ extends _ {
@@ -85312,17 +84246,14 @@
               });
           }
           Hide() {
-            var _;
             this.m_popupContextMenu
               ? window.setTimeout(() => {
-                  var _;
-                  (_ = this.m_parentInstance) == null || _.HideIfNotInFocus();
+                  this.m_parentInstance?.HideIfNotInFocus();
                 }, 10)
-              : (_ = this.m_parentInstance) == null || _.Hide();
+              : this.m_parentInstance?.Hide();
           }
           ForceHide() {
-            var _;
-            (_ = this.m_parentInstance) == null || _.ForceHide();
+            this.m_parentInstance?.ForceHide();
           }
           BIsSubMenu() {
             return !0;
@@ -85337,30 +84268,17 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_callbacksMenusChanged", new _._()),
-              _(this, "m_ActiveMenu"),
-              _(this, "m_rgActiveSubmenus", []),
-              _(this, "m_setHiddenMenus", new Set());
-          }
+          m_callbacksMenusChanged = new _._();
+          m_ActiveMenu;
+          m_rgActiveSubmenus = [];
+          m_setHiddenMenus = new Set();
+          constructor() {}
           CreateContextMenuInstance(_, _, _, _, _) {
             const _ = new _._(this, _, _, _, _, _);
             return (
-              _ != null &&
-                _.bCreateHidden &&
+              _?.bCreateHidden &&
                 (this.m_setHiddenMenus.add(_),
                 this.m_callbacksMenusChanged.Dispatch()),
               _
@@ -85370,8 +84288,7 @@
             return this.m_callbacksMenusChanged;
           }
           HideActiveMenu() {
-            var _;
-            (_ = this.m_ActiveMenu) != null && _.options.bRetainOnHide
+            this.m_ActiveMenu?.options.bRetainOnHide
               ? this.m_setHiddenMenus.add(this.m_ActiveMenu)
               : this.m_rgActiveSubmenus.length &&
                 (this.m_rgActiveSubmenus = []),
@@ -85479,37 +84396,26 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          activeObject;
+          instance;
           constructor(_) {
-            _(this, "activeObject"),
-              _(this, "instance"),
-              (this.instance = new _(_, !1));
+            this.instance = new _(_, !1);
           }
         }
         function _(_) {
           return new _(_.body, !0);
         }
         class _ {
+          m_parent;
+          m_window;
+          m_container = null;
+          iIntervalShow;
+          m_bRemoveOnHide;
+          m_reactRoot;
           constructor(_, _ = !0) {
-            _(this, "m_parent"),
-              _(this, "m_window"),
-              _(this, "m_container", null),
-              _(this, "iIntervalShow"),
-              _(this, "m_bRemoveOnHide"),
-              _(this, "m_reactRoot"),
-              (this.m_parent = _),
+            (this.m_parent = _),
               (this.m_window = _.ownerDocument.defaultView),
               (this.m_bRemoveOnHide = _);
           }
@@ -85563,10 +84469,10 @@
           }
         }
         class _ {
+          m_strUniqueID;
+          m_mapEmbeddedHovers = new WeakMap();
           constructor(_) {
-            _(this, "m_strUniqueID"),
-              _(this, "m_mapEmbeddedHovers", new WeakMap()),
-              (this.m_strUniqueID = _);
+            this.m_strUniqueID = _;
           }
           ShowElementDelayed(_, _, _, _) {
             let _ = this.GetEmbeddedElement(_);
@@ -85812,15 +84718,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -85829,16 +84726,12 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_fnRender;
+          m_rgLoadingLinks = [];
           constructor(_, _, _) {
-            if (
-              (_(this, "m_fnRender"),
-              _(this, "m_rgLoadingLinks", []),
-              (this.m_rgLoadingLinks = []),
-              _)
-            )
+            if (((this.m_rgLoadingLinks = []), _))
               for (let _ = 0; _ < _.length; _++) this.AddLink(_[_], !0);
             else if (_) {
               let _ = _.getElementsByTagName("link");
@@ -85870,26 +84763,15 @@
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }
           OnLinkLoad(_) {
-            var _;
             _.currentTarget.removeEventListener("load", this.OnLinkLoad),
               _._(this.m_rgLoadingLinks, _.currentTarget),
               this.m_rgLoadingLinks.length == 0 &&
-                ((_ = this.m_fnRender) == null || _.call(this),
-                (this.m_fnRender = void 0));
+                (this.m_fnRender?.(), (this.m_fnRender = void 0));
           }
         }
         _([_._], _.prototype, "OnLinkLoad", 1);
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -85899,7 +84781,6 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_.None = 0)] = "None"),
             (_[(_.Minimized = 1)] = "Minimized"),
@@ -85930,6 +84811,8 @@
               "TransparentParentWindow"),
             (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
             (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible"),
+            (_[(_.NoWindowTransitions = 33554432)] = "NoWindowTransitions"),
+            (_[(_.StartBelowSplash = 67108864)] = "StartBelowSplash"),
             _
           ))(_ || {}),
           _ = ((_) => (
@@ -85989,9 +84872,8 @@
           }
         }
         function _() {
-          const { ownerWindow: _ } = (0, _._)(),
-            _ = _.GetPopupForWindow(_);
-          return (_ == null ? void 0 : _.browser_info) || _;
+          const { ownerWindow: _ } = (0, _._)();
+          return _.GetPopupForWindow(_)?.browser_info || _;
         }
         function _() {
           const _ = useBrowserContext(),
@@ -86009,19 +84891,18 @@
           return _ !== void 0 ? _ : _;
         }
         class _ {
+          m_strName;
+          m_strTitle;
+          m_rgParams;
+          m_popup;
+          m_element;
+          m_renderWhenReady;
+          m_bCreateHidden;
+          m_bCreated = !1;
+          m_onCreateRender = null;
+          m_bFocused = !1;
           constructor(_, _) {
-            _(this, "m_strName"),
-              _(this, "m_strTitle"),
-              _(this, "m_rgParams"),
-              _(this, "m_popup"),
-              _(this, "m_element"),
-              _(this, "m_renderWhenReady"),
-              _(this, "m_bCreateHidden"),
-              _(this, "m_bCreated", !1),
-              _(this, "m_onCreateRender", null),
-              _(this, "m_bFocused", !1),
-              _(this, "m_rgChildBrowserViews", []),
-              (0, _._)(this),
+            (0, _._)(this),
               (0, _._)(
                 _,
                 "Name is required.  This is an internal name, different from title.",
@@ -86030,7 +84911,7 @@
             const { title: _, eCreationFlags: _, ..._ } = _;
             (this.m_rgParams = {
               ..._,
-              eCreationFlags: _ != null ? _ : 0,
+              eCreationFlags: _ ?? 0,
             }),
               this.m_rgParams.target_browser &&
                 (this.m_strName +=
@@ -86057,7 +84938,6 @@
               _.data === "popup-created" && this.OnCreateInternal();
           }
           Show(_ = _.iEc.k_EWindowBringToFrontAndForceOS) {
-            var _, _;
             let _;
             typeof _ == "boolean"
               ? (_ = _
@@ -86081,21 +84961,19 @@
                 (_ = _.m_renderWhenReady),
                 _.RemoveTrackedPopup(_),
                 _.ReleasePopup(),
-                _ == null ||
-                  _.removeEventListener("beforeunload", _.OnBeforeUnloadEvent),
-                _ == null || _.removeEventListener("unload", _.OnUnload),
-                _ == null || _.removeEventListener("resize", _.OnResizeEvent),
-                _ == null ||
-                  _.removeEventListener("focus", this.OnFocusInternal),
-                _ == null || _.removeEventListener("blur", this.OnBlurInternal),
-                _ == null || _.removeEventListener("drop", _.OnDrop),
-                _ == null || _.removeEventListener("dragover", _.OnDragOver),
-                _ == null || _.removeEventListener("message", this.OnMessage))
+                _?.removeEventListener("beforeunload", _.OnBeforeUnloadEvent),
+                _?.removeEventListener("unload", _.OnUnload),
+                _?.removeEventListener("resize", _.OnResizeEvent),
+                _?.removeEventListener("focus", this.OnFocusInternal),
+                _?.removeEventListener("blur", this.OnBlurInternal),
+                _?.removeEventListener("drop", _.OnDrop),
+                _?.removeEventListener("dragover", _.OnDragOver),
+                _?.removeEventListener("message", this.OnMessage))
               : (({ popup: _, element: _ } = _.CreatePopup(this.m_strName, {
                   ...this.m_rgParams,
                   title: this.m_strTitle,
                 })),
-                (_ = new _(_ == null ? void 0 : _.document, _))),
+                (_ = new _(_?.document, _))),
               _ &&
                 _ &&
                 ((_.document.title = this.m_strTitle),
@@ -86110,42 +84988,35 @@
                 _._.LANGUAGE &&
                   (_.document.documentElement.setAttribute(
                     "lang",
-                    (_ = (0, _._)()) != null ? _ : "",
+                    (0, _._)() ?? "",
                   ),
                   (0, _._)(_._.LANGUAGE) &&
                     _.document.documentElement.setAttribute("dir", "rtl")),
                 (this.m_popup = _),
                 (this.m_element = _),
                 (this.m_renderWhenReady = _),
-                (_ = this.m_renderWhenReady) == null ||
-                  _.SetTarget(() => {
-                    this.m_popup &&
-                      this.m_element &&
-                      this.RenderInternal(this.m_popup, this.m_element, _);
-                  })),
+                this.m_renderWhenReady?.SetTarget(() => {
+                  this.m_popup &&
+                    this.m_element &&
+                    this.RenderInternal(this.m_popup, this.m_element, _);
+                })),
               _.AddTrackedPopup(this),
               _ &&
                 (this.OnCreateInternal(),
                 _ != _.iEc.k_EWindowBringToFrontInvalid && this.Focus(_));
           }
           RemoveEventListeners() {
-            var _, _, _, _, _, _, _, _;
-            (_ = this.window) == null ||
-              _.removeEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              (_ = this.window) == null ||
-                _.removeEventListener("unload", this.OnUnload),
-              (_ = this.window) == null ||
-                _.removeEventListener("resize", this.OnResizeEvent),
-              (_ = this.window) == null ||
-                _.removeEventListener("focus", this.OnFocusInternal),
-              (_ = this.window) == null ||
-                _.removeEventListener("blur", this.OnBlurInternal),
-              (_ = this.window) == null ||
-                _.removeEventListener("drop", this.OnDrop),
-              (_ = this.window) == null ||
-                _.removeEventListener("dragover", this.OnDragOver),
-              (_ = this.window) == null ||
-                _.removeEventListener("message", this.OnMessage);
+            this.window?.removeEventListener(
+              "beforeunload",
+              this.OnBeforeUnloadEvent,
+            ),
+              this.window?.removeEventListener("unload", this.OnUnload),
+              this.window?.removeEventListener("resize", this.OnResizeEvent),
+              this.window?.removeEventListener("focus", this.OnFocusInternal),
+              this.window?.removeEventListener("blur", this.OnBlurInternal),
+              this.window?.removeEventListener("drop", this.OnDrop),
+              this.window?.removeEventListener("dragover", this.OnDragOver),
+              this.window?.removeEventListener("message", this.OnMessage);
           }
           RenderInternal(_, _, _) {
             if (!this.m_bCreated) {
@@ -86157,8 +85028,7 @@
               (_.ownerDocument.body.className += " VR"),
               this.Render(_, _),
               this.OnLoad(),
-              _ != null &&
-                _.SteamClient &&
+              _?.SteamClient &&
                 !this.m_bCreateHidden &&
                 (_ != _.iEc.k_EWindowBringToFrontInvalid
                   ? _.SteamClient.Window.BringToFront(_)
@@ -86233,11 +85103,7 @@
             );
           }
           BIsFocused() {
-            var _;
-            return (
-              this.BIsVisible() &&
-              !!((_ = this.m_popup) != null && _.document.hasFocus())
-            );
+            return this.BIsVisible() && !!this.m_popup?.document.hasFocus();
           }
           OnFocusInternal() {
             this.m_popup &&
@@ -86278,17 +85144,15 @@
           OnMove() {}
           OnResize() {
             this.IsMaximized().then((_) => {
-              var _, _;
               _
-                ? (_ = this.m_popup) == null ||
-                  _.document.body.classList.add("Maximized")
-                : (_ = this.m_popup) == null ||
-                  _.document.body.classList.remove("Maximized");
+                ? this.m_popup?.document.body.classList.add("Maximized")
+                : this.m_popup?.document.body.classList.remove("Maximized");
             });
           }
           OnBeforeUnload() {}
           OnFocus() {}
           OnBlur() {}
+          m_rgChildBrowserViews = [];
           get childBrowserViews() {
             return this.m_rgChildBrowserViews;
           }
@@ -86313,14 +85177,12 @@
           _([_._], _.prototype, "OnFocusInternal", 1),
           _([_._], _.prototype, "OnBlurInternal", 1);
         class _ extends _ {
+          m_strSavedDimensionsKey;
+          m_strInitialSavedDimensionsKey;
+          m_strInitialRestoreDetails;
+          m_bExpires;
           constructor(_, _, _, _) {
-            super(_, _),
-              _(this, "m_strSavedDimensionsKey"),
-              _(this, "m_strInitialSavedDimensionsKey"),
-              _(this, "m_strInitialRestoreDetails"),
-              _(this, "m_bExpires"),
-              this.SetSavedDimensionsKey(_),
-              (this.m_bExpires = _);
+            super(_, _), this.SetSavedDimensionsKey(_), (this.m_bExpires = _);
           }
           BIsInOverlay() {
             return (
@@ -86366,25 +85228,23 @@
           }
           OnResizeComplete(_) {}
           QueryAndStoreWindowPosition() {
-            var _;
             if (this.m_strInitialRestoreDetails) {
               let _ = this.GetSavedDimensionsKey();
-              (_ = this.m_popup) == null ||
-                _.setTimeout(() => {
-                  this.GetWindowRestoreDetails().then((_) => {
-                    let _ =
-                      this.m_rgParams.strRestoreDetails == _ &&
-                      _ == this.m_strInitialSavedDimensionsKey;
-                    this.m_popup &&
-                      this.m_strSavedDimensionsKey &&
-                      _ &&
-                      !_ &&
-                      (_.SetRestoreDetails(_, _, this.m_bExpires),
-                      (this.m_rgParams.strRestoreDetails = _),
-                      (this.m_strInitialSavedDimensionsKey = _),
-                      this.OnResizeComplete(_));
-                  });
-                }, 30);
+              this.m_popup?.setTimeout(() => {
+                this.GetWindowRestoreDetails().then((_) => {
+                  let _ =
+                    this.m_rgParams.strRestoreDetails == _ &&
+                    _ == this.m_strInitialSavedDimensionsKey;
+                  this.m_popup &&
+                    this.m_strSavedDimensionsKey &&
+                    _ &&
+                    !_ &&
+                    (_.SetRestoreDetails(_, _, this.m_bExpires),
+                    (this.m_rgParams.strRestoreDetails = _),
+                    (this.m_strInitialSavedDimensionsKey = _),
+                    this.OnResizeComplete(_));
+                });
+              }, 30);
             }
           }
           OnBeforeUnload() {
@@ -86398,27 +85258,24 @@
         }
         _([_._], _.prototype, "QueryAndStoreWindowPosition", 1);
         class _ {
+          m_bShuttingDown = !1;
+          m_mapPopups = _._.map([], {
+            deep: !1,
+          });
+          m_rgShutdownCallbacks = [];
+          m_rgPopupCreatedCallbacks = new _._();
+          m_rgPopupDestroyedCallbacks = new _._();
+          m_unCurrentAccountID = 0;
+          m_mapRestoreDetails = new Map();
+          m_bSaveRequired = !1;
+          m_DynamicCSSObserver;
           constructor() {
             if (
-              (_(this, "m_bShuttingDown", !1),
-              _(
-                this,
-                "m_mapPopups",
-                _._.map([], {
-                  deep: !1,
-                }),
-              ),
-              _(this, "m_rgShutdownCallbacks", []),
-              _(this, "m_rgPopupCreatedCallbacks", new _._()),
-              _(this, "m_rgPopupDestroyedCallbacks", new _._()),
-              _(this, "m_unCurrentAccountID", 0),
-              _(this, "m_mapRestoreDetails", new Map()),
-              _(this, "m_bSaveRequired", !1),
-              _(this, "m_DynamicCSSObserver"),
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-              }.MOBILE_BUILD && "addEventListener" in window)
+              }.MOBILE_BUILD &&
+              "addEventListener" in window
             ) {
               window.addEventListener("beforeunload", (_) => {
                 this.m_bShuttingDown = !0;
@@ -86460,13 +85317,8 @@
             return !1;
           }
           BAnyMenuHasFocus() {
-            var _;
             for (const _ of this.m_mapPopups.values())
-              if (
-                _.focused &&
-                ((_ = _.params.eCreationFlags) != null ? _ : 0) & 8
-              )
-                return !0;
+              if (_.focused && (_.params.eCreationFlags ?? 0) & 8) return !0;
             return !1;
           }
           SetCurrentLoggedInAccountID(_) {
@@ -86523,8 +85375,8 @@
               _ = _.height || 300,
               _ = _.title,
               _ = "width=" + _ + ",height=" + _;
-            typeof _.left != "undefined" && (_ += ",left=" + _.left),
-              typeof _.top != "undefined" && (_ += ",top=" + _.top),
+            typeof _.left < "u" && (_ += ",left=" + _.left),
+              typeof _.top < "u" && (_ += ",top=" + _.top),
               (_ += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
             let _ = "about:blank",
               _ = [];
@@ -86555,8 +85407,8 @@
               _.parent_container_popup_id &&
                 _.push("parentcontainerpopupid=" + _.parent_container_popup_id),
               _.center_on_window &&
-                typeof _.left == "undefined" &&
-                typeof _.top == "undefined" &&
+                typeof _.left > "u" &&
+                typeof _.top > "u" &&
                 _.push(
                   "centerOnBrowserID=" +
                     _.center_on_window.SteamClient.Browser.GetBrowserID(),
@@ -86632,14 +85484,10 @@
             this.SaveSavedDimensionStore();
           }
           ClearSavedDimensionStore() {
-            var _;
-            (_ = this.m_mapRestoreDetails) == null || _.clear(),
-              (this.m_bSaveRequired = !1);
+            this.m_mapRestoreDetails?.clear(), (this.m_bSaveRequired = !1);
           }
           GetRestoreDetails(_) {
-            var _;
-            if (!((_ = this.m_mapRestoreDetails) != null && _.has(_)))
-              return "";
+            if (!this.m_mapRestoreDetails?.has(_)) return "";
             let _ = this.m_mapRestoreDetails.get(_);
             return (
               (_.last_used = Date.now()),
@@ -86727,7 +85575,7 @@
             _ = _(),
             _ = React.useMemo(
               () => ({
-                body_class: _ ? (_ != null ? _ : "") : _(_.body_class, _),
+                body_class: _ ? (_ ?? "") : _(_.body_class, _),
               }),
               [_, _, _],
             );
@@ -86743,102 +85591,70 @@
           );
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onCreate && _.onCreate(_, _),
-                  _ != null && _.onCreate && _.onCreate(_, _);
+                _?.onCreate && _.onCreate(_, _),
+                  _?.onCreate && _.onCreate(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onLoad && _.onLoad(_, _),
-                  _ != null && _.onLoad && _.onLoad(_, _);
+                _?.onLoad && _.onLoad(_, _), _?.onLoad && _.onLoad(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onClose && _.onClose(_, _),
-                  _ != null && _.onClose && _.onClose(_, _);
+                _?.onClose && _.onClose(_, _), _?.onClose && _.onClose(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onBlur && _.onBlur(_, _),
-                  _ != null && _.onBlur && _.onBlur(_, _);
+                _?.onBlur && _.onBlur(_, _), _?.onBlur && _.onBlur(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onFocus && _.onFocus(_, _),
-                  _ != null && _.onFocus && _.onFocus(_, _);
+                _?.onFocus && _.onFocus(_, _), _?.onFocus && _.onFocus(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onMove && _.onMove(_, _),
-                  _ != null && _.onMove && _.onMove(_, _);
+                _?.onMove && _.onMove(_, _), _?.onMove && _.onMove(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_, _) => {
-                _ != null && _.onResize && _.onResize(_, _),
-                  _ != null && _.onResize && _.onResize(_, _);
+                _?.onResize && _.onResize(_, _),
+                  _?.onResize && _.onResize(_, _);
               },
               [_, _],
             ),
             _ = React.useCallback(
               (_) => (
-                _ != null &&
-                  _.updateParamsBeforeShow &&
-                  (_ = _.updateParamsBeforeShow(_)),
-                _ != null &&
-                  _.updateParamsBeforeShow &&
-                  (_ = _.updateParamsBeforeShow(_)),
+                _?.updateParamsBeforeShow && (_ = _.updateParamsBeforeShow(_)),
+                _?.updateParamsBeforeShow && (_ = _.updateParamsBeforeShow(_)),
                 _
               ),
               [_, _],
             );
           return {
-            onCreate:
-              (_ != null && _.onCreate) || (_ != null && _.onCreate)
-                ? _
-                : void 0,
-            onLoad:
-              (_ != null && _.onLoad) || (_ != null && _.onLoad) ? _ : void 0,
-            onClose:
-              (_ != null && _.onClose) || (_ != null && _.onClose) ? _ : void 0,
-            onBlur:
-              (_ != null && _.onBlur) || (_ != null && _.onBlur) ? _ : void 0,
-            onFocus:
-              (_ != null && _.onFocus) || (_ != null && _.onFocus) ? _ : void 0,
-            onMove:
-              (_ != null && _.onMove) || (_ != null && _.onMove) ? _ : void 0,
-            onResize:
-              (_ != null && _.onResize) || (_ != null && _.onResize)
-                ? _
-                : void 0,
+            onCreate: _?.onCreate || _?.onCreate ? _ : void 0,
+            onLoad: _?.onLoad || _?.onLoad ? _ : void 0,
+            onClose: _?.onClose || _?.onClose ? _ : void 0,
+            onBlur: _?.onBlur || _?.onBlur ? _ : void 0,
+            onFocus: _?.onFocus || _?.onFocus ? _ : void 0,
+            onMove: _?.onMove || _?.onMove ? _ : void 0,
+            onResize: _?.onResize || _?.onResize ? _ : void 0,
             updateParamsBeforeShow:
-              (_ != null && _.updateParamsBeforeShow) ||
-              (_ != null && _.updateParamsBeforeShow)
+              _?.updateParamsBeforeShow || _?.updateParamsBeforeShow
                 ? _
                 : void 0,
           };
@@ -86850,36 +85666,27 @@
           return (
             _.current || (_.current = new _(_, _(_, _), _)),
             (_.current.m_callbacks = _),
-            _.useEffect(() => {
-              var _, _, _, _;
-              return (
-                ((_ = _.current) != null && _.params.bNoInitialShow) ||
-                  (_ = _.current) == null ||
-                  _.Show(
-                    (_ =
-                      (_ = _.current) == null
-                        ? void 0
-                        : _.params.eWindowBringToFront) != null
-                      ? _
-                      : _.iEc.k_EWindowBringToFrontAndForceOS,
+            _.useEffect(
+              () => (
+                _.current?.params.bNoInitialShow ||
+                  _.current?.Show(
+                    _.current?.params.eWindowBringToFront ??
+                      _.iEc.k_EWindowBringToFrontAndForceOS,
                   ),
                 () => {
-                  var _, _;
                   (_.current.m_callbacks = void 0),
-                    (_ = _.current.window) != null &&
-                      _.SteamClient.Window.SetHideOnClose &&
-                      ((_ = _.current.window) == null ||
-                        _.SteamClient.Window.SetHideOnClose(!1)),
+                    _.current.window?.SteamClient.Window.SetHideOnClose &&
+                      _.current.window?.SteamClient.Window.SetHideOnClose(!1),
                     _.current.Close();
                 }
-              );
-            }, []),
+              ),
+              [],
+            ),
             _.useEffect(() => {
-              var _, _;
-              (_ = _.current.window) != null &&
-                _.SteamClient.Window.SetHideOnClose &&
-                ((_ = _.current.window) == null ||
-                  _.SteamClient.Window.SetHideOnClose(!!_.bHideOnClose));
+              _.current.window?.SteamClient.Window.SetHideOnClose &&
+                _.current.window?.SteamClient.Window.SetHideOnClose(
+                  !!_.bHideOnClose,
+                );
             }, [_.bHideOnClose]),
             {
               popup: _.current.window,
@@ -86895,27 +85702,21 @@
           };
         }
         class _ extends _._ {
+          m_callbacks;
+          m_fnReadyToRender;
           constructor(_, _, _) {
-            super(_, _),
-              _(this, "m_callbacks"),
-              _(this, "m_fnReadyToRender"),
-              (this.m_fnReadyToRender = _);
+            super(_, _), (this.m_fnReadyToRender = _);
           }
           DoCallback(_) {
-            var _, _;
-            (_ = (_ = this.m_callbacks) == null ? void 0 : _[_]) == null ||
-              _.call(_, this.m_popup, this.m_element);
+            this.m_callbacks?.[_]?.(this.m_popup, this.m_element);
           }
           UpdateParamsBeforeShow(_) {
-            var _;
-            return (_ = this.m_callbacks) != null && _.updateParamsBeforeShow
+            return this.m_callbacks?.updateParamsBeforeShow
               ? this.m_callbacks.updateParamsBeforeShow(_)
               : _;
           }
           OnCreate() {
-            var _;
-            (_ = this.m_callbacks) != null &&
-              _.onCreate &&
+            this.m_callbacks?.onCreate &&
               this.m_callbacks.onCreate(this.m_popup, this.m_element);
           }
           OnBlur() {
@@ -87073,15 +85874,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -87090,21 +85882,20 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_ServiceTransport;
+          m_AnonymousServiceTransport;
+          m_strWebAPIBaseURL;
+          m_webApiAccessToken = "";
+          m_bJsonMode = !1;
+          m_strSpoofedSteamID = "";
+          m_bJWTToken = !1;
+          m_fnRequestNewAccessToken;
+          m_refreshAccessTokenPromise;
+          m_dtLastExpireCheck = 0;
           constructor(_, _, _ = !1, _) {
-            _(this, "m_ServiceTransport"),
-              _(this, "m_AnonymousServiceTransport"),
-              _(this, "m_strWebAPIBaseURL"),
-              _(this, "m_webApiAccessToken", ""),
-              _(this, "m_bJsonMode", !1),
-              _(this, "m_strSpoofedSteamID", ""),
-              _(this, "m_bJWTToken", !1),
-              _(this, "m_fnRequestNewAccessToken"),
-              _(this, "m_refreshAccessTokenPromise"),
-              _(this, "m_dtLastExpireCheck", 0),
-              (this.m_strWebAPIBaseURL = _),
+            (this.m_strWebAPIBaseURL = _),
               (this.m_webApiAccessToken = _),
               (this.m_bJsonMode = _),
               (this.m_fnRequestNewAccessToken = _),
@@ -87158,7 +85949,6 @@
             return this.m_AnonymousServiceTransport;
           }
           async SendMsgAndAwaitResponse(_, _, _, _, _) {
-            var _;
             let _ = null;
             try {
               if (this.m_bJWTToken && _.bSendAuth) {
@@ -87206,9 +85996,7 @@
                   _ &&
                   typeof _ == "object" &&
                   "response" in _ &&
-                  ((_ = _ == null ? void 0 : _.response) == null
-                    ? void 0
-                    : _.status) === 401,
+                  _?.response?.status === 401,
                 _ = _ ? "Unauthorized" : null;
               (_ = this.CreateFailedMsgProtobuf(_, _.VrD, _)),
                 _ &&
@@ -87232,17 +86020,16 @@
             if (!_) throw "Couldn't find service name " + _;
             let _ = _.SerializeBody(),
               _ = _.fromByteArray(_);
-            const _ = _ == null ? void 0 : _.eWebAPIKeyRequirement;
-            let _ = (_ == null ? void 0 : _.ePrivilege) == _._._ && _ == _._._,
+            const _ = _?.eWebAPIKeyRequirement;
+            let _ = _?.ePrivilege == _._._ && _ == _._._,
               _ = {
                 responseType: this.m_bJsonMode ? "json" : "arraybuffer",
                 params: {},
-                headers:
-                  _ != null && _.bConstMethod
-                    ? {}
-                    : {
-                        "Content-Type": "multipart/form-data",
-                      },
+                headers: _?.bConstMethod
+                  ? {}
+                  : {
+                      "Content-Type": "multipart/form-data",
+                    },
               };
             if (
               (!_.bSendAuth &&
@@ -87255,7 +86042,7 @@
                 !_ &&
                 ((_.params.access_token = this.m_webApiAccessToken),
                 (_.params.spoof_steamid = this.m_strSpoofedSteamID)),
-              _ == null ? void 0 : _.bConstMethod)
+              _?.bConstMethod)
             )
               return (
                 (_.params.origin = self.origin),
@@ -87329,7 +86116,7 @@
             [_, _] = _.useState(!1),
             [_, _] = _.useState(null),
             [_, _] = _.useState(null),
-            _ = (0, _._)(() => (_ == null ? void 0 : _.visible)),
+            _ = (0, _._)(() => _?.visible),
             _ = _.useCallback(() => {
               let _ = _;
               if (!_ || !_ || !_ || (_ && _ && !_)) return;
@@ -87362,7 +86149,7 @@
                   nLateralOverflow: _,
                 } = _(_, _, _, _, _, _, _),
                 _ = _;
-              if (_ > (_ != null ? _ : 10) && !_) {
+              if (_ > (_ ?? 10) && !_) {
                 const _ = _(_),
                   {
                     nLeft: _,
@@ -87372,14 +86159,14 @@
                   } = _(_, _, _, _, _, _, _);
                 if (
                   (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
-                  _ > (_ != null ? _ : 10))
+                  _ > (_ ?? 10))
                 ) {
                   console.log(
                     "Not showing hover because it didn't fit in the main or alt direction",
                   ),
                     _.setAttribute("style", "display: none;"),
                     _(!0),
-                    _ == null || _();
+                    _?.();
                   return;
                 }
               }
@@ -87549,33 +86336,22 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_ulSteamID;
           constructor(_ = 0, _, _, _) {
-            _(this, "m_ulSteamID"),
-              _ instanceof _
-                ? (this.m_ulSteamID = _.m_ulSteamID)
-                : typeof _ == "string"
-                  ? (this.m_ulSteamID = _._.fromString(_, !0))
-                  : _ && _ && _ !== void 0
-                    ? this.SetFromComponents(_ != null ? _ : 0, _, _, _)
-                    : _
-                      ? (this.m_ulSteamID = _._.fromNumber(_, !0))
-                      : (this.m_ulSteamID = _._.UZERO);
+            _ instanceof _
+              ? (this.m_ulSteamID = _.m_ulSteamID)
+              : typeof _ == "string"
+                ? (this.m_ulSteamID = _._.fromString(_, !0))
+                : _ && _ && _ !== void 0
+                  ? this.SetFromComponents(_ ?? 0, _, _, _)
+                  : _
+                    ? (this.m_ulSteamID = _._.fromNumber(_, !0))
+                    : (this.m_ulSteamID = _._.UZERO);
           }
           static InitFromAccountID(_) {
-            return new _(Number(_), _._.EUNIVERSE, _.W19, _.keb);
+            return _ ? new _(Number(_), _._.EUNIVERSE, _.W19, _.keb) : new _();
           }
           static InitFromClanID(_) {
             return new _(Number(_), _._.EUNIVERSE, _.P3F, 0);
@@ -87747,18 +86523,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_, _ = "", _ = null) {
           return _.InstrumentLink(_, _, _);
         }
@@ -87784,7 +86549,7 @@
                 _ = new URLSearchParams(_.search);
               return (
                 Object.entries(_).forEach(([_, _]) => {
-                  _.set(_, encodeURIComponent(_ != null ? _ : ""));
+                  _.set(_, encodeURIComponent(_ ?? ""));
                 }),
                 _.origin + _.pathname + "?" + _.toString() + _.hash
               );
@@ -87792,7 +86557,7 @@
           return _;
         }
         function _(_, _ = null) {
-          return _ != null && _.domain ? _.GetLinkParam(_, _) : _._.SNR;
+          return _?.domain ? _.GetLinkParam(_, _) : _._.SNR;
         }
         function _(_, _ = "", _ = null) {
           const _ = `${Config.STORE_BASE_URL}app/${_}`;
@@ -87802,7 +86567,12 @@
           const _ = `${Config.STORE_BASE_URL}dlc/${_}`;
           return _(_, _);
         }
-        const _ = class _ {
+        class _ {
+          static sm_strDomain;
+          static sm_strController;
+          static sm_strMethod;
+          static sm_strSubmethod;
+          static sm_strComputedLinkPrefix;
           static SetNavEventParams(_, _, _ = null, _ = null) {
             (_.sm_strDomain = _),
               (_.sm_strController = _),
@@ -87854,13 +86624,7 @@
                 ),
                 !1);
           }
-        };
-        _(_, "sm_strDomain"),
-          _(_, "sm_strController"),
-          _(_, "sm_strMethod"),
-          _(_, "sm_strSubmethod"),
-          _(_, "sm_strComputedLinkPrefix");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -87887,7 +86651,7 @@
         }
         function _(_, _) {
           const _ = (_) => _ && typeof _ == "object";
-          let _ = _ == null ? void 0 : _.SteamClient;
+          let _ = _?.SteamClient;
           for (const _ of _.split(".")) {
             if (!_(_) || !(_ in _)) return null;
             _ = _[_];
@@ -87905,17 +86669,6 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_.LaunchGame = 0)] = "LaunchGame"),
             (_[(_.FriendMessage = 1)] = "FriendMessage"),
@@ -87949,10 +86702,8 @@
             _
           ))(_ || {});
         class _ {
-          constructor() {
-            _(this, "m_fnCallbackOnPlaySound", new _._()),
-              _(this, "m_fnCallbackOnSuppressSound", new _._());
-          }
+          m_fnCallbackOnPlaySound = new _._();
+          m_fnCallbackOnSuppressSound = new _._();
           RegisterCallbackOnPlaySound(_) {
             return this.m_fnCallbackOnPlaySound.Register(_);
           }
@@ -87979,15 +86730,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -87996,28 +86738,35 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = "\u02D0",
           _ = 50,
           _ = 10080 * 60,
           _ = class _ {
             constructor() {
-              _(this, "m_bEmoticonListRequested", !1),
-                _(this, "m_bInitialized", !1),
-                _(this, "m_rtMostRecentEmoticon"),
-                _(this, "m_rgEmoticons", []),
-                _(this, "m_setEmoticonOwned", new Set()),
-                _(this, "m_rgFlairs", []),
-                _(this, "m_rgRecentEmoticons"),
-                _(this, "m_rgStickers", []),
-                _(this, "m_rgRecentStickers"),
-                _(this, "m_rgEffects", []),
-                _(this, "m_rtLastStickerOrEffect", Number.MIN_SAFE_INTEGER),
-                _(this, "m_emoticonTrackerCallback", null),
-                _(this, "m_stickerTrackerCallback", null),
-                (0, _._)(this);
+              (0, _._)(this);
             }
+            m_bEmoticonListRequested = !1;
+            m_bInitialized = !1;
+            m_rtMostRecentEmoticon = void 0;
+            static sm_EmoticonRegex = new RegExp(
+              _ + "([a-zA-Z0-9_\\-]+)" + _,
+              "g",
+            );
+            static sm_UnvalidatedEmoticonRegex = new RegExp(
+              `(?:${_}|:)([a-zA-Z0-9_\\-]+)(?:${_}|:)`,
+              "g",
+            );
+            m_rgEmoticons = [];
+            m_setEmoticonOwned = new Set();
+            m_rgFlairs = [];
+            m_rgRecentEmoticons = void 0;
+            m_rgStickers = [];
+            m_rgRecentStickers = void 0;
+            m_rgEffects = [];
+            m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER;
+            m_emoticonTrackerCallback = null;
+            m_stickerTrackerCallback = null;
             static GetEmoticonURL(_, _) {
               return (0, _._)(_, _);
             }
@@ -88124,16 +86873,10 @@
               return this.m_rgFlairs.filter((_) => _.flairGroupID === _);
             }
             get recent_emoticons() {
-              var _;
-              return (_ = this.m_rgRecentEmoticons) != null
-                ? _
-                : this.BuildRecentEmoticonList();
+              return this.m_rgRecentEmoticons ?? this.BuildRecentEmoticonList();
             }
             get recent_stickers() {
-              var _;
-              return (_ = this.m_rgRecentStickers) != null
-                ? _
-                : this.BuildRecentStickerList();
+              return this.m_rgRecentStickers ?? this.BuildRecentStickerList();
             }
             SetEmoticonTrackerCallback(_) {
               this.m_emoticonTrackerCallback = _;
@@ -88142,7 +86885,6 @@
               this.m_stickerTrackerCallback = _;
             }
             TrackEmoticonUsage(_, _) {
-              var _, _;
               if (!this.m_bInitialized) return;
               this.m_emoticonTrackerCallback &&
                 this.m_emoticonTrackerCallback(_, _);
@@ -88160,7 +86902,7 @@
                     const _ = _.get(_.name);
                     _ !== void 0 &&
                       ((_.last_used = _),
-                      (_.use_count = ((_ = _.use_count) != null ? _ : 0) + _),
+                      (_.use_count = (_.use_count ?? 0) + _),
                       _.delete(_.name),
                       _.time_received && ((_ = !0), delete _.time_received));
                   }
@@ -88169,7 +86911,7 @@
                     const _ = _.get(_.name);
                     _ !== void 0 &&
                       ((_.last_used = _),
-                      (_.use_count = ((_ = _.use_count) != null ? _ : 0) + _),
+                      (_.use_count = (_.use_count ?? 0) + _),
                       delete _.time_received,
                       this.m_rgRecentEmoticons !== void 0 &&
                         this.m_rgRecentEmoticons.push(_));
@@ -88189,14 +86931,13 @@
               }
             }
             TrackStickerUsage(_, _) {
-              var _;
               if (!this.m_bInitialized) return;
               this.m_stickerTrackerCallback &&
                 this.m_stickerTrackerCallback(_, _);
               const _ = this.m_rgStickers.find(({ name: _ }) => _ === _);
               _ &&
                 ((_.last_used = _),
-                (_.use_count = ((_ = _.use_count) != null ? _ : 0) + 1),
+                (_.use_count = (_.use_count ?? 0) + 1),
                 delete _.time_received,
                 this.BuildRecentStickerList());
             }
@@ -88270,13 +87011,7 @@
                 (this.m_bEmoticonListRequested = !1);
             }
           };
-        _(_, "sm_EmoticonRegex", new RegExp(_ + "([a-zA-Z0-9_\\-]+)" + _, "g")),
-          _(
-            _,
-            "sm_UnvalidatedEmoticonRegex",
-            new RegExp(`(?:${_}|:)([a-zA-Z0-9_\\-]+)(?:${_}|:)`, "g"),
-          ),
-          _([_._], _.prototype, "m_bInitialized", 2),
+        _([_._], _.prototype, "m_bInitialized", 2),
           _([_._], _.prototype, "m_rtMostRecentEmoticon", 2),
           _([_._], _.prototype, "m_rtLastStickerOrEffect", 2),
           _([_._], _.prototype, "TrackEmoticonUsage", 1);
@@ -88370,17 +87105,15 @@
           );
         }
         function _(_) {
-          var _;
           const [_] = _.useState(() => new _._()),
-            _ = (_ = _.store) != null ? _ : _;
+            _ = _.store ?? _;
           return (0, _.jsx)(_.Provider, {
             value: _,
             children: _.children,
           });
         }
         function _() {
-          var _;
-          return (_ = _.useContext(_)) != null ? _ : _();
+          return _.useContext(_) ?? _();
         }
         function _(_) {
           return (0, _.jsx)(_.Fragment, {
@@ -88430,66 +87163,49 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_eItemType;
+          m_unID;
+          m_bVisible = !1;
+          m_strName;
+          m_strStoreURLPath;
+          m_unAppID;
+          m_eAppType;
+          m_rgIncludedAppTypes;
+          m_rgIncludedAppIDs;
+          m_bIsFree;
+          m_bIsFreeTemporary;
+          m_bIsComingSoon;
+          m_bIsEarlyAccess;
+          m_RelatedItems;
+          m_ContentDescriptorIDs;
+          m_StoreCategories;
+          m_ReviewInfo;
+          m_BasicInfo;
+          m_rgStoreTags = [];
+          m_rgStoreTagIDs = [];
+          m_rgOptInRegistrationTags;
+          m_Assets;
+          m_AssetsWithoutOverrides;
+          m_ReleaseInfo;
+          m_Platforms;
+          m_BestPurchaseOption;
+          m_SelfPurchaseOption;
+          m_rgPurchaseOptions;
+          m_Screenshots;
+          m_Trailers;
+          m_rgSupportedLanguages;
+          m_strStoreURLPathOverride;
+          m_freeWeekend;
+          m_DataRequested = {
+            include_tag_count: 0,
+          };
+          m_strInternalName;
+          m_rgLinks;
+          m_userFilterFailure;
+          m_strFullDescriptionBBCode;
           constructor(_, _) {
-            _(this, "m_eItemType"),
-              _(this, "m_unID"),
-              _(this, "m_bVisible", !1),
-              _(this, "m_strName"),
-              _(this, "m_strStoreURLPath"),
-              _(this, "m_unAppID"),
-              _(this, "m_eAppType"),
-              _(this, "m_rgIncludedAppTypes"),
-              _(this, "m_rgIncludedAppIDs"),
-              _(this, "m_bIsFree"),
-              _(this, "m_bIsFreeTemporary"),
-              _(this, "m_bIsComingSoon"),
-              _(this, "m_bIsEarlyAccess"),
-              _(this, "m_RelatedItems"),
-              _(this, "m_ContentDescriptorIDs"),
-              _(this, "m_StoreCategories"),
-              _(this, "m_ReviewInfo"),
-              _(this, "m_BasicInfo"),
-              _(this, "m_rgStoreTags", []),
-              _(this, "m_rgStoreTagIDs", []),
-              _(this, "m_rgOptInRegistrationTags"),
-              _(this, "m_Assets"),
-              _(this, "m_AssetsWithoutOverrides"),
-              _(this, "m_ReleaseInfo"),
-              _(this, "m_Platforms"),
-              _(this, "m_BestPurchaseOption"),
-              _(this, "m_SelfPurchaseOption"),
-              _(this, "m_rgPurchaseOptions"),
-              _(this, "m_Screenshots"),
-              _(this, "m_Trailers"),
-              _(this, "m_rgSupportedLanguages"),
-              _(this, "m_strStoreURLPathOverride"),
-              _(this, "m_freeWeekend"),
-              _(this, "m_DataRequested", {
-                include_tag_count: 0,
-              }),
-              _(this, "m_strInternalName"),
-              _(this, "m_rgLinks"),
-              _(this, "m_userFilterFailure"),
-              _(this, "m_strFullDescriptionBBCode"),
-              _(
-                this,
-                "k_regexSalePage",
-                /^https?:\/\/[^\/]*(?:valvesoftware|steampowered).com\/(?:(curator|dev|developer|pub|publisher|franchise)\/[0-9a-zA-Z\-_]+\/)?sale\//,
-              );
-            var _, _, _, _;
             (this.m_eItemType = _.item_type()),
               (this.m_unID = _._()),
               (this.m_bVisible = !!_.visible()),
@@ -88502,18 +87218,15 @@
               (this.m_bIsFree = !!_.is_free()),
               (this.m_bIsFreeTemporary = !!_.is_free_temporarily()),
               (this.m_bIsComingSoon =
-                !!_.is_coming_soon() ||
-                !!((_ = _.release()) != null && _.is_coming_soon())),
+                !!_.is_coming_soon() || !!_.release()?.is_coming_soon()),
               (this.m_bIsEarlyAccess = !!_.is_early_access()),
-              (this.m_RelatedItems =
-                (_ = _.related_items()) == null ? void 0 : _.toObject()),
+              (this.m_RelatedItems = _.related_items()?.toObject()),
               (this.m_ContentDescriptorIDs = _.content_descriptorids()),
               (this.m_StoreCategories = _.categories().toObject()),
               (this.m_BestPurchaseOption =
-                (_ = _.best_purchase_option()) == null ? void 0 : _.toObject()),
+                _.best_purchase_option()?.toObject()),
               (this.m_strStoreURLPathOverride = _.store_url_path_override()),
-              (this.m_freeWeekend =
-                (_ = _.free_weekend()) == null ? void 0 : _.toObject()),
+              (this.m_freeWeekend = _.free_weekend()?.toObject()),
               (this.m_strInternalName = _.internal_name()),
               (this.m_eItemType == _._._ || this.m_eItemType == _._._) &&
                 (this.m_SelfPurchaseOption = _.self_purchase_option(!1)
@@ -88522,7 +87235,6 @@
               this.MergeData(_, _);
           }
           MergeData(_, _) {
-            var _;
             _.include_assets &&
               !this.m_Assets &&
               ((this.m_Assets = new _(_.assets(), _._())),
@@ -88591,9 +87303,7 @@
               _.apply_user_filters &&
                 !this.m_userFilterFailure &&
                 ((this.m_userFilterFailure =
-                  (_ = _.user_filter_failure()) == null
-                    ? void 0
-                    : _.toObject()),
+                  _.user_filter_failure()?.toObject()),
                 (this.m_DataRequested.apply_user_filters = !0)),
               _.include_full_description &&
                 !this.m_strFullDescriptionBBCode &&
@@ -88686,6 +87396,8 @@
           BIsApplicationOrTool() {
             return this.GetAppType() == _._._ || this.GetAppType() == _._._;
           }
+          k_regexSalePage =
+            /^https?:\/\/[^\/]*(?:valvesoftware|steampowered).com\/(?:(curator|dev|developer|pub|publisher|franchise)\/[0-9a-zA-Z\-_]+\/)?sale\//;
           BIsSalePage() {
             return this.GetStoreItemType() === _._._
               ? this.k_regexSalePage.test(this.GetStorePageURLWithOverride())
@@ -88729,95 +87441,45 @@
             );
           }
           GetFreeWeekendEnd() {
-            var _;
-            return (_ = this.m_freeWeekend) == null ? void 0 : _.end_time;
+            return this.m_freeWeekend?.end_time;
           }
           GetFreeWeekendPlayTextOverride() {
-            var _;
-            return (_ = this.m_freeWeekend) == null ? void 0 : _.text;
+            return this.m_freeWeekend?.text;
           }
           BIsEarlyAccess() {
             return this.m_bIsEarlyAccess;
           }
           GetParentAppID() {
-            var _;
-            return (_ = this.m_RelatedItems) == null ? void 0 : _.parent_appid;
+            return this.m_RelatedItems?.parent_appid;
           }
           BHasDemo() {
-            var _, _, _;
-            return (
-              ((_ =
-                (_ =
-                  (_ = this.m_RelatedItems) == null ? void 0 : _.demo_appid) ==
-                null
-                  ? void 0
-                  : _.length) != null
-                ? _
-                : 0) > 0
-            );
+            return (this.m_RelatedItems?.demo_appid?.length ?? 0) > 0;
           }
           GetDemoAppIDs() {
-            var _, _;
-            return (_ =
-              (_ = this.m_RelatedItems) == null ? void 0 : _.demo_appid) != null
-              ? _
-              : [];
+            return this.m_RelatedItems?.demo_appid ?? [];
           }
           HasDemoStandaloneStorePage() {
-            var _, _, _;
             return (
-              ((_ =
-                (_ =
-                  (_ = this.m_RelatedItems) == null
-                    ? void 0
-                    : _.standalone_demo_appid) == null
-                  ? void 0
-                  : _.length) != null
-                ? _
-                : 0) > 0
+              (this.m_RelatedItems?.standalone_demo_appid?.length ?? 0) > 0
             );
           }
           GetDemoStandaloneStorePageAppIDs() {
-            var _, _;
-            return (_ =
-              (_ = this.m_RelatedItems) == null
-                ? void 0
-                : _.standalone_demo_appid) != null
-              ? _
-              : [];
+            return this.m_RelatedItems?.standalone_demo_appid ?? [];
           }
           GetContentDescriptorIDs() {
             return this.m_ContentDescriptorIDs;
           }
           HasContentDescriptorID(_) {
-            var _;
-            return (_ = this.m_ContentDescriptorIDs) == null
-              ? void 0
-              : _.includes(_);
+            return this.m_ContentDescriptorIDs?.includes(_);
           }
           GetStoreCategories_SupportedPlayers() {
-            var _;
-            return (
-              ((_ = this.m_StoreCategories) == null
-                ? void 0
-                : _.supported_player_categoryids) || []
-            );
+            return this.m_StoreCategories?.supported_player_categoryids || [];
           }
           GetStoreCategories_Features() {
-            var _;
-            return (
-              ((_ = this.m_StoreCategories) == null
-                ? void 0
-                : _.feature_categoryids) || []
-            );
+            return this.m_StoreCategories?.feature_categoryids || [];
           }
           GetStoreCategories_Controller() {
-            var _;
-            return (
-              ((_ = this.m_StoreCategories) == null
-                ? void 0
-                : _.controller_categoryids) || []
-            );
+            return this.m_StoreCategories?.controller_categoryids || [];
           }
           BHasStoreCategory(_) {
             return !!(
@@ -88827,35 +87489,28 @@
             );
           }
           GetFilteredReviewSummary() {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_reviews: !0,
               }),
-              (_ = this.m_ReviewInfo) == null ? void 0 : _.summary_filtered
+              this.m_ReviewInfo?.summary_filtered
             );
           }
           GetUnfilteredReviewSummary() {
-            var _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_reviews: !0,
               }),
-              ((_ = this.m_ReviewInfo) == null
-                ? void 0
-                : _.summary_unfiltered) ||
-                ((_ = this.m_ReviewInfo) == null ? void 0 : _.summary_filtered)
+              this.m_ReviewInfo?.summary_unfiltered ||
+                this.m_ReviewInfo?.summary_filtered
             );
           }
           GetFilteredReviewSummaryLanguage() {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_reviews: !0,
               }),
-              (_ = this.m_ReviewInfo) == null
-                ? void 0
-                : _.summary_language_specific
+              this.m_ReviewInfo?.summary_language_specific
             );
           }
           GetFullDescriptionBBCode() {
@@ -88867,80 +87522,42 @@
             );
           }
           GetShortDescription() {
-            var _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_basic_info: !0,
               }),
-              (_ =
-                (_ = this.m_BasicInfo) == null
-                  ? void 0
-                  : _.short_description) != null
-                ? _
-                : ""
+              this.m_BasicInfo?.short_description ?? ""
             );
           }
           GetDeveloperNames() {
-            var _, _, _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_basic_info: !0,
               }),
-              (_ =
-                (_ =
-                  (_ =
-                    (_ = this.m_BasicInfo) == null ? void 0 : _.developers) ==
-                  null
-                    ? void 0
-                    : _.map((_) => _.name.trim())) == null
-                  ? void 0
-                  : _.filter((_) => (_ == null ? void 0 : _.length) > 0)) !=
-              null
-                ? _
-                : []
+              this.m_BasicInfo?.developers
+                ?.map((_) => _.name.trim())
+                ?.filter((_) => _?.length > 0) ?? []
             );
           }
           GetFranchiseNames() {
-            var _, _, _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_basic_info: !0,
               }),
-              (_ =
-                (_ =
-                  (_ =
-                    (_ = this.m_BasicInfo) == null ? void 0 : _.franchises) ==
-                  null
-                    ? void 0
-                    : _.map((_) => _.name.trim())) == null
-                  ? void 0
-                  : _.filter((_) => (_ == null ? void 0 : _.length) > 0)) !=
-              null
-                ? _
-                : []
+              this.m_BasicInfo?.franchises
+                ?.map((_) => _.name.trim())
+                ?.filter((_) => _?.length > 0) ?? []
             );
           }
           GetPublisherNames() {
-            var _, _, _, _;
             this.BCheckDataRequestIncluded({
               include_basic_info: !0,
             });
             const _ =
-              (_ =
-                (_ =
-                  (_ =
-                    (_ = this.m_BasicInfo) == null ? void 0 : _.publishers) ==
-                  null
-                    ? void 0
-                    : _.map((_) => _.name.trim())) == null
-                  ? void 0
-                  : _.filter((_) => (_ == null ? void 0 : _.length) > 0)) !=
-              null
-                ? _
-                : [];
-            return (_ == null ? void 0 : _.length) > 0
-              ? _
-              : this.GetDeveloperNames();
+              this.m_BasicInfo?.publishers
+                ?.map((_) => _.name.trim())
+                ?.filter((_) => _?.length > 0) ?? [];
+            return _?.length > 0 ? _ : this.GetDeveloperNames();
           }
           GetAllCreatorClanIDs() {
             return (
@@ -88981,12 +87598,11 @@
             );
           }
           GetCapsuleHeadline() {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_basic_info: !0,
               }),
-              (_ = this.m_BasicInfo) == null ? void 0 : _.capsule_headline
+              this.m_BasicInfo?.capsule_headline
             );
           }
           GetTags() {
@@ -89006,29 +87622,20 @@
             );
           }
           GetOptInRegistrationTagValues(_) {
-            var _, _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_optin_registration_tags: !0,
               }),
-              (_ =
-                (_ =
-                  (_ = this.m_rgOptInRegistrationTags) == null
-                    ? void 0
-                    : _.find((_) => _.optin_name === _)) == null
-                  ? void 0
-                  : _.values) != null
-                ? _
-                : []
+              this.m_rgOptInRegistrationTags?.find((_) => _.optin_name === _)
+                ?.values ?? []
             );
           }
           BHasTags() {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_tag_count: 1,
               }),
-              ((_ = this.m_rgStoreTagIDs) == null ? void 0 : _.length) > 0
+              this.m_rgStoreTagIDs?.length > 0
             );
           }
           GetAssets() {
@@ -89048,57 +87655,37 @@
             );
           }
           GetOriginalReleaseDateRTime() {
-            var _;
             this.BCheckDataRequestIncluded({
               include_release: !0,
             });
-            let _ =
-              (_ = this.m_ReleaseInfo) == null
-                ? void 0
-                : _.original_steam_release_date;
+            let _ = this.m_ReleaseInfo?.original_steam_release_date;
             return _ || (_ = this.GetReleaseDateRTime()), _;
           }
           GetReleaseDateRTime(_ = !1) {
-            var _, _, _;
             if (
               (this.BCheckDataRequestIncluded({
                 include_release: !0,
               }),
-              (_ = this.m_ReleaseInfo) != null && _.is_coming_soon && !_)
+              this.m_ReleaseInfo?.is_coming_soon && !_)
             )
               return 0;
-            let _ =
-              (_ = this.m_ReleaseInfo) == null ? void 0 : _.steam_release_date;
-            return (
-              _ ||
-                (_ =
-                  (_ = this.m_ReleaseInfo) == null
-                    ? void 0
-                    : _.original_release_date),
-              _
-            );
+            let _ = this.m_ReleaseInfo?.steam_release_date;
+            return _ || (_ = this.m_ReleaseInfo?.original_release_date), _;
           }
           GetFormattedSteamReleaseDate() {
-            var _, _, _, _, _;
             if (
               (this.BCheckDataRequestIncluded({
                 include_release: !0,
               }),
-              (_ = this.m_ReleaseInfo) != null && _.is_coming_soon)
+              this.m_ReleaseInfo?.is_coming_soon)
             ) {
-              if ((_ = this.m_ReleaseInfo) != null && _.coming_soon_display)
+              if (this.m_ReleaseInfo?.coming_soon_display)
                 return (0, _._)(this.m_ReleaseInfo);
-              if (
-                (_ = this.m_ReleaseInfo) != null &&
-                _.custom_release_date_message
-              )
+              if (this.m_ReleaseInfo?.custom_release_date_message)
                 return this.m_ReleaseInfo.custom_release_date_message;
-              const _ =
-                (_ = this.m_ReleaseInfo) == null
-                  ? void 0
-                  : _.steam_release_date;
+              const _ = this.m_ReleaseInfo?.steam_release_date;
               return _
-                ? (_ = this.m_ReleaseInfo) != null && _.is_abridged_release_date
+                ? this.m_ReleaseInfo?.is_abridged_release_date
                   ? (0, _._)(new Date(_ * 1e3))
                   : (0, _._)(_)
                 : "";
@@ -89110,34 +87697,25 @@
             return this.m_bIsComingSoon;
           }
           BIsCustomComingSoonDisplay() {
-            var _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_release: !0,
               }),
               this.BIsComingSoon()
-                ? (_ = this.m_ReleaseInfo) != null && _.coming_soon_display
+                ? this.m_ReleaseInfo?.coming_soon_display
                   ? ["text_tba", "text_comingsoon"].includes(
                       this.m_ReleaseInfo.coming_soon_display,
                     )
-                  : !!(
-                      (_ = this.m_ReleaseInfo) != null &&
-                      _.custom_release_date_message
-                    )
+                  : !!this.m_ReleaseInfo?.custom_release_date_message
                 : !1
             );
           }
           BLimitedLaunchActive() {
-            var _;
-            return (_ = this.m_ReleaseInfo) == null
-              ? void 0
-              : _.limited_launch_active;
+            return this.m_ReleaseInfo?.limited_launch_active;
           }
           BIsPrePurchase() {
-            var _;
             return (
-              this.BIsComingSoon() &&
-              !!((_ = this.GetBestPurchaseOption()) != null && _.packageid)
+              this.BIsComingSoon() && !!this.GetBestPurchaseOption()?.packageid
             );
           }
           BIsReleased() {
@@ -89155,38 +87733,24 @@
             return this.m_BestPurchaseOption;
           }
           GetBestPurchasePriceInCents() {
-            var _;
-            if (
-              (_ = this.m_BestPurchaseOption) != null &&
-              _.final_price_in_cents
-            )
+            if (this.m_BestPurchaseOption?.final_price_in_cents)
               return Number.parseInt(
                 this.m_BestPurchaseOption.final_price_in_cents,
               );
           }
           GetBestPurchasePriceFormatted() {
-            var _;
-            return (_ = this.m_BestPurchaseOption) == null
-              ? void 0
-              : _.formatted_final_price;
+            return this.m_BestPurchaseOption?.formatted_final_price;
           }
           GetBestPurchaseOriginalPriceInCents() {
-            var _;
-            return (_ = this.m_BestPurchaseOption) != null &&
-              _.original_price_in_cents
+            return this.m_BestPurchaseOption?.original_price_in_cents
               ? Number.parseInt(this.m_BestPurchaseOption.final_price_in_cents)
               : this.GetBestPurchasePriceInCents();
           }
           GetBestPurchaseOriginalPriceFormatted() {
-            var _, _, _;
-            return (_ =
-              (_ = this.m_BestPurchaseOption) == null
-                ? void 0
-                : _.formatted_original_price) != null
-              ? _
-              : (_ = this.m_BestPurchaseOption) == null
-                ? void 0
-                : _.formatted_final_price;
+            return (
+              this.m_BestPurchaseOption?.formatted_original_price ??
+              this.m_BestPurchaseOption?.formatted_final_price
+            );
           }
           GetAllPurchaseOptions() {
             return (
@@ -89218,29 +87782,19 @@
             return this.m_Screenshots.GetOnlyAllAgesScreenshots().includes(_);
           }
           BHasTrailers(_) {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_trailers: !0,
               }),
-              (_ = this.m_Trailers) == null ? void 0 : _.BHasTrailers(_)
+              this.m_Trailers?.BHasTrailers(_)
             );
           }
           BHasHighlightTrailers(_) {
-            var _, _, _;
             return (
               this.BCheckDataRequestIncluded({
                 include_trailers: !0,
               }),
-              ((_ =
-                (_ =
-                  (_ = this.m_Trailers) == null
-                    ? void 0
-                    : _.GetHighlightTrailers(_)) == null
-                  ? void 0
-                  : _.length) != null
-                ? _
-                : 0) > 0
+              (this.m_Trailers?.GetHighlightTrailers(_)?.length ?? 0) > 0
             );
           }
           GetAllTrailers() {
@@ -89252,31 +87806,25 @@
             );
           }
           BHasSomeLanguageSupport(_) {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_supported_languages: !0,
               }),
-              ((_ = this.m_rgSupportedLanguages) == null
-                ? void 0
-                : _.some(
-                    (_) =>
-                      _.elanguage == _ &&
-                      (_.supported || _.subtitles || _.full_audio),
-                  )) || !1
+              this.m_rgSupportedLanguages?.some(
+                (_) =>
+                  _.elanguage == _ &&
+                  (_.supported || _.subtitles || _.full_audio),
+              ) || !1
             );
           }
           GetAllLanguagesWithSomeSupport() {
-            var _;
             return (
               this.BCheckDataRequestIncluded({
                 include_supported_languages: !0,
               }),
-              ((_ = this.m_rgSupportedLanguages) == null
-                ? void 0
-                : _.filter(
-                    (_) => _.supported || _.subtitles || _.full_audio,
-                  ).map((_) => _.elanguage)) || []
+              this.m_rgSupportedLanguages
+                ?.filter((_) => _.supported || _.subtitles || _.full_audio)
+                .map((_) => _.elanguage) || []
             );
           }
           GetDataRequest() {
@@ -89320,26 +87868,26 @@
           }
         }
         function _(_) {
-          if (!(_ != null && _.length)) return [];
+          if (!_?.length) return [];
           const _ = _.map((_) => _.creator_clan_account_id).filter((_) => !!_);
           return Array.from(new Set(_));
         }
         class _ {
+          m_strMainCapsuleURL;
+          m_strSmallCapsuleURL;
+          m_strHeaderURL;
+          m_strPackageHeaderURL;
+          m_strPageBackgroundURL;
+          m_strRawPageBackgroundURL;
+          m_strHeroCapsuleURL;
+          m_strHeroCapsuleURL_2x;
+          m_strLibraryCapsuleURL;
+          m_strLibraryCapsuleURL_2x;
+          m_strLibraryHeroURL;
+          m_strLibraryHeroURL_2x;
+          m_strCommunityIcon;
+          m_strCommunityIcon_Full;
           constructor(_, _) {
-            _(this, "m_strMainCapsuleURL"),
-              _(this, "m_strSmallCapsuleURL"),
-              _(this, "m_strHeaderURL"),
-              _(this, "m_strPackageHeaderURL"),
-              _(this, "m_strPageBackgroundURL"),
-              _(this, "m_strRawPageBackgroundURL"),
-              _(this, "m_strHeroCapsuleURL"),
-              _(this, "m_strHeroCapsuleURL_2x"),
-              _(this, "m_strLibraryCapsuleURL"),
-              _(this, "m_strLibraryCapsuleURL_2x"),
-              _(this, "m_strLibraryHeroURL"),
-              _(this, "m_strLibraryHeroURL_2x"),
-              _(this, "m_strCommunityIcon"),
-              _(this, "m_strCommunityIcon_Full");
             const _ = _.asset_url_format();
             _ &&
               (_.main_capsule() &&
@@ -89451,29 +87999,18 @@
           }
         }
         class _ {
+          m_mapTrailer;
+          m_highlightTrailers;
+          m_highlightTrailersAllAges;
+          m_otherTrailers;
+          m_otherTrailersAllAges;
           constructor(_) {
-            _(this, "m_mapTrailer"),
-              _(this, "m_highlightTrailers"),
-              _(this, "m_highlightTrailersAllAges"),
-              _(this, "m_otherTrailers"),
-              _(this, "m_otherTrailersAllAges");
-            var _, _, _, _;
             (this.m_highlightTrailers =
-              (_ =
-                (_ = _.highlights()) == null
-                  ? void 0
-                  : _.map((_) => new _(_))) != null
-                ? _
-                : []),
+              _.highlights()?.map((_) => new _(_)) ?? []),
               (this.m_highlightTrailersAllAges =
                 this.m_highlightTrailers.filter((_) => _.BIsAllAges())),
               (this.m_otherTrailers =
-                (_ =
-                  (_ = _.other_trailers()) == null
-                    ? void 0
-                    : _.map((_) => new _(_))) != null
-                  ? _
-                  : []),
+                _.other_trailers()?.map((_) => new _(_)) ?? []),
               (this.m_otherTrailersAllAges = this.m_otherTrailers.filter((_) =>
                 _.BIsAllAges(),
               )),
@@ -89509,18 +88046,17 @@
           }
         }
         class _ {
+          m_strTrailerName;
+          m_eTrailerCategory;
+          m_nBaseID;
+          m_MicroTrailer;
+          m_rgDashTrailers;
+          m_rgHlsTrailer;
+          m_strScreenshotMedium;
+          m_strScreenshotFull;
+          m_bIsAllAges;
+          m_strCaptionManifest;
           constructor(_) {
-            _(this, "m_strTrailerName"),
-              _(this, "m_eTrailerCategory"),
-              _(this, "m_nBaseID"),
-              _(this, "m_MicroTrailer"),
-              _(this, "m_rgDashTrailers"),
-              _(this, "m_rgHlsTrailer"),
-              _(this, "m_strScreenshotMedium"),
-              _(this, "m_strScreenshotFull"),
-              _(this, "m_bIsAllAges"),
-              _(this, "m_strCaptionManifest");
-            var _;
             (this.m_strTrailerName = _.trailer_name()),
               (this.m_nBaseID = _.trailer_base_id()),
               (this.m_eTrailerCategory = _.trailer_category());
@@ -89554,7 +88090,7 @@
               );
               _.length > 0 && (this.m_rgHlsTrailer = _[0]);
             }
-            (this.m_bIsAllAges = (_ = _.all_ages()) != null ? _ : !0),
+            (this.m_bIsAllAges = _.all_ages() ?? !0),
               (this.m_strCaptionManifest = (0, _._)(_));
           }
           GetName() {
@@ -89626,9 +88162,9 @@
           }
         }
         class _ {
+          m_rgAllScreenshots;
+          m_rgOnlyAllAgesScreenshots;
           constructor(_) {
-            _(this, "m_rgAllScreenshots"),
-              _(this, "m_rgOnlyAllAgesScreenshots");
             const _ = _.all_ages_screenshots() || [],
               _ = _.mature_content_screenshots() || [],
               _ = (_) =>
@@ -89753,15 +88289,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -89770,8 +88297,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_, _) {
           if (_) {
             if (!_) return _;
@@ -89814,57 +88340,48 @@
           return _ != _._ ? _ : _;
         }
         const _ = class _ {
-          constructor() {
-            _(this, "k_QueueWaitUntilRequestMS", 5),
-              _(this, "k_nMaxBatchSize", 250),
-              _(this, "m_bReturnUnavailableItems", !1),
-              _(this, "m_mapApps", new Map()),
-              _(this, "m_mapPackages", new Map()),
-              _(this, "m_mapBundles", new Map()),
-              _(this, "m_mapTags", new Map()),
-              _(this, "m_mapCreators", new Map()),
-              _(this, "m_mapHubCategories", new Map()),
-              _(this, "m_setUnavailableApps", new Set()),
-              _(this, "m_setUnavailablePackages", new Set()),
-              _(this, "m_setUnavailableBundles", new Set()),
-              _(this, "m_setUnavailableTags", new Set()),
-              _(this, "m_setUnavailableCreators", new Set()),
-              _(this, "m_setUnavailableHubCategories", new Set()),
-              _(this, "m_setUnavailableDueToCountryRestrictionApps", new Set()),
-              _(
-                this,
-                "m_setUnavailableDueToCountryRestrictionPackages",
-                new Set(),
-              ),
-              _(
-                this,
-                "m_setUnavailableDueToCountryRestrictionBundles",
-                new Set(),
-              ),
-              _(this, "m_mapAppsInFlight", new Map()),
-              _(this, "m_mapPackageInFlight", new Map()),
-              _(this, "m_mapBundleInFlight", new Map()),
-              _(this, "m_mapTagsInFlight", new Map()),
-              _(this, "m_mapCreatorsInFlight", new Map()),
-              _(this, "m_mapHubCategoriesInFlight", new Map()),
-              _(this, "m_serviceTransport"),
-              _(this, "m_bUsePartnerAPI", !1),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_bActivelyResettingCache", !1),
-              _(this, "m_setPendingAppInfo", new Set()),
-              _(this, "m_setPendingBundleInfo", new Set()),
-              _(this, "m_setPendingPackageInfo", new Set()),
-              _(this, "m_setPendingTagInfo", new Set()),
-              _(this, "m_setPendingCreatorInfo", new Set()),
-              _(this, "m_setPendingHubCategoryInfo", new Set()),
-              _(this, "m_setPendingDataRequest", {}),
-              _(this, "m_PendingInfoPromise"),
-              _(this, "m_PendingInfoResolve"),
-              _(this, "m_PendingTimer"),
-              _(this, "k_AlreadyResolvedOK", Promise.resolve(_._)),
-              _(this, "k_AlreadyResolvedInvalid", Promise.resolve(_._)),
-              _(this, "k_AlreadyResolvedBusy", Promise.resolve(_._));
-          }
+          k_QueueWaitUntilRequestMS = 5;
+          k_nMaxBatchSize = 250;
+          m_bReturnUnavailableItems = !1;
+          m_mapApps = new Map();
+          m_mapPackages = new Map();
+          m_mapBundles = new Map();
+          m_mapTags = new Map();
+          m_mapCreators = new Map();
+          m_mapHubCategories = new Map();
+          m_setUnavailableApps = new Set();
+          m_setUnavailablePackages = new Set();
+          m_setUnavailableBundles = new Set();
+          m_setUnavailableTags = new Set();
+          m_setUnavailableCreators = new Set();
+          m_setUnavailableHubCategories = new Set();
+          m_setUnavailableDueToCountryRestrictionApps = new Set();
+          m_setUnavailableDueToCountryRestrictionPackages = new Set();
+          m_setUnavailableDueToCountryRestrictionBundles = new Set();
+          m_mapAppsInFlight = new Map();
+          m_mapPackageInFlight = new Map();
+          m_mapBundleInFlight = new Map();
+          m_mapTagsInFlight = new Map();
+          m_mapCreatorsInFlight = new Map();
+          m_mapHubCategoriesInFlight = new Map();
+          m_serviceTransport;
+          m_bUsePartnerAPI = !1;
+          m_bInitialized = !1;
+          m_bActivelyResettingCache = !1;
+          m_setPendingAppInfo = new Set();
+          m_setPendingBundleInfo = new Set();
+          m_setPendingPackageInfo = new Set();
+          m_setPendingTagInfo = new Set();
+          m_setPendingCreatorInfo = new Set();
+          m_setPendingHubCategoryInfo = new Set();
+          m_setPendingDataRequest = {};
+          m_PendingInfoPromise;
+          m_PendingInfoResolve = void 0;
+          m_PendingTimer = void 0;
+          k_AlreadyResolvedOK = Promise.resolve(_._);
+          k_AlreadyResolvedInvalid = Promise.resolve(_._);
+          k_AlreadyResolvedBusy = Promise.resolve(_._);
+          static sm_instance;
           static Get() {
             return (
               _.sm_instance ||
@@ -89935,6 +88452,28 @@
           static BIsInitialized() {
             return _.Get().m_bInitialized;
           }
+          static k_DataRequest_CommonOnly = {};
+          static k_DataRequest_BasicInfo = {
+            include_basic_info: !0,
+          };
+          static k_DataRequest_Assets = {
+            include_assets: !0,
+          };
+          static k_DataRequest_IncludeAll = {
+            include_assets: !0,
+            include_release: !0,
+            include_platforms: !0,
+            include_all_purchase_options: !0,
+            include_screenshots: !0,
+            include_trailers: !0,
+            include_ratings: !0,
+            include_tag_count: 20,
+            include_reviews: !0,
+            include_basic_info: !0,
+            include_supported_languages: !0,
+            include_full_description: !0,
+            include_links: !0,
+          };
           async QueueAppRequest(_, _) {
             return this.QueueStoreItemRequest(_, _._._, _);
           }
@@ -90108,7 +88647,7 @@
             );
           }
           async FlushPendingInfo() {
-            if (typeof this.m_PendingInfoResolve == "undefined") return;
+            if (typeof this.m_PendingInfoResolve > "u") return;
             const _ = this.m_PendingInfoResolve,
               _ = Array.from(this.m_setPendingAppInfo),
               _ = Array.from(this.m_setPendingPackageInfo),
@@ -90183,7 +88722,7 @@
                 );
                 let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapAppsInFlight.get(_);
-                (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
                   this.m_mapAppsInFlight.set(_, {
                     promise: _ ? _(_.promise, _) : _,
@@ -90202,7 +88741,7 @@
                   );
                   let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                   const _ = this.m_mapPackageInFlight.get(_);
-                  (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                  (_ = _(_?.dataRequest, _)),
                     _ && _.push(_.promise),
                     this.m_mapPackageInFlight.set(_, {
                       promise: _ ? _(_.promise, _) : _,
@@ -90221,7 +88760,7 @@
                   );
                   let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                   const _ = this.m_mapBundleInFlight.get(_);
-                  (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                  (_ = _(_?.dataRequest, _)),
                     _ && _.push(_.promise),
                     this.m_mapBundleInFlight.set(_, {
                       promise: _ ? _(_.promise, _) : _,
@@ -90240,7 +88779,7 @@
                   );
                   let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                   const _ = this.m_mapTagsInFlight.get(_);
-                  (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                  (_ = _(_?.dataRequest, _)),
                     _ && _.push(_.promise),
                     this.m_mapTagsInFlight.set(_, {
                       promise: _ ? _(_.promise, _) : _,
@@ -90259,7 +88798,7 @@
                   );
                   let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                   const _ = this.m_mapCreatorsInFlight.get(_);
-                  (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                  (_ = _(_?.dataRequest, _)),
                     _ && _.push(_.promise),
                     this.m_mapCreatorsInFlight.set(_, {
                       promise: _ ? _(_.promise, _) : _,
@@ -90278,7 +88817,7 @@
                   );
                   let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                   const _ = this.m_mapHubCategoriesInFlight.get(_);
-                  (_ = _(_ == null ? void 0 : _.dataRequest, _)),
+                  (_ = _(_?.dataRequest, _)),
                     _ && _.push(_.promise),
                     this.m_mapHubCategoriesInFlight.set(_, {
                       promise: _ ? _(_.promise, _) : _,
@@ -90336,24 +88875,23 @@
             let _ = _.slice();
             return (
               _.sort((_, _) => {
-                var _, _, _, _, _, _, _, _, _, _, _, _;
-                let _ = (_ = _.appid()) != null ? _ : 0,
-                  _ = (_ = _.appid()) != null ? _ : 0;
+                let _ = _.appid() ?? 0,
+                  _ = _.appid() ?? 0;
                 if (_ != _) return _ - _;
-                let _ = (_ = _.packageid()) != null ? _ : 0,
-                  _ = (_ = _.packageid()) != null ? _ : 0;
+                let _ = _.packageid() ?? 0,
+                  _ = _.packageid() ?? 0;
                 if (_ != _) return _ - _;
-                let _ = (_ = _.bundleid()) != null ? _ : 0,
-                  _ = (_ = _.bundleid()) != null ? _ : 0;
+                let _ = _.bundleid() ?? 0,
+                  _ = _.bundleid() ?? 0;
                 if (_ != _) return _ - _;
-                let _ = (_ = _.tagid()) != null ? _ : 0,
-                  _ = (_ = _.tagid()) != null ? _ : 0;
+                let _ = _.tagid() ?? 0,
+                  _ = _.tagid() ?? 0;
                 if (_ != _) return _ - _;
-                let _ = (_ = _.creatorid()) != null ? _ : 0,
-                  _ = (_ = _.creatorid()) != null ? _ : 0;
+                let _ = _.creatorid() ?? 0,
+                  _ = _.creatorid() ?? 0;
                 if (_ != _) return _ - _;
-                let _ = (_ = _.hubcategoryid()) != null ? _ : 0,
-                  _ = (_ = _.hubcategoryid()) != null ? _ : 0;
+                let _ = _.hubcategoryid() ?? 0,
+                  _ = _.hubcategoryid() ?? 0;
                 return _ != _ ? _ - _ : 0;
               }),
               _
@@ -90539,9 +89077,9 @@
             return !!(_ && _.has(_) && (!_ || _.get(_).BContainDataRequest(_)));
           }
           GetStoreItem(_, _) {
-            if (_ == _._._ || _ == _._._) return;
-            const _ = this.GetMapForType(_);
-            return _ == null ? void 0 : _.get(_);
+            return _ == _._._ || _ == _._._
+              ? void 0
+              : this.GetMapForType(_)?.get(_);
           }
           GetStoreItemWithLegacyVisibilityCheck(_, _) {
             const _ = this.GetStoreItem(_, _);
@@ -90550,13 +89088,7 @@
               : void 0;
           }
           GetStoreItemDataRequest(_, _) {
-            var _, _;
-            return (
-              ((_ = (_ = this.GetMapForType(_)) == null ? void 0 : _.get(_)) ==
-              null
-                ? void 0
-                : _.GetDataRequest()) || null
-            );
+            return this.GetMapForType(_)?.get(_)?.GetDataRequest() || null;
           }
           BHasApp(_, _) {
             return this.BHasStoreItem(_, _._._, _);
@@ -90667,7 +89199,6 @@
             return _;
           }
           ReadItem(_, _) {
-            var _;
             const _ = _.item_type();
             let _ = null;
             if (_ === void 0)
@@ -90701,13 +89232,10 @@
               (_ ? _.MergeData(_, _) : ((_ = new _._(_, _)), _.set(_._(), _)),
               _.include_included_items && _.included_items(!1))
             ) {
-              const _ =
-                (_ = _.included_item_data_request) != null
-                  ? _
-                  : {
-                      ..._,
-                      include_included_items: !1,
-                    };
+              const _ = _.included_item_data_request ?? {
+                ..._,
+                include_included_items: !1,
+              };
               for (const _ of _.included_items().included_apps())
                 this.ReadItem(_, _);
               for (const _ of _.included_items().included_packages())
@@ -90716,30 +89244,7 @@
             return _;
           }
         };
-        _(_, "sm_instance"),
-          _(_, "k_DataRequest_CommonOnly", {}),
-          _(_, "k_DataRequest_BasicInfo", {
-            include_basic_info: !0,
-          }),
-          _(_, "k_DataRequest_Assets", {
-            include_assets: !0,
-          }),
-          _(_, "k_DataRequest_IncludeAll", {
-            include_assets: !0,
-            include_release: !0,
-            include_platforms: !0,
-            include_all_purchase_options: !0,
-            include_screenshots: !0,
-            include_trailers: !0,
-            include_ratings: !0,
-            include_tag_count: 20,
-            include_reviews: !0,
-            include_basic_info: !0,
-            include_supported_languages: !0,
-            include_full_description: !0,
-            include_links: !0,
-          }),
-          _([_._], _.prototype, "ReadItem", 1);
+        _([_._], _.prototype, "ReadItem", 1);
         let _ = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -90774,17 +89279,6 @@
           _ = 4,
           _ = 5,
           _ = 6;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EMarketingMessageType ( " + _ + " )";
         }
@@ -90809,13 +89303,15 @@
         function _(_) {
           return "unknown EMarketingMessageClickLocation ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -90988,16 +89484,16 @@
           getClassName() {
             return "CMarketingMessageProto";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91094,16 +89590,16 @@
           getClassName() {
             return "CDisplayMarketingMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91161,16 +89657,16 @@
           getClassName() {
             return "CMarketingMessages_GetActiveMarketingMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91229,16 +89725,16 @@
           getClassName() {
             return "CMarketingMessages_GetActiveMarketingMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.start_past_days || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91296,16 +89792,16 @@
           getClassName() {
             return "CMarketingMessages_GetPastMarketingMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91359,16 +89855,16 @@
           getClassName() {
             return "CMarketingMessages_GetPastMarketingMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.include_seen_messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91449,16 +89945,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessagesForUser_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91512,16 +90008,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessagesForUser_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.already_seen || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91578,16 +90074,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessagesForUser_Response_MarketingMessageForUser";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.country_code || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91655,16 +90151,16 @@
           getClassName() {
             return "CMarketingMessages_DoesUserHavePendingMarketingMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.has_pending_messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91722,16 +90218,16 @@
           getClassName() {
             return "CMarketingMessages_DoesUserHavePendingMarketingMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91792,16 +90288,16 @@
           getClassName() {
             return "CMarketingMessages_GetDisplayMarketingMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91853,16 +90349,16 @@
           getClassName() {
             return "CMarketingMessages_GetDisplayMarketingMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -91927,16 +90423,16 @@
           getClassName() {
             return "CMarketingMessages_MarkMessageSeen_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92007,16 +90503,16 @@
           getClassName() {
             return "CMarketingMessages_MarkMessageClicked_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92069,16 +90565,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92130,16 +90626,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.lookup_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92220,16 +90716,16 @@
           getClassName() {
             return "CMarketingMessages_FindMarketingMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92283,16 +90779,16 @@
           getClassName() {
             return "CMarketingMessages_FindMarketingMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92349,16 +90845,16 @@
           getClassName() {
             return "CMarketingMessages_CreateMarketingMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92411,16 +90907,16 @@
           getClassName() {
             return "CMarketingMessages_CreateMarketingMessage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92482,9 +90978,7 @@
           getClassName() {
             return "CMarketingMessages_UpdateMarketingMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -92526,13 +91020,15 @@
             return "CMarketingMessages_UpdateMarketingMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92585,9 +91081,7 @@
           getClassName() {
             return "CMarketingMessages_DeleteMarketingMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -92629,13 +91123,15 @@
             return "CMarketingMessages_DeleteMarketingMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92688,16 +91184,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessageViewerStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rt_time_hour || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92765,16 +91261,16 @@
           getClassName() {
             return "CMarketingMessageHourlyStats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stats || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92828,16 +91324,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessageViewerStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rt_start_time || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92895,16 +91391,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rt_time_hour || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -92977,16 +91473,16 @@
           getClassName() {
             return "CMarketingMessageClickedHourlyStats";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stats || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93046,16 +91542,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93108,16 +91604,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessageClickedStats_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.stats || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93171,16 +91667,16 @@
           getClassName() {
             return "CMarketingMessages_GetMarketingMessageClickedStats_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.partnerid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93233,16 +91729,16 @@
           getClassName() {
             return "CMarketingMessages_GetPartnerReadyToPublishMessages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93296,16 +91792,16 @@
           getClassName() {
             return "CMarketingMessages_GetPartnerReadyToPublishMessages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93363,9 +91859,7 @@
           getClassName() {
             return "CMarketingMessages_PartnerPublishMessage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -93407,13 +91901,15 @@
             return "CMarketingMessages_PartnerPublishMessage_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93471,16 +91967,16 @@
           getClassName() {
             return "CMarketingMessages_GetPartnerMessagePreview_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.message || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93532,16 +92028,16 @@
           getClassName() {
             return "CMarketingMessages_GetPartnerMessagePreview_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93597,16 +92093,16 @@
           getClassName() {
             return "CMarketingMessage_GetMarketingMessagesForApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93660,16 +92156,16 @@
           getClassName() {
             return "CMarketingMessage_GetMarketingMessagesForApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.partnerid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93722,16 +92218,16 @@
           getClassName() {
             return "CMarketingMessage_GetMarketingMessagesForPartner_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.messages || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -93785,9 +92281,7 @@
           getClassName() {
             return "CMarketingMessage_GetMarketingMessagesForPartner_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -94097,17 +92591,17 @@
           return _.includes(_);
         }
         function _(_, _ = EStoreItemType.k_EStoreItemType_Invalid) {
-          return _ != null && _.appid
+          return _?.appid
             ? EStoreItemType.k_EStoreItemType_App
-            : _ != null && _.packageid
+            : _?.packageid
               ? EStoreItemType.k_EStoreItemType_Package
-              : _ != null && _.bundleid
+              : _?.bundleid
                 ? EStoreItemType.k_EStoreItemType_Bundle
-                : _ != null && _.creatorid
+                : _?.creatorid
                   ? EStoreItemType.k_EStoreItemType_Creator
-                  : _ != null && _.hubcategoryid
+                  : _?.hubcategoryid
                     ? EStoreItemType.k_EStoreItemType_HubCategory
-                    : _ != null && _.tagid
+                    : _?.tagid
                       ? EStoreItemType.k_EStoreItemType_Tag
                       : _;
         }
@@ -94199,32 +92693,32 @@
                 };
         }
         function _(_) {
-          return (_ == null ? void 0 : _.item_type) == "app"
+          return _?.item_type == "app"
             ? {
                 appid: _._,
               }
-            : (_ == null ? void 0 : _.item_type) == "sub"
+            : _?.item_type == "sub"
               ? {
                   packageid: _._,
                 }
-              : (_ == null ? void 0 : _.item_type) == "bundle"
+              : _?.item_type == "bundle"
                 ? {
                     bundleid: _._,
                   }
                 : null;
         }
         function _(_) {
-          return _ != null && _.appid
+          return _?.appid
             ? {
                 item_type: "app",
                 _: _.appid,
               }
-            : _ != null && _.packageid
+            : _?.packageid
               ? {
                   item_type: "sub",
                   _: _.packageid,
                 }
-              : _ != null && _.bundleid
+              : _?.bundleid
                 ? {
                     item_type: "bundle",
                     _: _.bundleid,
@@ -94327,17 +92821,17 @@
           }
         }
         function _(_) {
-          return _ != null && _.appid
+          return _?.appid
             ? "a" + _.appid
-            : _ != null && _.packageid
+            : _?.packageid
               ? "p" + _.packageid
-              : _ != null && _.bundleid
+              : _?.bundleid
                 ? "b" + _.bundleid
-                : _ != null && _.creatorid
+                : _?.creatorid
                   ? "c" + _.creatorid
-                  : _ != null && _.hubcategoryid
+                  : _?.hubcategoryid
                     ? "h" + _.hubcategoryid
-                    : _ != null && _.tagid
+                    : _?.tagid
                       ? "t" + _.tagid
                       : "unknown0";
         }
@@ -94353,60 +92847,55 @@
           return "unknown0";
         }
         function _(_) {
-          return _ != null && _.appid
+          return _?.appid
             ? _.appid
-            : _ != null && _.packageid
+            : _?.packageid
               ? _.packageid
-              : _ != null && _.bundleid
+              : _?.bundleid
                 ? _.bundleid
-                : _ != null && _.hubcategoryid
+                : _?.hubcategoryid
                   ? _.hubcategoryid
-                  : _ != null && _.creatorid
+                  : _?.creatorid
                     ? _.creatorid
-                    : _ != null && _.tagid
+                    : _?.tagid
                       ? _.tagid
                       : 0;
         }
         function _(_) {
-          return _ != null && _.appid
+          return _?.appid
             ? EStoreItemType.k_EStoreItemType_App
-            : _ != null && _.packageid
+            : _?.packageid
               ? EStoreItemType.k_EStoreItemType_Package
-              : _ != null && _.bundleid
+              : _?.bundleid
                 ? EStoreItemType.k_EStoreItemType_Bundle
-                : _ != null && _.hubcategoryid
+                : _?.hubcategoryid
                   ? EStoreItemType.k_EStoreItemType_HubCategory
-                  : _ != null && _.creatorid
+                  : _?.creatorid
                     ? EStoreItemType.k_EStoreItemType_Creator
-                    : _ != null && _.tagid
+                    : _?.tagid
                       ? EStoreItemType.k_EStoreItemType_Tag
                       : 0;
         }
         function _(_) {
-          return (_ == null ? void 0 : _.item_type) == "app"
+          return _?.item_type == "app"
             ? EStoreItemType.k_EStoreItemType_App
-            : (_ == null ? void 0 : _.item_type) == "sub"
+            : _?.item_type == "sub"
               ? EStoreItemType.k_EStoreItemType_Package
-              : (_ == null ? void 0 : _.item_type) == "bundle"
+              : _?.item_type == "bundle"
                 ? EStoreItemType.k_EStoreItemType_Bundle
                 : EStoreItemType.k_EStoreItemType_Invalid;
         }
         function _(_) {
-          return _ != null && _.appid()
+          return _?.appid()
             ? EStoreItemType.k_EStoreItemType_App
-            : _ != null && _.packageid()
+            : _?.packageid()
               ? EStoreItemType.k_EStoreItemType_Package
-              : _ != null && _.bundleid()
+              : _?.bundleid()
                 ? EStoreItemType.k_EStoreItemType_Bundle
                 : EStoreItemType.k_EStoreItemType_Invalid;
         }
         function _(_) {
-          return (
-            (_ == null ? void 0 : _.appid()) ||
-            (_ == null ? void 0 : _.packageid()) ||
-            (_ == null ? void 0 : _.bundleid()) ||
-            0
-          );
+          return _?.appid() || _?.packageid() || _?.bundleid() || 0;
         }
         function _(_) {
           const _ = Number.parseInt(_.substring(1));
@@ -94577,16 +93066,13 @@
           _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         const _ = _.createContext(null);
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments), _(this, "m_navRef", (0, _._)());
-          }
+          m_navRef = (0, _._)();
           get instance() {
             return this.context.instance;
           }
           componentDidMount() {
-            var _;
             this.instance.SetLabel(this.props.label),
-              (_ = this.m_navRef.current) == null || _.TakeFocus(),
+              this.m_navRef.current?.TakeFocus(),
               (0, _._)(this.props.refInstance, this.instance);
           }
           componentDidUpdate(_) {
@@ -94608,7 +93094,6 @@
             );
           }
           render() {
-            var _;
             let {
               children: _,
               className: _,
@@ -94624,8 +93109,8 @@
               refScrollable: _,
               ..._
             } = this.props;
-            const _ = (_ = this.context.styles) != null ? _ : _();
-            let _ = _ != null ? _ : (0, _._)("#Button_Cancel");
+            const _ = this.context.styles ?? _();
+            let _ = _ ?? (0, _._)("#Button_Cancel");
             if (this.context.presentation == _._ && !_) {
               const _ = () => {
                 _ && _(), this.instance.Hide();
@@ -94712,11 +93197,9 @@
           });
         }
         class _ extends _.PureComponent {
-          constructor() {
-            super(...arguments),
-              _(this, "m_ref", _.createRef()),
-              _(this, "m_refDiv", _.createRef());
-          }
+          static contextType = _;
+          m_ref = _.createRef();
+          m_refDiv = _.createRef();
           get element() {
             return this.m_refDiv.current;
           }
@@ -94724,10 +93207,8 @@
             return this.context.instance;
           }
           OnClick(_) {
-            var _;
             if (this.props.disabled) {
-              (_ = this.context.callbacks) != null &&
-                _.onDisabledItemSelected &&
+              this.context.callbacks?.onDisabledItemSelected &&
                 this.context.callbacks.onDisabledItemSelected();
               return;
             }
@@ -94737,8 +93218,7 @@
                 this.context && this.instance.ForceHide());
           }
           OnOKButton(_) {
-            var _;
-            (_ = this.m_refDiv.current) == null || _.click();
+            this.m_refDiv.current?.click();
           }
           OnMouseEnter(_) {
             this.context.presentation == _._ && this.instance.HideSubMenu();
@@ -94749,17 +93229,13 @@
               : this.m_refDiv.current && this.m_refDiv.current.focus();
           }
           render() {
-            var _, _, _, _;
             const {
                 onSelected: _,
                 bInteractableItem: _,
                 onMoveRight: _,
                 ..._
               } = this.props,
-              _ =
-                (_ = (_ = this.context) == null ? void 0 : _.styles) != null
-                  ? _
-                  : _();
+              _ = this.context?.styles ?? _();
             return this.context.presentation == _._
               ? (0, _.jsx)(_._, {
                   noFocusRing: !0,
@@ -94784,7 +93260,7 @@
                   onOKButton: this.OnOKButton,
                   onMoveRight: _,
                   unselectable: this.props.unselectable,
-                  role: (_ = _.role) != null ? _ : "menuitem",
+                  role: _.role ?? "menuitem",
                   "aria-selected": this.props.selected,
                   children: this.props.children,
                 })
@@ -94795,14 +93271,13 @@
                   onClick: this.OnClick,
                   unselectable: this.props.unselectable,
                   className: this.props.className,
-                  role: (_ = _.role) != null ? _ : "menuitem",
+                  role: _.role ?? "menuitem",
                   "aria-selected": this.props.selected,
                   children: this.props.children,
                 });
           }
         }
-        _(_, "contextType", _),
-          _([_._], _.prototype, "OnClick", 1),
+        _([_._], _.prototype, "OnClick", 1),
           _([_._], _.prototype, "OnOKButton", 1),
           _([_._], _.prototype, "OnMouseEnter", 1),
           _([_._], _.prototype, "Focus", 1);
@@ -94837,8 +93312,7 @@
           }
         }
         function _(_) {
-          var _;
-          const _ = (_ = _.useContext(_).styles) != null ? _ : _();
+          const _ = _.useContext(_).styles ?? _();
           return (0, _.jsx)("div", {
             className: _.ContextMenuSeparator,
             role: "separator",
@@ -94852,9 +93326,10 @@
           });
         };
         class _ extends _.PureComponent {
+          static contextType = _;
+          m_refItem = _.createRef();
           constructor(_) {
             super(_),
-              _(this, "m_refItem", _.createRef()),
               (this.state = {
                 bActive: !1,
               });
@@ -94904,7 +93379,6 @@
                 this.ShowSubMenu(_.currentTarget);
           }
           render() {
-            var _;
             let {
               label: _,
               selectedWithin: _,
@@ -94913,7 +93387,7 @@
               bInGamepadUI: _,
               ..._
             } = this.props;
-            const _ = (_ = this.context.styles) != null ? _ : _();
+            const _ = this.context.styles ?? _();
             return (0, _.jsxs)(_, {
               ..._,
               ref: this.m_refItem,
@@ -94936,19 +93410,18 @@
             });
           }
         }
-        _(_, "contextType", _),
-          _([_._], _.prototype, "OnSubMenuMouseEnter", 1),
+        _([_._], _.prototype, "OnSubMenuMouseEnter", 1),
           _([_._], _.prototype, "OnSubMenuHidden", 1),
           _([_._], _.prototype, "ShowSubMenu", 1),
           _([_._], _.prototype, "RenderSubMenu", 1),
           _([_._], _.prototype, "OnMouseEnter", 1),
           _([_._], _.prototype, "OnClick", 1);
         let _ = class extends _.Component {
+          m_elMenu = void 0;
+          m_cReenteranceGuard = 1;
+          m_mutationObserver;
           constructor(_) {
             super(_),
-              _(this, "m_elMenu"),
-              _(this, "m_cReenteranceGuard", 1),
-              _(this, "m_mutationObserver"),
               (this.state = {
                 ready: !1,
                 menuLeft: void 0,
@@ -94964,29 +93437,30 @@
               ));
           }
           get parentWin() {
-            var _;
             return (
-              ((_ = this.props.element) == null
-                ? void 0
-                : _.ownerDocument.defaultView) || this.props.parentWin
+              this.props.element?.ownerDocument.defaultView ||
+              this.props.parentWin
             );
           }
           BindMenuElement(_) {
-            var _, _;
             this.props.instance.SetElement(_),
               this.m_elMenu &&
                 (this.m_mutationObserver.disconnect(),
                 (!this.props.popup || this.props.options.bScreenCoordinates) &&
-                  ((_ = this.m_elMenu.ownerDocument.defaultView) == null ||
-                    _.removeEventListener("resize", this.OnWindowResize))),
+                  this.m_elMenu.ownerDocument.defaultView?.removeEventListener(
+                    "resize",
+                    this.OnWindowResize,
+                  )),
               _ &&
                 (this.m_mutationObserver.observe(_, {
                   childList: !0,
                   subtree: !0,
                 }),
                 (!this.props.popup || this.props.options.bScreenCoordinates) &&
-                  ((_ = _.ownerDocument.defaultView) == null ||
-                    _.addEventListener("resize", this.OnWindowResize))),
+                  _.ownerDocument.defaultView?.addEventListener(
+                    "resize",
+                    this.OnWindowResize,
+                  )),
               (this.m_elMenu = _ || void 0),
               _._.IN_CLIENT && this.props.popup && this.m_elMenu
                 ? this.m_elMenu.ownerDocument.fonts.ready.then(() => {
@@ -95000,10 +93474,7 @@
                     ready: !0,
                   },
                   () => {
-                    var _;
-                    ((_ = this.props.options) != null &&
-                      _.bSkipFocusWhenReady) ||
-                      this.TakeFocus();
+                    this.props.options?.bSkipFocusWhenReady || this.TakeFocus();
                   },
                 ));
           }
@@ -95066,7 +93537,7 @@
               _ = 0,
               _ = _.innerWidth,
               _ = _.innerHeight,
-              _ = _ == null ? void 0 : _.getBoundingClientRect();
+              _ = _?.getBoundingClientRect();
             if (_)
               if (
                 (!_.bScreenCoordinates &&
@@ -95102,8 +93573,8 @@
                 menuHeight: void 0,
                 menuMinWidth: void 0,
               },
-              _ = _ != null ? _ : _.left,
-              _ = _ != null ? _ : _.right,
+              _ = _ ?? _.left,
+              _ = _ ?? _.right,
               _ = _.width;
             _.bMatchWidth && ((_ = _ - _), (_.menuWidth = _)),
               _.bGrowToElementWidth && (_.menuMinWidth = Math.max(_, _ - _));
@@ -95112,7 +93583,7 @@
               _ = _ + _ - (_.bOverlapHorizontal ? _ : _) - _,
               _ = _ > 0,
               _ = _.bPreferPopLeft;
-            _ != null && _.matches(":dir(rtl)") && (_ = !_);
+            _?.matches(":dir(rtl)") && (_ = !_);
             let _ = (_ || !_) && _;
             !_ &&
               !_ &&
@@ -95121,8 +93592,8 @@
               _
                 ? (_.menuRight = _ - (_.bOverlapHorizontal ? _ : _))
                 : (_.menuLeft = _.bOverlapHorizontal ? _ : _);
-            let _ = _ != null ? _ : _.top,
-              _ = _ != null ? _ : _.bottom,
+            let _ = _ ?? _.top,
+              _ = _ ?? _.bottom,
               _ = _.scrollHeight;
             _.bMatchHeight && ((_ = _ - _), (_.menuHeight = _));
             let _ = (_.bOverlapVertical ? _ : _) - _ - _,
@@ -95176,7 +93647,6 @@
                 this.setState(_);
           }
           PositionPopupWindow() {
-            var _, _, _, _, _;
             if (
               !(
                 this.state.menuLeft !== void 0 &&
@@ -95186,49 +93656,41 @@
               )
             )
               return;
-            const _ = (_ = this.props.popup) == null ? void 0 : _.window,
+            const _ = this.props.popup?.window,
               _ = this.props.options;
             if (_.bScreenCoordinates) {
               const _ =
-                (_ =
-                  (_ = _.targetMonitor) == null
-                    ? void 0
-                    : _.flScaleToTargetMonitor) != null
-                  ? _
-                  : (_ = this.parentWin) == null
-                    ? void 0
-                    : _.devicePixelRatio;
-              _ == null ||
-                _.SteamClient.Window.MoveTo(
-                  this.state.menuLeft,
-                  this.state.menuTop,
-                  _ != null ? _ : !0,
-                ),
-                _ == null ||
-                  _.SteamClient.Window.ResizeTo(
-                    this.state.menuWidth,
-                    this.state.menuHeight,
-                    _ != null ? _ : !0,
-                  );
+                _.targetMonitor?.flScaleToTargetMonitor ??
+                this.parentWin?.devicePixelRatio;
+              _?.SteamClient.Window.MoveTo(
+                this.state.menuLeft,
+                this.state.menuTop,
+                _ ?? !0,
+              ),
+                _?.SteamClient.Window.ResizeTo(
+                  this.state.menuWidth,
+                  this.state.menuHeight,
+                  _ ?? !0,
+                );
               return;
             }
-            (_ = this.parentWin) == null ||
-              _.SteamClient.Window.GetWindowRestoreDetails().then((_) => {
+            this.parentWin?.SteamClient.Window.GetWindowRestoreDetails().then(
+              (_) => {
                 const _ = this.state.menuLeft - this.parentWin.screenX,
                   _ = this.state.menuTop - this.parentWin.screenY;
                 try {
-                  _ == null ||
-                    _.SteamClient.Window.PositionWindowRelative(
-                      _,
-                      _,
-                      _,
-                      this.state.menuWidth,
-                      this.state.menuHeight,
-                    );
+                  _?.SteamClient.Window.PositionWindowRelative(
+                    _,
+                    _,
+                    _,
+                    this.state.menuWidth,
+                    this.state.menuHeight,
+                  );
                 } catch (_) {
                   console.error(_);
                 }
-              });
+              },
+            );
           }
           render() {
             let _ = {
@@ -95503,8 +93965,7 @@
               bRegisterMenuManager: _ = !0,
               children: _,
             } = _,
-            _ = (0, _._)(),
-            _ = (_ == null ? void 0 : _.ownerWindow) || window,
+            _ = (0, _._)()?.ownerWindow || window,
             _ = _.useRef(void 0);
           return (
             _.current || (_.current = new _._()),
@@ -95580,8 +94041,7 @@
         const _ = _.createContext({}),
           _ = () => _.useContext(_);
         function _(_, _) {
-          var _;
-          return (_ = _()[_]) != null ? _ : _;
+          return _()[_] ?? _;
         }
         function _() {
           let _ = _();
@@ -95652,8 +94112,7 @@
         const _ = _.createContext(null),
           _ = _.forwardRef(function (_, _) {
             const { _: _, className: _, ..._ } = _,
-              _ = _.useContext(_),
-              _ = _ == null ? void 0 : _.setHeaderId,
+              _ = _.useContext(_)?.setHeaderId,
               _ = _.useId(),
               _ = _ || _;
             return (
@@ -96335,25 +94794,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _._ {
+          m_component;
+          m_propTargets;
+          m_props = {};
+          m_setStateOnComplete;
           constructor(_, _, _) {
             super(_._(_.ref.current), _),
-              _(this, "m_component"),
-              _(this, "m_propTargets"),
-              _(this, "m_props", {}),
-              _(this, "m_setStateOnComplete"),
               (this.m_component = _),
               (this.m_propTargets = _),
               (this.m_setStateOnComplete = _.setStateOnComplete);
@@ -96390,15 +94838,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -96407,8 +94846,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = _.forwardRef(function (_, _) {
             const _ = (0, _._)("InputElement", _._);
             return (0, _.jsx)(_, {
@@ -96417,11 +94855,10 @@
             });
           }),
           _ = class _ extends _.PureComponent {
+            m_CopiedAnimation;
+            ref = _.createRef();
             constructor(_) {
               super(_),
-                _(this, "m_CopiedAnimation"),
-                _(this, "ref", _.createRef()),
-                _(this, "m_elInput"),
                 this.CheckProps(_),
                 (this.state = {
                   m_CopiedYPos: 0,
@@ -96439,6 +94876,7 @@
             componentDidUpdate(_) {
               this.CheckProps(this.props);
             }
+            m_elInput;
             OnInputRef(_) {
               (this.m_elInput = _),
                 this.m_elInput &&
@@ -96452,8 +94890,7 @@
               return this.m_elInput && this.m_elInput.value;
             }
             Focus() {
-              var _;
-              (_ = this.m_elInput) == null || _.focus();
+              this.m_elInput?.focus();
             }
             static validateUrl(_) {
               return (
@@ -96473,38 +94910,27 @@
               );
             }
             Validate() {
-              var _, _, _, _, _, _;
               this.setState({
                 m_bNumberBelowMinRange:
                   this.props.rangeMin !== null &&
                   this.props.rangeMin !== void 0 &&
-                  Number((_ = this.m_elInput) == null ? void 0 : _.value) <
-                    this.props.rangeMin,
+                  Number(this.m_elInput?.value) < this.props.rangeMin,
                 m_bNumberAboveMaxRange:
                   this.props.rangeMax !== null &&
                   this.props.rangeMax !== void 0 &&
-                  Number((_ = this.m_elInput) == null ? void 0 : _.value) >
-                    this.props.rangeMax,
+                  Number(this.m_elInput?.value) > this.props.rangeMax,
                 m_bIsNotNumeric:
                   this.props.mustBeNumeric == !0 &&
-                  isNaN(
-                    Number((_ = this.m_elInput) == null ? void 0 : _.value),
-                  ),
+                  isNaN(Number(this.m_elInput?.value)),
                 m_bIsInvalidURL:
                   this.props.mustBeURL == !0 &&
-                  !_.validateUrl(
-                    (_ = this.m_elInput) == null ? void 0 : _.value,
-                  ),
+                  !_.validateUrl(this.m_elInput?.value),
                 m_strInvalidURLMessage: this.props.fnStrValidateURL
-                  ? this.props.fnStrValidateURL(
-                      (_ = this.m_elInput) == null ? void 0 : _.value,
-                    )
+                  ? this.props.fnStrValidateURL(this.m_elInput?.value)
                   : null,
                 m_bIsInvalidEmail:
                   this.props.mustBeEmail == !0 &&
-                  !_.validateEmail(
-                    (_ = this.m_elInput) == null ? void 0 : _.value,
-                  ),
+                  !_.validateEmail(this.m_elInput?.value),
                 m_bAboveMaxChars:
                   this.props.maxChars != null &&
                   this.m_elInput != null &&
@@ -96744,9 +95170,7 @@
           _([_._], _.prototype, "OnClearClick", 1);
         let _ = _;
         class _ extends _ {
-          constructor() {
-            super(...arguments), _(this, "m_bFocused", !1);
-          }
+          m_bFocused = !1;
           OnBackgroundClick() {
             this.m_elInput && this.m_elInput.focus();
           }
@@ -96840,15 +95264,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -96857,12 +95272,11 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = (_, _) =>
             "" +
             (_ != null ? Number.parseFloat(_.toFixed(3)) : null) +
-            (_ != null ? _ : ""),
+            (_ ?? ""),
           _ = 0,
           _ = 1,
           _ = 2,
@@ -96875,11 +95289,9 @@
             });
           };
         class _ extends _.Component {
+          m_flLastSetValue = null;
           constructor(_) {
-            super(_),
-              _(this, "m_flLastSetValue", null),
-              _(this, "m_elSlider"),
-              _(this, "m_rectSlider");
+            super(_);
           }
           ClampValue(_) {
             return _ === void 0 || isNaN(_) || _ < this.props.min
@@ -96891,60 +95303,62 @@
           BPropsValid() {
             return this.props.max > this.props.min;
           }
+          m_elSlider;
+          m_rectSlider;
           OnMouseDown(_) {
-            var _, _;
             (this.m_elSlider = _.currentTarget),
               (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
               this.props.onChangeStart && this.props.onChangeStart(_),
               this.AdjustSliderForClientX(_.clientX, _),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.addEventListener("mousemove", this.OnMouseMove),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp);
+              this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+                "mousemove",
+                this.OnMouseMove,
+              ),
+              this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              );
           }
           OnMouseMove(_) {
             this.AdjustSliderForClientX(_.clientX, _);
           }
           OnMouseUp(_) {
-            var _, _, _, _;
-            (_ =
-              (_ = this.m_elSlider) == null
-                ? void 0
-                : _.ownerDocument.defaultView) == null ||
-              _.removeEventListener("mousemove", this.OnMouseMove),
-              (_ =
-                (_ = this.m_elSlider) == null
-                  ? void 0
-                  : _.ownerDocument.defaultView) == null ||
-                _.removeEventListener("mouseup", this.OnMouseUp),
+            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+              "mousemove",
+              this.OnMouseMove,
+            ),
+              this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
               this.CompleteChange(_);
           }
           OnTouchStart(_) {
-            var _, _;
             (this.m_elSlider = _.currentTarget),
               (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
               this.props.onChangeStart && this.props.onChangeStart(_),
               this.AdjustSliderForClientX(_.touches[0].clientX, _),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.addEventListener("touchmove", this.OnTouchMove),
-              (_ = this.m_elSlider.ownerDocument.defaultView) == null ||
-                _.addEventListener("touchend", this.OnTouchEnd);
+              this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+                "touchmove",
+                this.OnTouchMove,
+              ),
+              this.m_elSlider.ownerDocument.defaultView?.addEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              );
           }
           OnTouchMove(_) {
             this.AdjustSliderForClientX(_.touches[0].clientX, _);
           }
           OnTouchEnd(_) {
-            var _, _, _, _;
-            (_ =
-              (_ = this.m_elSlider) == null
-                ? void 0
-                : _.ownerDocument.defaultView) == null ||
-              _.removeEventListener("touchmove", this.OnTouchMove),
-              (_ =
-                (_ = this.m_elSlider) == null
-                  ? void 0
-                  : _.ownerDocument.defaultView) == null ||
-                _.removeEventListener("touchend", this.OnTouchEnd),
+            this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+              "touchmove",
+              this.OnTouchMove,
+            ),
+              this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              ),
               this.CompleteChange(_);
           }
           OnKeyDown(_) {
@@ -96961,13 +95375,10 @@
               this.CompleteChange(_);
           }
           AdjustSliderForClientX(_, _) {
-            var _;
             let _ =
               (_ - this.m_rectSlider.left) /
               (this.m_rectSlider.right - this.m_rectSlider.left);
-            (_ = this.m_elSlider) != null &&
-              _.matches(":dir(rtl)") &&
-              (_ = 1 - _);
+            this.m_elSlider?.matches(":dir(rtl)") && (_ = 1 - _);
             let _ = _ * (this.props.max - this.props.min) + this.props.min;
             _ = Math.floor(_ + 0.5);
             const _ = this.ClampValue(_);
@@ -96988,7 +95399,6 @@
               (this.m_flLastSetValue = _));
           }
           render() {
-            var _;
             let _ = {},
               _ = {};
             if (this.BPropsValid()) {
@@ -97002,7 +95412,7 @@
                 });
             }
             const { label: _, description: _, tooltip: _, ..._ } = this.props,
-              _ = (_ = this.props.renderValue) != null ? _ : _;
+              _ = this.props.renderValue ?? _;
             return (0, _.jsxs)("div", {
               className:
                 "DialogSlider_Container _DialogInputContainer _DialogLayout" +
@@ -97143,15 +95553,6 @@
           _ = __webpack_require__._(_),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -97160,8 +95561,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           return typeof _ == "object" && "data" in _;
         }
@@ -97243,7 +95643,6 @@
           });
         }
         const _ = _.forwardRef(function (_, _) {
-          var _;
           return (0, _.jsxs)(_._, {
             _: _._,
             focusable: _.focusable,
@@ -97263,7 +95662,7 @@
             type: "button",
             ref: _,
             noFocusRing: _.noFocusRing,
-            role: (_ = _.role) != null ? _ : "combobox",
+            role: _.role ?? "combobox",
             "aria-controls": _["aria-controls"],
             "aria-expanded": _.opened,
             "aria-label": _["aria-label"],
@@ -97285,10 +95684,11 @@
           });
         });
         class _ extends _.Component {
+          static contextType = _._;
+          m_elInput;
+          m_iMenuInstance;
           constructor(_) {
             super(_),
-              _(this, "m_elInput"),
-              _(this, "m_iMenuInstance"),
               (this.state = {
                 value: _(_.rgOptions, _.selectedOption),
                 bOpened: !1,
@@ -97326,7 +95726,6 @@
             return !1;
           }
           componentDidUpdate(_, _) {
-            var _, _;
             (0, _._)(
               this.props.controlled === _.controlled,
               '"controlled" prop should never change after mount',
@@ -97341,9 +95740,8 @@
                 : this.SetSelectedOption(this.value.data)),
               (_ || _) &&
                 (this.state.bOpened
-                  ? ((_ = this.m_iMenuInstance) == null ||
-                      _.SetOnHideCallback(void 0),
-                    (_ = this.m_iMenuInstance) == null || _.Hide(),
+                  ? (this.m_iMenuInstance?.SetOnHideCallback(void 0),
+                    this.m_iMenuInstance?.Hide(),
                     (this.m_iMenuInstance = void 0),
                     this.BuildMenu())
                   : this.m_iMenuInstance &&
@@ -97375,40 +95773,35 @@
               this.props.onChange && this.props.onChange(_, this, _);
           }
           BuildMenu() {
-            var _, _, _, _, _;
             let _ = "DialogMenuPosition";
             this.props.strDropDownClassName &&
               (_ += " " + this.props.strDropDownClassName);
             let _ = {
                 bOverlapHorizontal: !0,
-                bMatchWidth: (_ = this.props.bMatchWidth) != null ? _ : !0,
+                bMatchWidth: this.props.bMatchWidth ?? !0,
                 bFitToWindow: !0,
                 strClassName: _,
                 bDisableMouseOverlay: this.props.bDisableMouseOverlay,
                 ...this.props.contextMenuPositionOptions,
               },
-              _ =
-                (_ = this.props.contextMenuPositionOptions) == null
-                  ? void 0
-                  : _.onCancel;
+              _ = this.props.contextMenuPositionOptions?.onCancel;
             (this.m_iMenuInstance = (0, _._)(
               (0, _.jsx)(_, {
                 rgOptions: this.props.rgOptions,
                 onValueSelected: this.OnValueSelected,
                 onCancel: _,
-                selectedValue: (_ = this.value) == null ? void 0 : _.data,
+                selectedValue: this.value?.data,
                 strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
                 strDropDownItemClassName: this.props.strDropDownItemClassName,
-                _: `dropdownmenu_${((_ = this.m_iMenuInstance)) == null ? void 0 : _.key}`,
+                _: `dropdownmenu_${this.m_iMenuInstance?.key}`,
               }),
               this.m_elInput,
               _,
             )),
               this.m_iMenuInstance.SetLabel(
-                (_ = this.props.menuLabel) != null
-                  ? _
-                  : typeof this.props.strDefaultLabel == "string" &&
-                      this.props.strDefaultLabel,
+                this.props.menuLabel ??
+                  (typeof this.props.strDefaultLabel == "string" &&
+                    this.props.strDefaultLabel),
               ),
               this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
           }
@@ -97431,34 +95824,26 @@
               );
           }
           OnKeyDown(_) {
-            var _;
-            _(
-              _,
-              this.props.rgOptions.filter(_),
-              (_ = this.value) == null ? void 0 : _.data,
-              (_) => this.OnValueSelected(void 0, _),
+            _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
+              this.OnValueSelected(void 0, _),
             );
           }
           render() {
-            var _, _, _, _, _;
-            let _ =
-              (_ = (_ = this.value) == null ? void 0 : _.label) != null
-                ? _
-                : this.props.strDefaultLabel;
+            let _ = this.value?.label ?? this.props.strDefaultLabel;
             this.props.renderButtonValue != null &&
               (_ = this.props.renderButtonValue(_));
-            const _ = (_ = this.props.focusable) != null ? _ : !0,
+            const _ = this.props.focusable ?? !0,
               _ =
                 this.props.renderButton ||
                 this.context.DropDownControlButton ||
                 _;
             return (0, _.jsx)(_, {
               focusable: _,
-              disabled: (_ = this.props.disabled) != null ? _ : !1,
+              disabled: this.props.disabled ?? !1,
               opened: this.state.bOpened,
               onClick: this.props.disabled ? void 0 : this.ToggleMenu,
               onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: (_ = this.props.tabIndex) != null ? _ : _ ? 0 : void 0,
+              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
               ref: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
               arrowClassName: this.props.arrowClassName,
@@ -97474,8 +95859,7 @@
             });
           }
         }
-        _(_, "contextType", _._),
-          _([_._], _.prototype, "OnInputRef", 1),
+        _([_._], _.prototype, "OnInputRef", 1),
           _([_._], _.prototype, "ToggleMenu", 1),
           _([_._], _.prototype, "OnValueSelected", 1),
           _([_._], _.prototype, "ShowMenu", 1),
@@ -97604,12 +95988,9 @@
           });
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                rgOptions: void 0,
-              });
-          }
+          state = {
+            rgOptions: void 0,
+          };
           async OnMenuOpened() {
             if (!this.state.rgOptions) {
               let _ = await this.props.fnLoadOptions();
@@ -97648,10 +96029,9 @@
         _([_._], _.prototype, "OnMenuOpened", 1);
         var _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _, _;
-          const _ = (_ = _.descriptionVisibility) != null ? _ : "always",
-            _ = (_ = _.upperDescriptionVisibility) != null ? _ : "always",
-            _ = (_ = _.iconVisibility) != null ? _ : "always",
+          const _ = _.descriptionVisibility ?? "always",
+            _ = _.upperDescriptionVisibility ?? "always",
+            _ = _.iconVisibility ?? "always",
             _ = classnames(styles.DropDownLabelContainer, _.strClassNames),
             _ = React.useContext(DropDownMenuContext) != null,
             _ = _.description != null && (_ || _ == "always"),
@@ -97697,15 +96077,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -97714,16 +96085,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = new _._("DragDrop").Debug;
         function _(_) {
           return _.children;
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments), _(this, "m_coordinator", new _());
-          }
+          m_coordinator = new _();
           OnDrop(_, _) {
             _ > _ && _--, _ != _ && this.props.onReorder(_, _);
           }
@@ -97787,21 +96155,14 @@
             : _ && _ >= _.left && _ <= _.right && _ >= _.top && _ <= _.bottom;
         }
         class _ {
-          constructor() {
-            _(this, "m_embeddedElement", new _._("DragGhosts")),
-              _(this, "m_rgDropRegions", []),
-              _(this, "m_activeDraggable"),
-              _(this, "m_rgActiveDropRegions", []),
-              _(this, "m_activeDropRegion"),
-              _(this, "m_dropGhost"),
-              _(this, "m_dragGhost"),
-              _(this, "m_dragOffWindowTimer"),
-              _(this, "m_elCloneContainer"),
-              _(this, "m_elCloneOriginal"),
-              _(this, "m_nodeCloneCopy"),
-              _(this, "m_prevClientX", 0),
-              _(this, "m_prevClientY", 0);
-          }
+          m_embeddedElement = new _._("DragGhosts");
+          m_rgDropRegions = [];
+          m_activeDraggable;
+          m_rgActiveDropRegions = [];
+          m_activeDropRegion;
+          m_dropGhost;
+          m_dragGhost;
+          m_dragOffWindowTimer;
           RegisterDropRegion(_) {
             this.m_rgDropRegions.push(_),
               this.m_activeDraggable &&
@@ -97841,6 +96202,9 @@
               this.m_activeDraggable,
             );
           }
+          m_elCloneContainer;
+          m_elCloneOriginal;
+          m_nodeCloneCopy;
           MakeDragClone(_) {
             (0, _._)(
               !this.m_nodeCloneCopy && !this.m_elCloneOriginal,
@@ -97856,9 +96220,10 @@
               this.m_elCloneContainer.appendChild(this.m_elCloneOriginal);
           }
           ReverseDragClone() {
-            var _;
-            (_ = this.m_nodeCloneCopy.parentNode) == null ||
-              _.replaceChild(this.m_elCloneOriginal, this.m_nodeCloneCopy),
+            this.m_nodeCloneCopy.parentNode?.replaceChild(
+              this.m_elCloneOriginal,
+              this.m_nodeCloneCopy,
+            ),
               (this.m_nodeCloneCopy = void 0),
               (this.m_elCloneOriginal = void 0);
           }
@@ -97913,8 +96278,9 @@
               }
             }
           }
+          m_prevClientX = 0;
+          m_prevClientY = 0;
           OnDrag(_, _, _) {
-            var _, _;
             const _ = this.m_prevClientX || _,
               _ = this.m_prevClientY || _;
             if (
@@ -97924,15 +96290,9 @@
               this.m_dragGhost)
             ) {
               const _ =
-                  _ === void 0
-                    ? 0
-                    : _ -
-                      ((_ = this.m_dragGhost.state.clientX) != null ? _ : 0),
+                  _ === void 0 ? 0 : _ - (this.m_dragGhost.state.clientX ?? 0),
                 _ =
-                  _ === void 0
-                    ? 0
-                    : _ -
-                      ((_ = this.m_dragGhost.state.clientY) != null ? _ : 0);
+                  _ === void 0 ? 0 : _ - (this.m_dragGhost.state.clientY ?? 0);
               if (
                 (this.m_dragGhost.setState({
                   clientX: _,
@@ -97989,23 +96349,21 @@
         const _ = 5;
         class _ extends _.Component {
           constructor(_) {
-            super(_),
-              _(this, "m_DragInfo", {
-                bStarted: !1,
-                startClientX: void 0,
-                startClientY: void 0,
-                startOffsetX: void 0,
-                startOffsetY: void 0,
-                startWidth: void 0,
-                startHeight: void 0,
-                ownerWin: void 0,
-              }),
-              _(this, "m_divRef", _.createRef()),
-              (0, _._)(this);
+            super(_), (0, _._)(this);
           }
+          m_DragInfo = {
+            bStarted: !1,
+            startClientX: void 0,
+            startClientY: void 0,
+            startOffsetX: void 0,
+            startOffsetY: void 0,
+            startWidth: void 0,
+            startHeight: void 0,
+            ownerWin: void 0,
+          };
+          m_divRef = _.createRef();
           GetDragDocument() {
-            var _;
-            return (_ = this.m_DragInfo.ownerWin) == null ? void 0 : _.document;
+            return this.m_DragInfo.ownerWin?.document;
           }
           RecordDragStart(_, _, _) {
             (this.m_DragInfo.startClientX = _),
@@ -98018,18 +96376,11 @@
               (this.m_DragInfo.ownerWin = _.ownerDocument.defaultView);
           }
           ProcessDragMove(_) {
-            var _, _;
             _("ProcessDragMove", _, this.props.data);
             const [_, _] = _(_);
             if (!this.m_DragInfo.bStarted)
-              Math.pow(
-                _ - ((_ = this.m_DragInfo.startClientX) != null ? _ : 0),
-                2,
-              ) +
-                Math.pow(
-                  _ - ((_ = this.m_DragInfo.startClientY) != null ? _ : 0),
-                  2,
-                ) >=
+              Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
+                Math.pow(_ - (this.m_DragInfo.startClientY ?? 0), 2) >=
                 _ * _ &&
                 ((this.m_DragInfo.bStarted = !0),
                 this.forceUpdate(),
@@ -98042,42 +96393,54 @@
             }
           }
           OnMouseDown(_) {
-            var _, _;
             !this.m_DragInfo.bStarted &&
               _.button == 0 &&
               (this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("mousemove", this.ProcessDragMove),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("mouseup", this.OnMouseUp));
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "mousemove",
+                this.ProcessDragMove,
+              ),
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ));
           }
           OnMouseUp(_) {
-            var _, _;
-            (_ = this.m_DragInfo.ownerWin) == null ||
-              _.removeEventListener("mousemove", this.ProcessDragMove),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.removeEventListener("mouseup", this.OnMouseUp),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "mousemove",
+              this.ProcessDragMove,
+            ),
+              this.m_DragInfo.ownerWin?.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              ),
               this.ResetDragState();
           }
           OnTouchStart(_) {
-            var _, _;
             this.m_DragInfo.bStarted ||
               (this.RecordDragStart(
                 _.currentTarget,
                 _.touches[0].clientX,
                 _.touches[0].clientY,
               ),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("touchmove", this.ProcessDragMove),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("touchend", this.OnTouchEnd));
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "touchmove",
+                this.ProcessDragMove,
+              ),
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              ));
           }
           OnTouchEnd(_) {
-            var _, _;
-            (_ = this.m_DragInfo.ownerWin) == null ||
-              _.removeEventListener("touchmove", this.ProcessDragMove),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.removeEventListener("touchend", this.OnTouchEnd),
+            this.m_DragInfo.ownerWin?.removeEventListener(
+              "touchmove",
+              this.ProcessDragMove,
+            ),
+              this.m_DragInfo.ownerWin?.removeEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              ),
               this.ResetDragState();
           }
           ResetDragState() {
@@ -98094,7 +96457,6 @@
               this.forceUpdate();
           }
           OnHTMLDragStart(_) {
-            var _, _;
             _("HTMLDragStart", _, this.props.data, this.props.strHTMLDragData),
               (_.dataTransfer.effectAllowed = "copyMove"),
               this.props.strHTMLDragData &&
@@ -98109,34 +96471,34 @@
             const _ = new Image();
             _.dataTransfer.setDragImage(_, 0, 0),
               this.RecordDragStart(_.currentTarget, _.clientX, _.clientY),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("drag", this.OnHTMLDrag),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.addEventListener("dragend", this.OnHTMLDragEnd);
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "drag",
+                this.OnHTMLDrag,
+              ),
+              this.m_DragInfo.ownerWin?.addEventListener(
+                "dragend",
+                this.OnHTMLDragEnd,
+              );
           }
           OnHTMLDrag(_) {
-            var _;
-            _(
-              "HTMLDrag",
-              _,
-              (_ = _.dataTransfer) == null ? void 0 : _.types.length,
-            ),
+            _("HTMLDrag", _, _.dataTransfer?.types.length),
               this.ProcessDragMove(_);
           }
           OnHTMLDragEnd(_) {
-            var _, _, _;
             _(
               "HTMLDragEnd",
               _,
-              ((_ = _.dataTransfer) == null
-                ? void 0
-                : _.getData("text/plain")) || "NOTHING",
+              _.dataTransfer?.getData("text/plain") || "NOTHING",
               this.props.data,
             ),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.removeEventListener("drag", this.OnHTMLDrag),
-              (_ = this.m_DragInfo.ownerWin) == null ||
-                _.removeEventListener("dragend", this.OnHTMLDragEnd),
+              this.m_DragInfo.ownerWin?.removeEventListener(
+                "drag",
+                this.OnHTMLDrag,
+              ),
+              this.m_DragInfo.ownerWin?.removeEventListener(
+                "dragend",
+                this.OnHTMLDragEnd,
+              ),
               this.ResetDragState();
           }
           render() {
@@ -98235,16 +96597,13 @@
         }
         _([_._], _.prototype, "OnRef", 1);
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                clientX: void 0,
-                clientY: void 0,
-                bVisible: !0,
-                clientXDelta: void 0,
-                clientYDelta: void 0,
-              });
-          }
+          state = {
+            clientX: void 0,
+            clientY: void 0,
+            bVisible: !0,
+            clientXDelta: void 0,
+            clientYDelta: void 0,
+          };
           OnRef(_) {
             _ && this.props.elContent && _.appendChild(this.props.elContent);
           }
@@ -98254,7 +96613,6 @@
               : (_ > 0 ? 7.5 : -7.5) * Math.sqrt(Math.abs(_));
           }
           render() {
-            var _;
             if (
               !this.state.bVisible ||
               this.state.clientX === void 0 ||
@@ -98276,7 +96634,7 @@
                 0,
               ),
               _ = {
-                transform: `rotateX(${this.CalculateRotationDegrees(-1 * ((_ = this.state.clientYDelta) != null ? _ : 0))}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
+                transform: `rotateX(${this.CalculateRotationDegrees(-1 * (this.state.clientYDelta ?? 0))}deg) rotateY( ${this.CalculateRotationDegrees(this.state.clientXDelta)}deg)`,
                 transition: "transform .16s ease-out, filter .16s ease-out",
                 filter: "brightness(" + _ + ")",
               };
@@ -98293,8 +96651,9 @@
         }
         _([_._], _.prototype, "OnRef", 1);
         class _ extends _.Component {
+          m_divRef = _.createRef();
           constructor(_) {
-            super(_), _(this, "m_divRef", _.createRef()), (this.state = {});
+            super(_), (this.state = {});
           }
           componentDidMount() {
             this.props.coordinator.RegisterDropRegion(this);
@@ -98396,15 +96755,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -98413,29 +96763,29 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = "separator",
           _ = "spacer";
         class _ {
           constructor() {
-            _(this, "m_flPageListScrollTop", 0),
-              _(this, "m_flPageScrollTop", 0),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_flPageListScrollTop = 0;
+          m_flPageScrollTop = 0;
         }
         _([_._], _.prototype, "m_flPageListScrollTop", 2),
           _([_._], _.prototype, "m_flPageScrollTop", 2);
         const _ = class _ {
-          constructor() {
-            _(this, "m_setPagedSettingsInstances", new Set()), (0, _._)(this);
-          }
+          static s_Instance;
           static Get() {
             return _.s_Instance || (_.s_Instance = new _()), _.s_Instance;
           }
+          constructor() {
+            (0, _._)(this);
+          }
+          m_setPagedSettingsInstances = new Set();
         };
-        _(_, "s_Instance"),
-          _([_._], _.prototype, "m_setPagedSettingsInstances", 2);
+        _([_._], _.prototype, "m_setPagedSettingsInstances", 2);
         let _ = _;
         var _ = ((_) => (
           (_[(_.k_EPagedSettingsInitialFocus_Default = 0)] =
@@ -98540,29 +96890,28 @@
           });
         }
         const _ = _.forwardRef(function (_, _) {
-          var _;
           const { activePage: _, style: _, stylesheet: _ } = _,
             _ = _.useContext(_),
-            _ = (_ = _ == null ? void 0 : _.padding) != null ? _ : "standard";
+            _ = _?.padding ?? "standard";
           return (0, _.jsxs)(_._, {
             style: _,
             className: (0, _._)(
-              _ == null ? void 0 : _.PagedSettingsDialog_PageContent,
-              _ == null ? void 0 : _.pageClassName,
-              _ == "none" && (_ == null ? void 0 : _.NoPadding),
+              _?.PagedSettingsDialog_PageContent,
+              _?.pageClassName,
+              _ == "none" && _?.NoPadding,
             ),
             refElem: _,
             role: "tabpanel",
-            "aria-labelledby": _ + (_ == null ? void 0 : _.identifier),
-            _: _ + (_ == null ? void 0 : _.identifier) + "_Content",
+            "aria-labelledby": _ + _?.identifier,
+            _: _ + _?.identifier + "_Content",
             children: [
-              _ == null ? void 0 : _.header,
-              !(_ != null && _.hideTitle) &&
+              _?.header,
+              !_?.hideTitle &&
                 (0, _.jsx)(_._, {
-                  children: _ == null ? void 0 : _.title,
+                  children: _?.title,
                 }),
               (0, _.jsx)(_._, {
-                children: _ == null ? void 0 : _.content,
+                children: _?.content,
               }),
             ],
           });
@@ -98584,7 +96933,6 @@
         }
         const _ = _.createContext(void 0),
           _ = _.forwardRef(function (_, _) {
-            var _;
             const {
                 stylesheet: _ = _(),
                 pages: _,
@@ -98610,10 +96958,7 @@
             let _ = null;
             typeof _[_] == "object" && (_ = _[_]);
             const _ = _.useRef(null),
-              _ = _.useCallback(() => {
-                var _;
-                return ((_ = _.current) == null ? void 0 : _.TakeFocus()) || !1;
-              }, [_]),
+              _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
               [_, _] = _.useState(!1),
               _ = _ ? _ : void 0,
               _ = _.useCallback((_) => {
@@ -98630,18 +96975,16 @@
               ),
               _ = _.useRef(null),
               _ = (_) => {
-                var _;
                 _.detail.button == _._._ &&
-                  ((_ = _.current) == null || _.TakeFocus(_.detail.button));
+                  _.current?.TakeFocus(_.detail.button);
               },
-              _ = (_ = _.showTitle) != null ? _ : !0,
+              _ = _.showTitle ?? !0,
               _ = (0, _._)(
                 "DialogContentTransition",
                 _.PagedSettingDialog_ContentColumn,
               );
             _.useEffect(() => {
-              var _;
-              _ === 2 && ((_ = _.current) == null || _.TakeFocus());
+              _ === 2 && _.current?.TakeFocus();
             }, []);
             const { refForPageList: _, refForPage: _ } = _();
             return (0, _.jsx)(_.Provider, {
@@ -98830,17 +97173,13 @@
             _ = (0, _._)("scroll", _),
             _ = _.useCallback(
               (_) => {
-                var _;
-                _.m_flPageListScrollTop =
-                  (_ = _ == null ? void 0 : _.scrollTop) != null ? _ : 0;
+                _.m_flPageListScrollTop = _?.scrollTop ?? 0;
               },
               [_],
             ),
             _ = _.useCallback(
               (_) => {
-                var _;
-                _.m_flPageScrollTop =
-                  (_ = _ == null ? void 0 : _.scrollTop) != null ? _ : 0;
+                _.m_flPageScrollTop = _?.scrollTop ?? 0;
               },
               [_],
             ),
@@ -98853,15 +97192,6 @@
         }
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -98870,25 +97200,19 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "m_refTextArea", _.createRef()),
-              _(this, "m_nTextAreaPadding"),
-              _(this, "m_cEntryLength", Number.MAX_VALUE);
-          }
+          m_refTextArea = _.createRef();
+          m_nTextAreaPadding;
+          m_cEntryLength = Number.MAX_VALUE;
           get textarea() {
             return this.m_refTextArea.current;
           }
           get value() {
-            var _;
-            return (_ = this.m_refTextArea.current) == null ? void 0 : _.value;
+            return this.m_refTextArea.current?.value;
           }
           focus() {
-            var _;
-            (_ = this.m_refTextArea.current) == null || _.focus();
+            this.m_refTextArea.current?.focus();
           }
           InternalOnInput() {
             const _ = this.m_refTextArea.current,
@@ -98950,13 +97274,10 @@
               this.InternalOnInput();
           }
           componentDidUpdate(_) {
-            var _;
             (_.nMinHeight != this.props.nMinHeight ||
               _.nMaxHeight != this.props.nMaxHeight) &&
               (this.m_cEntryLength = Number.MAX_VALUE),
-              ((_ = this.m_refTextArea.current) == null
-                ? void 0
-                : _.value.length) != this.m_cEntryLength &&
+              this.m_refTextArea.current?.value.length != this.m_cEntryLength &&
                 this.InternalOnInput();
           }
           render() {
@@ -99021,33 +97342,29 @@
               ..._
             } = _,
             _ = (0, _._)(),
-            _ = _ != null ? _ : "inline",
-            _ = _ != null ? _ : "front",
+            _ = _ ?? "inline",
+            _ = _ ?? "front",
             _ = _ == "front" && !!_,
             _ = _ == "before-children" && !!_,
             _ = _ == "inline" && !!_,
             _ = _ == "below" && !!_,
-            _ = _ != null ? _ : "keep-inline",
+            _ = _ ?? "keep-inline",
             _ = !!(_.onClick || _.onActivate || _.focusable),
             _ = (_ && !!_) || !!_,
-            _ = _ != null ? _ : "min",
-            _ = _ != null ? _ : "standard",
-            _ = _ != null ? _ : "standard",
-            _ = _ != null ? _ : "standard",
-            _ = _ != null ? _ : !0,
-            _ = _ != null ? _ : 0,
-            _ = _ != null ? _ : "center",
+            _ = _ ?? "min",
+            _ = _ ?? "standard",
+            _ = _ ?? "standard",
+            _ = _ ?? "standard",
+            _ = _ ?? !0,
+            _ = _ ?? 0,
+            _ = _ ?? "center",
             _ = !_ && !_,
-            _ = _ != null ? _ : _,
-            _ = _(_, _),
+            _ = _(_ ?? _, _),
             _ = _.useRef(void 0),
             _ = (0, _._)(_, _.navRef),
             _ = _.useCallback(
               (_) => {
-                var _;
-                _.current &&
-                  ((_ = _.current) == null || _.TakeFocus(),
-                  _.preventDefault());
+                _.current && (_.current?.TakeFocus(), _.preventDefault());
               },
               [_],
             );
@@ -99069,12 +97386,7 @@
             focusable: _,
             noFocusRing: !0,
             scrollIntoViewWhenChildFocused: !0,
-            onActivate: _.onClick
-              ? (_) => {
-                  var _;
-                  return (_ = _.onClick) == null ? void 0 : _.call(_, _);
-                }
-              : void 0,
+            onActivate: _.onClick ? (_) => _.onClick?.(_) : void 0,
             ref: _,
             onMouseDown: _ ? void 0 : _,
             ..._,
@@ -99154,8 +97466,7 @@
         function _(_, _) {
           const _ = (0, _._)(),
             _ = _.useCallback(() => {
-              var _;
-              (0, _._)(_, _, (_ = _.ownerWindow) != null ? _ : window);
+              (0, _._)(_, _, _.ownerWindow ?? window);
             }, [_, _, _]);
           if (_ == null) return {};
           const _ = (0, _._)("#Field_MoreInfo_Action");
@@ -99232,8 +97543,7 @@
               { refWithValue: _, refForElement: _ } = (0, _._)(_),
               _ = _.useId(),
               _ = (_) => {
-                var _;
-                (_ = _.current) == null || _.focus(), _.preventDefault();
+                _.current?.focus(), _.preventDefault();
               };
             return (0, _.jsxs)(_, {
               accessibilityId: _,
@@ -99243,8 +97553,8 @@
               icon: _,
               bottomSeparator: _,
               highlightOnFocus: _,
-              childrenLayout: _ != null ? _ : "inline",
-              childrenContainerWidth: _ != null ? _ : "min",
+              childrenLayout: _ ?? "inline",
+              childrenContainerWidth: _ ?? "min",
               onMouseDown: _,
               padding: _,
               inlineWrap: _,
@@ -99305,10 +97615,7 @@
               { refWithValue: _, refForElement: _ } = (0, _._)(_),
               _ = _.useId(),
               _ = (_) => {
-                var _, _;
-                (_ = (_ = _.current) == null ? void 0 : _.element) == null ||
-                  _.focus(),
-                  _.preventDefault();
+                _.current?.element?.focus(), _.preventDefault();
               };
             return (0, _.jsx)(_, {
               accessibilityId: _,
@@ -99317,7 +97624,7 @@
               icon: _,
               bottomSeparator: _,
               highlightOnFocus: _,
-              childrenLayout: _ != null ? _ : "inline",
+              childrenLayout: _ ?? "inline",
               childrenContainerWidth: "fixed",
               onMouseDown: _,
               children: (0, _.jsx)(_, {
@@ -99328,10 +97635,9 @@
             });
           });
         function _(_) {
-          var _, _, _;
-          const _ = (_ = _.alignItems) != null ? _ : "left",
-            _ = (_ = _.spacing) != null ? _ : "standard",
-            _ = (_ = _.itemMaxSize) != null ? _ : "gamepad";
+          const _ = _.alignItems ?? "left",
+            _ = _.spacing ?? "standard",
+            _ = _.itemMaxSize ?? "gamepad";
           return jsx(Panel, {
             className: classnames(
               gamepadDialogStyles.ControlsListOuterPanel,
@@ -99648,8 +97954,7 @@
             _ = _.onClick,
             _ = React.useCallback(
               (_) => {
-                _.detail.focusSource === EFocusSource.GAMEPAD &&
-                  (_ == null || _());
+                _.detail.focusSource === EFocusSource.GAMEPAD && _?.();
               },
               [_],
             );
@@ -99688,13 +97993,11 @@
             _ = React.useRef(null),
             _ = React.useRef(!0);
           React.useEffect(() => {
-            var _;
             const _ =
               !_ ||
               _ ===
                 EPagedSettingsInitialFocus.k_EPagedSettingsInitialFocus_PageList;
-            (!_.current || _) && ((_ = _.current) == null || _.TakeFocus()),
-              (_.current = !1);
+            (!_.current || _) && _.current?.TakeFocus(), (_.current = !1);
           }, [_, _]);
           const _ = (_, _, _) =>
             jsx(_, {
@@ -99724,10 +98027,10 @@
             } = _,
             _ = React.useMemo(() => _.findIndex((_) => _ == _), [_, _]),
             _ = _(_),
-            _ = _(_ == null ? void 0 : _.identifier, _);
+            _ = _(_?.identifier, _);
           let _ = OverlapDirectionStyle(styles, _);
           return jsx(OverlappingTransition, {
-            childrenKey: _ == null ? void 0 : _.identifier,
+            childrenKey: _?.identifier,
             childrenClasses: OverlappingClasses(
               styles,
               styles.ContentTransition,
@@ -99783,12 +98086,11 @@
           );
         }
         function _(_) {
-          var _;
           return jsx(FocusableInput, {
             noFocusRing: !0,
             ..._,
             className: classnames(styles.BasicTextInput, _.className),
-            size: (_ = _.size) != null ? _ : 1,
+            size: _.size ?? 1,
           });
         }
         function _(_) {
@@ -99815,10 +98117,9 @@
           });
         }
         function _(_) {
-          var _, _;
           if (!_.children) return null;
-          const _ = (_ = _.topPadding) != null ? _ : "standard",
-            _ = (_ = _.alignItems) != null ? _ : "left",
+          const _ = _.topPadding ?? "standard",
+            _ = _.alignItems ?? "left",
             _ = classnames(
               styles.BottomButtons,
               _ == "standard" && styles.StandardPadding,
@@ -99872,10 +98173,10 @@
             _ = React.useId(),
             _ = {
               label: _,
-              description: _ != null ? _ : _,
+              description: _ ?? _,
             },
             _ = useInDesktopUI();
-          let _ = _ != null ? _ : "inline",
+          let _ = _ ?? "inline",
             _ = _;
           return (
             !_ &&
@@ -99921,37 +98222,35 @@
         }
         function _(_) {
           const _ = (_) =>
-            _ == null
-              ? void 0
-              : _.map((_, _) =>
-                  _(_)
-                    ? (0, _.jsx)(_._, {}, _)
-                    : _(_)
-                      ? (0, _.jsx)(
-                          _._,
-                          {
-                            role: "option",
-                            onSelected: (_) =>
-                              _.onValueSelected && _.onValueSelected(_, _),
-                            selected: _.selectedValue === _.data,
-                            children: (0, _.jsx)(_.Fragment, {
-                              children: _.label,
-                            }),
-                          },
-                          _,
-                        )
-                      : _(_)
-                        ? (0, _.jsx)(
-                            _._,
-                            {
-                              label: _.label,
-                              selectedWithin: _(_, _.selectedValue),
-                              children: _(_.options),
-                            },
-                            _,
-                          )
-                        : null,
-                );
+            _?.map((_, _) =>
+              _(_)
+                ? (0, _.jsx)(_._, {}, _)
+                : _(_)
+                  ? (0, _.jsx)(
+                      _._,
+                      {
+                        role: "option",
+                        onSelected: (_) =>
+                          _.onValueSelected && _.onValueSelected(_, _),
+                        selected: _.selectedValue === _.data,
+                        children: (0, _.jsx)(_.Fragment, {
+                          children: _.label,
+                        }),
+                      },
+                      _,
+                    )
+                  : _(_)
+                    ? (0, _.jsx)(
+                        _._,
+                        {
+                          label: _.label,
+                          selectedWithin: _(_, _.selectedValue),
+                          children: _(_.options),
+                        },
+                        _,
+                      )
+                    : null,
+            );
           return (0, _.jsx)(_._, {
             onCancel: _.onCancel,
             role: "listbox",
@@ -100008,11 +98307,7 @@
               _ = (0, _._)(_, _);
             const [_, _] = _.useState(!1),
               _ = _.useCallback(() => {
-                _((_) => !_),
-                  window.setTimeout(() => {
-                    var _;
-                    return (_ = _.current) == null ? void 0 : _.Focus();
-                  }, 1);
+                _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
               }, []);
             return (0, _.jsx)(_._, {
               className: _,
@@ -100081,7 +98376,7 @@
         }
         const _ = _.forwardRef(function (_, _) {
           const { className: _, value: _, ..._ } = _,
-            _ = _ != null ? _ : "",
+            _ = _ ?? "",
             _ = (_) => {
               let _ = _.target.value;
               if (_(_)) _.onChange && _.onChange(_);
@@ -100112,11 +98407,7 @@
             } = _,
             _ = React.useRef([]);
           React.useEffect(() => {
-            var _, _;
-            (_ =
-              (_ = _.current[Math.min(_.length, _ - 1)]) == null
-                ? void 0
-                : _.current) == null || _.TakeFocus();
+            _.current[Math.min(_.length, _ - 1)]?.current?.TakeFocus();
           }, [_, _]);
           const _ = (_) => {
               (_ && !_(_.target.value)) || _(_ + _.target.value);
@@ -100699,15 +98990,6 @@
           ))(_ || {}),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -100716,8 +98998,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 10,
           _ = 1,
           _ = !0,
@@ -100744,33 +99025,25 @@
           _
         ))(_ || {});
         class _ extends _.Component {
-          constructor(_) {
-            super(_),
-              _(this, "m_refSlider", _.createRef()),
-              _(this, "m_refHandle", _.createRef()),
-              _(this, "m_navRefSlider", _.createRef()),
-              _(this, "m_sliderBounds"),
-              _(this, "m_handleBounds"),
-              _(this, "m_fZoom", 1),
-              _(this, "m_eDragMode", 0),
-              _(this, "m_vTouchStartPosition", (0, _._)()),
-              _(this, "m_fStartValue"),
-              _(this, "m_fLatestUserValue"),
-              _(this, "m_fLatestOnChangeValue"),
-              _(this, "m_bInnerSliderHasFocus", !1),
-              _(this, "m_nRepeatCount", 0),
-              _(this, "m_fInitalRepeatTime"),
-              (this.m_fStartValue = this.props.value),
-              (this.m_fLatestUserValue = this.props.value),
-              (this.m_fLatestOnChangeValue = this.props.value);
-          }
+          m_refSlider = _.createRef();
+          m_refHandle = _.createRef();
+          m_navRefSlider = _.createRef();
+          m_sliderBounds = void 0;
+          m_handleBounds = void 0;
+          m_fZoom = 1;
+          m_eDragMode = 0;
+          m_vTouchStartPosition = (0, _._)();
+          m_fStartValue;
+          m_fLatestUserValue;
+          m_fLatestOnChangeValue;
+          m_bInnerSliderHasFocus = !1;
+          m_nRepeatCount = 0;
+          m_fInitalRepeatTime = void 0;
           get showHandle() {
-            var _;
-            return (_ = this.props.showHandle) != null ? _ : !0;
+            return this.props.showHandle ?? !0;
           }
           get isKeyNavTarget() {
-            var _;
-            return (_ = this.props.isKeyNavTarget) != null ? _ : !0;
+            return this.props.isKeyNavTarget ?? !0;
           }
           get validRange() {
             return this.props.min < this.props.max;
@@ -100779,19 +99052,16 @@
             return this.validRange ? this.props.max - this.props.min : 0;
           }
           get step() {
-            var _;
-            return Math.abs((_ = this.props.step) != null ? _ : _);
+            return Math.abs(this.props.step ?? _);
           }
           get stepSound() {
-            var _;
-            return (_ = this.props.stepSound) != null ? _ : _;
+            return this.props.stepSound ?? _;
           }
           get normalizedStep() {
             return this.step / this.range;
           }
           get normalizedDpadStep() {
-            var _;
-            const _ = (_ = this.props.dpadStep) != null ? _ : this.step,
+            const _ = this.props.dpadStep ?? this.step,
               _ = _ > 0 ? _ / this.range : _;
             return Math.max(_, this.normalizedStep);
           }
@@ -100837,19 +99107,19 @@
                 return;
             }
           }
+          constructor(_) {
+            super(_),
+              (this.m_fStartValue = this.props.value),
+              (this.m_fLatestUserValue = this.props.value),
+              (this.m_fLatestOnChangeValue = this.props.value);
+          }
           RecomputeSliderBounds() {
-            var _, _;
             (this.m_sliderBounds =
-              (_ = this.m_refSlider.current) == null
-                ? void 0
-                : _.getBoundingClientRect()),
+              this.m_refSlider.current?.getBoundingClientRect()),
               (this.m_handleBounds =
-                (_ = this.m_refHandle.current) == null
-                  ? void 0
-                  : _.getBoundingClientRect());
+                this.m_refHandle.current?.getBoundingClientRect());
           }
           SetDragMode(_) {
-            var _, _, _, _, _, _, _, _;
             if (_ != this.m_eDragMode) {
               switch (
                 ((this.m_eDragMode = _),
@@ -100871,37 +99141,37 @@
               }
               switch (_) {
                 case 1:
-                  (_ =
-                    (_ = this.m_refSlider.current) == null
-                      ? void 0
-                      : _.ownerDocument) == null ||
-                    _.addEventListener("mousemove", this.OnWindowMouseMove, {
+                  this.m_refSlider.current?.ownerDocument?.addEventListener(
+                    "mousemove",
+                    this.OnWindowMouseMove,
+                    {
                       passive: !1,
-                    }),
-                    (_ =
-                      (_ = this.m_refSlider.current) == null
-                        ? void 0
-                        : _.ownerDocument) == null ||
-                      _.addEventListener("mouseup", this.OnWindowMouseUp, {
+                    },
+                  ),
+                    this.m_refSlider.current?.ownerDocument?.addEventListener(
+                      "mouseup",
+                      this.OnWindowMouseUp,
+                      {
                         passive: !1,
-                      });
+                      },
+                    );
                   break;
                 case 2:
                 case 3:
-                  (_ =
-                    (_ = this.m_refSlider.current) == null
-                      ? void 0
-                      : _.ownerDocument) == null ||
-                    _.addEventListener("touchmove", this.OnWindowTouchMove, {
+                  this.m_refSlider.current?.ownerDocument?.addEventListener(
+                    "touchmove",
+                    this.OnWindowTouchMove,
+                    {
                       passive: !1,
-                    }),
-                    (_ =
-                      (_ = this.m_refSlider.current) == null
-                        ? void 0
-                        : _.ownerDocument) == null ||
-                      _.addEventListener("touchend", this.OnWindowTouchEnd, {
+                    },
+                  ),
+                    this.m_refSlider.current?.ownerDocument?.addEventListener(
+                      "touchend",
+                      this.OnWindowTouchEnd,
+                      {
                         passive: !1,
-                      });
+                      },
+                    );
                   break;
                 case 0:
                   this.RemoveDocumentEventListeners();
@@ -100910,7 +99180,6 @@
             }
           }
           OnGamepadDirection(_) {
-            var _, _;
             if (this.props.disabled) return !1;
             let _ = 0;
             if (_.detail.button == _._.DIR_LEFT) _ = -1;
@@ -100932,8 +99201,8 @@
             if (
               ((_ = (0, _._)(
                 _,
-                (_ = this.props.clampMin) != null ? _ : this.props.min,
-                (_ = this.props.clampMax) != null ? _ : this.props.max,
+                this.props.clampMin ?? this.props.min,
+                this.props.clampMax ?? this.props.max,
               )),
               _ != this.props.value)
             ) {
@@ -100951,7 +99220,6 @@
               this.props.onChange && this.props.onChange(_, _));
           }
           ComputeNormalizedValueForMousePosition(_) {
-            var _;
             if (this.m_sliderBounds == null) return 0;
             const _ = _ / this.m_fZoom,
               _ = this.m_sliderBounds.right - this.m_sliderBounds.left,
@@ -100961,39 +99229,25 @@
                   : this.m_handleBounds.right - this.m_handleBounds.left,
               _ = _ - _,
               _ = (_ - this.m_sliderBounds.left - _ / 2) / _;
-            return (_ = this.m_refSlider.current) != null &&
-              _.matches(":dir(rtl)")
-              ? 1 - _
-              : _;
+            return this.m_refSlider.current?.matches(":dir(rtl)") ? 1 - _ : _;
           }
           BShouldTriggerHapticOnSnap() {
             const _ = this.normalizedStep;
             return _ > 0 && _ >= 1 / 40;
           }
           PlayHaptic(_) {
-            var _, _, _, _, _;
-            (_ =
-              (_ =
-                (_ =
-                  (_ =
-                    (_ = this.m_refSlider.current) == null
-                      ? void 0
-                      : _.ownerDocument.defaultView) == null
-                    ? void 0
-                    : _.SteamClient) == null
-                  ? void 0
-                  : _.OpenVR) == null
-                ? void 0
-                : _.TriggerOverlayHapticEffect) == null || _.call(_, _, 0);
+            this.m_refSlider.current?.ownerDocument.defaultView?.SteamClient?.OpenVR?.TriggerOverlayHapticEffect?.(
+              _,
+              0,
+            );
           }
           UpdateSliderValueForPosition(_) {
-            var _, _;
             if (this.props.disabled || !this.m_refSlider.current) return;
             const _ = this.ComputeNormalizedValueForMousePosition(_),
               _ = _(this.normalizedStep, _);
             let _ = _(this.props.min, this.props.max, _);
-            const _ = (_ = this.props.clampMin) != null ? _ : this.props.min,
-              _ = (_ = this.props.clampMax) != null ? _ : this.props.max;
+            const _ = this.props.clampMin ?? this.props.min,
+              _ = this.props.clampMax ?? this.props.max;
             if (((_ = (0, _._)(_, _, _)), _ != this.props.value)) {
               const _ = _ > this.props.value,
                 _ = this.step == 0;
@@ -101056,7 +99310,6 @@
               }));
           }
           OnWindowTouchMove(_) {
-            var _;
             if (_.touches.length == 1) {
               switch (this.m_eDragMode) {
                 case 2:
@@ -101067,8 +99320,7 @@
                   if ((0, _._)(this.m_vTouchStartPosition, _) >= _) {
                     const _ = (0, _._)(this.m_vTouchStartPosition, _);
                     Math.abs(_._) > Math.abs(_._)
-                      ? (this.SetDragMode(3),
-                        (_ = this.m_refSlider.current) == null || _.focus())
+                      ? (this.SetDragMode(3), this.m_refSlider.current?.focus())
                       : this.SetDragMode(0);
                   }
                   break;
@@ -101102,27 +99354,22 @@
             }
           }
           RemoveDocumentEventListeners() {
-            var _, _, _, _, _, _, _, _;
-            (_ =
-              (_ = this.m_refSlider.current) == null
-                ? void 0
-                : _.ownerDocument) == null ||
-              _.removeEventListener("mousemove", this.OnWindowMouseMove),
-              (_ =
-                (_ = this.m_refSlider.current) == null
-                  ? void 0
-                  : _.ownerDocument) == null ||
-                _.removeEventListener("touchmove", this.OnWindowTouchMove),
-              (_ =
-                (_ = this.m_refSlider.current) == null
-                  ? void 0
-                  : _.ownerDocument) == null ||
-                _.removeEventListener("mouseup", this.OnWindowMouseUp),
-              (_ =
-                (_ = this.m_refSlider.current) == null
-                  ? void 0
-                  : _.ownerDocument) == null ||
-                _.removeEventListener("touchend", this.OnWindowTouchEnd);
+            this.m_refSlider.current?.ownerDocument?.removeEventListener(
+              "mousemove",
+              this.OnWindowMouseMove,
+            ),
+              this.m_refSlider.current?.ownerDocument?.removeEventListener(
+                "touchmove",
+                this.OnWindowTouchMove,
+              ),
+              this.m_refSlider.current?.ownerDocument?.removeEventListener(
+                "mouseup",
+                this.OnWindowMouseUp,
+              ),
+              this.m_refSlider.current?.ownerDocument?.removeEventListener(
+                "touchend",
+                this.OnWindowTouchEnd,
+              );
           }
           componentDidMount() {
             this.m_fZoom = (0, _._)(this.m_refSlider.current);
@@ -101131,8 +99378,7 @@
             this.RemoveDocumentEventListeners();
           }
           BlurInnerSlider() {
-            var _;
-            (_ = this.m_navRefSlider.current) == null || _.ParentTakeFocus();
+            this.m_navRefSlider.current?.ParentTakeFocus();
           }
           OnInnerSliderFocus() {
             (this.m_bInnerSliderHasFocus = !0),
@@ -101207,8 +99453,8 @@
                 trackTone: _,
                 ..._
               } = this.props,
-              _ = _ != null ? _ : !1,
-              _ = _ != null ? _ : !_,
+              _ = _ ?? !1,
+              _ = _ ?? !_,
               _ = _ ? 2 : _,
               _ = [
                 {
@@ -101221,7 +99467,7 @@
                 },
               ],
               _ = _ ? _ : _,
-              _ = _ != null ? _ : !0,
+              _ = _ ?? !0,
               _ = this.normalizedDefaultValue,
               _ = this.normalizedSliderOrigin,
               _ = _ != null,
@@ -101298,7 +99544,7 @@
                   "--default-value-track-color": _
                     ? _.trackForegroundColor
                     : void 0,
-                  "--slider-extra-notch-padding": _ != null ? _ : "0px",
+                  "--slider-extra-notch-padding": _ ?? "0px",
                 },
                 ref: (0, _._)(this.m_refSlider, _),
                 navRef: this.m_navRefSlider,
@@ -101387,7 +99633,7 @@
               notchTicksVisible: _,
               renderNotch: _,
             } = _,
-            _ = _ != null ? _ : [];
+            _ = _ ?? [];
           if (!_) return null;
           let _ = !1,
             _ = [];
@@ -101435,7 +99681,6 @@
           });
         }
         function _(_) {
-          var _;
           const { alignLeftEnd: _, alignRightEnd: _, active: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -101450,7 +99695,7 @@
                     _ && _().AlignToLeft,
                     _ && _().AlignToRight,
                   ),
-                  children: (_ = _.notchLabel) == null ? void 0 : _.label,
+                  children: _.notchLabel?.label,
                 }),
             ],
           });
@@ -101489,10 +99734,7 @@
             _ = React.useRef(null),
             _ = React.useRef(null),
             _ = React.useRef(null),
-            _ = (_ != null ? _ : k_fnDefaultSliderValueRenderer)(
-              _.value,
-              _.valueSuffix,
-            ),
+            _ = (_ ?? k_fnDefaultSliderValueRenderer)(_.value, _.valueSuffix),
             _ = _(_),
             [_, _] = React.useState(!1),
             _ = () => {
@@ -101512,11 +99754,7 @@
                 _(!1);
             };
           React.useEffect(() => {
-            var _, _;
-            !_ &&
-              (_ = _.current) != null &&
-              _.BHasFocus() &&
-              ((_ = _.current) == null || _.TakeFocus());
+            !_ && _.current?.BHasFocus() && _.current?.TakeFocus();
           }, [_, _, _]);
           let _ = _;
           _
@@ -101557,15 +99795,13 @@
           const _ = React.useRef(null),
             _ = React.useCallback(
               (_) => {
-                var _;
-                (_ = _.current) == null || _.OnTouchStart(_.nativeEvent);
+                _.current?.OnTouchStart(_.nativeEvent);
               },
               [_],
             ),
             _ = React.useCallback(
               (_) => {
-                var _;
-                (_ = _.current) == null || _.OnContextMenu(_);
+                _.current?.OnContextMenu(_);
               },
               [_],
             ),
@@ -101585,10 +99821,10 @@
             accessibilityId: _,
             ..._,
             disabled: _,
-            childrenLayout: _ != null ? _ : "below",
+            childrenLayout: _ ?? "below",
             padding: _,
             bottomSeparator: _,
-            childrenContainerWidth: _ != null ? _ : "fixed",
+            childrenContainerWidth: _ ?? "fixed",
             ref: _,
             className: _,
             onTouchStart: _,
@@ -101601,7 +99837,7 @@
             onOptionsButton: _,
             onOptionsActionDescription: _,
             icon: _,
-            iconLocation: _ != null ? _ : "before-children",
+            iconLocation: _ ?? "before-children",
             explainer: _,
             explainerTitle: _,
             transparentBackground: _,
@@ -101643,48 +99879,43 @@
             _ = React.useRef(!1),
             _ = React.useCallback(
               (_) => {
-                var _;
                 !_ && _.length > 0 && _(),
                   _.current ||
                     ((_ || _) &&
                       (_(Number.parseFloat(_)),
                       (_.current = !0),
-                      (_ = _.current) == null || _.HideVirtualKeyboard()));
+                      _.current?.HideVirtualKeyboard()));
               },
               [_, _, _, _],
             ),
             _ = React.useCallback(
               (_) => {
-                var _;
                 _.key == "Enter" &&
                   (!_ && _.length > 0 && _(),
                   _.current ||
                     (_ &&
                       (_(Number.parseFloat(_)),
                       (_.current = !0),
-                      (_ = _.current) == null || _.HideVirtualKeyboard(),
+                      _.current?.HideVirtualKeyboard(),
                       _.stopPropagation(),
                       _.preventDefault())));
               },
               [_, _, _, _],
             ),
             _ = () => (_.current = !1),
-            _ = React.useCallback(() => {
-              var _;
-              return (_ = _.current) == null
-                ? void 0
-                : _.TakeFocusAndShowKeyboard();
-            }, [_]),
+            _ = React.useCallback(
+              () => _.current?.TakeFocusAndShowKeyboard(),
+              [_],
+            ),
             _ = React.useRef(void 0),
             _ = (_) => {
               (_.current = _ ? void 0 : _.nativeEvent), _();
             },
             _ = React.useRef(!1);
           React.useEffect(() => {
-            var _;
             _ &&
               !_.current &&
-              ((_ = _.current) == null || _.TakeFocusAndShowKeyboard(_.current),
+              (_.current?.TakeFocusAndShowKeyboard(_.current),
               (_.current = void 0)),
               (_.current = _);
           }, [_, _, _]);
@@ -101704,10 +99935,7 @@
           const _ = useResizeObserver(_),
             _ = useMultipleRefs(_, _);
           React.useEffect(() => {
-            var _, _;
-            (_ = _.current) != null &&
-              _.BHasFocus() &&
-              ((_ = _.current) == null || _.Node().ForceMeasureFocusRing());
+            _.current?.BHasFocus() && _.current?.Node().ForceMeasureFocusRing();
           }, [_]);
           const _ = _ ? _ : _,
             _ = _ ? Math.max(_, _) : _;
@@ -101754,12 +99982,9 @@
             _ = React.useCallback(() => {
               window.clearTimeout(_.current),
                 (_.current = window.setTimeout(() => {
-                  var _, _, _;
-                  (_ = _.current) == null ||
-                    _.classList.remove(gamepadSliderStyles.ErrorShake),
-                    (_ = _.current) == null || _.getBoundingClientRect(),
-                    (_ = _.current) == null ||
-                      _.classList.add(gamepadSliderStyles.ErrorShake);
+                  _.current?.classList.remove(gamepadSliderStyles.ErrorShake),
+                    _.current?.getBoundingClientRect(),
+                    _.current?.classList.add(gamepadSliderStyles.ErrorShake);
                 }, 0)),
                 _(!0),
                 window.clearTimeout(_.current),
@@ -101779,10 +100004,9 @@
           );
         }
         function _(_) {
-          var _, _;
           const { min: _, max: _ } = _,
-            _ = (_ = _.validValues) != null ? _ : "steps",
-            _ = (_ = _.step) != null ? _ : _,
+            _ = _.validValues ?? "steps",
+            _ = _.step ?? _,
             _ = React.useCallback(
               (_) => typeof _ == "number" && !Number.isNaN(_),
               [],
@@ -101858,7 +100082,7 @@
           const _ = React.useId();
           return jsx(Dialog.Field, {
             accessibilityId: _,
-            childrenLayout: _ != null ? _ : "below",
+            childrenLayout: _ ?? "below",
             childrenContainerWidth: "max",
             label: _,
             description: _,
@@ -101970,16 +100194,15 @@
           let _ = [];
           return (
             _.forEach((_, _) => {
-              var _;
               const _ = _.renderLabel
                   ? _.renderLabel(_.value)
                   : "" + Math.round(_[_] * 100),
-                _ = (_ = _.current) == null ? void 0 : _[_],
+                _ = _.current?.[_],
                 _ = (_) => {
-                  _ == null || _.OnMouseDown(_.nativeEvent);
+                  _?.OnMouseDown(_.nativeEvent);
                 },
                 _ = (_) => {
-                  _ == null || _.OnTouchStart(_.nativeEvent);
+                  _?.OnTouchStart(_.nativeEvent);
                 };
               _.push(
                 jsx(
@@ -102021,7 +100244,6 @@
           );
         }
         function _(_) {
-          var _, _;
           const {
               rValues: _,
               onChange: _,
@@ -102055,11 +100277,11 @@
             _ = [
               {
                 notchIndex: 0,
-                label: (_ = _[0]) == null ? void 0 : _.toString(),
+                label: _[0]?.toString(),
               },
               {
                 notchIndex: 1,
-                label: (_ = _[_]) == null ? void 0 : _.toString(),
+                label: _[_]?.toString(),
               },
             ];
           return jsx(Dialog.GamepadSliderField, {
@@ -102301,15 +100523,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -102318,8 +100531,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           return function (_) {
             return (0, _.jsx)(_, {
@@ -102339,10 +100551,9 @@
           });
         }
         class _ extends _.Component {
+          state = {};
           constructor(_) {
-            super(_),
-              _(this, "state", {}),
-              (this.state.lastErrorKey = _.errorKey);
+            super(_), (this.state.lastErrorKey = _.errorKey);
           }
           componentDidCatch(_, _) {
             (0, _._)()
@@ -104347,7 +102558,7 @@
         }
         function _(_) {
           const { strength: _, ..._ } = _,
-            _ = _(_ != null ? _ : EWirelessEndpointStrength.Excellent);
+            _ = _(_ ?? EWirelessEndpointStrength.Excellent);
           return jsxs("svg", {
             viewBox: "0 0 36 36",
             fill: "none",
@@ -104379,7 +102590,7 @@
         }
         function _(_) {
           const { strength: _, ..._ } = _,
-            _ = _(_ != null ? _ : EWirelessEndpointStrength.Excellent);
+            _ = _(_ ?? EWirelessEndpointStrength.Excellent);
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -104712,8 +102923,8 @@
         function _(_) {
           let { innerIcon: _, strength: _, ..._ } = _;
           return (
-            _ != null || (_ = "none"),
-            _ != null || (_ = _ == "none" ? "high" : "off"),
+            (_ ??= "none"),
+            (_ ??= _ == "none" ? "high" : "off"),
             jsxs("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
@@ -108024,6 +106235,10 @@
             ],
           });
         }
+        const _ =
+            "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+          _ =
+            "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z";
         function _(_) {
           const { alert: _, urgent: _, ..._ } = _;
           return _
@@ -108075,19 +106290,47 @@
                       (0, _.jsx)("path", {
                         fillRule: "evenodd",
                         clipRule: "evenodd",
-                        _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                        _: _,
                         fill: "currentColor",
                       }),
                       (0, _.jsx)("path", {
                         className: "SVGIcon_Notification_Uvula",
                         fillRule: "evenodd",
                         clipRule: "evenodd",
-                        _: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                        _: _,
                         fill: "currentColor",
                       }),
                     ],
                   }),
                 });
+        }
+        function _(_) {
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: _,
+              fill: "currentColor",
+            }),
+          });
+        }
+        function _(_) {
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: _,
+              fill: "currentColor",
+            }),
+          });
         }
         function _(_) {
           return (0, _.jsx)("svg", {
@@ -109060,9 +107303,9 @@
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -109075,6 +107318,13 @@
                         fillRule: "evenodd",
                         clipRule: "evenodd",
                         _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    _ &&
+                      jsx("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
                         fill: "currentColor",
                       }),
                     jsx("svg", {
@@ -109105,12 +107355,6 @@
                 _ &&
                   jsxs(Fragment, {
                     children: [
-                      jsx("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
-                        fill: "currentColor",
-                      }),
                       jsx("path", {
                         _: "M42.676 7.16846L41.6276 0H47.667L46.6544 7.16846H42.676Z",
                         fill: "#FFC82C",
@@ -109213,9 +107457,9 @@
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -109452,7 +107696,7 @@
               onClickButtonSouth: _,
               onClickButtonEast: _,
               onClickButtonWest: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = "#4897D2",
             _ = "transparent";
           return jsxs("svg", {
@@ -109653,7 +107897,7 @@
               onClickLeftStickClick: _,
               onClickLeftStickTouch: _,
               onClickRightStickTouch: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             [_, _] = useSvgId(),
             _ = "#090E12",
             _ = "#4897D2",
@@ -109664,10 +107908,10 @@
             [_, _] = useSvgId(),
             [_, _] = useSvgId(),
             _ = 14,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
             _ = `translate(${_} ${_})`,
             _ = `translate(${_} ${_})`,
             _ = 116.1,
@@ -109686,10 +107930,10 @@
               _: RemapValClamped(_, -1, 1, _, -_),
             };
           }
-          const _ = _(_ != null ? _ : 0, _ != null ? _ : 0),
-            _ = _(_ != null ? _ : 0, _ != null ? _ : 0),
-            _ = RemapValClamped(_ != null ? _ : 0, 0, 1, 1, 0.9),
-            _ = RemapValClamped(_ != null ? _ : 0, 0, 1, 1, 0.9);
+          const _ = _(_ ?? 0, _ ?? 0),
+            _ = _(_ ?? 0, _ ?? 0),
+            _ = RemapValClamped(_ ?? 0, 0, 1, 1, 0.9),
+            _ = RemapValClamped(_ ?? 0, 0, 1, 1, 0.9);
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 1053 351",
@@ -110279,19 +108523,19 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 650.299,
             _ = 895.54,
             _ = 77.8784,
             _ = 323.119,
-            _ = _ + (_ - _) * ((_ != null ? _ : 0) * 0.5 + 0.5),
-            _ = _ + (_ - _) * ((_ != null ? _ : 0) * 0.5 + 0.5),
+            _ = _ + (_ - _) * ((_ ?? 0) * 0.5 + 0.5),
+            _ = _ + (_ - _) * ((_ ?? 0) * 0.5 + 0.5),
             _ = 107.11,
             _ = 352.351,
             _ = 77.8784,
             _ = 323.119,
-            _ = _ + (_ - _) * ((_ != null ? _ : 0) * 0.5 + 0.5),
-            _ = _ + (_ - _) * ((_ != null ? _ : 0) * 0.5 + 0.5),
+            _ = _ + (_ - _) * ((_ ?? 0) * 0.5 + 0.5),
+            _ = _ + (_ - _) * ((_ ?? 0) * 0.5 + 0.5),
             _ = styles.GenericGamepadHighlight,
             _ = styles.GenericGamepadEmpty,
             _ = _ ? "#4897D2" : "currentColor",
@@ -110301,10 +108545,10 @@
             [_, _] = useSvgId(),
             _ = _ || _ || _ || _,
             _ = 0.3,
-            _ = (_ != null ? _ : 0) < -_,
-            _ = (_ != null ? _ : 0) > _,
-            _ = (_ != null ? _ : 0) > _,
-            _ = (_ != null ? _ : 0) < -_,
+            _ = (_ ?? 0) < -_,
+            _ = (_ ?? 0) > _,
+            _ = (_ ?? 0) > _,
+            _ = (_ ?? 0) < -_,
             _ = _ && _,
             _ = _ && _,
             _ = _ && _,
@@ -110582,7 +108826,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "388.315",
@@ -110668,7 +108912,7 @@
               onClickDPadLeft: _,
               onClickDPadRight: _,
               onClickDPadUp: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1040) / 713,
             _ = styles.GenericGamepadHighlight,
@@ -110969,7 +109213,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M661.063 374.481C682.825 374.481 700.466 356.838 700.466 335.074C700.466 313.31 682.825 295.667 661.063 295.667C639.301 295.667 621.659 313.31 621.659 335.074C621.659 356.838 639.301 374.481 661.063 374.481Z",
@@ -111013,7 +109257,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M378.162 374.481C399.924 374.481 417.566 356.838 417.566 335.074C417.566 313.31 399.924 295.667 378.162 295.667C356.4 295.667 338.759 313.31 338.759 335.074C338.759 356.838 356.4 374.481 378.162 374.481Z",
@@ -111224,7 +109468,7 @@
               jsx("path", {
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M629.527 356.037C650.796 356.037 668.037 338.796 668.037 317.527C668.037 296.259 650.796 279.018 629.527 279.018C608.259 279.018 591.018 296.259 591.018 317.527C591.018 338.796 608.259 356.037 629.527 356.037Z",
@@ -111247,7 +109491,7 @@
               jsx("path", {
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M211.527 188.037C232.796 188.037 250.037 170.796 250.037 149.527C250.037 128.259 232.796 111.018 211.527 111.018C190.259 111.018 173.018 128.259 173.018 149.527C173.018 170.796 190.259 188.037 211.527 188.037Z",
@@ -111412,7 +109656,7 @@
               jsx("path", {
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M632.722 383.456C653.99 383.456 671.232 366.215 671.232 344.946C671.232 323.678 653.99 306.437 632.722 306.437C611.453 306.437 594.212 323.678 594.212 344.946C594.212 366.215 611.453 383.456 632.722 383.456Z",
@@ -111435,7 +109679,7 @@
               jsx("path", {
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M243.758 231.253C265.026 231.253 282.268 214.012 282.268 192.743C282.268 171.475 265.026 154.233 243.758 154.233C222.489 154.233 205.248 171.475 205.248 192.743C205.248 214.012 222.489 231.253 243.758 231.253Z",
@@ -111691,7 +109935,7 @@
               }),
               jsx("path", {
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "black",
                 fill: "#4D4D4D",
@@ -111713,7 +109957,7 @@
               }),
               jsx("path", {
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "black",
                 fill: "#4D4D4D",
@@ -111918,7 +110162,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1002) / 619,
             _ = 16,
@@ -112240,7 +110484,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M659.306 368.05C680.401 368.05 697.501 350.95 697.501 329.855C697.501 308.761 680.401 291.66 659.306 291.66C638.211 291.66 621.111 308.761 621.111 329.855C621.111 350.95 638.211 368.05 659.306 368.05Z",
@@ -112264,7 +110508,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M342.475 368.05C363.57 368.05 380.67 350.95 380.67 329.855C380.67 308.761 363.57 291.66 342.475 291.66C321.381 291.66 304.28 308.761 304.28 329.855C304.28 350.95 321.381 368.05 342.475 368.05Z",
@@ -112328,7 +110572,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1002) / 619,
             _ = 16,
@@ -112631,7 +110875,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M664.567 355.199C684.63 355.199 700.894 338.935 700.894 318.871C700.894 298.808 684.63 282.544 664.567 282.544C644.504 282.544 628.239 298.808 628.239 318.871C628.239 338.935 644.504 355.199 664.567 355.199Z",
@@ -112655,7 +110899,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M338.548 354.903C358.611 354.903 374.875 338.639 374.875 318.576C374.875 298.512 358.611 282.248 338.548 282.248C318.485 282.248 302.22 298.512 302.22 318.576C302.22 338.639 318.485 354.903 338.548 354.903Z",
@@ -112720,7 +110964,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1e3) / 702,
             _ = styles.GenericGamepadHighlight,
@@ -113021,7 +111265,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M631.301 389.321C653.464 389.321 671.43 371.355 671.43 349.192C671.43 327.029 653.464 309.062 631.301 309.062C609.138 309.062 591.172 327.029 591.172 349.192C591.172 371.355 609.138 389.321 631.301 389.321Z",
@@ -113045,7 +111289,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M223.319 251.098C245.482 251.098 263.449 233.132 263.449 210.969C263.449 188.806 245.482 170.84 223.319 170.84C201.157 170.84 183.19 188.806 183.19 210.969C183.19 233.132 201.157 251.098 223.319 251.098Z",
@@ -113106,7 +111350,7 @@
               onClickButtonSouth: _,
               onClickLeftStickClick: _,
               onClickBackGripLeftUpper: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 657) / 308,
             _ = styles.GenericGamepadHighlight,
@@ -113228,7 +111472,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M206.941 191.578C206.941 172.241 191.266 156.566 171.929 156.566C152.592 156.566 136.917 172.241 136.917 191.578C136.917 210.914 152.592 226.59 171.929 226.59C191.266 226.59 206.941 210.914 206.941 191.578Z",
@@ -113285,7 +111529,7 @@
               onClickButtonSouth: _,
               onClickLeftStickClick: _,
               onClickBackGripRightUpper: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 657) / 308,
             _ = styles.GenericGamepadHighlight,
@@ -113415,7 +111659,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M270.803 193.738C270.803 213.074 286.478 228.75 305.815 228.75C325.151 228.75 340.827 213.074 340.827 193.738C340.827 174.401 325.151 158.726 305.815 158.726C286.478 158.726 270.803 174.401 270.803 193.738Z",
@@ -113488,7 +111732,7 @@
               onClickBackGripLeftLower: _,
               onClickBackGripRightUpper: _,
               onClickBackGripRightLower: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 682) / 658,
             _ = styles.GenericGamepadHighlight,
@@ -113761,7 +112005,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M567.413 386.942C586.749 386.942 602.425 371.267 602.425 351.93C602.425 332.593 586.749 316.918 567.413 316.918C548.076 316.918 532.401 332.593 532.401 351.93C532.401 371.267 548.076 386.942 567.413 386.942Z",
@@ -113778,7 +112022,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M115.661 206.941C134.998 206.941 150.673 191.266 150.673 171.929C150.673 152.592 134.998 136.917 115.661 136.917C96.3243 136.917 80.6489 152.592 80.6489 171.929C80.6489 191.266 96.3243 206.941 115.661 206.941Z",
@@ -113843,7 +112087,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 808) / 574,
             _ = styles.GenericGamepadHighlight,
@@ -114063,7 +112307,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M164.78 261.824C187.705 261.824 206.289 243.226 206.289 220.285C206.289 197.343 187.705 178.745 164.78 178.745C141.855 178.745 123.271 197.343 123.271 220.285C123.271 243.226 141.855 261.824 164.78 261.824Z",
@@ -114079,7 +112323,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M522.986 422.981C539.121 422.981 552.201 409.888 552.201 393.737C552.201 377.586 539.121 364.493 522.986 364.493C506.851 364.493 493.771 377.586 493.771 393.737C493.771 409.888 506.851 422.981 522.986 422.981Z",
@@ -114143,7 +112387,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1e3) / 655,
             _ = styles.GenericGamepadHighlight,
@@ -114348,7 +112592,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M638.075 458.554C657.785 458.554 673.762 442.566 673.762 422.844C673.762 403.121 657.785 387.133 638.075 387.133C618.366 387.133 602.389 403.121 602.389 422.844C602.389 442.566 618.366 458.554 638.075 458.554Z",
@@ -114365,7 +112609,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M372.134 458.554C391.844 458.554 407.821 442.566 407.821 422.844C407.821 403.121 391.844 387.133 372.134 387.133C352.425 387.133 336.448 403.121 336.448 422.844C336.448 442.566 352.425 458.554 372.134 458.554Z",
@@ -114430,7 +112674,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1e3) / 655,
             _ = styles.GenericGamepadHighlight,
@@ -114681,7 +112925,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M626.68 346.58C645.51 346.58 660.775 331.326 660.775 312.509C660.775 293.693 645.51 278.438 626.68 278.438C607.849 278.438 592.584 293.693 592.584 312.509C592.584 331.326 607.849 346.58 626.68 346.58Z",
@@ -114698,7 +112942,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M373.32 346.58C392.151 346.58 407.416 331.326 407.416 312.509C407.416 293.693 392.151 278.438 373.32 278.438C354.49 278.438 339.225 293.693 339.225 312.509C339.225 331.326 354.49 346.58 373.32 346.58Z",
@@ -114763,7 +113007,7 @@
               onClickButtonSouth: _,
               onClickRightStickClick: _,
               onClickLeftStickClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = 2,
             _ = (_ * 1e3) / 699,
             _ = styles.GenericGamepadHighlight,
@@ -115027,7 +113271,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M634.476 305.635C661.641 305.635 683.687 327.674 683.687 354.832C683.687 381.99 661.641 404.029 634.476 404.029C607.311 404.029 585.265 381.99 585.265 354.832C585.265 327.674 607.311 305.635 634.476 305.635Z",
@@ -115043,7 +113287,7 @@
                 onClick: _,
                 className: _ ? _ : _,
                 style: {
-                  transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                  transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                 },
                 stroke: "currentColor",
                 _: "M217.963 149.369C245.129 149.369 267.174 171.408 267.174 198.566C267.174 225.725 245.129 247.764 217.963 247.764C190.798 247.764 168.753 225.725 168.753 198.566C168.753 171.408 190.798 149.369 217.963 149.369Z",
@@ -121084,7 +119328,7 @@
               onClickDPadDown: _,
               onClickDPadLeft: _,
               onClickDPadRight: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = "#4897D2",
             _ = "#83A7C1",
             _ = "transparent",
@@ -121218,7 +119462,7 @@
                     fill: _ ? _ : _ ? _ : _,
                     _: "M59.4857 69.384C51.9187 69.384 45.7607 63.228 45.7607 55.661C45.7607 48.093 51.9177 41.936 59.4857 41.936C67.0517 41.936 73.2087 48.092 73.2087 55.661C73.2087 63.228 67.0527 69.384 59.4857 69.384Z",
                     style: {
-                      transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                      transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                     },
                   }),
                   jsx("path", {
@@ -121235,7 +119479,7 @@
                     fill: _ ? _ : _ ? _ : _,
                     _: "M177.273 104.787C169.706 104.787 163.55 98.6311 163.55 91.0631C163.55 83.4951 169.705 77.3391 177.273 77.3391C184.841 77.3391 190.997 83.4941 190.997 91.0631C190.997 98.6311 184.841 104.787 177.273 104.787Z",
                     style: {
-                      transform: `translateX(${(_ != null ? _ : 0) * _}%) translateY(${(_ != null ? _ : 0) * _}%)`,
+                      transform: `translateX(${(_ ?? 0) * _}%) translateY(${(_ ?? 0) * _}%)`,
                     },
                   }),
                   jsx("path", {
@@ -121458,7 +119702,7 @@
             animationName: _,
             ..._
           } = _;
-          _ = _ != null ? _ : "None";
+          _ = _ ?? "None";
           const _ = 2,
             _ = (_ * 1040) / 713;
           return jsx("svg", {
@@ -121489,22 +119733,22 @@
                         jsx("path", {
                           _: "M198.809 414.632L199.684 414.787C213.042 417.148 226.709 417.148 240.067 414.787L240.942 414.632V374.68C240.942 371.918 243.181 369.68 245.942 369.68L218.5 364L193.809 369.68C196.57 369.68 198.809 371.918 198.809 374.68V414.632Z",
                           fill: _ ? "#1A9FFF" : "transparent",
-                          onClick: _ == null ? void 0 : _.onClickDPadDown,
+                          onClick: _?.onClickDPadDown,
                         }),
                         jsx("path", {
                           _: "M241.013 280.905L240.14 280.752C226.816 278.416 213.184 278.416 199.86 280.752L198.987 280.905V320.434C198.987 323.166 196.754 325.381 194 325.381L221.372 331L246 325.381C243.246 325.381 241.013 323.166 241.013 320.434V280.905Z",
                           fill: _ ? "#1A9FFF" : "transparent",
-                          onClick: _ == null ? void 0 : _.onClickDPadUp,
+                          onClick: _?.onClickDPadUp,
                         }),
                         jsx("path", {
                           _: "M284.131 368.917L284.282 368.027C286.573 354.447 286.573 340.553 284.282 326.973L284.131 326.083H245.363C242.683 326.083 240.511 323.807 240.511 321L235 348.898L240.511 374C240.511 371.193 242.683 368.917 245.363 368.917H284.131Z",
                           fill: _ ? "#1A9FFF" : "transparent",
-                          onClick: _ == null ? void 0 : _.onClickDPadRight,
+                          onClick: _?.onClickDPadRight,
                         }),
                         jsx("path", {
                           _: "M154.869 326.083L154.718 326.973C152.427 340.553 152.427 354.447 154.718 368.027L154.869 368.917H193.637C196.317 368.917 198.489 371.193 198.489 374L204 346.102L198.489 321C198.489 323.807 196.317 326.083 193.637 326.083H154.869Z",
                           fill: _ ? "#1A9FFF" : "transparent",
-                          onClick: _ == null ? void 0 : _.onClickDPadLeft,
+                          onClick: _?.onClickDPadLeft,
                         }),
                       ],
                     }),
@@ -121540,7 +119784,7 @@
                             _ == "ThumbstickMoveAnimation"
                               ? styles.LegionGoWiggleStick
                               : "",
-                          onClick: _ == null ? void 0 : _.onClickLeftStickClick,
+                          onClick: _?.onClickLeftStickClick,
                           style:
                             _ !== void 0 && _ !== void 0
                               ? {
@@ -121591,8 +119835,7 @@
                             _ == "MouseMoveTriggerClick"
                               ? styles.LegionGoWiggleStick
                               : "",
-                          onClick:
-                            _ == null ? void 0 : _.onClickRightStickClick,
+                          onClick: _?.onClickRightStickClick,
                           style:
                             _ !== void 0 && _ !== void 0
                               ? {
@@ -121618,7 +119861,7 @@
                     }),
                     jsx("path", {
                       _: "M276.922 147.802C276.773 147.652 276.623 147.483 276.511 147.295C276.398 147.107 276.286 146.919 276.193 146.713C276.118 146.506 276.043 146.299 276.005 146.093C275.968 145.886 275.949 145.661 275.949 145.435C275.949 143.05 275.949 140.664 275.949 138.279C275.949 138.035 275.987 137.772 276.024 137.528C276.08 137.283 276.155 137.039 276.267 136.814C276.38 136.588 276.511 136.382 276.66 136.175C276.81 135.987 276.997 135.8 277.184 135.649C277.371 135.499 277.596 135.368 277.821 135.255C278.045 135.142 278.288 135.067 278.532 135.011C278.775 134.954 279.018 134.936 279.28 134.936C281.657 134.936 284.034 134.936 286.41 134.936C286.635 134.936 286.841 134.954 287.065 134.992C287.271 135.029 287.496 135.105 287.683 135.18C287.889 135.255 288.076 135.368 288.263 135.48C288.45 135.593 288.618 135.743 288.768 135.894C294.738 141.885 300.708 147.877 306.677 153.869C306.827 154.019 306.977 154.188 307.089 154.376C307.201 154.564 307.313 154.752 307.407 154.958C307.482 155.165 307.557 155.371 307.594 155.597C307.632 155.822 307.65 156.029 307.65 156.254C307.65 158.64 307.65 161.025 307.65 163.411C307.65 163.655 307.613 163.918 307.575 164.162C307.519 164.406 307.444 164.65 307.332 164.876C307.22 165.101 307.089 165.308 306.939 165.514C306.789 165.702 306.602 165.89 306.415 166.04C306.228 166.191 306.003 166.322 305.779 166.435C305.554 166.547 305.311 166.623 305.068 166.679C304.825 166.735 304.581 166.754 304.319 166.754C301.943 166.754 299.566 166.754 297.189 166.754C296.965 166.754 296.759 166.735 296.534 166.698C296.328 166.66 296.104 166.585 295.917 166.51C295.711 166.435 295.524 166.322 295.337 166.191C295.15 166.078 294.981 165.928 294.831 165.777C288.862 159.786 282.892 153.794 276.922 147.802Z",
-                      onClick: _ == null ? void 0 : _.onClickSelect,
+                      onClick: _?.onClickSelect,
                       fill: _ ? "#1A9FFF" : "transparent",
                       stroke: "white",
                       strokeWidth: "8",
@@ -121627,7 +119870,7 @@
                     }),
                     jsx("path", {
                       _: "M306.695 99.454C306.844 99.6043 306.994 99.7734 307.106 99.9612C307.219 100.149 307.331 100.337 307.425 100.543C307.499 100.75 307.574 100.957 307.612 101.163C307.649 101.37 307.668 101.595 307.668 101.821C307.668 104.206 307.668 106.592 307.668 108.977C307.668 109.221 307.63 109.484 307.593 109.728C307.537 109.973 307.462 110.217 307.35 110.442C307.237 110.668 307.106 110.874 306.957 111.081C306.807 111.269 306.62 111.456 306.433 111.607C306.246 111.757 306.021 111.888 305.797 112.001C305.572 112.114 305.329 112.189 305.085 112.245C304.842 112.302 304.599 112.32 304.337 112.32C301.96 112.32 299.584 112.32 297.207 112.32C296.982 112.32 296.776 112.302 296.552 112.264C296.346 112.227 296.121 112.151 295.934 112.076C295.728 112.001 295.541 111.888 295.354 111.757C295.167 111.644 294.999 111.494 294.849 111.344C288.879 105.352 282.91 99.3601 276.94 93.3683C276.79 93.2181 276.64 93.049 276.528 92.8612C276.416 92.6734 276.304 92.4855 276.21 92.2789C276.135 92.0723 276.06 91.8657 276.023 91.6591C275.986 91.4525 275.967 91.2271 275.967 91.0017C275.967 88.6162 275.967 86.2308 275.967 83.8453C275.967 83.6012 276.004 83.3382 276.042 83.094C276.098 82.8498 276.173 82.6057 276.285 82.3803C276.397 82.1549 276.528 81.9483 276.678 81.7416C276.828 81.5538 277.015 81.366 277.202 81.2157C277.389 81.0655 277.614 80.934 277.838 80.8213C278.063 80.7086 278.306 80.6334 278.549 80.5771C278.793 80.5207 279.036 80.502 279.298 80.502C281.674 80.502 284.051 80.502 286.428 80.502C286.652 80.502 286.858 80.5207 287.083 80.5583C287.289 80.5959 287.513 80.671 287.7 80.7461C287.906 80.8213 288.093 80.934 288.28 81.0655C288.468 81.1781 288.636 81.3284 288.786 81.4787C294.755 87.4705 300.725 93.4623 306.695 99.454Z",
-                      onClick: _ == null ? void 0 : _.onClickSteam,
+                      onClick: _?.onClickSteam,
                       fill: _ ? "#1A9FFF" : "transparent",
                       stroke: "white",
                       strokeWidth: "8",
@@ -121642,7 +119885,7 @@
                       _: "8",
                       stroke: "white",
                       strokeWidth: "8",
-                      onClick: _ == null ? void 0 : _.onClickRightTrackPadClick,
+                      onClick: _?.onClickRightTrackPadClick,
                       fill: _ ? "#1A9FFF" : "transparent",
                     }),
                     jsx("circle", {
@@ -121651,7 +119894,7 @@
                       _: "27.5",
                       stroke: "white",
                       strokeWidth: "8",
-                      onClick: _ == null ? void 0 : _.onClickButtonNorth,
+                      onClick: _?.onClickButtonNorth,
                       fill:
                         _ || _ == "ThumbstickMoveAnimation"
                           ? "#1A9FFF"
@@ -121674,7 +119917,7 @@
                       _: "27.5",
                       stroke: "white",
                       strokeWidth: "8",
-                      onClick: _ == null ? void 0 : _.onClickButtonEast,
+                      onClick: _?.onClickButtonEast,
                       fill:
                         _ || _ == "ThumbstickMoveAnimation"
                           ? "#1A9FFF"
@@ -121697,7 +119940,7 @@
                       _: "27.5",
                       stroke: "white",
                       strokeWidth: "8",
-                      onClick: _ == null ? void 0 : _.onClickButtonSouth,
+                      onClick: _?.onClickButtonSouth,
                       fill:
                         _ || _ == "ThumbstickMoveAnimation"
                           ? "#1A9FFF"
@@ -121719,7 +119962,7 @@
                       _: "27.5",
                       stroke: "white",
                       strokeWidth: "8",
-                      onClick: _ == null ? void 0 : _.onClickButtonWest,
+                      onClick: _?.onClickButtonWest,
                       fill:
                         _ || _ == "ThumbstickMoveAnimation"
                           ? "#1A9FFF"
@@ -121747,7 +119990,7 @@
                     }),
                     jsx("path", {
                       _: "M1299.43 111.361C1299.28 111.512 1299.11 111.662 1298.92 111.775C1298.74 111.887 1298.55 112 1298.34 112.094C1298.14 112.169 1297.93 112.244 1297.71 112.282C1297.5 112.319 1297.28 112.338 1297.05 112.338C1294.67 112.338 1292.3 112.338 1289.92 112.338C1289.68 112.338 1289.42 112.319 1289.17 112.263C1288.93 112.207 1288.69 112.131 1288.46 112.019C1288.24 111.906 1288.03 111.775 1287.83 111.624C1287.64 111.474 1287.45 111.286 1287.3 111.098C1287.15 110.91 1287.02 110.685 1286.91 110.46C1286.8 110.234 1286.72 109.99 1286.66 109.746C1286.61 109.502 1286.59 109.258 1286.59 108.995C1286.59 106.609 1286.59 104.224 1286.59 101.838C1286.59 101.613 1286.61 101.406 1286.65 101.181C1286.68 100.974 1286.76 100.749 1286.83 100.561C1286.91 100.354 1287.02 100.167 1287.15 99.9788C1287.26 99.7909 1287.41 99.6219 1287.56 99.4716C1293.53 93.4798 1299.5 87.488 1305.47 81.4963C1305.62 81.346 1305.79 81.1957 1305.98 81.083C1306.16 80.9703 1306.35 80.8576 1306.56 80.7637C1306.76 80.6886 1306.97 80.6134 1307.17 80.5759C1307.38 80.5383 1307.61 80.5195 1307.83 80.5195C1310.21 80.5195 1312.58 80.5195 1314.96 80.5195C1315.2 80.5195 1315.47 80.5571 1315.71 80.5947C1315.95 80.6322 1316.19 80.7261 1316.42 80.8388C1316.64 80.9515 1316.85 81.083 1317.06 81.2333C1317.24 81.3835 1317.43 81.5714 1317.58 81.7592C1317.73 81.947 1317.86 82.1724 1317.97 82.3978C1318.09 82.6232 1318.16 82.8674 1318.22 83.1116C1318.27 83.3558 1318.29 83.5999 1318.29 83.8629C1318.29 86.2484 1318.29 88.6338 1318.29 91.0193C1318.29 91.2447 1318.27 91.4513 1318.23 91.6767C1318.2 91.8833 1318.12 92.1087 1318.05 92.2965C1317.97 92.5031 1317.86 92.6909 1317.75 92.8788C1317.64 93.0666 1317.49 93.2356 1317.34 93.3859C1311.37 99.3777 1305.4 105.369 1299.43 111.361Z",
-                      onClick: _ == null ? void 0 : _.onClickAncilliary,
+                      onClick: _?.onClickAncilliary,
                       fill: _ ? "#1A9FFF" : "transparent",
                       stroke: "white",
                       strokeWidth: "8",
@@ -121756,7 +119999,7 @@
                     }),
                     jsx("path", {
                       _: "M1299.43 165.777C1299.28 165.928 1299.11 166.078 1298.92 166.191C1298.74 166.303 1298.55 166.416 1298.34 166.51C1298.14 166.585 1297.93 166.66 1297.71 166.698C1297.5 166.735 1297.28 166.754 1297.05 166.754C1294.67 166.754 1292.3 166.754 1289.92 166.754C1289.68 166.754 1289.42 166.716 1289.17 166.679C1288.93 166.623 1288.69 166.547 1288.46 166.435C1288.24 166.322 1288.03 166.191 1287.83 166.04C1287.64 165.89 1287.45 165.702 1287.3 165.514C1287.15 165.327 1287.02 165.101 1286.91 164.876C1286.8 164.65 1286.72 164.406 1286.66 164.162C1286.61 163.918 1286.59 163.674 1286.59 163.411C1286.59 161.025 1286.59 158.64 1286.59 156.254C1286.59 156.029 1286.61 155.822 1286.65 155.597C1286.68 155.39 1286.76 155.165 1286.83 154.958C1286.91 154.752 1287.02 154.564 1287.15 154.376C1287.26 154.188 1287.41 154.019 1287.56 153.869C1293.53 147.877 1299.5 141.885 1305.47 135.894C1305.62 135.743 1305.79 135.593 1305.98 135.48C1306.16 135.368 1306.35 135.255 1306.56 135.18C1306.76 135.105 1306.97 135.029 1307.17 134.992C1307.38 134.954 1307.61 134.936 1307.83 134.936C1310.21 134.936 1312.58 134.936 1314.96 134.936C1315.2 134.936 1315.47 134.973 1315.71 135.011C1315.95 135.067 1316.19 135.142 1316.42 135.255C1316.64 135.368 1316.85 135.499 1317.06 135.649C1317.24 135.8 1317.43 135.987 1317.58 136.175C1317.73 136.363 1317.86 136.588 1317.97 136.814C1318.09 137.039 1318.16 137.283 1318.22 137.528C1318.27 137.772 1318.29 138.016 1318.29 138.279C1318.29 140.664 1318.29 143.05 1318.29 145.435C1318.29 145.661 1318.27 145.867 1318.23 146.093C1318.2 146.299 1318.12 146.525 1318.05 146.713C1317.97 146.919 1317.86 147.107 1317.75 147.295C1317.64 147.483 1317.49 147.652 1317.34 147.802C1311.37 153.794 1305.4 159.786 1299.43 165.777Z",
-                      onClick: _ == null ? void 0 : _.onClickStart,
+                      onClick: _?.onClickStart,
                       fill: _ ? "#1A9FFF" : "transparent",
                       stroke: "white",
                       strokeWidth: "8",
@@ -122276,7 +120519,6 @@
           });
         }
         function _(_) {
-          var _, _, _, _;
           const {
               highlightViewButton: _,
               highlightOptionsButton: _,
@@ -122358,7 +120600,7 @@
               onClickLeftTrackPadClick: _,
               onClickRightTrackPadTouch: _,
               onClickRightTrackPadClick: _,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             [_, _] = useSvgId(),
             [_, _] = useSvgId(),
             [_, _] = useSvgId(),
@@ -122405,18 +120647,18 @@
             _ = _ ? _ : _,
             _ = _ ? _ : _,
             _ = 30 / 2,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
-            _ = (_ != null ? _ : 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
+            _ = (_ ?? 0) * _,
             _ = `translate(${_} ${_})`,
             _ = `translate(${_} ${_})`,
             _ = 208.867,
             _ = 140.758,
             _ = 339.1327,
             _ = 140.758,
-            _ = (_ != null ? _ : 0) != 0 || (_ != null ? _ : 0) != 0,
-            _ = (_ != null ? _ : 0) != 0 || (_ != null ? _ : 0) != 0,
+            _ = (_ ?? 0) != 0 || (_ ?? 0) != 0,
+            _ = (_ ?? 0) != 0 || (_ ?? 0) != 0,
             [_, _] = React.useState({
               _: 0,
               _: 0,
@@ -122428,13 +120670,13 @@
           React.useEffect(() => {
             _ &&
               _({
-                _: _ != null ? _ : 0,
-                _: _ != null ? _ : 0,
+                _: _ ?? 0,
+                _: _ ?? 0,
               }),
               _ &&
                 _({
-                  _: _ != null ? _ : 0,
-                  _: _ != null ? _ : 0,
+                  _: _ ?? 0,
+                  _: _ ?? 0,
                 });
           }, [_, _, _, _, _, _]);
           const _ = _ ? _ : _,
@@ -122454,8 +120696,8 @@
               _: RemapValClamped(_, -1, 1, _, -_),
             };
           }
-          const _ = _((_ = _._) != null ? _ : 0, (_ = _._) != null ? _ : 0),
-            _ = _((_ = _._) != null ? _ : 0, (_ = _._) != null ? _ : 0),
+          const _ = _(_._ ?? 0, _._ ?? 0),
+            _ = _(_._ ?? 0, _._ ?? 0),
             _ = RemapValClamped(_, 0, 1, 1, 0.9),
             _ = RemapValClamped(_, 0, 1, 1, 0.9),
             _ = _ ? styles.ShowXRay : void 0;
@@ -122852,7 +121094,7 @@
                                 className: _,
                                 stroke: "white",
                                 strokeLinejoin: "round",
-                                onClick: _ != null ? _ : _,
+                                onClick: _ ?? _,
                               }),
                               jsx("path", {
                                 _: "Detail_2",
@@ -122897,7 +121139,7 @@
                                 className: _,
                                 stroke: "white",
                                 strokeLinejoin: "round",
-                                onClick: _ != null ? _ : _,
+                                onClick: _ ?? _,
                               }),
                               jsx("path", {
                                 _: "Detail_4",
@@ -123109,8 +121351,8 @@
                                 _: "29.8083",
                                 transform: "matrix(-1 0 0 1 368.941 110.949)",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               jsxs("g", {
@@ -123135,7 +121377,7 @@
                                     _: "18",
                                     transform: "matrix(-1 0 0 1 357 123)",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   jsxs("g", {
                                     _: "Stick Fuzz",
@@ -123148,7 +121390,7 @@
                                         transform:
                                           "matrix(-1 0 0 1 367.182 112.818)",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       jsx("circle", {
@@ -123158,8 +121400,8 @@
                                         _: "31",
                                         transform: "matrix(-1 0 0 1 370 110)",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -123177,8 +121419,8 @@
                                 _: "140.758",
                                 _: "29.8083",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               jsxs("g", {
@@ -123200,7 +121442,7 @@
                                     _: "141",
                                     _: "18",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   jsxs("g", {
                                     _: "Stick Fuzz_2",
@@ -123211,7 +121453,7 @@
                                         _: "141",
                                         _: "28.1818",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       jsx("circle", {
@@ -123220,8 +121462,8 @@
                                         _: "141",
                                         _: "31",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -125067,7 +123309,7 @@
                     fill: "white",
                     _: "M104.789 78.6405H129.852C131.696 78.6405 133.203 77.1359 133.203 75.2934C133.203 73.451 131.696 71.9464 129.852 71.9464H104.789C102.945 71.9464 101.439 73.451 101.439 75.2934C101.439 77.1359 102.945 78.6405 104.789 78.6405ZM132.895 140.351C132.895 126.165 144.453 114.619 158.655 114.619C172.856 114.619 184.414 126.165 184.414 140.351C184.414 154.538 172.856 166.084 158.655 166.084C144.453 166.084 132.895 154.538 132.895 140.351ZM140.201 140.351C140.201 150.526 148.459 158.775 158.644 158.775C168.829 158.775 177.088 150.526 177.088 140.351C177.088 130.177 168.829 121.927 158.644 121.927C148.459 121.927 140.201 130.177 140.201 140.351ZM111.101 179.707C111.101 177.947 109.677 176.524 107.915 176.524C106.152 176.524 104.728 177.947 104.728 179.707C104.728 181.468 106.152 182.891 107.915 182.891C109.677 182.891 111.101 181.468 111.101 179.707ZM158.644 152.634C165.427 152.634 170.94 147.127 170.94 140.351C170.94 133.575 165.427 128.068 158.644 128.068C151.861 128.068 146.349 133.575 146.349 140.351C146.349 147.127 151.861 152.634 158.644 152.634ZM158.573 259.402H158.614C158.614 259.402 162.179 256.659 165.745 255.472C169.311 254.284 178.338 251.684 180.223 249.688C182.119 247.693 182.447 245.533 181.955 242.564C181.473 239.596 177.58 230.845 175.797 224.857C175.735 224.662 175.674 224.458 175.612 224.243C167.856 228.48 159.669 231.838 151.164 234.274C148.798 258.921 157.855 259.402 158.573 259.402ZM166.329 260.17C164.28 261.04 162.149 262.493 161.421 263.046C160.673 263.629 159.751 263.967 158.798 264.008H158.573C157.517 264.008 153.849 263.711 150.724 259.812C146.974 255.144 145.549 247.007 146.441 235.522C137.024 237.825 127.27 239.002 117.321 239.002C90.8851 239.002 65.7406 230.66 44.8893 215.225C45.1762 215.798 45.4631 216.361 45.7295 216.924C68.6403 265.288 88.0469 397 141.656 397C161.155 397 187.959 382.752 181.043 336.538C181.043 336.538 173.245 297.458 166.329 260.17ZM98.4879 124.179C99.2462 124.179 99.8712 123.565 99.8712 122.797V108.723C99.8712 107.966 99.2564 107.341 98.4879 107.341H85.8849C80.8335 107.341 76.7349 103.237 76.7349 98.2008V84.0961C76.7349 83.3387 76.1202 82.7143 75.3517 82.7143H58.2198C57.4615 82.7143 56.8365 83.3284 56.8365 84.0961V98.2008C56.8365 103.247 52.7277 107.341 47.6865 107.341H35.0835C34.3253 107.341 33.7003 107.955 33.7003 108.723V122.797C33.7003 123.555 34.315 124.179 35.0835 124.179H47.6865C52.738 124.179 56.8365 128.283 56.8365 133.319V147.424C56.8365 148.182 57.4513 148.806 58.2198 148.806H75.3517C76.1099 148.806 76.7349 148.192 76.7349 147.424V133.319C76.7349 128.273 80.8437 124.179 85.8849 124.179H98.4879ZM117.321 234.396C52.5228 234.396 0 181.928 0 117.198C0 52.468 52.5228 0 117.321 0C182.119 0 234.641 52.4782 234.641 117.198C234.641 159.645 212.058 196.811 178.235 217.385C176.893 218.204 175.53 218.992 174.157 219.739C167.108 223.659 159.607 226.863 151.759 229.258C150.16 229.76 148.552 230.21 146.933 230.63C137.475 233.086 127.547 234.396 117.321 234.396ZM158.644 108.477C141.021 108.477 126.737 122.746 126.737 140.351C126.737 157.957 141.021 172.225 158.644 172.225C176.268 172.225 190.551 157.957 190.551 140.351C190.551 122.746 176.268 108.477 158.644 108.477ZM111.685 51.2806C111.685 54.3922 114.206 56.9102 117.321 56.9102C120.436 56.9102 122.956 54.3922 122.956 51.2806C122.956 48.169 120.436 45.651 117.321 45.651C114.206 45.651 111.685 48.169 111.685 51.2806ZM95.2911 75.2934C95.2911 80.5341 99.5433 84.7819 104.789 84.7819H129.852C135.098 84.7819 139.35 80.5341 139.35 75.2934C139.35 70.0528 135.098 65.805 129.852 65.805H104.789C99.5433 65.805 95.2911 70.0528 95.2911 75.2934ZM85.8849 130.32H98.4879C102.648 130.32 106.019 126.953 106.019 122.797V108.723C106.019 104.567 102.648 101.2 98.4879 101.2H85.8849C84.225 101.2 82.8827 99.859 82.8827 98.2008V84.0961C82.8827 79.9404 79.5117 76.5729 75.3517 76.5729H58.2198C54.0598 76.5729 50.6887 79.9404 50.6887 84.0961V98.2008C50.6887 99.859 49.3464 101.2 47.6865 101.2H35.0835C30.9235 101.2 27.5524 104.567 27.5524 108.723V122.797C27.5524 126.953 30.9235 130.32 35.0835 130.32H47.6865C49.3464 130.32 50.6887 131.661 50.6887 133.319V147.424C50.6887 151.58 54.0598 154.947 58.2198 154.947H75.3517C79.5117 154.947 82.8827 151.58 82.8827 147.424V133.319C82.8827 131.661 84.225 130.32 85.8849 130.32ZM119.206 184.047C119.206 174.743 111.654 167.21 102.351 167.21C93.0471 167.21 86.2435 174.027 85.5468 182.696L94.5841 186.432C95.3525 185.91 96.2747 185.603 97.2686 185.603C97.3608 185.603 97.4428 185.603 97.535 185.603L101.552 179.789C101.552 179.789 101.552 179.738 101.552 179.707C101.552 176.207 104.4 173.351 107.915 173.351C111.429 173.351 114.267 176.197 114.267 179.707C114.267 183.218 111.419 186.064 107.915 186.064C107.863 186.064 107.822 186.064 107.771 186.064L102.043 190.148C102.043 190.219 102.043 190.301 102.043 190.373C102.043 193.003 99.9019 195.143 97.2686 195.143C94.9632 195.143 93.0266 193.495 92.586 191.315L86.1206 188.643C88.1186 195.716 94.6251 200.895 102.341 200.895C111.654 200.895 119.196 193.351 119.196 184.057L119.206 184.047ZM99.5536 191.345C98.99 192.686 97.4531 193.321 96.1005 192.768L94.0308 191.918C94.3996 192.686 95.0349 193.321 95.8751 193.669C97.699 194.426 99.7995 193.566 100.558 191.745C100.927 190.864 100.927 189.892 100.558 189.012C100.189 188.131 99.5023 187.435 98.6211 187.067C97.74 186.698 96.8075 186.719 95.9776 187.026L98.1191 187.906C99.4613 188.469 100.097 190.004 99.5433 191.356L99.5536 191.345ZM107.904 183.945C110.241 183.945 112.136 182.051 112.136 179.718C112.136 177.384 110.241 175.49 107.904 175.49C105.568 175.49 103.673 177.384 103.673 179.718C103.673 182.051 105.578 183.945 107.904 183.945Z",
                   }),
-                  (_ == null ? void 0 : _.bHighlightPairingButtons) &&
+                  _?.bHighlightPairingButtons &&
                     jsx("circle", {
                       stroke: "#1A9FFF",
                       _: "101.951",
@@ -125075,7 +123317,7 @@
                       _: "24.5771",
                       strokeWidth: "5.33595",
                     }),
-                  (_ == null ? void 0 : _.bHighlightPairingButtons) &&
+                  _?.bHighlightPairingButtons &&
                     jsx("circle", {
                       stroke: "#1A9FFF",
                       _: "117.519",
@@ -125097,13 +123339,13 @@
                     fill: "white",
                     _: "M101.439 75.2934C101.439 73.451 102.945 71.9464 104.789 71.9464H129.852C131.696 71.9464 133.203 73.451 133.203 75.2934C133.203 77.1359 131.696 78.6405 129.852 78.6405H104.789C102.945 78.6405 101.439 77.1359 101.439 75.2934ZM140.99 179.707C140.99 177.947 139.566 176.524 137.803 176.524C136.041 176.524 134.617 177.947 134.617 179.707C134.617 181.468 136.041 182.891 137.803 182.891C139.566 182.891 140.99 181.468 140.99 179.707ZM75.9972 127.966C69.2141 127.966 63.7015 133.473 63.7015 140.249C63.7015 147.025 69.2141 152.532 75.9972 152.532C82.7803 152.532 88.2928 147.025 88.2928 140.249C88.2928 133.473 82.7803 127.966 75.9972 127.966ZM143.305 124.281C148.009 124.281 151.83 120.463 151.83 115.765C151.83 111.067 148.009 107.249 143.305 107.249C138.602 107.249 134.781 111.067 134.781 115.765C134.781 120.463 138.602 124.281 143.305 124.281ZM167.856 99.7567C172.559 99.7567 176.381 95.9388 176.381 91.2406C176.381 86.5424 172.559 82.7245 167.856 82.7245C163.153 82.7245 159.331 86.5424 159.331 91.2406C159.331 95.9388 163.153 99.7567 167.856 99.7567ZM101.746 140.351C101.746 154.538 90.1884 166.084 75.9869 166.084C61.7855 166.084 50.2276 154.538 50.2276 140.351C50.2276 126.165 61.7855 114.619 75.9869 114.619C90.1884 114.619 101.746 126.165 101.746 140.351ZM94.4406 140.249C94.4406 130.075 86.1821 121.825 75.9972 121.825C65.8123 121.825 57.5537 130.075 57.5537 140.249C57.5537 150.423 65.8123 158.673 75.9972 158.673C86.1821 158.673 94.4406 150.423 94.4406 140.249ZM87.7088 230.63C86.0898 230.21 84.4811 229.76 82.8827 229.258C75.034 226.863 67.5336 223.659 60.4842 219.739C59.1111 218.992 57.7484 218.204 56.4062 217.385C22.583 196.811 0 159.645 0 117.198C0 52.4782 52.533 0 117.321 0C182.108 0 234.641 52.4782 234.641 117.198C234.641 181.918 182.119 234.396 117.321 234.396C107.095 234.396 97.1661 233.086 87.7088 230.63ZM149.095 184.047C149.095 174.743 141.543 167.21 132.239 167.21C122.936 167.21 116.132 174.027 115.435 182.696L124.473 186.432C125.241 185.91 126.163 185.603 127.157 185.603C127.249 185.603 127.331 185.603 127.424 185.603L131.44 179.789C131.44 179.789 131.44 179.738 131.44 179.707C131.44 176.207 134.289 173.351 137.803 173.351C141.318 173.351 144.156 176.197 144.156 179.707C144.156 183.218 141.307 186.064 137.803 186.064C137.752 186.064 137.711 186.064 137.66 186.064L131.932 190.148C131.932 190.219 131.932 190.301 131.932 190.373C131.932 193.003 129.79 195.143 127.157 195.143C124.852 195.143 122.915 193.495 122.475 191.315L116.009 188.643C118.007 195.716 124.514 200.895 132.229 200.895C141.543 200.895 149.084 193.351 149.084 184.057L149.095 184.047ZM129.452 191.345C128.889 192.686 127.352 193.321 125.999 192.768L123.93 191.918C124.298 192.686 124.934 193.321 125.774 193.669C127.598 194.426 129.698 193.566 130.457 191.745C130.825 190.864 130.825 189.892 130.457 189.012C130.088 188.131 129.401 187.435 128.52 187.067C127.639 186.698 126.706 186.719 125.876 187.026L128.018 187.906C129.36 188.469 129.995 190.004 129.442 191.356L129.452 191.345ZM137.803 183.945C140.139 183.945 142.035 182.051 142.035 179.718C142.035 177.384 140.139 175.49 137.803 175.49C135.467 175.49 133.571 177.384 133.571 179.718C133.571 182.051 135.477 183.945 137.803 183.945ZM182.528 140.29C182.528 132.193 175.961 125.632 167.856 125.632C159.751 125.632 153.183 132.193 153.183 140.29C153.183 148.386 159.751 154.947 167.856 154.947C175.961 154.947 182.528 148.386 182.528 140.29ZM192.406 101.098C184.301 101.098 177.733 107.659 177.733 115.755C177.733 123.851 184.301 130.412 192.406 130.412C200.511 130.412 207.079 123.851 207.079 115.755C207.079 107.659 200.511 101.098 192.406 101.098ZM153.173 91.2304C153.173 99.3268 159.741 105.888 167.845 105.888C175.95 105.888 182.518 99.3268 182.518 91.2304C182.518 83.134 175.95 76.5729 167.845 76.5729C159.741 76.5729 153.173 83.134 153.173 91.2304ZM143.305 101.098C135.201 101.098 128.633 107.659 128.633 115.755C128.633 123.851 135.201 130.412 143.305 130.412C151.41 130.412 157.978 123.851 157.978 115.755C157.978 107.659 151.41 101.098 143.305 101.098ZM111.685 51.2806C111.685 54.3922 114.206 56.9102 117.321 56.9102C120.436 56.9102 122.956 54.3922 122.956 51.2806C122.956 48.169 120.436 45.651 117.321 45.651C114.206 45.651 111.685 48.169 111.685 51.2806ZM95.291 75.2934C95.291 80.5341 99.5432 84.7819 104.789 84.7819H129.852C135.098 84.7819 139.35 80.5341 139.35 75.2934C139.35 70.0528 135.098 65.805 129.852 65.805H104.789C99.5432 65.805 95.291 70.0528 95.291 75.2934ZM107.894 140.351C107.894 122.746 93.6106 108.477 75.9869 108.477C58.3632 108.477 44.0797 122.746 44.0797 140.351C44.0797 157.957 58.3632 172.225 75.9869 172.225C93.6106 172.225 107.894 157.957 107.894 140.351ZM117.321 239.002C107.382 239.002 97.6272 237.825 88.2108 235.533C89.092 247.017 87.6678 255.144 83.9176 259.812C80.7924 263.711 77.1243 264.008 76.0791 264.008H75.8435C74.8906 263.967 73.9786 263.629 73.2204 263.056C72.4929 262.504 70.3719 261.04 68.3124 260.17C61.3961 297.458 53.5987 336.538 53.5987 336.538C46.6824 382.742 73.4868 397 92.9856 397C146.584 397 166.001 265.288 188.912 216.924C189.178 216.361 189.455 215.798 189.752 215.225C168.901 230.671 143.756 239.002 117.321 239.002ZM192.406 124.281C197.109 124.281 200.931 120.463 200.931 115.765C200.931 111.067 197.109 107.249 192.406 107.249C187.703 107.249 183.881 111.067 183.881 115.765C183.881 120.463 187.703 124.281 192.406 124.281ZM73.7942 257.887C75.1364 258.716 76.0279 259.402 76.0279 259.402H76.0791C76.7964 259.402 85.8541 258.921 83.477 234.274C74.9725 231.838 66.7857 228.48 59.0292 224.243C58.9678 224.458 58.9063 224.662 58.8448 224.857C57.062 230.845 53.1786 239.596 52.6867 242.564C52.2052 245.533 52.5228 247.693 54.4184 249.688C56.3037 251.684 65.3307 254.284 68.8965 255.472C70.6793 256.065 72.4622 257.048 73.7942 257.887ZM167.856 131.764C163.153 131.764 159.331 135.581 159.331 140.28C159.331 144.978 163.153 148.796 167.856 148.796C172.559 148.796 176.381 144.978 176.381 140.28C176.381 135.581 172.559 131.764 167.856 131.764Z",
                   }),
-                  (_ == null ? void 0 : _.bHighlightPairingButtons) &&
+                  _?.bHighlightPairingButtons &&
                     jsx("path", {
                       stroke: "#1A9FFF",
                       _: "M132.532 159.466C145.747 159.467 156.553 170.418 156.553 184.043C156.553 197.669 145.747 208.62 132.532 208.621C119.317 208.621 108.511 197.669 108.511 184.043C108.511 170.418 119.317 159.466 132.532 159.466Z",
                       strokeWidth: "5.33595",
                     }),
-                  (_ == null ? void 0 : _.bHighlightPairingButtons) &&
+                  _?.bHighlightPairingButtons &&
                     jsx("circle", {
                       stroke: "#1A9FFF",
                       _: "117.519",
@@ -125201,7 +123443,7 @@
         function _(_) {
           const { children: _, level: _, containerClass: _, ..._ } = _;
           let _, _;
-          switch (_ != null ? _ : EWirelessEndpointStrength._) {
+          switch (_ ?? EWirelessEndpointStrength._) {
             case EWirelessEndpointStrength.Excellent:
               (_ = "#59BF40"),
                 (_ = jsx(_, {
@@ -125410,6 +123652,19 @@
             ],
           });
         }
+        function _(_) {
+          const { colored: _, ..._ } = _;
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 -4 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              _: "M9 9C25.2 12.6 28.98 23.71 32.72 33.01l-3.4 1.19l-1.71-4.14c-.86 .31-1.76 .54-2.41 .54C5.4 30.6 0 0 0 0c1.8 3.6 14.4 4.05 23.4 5.85S36 15.3 36 18.9s-3.15 6.75-3.15 6.75C27 9 9 9 9 9",
+              fill: _ ? "#59BF40" : "#5f6468",
+            }),
+          });
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -125559,12 +123814,12 @@
             ),
             _ = _.useCallback(() => {
               _.bHideMainWindowForPopouts &&
-                (_ == null || _.SteamClient.Window.BringToFront());
+                _?.SteamClient.Window.BringToFront();
             }, [_.bHideMainWindowForPopouts, _]);
           (0, _._)(_, "click", _);
-          const _ = _ == null ? void 0 : _.bHideActions,
+          const _ = _?.bHideActions,
             _ =
-              typeof (_ == null ? void 0 : _.nDragAreaHeight) == "number"
+              typeof _?.nDragAreaHeight == "number"
                 ? {
                     height: _.nDragAreaHeight,
                   }
@@ -125597,27 +123852,19 @@
             : null;
         }
         function _(_, _, _, _) {
-          var _, _;
           let _,
             _,
             _ = _.popupWidth || 500,
             _ = _.popupHeight || 400,
             _;
-          if (
-            _._.IN_CLIENT &&
-            (_ =
-              (_ = _ == null ? void 0 : _.SteamClient) == null
-                ? void 0
-                : _.Browser) != null &&
-            _.GetBrowserID
-          )
+          if (_._.IN_CLIENT && _?.SteamClient?.Browser?.GetBrowserID)
             _ = _.SteamClient.Browser.GetBrowserID();
           else {
             let _ = _.screen;
             (_ = (_.availWidth - _) / 2), (_ = (_.availHeight - _) / 2);
             let _ = _;
-            typeof _.availLeft != "undefined" &&
-              typeof _.availTop != "undefined" &&
+            typeof _.availLeft < "u" &&
+              typeof _.availTop < "u" &&
               ((_ += _.availLeft), (_ += _.availTop));
           }
           return {
@@ -125747,10 +123994,7 @@
           const _ = (0, _._)().ownerWindow,
             _ = (0, _._)(),
             _ = _.useCallback(() => {
-              var _;
-              (_ = _ == null ? void 0 : _.SteamClient) != null &&
-                _.Window &&
-                _.SteamClient.Window.BringToFront();
+              _?.SteamClient?.Window && _.SteamClient.Window.BringToFront();
             }, [_]);
           _.useEffect(() => _.RegisterOverlay(_), [_, _]),
             _.useEffect(
@@ -125799,7 +124043,7 @@
                         ..._,
                         key: _.key,
                         modal: _,
-                        Component: _ != null ? _ : _,
+                        Component: _ ?? _,
                       })
                     : _ instanceof _._
                       ? (0, _.createElement)(_, {
@@ -125920,10 +124164,7 @@
             [_, _] = _.useState(!1);
           return (
             _.useLayoutEffect(() => {
-              var _;
-              _ && !_
-                ? _(!0)
-                : !_ && _ && ((_ = _.current) == null || _.close());
+              _ && !_ ? _(!0) : !_ && _ && _.current?.close();
             }, [_, _]),
             _.useLayoutEffect(() => {
               _ && _.current.showModal();
@@ -126278,15 +124519,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -126295,33 +124527,30 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
+          };
+        class _ {
+          key;
+          static sm_lastKey = 0;
+          ModalClosedCallback = new _._();
           constructor() {
-            _(this, "key"),
-              _(this, "ModalClosedCallback", new _._()),
-              (this.key = `Modal_${_.sm_lastKey++}`);
+            this.key = `Modal_${_.sm_lastKey++}`;
           }
-        };
-        _(_, "sm_lastKey", 0);
-        let _ = _;
+        }
         class _ extends _ {
+          element;
+          ModalUpdatedCallback = new _._();
           constructor(_) {
-            super(),
-              _(this, "element"),
-              _(this, "ModalUpdatedCallback", new _._()),
-              (this.element = _);
+            super(), (this.element = _);
           }
           UpdateModal(_) {
             (this.element = _), this.ModalUpdatedCallback.Dispatch();
           }
         }
         class _ extends _ {
+          m_OnElementReadyCallbacks = new _._();
+          m_OnActiveModalCallbacks = new _._();
           constructor() {
-            super(),
-              _(this, "m_OnElementReadyCallbacks", new _._()),
-              _(this, "m_OnActiveModalCallbacks", new _._());
+            super();
           }
           get OnElementReadyCallbacks() {
             return this.m_OnElementReadyCallbacks;
@@ -126338,11 +124567,11 @@
         }
         _([_._], _.prototype, "RefModalElement", 1);
         class _ extends _ {
+          m_strName;
+          m_modalProps;
+          m_options;
           constructor(_, _, _, _) {
             super(_),
-              _(this, "m_strName"),
-              _(this, "m_modalProps"),
-              _(this, "m_options"),
               (this.m_strName = _),
               (this.m_modalProps = _),
               (this.m_options = _);
@@ -126387,7 +124616,7 @@
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = _ != null ? _ : _;
+            _ = _ ?? _;
           (0, _._)(_.OnMenusChanged, _);
           const _ = !_ && _.BShouldRenderMouseOverlay(),
             _ = _.GetAllMenus();
@@ -126410,7 +124639,6 @@
           });
         }
         function _(_) {
-          var _;
           const { instance: _, browserInfo: _, children: _ } = _,
             _ = !1,
             _ = _(),
@@ -126421,8 +124649,8 @@
               (_ ||
                 _.options.bForcePopup ||
                 _.innerWidth < 400 ||
-                (_ == null ? void 0 : _.BOnlyPopups())) &&
-              !!((_ = _.SteamClient) != null && _.Window));
+                _?.BOnlyPopups()) &&
+              !!_.SteamClient?.Window);
           const _ = _.useMemo(
               () => ({
                 instance: _,
@@ -126527,9 +124755,7 @@
                 } else
                   _.options.bRetainOnHide &&
                     window.setTimeout(() => {
-                      var _;
-                      (_ = _.window) == null ||
-                        _.SteamClient.Window.HideWindow();
+                      _.window?.SteamClient.Window.HideWindow();
                     }, 30);
             }, [_, _, _.visible, _]),
             _(_.window),
@@ -126554,7 +124780,6 @@
           _ = __webpack_require__("chunkid");
         const _ = _.createContext({}),
           _ = _.memo(function (_) {
-            var _, _, _;
             const {
                 children: _,
                 bRenderOverlayAtRoot: _,
@@ -126581,14 +124806,13 @@
               rctActiveContextMenus: (0, _.jsx)(_, {}),
             });
             _.bRenderOverlayAtRoot &&
-              typeof document != "undefined" &&
+              typeof document < "u" &&
               "body" in document &&
               (_ = _.createPortal(_, document.body)),
               (0, _._)(_, _.current),
-              _ !== void 0 && ((_ = _.current) == null || _.SetUsePopups(_)),
-              _ !== void 0 &&
-                ((_ = _.current) == null || _.SetCenterPopupsOnWindow(_)),
-              _ !== void 0 && ((_ = _.current) == null || _.SetOnlyPopups(_)),
+              _ !== void 0 && _.current?.SetUsePopups(_),
+              _ !== void 0 && _.current?.SetCenterPopupsOnWindow(_),
+              _ !== void 0 && _.current?.SetOnlyPopups(_),
               _.current.SetBrowserInfo(_);
             const _ = _.useMemo(
               () => ({
@@ -126636,35 +124860,22 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_bUsePopups", !0),
-              _(this, "m_bOnlyPopups", !1),
-              _(this, "m_bCenterPopupsOnWindow", !1),
-              _(this, "m_rgModals", []),
-              _(this, "m_OnModalCountChangedCallbacks", new _._()),
-              _(this, "m_OnModalShownCallbacks", new _._()),
-              _(this, "m_OnModalHiddenCallbacks", new _._()),
-              _(this, "m_cMountedOverlays", 0),
-              _(this, "m_rgMeasureModalRequests", []),
-              _(this, "m_nMeasureRequestID", 0),
-              _(this, "m_OnMeasureModal", new _._()),
-              _(this, "m_rgLegacyPopupModals", []),
-              _(this, "m_OnLegacyPopupModalCountChanged", new _._()),
-              _(this, "m_browserInfo");
-          }
+          m_bUsePopups = !0;
+          m_bOnlyPopups = !1;
+          m_bCenterPopupsOnWindow = !1;
+          m_rgModals = [];
+          m_OnModalCountChangedCallbacks = new _._();
+          m_OnModalShownCallbacks = new _._();
+          m_OnModalHiddenCallbacks = new _._();
+          m_cMountedOverlays = 0;
+          m_rgMeasureModalRequests = [];
+          m_nMeasureRequestID = 0;
+          m_OnMeasureModal = new _._();
+          m_rgLegacyPopupModals = [];
+          m_OnLegacyPopupModalCountChanged = new _._();
+          m_browserInfo;
           get ModalCountChangedCallbacks() {
             return this.m_OnModalCountChangedCallbacks;
           }
@@ -126723,6 +124934,10 @@
           }
           ShowModal(_) {
             return this.ShowModalInternal(_);
+          }
+          CloseLegacyModals() {
+            for (const _ of this.m_rgModals.filter((_) => _ instanceof _._))
+              this.RemoveModal(_);
           }
           RemoveModal(_) {
             let _ = this.m_rgModals.indexOf(_);
@@ -126845,9 +125060,7 @@
           }
         }
         class _ {
-          constructor() {
-            _(this, "m_mapModalManager", new WeakMap());
-          }
+          m_mapModalManager = new WeakMap();
           GetModalManager(_) {
             let _ = this.m_mapModalManager.get(_);
             return (
@@ -126911,8 +125124,7 @@
         const _ = _.createContext({}),
           _ = () => _.useContext(_);
         function _(_) {
-          var _;
-          const _ = (_ = _().ModalPosition) != null ? _ : _;
+          const _ = _().ModalPosition ?? _;
           return (0, _.jsx)(_, {
             ..._,
           });
@@ -127070,7 +125282,7 @@
               (_) => {
                 const _ = Math.ceil(_.borderBoxSize[0].inlineSize),
                   _ = Math.ceil(_.borderBoxSize[0].blockSize);
-                _ == null || _.SteamClient.Window.ResizeTo(_, _, !0);
+                _?.SteamClient.Window.ResizeTo(_, _, !0);
               },
               [_],
             ),
@@ -127083,7 +125295,6 @@
           });
         }
         function _(_) {
-          var _;
           const {
               strName: _,
               strTitle: _,
@@ -127097,8 +125308,7 @@
               titleBarClassName: _,
               saveDimensionsKey: _,
             } = _,
-            _ = (0, _._)(),
-            _ = _ == null ? void 0 : _.ownerWindow,
+            _ = (0, _._)()?.ownerWindow,
             _ = (0, _._)(),
             _ = {
               ...(0, _._)(_),
@@ -127125,10 +125335,9 @@
                 minWidth: _.minWidth,
                 minHeight: _.minHeight,
                 replace_existing_popup: !0,
-                center_on_window:
-                  _ != null && _.BCenterPopupsOnWindow() ? _ : void 0,
+                center_on_window: _?.BCenterPopupsOnWindow() ? _ : void 0,
                 eCreationFlags: _,
-                target_browser: _ == null ? void 0 : _.GetBrowserInfo(),
+                target_browser: _?.GetBrowserInfo(),
               },
               _,
             );
@@ -127138,12 +125347,12 @@
               [_, _],
             ),
             _.useEffect(() => {
-              _ && (_.document.title = _ != null ? _ : _);
+              _ && (_.document.title = _ ?? _);
             }, [_, _, _]),
             !_)
           )
             return null;
-          const _ = (_ = _.modal) != null ? _ : _.onlyPopoutIfNeeded,
+          const _ = _.modal ?? _.onlyPopoutIfNeeded,
             _ = !_.resizable;
           return (0, _.jsxs)(_.Fragment, {
             children: [
@@ -127169,10 +125378,8 @@
                             hideActions: !_,
                           }),
                           (0, _.jsx)(_._, {
-                            bCenterPopupsOnWindow:
-                              _ == null ? void 0 : _.BCenterPopupsOnWindow(),
-                            browserInfo:
-                              _ == null ? void 0 : _.GetBrowserInfo(),
+                            bCenterPopupsOnWindow: _?.BCenterPopupsOnWindow(),
+                            browserInfo: _?.GetBrowserInfo(),
                             children: _,
                           }),
                         ],
@@ -127193,7 +125400,7 @@
         function _(_) {
           const { popup: _ } = _,
             _ = _.useCallback(() => {
-              _ == null || _.SteamClient.Window.BringToFront();
+              _?.SteamClient.Window.BringToFront();
             }, [_]);
           return (
             _.useEffect(_, [_]),
@@ -127450,50 +125657,40 @@
           _ = __webpack_require__("chunkid");
         async function _(_, _, _) {
           const _ = (0, _._)(_),
-            _ = (_ == null ? void 0 : _.bForcePopOut) || _(_);
+            _ = _?.bForcePopOut || _(_);
           (0, _._)(
-            !(_ && _ != null && _.bNeverPopOut),
+            !(_ && _?.bNeverPopOut),
             "Conflicting popout options; will ignore bNeverPopOut",
           );
-          const _ = !_ && (_ == null ? void 0 : _.bNeverPopOut) === !0,
+          const _ = !_ && _?.bNeverPopOut === !0,
             _ = _(_) || (!_ && _(_, _)),
-            _ =
-              _ &&
-              (_ == null ? void 0 : _.popupWidth) &&
-              (_ == null ? void 0 : _.popupHeight);
+            _ = _ && _?.popupWidth && _?.popupHeight;
           let _;
           if (_ && !_) {
             const _ = _.cloneElement(_, {
               closeModal: () => {},
             });
-            _ = await _(_, _, _ == null ? void 0 : _.promiseRenderComplete);
+            _ = await _(_, _, _?.promiseRenderComplete);
           }
           const _ =
             _ && _.height / _.innerHeight < 0.9 && _.width / _.innerWidth < 0.8;
           if (_ || (!_ && _))
             return _(_, _, void 0, {
-              fnOnClose: _ == null ? void 0 : _.fnOnClose,
+              fnOnClose: _?.fnOnClose,
             });
           {
             const _ = {
-                strTitle:
-                  (_ == null ? void 0 : _.strTitle) ||
-                  (0, _._)("#Dialog_DefaultWindowTitle"),
-                fnOnClose: _ == null ? void 0 : _.fnOnClose,
-                popupWidth:
-                  (_ == null ? void 0 : _.popupWidth) ||
-                  (_ == null ? void 0 : _.width),
-                popupHeight:
-                  (_ == null ? void 0 : _.popupHeight) ||
-                  (_ == null ? void 0 : _.height),
-                bHideMainWindowForPopouts:
-                  _ == null ? void 0 : _.bHideMainWindowForPopouts,
-                className: _ == null ? void 0 : _.className,
+                strTitle: _?.strTitle || (0, _._)("#Dialog_DefaultWindowTitle"),
+                fnOnClose: _?.fnOnClose,
+                popupWidth: _?.popupWidth || _?.width,
+                popupHeight: _?.popupHeight || _?.height,
+                bHideMainWindowForPopouts: _?.bHideMainWindowForPopouts,
+                className: _?.className,
               },
               _ = {
-                bHideActions: _ == null ? void 0 : _.bHideActionIcons,
+                bHideActions: _?.bHideActionIcons,
               },
-              _ = (_ == null ? void 0 : _.browserContext) || _.browserInfo;
+              _ = _?.browserContext || _.browserInfo;
             return _(_, _, _.strTitle, _, _, _, _);
           }
         }
@@ -127507,9 +125704,7 @@
           let _, _;
           const _ = _.props.closeModal,
             _ = () => {
-              _ && _.Close(),
-                _ && _(),
-                _ != null && _.fnOnClose && _.fnOnClose();
+              _ && _.Close(), _ && _(), _?.fnOnClose && _.fnOnClose();
             },
             _ = () => {
               _ && _.Close(), _();
@@ -129733,6 +127928,33 @@
               className: "playTriangle",
               _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
             }),
+          });
+        }
+        function _() {
+          return jsxs("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_PlayInCircle",
+            width: "20px",
+            height: "20px",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            children: [
+              jsx("circle", {
+                className: "playCircle",
+                _: "10",
+                _: "10",
+                _: "9.5",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "1",
+              }),
+              jsx("path", {
+                className: "playTriangle",
+                transform: "matrix(0.0421875 0 0 0.0421875 4.7875 4.6)",
+                fill: "currentColor",
+                _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
+              }),
+            ],
           });
         }
         function _() {
@@ -138222,7 +136444,7 @@
             }, [_]);
           return (0, _.jsx)(_, {
             className: "minimizeButton windowControlButton",
-            onClick: _ != null ? _ : _,
+            onClick: _ ?? _,
             children: !_ && (0, _.jsx)(_.Xjb, {}),
           });
         }
@@ -138236,7 +136458,7 @@
             }, [_]);
           return (0, _.jsx)(_, {
             className: "closeButton windowControlButton",
-            onClick: _ != null ? _ : _,
+            onClick: _ ?? _,
             children: !_ && (0, _.jsx)(_.sED, {}),
           });
         }
@@ -138348,7 +136570,6 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { divProps: _, tooltipProps: _ } = _({
             ..._,
             toolTipContent: _.toolTipContent
@@ -138360,7 +136581,7 @@
           return (0, _.jsxs)(_._, {
             className: "tool-tip-source",
             noFocusRing: !0,
-            focusable: (_ = _.bNavStop) != null ? _ : !!_.onClick,
+            focusable: _.bNavStop ?? !!_.onClick,
             ..._,
             children: [
               (0, _.jsx)(_, {
@@ -138371,12 +136592,11 @@
           });
         }
         function _(_) {
-          var _;
           const { divProps: _, tooltipProps: _ } = _(_);
           return (0, _.jsxs)(_._, {
             className: "tool-tip-source",
             noFocusRing: !0,
-            focusable: (_ = _.bNavStop) != null ? _ : !!_.onClick,
+            focusable: _.bNavStop ?? !!_.onClick,
             ..._,
             children: [
               (0, _.jsx)(_, {
@@ -138387,14 +136607,13 @@
           });
         }
         function _(_) {
-          var _;
           const { divProps: _, tooltipProps: _ } = _(_);
           return jsxs("rect", {
             ..._,
             children: [
               jsx(_, {
                 ..._,
-                bPortalToBody: (_ = _.bPortalToBody) != null ? _ : !0,
+                bPortalToBody: _.bPortalToBody ?? !0,
               }),
               _.children,
             ],
@@ -138630,15 +136849,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -138647,8 +136857,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_, _) {
           let _;
           "currentTarget" in _
@@ -138759,7 +136968,7 @@
                   }),
                 jsx(_, {
                   strFullImageURL: _,
-                  unPID: _ == null ? void 0 : _.unPID,
+                  unPID: _?.unPID,
                 }),
               ],
             }),
@@ -138793,19 +137002,17 @@
             children: _.condition ? _.wrap(_.children) : _.children,
           });
         class _ {
+          m_Promise;
+          m_Value = void 0;
           constructor(_) {
-            _(this, "m_Promise"),
-              _(this, "m_Value"),
-              (0, _._)(this),
-              (this.promise = _);
+            (0, _._)(this), (this.promise = _);
           }
           set promise(_) {
             (this.m_Promise = _),
               (this.m_Value = void 0),
-              _ == null ||
-                _.then((_) => {
-                  this.m_Promise === _ && (this.m_Value = _);
-                });
+              _?.then((_) => {
+                this.m_Promise === _ && (this.m_Value = _);
+              });
           }
           get promise() {
             return this.m_Promise;
@@ -138901,11 +137108,10 @@
             _ = _ ? _._ : _._;
           let _ = _;
           return (
-            _ != null || (_ = _ ? (0, _.jsx)(_.Jru, {}) : void 0),
-            _ != null ||
-              (_ = (0, _.jsxs)(_.Fragment, {
-                children: ["\xA0", (0, _.jsx)(_._VW, {})],
-              })),
+            (_ ??= _ ? (0, _.jsx)(_.Jru, {}) : void 0),
+            (_ ??= (0, _.jsxs)(_.Fragment, {
+              children: ["\xA0", (0, _.jsx)(_._VW, {})],
+            })),
             (0, _.jsx)(_, {
               toolTipContent: _,
               className: (0, _._)(
@@ -139003,27 +137209,16 @@
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         class _ {
+          m_options;
+          m_msStart;
+          m_msEnd;
+          m_bActive = !1;
+          m_fnBoundAnimationFunc = void 0;
+          m_window;
           constructor(_, _) {
-            _(this, "m_options"),
-              _(this, "m_msStart"),
-              _(this, "m_msEnd"),
-              _(this, "m_bActive", !1),
-              _(this, "m_fnBoundAnimationFunc"),
-              _(this, "m_window"),
-              (this.m_window = _),
+            (this.m_window = _),
               (this.m_options = {
                 timing: "sine",
                 ..._,
@@ -139092,19 +137287,20 @@
           }
         }
         class _ extends _ {
+          m_fnCallback;
           constructor(_, _, _) {
-            super(_, _), _(this, "m_fnCallback"), (this.m_fnCallback = _);
+            super(_, _), (this.m_fnCallback = _);
           }
           Update(_) {
             this.m_fnCallback(_);
           }
         }
         class _ extends _ {
+          m_object;
+          m_propTargets;
+          m_props = {};
           constructor(_, _, _) {
             super("ownerDocument" in _ ? _._(_) : _, _),
-              _(this, "m_object"),
-              _(this, "m_propTargets"),
-              _(this, "m_props", {}),
               (this.m_object = _),
               (this.m_propTargets = _);
           }
@@ -139146,7 +137342,7 @@
               errorCode: _._,
             };
           if (
-            typeof _.response != "undefined" &&
+            typeof _.response < "u" &&
             _.response.data &&
             typeof _.response.data == "object"
           ) {
@@ -139192,23 +137388,17 @@
                 errorCode: _.data.success,
               };
           } else {
-            if (typeof _.success != "undefined" && typeof _.msg != "undefined")
+            if (typeof _.success < "u" && typeof _.msg < "u")
               return {
                 strErrorMsg: _.msg,
                 errorCode: _.success,
               };
-            if (
-              typeof _.success != "undefined" &&
-              typeof _.message != "undefined"
-            )
+            if (typeof _.success < "u" && typeof _.message < "u")
               return {
                 strErrorMsg: _.message,
                 errorCode: _.success,
               };
-            if (
-              typeof _.success != "undefined" &&
-              typeof _.err_msg != "undefined"
-            )
+            if (typeof _.success < "u" && typeof _.err_msg < "u")
               return {
                 strErrorMsg: _.err_msg,
                 errorCode: _.success,
@@ -139259,15 +137449,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -139276,8 +137457,7 @@ Status Code:` +
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
           SyncStore(_) {
             return this.Subscribe(_).Unsubscribe;
@@ -139290,11 +137470,11 @@ Status Code:` +
           _([_._], _.prototype, "GetValue", 1);
         class _ extends _ {}
         class _ extends _ {
+          m_callbacks;
+          m_currentValue;
+          m_fnEquals;
           constructor(_, _) {
             super(),
-              _(this, "m_callbacks"),
-              _(this, "m_currentValue"),
-              _(this, "m_fnEquals"),
               (this.m_callbacks = new _._()),
               (this.m_currentValue = _),
               (this.m_fnEquals = _);
@@ -139321,12 +137501,12 @@ Status Code:` +
           return new _(_, _);
         }
         class _ extends _ {
+          m_fnMap;
+          m_originalSubscribableValue;
+          m_mappedSubscribableValue;
+          m_bMappedValueStale = !1;
           constructor(_, _, _) {
             super(),
-              _(this, "m_fnMap"),
-              _(this, "m_originalSubscribableValue"),
-              _(this, "m_mappedSubscribableValue"),
-              _(this, "m_bMappedValueStale", !1),
               (this.m_originalSubscribableValue = _),
               (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
               (this.m_fnMap = _),
@@ -139356,11 +137536,9 @@ Status Code:` +
           return new _(_, _, _);
         }
         class _ {
-          constructor() {
-            _(this, "m_schTimer"),
-              _(this, "m_fnCallback"),
-              _(this, "m_fnOnCancel");
-          }
+          m_schTimer;
+          m_fnCallback;
+          m_fnOnCancel;
           Schedule(_, _) {
             this.IsScheduled() && this.Cancel(),
               (this.m_fnCallback = _),
@@ -139390,14 +137568,12 @@ Status Code:` +
           }
           ScheduledInternal() {
             const _ = this.m_fnCallback;
-            this.Reset(), _ == null || _();
+            this.Reset(), _?.();
           }
         }
         _([_._], _.prototype, "ScheduledInternal", 1);
         class _ {
-          constructor() {
-            _(this, "m_rgListeners", []);
-          }
+          m_rgListeners = [];
           AddEventListener(_, _, _) {
             _.addEventListener(_, _),
               this.m_rgListeners.push({
@@ -139421,9 +137597,7 @@ Status Code:` +
           return _.reduce((_, _, _) => ((_[_[_]] = _), _), _);
         }
         class _ {
-          constructor() {
-            _(this, "m_vecCallbacks", []);
-          }
+          m_vecCallbacks = [];
           Push(_) {
             this.m_vecCallbacks.push(_);
           }
@@ -139485,7 +137659,7 @@ Status Code:` +
           if (!_()) return;
           _ || (_ = "/");
           let _ = "";
-          if (typeof _ != "undefined" && _) {
+          if (typeof _ < "u" && _) {
             const _ = new Date();
             _.setTime(_.getTime() + 1e3 * 60 * 60 * 24 * _),
               (_ = "; expires=" + _.toUTCString());
@@ -139508,7 +137682,7 @@ Status Code:` +
           _: () => _,
         });
         function _(_, _) {
-          typeof window != "undefined" && (window[_] = _);
+          typeof window > "u" || (window[_] = _);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -139591,18 +137765,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           return _ != null && _.focus !== void 0;
         }
@@ -139622,12 +137785,11 @@ Status Code:` +
           }
         }
         function _(_, _) {
-          var _;
           let _ = _;
           for (; _; ) {
             if (
-              (((_ = _.parentNode) == null ? void 0 : _.nodeType) ==
-                Node.DOCUMENT_FRAGMENT_NODE && (_ = _.parentNode.host),
+              (_.parentNode?.nodeType == Node.DOCUMENT_FRAGMENT_NODE &&
+                (_ = _.parentNode.host),
               _ == _)
             )
               return !0;
@@ -139726,8 +137888,7 @@ Status Code:` +
           return _.navigator.clipboard.readText();
         }
         function _(_) {
-          var _;
-          const _ = (_ = window.top) != null ? _ : window,
+          const _ = window.top ?? window,
             _ = _.document,
             _ = _.createElement("textarea");
           (_.textContent = _),
@@ -139852,43 +138013,46 @@ Status Code:` +
             : _();
         }
         class _ {
+          m_nBufferPx;
+          m_elParent;
+          m_bNeedSort = !1;
+          m_bOffsetsInvalidated = !1;
+          m_rgChildren = [];
+          m_nLastYMin;
+          m_nLastYMax;
           constructor(_) {
-            _(this, "m_nBufferPx"),
-              _(this, "m_elParent"),
-              _(this, "m_bNeedSort", !1),
-              _(this, "m_bOffsetsInvalidated", !1),
-              _(this, "m_rgChildren", []),
-              _(this, "m_nLastYMin"),
-              _(this, "m_nLastYMax"),
-              _(this, "RecomputeVisibility", () => {
-                const _ = this.m_elParent.scrollTop - this.m_nBufferPx,
-                  _ =
-                    this.m_elParent.scrollTop +
-                    this.m_elParent.clientHeight +
-                    this.m_nBufferPx;
-                this.EnsureSort();
-                for (const _ of this.m_rgChildren)
-                  if (!(_.yOffset < _)) {
-                    if (_.yOffset > _) break;
-                    _.fnCallback(!0);
-                  }
-                (this.m_nLastYMin = _), (this.m_nLastYMax = _);
-              }),
-              (this.m_nBufferPx = _);
+            this.m_nBufferPx = _;
           }
           SetParent(_) {
-            var _, _;
             this.m_elParent &&
-              ((_ = this.m_elParent.ownerDocument.defaultView) == null ||
-                _.removeEventListener("resize", this.RecomputeVisibility)),
+              this.m_elParent.ownerDocument.defaultView?.removeEventListener(
+                "resize",
+                this.RecomputeVisibility,
+              ),
               (this.m_elParent = _),
               this.m_elParent &&
-                ((_ = this.m_elParent.ownerDocument.defaultView) == null ||
-                  _.addEventListener("resize", this.RecomputeVisibility));
+                this.m_elParent.ownerDocument.defaultView?.addEventListener(
+                  "resize",
+                  this.RecomputeVisibility,
+                );
           }
           InvalidateOffsetsAndRecompute() {
             (this.m_bOffsetsInvalidated = !0), this.RecomputeVisibility();
           }
+          RecomputeVisibility = () => {
+            const _ = this.m_elParent.scrollTop - this.m_nBufferPx,
+              _ =
+                this.m_elParent.scrollTop +
+                this.m_elParent.clientHeight +
+                this.m_nBufferPx;
+            this.EnsureSort();
+            for (const _ of this.m_rgChildren)
+              if (!(_.yOffset < _)) {
+                if (_.yOffset > _) break;
+                _.fnCallback(!0);
+              }
+            (this.m_nLastYMin = _), (this.m_nLastYMax = _);
+          };
           EnsureSort() {
             if (this.m_bOffsetsInvalidated) {
               for (let _ = 0; _ < this.m_rgChildren.length; _++)
@@ -139945,7 +138109,7 @@ Status Code:` +
           return _;
         }
         function _(_, _) {
-          let _ = _ == null ? void 0 : _.parentElement;
+          let _ = _?.parentElement;
           for (; _; ) {
             if (_(_)) {
               if (!_ || _ == "x") {
@@ -140013,16 +138177,13 @@ Status Code:` +
           _(_.document, _, !0);
         }
         function _(_, _, _) {
-          var _;
           const _ = Object.assign({}, _),
             _ = _.getElementsByTagName("head")[0],
             _ = _.getElementsByTagName("link"),
             _ = _.length;
           for (let _ = 0; _ < _; ++_) {
             const _ = _[_];
-            _[_.href]
-              ? delete _[_.href]
-              : _ && ((_ = _.parentNode) == null || _.removeChild(_));
+            _[_.href] ? delete _[_.href] : _ && _.parentNode?.removeChild(_);
           }
           const _ = [];
           for (const _ in _) {
@@ -140070,17 +138231,17 @@ Status Code:` +
             }
             for (let _ = 0; _ < _.removedNodes.length; _++) {
               const _ = _.removedNodes[_];
-              _.nodeType === Node.ELEMENT_NODE && (_ == null || _(_));
+              _.nodeType === Node.ELEMENT_NODE && _?.(_);
             }
           }
         }
         function _(_, _) {
-          let _ = _ != null ? _ : null;
+          let _ = _ ?? null;
           for (; _ && !_.contains(_); ) _ = _.parentElement;
           return _;
         }
         function _(_, _) {
-          let _ = _ != null ? _ : null;
+          let _ = _ ?? null;
           for (; _ && !_.contains(_); ) _ = _.parentNode;
           return _;
         }
@@ -140329,27 +138490,14 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_mapTokens", new Map()),
-              _(this, "m_mapFallbackTokens", new Map()),
-              _(this, "m_cbkTokensChanged", new _._()),
-              _(this, "m_rgLocalesToUse"),
-              _(this, "m_bReportIndividualMissingTokens", !0),
-              _(this, "m_bReady", !1);
-          }
+          m_mapTokens = new Map();
+          m_mapFallbackTokens = new Map();
+          m_cbkTokensChanged = new _._();
+          m_rgLocalesToUse;
+          m_bReportIndividualMissingTokens = !0;
+          m_bReady = !1;
           static GetLanguageFallback(_) {
             return _ === "sc_schinese" ? "schinese" : "english";
           }
@@ -140459,16 +138607,12 @@ Status Code:` +
             if (_ !== void 0) return _;
           }
           static GetTokenWithFallback(_) {
-            var _;
             if (!_) return "";
             const _ = (0, _.sfN)(_._.LANGUAGE),
               _ = _.find((_) => _.language == _);
             if (_) return _.localized_string;
-            const _ = _.GetELanguageFallback(_),
-              _ = _.find((_) => _.language == _);
-            return (_ = _ == null ? void 0 : _.localized_string) != null
-              ? _
-              : "";
+            const _ = _.GetELanguageFallback(_);
+            return _.find((_) => _.language == _)?.localized_string ?? "";
           }
           static BHasTokenLanguage(_, _) {
             return !!_.find((_) => _.language == _);
@@ -140550,7 +138694,7 @@ Status Code:` +
               (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
                 if (_ <= _.length && _ >= 1) {
                   let _ = _[_ - 1];
-                  return String(_ == null ? "" : _);
+                  return String(_ ?? "");
                 }
                 return _;
               })),
@@ -140718,10 +138862,7 @@ Status Code:` +
         async function _(_, _) {
           let _ = await _;
           if (
-            (_ != null &&
-              _.default &&
-              Object.keys(_).length === 1 &&
-              (_ = _.default),
+            (_?.default && Object.keys(_).length === 1 && (_ = _.default),
             !_ || Object.keys(_).length === 0)
           )
             throw new Error(`Empty localization file for ${_}`);
@@ -140986,9 +139127,7 @@ Status Code:` +
             },
             _ = _._.GetPreferredLocales(),
             _ = {
-              ...((_ == null ? void 0 : _.bForce24HourClock) || _(_[0])
-                ? _
-                : _),
+              ...(_?.bForce24HourClock || _(_[0]) ? _ : _),
               ..._,
             };
           return _.toLocaleTimeString(_, _);
@@ -141329,7 +139468,7 @@ Status Code:` +
           _ = _ ? 0 - _ : _;
           const _ = _(_),
             _ = _.fraction.toFixed(2).split(".")[1],
-            _ = _ != null ? _ : !0;
+            _ = _ ?? !0;
           let _ = !_ || _ == "00";
           _ &&
             _.hours == 0 &&
@@ -141374,7 +139513,7 @@ Status Code:` +
           const _ = _(_),
             _ = _(_.seconds.toString(), 2, "0"),
             _ = _.fraction.toFixed(2).split(".")[1],
-            _ = _ != null ? _ : !0;
+            _ = _ ?? !0;
           let _ = !_ || _ == "00";
           _ &&
             _.hours == 0 &&
@@ -141435,15 +139574,6 @@ Status Code:` +
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -141453,7 +139583,6 @@ Status Code:` +
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_.Debug = 0)] = "Debug"),
             (_[(_.Info = 1)] = "Info"),
@@ -141462,10 +139591,10 @@ Status Code:` +
             _
           ))(_ || {});
         class _ {
+          m_sName;
+          m_fnIdGenerator = void 0;
           constructor(_, _) {
-            _(this, "m_sName"),
-              _(this, "m_fnIdGenerator"),
-              (this.m_sName = _),
+            (this.m_sName = _),
               (this.m_fnIdGenerator = _),
               _.Get().RegisterLogName(_);
           }
@@ -141488,16 +139617,10 @@ Status Code:` +
             return _.Get().IsDebugLogEnabled(this.m_sName);
           }
           Log(_, ..._) {
-            var _, _;
             const _ = _.Get().IsDebugLogEnabled(this.m_sName);
             if (_ == 0 && !_) return;
             let _ = this.m_sName;
-            const _ =
-              (_ =
-                (_ = this.m_fnIdGenerator) == null ? void 0 : _.call(this)) !=
-              null
-                ? _
-                : null;
+            const _ = this.m_fnIdGenerator?.() ?? null;
             _ != null && (_ += " (" + _ + ")");
             const _ = _.Get().IncludeBacktraceInLog,
               _ = _.Get().AllowCSSInLogStyling;
@@ -141509,15 +139632,18 @@ Status Code:` +
           _([_._], _.prototype, "Warning", 1),
           _([_._], _.prototype, "Error", 1),
           _([_._], _.prototype, "Assert", 1);
-        const _ = class _ {
+        class _ {
+          static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
+          static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+          static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
+          m_setKnownDebugLogs = new Set();
+          m_setEnabledDebugLogs = new Set();
+          m_bIncludeBacktraceInLog = !1;
+          m_bAllowCSSInLogStyling = !0;
+          m_SettingsChangedCallback = new _._();
+          m_bLoading = !0;
           constructor() {
-            _(this, "m_setKnownDebugLogs", new Set()),
-              _(this, "m_setEnabledDebugLogs", new Set()),
-              _(this, "m_bIncludeBacktraceInLog", !1),
-              _(this, "m_bAllowCSSInLogStyling", !0),
-              _(this, "m_SettingsChangedCallback", new _._()),
-              _(this, "m_bLoading", !0),
-              this.LoadSettings();
+            this.LoadSettings();
           }
           LogAsLogManager(..._) {
             _(
@@ -141657,11 +139783,7 @@ Status Code:` +
           GetLogNames() {
             return Array.from(this.LogNames).sort();
           }
-        };
-        _(_, "k_EnabledLogNames_StorageKey", "EnabledWebLogs"),
-          _(_, "k_IncludeBacktraceInLog_StorageKey", "IncludeBacktraceInLog"),
-          _(_, "k_AllowCSSInLogColors_StorageKey", "AllowCSSInLogColors");
-        let _ = _;
+        }
         function _(_) {
           let _ = 0;
           for (let _ = 0; _ < _.length; _++)
@@ -141823,7 +139945,6 @@ Status Code:` +
             refForResizeObserver: _,
           };
         }
-        var _ = __webpack_require__("chunkid");
         function _(_) {
           return useRefCallbackWithCleanup(
             (_) => {
@@ -141848,20 +139969,10 @@ Status Code:` +
               _.current !== _ && ((_.current = _), (_.current = !0));
             }, []),
             _ = _.useCallback(() => {
-              var _, _, _, _, _;
-              const _ =
-                  (_ = (_ = _.current) == null ? void 0 : _.offsetWidth) != null
-                    ? _
-                    : 0,
-                _ =
-                  (_ = (_ = _.current) == null ? void 0 : _.offsetHeight) !=
-                  null
-                    ? _
-                    : 0;
+              const _ = _.current?.offsetWidth ?? 0,
+                _ = _.current?.offsetHeight ?? 0;
               (_.current !== _ || _.current !== _) &&
-                ((_ = _.current) == null || _.call(_, _, _),
-                (_.current = _),
-                (_.current = _));
+                (_.current?.(_, _), (_.current = _), (_.current = _));
             }, []);
           _.useLayoutEffect(() => {
             _.current && (_(), (_.current = !1));
@@ -141881,15 +139992,10 @@ Status Code:` +
           _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = useHistory(),
-            [_, _] = React.useState(
-              () => !!matchPath(_ == null ? void 0 : _.location.pathname, _),
-            );
+            [_, _] = React.useState(() => !!matchPath(_?.location.pathname, _));
           return (
             React.useEffect(
-              () =>
-                _ == null
-                  ? void 0
-                  : _.listen((_) => _(!!matchPath(_.pathname, _))),
+              () => _?.listen((_) => _(!!matchPath(_.pathname, _))),
               [_, _],
             ),
             _
@@ -141903,11 +140009,10 @@ Status Code:` +
           );
         }
         function _(_, _) {
-          var _;
           const _ = `${_}_HistoryValue`,
             _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (_ = _.state && _.state[_]) != null ? _ : _,
+            _ = (_.state && _.state[_]) ?? _,
             _ = _.useCallback(
               (_) => {
                 _.replace(_.location.pathname, {
@@ -141920,11 +140025,10 @@ Status Code:` +
           return [_, _];
         }
         function _(_, _, _) {
-          var _;
           const _ = `${_}_HistoryValue`,
             _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (_ = _.state && _.state[_]) != null ? _ : _,
+            _ = (_.state && _.state[_]) ?? _,
             _ = _.useRef(!1),
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
@@ -141953,14 +140057,8 @@ Status Code:` +
           );
         }
         function _(_) {
-          const [_, _] = React.useState(_ == null ? void 0 : _.location);
-          return (
-            React.useEffect(
-              () => (_ == null ? void 0 : _.listen(() => _(_.location))),
-              [_],
-            ),
-            _
-          );
+          const [_, _] = React.useState(_?.location);
+          return React.useEffect(() => _?.listen(() => _(_.location)), [_]), _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -142498,7 +140596,7 @@ Status Code:` +
           return _.startsWith("http://") || _.startsWith("https://");
         }
         function _(_) {
-          return !!(_ != null && _.startsWith("data:"));
+          return !!_?.startsWith("data:");
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -142517,8 +140615,7 @@ Status Code:` +
                 ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
                     _(_);
                   })
-                : _ != null &&
-                  _.screen &&
+                : _?.screen &&
                   _(
                     _.screen.availWidth == _.innerWidth &&
                       _.screen.availHeight == _.innerHeight,
@@ -142626,50 +140723,30 @@ Status Code:` +
             const _ = _.useContext(_);
             return (
               (0, _._)(
-                (_ == null ? void 0 : _.bSuppressAssert) ||
-                  _.IN_GAMEPADUI !== void 0,
+                _?.bSuppressAssert || _.IN_GAMEPADUI !== void 0,
                 "Trying to use ConfigContext without a provider!  Add ConfigContextRoot to application.",
               ),
               _
             );
           };
         function _(_) {
-          var _, _;
           const { IN_GAMEPADUI: _, IN_DESKTOPUI: _, IN_VR: _, children: _ } = _,
             _ = _({
               bSuppressAssert: !0,
             }),
-            _ =
-              (_ =
-                (_ = (0, _._)()) == null
-                  ? void 0
-                  : _.startsWith("Gamepad VR")) != null
-                ? _
-                : !1,
-            _ = _.useMemo(() => {
-              var _, _, _, _, _;
-              return {
+            _ = (0, _._)()?.startsWith("Gamepad VR") ?? !1,
+            _ = _.useMemo(
+              () => ({
                 IN_GAMEPADUI:
-                  (_ =
-                    (_ = _ != null ? _ : _ == null ? void 0 : _.IN_GAMEPADUI) !=
-                    null
-                      ? _
-                      : (_ = (0, _._)()) == null
-                        ? void 0
-                        : _.startsWith("Gamepad")) != null
-                    ? _
-                    : !1,
-                IN_DESKTOPUI:
-                  (_ = _ != null ? _ : _ == null ? void 0 : _.IN_DESKTOPUI) !=
-                  null
-                    ? _
-                    : !1,
-                IN_VR:
-                  (_ = _ != null ? _ : _ == null ? void 0 : _.IN_VR) != null
-                    ? _
-                    : _,
-              };
-            }, [_, _, _, _, _]);
+                  _ ??
+                  _?.IN_GAMEPADUI ??
+                  (0, _._)()?.startsWith("Gamepad") ??
+                  !1,
+                IN_DESKTOPUI: _ ?? _?.IN_DESKTOPUI ?? !1,
+                IN_VR: _ ?? _?.IN_VR ?? _,
+              }),
+              [_, _, _, _, _],
+            );
           return _.createElement(
             _.Provider,
             {
@@ -142679,16 +140756,13 @@ Status Code:` +
           );
         }
         function _(_) {
-          const _ = _(_);
-          return _ == null ? void 0 : _.IN_GAMEPADUI;
+          return _(_)?.IN_GAMEPADUI;
         }
         function _(_) {
-          const _ = _(_);
-          return _ == null ? void 0 : _.IN_DESKTOPUI;
+          return _(_)?.IN_DESKTOPUI;
         }
         function _(_) {
-          const _ = _(_);
-          return _ == null ? void 0 : _.IN_VR;
+          return _(_)?.IN_VR;
         }
         function _(_) {
           return _(_) ? k_EUIMode_GamePadUI : k_EUIMode_DesktopUI;
@@ -142732,17 +140806,17 @@ Status Code:` +
           return Config.FORCED_DISPLAY_MODE === "steammachine";
         }
         function _(_) {
-          return _ == null ? void 0 : _.IN_GAMEPADUI;
+          return _?.IN_GAMEPADUI;
         }
         function _() {
           return Config.IS_STEAMOS;
         }
         async function _(_, _, _) {
-          if (_ != null && _.config) {
+          if (_?.config) {
             const _ = (await _.get(_ + "ajaxgetconfig")).data;
             _ && Object.assign(Config, _);
           }
-          if (_ != null && _.userConfig) {
+          if (_?.userConfig) {
             const _ = (
               await _.get(_ + "ajaxgetuserconfig", {
                 withCredentials: !0,
@@ -143029,23 +141103,6 @@ Status Code:` +
           _: () => _,
           _: () => _,
         });
-        function _() {
-          const _ = navigator.userAgent.match(
-            /Valve (?<family>Steam (?:Client|GameOverlay|Tenfoot|ClientUI|Gamepad(?: VR)?(?:\/Steam Deck)?))( \[(?<betaid>[^\]]*)\])?(\/(?<launcher>[A-Za-z0-9_]+))?\/(?<version>[0-9]*)/,
-          );
-          if (_) return _.groups;
-        }
-        function _() {
-          var _;
-          const _ = (_ = _()) == null ? void 0 : _.betaid;
-          return (
-            _ &&
-            (_ == "Steam Main Client" ||
-              _ == "Steam Beta Update" ||
-              _ == "Steam Deck Beta" ||
-              _ == "Steam Deck Main")
-          );
-        }
         let _ = !1,
           _ = !1,
           _ = !1,
@@ -143079,7 +141136,7 @@ Status Code:` +
         }
         function _() {
           if (!_()) return 0;
-          if (typeof navigator != "undefined" && navigator.userAgent) {
+          if (typeof navigator < "u" && navigator.userAgent) {
             let _ = navigator.userAgent.match(
               /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
             );
@@ -143088,7 +141145,7 @@ Status Code:` +
           return 0;
         }
         function _() {
-          if (!(navigator != null && navigator.userAgent)) return;
+          if (!navigator?.userAgent) return;
           const _ = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
           if (_ && _.length == 2) return _[1];
         }
@@ -143098,7 +141155,7 @@ Status Code:` +
               window.location &&
               window.location.href &&
               window.location.href.match("[?&]" + _ + "=")) ||
-            (typeof navigator != "undefined" &&
+            (typeof navigator < "u" &&
               navigator.userAgent &&
               navigator.userAgent.toLowerCase().indexOf(_.toLowerCase()) != -1)
           );
@@ -143521,18 +141578,6 @@ Status Code:` +
           ForceDesktop: "_3qIuY9S_vXm3IQS-uE9SRS",
           PopoutSubMenu: "Baq37ml_4RsqEDikF0aIo",
           PopoutSubMenuItems: "_2fZ_eG4hoUgJoNBzVAW8wq",
-          BackgroundAnimation: "_3mu2U32Y_2WuSVGodurd6a",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1oGSmxXXFpN5G7Jn9ZvEQS",
-          "ItemFocusAnim-darkerGrey": "_3lg1LMj3mXezJ7ascb4yGV",
-          "ItemFocusAnim-darkGreySettings": "_1uSUbmC-8W1-FADNfUsSBP",
-          "ItemFocusAnim-darkGrey": "_2wO0UJLCBVNzypL_1QtVVs",
-          "ItemFocusAnim-grey": "_7GGFchhgqc71nZ8eL_lya",
-          "ItemFocusAnim-translucent-white-10": "_3ZLBhyvDidB4Rfz45C_SYe",
-          "ItemFocusAnim-translucent-white-20": "_3tuAQj0tTIvILlQs8SVJ6O",
-          "ItemFocusAnimBorder-darkGrey": "_2ndsTZA8rKNYYxX6q4X62O",
-          "ItemFocusAnim-green": "_3dGZBujqGTb6MvSpwfXt-u",
-          focusAnimation: "_1eQxz4PDgw0-4zeOxZc9zb",
-          hoverAnimation: "uLTwa30_-yxoQKi5qqCAw",
         };
       },
       chunkid: (module) => {
@@ -143561,18 +141606,6 @@ Status Code:` +
           ContextMenuSeparator: "ixiWPQKqTMxnq43WgT3vj",
           Label: "_18C7xpEWME7W-bxMsvyXdi",
           Arrow: "_2T7n7sepVsm6k4PqM9hZ_U",
-          BackgroundAnimation: "_39R4lbKGgs6tgliKRKaOGu",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3-ckPZrQQ4AcL8Jk8U_Jks",
-          "ItemFocusAnim-darkerGrey": "_1oxeJwH0ZuJGWZzFpl0Hna",
-          "ItemFocusAnim-darkGreySettings": "_9s04vs5aAvePxj8LGCHP4",
-          "ItemFocusAnim-darkGrey": "_2pGKXMC5Yvn04wv6_5ayhi",
-          "ItemFocusAnim-grey": "_97AO_Lq9HLtpPQgpBcZeI",
-          "ItemFocusAnim-translucent-white-10": "_2huw7WWVJBokivVlIjoa92",
-          "ItemFocusAnim-translucent-white-20": "NsTryIHdHWU8LOl4XCrhk",
-          "ItemFocusAnimBorder-darkGrey": "_1sLQsQ-IbGQ7xqKTw3uc-M",
-          "ItemFocusAnim-green": "QGN9mnAcP2r3B9mKyCmrp",
-          focusAnimation: "_3R-0H7Rl4MTvs97q_ecWuK",
-          hoverAnimation: "_115JS_717vFpl6zVBnieg5",
         };
       },
       chunkid: (module) => {
@@ -143666,33 +141699,12 @@ Status Code:` +
           BottomButtons: "UeBsDJo7ibrubT7WwDoHM",
           TextareaWrapper: "eNk_O4LrQEvG8jC82EB6M",
           Textarea: "_35YPSEBHIjTxOt0SyTpGld",
-          BackgroundAnimation: "_3PwEEPVt8AFlTzaPsr2aMs",
-          "ItemFocusAnim-darkerGrey-nocolor": "OLaBYXIY9KoOmv591HQ4C",
-          "ItemFocusAnim-grey": "_2cC0LcFydJUHm4XLEOIfH_",
-          "ItemFocusAnim-translucent-white-10": "_2ZXhFZ3yMelM_EaCuFUVCU",
-          "ItemFocusAnim-translucent-white-20": "_3FYJQQRKVuF4an6YLTaAH-",
-          "ItemFocusAnimBorder-darkGrey": "_2bQL7sqLJxz3iErp2xkuDu",
-          "ItemFocusAnim-green": "_3YEiBS4FQvAJ5_DCKWaJ9h",
-          focusAnimation: "_27hQac2edmP4A9XEJkh6QX",
-          hoverAnimation: "_1n0zrqn96vmI5hvxZBwflw",
         };
       },
       chunkid: (module) => {
         module.exports = {
           "duration-app-launch": "800ms",
           DropDownControlButton: "v8oJcDOQF6xmlVTw4VhOr",
-          BackgroundAnimation: "_39ftBgrwHL79vzBWzTUNIg",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1uRxKXzp4hyFG853DRpRmG",
-          "ItemFocusAnim-darkerGrey": "gmgYjyVXiyoE4dXuiyvRe",
-          "ItemFocusAnim-darkGreySettings": "BHeZLoGSQeMbyP_u3BOyv",
-          "ItemFocusAnim-darkGrey": "_wAkIFq95RDIO0BaFscJ-",
-          "ItemFocusAnim-grey": "_2EU0bFj-iDnGzS3y22Pm1n",
-          "ItemFocusAnim-translucent-white-10": "zCo-rS_8G4PFjVNj2HddR",
-          "ItemFocusAnim-translucent-white-20": "_3dLS4qNfRaL3VlHxF0assn",
-          "ItemFocusAnimBorder-darkGrey": "_2qWT6FmefGsz6vW4GyAN1d",
-          "ItemFocusAnim-green": "VJdx426NYwPhzacwDjqUy",
-          focusAnimation: "_1VSndovYnDm2jbIx6FU3Nq",
-          hoverAnimation: "_2tJDT6WmelyKdUlLq2gtna",
         };
       },
       chunkid: (module) => {
@@ -143732,18 +141744,6 @@ Status Code:` +
           Exit: "_3XxqhmpembnJZkU_CDSCQR",
           ExitActive: "_13X1O22Ge1JqHS5s4seC4A",
           Down: "_1C1JjI4inJUtodtSWKAPoE",
-          BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
-          "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
-          "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-          "ItemFocusAnim-darkGreySettings": "BvE4zAUWrioZv0MShImce",
-          "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
-          "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
-          "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
-          "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
-          "ItemFocusAnimBorder-darkGrey": "_21sRAofE89wu3ZgopiNdvZ",
-          "ItemFocusAnim-green": "_1JVe0k01JB6eRezb8eqqjg",
-          focusAnimation: "_2mE4Zqk74DYf-Fl8qNzR_1",
-          hoverAnimation: "_2TiOQH2-wZVvDubR_9gMF1",
         };
       },
       chunkid: (module) => {
@@ -143797,18 +141797,6 @@ Status Code:` +
           CompoundSliderSubSliderLabelInternal: "_38VX50q_XUUeqEdEgxC5no",
           DefaultValueTickContainer: "_2aCoHO7mXYYdPXMN0USBAW",
           DefaultValueTick: "_1NgUy7a2LKuF-moe-rzsiH",
-          BackgroundAnimation: "_34goutNBSou3YR_kTuPeXo",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3uBtlQHaoF-Fdvf-44fdfj",
-          "ItemFocusAnim-darkerGrey": "_1so9RRpNCSzFaLUuFaAoTQ",
-          "ItemFocusAnim-darkGreySettings": "_3xDgicGGM7zf4FDtrZTsrg",
-          "ItemFocusAnim-darkGrey": "_3rHHM0QPQeBnxSX9SsyTAv",
-          "ItemFocusAnim-grey": "_3bS2YJzXbd_HJcslwwJonb",
-          "ItemFocusAnim-translucent-white-10": "_1eyjVbw17bPbJY8cd6MyX2",
-          "ItemFocusAnim-translucent-white-20": "_1iqNj4v83-vYdxWouoYIbw",
-          "ItemFocusAnimBorder-darkGrey": "_2Pzyj6rGS2MYa48LGSbRdv",
-          "ItemFocusAnim-green": "_2C-5CyKHqs57xJb0nU1LnG",
-          focusAnimation: "_3aA7B5vDTJc5xq6IfXhQ2H",
-          hoverAnimation: "_12ndx-pa_lUGfXXWOFQVSY",
         };
       },
       chunkid: (module) => {
@@ -143838,18 +141826,6 @@ Status Code:` +
           Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
           HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
           ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
-          BackgroundAnimation: "_31dp93HtW4YaAIrv5kQNht",
-          "ItemFocusAnim-darkerGrey-nocolor": "_34v5-JW2L6fQ4YmSbk9AaR",
-          "ItemFocusAnim-darkerGrey": "_2hiPwZ5sHjd1palQvy9OrL",
-          "ItemFocusAnim-darkGreySettings": "_1Er_w8LQhe6MyIC6NfUM3V",
-          "ItemFocusAnim-darkGrey": "_8LuF4KlRbCw_drO7e2TC7",
-          "ItemFocusAnim-grey": "_2xSXLf_M9pyhcs0Up0YB3t",
-          "ItemFocusAnim-translucent-white-10": "_3XpUY5O65d5iC8QOTibOTo",
-          "ItemFocusAnim-translucent-white-20": "TtpwXKTKHcg8dU-yHafz8",
-          "ItemFocusAnimBorder-darkGrey": "_1XsIqwGv6cpC9wDe_vUw01",
-          "ItemFocusAnim-green": "Sv4pIC9tV5_-yNVWid_iZ",
-          focusAnimation: "W2aVTuNiYbD-L-tBboMKB",
-          hoverAnimation: "_2L5cxouAMAylE7_T3HQoRf",
         };
       },
       chunkid: (module) => {
@@ -143986,18 +141962,6 @@ Status Code:` +
           PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
           Error: "mSSEDpLo6ibX1Ed5anQD_",
           GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
-          BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
-          "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
-          "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
-          "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
-          "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
-          "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
-          "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
-          "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
-          "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
-          focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
-          hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
         };
       },
       chunkid: (module) => {
@@ -144124,18 +142088,6 @@ Status Code:` +
           SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
           SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
           FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
-          BackgroundAnimation: "amz8jVfJ2MOIPnaUYMOgI",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3pY66EiNnfad09UHGMqtd4",
-          "ItemFocusAnim-darkerGrey": "_2JoqRmzZpoTtL_KIVWXd0a",
-          "ItemFocusAnim-darkGreySettings": "_1a5-ibcS0HyYhRO2QR7x_f",
-          "ItemFocusAnim-darkGrey": "NmpWlMoGlon2VMO2kUZxr",
-          "ItemFocusAnim-grey": "_1uq0bG0F5JVFzWlPHYMXB7",
-          "ItemFocusAnim-translucent-white-10": "_3xDNjaNkQ-uP0-lcJ8G7gP",
-          "ItemFocusAnim-translucent-white-20": "vYKrwRtlsPCKPnSf3CU-7",
-          "ItemFocusAnimBorder-darkGrey": "_3h8yQpj5B4lqfo4rvQXD4p",
-          "ItemFocusAnim-green": "_2JSjyAe00zqEy25fUVQS5H",
-          focusAnimation: "_19xVMCOSnHPfsYR_llwrJD",
-          hoverAnimation: "_26wdGOzkKTLjBLc0bu8-gV",
         };
       },
       chunkid: (module) => {

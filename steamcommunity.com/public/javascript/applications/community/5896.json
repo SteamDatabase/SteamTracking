@@ -581,6 +581,7 @@
     "Workshop_ItemAdmin_Incompatible_UnsetConfirm": "Biztosan összeférhetőre szeretnéd állítani ezt az elemet?",
     "Workshop_ItemAdmin_Ban_Set": "Elem tiltása",
     "Workshop_ItemAdmin_Ban_Unset": "Elemtiltás feloldása",
+    "Workshop_ItemAdmin_Ban_Sustain": "Tiltás fenntartása",
     "Workshop_ItemAdmin_Ban_Reason": "Kérjük, nevezd meg az okot:",
     "Workshop_ItemAdmin_Ban_Reason_Unselected": "Kattints a kiválasztáshoz...",
     "Workshop_ItemAdmin_Ban_Presets": "Sablonok:",

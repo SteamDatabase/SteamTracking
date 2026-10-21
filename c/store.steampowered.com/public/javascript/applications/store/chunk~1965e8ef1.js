@@ -18,21 +18,7 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid");
-        const _ = 622,
-          _ = 1920,
-          _ = 450,
-          _ = 800,
-          _ = 460,
-          _ = 2108,
-          _ = 300,
-          _ = 800,
-          _ = 300,
-          _ = 644,
-          _ = 337,
-          _ = 155,
-          _ = 433,
-          _ = 199,
-          _ = ["app_header_capsule", "app_main_capsule"],
+        const _ = ["app_header_capsule", "app_main_capsule"],
           _ = [
             "sale_header",
             "sale_logo",
@@ -56,6 +42,21 @@
             "marketingmessage_art_2_eventcapsule",
           ],
           _ = ["spotlight_art_hero"],
+          _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._],
+          _ = 622,
+          _ = 1920,
+          _ = 450,
+          _ = 800,
+          _ = 460,
+          _ = 2108,
+          _ = 300,
+          _ = 800,
+          _ = 300,
+          _ = 644,
+          _ = 337,
+          _ = 155,
+          _ = 433,
+          _ = 199,
           _ = [
             "spotlight",
             "background",
@@ -94,7 +95,8 @@
             "sale_store_capsule_small",
             "sale_store_capsule_main",
             "sale_store_capsule_vertical",
-            ...[..._, ..._, ..._, ..._, ..._, ..._, ..._],
+            "sale_cross_promo_background",
+            ..._,
           ];
         function _(_) {
           return Array.isArray(_) ? _[0] : _;
@@ -348,6 +350,12 @@
             sale_store_capsule_vertical: {
               width: 748,
               height: 896,
+              rgAcceptableTypes: _,
+            },
+            sale_cross_promo_background: {
+              width: 940,
+              height: 400,
+              bDisableEnforceDimensions: !0,
               rgAcceptableTypes: _,
             },
             spotlight_art: {

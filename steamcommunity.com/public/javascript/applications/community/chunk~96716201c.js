@@ -4,115 +4,108 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [23347],
     {
-      76006: (_, t0, l) => {
+      76006: (Z, J, i) => {
         "use strict";
-        l.d(t0, { EX: () => u1, Ay: () => w0 });
-        var t = l(7850),
-          g = l(90626),
-          w = l(72604),
-          T = l(24660),
-          e0 = l(19298),
-          s0 = l(7967),
-          h = l(9591),
-          F = l(38506),
-          D = l(35038),
-          z = l(99412),
-          E = l(72609),
-          P = l(29385),
-          y = l(61739),
-          L = l(88942);
-        function n0(e) {
-          const s = (0, P.jE)();
-          return (0, y.n)({
-            mutationFn: async (a) => {
-              if (!E.iA.logged_in) throw w.Dy;
-              const { targetid: r, targetType: n, nReactionId: c } = a;
-              let i = D.w.Init(h.RY);
-              i.Body().set_target_type(n),
-                i.Body().set_targetid(r),
-                i.Body().set_reactionid(c);
-              const u = await h.a9.AddReaction(e, i);
-              if (u.GetEResult() != w.R) throw u.GetEResult();
+        i.d(J, { EX: () => e1, Ay: () => t1 });
+        var t = i(7850),
+          x = i(90626),
+          f = i(72604),
+          k = i(24660),
+          q = i(19298),
+          t0 = i(7967),
+          h = i(9591),
+          F = i(38506),
+          O = i(35038),
+          z = i(99412),
+          N = i(72609),
+          M = i(29385),
+          R = i(61739),
+          L = i(88942);
+        function w0(e) {
+          const s = (0, M.jE)();
+          return (0, R.n)({
+            mutationFn: async (r) => {
+              if (!N.iA.logged_in) throw f.Dy;
+              const { targetid: a, targetType: n, nReactionId: l } = r;
+              let c = O.w.Init(h.RY);
+              c.Body().set_target_type(n),
+                c.Body().set_targetid(a),
+                c.Body().set_reactionid(l);
+              const C = await h.a9.AddReaction(e, c);
+              if (C.GetEResult() != f.R) throw C.GetEResult();
             },
             onSuccess: () => {
               s.invalidateQueries({ queryKey: ["UserPointBalance"] });
             },
           });
         }
-        function b0(e, s) {
+        function x0(e, s) {
           return (0, L.I)({
             queryKey: ["UserPointBalance"],
             queryFn: async () => {
-              var a, r;
-              if (!E.iA.logged_in) throw w.Dy;
-              const n = E.iA.steamid,
-                c = D.w.Init(h.pt);
-              c.Body().set_steamid(n);
-              let i = await h.a9.GetSummary(s, c);
-              if (i.GetEResult() == w.R)
+              if (!N.iA.logged_in) throw f.Dy;
+              const r = N.iA.steamid,
+                a = O.w.Init(h.pt);
+              a.Body().set_steamid(r);
+              let n = await h.a9.GetSummary(s, a);
+              if (n.GetEResult() == f.R)
                 return F.A.fromString(
-                  (r =
-                    (a = i.Body().toObject().summary) == null
-                      ? void 0
-                      : a.points) != null
-                    ? r
-                    : "0",
+                  n.Body().toObject().summary?.points ?? "0",
                 );
-              throw i.GetEResult();
+              throw n.GetEResult();
             },
             enabled: e,
           });
         }
-        function M0(e, s) {
+        function g0(e, s) {
           return (0, L.I)({
             queryKey: ["AwardsConfiguration"],
             queryFn: async () => {
-              var a;
-              const r = D.w.Init(h.Sm);
-              r.Body().set_elanguage((0, z.sfN)(E.TS.LANGUAGE));
-              let n = await h.a9.GetReactionConfig(s, r);
-              if (n.GetEResult() == w.R) {
-                const c = new Map();
-                let i = (a = n.Body().toObject().reactions) != null ? a : [];
-                for (const u of i) u.reactionid && c.set(u.reactionid, u);
-                return c;
-              } else throw n.GetEResult();
+              const r = O.w.Init(h.Sm);
+              r.Body().set_elanguage((0, z.sfN)(N.TS.LANGUAGE));
+              let a = await h.a9.GetReactionConfig(s, r);
+              if (a.GetEResult() == f.R) {
+                const n = new Map();
+                let l = a.Body().toObject().reactions ?? [];
+                for (const c of l) c.reactionid && n.set(c.reactionid, c);
+                return n;
+              } else throw a.GetEResult();
             },
             enabled: e,
           });
         }
-        function P0(e, s, a, r) {
+        function v0(e, s, r, a) {
           return (0, L.I)({
-            queryKey: ["UserReactions", a, r],
+            queryKey: ["UserReactions", r, a],
             queryFn: async () => {
-              if (!E.iA.logged_in) throw w.Dy;
-              const n = D.w.Init(h.bA);
-              n.Body().set_target_type(r), n.Body().set_targetid(a);
-              let c = await h.a9.GetReactions(s, n);
-              if (c.GetEResult() == w.R) return new Set(c.Body().reactionids());
-              throw c.GetEResult();
+              if (!N.iA.logged_in) throw f.Dy;
+              const n = O.w.Init(h.bA);
+              n.Body().set_target_type(a), n.Body().set_targetid(r);
+              let l = await h.a9.GetReactions(s, n);
+              if (l.GetEResult() == f.R) return new Set(l.Body().reactionids());
+              throw l.GetEResult();
             },
             enabled: e,
           });
         }
-        var O = l(19316),
-          N0 = l(2801),
-          d0 = l(36118),
-          B0 = l(85599),
-          G = l(36707),
-          d = l(18210),
-          W = l(54963),
-          x = l(65414),
-          E0 = l(13854);
-        const G0 = 8e3,
-          I0 = 200;
-        var u0 = ((e) => (
+        var I = i(19316),
+          j0 = i(2801),
+          i0 = i(36118),
+          p0 = i(85599),
+          E = i(36707),
+          u = i(18210),
+          W = i(54963),
+          v = i(65414),
+          y0 = i(13854);
+        const A0 = 8e3,
+          R0 = 200;
+        var c0 = ((e) => (
           (e[(e.Default = 0)] = "Default"),
           (e[(e.Gold = 1)] = "Gold"),
           (e[(e.LNY2020 = 2)] = "LNY2020"),
           e
-        ))(u0 || {});
-        function D0(e) {
+        ))(c0 || {});
+        function L0(e) {
           switch (e) {
             case 1:
               return `hsl(${51 + Math.random() * -16}, 93%, 54%)`;
@@ -122,131 +115,131 @@
               return `hsl(${Math.random() * 360}, 100%, 40%)`;
           }
         }
-        function O0(e) {
-          return e == 2 ? `hue-rotate(${360 + ((0, E0.Tg))(-30, 10)}deg)` : "";
+        function S0(e) {
+          return e == 2 ? `hue-rotate(${360 + ((0, y0.Tg))(-30, 10)}deg)` : "";
         }
-        function _0(e, s) {
-          const a = [];
-          if (!e) return a;
-          const { width: r, height: n } = e;
-          for (let c = 0; c < I0; c++) {
-            const i = Math.random(),
-              u = Math.random() * i,
-              f = Math.random() * u,
-              v = (Math.random() - 0.5) * 4 * Math.PI * 20,
-              R = Math.random() + 0.5,
-              S = [Math.random() * n - n - 20, n + 20 + Math.random() * n * R],
-              B = r <= 1e3 ? 1 : r / 1e3,
-              C = R * B * (s == 1 ? 2 : 1),
-              H = (Math.random() - 0.5) * r,
-              j = (Math.random() - 0.5) * r,
-              A = [j, H + j],
-              U = D0(s),
-              X = O0(s);
-            a.push({
-              rotationCoefficient: v,
-              rotationRatioY: u,
-              rotationRatioX: i,
-              rotationRatioZ: f,
-              yRange: S,
-              xRange: A,
-              scale: C,
-              colorHue: U,
-              filter: X,
+        function M0(e, s) {
+          const r = [];
+          if (!e) return r;
+          const { width: a, height: n } = e;
+          for (let l = 0; l < R0; l++) {
+            const c = Math.random(),
+              C = Math.random() * c,
+              d = Math.random() * C,
+              w = (Math.random() - 0.5) * 4 * Math.PI * 20,
+              g = Math.random() + 0.5,
+              j = [Math.random() * n - n - 20, n + 20 + Math.random() * n * g],
+              B = a <= 1e3 ? 1 : a / 1e3,
+              A = g * B * (s == 1 ? 2 : 1),
+              T = (Math.random() - 0.5) * a,
+              G = (Math.random() - 0.5) * a,
+              _ = [G, T + G],
+              P = L0(s),
+              p = S0(s);
+            r.push({
+              rotationCoefficient: w,
+              rotationRatioY: C,
+              rotationRatioX: c,
+              rotationRatioZ: d,
+              yRange: j,
+              xRange: _,
+              scale: A,
+              colorHue: P,
+              filter: p,
             });
           }
-          return a;
+          return r;
         }
-        function T0(e, s, a) {
-          const r = a == 0,
+        function b0(e, s, r) {
+          const a = r == 0,
             {
               rotationCoefficient: n,
-              rotationRatioY: c,
-              rotationRatioX: i,
-              rotationRatioZ: u,
-              yRange: f,
-              xRange: v,
-              scale: R,
-              colorHue: S,
+              rotationRatioY: l,
+              rotationRatioX: c,
+              rotationRatioZ: C,
+              yRange: d,
+              xRange: w,
+              scale: g,
+              colorHue: j,
               filter: B,
             } = e;
           return {
-            backgroundColor: S,
-            fill: S,
+            backgroundColor: j,
+            fill: j,
             filter: B,
             flRandom: 0,
-            transform: s.interpolate((C) => {
-              const H = C * n * c,
-                j = C * n * i,
-                A = C * n * u,
-                U = C * (f[1] - f[0]) + f[0];
-              return `translate(${C * (v[1] - v[0]) + v[0]}px, ${U}px) rotateY(${H}rad) rotateX(${j}rad) rotateZ(${A}rad) scale(${R})`;
+            transform: s.interpolate((A) => {
+              const T = A * n * l,
+                G = A * n * c,
+                _ = A * n * C,
+                P = A * (d[1] - d[0]) + d[0];
+              return `translate(${A * (w[1] - w[0]) + w[0]}px, ${P}px) rotateY(${T}rad) rotateX(${G}rad) rotateZ(${_}rad) scale(${g})`;
             }),
           };
         }
-        function F0(e, s, a) {
+        function P0(e, s, r) {
           if (Math.random() > 0.1) return null;
           const {
-            rotationCoefficient: r,
+            rotationCoefficient: a,
             rotationRatioZ: n,
-            yRange: c,
-            xRange: i,
-            scale: u,
-            colorHue: f,
-            filter: v,
+            yRange: l,
+            xRange: c,
+            scale: C,
+            colorHue: d,
+            filter: w,
           } = e;
           return {
             backgroundColor: void 0,
-            fill: f,
-            filter: v,
+            fill: d,
+            filter: w,
             flRandom: Math.random(),
-            transform: s.interpolate((R) => {
-              const S = ((R * r) / 4) * n,
-                B = R * (c[1] - c[0]) + c[0];
-              return `translate(${R * (i[1] - i[0]) + i[0]}px, ${B}px) rotateZ(${S}rad) scale(${u})`;
+            transform: s.interpolate((g) => {
+              const j = ((g * a) / 4) * n,
+                B = g * (l[1] - l[0]) + l[0];
+              return `translate(${g * (c[1] - c[0]) + c[0]}px, ${B}px) rotateZ(${j}rad) scale(${C})`;
             }),
           };
         }
-        const Z0 = (e, s) => {
-            const { anim: a } = (0, x.zh)({
+        const N0 = (e, s) => {
+            const { anim: r } = (0, v.zh)({
               anim: 1,
               from: { anim: 0 },
-              config: { duration: G0 },
+              config: { duration: A0 },
             });
-            return (0, g.useMemo)(() => {
-              let n = _0(e, s),
-                c = n.map((u) => T0(u, a, s)),
-                i = n.map((u) => F0(u, a, s)).filter((u) => !!u);
-              return { rgParticleStyles: c, rgStreamerStyles: i };
-            }, [e, s, a]);
+            return (0, x.useMemo)(() => {
+              let n = M0(e, s),
+                l = n.map((C) => b0(C, r, s)),
+                c = n.map((C) => P0(C, r, s)).filter((C) => !!C);
+              return { rgParticleStyles: l, rgStreamerStyles: c };
+            }, [e, s, r]);
           },
-          a0 = { position: "absolute", left: "50%", top: 0 },
-          k0 = {
-            ...a0,
+          e0 = { position: "absolute", left: "50%", top: 0 },
+          E0 = {
+            ...e0,
             width: 10,
             height: 5,
             borderWidth: 1,
             borderColor: "black",
           },
-          H0 = ({ eType: e }) => {
+          B0 = ({ eType: e }) => {
             const s = e == 1,
-              a = e == 2,
-              [r, n] = t1();
-            let { rgParticleStyles: c, rgStreamerStyles: i } = Z0(r, e),
-              u;
+              r = e == 2,
+              [a, n] = K0();
+            let { rgParticleStyles: l, rgStreamerStyles: c } = N0(a, e),
+              C;
             switch (e) {
               case 1:
-                u = c.map((f, v) => (0, t.jsx)(U0, { style: f }, v));
+                C = l.map((d, w) => (0, t.jsx)(G0, { style: d }, w));
                 break;
               case 2:
-                u = c.map((f, v) =>
-                  v % 2
-                    ? (0, t.jsx)(h0, { style: f }, v)
-                    : (0, t.jsx)(K0, { style: f }, v),
+                C = l.map((d, w) =>
+                  w % 2
+                    ? (0, t.jsx)(l0, { style: d }, w)
+                    : (0, t.jsx)(D0, { style: d }, w),
                 );
                 break;
               case 0:
-                u = c.map((f, v) => (0, t.jsx)(h0, { style: f }, v));
+                C = l.map((d, w) => (0, t.jsx)(l0, { style: d }, w));
                 break;
             }
             return (0, t.jsxs)("div", {
@@ -260,33 +253,33 @@
               },
               ref: n,
               children: [
-                u,
-                i.map((f, v) =>
-                  f.flRandom > 0.5
-                    ? (0, t.jsx)(q0, { style: f }, v)
-                    : (0, t.jsx)(J0, { style: f }, v),
+                C,
+                c.map((d, w) =>
+                  d.flRandom > 0.5
+                    ? (0, t.jsx)(_0, { style: d }, w)
+                    : (0, t.jsx)(U0, { style: d }, w),
                 ),
               ],
             });
           },
-          h0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.div, { style: { ...k0, ...e } }),
-          U0 = ({ style: e }) => {
-            const [s] = (0, g.useState)(Math.floor(Math.random() * m0.length)),
-              a = m0[s];
-            return (0, t.jsx)(a, {
-              style: { ...a0, ...e, backgroundColor: void 0 },
+          l0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.div, { style: { ...E0, ...e } }),
+          G0 = ({ style: e }) => {
+            const [s] = (0, x.useState)(Math.floor(Math.random() * d0.length)),
+              r = d0[s];
+            return (0, t.jsx)(r, {
+              style: { ...e0, ...e, backgroundColor: void 0 },
             });
           },
-          K0 = ({ style: e }) => {
-            const [s] = (0, g.useState)(Math.floor(Math.random() * C0.length)),
-              a = C0[s];
-            return (0, t.jsx)(a, {
-              style: { ...a0, ...e, backgroundColor: void 0 },
+          D0 = ({ style: e }) => {
+            const [s] = (0, x.useState)(Math.floor(Math.random() * u0.length)),
+              r = u0[s];
+            return (0, t.jsx)(r, {
+              style: { ...e0, ...e, backgroundColor: void 0 },
             });
           },
-          z0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          O0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 48 102",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -298,8 +291,8 @@
                 fill: "#F7D51E",
               }),
             }),
-          W0 = ({ style: e }) =>
-            (0, t.jsxs)(x.CS.svg, {
+          I0 = ({ style: e }) =>
+            (0, t.jsxs)(v.CS.svg, {
               viewBox: "0 0 50 39",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -315,8 +308,8 @@
                 }),
               ],
             }),
-          Q0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          T0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 68 69",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -329,8 +322,8 @@
                 fill: e.fill,
               }),
             }),
-          V0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          Z0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 48 48",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -342,8 +335,8 @@
                 fill: e.fill,
               }),
             }),
-          Y0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          k0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -356,8 +349,8 @@
                 fill: e.fill,
               }),
             }),
-          X0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          F0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -370,8 +363,8 @@
                 fill: e.fill,
               }),
             }),
-          $0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          H0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 48 30",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -384,8 +377,8 @@
                 fill: e.fill,
               }),
             }),
-          J0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          U0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 80 620",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -397,8 +390,8 @@
                 fill: e.fill,
               }),
             }),
-          q0 = ({ style: e }) =>
-            (0, t.jsx)(x.CS.svg, {
+          _0 = ({ style: e }) =>
+            (0, t.jsx)(v.CS.svg, {
               viewBox: "0 0 203 295",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
@@ -410,16 +403,16 @@
                 fill: e.fill,
               }),
             }),
-          m0 = [
-            z0,
-            W0,
-            Q0,
-            V0,
-            Y0,
-            X0,
-            $0,
+          d0 = [
+            O0,
+            I0,
+            T0,
+            Z0,
+            k0,
+            F0,
+            H0,
             ({ style: e }) =>
-              (0, t.jsx)(x.CS.svg, {
+              (0, t.jsx)(v.CS.svg, {
                 viewBox: "0 0 48 39",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
@@ -430,7 +423,7 @@
                 }),
               }),
             ({ style: e }) =>
-              (0, t.jsx)(x.CS.svg, {
+              (0, t.jsx)(v.CS.svg, {
                 width: "48",
                 height: "35",
                 viewBox: "0 0 48 35",
@@ -443,9 +436,9 @@
                 }),
               }),
           ],
-          C0 = [
+          u0 = [
             ({ style: e }) =>
-              (0, t.jsxs)(x.CS.svg, {
+              (0, t.jsxs)(v.CS.svg, {
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 54 47.18",
                 style: { width: 28, height: 28, ...e },
@@ -465,7 +458,7 @@
                 ],
               }),
             ({ style: e }) =>
-              (0, t.jsxs)(x.CS.svg, {
+              (0, t.jsxs)(v.CS.svg, {
                 version: "1.1",
                 xmlns: "http://www.w3.org/2000/svg",
                 x: "0px",
@@ -492,50 +485,40 @@
                 ],
               }),
           ];
-        function t1() {
-          const [e, s] = (0, g.useState)(null),
-            a = (0, g.useCallback)((r) => {
-              r &&
-                typeof r.getBoundingClientRect == "function" &&
-                s(r.getBoundingClientRect());
+        function K0() {
+          const [e, s] = (0, x.useState)(null),
+            r = (0, x.useCallback)((a) => {
+              a &&
+                typeof a.getBoundingClientRect == "function" &&
+                s(a.getBoundingClientRect());
             }, []);
-          return [e, a];
+          return [e, r];
         }
-        var r0 = l(3166),
-          o = l(15799),
-          e1 = l(21991),
-          s1 = l(56425);
-        const n1 = (e) => {
-          const { className: s, ...a } = e;
-          return (0, t.jsx)(T.fu, {
-            className: (0, G.A)(s, s1.UnstyledButton),
-            ...a,
+        var s0 = i(3166),
+          o = i(15799),
+          z0 = i(21991),
+          W0 = i(56425);
+        const Q0 = (e) => {
+          const { className: s, ...r } = e;
+          return (0, t.jsx)(k.fu, {
+            className: (0, E.A)(s, W0.UnstyledButton),
+            ...r,
           });
         };
-        var Z = l(24642),
-          a1 = l(68312),
-          f0 = Object.defineProperty,
-          r1 = Object.getOwnPropertyDescriptor,
-          o1 = (e, s, a) =>
-            s in e
-              ? f0(e, s, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: a,
-                })
-              : (e[s] = a),
-          Q = (e, s, a, r) => {
+        var H = i(24642),
+          $0 = i(68312),
+          Y0 = Object.defineProperty,
+          V0 = Object.getOwnPropertyDescriptor,
+          Q = (e, s, r, a) => {
             for (
-              var n = r > 1 ? void 0 : r ? r1(s, a) : s, c = e.length - 1, i;
-              c >= 0;
-              c--
+              var n = a > 1 ? void 0 : a ? V0(s, r) : s, l = e.length - 1, c;
+              l >= 0;
+              l--
             )
-              (i = e[c]) && (n = (r ? i(s, a, n) : i(n)) || n);
-            return r && n && f0(s, a, n), n;
+              (c = e[l]) && (n = (a ? c(s, r, n) : c(n)) || n);
+            return a && n && Y0(s, r, n), n;
           },
-          i1 = (e, s, a) => o1(e, typeof s != "symbol" ? s + "" : s, a),
-          c1 = ((e) => (
+          X0 = ((e) => (
             (e[(e.SELECTING = 0)] = "SELECTING"),
             (e[(e.CONFIRM = 1)] = "CONFIRM"),
             (e[(e.SUBMITTING = 2)] = "SUBMITTING"),
@@ -543,8 +526,8 @@
             (e[(e.ERROR = 4)] = "ERROR"),
             (e[(e.LOADING_ERROR = 5)] = "LOADING_ERROR"),
             e
-          ))(c1 || {});
-        const l1 = (e) =>
+          ))(X0 || {});
+        const J0 = (e) =>
           (0, t.jsx)("svg", {
             viewBox: "0 0 24 24",
             fill: "none",
@@ -557,7 +540,7 @@
               d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
             }),
           });
-        class k extends g.PureComponent {
+        class U extends x.PureComponent {
           constructor(s) {
             super(s), (this.state = { bHovered: !1 });
           }
@@ -568,7 +551,7 @@
             this.setState({ bHovered: !1 });
           }
           render() {
-            const s = (0, e1.eU)(
+            const s = (0, z0.eU)(
               this.props.reactionType,
               this.props.bDisableAnimation == !1 &&
                 (!!this.state.bHovered || !!this.props.bForceAnimated),
@@ -581,54 +564,52 @@
             });
           }
         }
-        Q([W.oI], k.prototype, "handleMouseOver", 1),
-          Q([W.oI], k.prototype, "handleMouseOut", 1);
-        function d1(e, s, a) {
-          let r = [];
+        Q([W.oI], U.prototype, "handleMouseOver", 1),
+          Q([W.oI], U.prototype, "handleMouseOut", 1);
+        function q0(e, s, r) {
+          let a = [];
           return (
             e.forEach(function (n) {
-              var c, i;
               if (
-                (c = n.valid_target_types) != null &&
-                c.includes(s) &&
+                n.valid_target_types?.includes(s) &&
                 !(!n.purchaseable || !n.reactionid)
               )
                 switch (s) {
                   case h.Pw.j3:
-                    r.push(n.reactionid);
+                    a.push(n.reactionid);
                     break;
                   case h.Pw.tN:
-                    a !== void 0 &&
-                      (i = n.valid_ugc_types) != null &&
-                      i.includes(a) &&
-                      r.push(n.reactionid);
+                    r !== void 0 &&
+                      n.valid_ugc_types?.includes(r) &&
+                      a.push(n.reactionid);
                     break;
                   case h.Pw.BZ:
-                    r.push(n.reactionid);
+                    a.push(n.reactionid);
                     break;
                   case h.Pw.uz:
-                    r.push(n.reactionid);
+                    a.push(n.reactionid);
                     break;
                   case h.Pw.Zp:
-                    r.push(n.reactionid);
+                    a.push(n.reactionid);
                     break;
                 }
             }),
-            r
+            a
           );
         }
-        class w0 extends g.Component {
+        class t1 extends x.Component {
+          static defaultProps = { targetType: h.Pw.j3 };
           constructor(s) {
             super(s),
-              (window.fnLoyalty_ShowAwardModal = (a, r, n, c, i) => {
-                i || (i = h.Pk.au),
+              (window.fnLoyalty_ShowAwardModal = (r, a, n, l, c) => {
+                c || (c = h.Pk.au),
                   this.setState({
                     bShowModal: !0,
                     fnSuccessFunc: n,
-                    targetid: a,
-                    ugcType: c,
-                    initialSelectedReaction: i,
-                    targetType: r,
+                    targetid: r,
+                    ugcType: l,
+                    initialSelectedReaction: c,
+                    targetType: a,
                   });
               }),
               (this.state = {
@@ -640,218 +621,208 @@
           render() {
             const {
               bShowModal: s,
-              targetType: a,
-              fnSuccessFunc: r,
+              targetType: r,
+              fnSuccessFunc: a,
               targetid: n,
-              ugcType: c,
-              initialSelectedReaction: i,
+              ugcType: l,
+              initialSelectedReaction: c,
             } = this.state;
             return s
               ? (0, t.jsx)(
-                  v0,
+                  h0,
                   {
                     targetid: n,
                     active: s,
-                    targetType: a != null ? a : h.Pw.Ri,
-                    ugcType: c,
+                    targetType: r ?? h.Pw.Ri,
+                    ugcType: l,
                     onDismiss: () => this.setState({ bShowModal: !1 }),
-                    onSuccess: r,
-                    initialSelectedReaction: i,
+                    onSuccess: a,
+                    initialSelectedReaction: c,
                   },
                   n,
                 )
               : null;
           }
         }
-        i1(w0, "defaultProps", { targetType: h.Pw.j3 });
-        function u1(e) {
+        function e1(e) {
           const {
             targetType: s,
-            targetid: a,
-            bShowModal: r,
+            targetid: r,
+            bShowModal: a,
             ugcType: n,
-            initialSelectedReaction: c,
-            onDismiss: i,
-            onSuccess: u,
+            initialSelectedReaction: l,
+            onDismiss: c,
+            onSuccess: C,
           } = e;
           return (0, t.jsx)(
-            v0,
+            h0,
             {
-              targetid: a,
-              active: r,
+              targetid: r,
+              active: a,
               targetType: s,
               ugcType: n,
-              onDismiss: i,
-              onSuccess: u,
-              initialSelectedReaction: c,
+              onDismiss: c,
+              onSuccess: C,
+              initialSelectedReaction: l,
             },
-            a,
+            r,
           );
         }
-        function v0(e) {
-          var s, a, r, n, c;
+        function h0(e) {
           const {
-              active: i,
-              targetid: u,
-              targetType: f,
-              ugcType: v,
-              initialSelectedReaction: R,
-              onSuccess: S,
-              onDismiss: B,
+              active: s,
+              targetid: r,
+              targetType: a,
+              ugcType: n,
+              initialSelectedReaction: l,
+              onSuccess: c,
+              onDismiss: C,
             } = e,
-            [C, H] = g.useState(R || h.Pk.au),
-            [j, A] = g.useState(0),
-            [U, X] = g.useState(!1),
-            [x0, j0] = g.useState(w.zi),
-            h1 = (0, r0.Qn)(),
-            $ = (0, a1.KV)(),
-            b = P0(!!i, $, u, f),
-            c0 = M0(!!i, $),
-            m1 = b0(!!i, $),
-            C1 = n0($),
-            p0 = b.isPending || c0.isPending;
-          async function f1() {
-            C === null ||
-              C == h.Pk.au ||
-              (A(2),
-              await C1.mutate(
-                { targetid: u, targetType: f, nReactionId: C },
+            [d, w] = x.useState(l || h.Pk.au),
+            [g, j] = x.useState(0),
+            [B, A] = x.useState(!1),
+            [T, G] = x.useState(f.zi),
+            _ = (0, s0.Qn)(),
+            P = (0, $0.KV)(),
+            p = v0(!!s, P, r, a),
+            r0 = g0(!!s, P),
+            s1 = x0(!!s, P),
+            n1 = w0(P),
+            m0 = p.isPending || r0.isPending;
+          async function a1() {
+            d === null ||
+              d == h.Pk.au ||
+              (j(2),
+              await n1.mutate(
+                { targetid: r, targetType: a, nReactionId: d },
                 {
                   onSuccess: () => {
-                    A(3),
-                      X(!0),
+                    j(3),
+                      A(!0),
                       setTimeout(() => {
-                        S && S(u, C);
+                        c && c(r, d);
                       }, 2e3);
                   },
                   onError: (m) => {
-                    A(4), j0(m);
+                    j(4), G(m);
                   },
                 },
               ));
           }
           if (
-            (g.useEffect(() => {
-              b.error && (j0(b.error), A(5));
-            }, [b.error]),
-            !i)
+            (x.useEffect(() => {
+              p.error && (G(p.error), j(5));
+            }, [p.error]),
+            !s)
           )
             return null;
-          const J = (s = c0.data) != null ? s : new Map(),
-            I = (a = m1.data) != null ? a : new F.A(0),
-            w1 = d1(J, f, v),
-            q = C === h.Pk.au ? null : J.get(C),
-            l0 = q ? q.points_cost : 0,
-            A0 = q ? q.points_transferred : 0;
-          let M = "";
-          switch (f) {
+          const V = r0.data ?? new Map(),
+            D = s1.data ?? new F.A(0),
+            r1 = q0(V, a, n),
+            X = d === h.Pk.au ? null : V.get(d),
+            o0 = X ? X.points_cost : 0,
+            f0 = X ? X.points_transferred : 0;
+          let S = "";
+          switch (a) {
             case h.Pw.j3:
-              M = (0, d.we)("#GrantAwardDescription_Review");
+              S = (0, u.we)("#GrantAwardDescription_Review");
               break;
             case h.Pw.tN:
-              M = (0, d.we)("#GrantAwardDescription_UGC");
+              S = (0, u.we)("#GrantAwardDescription_UGC");
               break;
             case h.Pw.BZ:
-              M = (0, d.we)("#GrantAwardDescription_Profile");
+              S = (0, u.we)("#GrantAwardDescription_Profile");
               break;
             case h.Pw.uz:
-              M = (0, d.we)("#GrantAwardDescription_ForumTopic");
+              S = (0, u.we)("#GrantAwardDescription_ForumTopic");
               break;
             case h.Pw.Zp:
-              M = (0, d.we)("#GrantAwardDescription_Comment");
+              S = (0, u.we)("#GrantAwardDescription_Comment");
               break;
           }
           let K;
-          switch (j) {
+          switch (g) {
             case 0:
               {
-                const m =
-                    C === h.Pk.au || ((r = b.data) == null ? void 0 : r.has(C)),
-                  v1 = !I || I.greaterThanOrEqual(l0),
-                  g1 = (0, t.jsx)(O.jn, {
-                    onClick: () => A(1),
+                const m = d === h.Pk.au || p.data?.has(d),
+                  o1 = !D || D.greaterThanOrEqual(o0),
+                  i1 = (0, t.jsx)(I.jn, {
+                    onClick: () => j(1),
                     disabled: m,
                     focusable: !m,
-                    title: (0, d.we)(
+                    title: (0, u.we)(
                       m
                         ? "#GrantAward_PromptTooltip"
                         : "#GrantAward_SubmitTooltip",
                     ),
-                    children: (0, d.we)(
+                    children: (0, u.we)(
                       m ? "#GrantAward_SelectAward" : "#GrantAward_Next",
                     ),
                   });
                 K = (0, t.jsxs)(t.Fragment, {
                   children: [
-                    (0, t.jsx)(V, { description: M }),
-                    (0, t.jsx)(N, {}),
-                    p0 &&
+                    (0, t.jsx)($, { description: S }),
+                    (0, t.jsx)(b, {}),
+                    m0 &&
                       (0, t.jsx)("div", {
                         className: o.InitialLoading,
                         children: (0, t.jsx)("div", {
-                          className: (0, G.A)(o.LoadingContainer, o.Visible),
-                          children: (0, t.jsx)(g0, {}),
+                          className: (0, E.A)(o.LoadingContainer, o.Visible),
+                          children: (0, t.jsx)(C0, {}),
                         }),
                       }),
-                    (0, t.jsx)(s0.MS, {
+                    (0, t.jsx)(t0.MS, {
                       className: o.ButtonContainer,
-                      scrollDirection: h1 ? "x" : "y",
+                      scrollDirection: _ ? "x" : "y",
                       "flow-children": "grid",
                       children:
-                        !p0 &&
-                        w1.map((p, x1) => {
-                          var y0, L0, R0;
-                          return (0, t.jsx)(
-                            o0,
+                        !m0 &&
+                        r1.map((y, c1) =>
+                          (0, t.jsx)(
+                            n0,
                             {
                               autoFocus:
-                                (C === void 0 && x1 == 0) ||
-                                (p === C &&
-                                  !((y0 = b.data) != null && y0.has(p))),
-                              reaction: p,
-                              selected:
-                                p === C &&
-                                !((L0 = b.data) != null && L0.has(p)),
-                              cost: J.get(p).points_cost,
-                              alreadyAwarded:
-                                (R0 = b.data) == null ? void 0 : R0.has(p),
-                              awardConfig: J.get(p),
+                                (d === void 0 && c1 == 0) ||
+                                (y === d && !p.data?.has(y)),
+                              reaction: y,
+                              selected: y === d && !p.data?.has(y),
+                              cost: V.get(y).points_cost,
+                              alreadyAwarded: p.data?.has(y),
+                              awardConfig: V.get(y),
                               onClick: () => {
-                                var S0;
-                                ((S0 = b.data) != null && S0.has(p)) ||
-                                  H(p === C ? h.Pk.au : p);
+                                p.data?.has(y) || w(y === d ? h.Pk.au : y);
                               },
                             },
-                            p,
-                          );
-                        }),
+                            y,
+                          ),
+                        ),
                     }),
-                    (0, t.jsx)(N, {}),
+                    (0, t.jsx)(b, {}),
                     (0, t.jsx)(Y, {
-                      pointBalance: I,
+                      pointBalance: D,
                       children:
-                        m || v1
-                          ? g1
+                        m || o1
+                          ? i1
                           : [
                               (0, t.jsx)(
                                 "div",
                                 {
                                   className: o.NotEnoughPoints,
-                                  children: (0, d.we)(
+                                  children: (0, u.we)(
                                     "#GrantAward_CantAfford",
-                                    (0, Z.D)(I.negate().add(l0).toNumber()),
+                                    (0, H.D)(D.negate().add(o0).toNumber()),
                                   ),
                                 },
                                 "msg",
                               ),
                               (0, t.jsx)(
-                                T.Ii,
+                                k.Ii,
                                 {
-                                  href: `${r0.TS.STORE_BASE_URL}points/howitworks`,
+                                  href: `${s0.TS.STORE_BASE_URL}points/howitworks`,
                                   children: (0, t.jsx)(
-                                    O.$n,
+                                    I.$n,
                                     {
-                                      children: (0, d.we)(
+                                      children: (0, u.we)(
                                         "#GrantAward_HowToGetPoints",
                                       ),
                                     },
@@ -871,79 +842,74 @@
             case 3:
               {
                 let m = (0, t.jsxs)(Y, {
-                  pointBalance: I,
+                  pointBalance: D,
                   children: [
-                    (0, t.jsx)(O.$n, {
-                      onClick: () => A(0),
-                      disabled: j !== 1,
-                      children: (0, d.we)("#GrantAward_Back"),
+                    (0, t.jsx)(I.$n, {
+                      onClick: () => j(0),
+                      disabled: g !== 1,
+                      children: (0, u.we)("#GrantAward_Back"),
                     }),
-                    (0, t.jsx)(O.jn, {
-                      onClick: f1,
-                      title: (0, d.we)("#GrantAward_SubmitTooltip"),
-                      disabled: j !== 1,
-                      children: (0, d.we)("#GrantAwardNowButton"),
+                    (0, t.jsx)(I.jn, {
+                      onClick: a1,
+                      title: (0, u.we)("#GrantAward_SubmitTooltip"),
+                      disabled: g !== 1,
+                      children: (0, u.we)("#GrantAwardNowButton"),
                     }),
                   ],
                 });
-                j === 3 &&
+                g === 3 &&
                   (m = (0, t.jsx)(Y, {
-                    pointBalance: I,
-                    children: (0, t.jsx)(O.$n, {
-                      onClick: B,
-                      children: (0, d.we)("#Button_Close"),
+                    pointBalance: D,
+                    children: (0, t.jsx)(I.$n, {
+                      onClick: C,
+                      children: (0, u.we)("#Button_Close"),
                     }),
                   })),
                   (K = (0, t.jsxs)(t.Fragment, {
                     children: [
-                      (0, t.jsx)(V, { description: M }),
-                      (0, t.jsx)(N, {}),
+                      (0, t.jsx)($, { description: S }),
+                      (0, t.jsx)(b, {}),
                       (0, t.jsxs)("div", {
                         style: { position: "relative" },
                         children: [
                           (0, t.jsxs)("div", {
-                            className: (0, G.A)(
+                            className: (0, E.A)(
                               o.ConfirmContainer,
-                              j === 1 && o.Visible,
+                              g === 1 && o.Visible,
                             ),
                             children: [
-                              (0, t.jsx)(k, {
+                              (0, t.jsx)(U, {
                                 className: o.ConfirmAwardImage,
-                                reactionType: C,
+                                reactionType: d,
                               }),
                               (0, t.jsxs)("div", {
                                 className: o.ConfirmTextCtn,
                                 children: [
                                   (0, t.jsx)("div", {
                                     className: o.ConfirmText,
-                                    children: (0, d.PP)(
+                                    children: (0, u.PP)(
                                       "#GrantAward_Confirm",
-                                      (0, t.jsx)(i0, {
-                                        children: (0, Z.D)(l0),
+                                      (0, t.jsx)(a0, {
+                                        children: (0, H.D)(o0),
                                       }),
                                       (0, t.jsx)("span", {
                                         className: o.AwardName,
                                         children:
-                                          (c =
-                                            (n = c0.data) == null
-                                              ? void 0
-                                              : n.get(C)) == null
-                                            ? void 0
-                                            : c.localized_title,
+                                          r0.data?.get(d)?.localized_title,
                                       }),
                                     ),
                                   }),
-                                  A0 > 0 &&
+                                  f0 > 0 &&
                                     (0, t.jsx)("div", {
                                       className: o.ConfirmText,
-                                      children: (0, d.PP)(
+                                      children: (0, u.PP)(
                                         "#GrantAward_Confirm_Details",
-                                        (0, t.jsx)(i0, {
-                                          children: (0, Z.D)(A0),
+                                        (0, t.jsx)(a0, {
+                                          children: (0, H.D)(f0),
                                         }),
                                         (0, t.jsx)("span", {
                                           className: o.TimePeriod,
-                                          children: (0, d.we)(
+                                          children: (0, u.we)(
                                             "#GrantAward_Confirm_DetailsTimePeriod",
                                           ),
                                         }),
@@ -954,32 +920,32 @@
                             ],
                           }),
                           (0, t.jsx)("div", {
-                            className: (0, G.A)(
+                            className: (0, E.A)(
                               o.LoadingContainer,
-                              j === 2 && o.Visible,
+                              g === 2 && o.Visible,
                             ),
-                            children: (0, t.jsx)(g0, {}),
+                            children: (0, t.jsx)(C0, {}),
                           }),
                           (0, t.jsxs)("div", {
-                            className: (0, G.A)(
+                            className: (0, E.A)(
                               o.SuccessContainer,
-                              j === 3 && o.Visible,
+                              g === 3 && o.Visible,
                             ),
                             children: [
-                              (0, t.jsx)(k, {
+                              (0, t.jsx)(U, {
                                 className: o.ConfirmAwardImage,
-                                reactionType: C,
+                                reactionType: d,
                                 bForceAnimated: !0,
                               }),
                               (0, t.jsx)("div", {
                                 className: o.SuccessText,
-                                children: (0, d.we)("#GrantAward_Success"),
+                                children: (0, u.we)("#GrantAward_Success"),
                               }),
                             ],
                           }),
                         ],
                       }),
-                      (0, t.jsx)(N, {}),
+                      (0, t.jsx)(b, {}),
                       m,
                     ],
                   }));
@@ -988,39 +954,39 @@
             case 4:
               {
                 let m = "";
-                switch (x0) {
-                  case w.S7:
-                    m = (0, d.we)("#GrantAwardError_Busy");
+                switch (T) {
+                  case f.S7:
+                    m = (0, u.we)("#GrantAwardError_Busy");
                     break;
-                  case w.yw:
-                    m = (0, d.we)("#GrantAwardError_PersistFailed");
+                  case f.yw:
+                    m = (0, u.we)("#GrantAwardError_PersistFailed");
                     break;
-                  case w.nO:
-                    m = (0, d.we)("#GrantAwardError_InvalidParam");
+                  case f.nO:
+                    m = (0, u.we)("#GrantAwardError_InvalidParam");
                     break;
-                  case w.p:
-                    m = (0, d.we)("#GrantAwardError_NoMatch");
+                  case f.p:
+                    m = (0, u.we)("#GrantAwardError_NoMatch");
                     break;
-                  case w.O4:
-                    m = (0, d.we)("#GrantAwardError_InsufficientFunds");
+                  case f.O4:
+                    m = (0, u.we)("#GrantAwardError_InsufficientFunds");
                     break;
-                  case w.sW:
-                    m = (0, d.we)("#GrantAwardError_AccessDenied");
+                  case f.sW:
+                    m = (0, u.we)("#GrantAwardError_AccessDenied");
                     break;
-                  case w.Dy:
-                    m = (0, d.we)("#GrantAwardError_NotLoggedOn");
+                  case f.Dy:
+                    m = (0, u.we)("#GrantAwardError_NotLoggedOn");
                     break;
-                  case w.Ze:
-                    m = (0, d.we)("#GrantAwardError_DuplicateRequest");
+                  case f.Ze:
+                    m = (0, u.we)("#GrantAwardError_DuplicateRequest");
                     break;
                   default:
-                    m = (0, d.we)("#GrantAwardError_Fail");
+                    m = (0, u.we)("#GrantAwardError_Fail");
                     break;
                 }
                 K = (0, t.jsxs)(t.Fragment, {
                   children: [
-                    (0, t.jsx)(V, { description: M }),
-                    (0, t.jsx)(N, {}),
+                    (0, t.jsx)($, { description: S }),
+                    (0, t.jsx)(b, {}),
                     (0, t.jsx)("div", {
                       style: { position: "relative" },
                       children: (0, t.jsx)("div", {
@@ -1031,12 +997,12 @@
                         }),
                       }),
                     }),
-                    (0, t.jsx)(N, {}),
+                    (0, t.jsx)(b, {}),
                     (0, t.jsx)(Y, {
-                      pointBalance: I,
-                      children: (0, t.jsx)(O.$n, {
-                        onClick: () => A(0),
-                        children: (0, d.we)("#GrantAward_Back"),
+                      pointBalance: D,
+                      children: (0, t.jsx)(I.$n, {
+                        onClick: () => j(0),
+                        children: (0, u.we)("#GrantAward_Back"),
                       }),
                     }),
                   ],
@@ -1046,21 +1012,21 @@
             case 5:
               {
                 let m = "";
-                switch (x0) {
-                  case w.S7:
-                    m = (0, d.we)("#GrantAwardError_Busy");
+                switch (T) {
+                  case f.S7:
+                    m = (0, u.we)("#GrantAwardError_Busy");
                     break;
-                  case w.Dy:
-                    m = (0, d.we)("#GrantAwardError_NotLoggedOn");
+                  case f.Dy:
+                    m = (0, u.we)("#GrantAwardError_NotLoggedOn");
                     break;
                   default:
-                    m = (0, d.we)("#GrantAwardError_LoadExistingReactions");
+                    m = (0, u.we)("#GrantAwardError_LoadExistingReactions");
                     break;
                 }
                 K = (0, t.jsxs)(t.Fragment, {
                   children: [
-                    (0, t.jsx)(V, { description: M }),
-                    (0, t.jsx)(N, {}),
+                    (0, t.jsx)($, { description: S }),
+                    (0, t.jsx)(b, {}),
                     (0, t.jsx)("div", {
                       style: { position: "relative" },
                       children: (0, t.jsx)("div", {
@@ -1071,33 +1037,33 @@
                         }),
                       }),
                     }),
-                    (0, t.jsx)(N, {}),
+                    (0, t.jsx)(b, {}),
                   ],
                 });
               }
               break;
           }
-          return (0, t.jsxs)(N0.mt, {
+          return (0, t.jsxs)(j0.mt, {
             className: o.GrantAwardModal,
-            active: i,
-            onDismiss: B,
-            children: [U && (0, t.jsx)(H0, { eType: u0.Default }), K],
+            active: s,
+            onDismiss: C,
+            children: [B && (0, t.jsx)(B0, { eType: c0.Default }), K],
           });
         }
-        const V = ({ description: e }) =>
+        const $ = ({ description: e }) =>
           (0, t.jsxs)("div", {
             className: o.Header,
             children: [
               (0, t.jsx)("div", {
                 className: o.Title,
-                children: (0, d.we)("#GrantAwardTitle"),
+                children: (0, u.we)("#GrantAwardTitle"),
               }),
               (0, t.jsx)("div", { className: o.Description, children: e }),
             ],
           });
         function Y(e) {
-          const { pointBalance: s, children: a } = e,
-            r = s && (0, Z.D)(s.toNumber());
+          const { pointBalance: s, children: r } = e,
+            a = s && (0, H.D)(s.toNumber());
           return (0, t.jsxs)("div", {
             className: o.Footer,
             children: [
@@ -1107,17 +1073,17 @@
                   (0, t.jsxs)("div", {
                     className: o.Left,
                     children: [
-                      (0, t.jsx)(d0.vrn, { className: o.BalanceIcon }),
+                      (0, t.jsx)(i0.vrn, { className: o.BalanceIcon }),
                       (0, t.jsxs)("div", {
                         className: o.BalanceDetails,
                         children: [
                           (0, t.jsx)("div", {
                             className: o.BalanceLabel,
-                            children: (0, d.we)("#YourBalance"),
+                            children: (0, u.we)("#YourBalance"),
                           }),
                           (0, t.jsx)("div", {
                             className: o.BalanceAmount,
-                            children: r,
+                            children: a,
                           }),
                         ],
                       }),
@@ -1127,18 +1093,18 @@
                     className: o.Column,
                     children: (0, t.jsx)("a", {
                       className: o.FooterLink,
-                      href: `${r0.TS.STORE_BASE_URL}points/howitworks`,
-                      children: (0, d.we)("#GrantAward_PointsLink"),
+                      href: `${s0.TS.STORE_BASE_URL}points/howitworks`,
+                      children: (0, u.we)("#GrantAward_PointsLink"),
                     }),
                   }),
                 ],
               }),
               (0, t.jsx)("div", {
                 className: o.Right,
-                children: (0, t.jsx)(e0.Z, {
+                children: (0, t.jsx)(q.Z, {
                   className: o.Actions,
                   "flow-children": "row",
-                  children: g.Children.map(a, (n) =>
+                  children: x.Children.map(r, (n) =>
                     (0, t.jsx)("div", { className: o.Action, children: n }),
                   ),
                 }),
@@ -1146,8 +1112,8 @@
             ],
           });
         }
-        const N = () => (0, t.jsx)("div", { className: o.Divider });
-        class o0 extends g.PureComponent {
+        const b = () => (0, t.jsx)("div", { className: o.Divider });
+        class n0 extends x.PureComponent {
           constructor(s) {
             super(s), (this.state = { bHovered: !1 });
           }
@@ -1160,27 +1126,27 @@
           render() {
             const {
               reaction: s,
-              selected: a,
-              alreadyAwarded: r,
+              selected: r,
+              alreadyAwarded: a,
               cost: n,
-              autoFocus: c,
-              awardConfig: i,
-              ...u
+              autoFocus: l,
+              awardConfig: c,
+              ...C
             } = this.props;
-            return (0, t.jsxs)(n1, {
+            return (0, t.jsxs)(Q0, {
               type: "button",
               onMouseEnter: this.handleMouseOver,
               onMouseLeave: this.handleMouseOut,
-              className: (0, G.A)(o.Button, a && o.Selected, r && o.Disabled),
-              autoFocus: c,
-              ...u,
+              className: (0, E.A)(o.Button, r && o.Selected, a && o.Disabled),
+              autoFocus: l,
+              ...C,
               children: [
                 (0, t.jsx)("div", {
                   className: o.IconCtn,
-                  children: (0, t.jsx)(k, {
+                  children: (0, t.jsx)(U, {
                     reactionType: s,
                     bForceAnimated: this.state.bHovered,
-                    bDisableAnimation: r,
+                    bDisableAnimation: a,
                   }),
                 }),
                 (0, t.jsxs)("div", {
@@ -1188,58 +1154,58 @@
                   children: [
                     (0, t.jsx)("div", {
                       className: o.Label,
-                      children: i == null ? void 0 : i.localized_title,
+                      children: c?.localized_title,
                     }),
-                    (0, t.jsx)(i0, {
+                    (0, t.jsx)(a0, {
                       className: o.Points,
-                      children: (0, Z.D)(n != null ? n : 0),
+                      children: (0, H.D)(n ?? 0),
                     }),
                   ],
                 }),
-                r && (0, t.jsx)(l1, { className: o.IconCheckMark }),
+                a && (0, t.jsx)(J0, { className: o.IconCheckMark }),
               ],
             });
           }
         }
-        Q([W.oI], o0.prototype, "handleMouseOver", 1),
-          Q([W.oI], o0.prototype, "handleMouseOut", 1);
-        const g0 = () =>
-            (0, t.jsx)(B0.t, { size: "large", className: o.Loading }),
-          i0 = (e) => {
-            const { children: s, className: a, ...r } = e;
+        Q([W.oI], n0.prototype, "handleMouseOver", 1),
+          Q([W.oI], n0.prototype, "handleMouseOut", 1);
+        const C0 = () =>
+            (0, t.jsx)(p0.t, { size: "large", className: o.Loading }),
+          a0 = (e) => {
+            const { children: s, className: r, ...a } = e;
             return (0, t.jsxs)("span", {
-              ...r,
-              className: (0, G.A)(a, o.PointsAmount),
+              ...a,
+              className: (0, E.A)(r, o.PointsAmount),
               children: [
-                (0, t.jsx)(d0.vrn, { className: o.PointsAmountIcon }),
+                (0, t.jsx)(i0.vrn, { className: o.PointsAmountIcon }),
                 s,
               ],
             });
           };
       },
-      21991: (_, t0, l) => {
+      21991: (Z, J, i) => {
         "use strict";
-        l.d(t0, { KL: () => E, eU: () => D, lT: () => z });
-        var t = l(99412),
-          g = l(72604),
-          w = l(35038),
-          T = l(9591),
-          e0 = l(88942),
-          s0 = l(90626),
-          h = l(68312),
-          F = l(3166);
-        function D(P, y) {
-          return `${F.TS.STORE_CDN_URL}public/images/loyalty/reactions/${y ? "animated" : "still"}/${P}.png`;
+        i.d(J, { KL: () => N, eU: () => O, lT: () => z });
+        var t = i(99412),
+          x = i(72604),
+          f = i(35038),
+          k = i(9591),
+          q = i(88942),
+          t0 = i(90626),
+          h = i(68312),
+          F = i(3166);
+        function O(M, R) {
+          return `${F.TS.STORE_CDN_URL}public/images/loyalty/reactions/${R ? "animated" : "still"}/${M}.png`;
         }
         function z() {
-          const P = (0, h.KV)();
-          return (0, e0.I)({
+          const M = (0, h.KV)();
+          return (0, q.I)({
             queryKey: ["useGetReactionConfiguration"],
             queryFn: async () => {
-              const y = w.w.Init(T.Sm);
-              y.Body().set_elanguage((0, t.sfN)(F.TS.LANGUAGE));
-              let L = await T.a9.GetReactionConfig(P, y);
-              return L.GetEResult() == g.R
+              const R = f.w.Init(k.Sm);
+              R.Body().set_elanguage((0, t.sfN)(F.TS.LANGUAGE));
+              let L = await k.a9.GetReactionConfig(M, R);
+              return L.GetEResult() == x.R
                 ? L.Body().toObject().reactions
                 : (console.error(
                     `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${L.GetEResult()}`,
@@ -1249,18 +1215,16 @@
             staleTime: 1 / 0,
           });
         }
-        function E(P) {
-          const y = z();
-          return (0, s0.useMemo)(() => {
-            var L;
-            return (L = y == null ? void 0 : y.data) == null
-              ? void 0
-              : L.find((n0) => n0.reactionid === P);
-          }, [y, P]);
+        function N(M) {
+          const R = z();
+          return (0, t0.useMemo)(
+            () => R?.data?.find((L) => L.reactionid === M),
+            [R, M],
+          );
         }
       },
-      15799: (_) => {
-        _.exports = {
+      15799: (Z) => {
+        Z.exports = {
           "duration-app-launch": "800ms",
           GrantAwardModal: "_2ilpH-HpvuSm6s5MWX5bA-",
           Header: "_2_vbZB-J_M1GH9js-PXnEj",
@@ -1305,22 +1269,10 @@
           PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
           PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
           NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
-          BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
-          "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
-          "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
-          "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
-          "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
-          "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
-          "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
-          "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
-          "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
-          focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
-          hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
         };
       },
-      56425: (_) => {
-        _.exports = { UnstyledButton: "_1hcJa9ylImmFKuHsfilos" };
+      56425: (Z) => {
+        Z.exports = { UnstyledButton: "_1hcJa9ylImmFKuHsfilos" };
       },
     },
   ]);

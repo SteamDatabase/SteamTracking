@@ -22,25 +22,16 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -98,16 +89,16 @@
           getClassName() {
             return "CSteamEngine_UpdateTextFilterDictionary_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -165,16 +156,16 @@
           getClassName() {
             return "CSteamEngine_GetTextFilterDictionary_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.dictionary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -227,16 +218,16 @@
           getClassName() {
             return "CSteamEngine_GetTextFilterDictionary_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -294,16 +285,16 @@
           getClassName() {
             return "CSteamEngine_TextFilterDictionaryChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.pid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -356,16 +347,16 @@
           getClassName() {
             return "CSteamEngine_GetGameIDForPID_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -418,16 +409,16 @@
           getClassName() {
             return "CSteamEngine_GetGameIDForPID_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -485,16 +476,16 @@
           getClassName() {
             return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.search_term || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -552,16 +543,16 @@
           getClassName() {
             return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -617,9 +608,7 @@
           getClassName() {
             return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           _.UpdateTextFilterDictionaryHandler = {
@@ -1008,15 +997,6 @@
         }
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1025,16 +1005,15 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
           constructor() {
-            _(this, "m_mapCallbacks", new Map()),
-              _(this, "m_rgRegisteredEMsgs", []),
-              _(this, "m_mapServiceMethodHandlers", new Map()),
-              _(this, "m_rgRegisteredServiceMethodHandlers", []),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapCallbacks = new Map();
+          m_rgRegisteredEMsgs = [];
+          m_mapServiceMethodHandlers = new Map();
+          m_rgRegisteredServiceMethodHandlers = [];
           DispatchMsgToHandlers(_, _) {
             let _ = _.GetEMsg();
             if (_ == _.bSr) {
@@ -1213,24 +1192,15 @@
         }
         _([_._], _.prototype, "m_rgRegisteredEMsgs", 2),
           _([_._], _.prototype, "m_rgRegisteredServiceMethodHandlers", 2);
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.auth_key || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1283,9 +1253,7 @@
           getClassName() {
             return "CTransportAuth_Authenticate_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -1475,15 +1443,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1492,47 +1451,38 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_socket = null;
+          m_sName;
+          m_sURL;
+          Log = new _._("CWebSocketConnection", () => this.m_sName);
+          m_bDisconnectRequested = !1;
+          m_bConnecting = !1;
+          m_fnOnMessageHandler;
+          m_fnOnCloseHandler;
+          m_fnOnReconnectStartHandler;
+          m_fnOnReconnectFinishHandler;
+          m_nConnectAttemptsMax;
+          m_nConnectAttemptTimeoutMs;
+          m_bReconnectOnFailure;
+          m_nReconnectAttemptTimeoutMs;
+          m_nReconnectAttemptsMax;
           constructor(_, _) {
-            _(this, "m_socket", null),
-              _(this, "m_sName"),
-              _(this, "m_sURL"),
-              _(
-                this,
-                "Log",
-                new _._("CWebSocketConnection", () => this.m_sName),
-              ),
-              _(this, "m_bDisconnectRequested", !1),
-              _(this, "m_bConnecting", !1),
-              _(this, "m_fnOnMessageHandler"),
-              _(this, "m_fnOnCloseHandler"),
-              _(this, "m_fnOnReconnectStartHandler"),
-              _(this, "m_fnOnReconnectFinishHandler"),
-              _(this, "m_nConnectAttemptsMax"),
-              _(this, "m_nConnectAttemptTimeoutMs"),
-              _(this, "m_bReconnectOnFailure"),
-              _(this, "m_nReconnectAttemptTimeoutMs"),
-              _(this, "m_nReconnectAttemptsMax");
-            var _, _, _, _, _, _, _;
             (this.m_sName = _),
               (this.m_fnOnMessageHandler = _.fnOnMessageHandler),
               (this.m_fnOnCloseHandler = _.fnOnCloseHandler),
               (this.m_fnOnReconnectStartHandler =
-                (_ = _.fnOnReconnectStartHandler) != null ? _ : () => {}),
+                _.fnOnReconnectStartHandler ?? (() => {})),
               (this.m_fnOnReconnectFinishHandler =
-                (_ = _.fnOnReconnectFinishHandler) != null ? _ : () => {}),
-              (this.m_nConnectAttemptsMax =
-                (_ = _.nConnectAttemptsMax) != null ? _ : 8),
+                _.fnOnReconnectFinishHandler ?? (() => {})),
+              (this.m_nConnectAttemptsMax = _.nConnectAttemptsMax ?? 8),
               (this.m_nConnectAttemptTimeoutMs =
-                (_ = _.nConnectAttemptTimeoutMs) != null ? _ : 1e3),
-              (this.m_bReconnectOnFailure =
-                (_ = _.bReconnectOnFailure) != null ? _ : !1),
-              (this.m_nReconnectAttemptsMax =
-                (_ = _.nReconnectAttemptsMax) != null ? _ : 3e4),
+                _.nConnectAttemptTimeoutMs ?? 1e3),
+              (this.m_bReconnectOnFailure = _.bReconnectOnFailure ?? !1),
+              (this.m_nReconnectAttemptsMax = _.nReconnectAttemptsMax ?? 3e4),
               (this.m_nReconnectAttemptTimeoutMs =
-                (_ = _.nReconnectAttemptTimeoutMs) != null ? _ : 1e4);
+                _.nReconnectAttemptTimeoutMs ?? 1e4);
           }
           get name() {
             return this.m_sName;
@@ -1733,15 +1683,6 @@
           _([_._], _.prototype, "OnSocketMessage", 1);
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1750,22 +1691,19 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = "localhost",
+          };
+        const _ = "127.0.0.1",
           _ = new _._("WebUITransport");
         class _ {
-          constructor() {
-            _(this, "m_iMsgSeq", 1),
-              _(this, "m_mapPendingMethodRequests", new Map()),
-              _(this, "m_messageHandlers", new _()),
-              _(this, "m_mapServiceCallErrorCount", new Map()),
-              _(this, "m_mapConnectionDetails", new Map()),
-              _(this, "m_fnOnStatusEventHandler"),
-              _(this, "m_fnOnReconnectErrorHandler"),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_nMaximumMsgSizeBytes", 1024);
-          }
+          m_iMsgSeq = 1;
+          m_mapPendingMethodRequests = new Map();
+          m_messageHandlers = new _();
+          m_mapServiceCallErrorCount = new Map();
+          m_mapConnectionDetails = new Map();
+          m_fnOnStatusEventHandler;
+          m_fnOnReconnectErrorHandler;
+          m_bInitialized = !1;
+          m_nMaximumMsgSizeBytes = 1024;
           BIsValid() {
             return this.m_bInitialized;
           }
@@ -1844,7 +1782,6 @@
           }
           SendMsg(_, _, _, _) {
             return new Promise((_, _) => {
-              var _;
               const _ = _.eClientExecutionSite;
               if (_ == null || _ == _) {
                 _.Error(`SendMsg: Invalid client execution site: ${_}`),
@@ -1863,8 +1800,7 @@
               }
               const _ = _.connection;
               if (!_.BCanSendMessages()) {
-                const _ =
-                  (_ = this.m_mapServiceCallErrorCount.get(_)) != null ? _ : 1;
+                const _ = this.m_mapServiceCallErrorCount.get(_) ?? 1;
                 this.m_mapServiceCallErrorCount.set(_, _ + 1);
                 const _ = `SendMsg: Attempt to send message but socket wasn't ready: ${_.name} - ${_}`;
                 _ == 1 && this.ReportError(_),
@@ -1899,7 +1835,6 @@
             });
           }
           SendNotification(_, _, _) {
-            var _;
             const _ = _.eClientExecutionSite;
             if (_ == null || _ == _)
               return (
@@ -1918,8 +1853,7 @@
               );
             const _ = _.connection;
             if (!_.BCanSendMessages()) {
-              const _ =
-                (_ = this.m_mapServiceCallErrorCount.get(_)) != null ? _ : 1;
+              const _ = this.m_mapServiceCallErrorCount.get(_) ?? 1;
               this.m_mapServiceCallErrorCount.set(_, _ + 1);
               const _ = `SendNotification: Attempt to send message but socket wasn't ready: ${_.name} - ${_}`;
               return (
@@ -1981,13 +1915,11 @@
             this.DispatchTransportStatusUpdate();
           }
           OnWebsocketReconnectFinish(_) {
-            var _;
             if ((this.DispatchTransportStatusUpdate(), _.eResult != _._)) {
               _.Warning(
                 "OnWebsocketReconnect: Failed to reconnect to steam client",
               ),
-                (_ = this.m_fnOnReconnectErrorHandler) == null ||
-                  _.call(this, {});
+                this.m_fnOnReconnectErrorHandler?.({});
               return;
             }
             this.FailAllPendingRequests();
@@ -2064,15 +1996,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -2081,8 +2004,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _() {
           return _._.IN_MOBILE ? _._ : (0, _._)();
         }
@@ -2103,37 +2025,35 @@
           _ = 3600,
           _ = "(1)";
         class _ {
+          m_WebUIServiceTransport;
+          m_unAccountID;
+          m_Transport = null;
+          m_Storage = null;
+          m_TextFilterPreferences = {
+            eTextFilterSetting: _.Bx6._,
+            bIgnoreFriends: !1,
+          };
+          m_TextFilterWords;
+          m_mapPlayerCache = new Map();
+          m_strBannedWords = "";
+          m_strProfanityWords = "";
+          m_strCleanWords = "";
+          m_strBannedPattern = "";
+          m_strCleanPattern = "";
+          m_bWordListsComplete = !1;
+          m_bHaveCompleteFilter = !1;
+          m_regexBannedWords = null;
+          m_regexCleanWords = null;
+          m_bShownFilterTip = !1;
+          m_bInitialized = !1;
+          m_bFilterChangedWhileLoading = !1;
+          m_bOngoingLoad = !1;
+          m_promiseOngoingLoad = null;
+          m_fnUnregisterDictionaryChanged = void 0;
+          m_rgUnregisterPlayerNotifications = [];
+          m_DataAccess;
           constructor(_) {
-            _(this, "m_WebUIServiceTransport"),
-              _(this, "m_unAccountID"),
-              _(this, "m_Transport", null),
-              _(this, "m_Storage", null),
-              _(this, "m_TextFilterPreferences", {
-                eTextFilterSetting: _.Bx6._,
-                bIgnoreFriends: !1,
-              }),
-              _(this, "m_TextFilterWords"),
-              _(this, "m_mapPlayerCache", new Map()),
-              _(this, "m_strBannedWords", ""),
-              _(this, "m_strProfanityWords", ""),
-              _(this, "m_strCleanWords", ""),
-              _(this, "m_strBannedPattern", ""),
-              _(this, "m_strCleanPattern", ""),
-              _(this, "m_bWordListsComplete", !1),
-              _(this, "m_bHaveCompleteFilter", !1),
-              _(this, "m_regexBannedWords", null),
-              _(this, "m_regexCleanWords", null),
-              _(this, "m_bShownFilterTip", !1),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_bFilterChangedWhileLoading", !1),
-              _(this, "m_bOngoingLoad", !1),
-              _(this, "m_promiseOngoingLoad", null),
-              _(this, "m_fnUnregisterDictionaryChanged"),
-              _(this, "m_rgUnregisterPlayerNotifications", []),
-              _(this, "m_DataAccess"),
-              _(this, "m_nLoadLanguagesRetryTimeout"),
-              _(this, "m_nLoadLanguagesRetryDelaySec", _),
-              (0, _._)(this);
+            (0, _._)(this);
             let _ = new _.B4H();
             (this.m_TextFilterPreferences = {
               eTextFilterSetting: _.text_filter_setting(),
@@ -2162,10 +2082,8 @@
               await this.EnsureFiltersLoaded();
           }
           InitSteamEngineLanguages() {
-            var _;
             this.m_WebUIServiceTransport.BIsValid() &&
-              ((_ = this.m_fnUnregisterDictionaryChanged) == null ||
-                _.call(this),
+              (this.m_fnUnregisterDictionaryChanged?.(),
               (this.m_fnUnregisterDictionaryChanged =
                 this.m_WebUIServiceTransport.messageHandlers.RegisterServiceNotificationHandler(
                   _.NotifyTextFilterDictionaryChangedHandler,
@@ -2405,12 +2323,9 @@
             }
           }
           UpdateCommunityPreferences(_) {
-            var _;
             let _ = !1;
             _.text_filter_setting() !==
-              ((_ = this.m_TextFilterPreferences) == null
-                ? void 0
-                : _.eTextFilterSetting) &&
+              this.m_TextFilterPreferences?.eTextFilterSetting &&
               ((this.m_TextFilterPreferences.eTextFilterSetting =
                 _.text_filter_setting()),
               (_ = !0)),
@@ -2427,6 +2342,8 @@
           UpdateTextFilterWords(_) {
             (this.m_TextFilterWords = _), this.SaveTextFilterWords();
           }
+          m_nLoadLanguagesRetryTimeout = void 0;
+          m_nLoadLanguagesRetryDelaySec = _;
           async LoadLanguages() {
             (this.m_strBannedWords = ""),
               (this.m_strProfanityWords = ""),
@@ -2650,11 +2567,7 @@
                 withCredentials: !0,
               })
               .then((_) => {
-                var _, _;
-                for (const _ of (_ =
-                  (_ = _.data.friendslist) == null ? void 0 : _.friends) != null
-                  ? _
-                  : [])
+                for (const _ of _.data.friendslist?.friends ?? [])
                   (0, _.S$u)(_.efriendrelationship) &&
                     _.add(new _._(_.ulfriendid).GetAccountID());
               }),

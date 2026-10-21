@@ -59,15 +59,10 @@
               _
             );
           });
-        var _ =
-          typeof window != "undefined"
-            ? window.requestAnimationFrame
-            : () => {};
+        var _ = typeof window < "u" ? window.requestAnimationFrame : () => {};
         (_.use = (_) => (_ = _)),
           (_.now =
-            typeof performance != "undefined"
-              ? () => performance.now()
-              : Date.now),
+            typeof performance < "u" ? () => performance.now() : Date.now),
           (_.batchedUpdates = (_) => _()),
           (_.catch = console.error),
           (_.frameLoop = "always"),
@@ -212,7 +207,7 @@
         }
         var _ = (_, ..._) => _(_, (_) => _(..._)),
           _ = () =>
-            typeof window == "undefined" ||
+            typeof window > "u" ||
             !window.navigator ||
             /ServerSideRendering|^Deno\//.test(window.navigator.userAgent),
           _,
@@ -801,12 +796,8 @@
                   }),
                 );
             return (_) => {
-              var _;
               const _ =
-                !_.test(_[0]) &&
-                ((_ = _.find((_) => _.test(_))) == null
-                  ? void 0
-                  : _.replace(_, ""));
+                !_.test(_[0]) && _.find((_) => _.test(_))?.replace(_, "");
               let _ = 0;
               return _[0]
                 .replace(_, () => `${_[_++](_)}${_ || ""}`)
@@ -847,14 +838,11 @@
         var _,
           _ = new WeakMap(),
           _ = (_) =>
-            _.forEach(({ target: _, contentRect: _ }) => {
-              var _;
-              return (_ = _.get(_)) == null ? void 0 : _.forEach((_) => _(_));
-            });
+            _.forEach(({ target: _, contentRect: _ }) =>
+              _.get(_)?.forEach((_) => _(_)),
+            );
         function _(_, _) {
-          _ ||
-            (typeof ResizeObserver != "undefined" &&
-              (_ = new ResizeObserver(_)));
+          _ || (typeof ResizeObserver < "u" && (_ = new ResizeObserver(_)));
           let _ = _.get(_);
           return (
             _ || ((_ = new Set()), _.set(_, _)),
@@ -947,7 +935,7 @@
             _ || ((_ = new Set()), _.set(_, _));
             const _ = new _(_, _);
             if ((_.add(_), !_.has(_))) {
-              const _ = () => (_ == null || _.forEach((_) => _.advance()), !0);
+              const _ = () => (_?.forEach((_) => _.advance()), !0);
               _.set(_, _);
               const _ = _(_);
               window.addEventListener("resize", _, {
@@ -968,7 +956,6 @@
             return (
               raf3(_),
               () => {
-                var _;
                 raf3.cancel(_);
                 const _ = _.get(_);
                 if (!_ || (_.delete(_), _.size)) return;
@@ -977,7 +964,7 @@
                   _ &&
                     (_(_).removeEventListener("scroll", _),
                     window.removeEventListener("resize", _),
-                    (_ = _.get(_)) == null || _());
+                    _.get(_)?.());
               }
             );
           };
@@ -1136,9 +1123,7 @@
             }
             getValue() {
               const _ = this._string;
-              return _ == null
-                ? (this._string = this._toString(this._value))
-                : _;
+              return _ ?? (this._string = this._toString(this._value));
             }
             setValue(_) {
               if (_.str(_)) {
@@ -1437,14 +1422,10 @@
           return _.fun(_) || (_.arr(_) && _.obj(_[0]));
         }
         function _(_, _) {
-          var _;
-          (_ = _.ref) == null || _.delete(_), _ == null || _.delete(_);
+          _.ref?.delete(_), _?.delete(_);
         }
         function _(_, _) {
-          var _;
-          _ &&
-            _.ref !== _ &&
-            ((_ = _.ref) == null || _.delete(_), _.add(_), (_.ref = _));
+          _ && _.ref !== _ && (_.ref?.delete(_), _.add(_), (_.ref = _));
         }
         function _(_, _, _ = 1e3) {
           useIsomorphicLayoutEffect(() => {
@@ -1573,17 +1554,13 @@
           { key: _, props: _, defaultProps: _, state: _, actions: _ },
         ) {
           return new Promise((_, _) => {
-            var _;
             let _,
               _,
-              _ = _(
-                (_ = _.cancel) != null ? _ : _ == null ? void 0 : _.cancel,
-                _,
-              );
+              _ = _(_.cancel ?? _?.cancel, _);
             if (_) _();
             else {
               _.und(_.pause) || (_.paused = _(_.pause, _));
-              let _ = _ == null ? void 0 : _.pause;
+              let _ = _?.pause;
               _ !== !0 && (_ = _.paused || _(_, _)),
                 (_ = _(_.delay || 0, _)),
                 _ ? (_.resumeQueue.add(_), _.pause()) : (_.resume(), _());
@@ -2171,12 +2148,9 @@
                   this._pendingCalls.add(_),
                   _.changed &&
                     _.batchedUpdates(() => {
-                      var _;
                       (_.changed = !_),
-                        _ == null || _(_, this),
-                        _
-                          ? _(_.onRest, _)
-                          : (_ = _.onStart) == null || _.call(_, _, this);
+                        _?.(_, this),
+                        _ ? _(_.onRest, _) : _.onStart?.(_, this);
                     });
               }
               _ && this._set(_),
@@ -2255,9 +2229,7 @@
                     type: "idle",
                     parent: this,
                   });
-                const _ = _
-                  ? _(this.get())
-                  : _(this.get(), _(this, _ != null ? _ : _._));
+                const _ = _ ? _(this.get()) : _(this.get(), _(this, _ ?? _._));
                 _(this._pendingCalls, _),
                   _.changed && ((_.changed = !1), _(this, "onRest", _, this));
               }
@@ -2308,9 +2280,7 @@
           _.animation[_] = _[_] !== _(_, _) ? _(_[_], _.key) : void 0;
         }
         function _(_, _, ..._) {
-          var _, _, _, _;
-          (_ = (_ = _.animation)[_]) == null || _.call(_, ..._),
-            (_ = (_ = _.defaultProps)[_]) == null || _.call(_, ..._);
+          _.animation[_]?.(..._), _.defaultProps[_]?.(..._);
         }
         var _ = ["onStart", "onChange", "onRest"],
           _ = 1,
@@ -2674,7 +2644,7 @@
             const { queue: _ } = _;
             _.length && ((_.queue = []), _(_, (_) => _())),
               _(_.current, (_, _) => {
-                _ == null || _.add(_),
+                _?.add(_),
                   _ &&
                     _.start({
                       default: _,
@@ -2740,7 +2710,7 @@
             }, _),
             _ || arguments.length == 3)
           ) {
-            const _ = _ != null ? _ : _[1];
+            const _ = _ ?? _[1];
             return (
               (_._getProps = (_, _, _) => {
                 const _ = is10.fun(_) ? _(_, _) : _;
@@ -2777,7 +2747,7 @@
             useOnce3(
               () => (
                 each7(_, (_) => {
-                  _ == null || _.add(_.ctrl), (_.ctrl.ref = _);
+                  _?.add(_.ctrl), (_.ctrl.ref = _);
                 }),
                 () => {
                   each7(_.current, (_) => {
@@ -2936,7 +2906,7 @@
                   ({ phase: _, payload: _ }, _) => {
                     const { ctrl: _ } = _;
                     (_.phase = _),
-                      _ == null || _.add(_),
+                      _?.add(_),
                       _ &&
                         _ == "enter" &&
                         _.start({
@@ -2957,7 +2927,6 @@
               React2.Fragment,
               null,
               _.map((_, _) => {
-                var _;
                 const { springs: _ } = _.get(_) || _.ctrl,
                   _ = _(
                     {
@@ -2969,7 +2938,7 @@
                   ),
                   _ = is11.str(_.key) || is11.num(_.key) ? _.key : _.ctrl._,
                   _ = React2.version < "19.0.0",
-                  _ = (_ = _ == null ? void 0 : _.props) != null ? _ : {};
+                  _ = _?.props ?? {};
                 return (
                   _ && (_.ref = _.ref),
                   _ && _.type
@@ -3019,7 +2988,7 @@
                     });
                   },
                   {
-                    container: (_ == null ? void 0 : _.current) || void 0,
+                    container: _?.current || void 0,
                   },
                 );
                 return () => {
@@ -3052,7 +3021,7 @@
                     });
                   },
                   {
-                    container: (_ == null ? void 0 : _.current) || void 0,
+                    container: _?.current || void 0,
                   },
                 );
                 return () => {
@@ -3083,14 +3052,8 @@
           return (
             useIsomorphicLayoutEffect7(() => {
               const _ = _.current,
-                {
-                  root: _,
-                  once: _,
-                  amount: _ = "any",
-                  ..._
-                } = _ != null ? _ : {};
-              if (!_ || (_ && _) || typeof IntersectionObserver == "undefined")
-                return;
+                { root: _, once: _, amount: _ = "any", ..._ } = _ ?? {};
+              if (!_ || (_ && _) || typeof IntersectionObserver > "u") return;
               const _ = new WeakMap(),
                 _ = () => (
                   _ && _.start(_),

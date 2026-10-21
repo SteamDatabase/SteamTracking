@@ -915,7 +915,7 @@
         chunkid: (module) => {
           function _(_) {
             return function (_) {
-              return _ == null ? void 0 : _[_];
+              return _?.[_];
             };
           }
           module.exports = _;
@@ -1438,7 +1438,7 @@
         },
         chunkid: (module) => {
           function _(_, _) {
-            return _ == null ? void 0 : _[_];
+            return _?.[_];
           }
           module.exports = _;
         },
@@ -1606,7 +1606,7 @@
           function _(_, _) {
             var _ = typeof _;
             return (
-              (_ = _ == null ? _ : _),
+              (_ = _ ?? _),
               !!_ &&
                 (_ == "number" ||
                   (_ != "symbol" && __webpack_require__.test(_))) &&
@@ -2278,7 +2278,7 @@
             },
             _ = {},
             _ = function (_, _, _, _) {
-              if (typeof document == "undefined" && !_) return null;
+              if (typeof document > "u" && !_) return null;
               var _ = _ ? new _() : document.createElement("canvas");
               (_.width = _ * 2), (_.height = _ * 2);
               var _ = _.getContext("2d");
@@ -3262,7 +3262,7 @@
           }
           const _ = _;
           function _(_, _) {
-            return _ == null ? void 0 : _[_];
+            return _?.[_];
           }
           const _ = _;
           function _(_, _) {
@@ -3666,7 +3666,7 @@
           function _(_, _) {
             var _ = typeof _;
             return (
-              (_ = _ == null ? _ : _),
+              (_ = _ ?? _),
               !!_ &&
                 (_ == "number" || (_ != "symbol" && _.test(_))) &&
                 _ > -1 &&
@@ -6468,7 +6468,7 @@
           const _ = _;
           function _(_) {
             return function (_) {
-              return _ == null ? void 0 : _[_];
+              return _?.[_];
             };
           }
           const _ = _;
@@ -12226,9 +12226,9 @@
             };
           for (let _ in _) _[_] = _[_];
           const _ = (
-            typeof navigator != "undefined"
+            typeof navigator < "u"
               ? /Mac|iP(hone|[oa]d)/.test(navigator.platform)
-              : typeof _ != "undefined" && _.platform
+              : typeof _ < "u" && _.platform
                 ? _.platform() == "darwin"
                 : !1
           )
@@ -12538,11 +12538,9 @@
                 221: "}",
                 222: '"',
               },
+              _ = typeof navigator < "u" && /Mac/.test(navigator.platform),
               _ =
-                typeof navigator != "undefined" &&
-                /Mac/.test(navigator.platform),
-              _ =
-                typeof navigator != "undefined" &&
+                typeof navigator < "u" &&
                 /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(
                   navigator.userAgent,
                 ),
@@ -12578,7 +12576,7 @@
           }
           var _ = __webpack_require__("chunkid");
           const _ =
-            typeof navigator != "undefined"
+            typeof navigator < "u"
               ? /Mac|iP(hone|[oa]d)/.test(navigator.platform)
               : !1;
           function _(_) {
@@ -16063,7 +16061,7 @@
                   ? this.replaceSelectionWith(_.text(_), !0)
                   : this.deleteSelection();
               {
-                if ((_ == null && (_ = _), (_ = _ == null ? _ : _), !_))
+                if ((_ == null && (_ = _), (_ = _ ?? _), !_))
                   return this.deleteRange(_, _);
                 let _ = this.storedMarks;
                 if (!_) {
@@ -16396,7 +16394,7 @@
             _ = __webpack_require__("chunkid"),
             _,
             _;
-          if (typeof WeakMap != "undefined") {
+          if (typeof WeakMap < "u") {
             let _ = new WeakMap();
             (_ = (_) => _.get(_)), (_ = (_, _) => (_.set(_, _), _));
           } else {
@@ -17345,7 +17343,7 @@
                       : (_ = _.nodeAt(_.map[_ + _ * _.width])) == null
                         ? void 0
                         : _.type,
-                  _ = _ == null ? void 0 : _.createAndFill();
+                  _ = _?.createAndFill();
                 _ && _.push(_);
               }
             return _.insert(_, _(_.type.schema).row.create(null, _)), _;
@@ -18390,8 +18388,7 @@
               _.removeEventListener("mouseup", _),
                 _.removeEventListener("mousemove", _);
               const _ = _.getState(_.state);
-              _ != null &&
-                _.dragging &&
+              _?.dragging &&
                 (_(_, _.activeHandle, _(_.dragging, _, _)),
                 _.dispatch(
                   _.state._.setMeta(_, {
@@ -20299,9 +20296,7 @@
           const _ = function (_, _, _) {
               let _ = _ || (_ = document.createRange());
               return (
-                _.setEnd(_, _ == null ? _.nodeValue.length : _),
-                _.setStart(_, _ || 0),
-                _
+                _.setEnd(_, _ ?? _.nodeValue.length), _.setStart(_, _ || 0), _
               );
             },
             _ = function () {
@@ -20413,8 +20408,8 @@
                 };
             }
           }
-          const _ = typeof navigator != "undefined" ? navigator : null,
-            _ = typeof document != "undefined" ? document : null,
+          const _ = typeof navigator < "u" ? navigator : null,
+            _ = typeof document < "u" ? document : null,
             _ = (_ && _.userAgent) || "",
             _ = /Edge\/(\d+)/.exec(_),
             _ = /MSIE \d/.exec(_),
@@ -21121,7 +21116,7 @@
                     if (_.nextSibling) break;
                   }
               }
-              return (_ == null ? _ > 0 : _) ? this.posAtEnd : this.posAtStart;
+              return (_ ?? _ > 0) ? this.posAtEnd : this.posAtStart;
             }
             nearestDesc(_, _ = !1) {
               for (let _ = !0, _ = _; _; _ = _.parentNode) {
@@ -24148,10 +24143,7 @@
             }
             find(_, _, _) {
               let _ = [];
-              return (
-                this.findInner(_ == null ? 0 : _, _ == null ? 1e9 : _, _, 0, _),
-                _
-              );
+              return this.findInner(_ ?? 0, _ ?? 1e9, _, 0, _), _;
             }
             findInner(_, _, _, _, _) {
               for (let _ = 0; _ < this.local.length; _++) {
@@ -26109,7 +26101,7 @@
                 _.empty,
                 _,
                 _.time,
-                _ == null ? _.prevComposition : _,
+                _ ?? _.prevComposition,
               );
             } else
               return (_ = _.getMeta("rebased"))

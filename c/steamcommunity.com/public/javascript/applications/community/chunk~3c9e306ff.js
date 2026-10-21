@@ -23,18 +23,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_, _) {
           let _ = _.getElementsByTagName("MPD");
           return !_ || _.length != 1 ? null : _[0];
@@ -200,21 +189,19 @@
           ].includes(_);
         }
         class _ {
-          constructor() {
-            _(this, "m_strType", "static"),
-              _(this, "m_nMinBufferTime", 0),
-              _(this, "m_dtAvailabilityStartTime", null),
-              _(this, "m_dtPublishTime", null),
-              _(this, "m_nMinimumUpdatePeriod", 0),
-              _(this, "m_nTimeShiftBufferDepth", 0),
-              _(this, "m_nMediaPresentationDuration", 0),
-              _(this, "m_strBaseURL", ""),
-              _(this, "m_strStatsLink", ""),
-              _(this, "m_strStalledLink", ""),
-              _(this, "m_strEventLogLink", ""),
-              _(this, "m_rgPeriods", []),
-              _(this, "m_tsLiveContentStart", 0);
-          }
+          m_strType = "static";
+          m_nMinBufferTime = 0;
+          m_dtAvailabilityStartTime = null;
+          m_dtPublishTime = null;
+          m_nMinimumUpdatePeriod = 0;
+          m_nTimeShiftBufferDepth = 0;
+          m_nMediaPresentationDuration = 0;
+          m_strBaseURL = "";
+          m_strStatsLink = "";
+          m_strStalledLink = "";
+          m_strEventLogLink = "";
+          m_rgPeriods = [];
+          m_tsLiveContentStart = 0;
           GetType() {
             return this.m_strType;
           }
@@ -716,30 +703,18 @@
             );
           }
         }
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          _ = ((_) => (
-            (_[(_.None = 0)] = "None"),
-            (_[(_.Append = 1)] = "Append"),
-            (_[(_.Remove = 2)] = "Remove"),
-            _
-          ))(_ || {});
+        var _ = ((_) => (
+          (_[(_.None = 0)] = "None"),
+          (_[(_.Append = 1)] = "Append"),
+          (_[(_.Remove = 2)] = "Remove"),
+          _
+        ))(_ || {});
         function _(_) {
           return _ && _.name == "QuotaExceededError";
         }
         class _ {
-          constructor() {
-            _(this, "m_eBufferUpdate", 0), _(this, "m_sourceBuffer", null);
-          }
+          m_eBufferUpdate = 0;
+          m_sourceBuffer = null;
           Attach(_) {
             (this.m_sourceBuffer = _), (this.m_eBufferUpdate = 0);
           }
@@ -820,15 +795,6 @@
         }
         var _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -837,8 +803,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 500,
           _ = 3e3,
           _ = 9e3,
@@ -850,30 +815,30 @@
           _ = 1,
           _ = 10;
         class _ {
+          m_callbacks;
+          m_mpd;
+          m_adaptation;
+          m_mediaSource = null;
+          m_sourceBuffer = new _();
+          m_nTrackBufferMS = 0;
+          m_representation = null;
+          m_rgBufferedSegments = [];
+          m_mapInitSegments = new Map();
+          m_strLastFedInitSegmentRep = "";
+          m_nNextSegment = 0;
+          m_bRemoveBufferState = !1;
+          m_bSeekInProgress = !1;
+          m_bSourceBufferQuotaExceeded = !1;
+          m_schNextDownload = new _._();
+          m_xhrDownload = null;
+          m_listeners = new _._();
+          m_rgDownloadLog = [];
+          m_nCurDownloadProgress = 0;
+          m_nCurDownloadBitrate = 0;
+          m_stats;
+          m_nNumConsecutiveDownloadGones = 0;
           constructor(_, _, _, _) {
-            _(this, "m_callbacks"),
-              _(this, "m_mpd"),
-              _(this, "m_adaptation"),
-              _(this, "m_mediaSource", null),
-              _(this, "m_sourceBuffer", new _()),
-              _(this, "m_nTrackBufferMS", 0),
-              _(this, "m_representation", null),
-              _(this, "m_rgBufferedSegments", []),
-              _(this, "m_mapInitSegments", new Map()),
-              _(this, "m_strLastFedInitSegmentRep", ""),
-              _(this, "m_nNextSegment", 0),
-              _(this, "m_bRemoveBufferState", !1),
-              _(this, "m_bSeekInProgress", !1),
-              _(this, "m_bSourceBufferQuotaExceeded", !1),
-              _(this, "m_schNextDownload", new _._()),
-              _(this, "m_xhrDownload", null),
-              _(this, "m_listeners", new _._()),
-              _(this, "m_rgDownloadLog", []),
-              _(this, "m_nCurDownloadProgress", 0),
-              _(this, "m_nCurDownloadBitrate", 0),
-              _(this, "m_stats"),
-              _(this, "m_nNumConsecutiveDownloadGones", 0),
-              (this.m_callbacks = _),
+            (this.m_callbacks = _),
               (this.m_mpd = _),
               (this.m_adaptation = _),
               (this.m_stats = _);
@@ -905,10 +870,7 @@
             return this.m_adaptation;
           }
           GetBandwidthRequired() {
-            var _;
-            return (
-              ((_ = this.m_representation) == null ? void 0 : _.nBandwidth) || 0
-            );
+            return this.m_representation?.nBandwidth || 0;
           }
           GetCurrentSegmentDurationMS() {
             return _(this.m_representation);
@@ -1533,15 +1495,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1550,8 +1503,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 30 * 1e3,
           _ = 8e3,
           _ = 30,
@@ -1602,53 +1554,53 @@
           (0, _._)(_, "MPD assert failed");
         }
         class _ {
+          m_elVideo;
+          m_strMPD = "";
+          m_strHLS = "";
+          m_strCaptions = "";
+          m_strCDNAuthURLParameters = "";
+          m_bTimeoutAfterFailedDownload = !0;
+          m_bAlwaysStartWithSubtitles = !1;
+          m_bMuteOnAutoplayBlocked = !1;
+          m_schUpdateMPD = new _._();
+          m_xhrUpdateMPD = null;
+          m_xhrCaptionManifest = null;
+          m_mpd = null;
+          m_bUseHLSManifest = !1;
+          m_strVideoAdaptationID = "";
+          m_strAudioAdaptationID = "";
+          m_rgLoaders = [];
+          m_mediaSource = null;
+          m_nTrackBufferMS = 0;
+          m_nLimitFPS = 0;
+          m_bIsBuffering = !0;
+          m_seekingToTime = null;
+          m_listeners = new _._();
+          m_resizeObserver = null;
+          m_schPlayerResizeDelay = new _._();
+          m_nPlayerHeightForAuto = 0;
+          m_bFirstPlay = !0;
+          m_bPlaybackStarted = !1;
+          m_bPlaybackEnded = !1;
+          m_nLastPlaytimeLoaders = 0;
+          m_nTimedText = 0;
+          m_strActiveTextTrack = null;
+          m_schReportPlayerTrigger = new _._();
+          m_bStatsViewVisible = !1;
+          m_schCaptureDisplayStatsTrigger = new _._();
+          m_videoRepSelected = null;
+          m_rgCaptions = null;
+          m_stats = new _._();
+          m_bClosing = !1;
+          m_hlsTimeOffset = 0;
+          m_bUserPlayChoice = !0;
+          m_bUserLiveEdgeChoice = !0;
+          m_schFirstFrameThrottler = new _._();
+          m_bookMarkAdapter = null;
+          m_schBookmarkUpdater = new _._();
+          m_watchedIntervals = new _();
           constructor(_) {
-            _(this, "m_elVideo"),
-              _(this, "m_strMPD", ""),
-              _(this, "m_strHLS", ""),
-              _(this, "m_strCaptions", ""),
-              _(this, "m_strCDNAuthURLParameters", ""),
-              _(this, "m_bTimeoutAfterFailedDownload", !0),
-              _(this, "m_bAlwaysStartWithSubtitles", !1),
-              _(this, "m_bMuteOnAutoplayBlocked", !1),
-              _(this, "m_schUpdateMPD", new _._()),
-              _(this, "m_xhrUpdateMPD", null),
-              _(this, "m_xhrCaptionManifest", null),
-              _(this, "m_mpd", null),
-              _(this, "m_bUseHLSManifest", !1),
-              _(this, "m_strVideoAdaptationID", ""),
-              _(this, "m_strAudioAdaptationID", ""),
-              _(this, "m_rgLoaders", []),
-              _(this, "m_mediaSource", null),
-              _(this, "m_nTrackBufferMS", 0),
-              _(this, "m_nLimitFPS", 0),
-              _(this, "m_bIsBuffering", !0),
-              _(this, "m_seekingToTime", null),
-              _(this, "m_listeners", new _._()),
-              _(this, "m_resizeObserver", null),
-              _(this, "m_schPlayerResizeDelay", new _._()),
-              _(this, "m_nPlayerHeightForAuto", 0),
-              _(this, "m_bFirstPlay", !0),
-              _(this, "m_bPlaybackStarted", !1),
-              _(this, "m_bPlaybackEnded", !1),
-              _(this, "m_nLastPlaytimeLoaders", 0),
-              _(this, "m_nTimedText", 0),
-              _(this, "m_strActiveTextTrack", null),
-              _(this, "m_schReportPlayerTrigger", new _._()),
-              _(this, "m_bStatsViewVisible", !1),
-              _(this, "m_schCaptureDisplayStatsTrigger", new _._()),
-              _(this, "m_videoRepSelected", null),
-              _(this, "m_rgCaptions", null),
-              _(this, "m_stats", new _._()),
-              _(this, "m_bClosing", !1),
-              _(this, "m_hlsTimeOffset", 0),
-              _(this, "m_bUserPlayChoice", !0),
-              _(this, "m_bUserLiveEdgeChoice", !0),
-              _(this, "m_schFirstFrameThrottler", new _._()),
-              _(this, "m_bookMarkAdapter", null),
-              _(this, "m_schBookmarkUpdater", new _._()),
-              _(this, "m_watchedIntervals", new _()),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_elVideo = _),
               this.m_schReportPlayerTrigger.Schedule(
                 _ * 1e3,
@@ -3016,11 +2968,9 @@
           return _ in _._ ? (0, _._)("#Language_" + (0, _.LgB)(_._[_])) : "";
         }
         class _ {
-          constructor() {
-            _(this, "m_bEnabled", !1),
-              _(this, "m_rgIntervals", []),
-              _(this, "m_nWatchStart");
-          }
+          m_bEnabled = !1;
+          m_rgIntervals = [];
+          m_nWatchStart = void 0;
           Enable() {
             this.m_bEnabled = !0;
           }
@@ -3098,15 +3048,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -3115,8 +3056,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 5,
           _ = -1,
           _ = 3,
@@ -3124,101 +3064,92 @@
           _ = 1e6,
           _ = 1024;
         class _ {
-          constructor() {
-            _(this, "steamid", ""),
-              _(this, "host", ""),
-              _(this, "playback_position", 0),
-              _(this, "playback_speed", 1),
-              _(this, "video_res", 0),
-              _(this, "audio_rate", 0),
-              _(this, "audio_ch", 0),
-              _(this, "bw_avg", 0),
-              _(this, "bw_required", 0),
-              _(this, "broadcast_accountid", 0),
-              _(this, "useragent", ""),
-              _(this, "sessionid", ""),
-              _(this, "broadcast_origin", "");
-          }
+          steamid = "";
+          host = "";
+          playback_position = 0;
+          playback_speed = 1;
+          video_res = 0;
+          audio_rate = 0;
+          audio_ch = 0;
+          bw_avg = 0;
+          bw_required = 0;
+          broadcast_accountid = 0;
+          useragent = "";
+          sessionid = "";
+          broadcast_origin = "";
         }
         class _ extends _ {
-          constructor() {
-            super(...arguments),
-              _(this, "video_buffer", 0),
-              _(this, "audio_buffer", 0),
-              _(this, "seconds_delta", 0),
-              _(this, "bytes_received", 0),
-              _(this, "frames_dropped", 0),
-              _(this, "frames_decoded", 0),
-              _(this, "failed_segments", 0),
-              _(this, "bw_min", 0),
-              _(this, "bw_max", 0),
-              _(this, "seg_time_avg", 0),
-              _(this, "seg_time_min", 0),
-              _(this, "seg_time_max", 0),
-              _(this, "initial_vid_res", 0),
-              _(this, "ttff", 0),
-              _(this, "seg_duration", 0);
-          }
+          video_buffer = 0;
+          audio_buffer = 0;
+          seconds_delta = 0;
+          bytes_received = 0;
+          frames_dropped = 0;
+          frames_decoded = 0;
+          failed_segments = 0;
+          bw_min = 0;
+          bw_max = 0;
+          seg_time_avg = 0;
+          seg_time_min = 0;
+          seg_time_max = 0;
+          initial_vid_res = 0;
+          ttff = 0;
+          seg_duration = 0;
         }
         class _ extends _ {
-          constructor() {
-            super(...arguments),
-              _(this, "last_segment_response", 0),
-              _(this, "audio_stalled", !1),
-              _(this, "active_downloads", 0),
-              _(this, "vid_down_progress", 0),
-              _(this, "segment_stalled", 0),
-              _(this, "segment1_bytes", 0),
-              _(this, "segment1_time", 0),
-              _(this, "segment2_bytes", 0),
-              _(this, "segment2_time", 0),
-              _(this, "segment3_bytes", 0),
-              _(this, "segment3_time", 0);
-          }
+          last_segment_response = 0;
+          audio_stalled = !1;
+          active_downloads = 0;
+          vid_down_progress = 0;
+          segment_stalled = 0;
+          segment1_bytes = 0;
+          segment1_time = 0;
+          segment2_bytes = 0;
+          segment2_time = 0;
+          segment3_bytes = 0;
+          segment3_time = 0;
         }
         class _ {
-          constructor() {
-            _(this, "framesDecoded", 0), _(this, "framesDropped", 0);
-          }
+          framesDecoded = 0;
+          framesDropped = 0;
         }
         class _ {
+          m_steamIDBroadcast = "";
+          m_steamIDViewer = "";
+          m_broadcastID = "";
+          m_ulViewerToken = "";
+          m_host = "";
+          m_strBroadcastOrigin = "";
+          m_strStatsLink = "";
+          m_strStalledLink = "";
+          m_strEventLogLink = "";
+          m_allTimeSnapshot = new _(0);
+          m_rgSnapShots = new Array(new _(0));
+          m_bAtLeastOneUserRepresentation = !1;
+          m_videoResolution = 0;
+          m_audioRate = 0;
+          m_audioChannel = 0;
+          m_strBufferingVideoResolution = "0x0@0";
+          m_nPlaybackVideoResolution = 0;
+          m_strPlaybackVideoResolution = "0x0";
+          m_htmlVideoResolution = 0;
+          m_strHtmlVideoDisplay = "";
+          m_nAudioBandwidth = 0;
+          m_nVideoBandwidth = 0;
+          m_nBandwidthRequired = 0;
+          m_nCurBandwidthVideo = 0;
+          m_nAudioBufferedMS = 0;
+          m_nVideoBufferedMS = 0;
+          m_nActiveDownloads = 0;
+          m_nVideoDownloadProgress = 0;
+          m_videoBufferedRanges = null;
+          m_audioBufferedRanges = null;
+          m_nSegmentDurationMS = 0;
+          m_nPlaybackRate = 0;
+          m_nPerfTimeCreated = 0;
+          m_nTimeToFirstFrameMS = _;
+          m_fpsMonitor = new _();
           constructor() {
-            _(this, "m_steamIDBroadcast", ""),
-              _(this, "m_steamIDViewer", ""),
-              _(this, "m_broadcastID", ""),
-              _(this, "m_ulViewerToken", ""),
-              _(this, "m_host", ""),
-              _(this, "m_strBroadcastOrigin", ""),
-              _(this, "m_strStatsLink", ""),
-              _(this, "m_strStalledLink", ""),
-              _(this, "m_strEventLogLink", ""),
-              _(this, "m_allTimeSnapshot", new _(0)),
-              _(this, "m_rgSnapShots", new Array(new _(0))),
-              _(this, "m_bAtLeastOneUserRepresentation", !1),
-              _(this, "m_videoResolution", 0),
-              _(this, "m_audioRate", 0),
-              _(this, "m_audioChannel", 0),
-              _(this, "m_strBufferingVideoResolution", "0x0@0"),
-              _(this, "m_nPlaybackVideoResolution", 0),
-              _(this, "m_strPlaybackVideoResolution", "0x0"),
-              _(this, "m_htmlVideoResolution", 0),
-              _(this, "m_strHtmlVideoDisplay", ""),
-              _(this, "m_nAudioBandwidth", 0),
-              _(this, "m_nVideoBandwidth", 0),
-              _(this, "m_nBandwidthRequired", 0),
-              _(this, "m_nCurBandwidthVideo", 0),
-              _(this, "m_nAudioBufferedMS", 0),
-              _(this, "m_nVideoBufferedMS", 0),
-              _(this, "m_nActiveDownloads", 0),
-              _(this, "m_nVideoDownloadProgress", 0),
-              _(this, "m_videoBufferedRanges", null),
-              _(this, "m_audioBufferedRanges", null),
-              _(this, "m_nSegmentDurationMS", 0),
-              _(this, "m_nPlaybackRate", 0),
-              _(this, "m_nPerfTimeCreated", 0),
-              _(this, "m_nTimeToFirstFrameMS", _),
-              _(this, "m_fpsMonitor", new _()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
           StartingPlayback() {
             this.m_nPerfTimeCreated = performance.now();
@@ -3715,24 +3646,23 @@
           _([_._], _.prototype, "LogFrameInfo", 1),
           _([_._], _.prototype, "LogBufferDuration", 1);
         class _ {
+          m_timeMS = Date.now();
+          m_nBytesReceived = 0;
+          m_nInitialVideoResolution = 0;
+          m_nFailedSegments = 0;
+          m_nStallEvents = 0;
+          m_nEntries = 0;
+          m_nSegmentDownloadTimeTotalMS = 0;
+          m_nSegmentDownloadTimeMaxMS = 0;
+          m_nSegmentDownloadTimeMinMS = 0;
+          m_nBandwidthTotal = 0;
+          m_nBandwidthMin = 0;
+          m_nBandwidthMax = 0;
+          m_nLastSegementDownloadStatus = 200;
+          m_nFramesDecoded = 0;
+          m_nFramesDropped = 0;
           constructor(_) {
-            _(this, "m_timeMS", Date.now()),
-              _(this, "m_nBytesReceived", 0),
-              _(this, "m_nInitialVideoResolution", 0),
-              _(this, "m_nFailedSegments", 0),
-              _(this, "m_nStallEvents", 0),
-              _(this, "m_nEntries", 0),
-              _(this, "m_nSegmentDownloadTimeTotalMS", 0),
-              _(this, "m_nSegmentDownloadTimeMaxMS", 0),
-              _(this, "m_nSegmentDownloadTimeMinMS", 0),
-              _(this, "m_nBandwidthTotal", 0),
-              _(this, "m_nBandwidthMin", 0),
-              _(this, "m_nBandwidthMax", 0),
-              _(this, "m_nLastSegementDownloadStatus", 200),
-              _(this, "m_nFramesDecoded", 0),
-              _(this, "m_nFramesDropped", 0),
-              (0, _._)(this),
-              (this.m_nInitialVideoResolution = _);
+            (0, _._)(this), (this.m_nInitialVideoResolution = _);
           }
           GetAverageBandwidth() {
             return this.m_nBandwidthTotal / Math.max(1, this.m_nEntries);
@@ -3787,32 +3717,31 @@
           _([_._], _.prototype, "m_nFramesDropped", 2),
           _([_._], _.prototype, "SegmentReceived", 1);
         class _ {
-          constructor() {
-            _(this, "bDropReading", !1), _(this, "nTotalDecodedFrames", 0);
-          }
+          bDropReading = !1;
+          nTotalDecodedFrames = 0;
           reset(_, _) {
             (this.bDropReading = _), (this.nTotalDecodedFrames = _);
           }
         }
         class _ {
           constructor() {
-            _(this, "k_nTestFrequencyMS", 1e3),
-              _(this, "k_nSlidingWindow", 6),
-              _(this, "k_nDroppedFramesThreshold", 1),
-              _(this, "k_nFailThreshold", 3),
-              _(this, "k_nIgnoreReadingAroundResizeMS", 2e3),
-              _(this, "m_schTracker", new _._()),
-              _(this, "m_rgResultsWindow", []),
-              _(this, "m_nLastResizeMS", 0),
-              _(this, "m_lastFrameInfo", {
-                framesDecoded: 0,
-                framesDropped: 0,
-              }),
-              _(this, "m_bDroppingFrameDetected", !1),
-              _(this, "m_nCurrentFPS", 0),
-              _(this, "m_fnRequestDecoded", null),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          k_nTestFrequencyMS = 1e3;
+          k_nSlidingWindow = 6;
+          k_nDroppedFramesThreshold = 1;
+          k_nFailThreshold = 3;
+          k_nIgnoreReadingAroundResizeMS = 2e3;
+          m_schTracker = new _._();
+          m_rgResultsWindow = [];
+          m_nLastResizeMS = 0;
+          m_lastFrameInfo = {
+            framesDecoded: 0,
+            framesDropped: 0,
+          };
+          m_bDroppingFrameDetected = !1;
+          m_nCurrentFPS = 0;
+          m_fnRequestDecoded = null;
           StartTracking(_) {
             this.m_schTracker.Schedule(
               this.k_nTestFrequencyMS,

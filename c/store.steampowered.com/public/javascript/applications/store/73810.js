@@ -5341,6 +5341,7 @@
             return _.SendMsg("TwoFactor.QueryTime#1", (0, _._)(_, _, _), _, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.QueryTime = _;

@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    446: (e, t, r) => {
+    998: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => ln });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(793),
+        a = r(686),
         o = r(696);
       function l(e) {
         return "object" == typeof e && null !== e && "value" in e;
@@ -95,10 +95,10 @@
         );
       }
       var b = r(629),
-        p = r(928),
-        f = r(443),
-        B = r(728),
-        w = r(71);
+        p = r(883),
+        f = r(396),
+        B = r(239),
+        w = r(894);
       class y {
         m_NavigationController;
         m_postMessage;
@@ -394,8 +394,8 @@
         (0, b.Cg)([p.o], I.prototype, "OnKeyUp", null),
         (0, b.Cg)([p.o], I.prototype, "Reset", null);
       var F,
-        A = r(153),
-        N = r(359);
+        A = r(834),
+        N = r(354);
       class E {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -1412,27 +1412,30 @@
             (n != e &&
               n.Element &&
               n.m_Properties?.scrollRegionToStartOrEnd &&
-              ye(n.Element, t, r),
+              ye(n.Element, t, r, n == n.Tree.Root),
             n != i);
             n = n.GetNavParentCrossingTrees()
           );
         })(e, n);
       }
-      function ye(e, t, r) {
-        let i = e,
-          n = i.ownerDocument;
+      function ye(e, t, r, i) {
+        let n = e,
+          s = n.ownerDocument;
         if (
-          (i == n.body && n.defaultView && !q(i, r) && (i = n.defaultView),
-          !q(i, r))
+          ((!i && n != s.body) ||
+            !s.defaultView ||
+            q(n, r) ||
+            (n = s.defaultView),
+          !q(n, r))
         )
           return;
-        const s = Oe(i);
+        const o = Oe(n);
         if ("y" == r) {
-          const e = t == a.pR.DIR_DOWN ? s.MaxScrollTop() : 0;
-          s.scrollTo({ top: e, behavior: "smooth" });
+          const e = t == a.pR.DIR_DOWN ? o.MaxScrollTop() : 0;
+          o.scrollTo({ top: e, behavior: "smooth" });
         } else {
-          const e = t == a.pR.DIR_RIGHT ? s.MaxScrollLeft() : 0;
-          s.scrollTo({ left: e, behavior: "smooth" });
+          const e = t == a.pR.DIR_RIGHT ? o.MaxScrollLeft() : 0;
+          o.scrollTo({ left: e, behavior: "smooth" });
         }
       }
       function Se(e) {
@@ -2321,6 +2324,8 @@
           if (t && r) {
             let e = r.GetWrappedTree();
             if (e && e.GetExcludeFromScrollRegionSearch()) return !1;
+            for (let e = r; e && e != this; e = e.m_Parent)
+              if (e.m_Properties?.excludeFromScrollRegionSearch) return !1;
           }
           return !!r;
         }
@@ -13251,7 +13256,7 @@
         },
       };
     },
-    443: (e, t, r) => {
+    396: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13264,12 +13269,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    71: (e, t, r) => {
+    894: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(928),
-        s = r(443);
+        n = r(883),
+        s = r(396);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

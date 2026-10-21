@@ -47,7 +47,7 @@ message CMDSAdmin_ChunkStorageLocation {
 	optional uint32 location_id = 1;
 	optional string host = 2;
 	optional string path = 3;
-	optional .CMsgKeyValueSet headers_for_put = 4;
+	//optional UNKNOWN headers_for_put = 4;
 	optional string virtual_host = 5;
 	optional bool use_https = 6;
 	optional string storage_provider = 7;
@@ -119,7 +119,7 @@ message CMDSAdmin_GetDepotChunkLocation_Response {
 	optional bool use_https = 5;
 	optional uint32 origin_id = 6;
 	optional string storage_provider = 7;
-	optional .CMsgKeyValueSet request_headers = 8;
+	//optional UNKNOWN request_headers = 8;
 }
 
 message CMDSAdmin_GetDepotDownloadBytes_Request {
@@ -166,15 +166,6 @@ message CMDSAdmin_NewChunkAnnouncement_Notification {
 }
 
 message CMDSAdmin_ReloadOriginStorageInfo_Notification {
-}
-
-message CMsgKeyValuePair {
-	optional string name = 1;
-	optional string value = 2;
-}
-
-message CMsgKeyValueSet {
-	repeated .CMsgKeyValuePair pairs = 1;
 }
 
 service MDSAdmin {

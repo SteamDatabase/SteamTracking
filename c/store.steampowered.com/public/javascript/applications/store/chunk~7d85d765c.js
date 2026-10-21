@@ -147,6 +147,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
           _ = (_, _, _, _) => {
@@ -258,7 +259,7 @@
             return this.m_lookupStreams.get(_);
           }
           GetBroadcastURL(_) {
-            let _ = null;
+            let _;
             return (
               _.steamid
                 ? (_ = new _._(_.steamid))
@@ -330,25 +331,35 @@
                   (this.m_bCollapsed = _.bHideStoreBroadcast);
               });
             }
-            return this.m_bUserPreferenceHideBroadcastByDefault;
+            return this.BIsEmbeddedBroadcastHiddenByDefaultUserSettings();
           }
           async SetupEmbeddableVOD(_, _) {
             (this.m_bUseFakeData = !1),
               (this.m_streamChatStatus = "remove"),
+              (0, _._)(
+                !!_.nAppIDVOD,
+                "SetupEmbeddableVOD requires a VOD appid",
+              ),
               await _._.Get().QueueAppRequest(_.nAppIDVOD, {
                 include_assets: !0,
                 include_trailers: !0,
               });
             const _ = _._.Get().GetApp(_.nAppIDVOD),
               _ = new _._();
-            if (
-              ((_.accountid = 0),
+            (_.accountid = 0),
               (_.nAppIDVOD = _.nAppIDVOD),
               (_.default_selection_priority = _._.k_ePrimary),
               (_.current_selection_priority = _._.k_ePrimary),
-              (_.thumbnail_http_address = _?.GetAssets().GetHeaderURL() || ""),
-              (_.title = _?.GetName() || ""),
-              this.GetStreams(_).unshift(_),
+              (_.thumbnail_http_address = _?.GetAssets()?.GetHeaderURL() || ""),
+              (_.title = _?.GetName() || "");
+            const _ = this.GetStreams(_);
+            if (
+              ((0, _._)(
+                !!_,
+                "SetupEmbeddableVOD called before the streams loaded",
+                _.nAppIDVOD,
+              ),
+              _.unshift(_),
               _)
             ) {
               const _ = this.GetStreamsLookupKeyFromDef(_);
@@ -356,24 +367,21 @@
             }
           }
           async HintLoadEmbeddablePreviewStreams(_) {
-            let _ = null,
-              _ = {
-                eventid: _.event ? _.event.GID : void 0,
-                previewAccounts:
-                  _.bIsPreview && _.accountIDs
-                    ? _.accountIDs.slice().sort().join(",")
-                    : void 0,
-              };
+            let _ = {
+              eventid: _.event ? _.event.GID : void 0,
+              previewAccounts:
+                _.bIsPreview && _.accountIDs
+                  ? _.accountIDs.slice().sort().join(",")
+                  : void 0,
+            };
             try {
-              return (
-                (_ = await _().get(
-                  _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpreview",
-                  {
-                    params: _,
-                  },
-                )),
-                this.HandleHintLoadBroadcastResponse(_, _.data)
+              const _ = await _().get(
+                _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpreview",
+                {
+                  params: _,
+                },
               );
+              return this.HandleHintLoadBroadcastResponse(_, _.data);
             } catch (_) {
               let _ = (0, _._)(_);
               console.error(
@@ -386,13 +394,15 @@
           }
           async HintLoadEmbeddableStreams(_) {
             let _ = this.MapEmbeddableStreamToRequest(_),
-              _ = this.GetStreamsLookupKeyFromParam(_);
-            if (!this.m_inFlightRequests.has(_)) {
-              this.m_lookupKeyToEmbedStreamDef.set(_, _);
-              const _ = this.InternalHintLoadEmbeddableStreams(_, _);
-              this.m_inFlightRequests.set(_, _);
-            }
-            return this.m_inFlightRequests.get(_);
+              _ = this.GetStreamsLookupKeyFromParam(_),
+              _ = this.m_inFlightRequests.get(_);
+            return (
+              _ ||
+                (this.m_lookupKeyToEmbedStreamDef.set(_, _),
+                (_ = this.InternalHintLoadEmbeddableStreams(_, _)),
+                this.m_inFlightRequests.set(_, _)),
+              _
+            );
           }
           async InternalHintLoadEmbeddableStreams(_, _) {
             let _ = (0, _._)(
@@ -401,16 +411,13 @@
             );
             if ((0, _._)(_)) return this.HandleHintLoadBroadcastResponse(_, _);
             try {
-              let _ = null;
-              return (
-                (_ = await _().get(
-                  _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
-                  {
-                    params: _,
-                  },
-                )),
-                this.HandleHintLoadBroadcastResponse(_, _.data)
+              const _ = await _().get(
+                _._.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
+                {
+                  params: _,
+                },
               );
+              return this.HandleHintLoadBroadcastResponse(_, _.data);
             } catch (_) {
               let _ = (0, _._)(_);
               console.error(
@@ -424,10 +431,11 @@
             (this.m_bUseFakeData = !1),
               _.bIsPreview &&
                 (_?.filtered?.length > 0
-                  ? this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
+                  ? ((0, _._)(!!_.event, "Broadcast preview requires an event"),
+                    this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
                       _.event,
                       _.filtered,
-                    )
+                    ))
                   : ((_ = {
                       filtered: [{}],
                       success: 1,
@@ -463,7 +471,7 @@
               const _ = this.m_onLoadContextCall.get(_);
               _ && _.fnCallback();
             }
-            const _ = this.GetStreams(_);
+            const _ = this.GetStreams(_) ?? [];
             return await this.AutoStartVideoStream(_, _), _;
           }
           ExtractBroadcastPrioritiesFromPartnerEventForPreview(_, _) {
@@ -506,24 +514,26 @@
           }
           async AttemptToPlayStream(_, _) {
             let _ = this.GetStreamsLookupKeyFromDef(_);
+            const _ = _.accountid ?? 0;
             if (
               (this.m_bMapHasStartedVideo.set(_, !0),
-              this.m_mapBroadcastChecked.has(_.accountid) ||
+              this.m_mapBroadcastChecked.has(_) ||
                 this.m_mapBroadcastChecked.set(
-                  _.accountid,
+                  _,
                   this.InternalAttemptToPlayStream(_, _),
                 ),
               _.nAppIDVOD)
             )
               this.m_playReadyStream.set(_, _);
             else {
-              const _ = await this.m_mapBroadcastChecked.get(_.accountid);
+              const _ = await this.m_mapBroadcastChecked.get(_);
               if (_?.success == _._) {
                 (_.steamid = _.steamid),
                   this.m_playReadyStream.set(_, _),
                   this.GetConcurrentStreams(_) > 1
                     ? (this.m_streamChatStatus = "hide")
-                    : (this.m_streamChatStatus = _.broadcast_chat_visibility),
+                    : (this.m_streamChatStatus =
+                        _.broadcast_chat_visibility ?? null),
                   this.m_setStreamChangedListeners.forEach((_) => _(_));
                 const _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID;
                 _(_, _._._, _.snr);
@@ -532,8 +542,7 @@
             return _;
           }
           async InternalAttemptToPlayStream(_, _) {
-            let _ = this.GetStreamsLookupKeyFromDef(_),
-              _ = null;
+            let _ = this.GetStreamsLookupKeyFromDef(_);
             try {
               const _ = _._.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast";
               let _ = {
@@ -542,11 +551,10 @@
                 origin: self.origin,
               };
               return (
-                (_ = await _().get(_, {
+                await _().get(_, {
                   params: _,
-                })),
-                _.data
-              );
+                })
+              ).data;
             } catch (_) {
               let _ = (0, _._)(_);
               console.error(
@@ -630,8 +638,8 @@
             _(_) != _(_)
               ? _(_) - _(_)
               : _.viewer_count != _.viewer_count
-                ? _.viewer_count - _.viewer_count
-                : _.accountid - _.accountid,
+                ? (_.viewer_count ?? 0) - (_.viewer_count ?? 0)
+                : (_.accountid ?? 0) - (_.accountid ?? 0),
           );
         }
         async function _(_, _, _) {
@@ -700,7 +708,7 @@
             return _;
           }
           static ParseEventModelPresenters(_, _) {
-            const _ = _.GetDescriptionWithFallback(_);
+            const _ = _.GetDescriptionWithFallback(_) ?? "";
             return _.ParseCalendarEventPresentersFromText(_);
           }
           static ParseEventAppReferencesFromText(_) {
@@ -715,7 +723,7 @@
             return _;
           }
           static ParseEventModelAppReferences(_, _) {
-            const _ = _.GetDescriptionWithFallback(_),
+            const _ = _.GetDescriptionWithFallback(_) ?? "",
               _ = _.ParseEventAppReferencesFromText(_);
             if (_.jsondata?.referenced_appids)
               for (const _ of _.jsondata.referenced_appids) _.add(_);
@@ -737,13 +745,15 @@
               _ = new Map();
             for (const _ of _)
               if (_ && !(_.endTime && _.endTime < _))
-                for (const _ of _.GetBroadcastWhitelistAsSteamIDs())
-                  _.has(_) ? _.get(_).push(_) : _.set(_, [_]);
+                for (const _ of _.GetBroadcastWhitelistAsSteamIDs()) {
+                  const _ = _.get(_);
+                  _ ? _.push(_) : _.set(_, [_]);
+                }
             return _;
           }
           IsBroadcasterAlreadyBound(_, _) {
-            const _ = this.m_mapBroadcasterSteamIDToEvents.get(_),
-              _ = _ ? _.length : 0;
+            const _ = this.m_mapBroadcasterSteamIDToEvents.get(_) ?? [],
+              _ = _.length;
             if ((_ ? _.length : 0) != _) return !1;
             for (let _ = 0; _ < _; _++) if (_[_] != _[_].GID) return !1;
             return !0;
@@ -787,7 +797,7 @@
               this.m_mapBroadcasterSteamIDData.set(_, _),
                 this.m_mapBroadcasterSteamIDToEvents.set(
                   _,
-                  _.map((_) => _.GID),
+                  _.map((_) => _.GID ?? ""),
                 );
             });
           }

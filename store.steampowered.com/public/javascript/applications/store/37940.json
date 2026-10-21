@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Интерактивные элементы",
     "GameRating_OnlineMusicNotice": "Сетевой музыке не присвоен рейтинг ESRB",
     "GameRating_OnlineInteractionsNotice": "Сетевым взаимодействиям не присвоен рейтинг ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Фильтрация внутриигрового чата"
+    "GameRating_ContentCategoryDescriptor_64": "Фильтрация внутриигрового чата",
+    "GameRating_ContentCategories_Title": "Содержимое",
+    "GameRating_Ratings_Title": "Рейтинги"
 }

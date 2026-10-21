@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Başlığı Aç (%1$s)",
     "moderation_actions_sustain": "Moderasyon kararı uygun",
     "moderation_actions_sustain_multiple": "Moderasyon kararı uygun (%1$s)",
+    "moderation_actions_sustain_short": "Uygun",
     "moderation_actions_suspicious": "Şüpheli Olarak İşaretle",
     "moderation_actions_suspicious_multiple": "Şüpheli Olarak İşaretle (%1$s)",
     "moderation_actions_unknown": "Bilinmiyor",

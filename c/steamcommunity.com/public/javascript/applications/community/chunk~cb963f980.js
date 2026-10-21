@@ -71,7 +71,7 @@
             _ = _[_];
           return (0, _.jsx)("img", {
             onError: (_) => {
-              _((_) => _ + 1), _ == null || _(_, _, _);
+              _((_) => _ + 1), _?.(_, _, _);
             },
             alt: _,
             ..._,
@@ -100,7 +100,7 @@
             _ = [];
           return (
             _ && _.push(_),
-            _.push(_(_ != null ? _ : "Medium")),
+            _.push(_(_ ?? "Medium")),
             (0, _.jsxs)("div", {
               className: _()(
                 _.AvatarHolder,
@@ -157,7 +157,6 @@
           );
         }
         function _(_) {
-          var _, _, _, _, _, _, _;
           const {
             playerLinkDetails: _,
             animatedAvatar: _,
@@ -165,31 +164,20 @@
             size: _,
             ..._
           } = _;
-          let _ = (0, _._)(
-            (_ = _.public_data) == null ? void 0 : _.sha_digest_avatar,
-            _,
-          );
+          let _ = (0, _._)(_.public_data?.sha_digest_avatar, _);
           return (
-            (_ = _ == null ? void 0 : _.image_small) != null &&
-              _.length &&
+            _?.image_small?.length &&
               (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small),
             (0, _.jsx)(_, {
               avatarURL: _,
               size: _,
-              isOnline:
-                ((_ = _.private_data) == null ? void 0 : _.persona_state) ===
-                _.UXk,
-              isInGame:
-                ((_ = _.private_data) == null ? void 0 : _.game_id) !== void 0,
+              isOnline: _.private_data?.persona_state === _.UXk,
+              isInGame: _.private_data?.game_id !== void 0,
               isWatchingBroadcast:
-                ((_ = _.private_data) == null
-                  ? void 0
-                  : _.watching_broadcast_accountid) !== void 0,
+                _.private_data?.watching_broadcast_accountid !== void 0,
               isAwayOrSnooze:
-                ((_ = _.private_data) == null ? void 0 : _.persona_state) ===
-                  _.PrD ||
-                ((_ = _.private_data) == null ? void 0 : _.persona_state) ===
-                  _.vPz,
+                _.private_data?.persona_state === _.PrD ||
+                _.private_data?.persona_state === _.vPz,
               ..._,
             })
           );
@@ -222,7 +210,6 @@
           );
         }
         function _(_) {
-          var _, _;
           const {
               loopDuration: _ = "Infinite",
               bParentHovered: _,
@@ -241,13 +228,9 @@
             onMouseLeave: () => _(!1),
             children: jsx(_, {
               ..._,
-              animatedAvatar: _
-                ? (_ = _.data) == null
-                  ? void 0
-                  : _.animated_avatar
-                : void 0,
+              animatedAvatar: _ ? _.data?.animated_avatar : void 0,
               children: jsx(_, {
-                profileItem: (_ = _.data) == null ? void 0 : _.avatar_frame,
+                profileItem: _.data?.avatar_frame,
                 bDisableAnimation: _ && !_,
               }),
             }),
@@ -372,30 +355,18 @@
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    _,
-                    (_ = (0, _._)(_.contrast, _)) != null ? _ : "body",
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
+              ],
             },
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    (_ = (0, _._)(_.color, _)) != null ? _ : "text-body",
-                    _,
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
+              ],
             },
             {
               prop: "truncate",
@@ -459,13 +430,9 @@
           },
         ];
         function _(_) {
-          var _;
           const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
             _ = (0, _._)(),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)("span", {
               role: "button",
               ...(0, _._)(
@@ -511,10 +478,7 @@
                     const _ = _.toObject();
                     _.set(_.public_data.steamid, _);
                   }),
-                _.map((_) => {
-                  var _;
-                  return (_ = _.get(_)) != null ? _ : null;
-                })
+                _.map((_) => _.get(_) ?? null)
               );
             },
             {
@@ -540,20 +504,12 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _, _, _, _;
           return (
-            (_ = _ == null ? void 0 : _.private_data) == null ||
-              delete _.account_name,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.account_flags,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.ban_expires_time,
-            (_ = _ == null ? void 0 : _.public_data) == null ||
-              delete _.privacy_state,
-            ((_ = _ == null ? void 0 : _.public_data) == null
-              ? void 0
-              : _.profile_state) !== _.IiA &&
-              (_ == null || delete _.private_data),
+            delete _?.private_data?.account_name,
+            delete _?.public_data?.account_flags,
+            delete _?.public_data?.ban_expires_time,
+            delete _?.public_data?.privacy_state,
+            _?.public_data?.profile_state !== _.IiA && delete _?.private_data,
             _
           );
         }
@@ -584,9 +540,7 @@
         }
         function _(_, _) {
           _.forEach((_) => {
-            var _;
-            (_ = _ == null ? void 0 : _.public_data) != null &&
-              _.steamid &&
+            _?.public_data?.steamid &&
               _.setQueryData(_(_.public_data.steamid), _);
           });
         }
@@ -615,17 +569,11 @@
           [_._, "#moderation_escalationlevel_valve"],
         ];
         function _(_) {
-          var _;
-          return (
-            ((_ = _ == null ? void 0 : _.required_moderator_level) != null
-              ? _
-              : _._) < _._
-          );
+          return (_?.required_moderator_level ?? _._) < _._;
         }
         function _(_) {
-          var _;
           const { reportedContentID: _, onClose: _ } = _,
-            _ = (_ = _.eCurrentLevel) != null ? _ : _._,
+            _ = _.eCurrentLevel ?? _._,
             _ = _.filter(([_]) => _ > _),
             [_, _] = (0, _.useState)(_._),
             _ = (0, _._)(_),
@@ -939,20 +887,9 @@
           });
         }
         function _(_) {
-          var _, _, _, _, _;
           const _ = (0, _._)(_.reportedContentID),
-            _ =
-              (_ =
-                (_ =
-                  (_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.entries) == null
-                  ? void 0
-                  : _.length) != null
-                ? _
-                : 0,
-            _ =
-              (_ = (_ = _.data) == null ? void 0 : _.entries) != null ? _ : [];
+            _ = _?.data?.entries?.length ?? 0,
+            _ = _.data?.entries ?? [];
           return (
             _.sort((_, _) => _.timestamp - _.timestamp),
             (0, _.jsx)("div", {
@@ -1032,11 +969,10 @@
           );
         }
         function _(_) {
-          var _;
           const { entry: _ } = _,
             _ = (0, _._)(_.actor_steamid);
           if (!_.isSuccess || !_.data) return null;
-          const _ = (_ = _.data.public_data) == null ? void 0 : _.persona_name;
+          const _ = _.data.public_data?.persona_name;
           return (0, _.jsxs)("tr", {
             children: [
               (0, _.jsx)("td", {
@@ -1145,18 +1081,11 @@
           }
         }
         function _(_) {
-          var _;
           const { subject: _ } = _,
             _ = _ && _.reports && _.reports.length > 0,
-            _ = [
-              ...((_ = _ == null ? void 0 : _.reports) != null ? _ : []),
-            ].sort((_, _) => {
-              var _, _;
-              return (
-                ((_ = _.time_reported) != null ? _ : 0) -
-                ((_ = _.time_reported) != null ? _ : 0)
-              );
-            });
+            _ = [...(_?.reports ?? [])].sort(
+              (_, _) => (_.time_reported ?? 0) - (_.time_reported ?? 0),
+            );
           return (0, _.jsxs)("table", {
             className: _().ModerationTable,
             children: [
@@ -1242,11 +1171,9 @@
           });
         }
         function _(_) {
-          var _;
           const { report: _ } = _,
             _ = (0, _._)(_.reporter_steamid);
-          if (!_.isSuccess || !((_ = _.data) != null && _.public_data))
-            return null;
+          if (!_.isSuccess || !_.data?.public_data) return null;
           const _ = !!_.time_disputed && _.dispute_resolved === _._,
             _ =
               _.resolved !== _._ &&
@@ -1668,7 +1595,7 @@
         function _(_) {
           if (!_(_)) return !1;
           const _ = _.constructor;
-          if (typeof _ == "undefined") return !0;
+          if (typeof _ > "u") return !0;
           const _ = _.prototype;
           return !(
             !_(_) || !Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
@@ -1717,7 +1644,6 @@
           });
         }
         function _(_, _) {
-          var _;
           const _ = (0, _.useContext)(_),
             _ = typeof _ == "string" ? _ : _(..._);
           let _ = _;
@@ -1726,10 +1652,8 @@
             if (_ in _.factories) break;
             _ = _.parent;
           }
-          const _ = (
-            (_ = _ == null ? void 0 : _.factories[_]) != null ? _ : _
-          )();
-          return ((_ != null ? _ : _).instances[_] = _), _;
+          const _ = (_?.factories[_] ?? _)();
+          return ((_ ?? _).instances[_] = _), _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {

@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "عناصر تفاعلية",
     "GameRating_OnlineMusicNotice": "الموسيقى عبر الإنترنت غير مصنفة بواسطة ESRB",
     "GameRating_OnlineInteractionsNotice": "التفاعلات عبر الإنترنت غير مصنفة بواسطة ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "دردشة داخل اللعبة مع تصفية المحتوى"
+    "GameRating_ContentCategoryDescriptor_64": "دردشة داخل اللعبة مع تصفية المحتوى",
+    "GameRating_ContentCategories_Title": "المحتوى",
+    "GameRating_Ratings_Title": "التقييمات"
 }

@@ -4987,7 +4987,11 @@
               "TwoFactor.QueryTime#1",
               (0, t.I8)(W, cr, vr),
               Y,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
+              {
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+                rgBrowserAPISites: ["help"],
+              },
             );
           }
           nr.QueryTime = l;

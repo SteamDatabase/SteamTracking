@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktiva element",
     "GameRating_OnlineMusicNotice": "Onlinemusik som inte har klassificerats av ESRB",
     "GameRating_OnlineInteractionsNotice": "Onlineinteraktioner som inte har klassificerats av ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Filtrerad chatt i spelet"
+    "GameRating_ContentCategoryDescriptor_64": "Filtrerad chatt i spelet",
+    "GameRating_ContentCategories_Title": "Innehåll",
+    "GameRating_Ratings_Title": "Klassificeringar"
 }

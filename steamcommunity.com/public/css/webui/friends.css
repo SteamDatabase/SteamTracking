@@ -729,118 +729,6 @@ span:focus,
 button:focus {
   outline: none;
 }
-@keyframes BackgroundAnimation {
-  0% {
-    background-position: 0 100%;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes ItemFocusAnim-darkerGrey-nocolor {
-  0% {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes ItemFocusAnim-darkerGrey {
-  0% {
-    color: #8b929a;
-    background: #3d4450;
-  }
-  to {
-    color: #fff;
-    background: #23262e;
-  }
-}
-@keyframes ItemFocusAnim-darkGreySettings {
-  0% {
-    color: #8b929a;
-    background: #23262e;
-  }
-  to {
-    color: #fff;
-    background: #383a41;
-  }
-}
-@keyframes ItemFocusAnim-darkGrey {
-  0% {
-    color: #8b929a;
-    background: #ffffff40;
-  }
-  to {
-    color: #fff;
-    background: #ffffff26;
-  }
-}
-@keyframes ItemFocusAnim-grey {
-  0% {
-    color: #fff;
-    background: #8b929a;
-  }
-  to {
-    color: #fff;
-    background: #67707b;
-  }
-}
-@keyframes ItemFocusAnim-translucent-white-10 {
-  0% {
-    color: #fff;
-    background: #ffffff4d;
-  }
-  to {
-    color: #fff;
-    background: #ffffff1a;
-  }
-}
-@keyframes ItemFocusAnim-translucent-white-20 {
-  0% {
-    color: #fff;
-    background: #ffffff80;
-  }
-  to {
-    color: #fff;
-    background: #fff3;
-  }
-}
-@keyframes ItemFocusAnimBorder-darkGrey {
-  0% {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes ItemFocusAnim-green {
-  0% {
-    color: #8b929a;
-    background: #c9ffc9;
-  }
-  to {
-    color: #fff;
-    background: #59bf40;
-  }
-}
-@keyframes focusAnimation {
-  0% {
-    opacity: 1;
-    background-position: 0 0;
-  }
-  to {
-    opacity: 0.8;
-    background-position: -180% 0;
-  }
-}
-@keyframes hoverAnimation {
-  0% {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 50% 0;
-  }
-}
 .GamepadMode .friendListHeaderContainer {
   background-color: #0000;
   min-height: 0;
@@ -856,6 +744,16 @@ button:focus {
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  0% {
+    color: #8b929a;
+    background: #3d4450;
+  }
+  to {
+    color: #fff;
+    background: #23262e;
+  }
 }
 .favoriteElement.gpfocuswithin {
   z-index: 1;
@@ -876,7 +774,6 @@ button:focus {
   .favoriteElement
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
-  padding-top: 3px;
   font-size: 18px;
 }
 .GamepadMode .favoriteElement .friend.online {
@@ -888,6 +785,12 @@ button:focus {
 }
 .chatRoomMembers.groupMemberList .friend {
   margin-top: 2px;
+}
+.GamepadMode .chatRoomMembers.groupMemberList .friend {
+  padding-inline-start: 20px;
+}
+.GamepadMode .chatRoomMembers.groupMemberList .friend .avatarHolder {
+  margin-inline-start: 6px;
 }
 .chatRoomMembers.groupMemberList .chatroomBucket_regular {
   transform-origin: 12%;
@@ -903,6 +806,90 @@ button:focus {
 .chatRoomMembers.groupMemberList .chatroomBucket_regular.gpfocus {
   z-index: 1;
   animation-name: ItemFocusAnim-darkerGrey;
+}
+.chatRoomMembers.groupMemberList .chatMemberRow {
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+  display: flex;
+  overflow: hidden;
+}
+.chatRoomMembers.groupMemberList .chatMemberRowMain {
+  transform-origin: 12%;
+  flex: auto;
+  min-width: 0;
+  height: 100%;
+  scroll-margin: 32px 0;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-fill-mode: forwards;
+  display: flex;
+  transform: scale(1) rotateX(0);
+}
+.chatRoomMembers.groupMemberList .chatMemberRowMain.gpfocus {
+  z-index: 1;
+  animation-name: ItemFocusAnim-darkerGrey;
+}
+.chatRoomMembers.groupMemberList .chatMemberRowMain .friend {
+  flex: 1;
+  min-width: 0;
+}
+.chatMemberGameButtons {
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
+  padding: 0 8px;
+  display: flex;
+}
+.chatMemberGameButton {
+  transform-origin: 12%;
+  box-sizing: border-box;
+  color: #67707b;
+  white-space: nowrap;
+  background-color: #282b33;
+  border-radius: 3px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-fill-mode: forwards;
+  display: flex;
+  transform: scale(1) rotateX(0);
+}
+.chatMemberGameButton.Hidden {
+  visibility: hidden;
+}
+.chatMemberGameButton.chatMemberMenuButton {
+  padding: 0 5px;
+}
+.chatMemberGameButton.chatMemberMenuButton svg {
+  width: 17px;
+  height: 17px;
+}
+.chatMemberGameButton {
+  transition: background-color 50ms ease-out;
+}
+.chatMemberGameButton:hover:not(.gpfocus):not(.Hidden) {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3d4450;
+}
+.chatMemberGameButton.gpfocus {
+  z-index: 1;
+  animation-name: ItemFocusAnim-darkGrey;
 }
 .GamepadMode .ChatRoomGroupAvatar {
   border: 2px solid #67707b;
@@ -1065,7 +1052,7 @@ button:focus {
   height: 75%;
   position: absolute;
   top: 3px;
-  left: -29px;
+  left: 5px;
 }
 .GamepadMode .chatRoomTextChannel .ChatUnreadMessageIndicator {
   background: unset;
@@ -1085,7 +1072,10 @@ button:focus {
     0 0 16px 2px #ef806c;
 }
 .GamepadMode .friendlistListContainer {
+  scroll-behavior: auto;
   background: 0 0;
+  padding-bottom: 8px;
+  scroll-padding: 48px 0 8px;
 }
 .GamepadMode .friendGroup.taggedGroup,
 .GamepadMode .friendGroup.gameGroup {
@@ -1317,11 +1307,82 @@ button:focus {
 }
 .GamepadMode .chatWindow .chatHeader {
   z-index: 2;
-  background: 0 0;
   min-height: 0;
+  box-shadow: none;
+  background: linear-gradient(90deg, #4469a5 0, #24252d 60px 100%);
+  border-left: 3px solid #639eff;
+}
+.GamepadMode .chatWindow .chatHeader.VoiceActiveHeader {
+  background: linear-gradient(90deg, #59bf40 0, #24252d 60px 100%);
+  border-left-color: #59bf40;
 }
 .GamepadMode .chatHeader.titleBarContainer {
   height: 100px;
+}
+.GamepadMode .FriendChatHeaderSteamDeck {
+  flex-direction: row;
+  align-items: stretch;
+  display: flex;
+}
+.GamepadMode .FriendChatHeaderSteamDeck .RightSideButtonContainer {
+  box-sizing: border-box;
+  height: 100px;
+  padding: 40px 12px 0 0;
+  position: relative;
+}
+.GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderVoiceStatus {
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #59bf40;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+  position: absolute;
+  bottom: 48px;
+  right: 12px;
+}
+.GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderVoiceStatus:empty {
+  display: none;
+}
+.GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderUnreadCount {
+  text-align: start;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #ffd55f;
+  align-items: center;
+  gap: 5px;
+  margin-right: 6px;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  display: flex;
+}
+.GamepadMode .FriendChatHeaderSteamDeck .FriendChatHeaderUnreadCount:before {
+  content: "";
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
 }
 .GamepadMode .titleBarContainer.ChatTabs {
   background-color: #0000;
@@ -1356,7 +1417,7 @@ button:focus {
 }
 .GamepadMode .chatWindow .chatEntry {
   background-color: #0000;
-  padding: 0 50px 40px 0;
+  padding: 0 0 40px;
 }
 .GamepadMode .chatWindow .chatEntry.gpfocuswithin > :not(.chatUploadContainer) {
   z-index: 1;
@@ -1364,11 +1425,18 @@ button:focus {
   background-color: #3d4450;
   animation-name: ItemFocusAnim-darkGrey;
 }
+.GamepadMode
+  .chatWindow
+  .chatEntry
+  > .compactableHeight:empty:not(.disconnectBlocker) {
+  display: none;
+}
 .GamepadMode .chatWindow .chatEntry > :not(.chatUploadContainer) {
   box-shadow: none;
   transform-origin: 12%;
   background-color: #23262e73;
-  margin: 10px 0 10px 10px;
+  border-radius: 3px;
+  margin: 0 10px 10px;
   padding: 0;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
@@ -1378,6 +1446,131 @@ button:focus {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0);
   box-shadow: 0 0 10px #0e141b;
+}
+.GamepadMode .PendingGameInvitesBar {
+  flex-direction: row;
+  flex: none;
+  gap: 8px;
+  width: 95%;
+  margin: 0 auto 8px;
+  display: flex;
+}
+.GamepadMode .PendingGameInvite {
+  white-space: nowrap;
+  background-color: #23262ed9;
+  border-radius: 3px;
+  flex-direction: row;
+  flex: 1 0 auto;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 6px 6px;
+  display: flex;
+  box-shadow: 0 0 10px #0e141b;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteHeader {
+  aspect-ratio: 460 / 215;
+  border-radius: 2px;
+  height: 60px;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteText {
+  flex-direction: column;
+  flex: auto;
+  min-width: 0;
+  display: flex;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteLabel,
+.GamepadMode .PendingGameInvite .PendingGameInviteAppName {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteLabel {
+  color: #fff;
+  font-size: 15px;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteInviter {
+  align-items: baseline;
+  gap: 8px;
+  display: inline-flex;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteInviter .FriendAvatar {
+  align-self: center;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteInviter .avatarHolder {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transform: none;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteAppName {
+  color: #8b929a;
+  font-size: 15px;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton {
+  color: #8b929a;
+  transform-origin: 12%;
+  background-color: #3d4450;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 6px;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-fill-mode: forwards;
+  display: flex;
+  transform: scale(1) rotateX(0);
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.Accept {
+  color: #59bf40;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton svg {
+  width: 18px;
+  height: 18px;
+}
+.GamepadMode .PendingGameInvite .PendingGameInviteButton.gpfocus {
+  z-index: 1;
+  color: #23262e;
+  background-color: #fff;
+  animation-name: ItemFocusAnim-darkerGrey;
+}
+.GamepadMode .chatRoomGroupStatsRow {
+  flex-direction: row;
+  align-items: center;
+  height: 20px;
+  margin: 0 10px;
+  display: none;
+}
+.GamepadMode .chatRoomGroupStatsRow .chatRoomGroupStatsRule {
+  background-color: #67707b59;
+  flex: 1;
+  height: 1px;
+  margin-right: 16px;
+}
+.GamepadMode .chatRoomGroupStatsRow .chatRoomGroupStats {
+  margin-bottom: 0;
+}
+.GamepadMode .chatRoomGroupStatsRow .statMemberStat {
+  margin-inline-end: 12px;
+  font-family:
+    Motiva Sans,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.GamepadMode .chatRoomGroupStatsRow .statMemberStat .statCircle {
+  margin-left: 2px;
+}
+.GamepadMode .chatRoomGroupStatsRow .statMemberStat.statMembersTotal {
+  margin-inline-end: 0;
+}
+.GamepadMode .namedGroup .chatRoomGroupStatsRow {
+  display: flex;
 }
 .ShowStaleWarning .FriendsDataOutofDate {
   transform: translateY(32px);
@@ -1391,6 +1584,19 @@ button:focus {
 .FriendsListAndChatsSteamDeck .SteamDeckChats {
   flex: 1;
   display: flex;
+}
+.FriendsListAndChatsSteamDeck .GamepadMode.friendlist > *,
+.FriendsListAndChatsSteamDeck .multiChatDialog.GamepadMode > * {
+  transition: opacity 0.21s ease-in-out;
+}
+.FriendsListAndChatsSteamDeck.gpfocuswithin
+  .GamepadMode.friendlist:not(.gpfocuswithin)
+  > *,
+.FriendsListAndChatsSteamDeck.gpfocuswithin
+  .SteamDeckChats:not(.gpfocuswithin)
+  .multiChatDialog.GamepadMode
+  > * {
+  opacity: 0.45;
 }
 .FriendsListAndChatsSteamDeck .FriendsDataOutofDate {
   z-index: 1000;
@@ -1443,6 +1649,7 @@ button:focus {
 #QuickAccess-Menu .GamepadMode.friendlist .TabPanelHeader {
   letter-spacing: 1px;
   text-transform: uppercase;
+  margin: 0;
   text-align: left;
   text-align: start;
   text-indent: 0;
@@ -1453,7 +1660,8 @@ button:focus {
   align-items: center;
   gap: 10px;
   height: 33px;
-  margin: 0 7px 0 16px;
+  margin-left: 16px;
+  margin-right: 7px;
   padding: 3px 0 8px;
   font-family:
     Motiva Sans,
@@ -1612,8 +1820,9 @@ button:focus {
   color: #fff;
 }
 .GamepadMode.friendlist .FriendsListTabPanelContainer {
+  flex: 1;
   width: 100%;
-  height: 100%;
+  min-height: 0;
   position: relative;
   overflow: scroll hidden;
 }
@@ -1814,90 +2023,41 @@ button:focus {
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-.RightSideButtonContainer {
+.GamepadMode .RightSideButtonContainer {
   background-color: #0000;
-  border-left: 2px solid #67707b33;
-  flex-direction: column;
-  align-self: flex-start;
-  width: 46px;
-  margin-top: 8px;
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
   display: flex;
-  position: absolute;
-  top: 0;
-  bottom: 62px;
-  right: 0;
 }
-.RightSideButtonContainer .oneOnOneVoiceChatButton {
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton {
   overflow: hidden;
 }
-.RightSideButtonContainer .oneOnOneVoiceChatButton .SonarCircle {
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton .SonarCircle {
   filter: blur(2px);
   top: -3px;
   left: -1.8px;
 }
-.VoiceRequested .RightSideButtonContainer .oneOnOneVoiceChatButton {
-  color: #9bd98c;
-}
-.SteamDeckChats.gpfocuswithin .RightSideButtonContainer {
-  border-left: 2px solid #67707b00;
-}
-.SteamDeckChats.gpfocuswithin .RightSideButtonContainer .AddFriendButton,
-.SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .inviteAnotherFriendButton {
-  background-color: #2b333f;
-}
-.SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .AddFriendButton.gpfocus,
-.SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .inviteAnotherFriendButton.gpfocus {
-  z-index: 1;
-  animation-name: ItemFocusAnim-darkGrey;
-}
-.SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton {
-  background-color: #2b333f;
-}
-.SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton.gpfocus {
-  z-index: 1;
-  animation-name: ItemFocusAnim-darkGrey;
-}
-.VoiceRequested
-  .SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton.gpfocus {
-  z-index: 1;
-  animation-name: ItemFocusAnim-green;
-}
-.VoiceRequested
-  .SteamDeckChats.gpfocuswithin
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton {
-  color: #fff;
-}
-.RightSideButtonContainer .AddFriendButton,
-.RightSideButtonContainer .oneOnOneVoiceChatButton,
-.RightSideButtonContainer .inviteAnotherFriendButton {
+.GamepadMode .RightSideButtonContainer .AddFriendButton,
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton,
+.GamepadMode .RightSideButtonContainer .FriendActionsButton,
+.GamepadMode .RightSideButtonContainer .inviteAnotherFriendButton {
   transform-origin: 12%;
-  border-radius: unset;
-  height: 53px;
+  min-width: 28px;
+  height: 28px;
   width: unset;
   position: unset;
   top: unset;
   right: unset;
   color: #67707b;
-  background-color: #0000;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  flex-direction: column;
+  background-color: #282b33;
+  border-radius: 3px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3px;
+  margin: 0;
+  padding: 0 5px;
   transition: background-color 50ms ease-out;
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -1905,26 +2065,76 @@ button:focus {
   display: flex;
   transform: scale(1) rotateX(0);
 }
-.RightSideButtonContainer .AddFriendButton svg,
-.RightSideButtonContainer .oneOnOneVoiceChatButton svg,
-.RightSideButtonContainer .inviteAnotherFriendButton svg {
-  width: 20px;
-  height: 20px;
+.GamepadMode .RightSideButtonContainer .AddFriendButton svg,
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
+.GamepadMode .RightSideButtonContainer .FriendActionsButton svg,
+.GamepadMode .RightSideButtonContainer .inviteAnotherFriendButton svg {
+  width: 17px;
+  height: 17px;
 }
-.RightSideButtonContainer .AddFriendButton:hover,
-.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
-.RightSideButtonContainer .inviteAnotherFriendButton:hover {
-  background-color: #2b333f;
-  transition: background-color 0.15s ease-in;
+.GamepadMode .RightSideButtonContainer .AddFriendButton.gpfocus,
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton.gpfocus,
+.GamepadMode .RightSideButtonContainer .FriendActionsButton.gpfocus,
+.GamepadMode .RightSideButtonContainer .inviteAnotherFriendButton.gpfocus {
+  z-index: 1;
+  animation-name: ItemFocusAnim-darkGrey;
 }
-.RightSideButtonContainer .oneOnOneVoiceChatButton {
+.GamepadMode
+  .RightSideButtonContainer
+  .AddFriendButton.gpfocus
+  .SVGIcon_VoiceRoom,
+.GamepadMode
+  .RightSideButtonContainer
+  .oneOnOneVoiceChatButton.gpfocus
+  .SVGIcon_VoiceRoom,
+.GamepadMode
+  .RightSideButtonContainer
+  .FriendActionsButton.gpfocus
+  .SVGIcon_VoiceRoom,
+.GamepadMode
+  .RightSideButtonContainer
+  .inviteAnotherFriendButton.gpfocus
+  .SVGIcon_VoiceRoom {
+  color: inherit;
+}
+.GamepadMode .RightSideButtonContainer .oneOnOneVoiceChatButton {
   cursor: pointer;
   display: flex;
   position: relative;
 }
-.RightSideButtonContainer .oneOnOneVoiceChatButton .WaitingForYouFirstTime {
+.GamepadMode
+  .RightSideButtonContainer
+  .oneOnOneVoiceChatButton
+  .WaitingForYouFirstTime {
   height: 20px;
   position: relative;
+}
+.GamepadMode
+  .VoiceRequested
+  .RightSideButtonContainer
+  .oneOnOneVoiceChatButton {
+  color: #fff;
+}
+.GamepadMode
+  .VoiceRequested
+  .RightSideButtonContainer
+  .oneOnOneVoiceChatButton.gpfocus {
+  z-index: 1;
+  animation-name: ItemFocusAnim-green;
+}
+.GamepadMode
+  .NotAFriendOrApproved
+  .RightSideButtonContainer
+  .inviteAnotherFriendButton,
+.GamepadMode
+  .SuspiciousChat
+  .RightSideButtonContainer
+  .inviteAnotherFriendButton,
+.GamepadMode
+  .errorDisconnected
+  .RightSideButtonContainer
+  .inviteAnotherFriendButton {
+  display: none;
 }
 .gpfocus .GamepadMode .FriendPicker_Suggestions,
 .GamepadMode .FriendPicker_Suggestions.gpfocus {
@@ -1952,8 +2162,8 @@ button:focus {
   padding-left: 15px;
 }
 .chatRoomGroupHeader .GamepadMode .ChatRoomListGroupItem_header {
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   margin: 0;
 }
 .GamepadMode .ChatRoomListGroupItem_header .ChatRoomMultiFriendAvatar {
@@ -1965,44 +2175,41 @@ button:focus {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.GamepadMode .namedGroup .chatRoomGroupHeader,
+.GamepadMode .compactView.namedGroup .chatRoomGroupHeader {
+  padding: 6px 24px 8px 10px;
+}
+.GamepadMode .compactView .chatRoomGroupHeader .ChatRoomGroupAvatar {
+  width: 36px;
+  height: 36px;
+}
 .GamepadMode .chatRoomGroupHeader {
   max-width: calc(100vw - 260px);
 }
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
-  font-size: 16px;
+  font-size: 20px;
 }
-.GamepadMode .chatRoomGroupHeader .chatRoomGroupControls {
-  justify-content: flex-end;
-}
-.GamepadMode .chatRoomGroupHeader .chatRoomGroupControls .statMemberStat {
-  margin-bottom: -3px;
-  font-family:
-    Motiva Sans,
-    Helvetica,
-    sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-}
-.GamepadMode
-  .chatRoomGroupHeader
-  .chatRoomGroupControls
-  .statMemberStat
-  .statCircle {
-  margin-left: 2px;
+.GamepadMode .chatRoomGroupHeader .chatRoomGroupHeaderBottomRow {
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4px;
+  display: flex;
 }
 .GamepadMode .chatRoomGroupHeader {
-  max-height: 34px;
-  padding: 6px 4px 6px 10px;
+  align-items: flex-start;
+  padding: 6px 24px 8px 10px;
 }
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
   border-width: 1px;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
+  margin-top: -10px;
 }
 .GamepadMode .chatRoomGroupHeader .chatRoomGroupHeaderName {
   align-items: center;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
   display: flex;
 }
 .GamepadMode .chatRoomGroupHeader .chatRoomGroupHeaderTagline {
@@ -2011,23 +2218,35 @@ button:focus {
   font-weight: 700;
 }
 .GamepadMode .chatRoomGroupActiveChat {
-  transform-origin: 12%;
   border-radius: 3px;
   flex-direction: row;
   flex: 1;
   justify-content: flex-start;
   align-items: center;
-  margin: 2px 16px -2px 4px;
+  min-width: 0;
+  margin: 2px 8px -2px 4px;
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
+  display: flex;
+}
+.GamepadMode .chatRoomGroupActiveChat .chatRoomGroupActiveChatName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+}
+.GamepadMode .chatRoomGroupActiveChat .SVGIcon_TextRoom {
+  flex-shrink: 0;
+}
+.GamepadMode .chatRoomGroupActiveChat {
+  transform-origin: 12%;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   animation-fill-mode: forwards;
-  display: flex;
   transform: scale(1) rotateX(0);
 }
 .GamepadMode .chatRoomGroupActiveChat.voiceRoom .SVGIcon_TextRoom .TextLines,
@@ -2176,6 +2395,108 @@ button:focus {
   color: #67707b;
   font-size: 16px;
   font-style: italic;
+}
+@keyframes BackgroundAnimation {
+  0% {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes focusAnimation {
+  0% {
+    opacity: 1;
+    background-position: 0 0;
+  }
+  to {
+    opacity: 0.8;
+    background-position: -180% 0;
+  }
+}
+@keyframes hoverAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  0% {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkGreySettings {
+  0% {
+    color: #8b929a;
+    background: #23262e;
+  }
+  to {
+    color: #fff;
+    background: #383a41;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  0% {
+    color: #8b929a;
+    background: #ffffff40;
+  }
+  to {
+    color: #fff;
+    background: #ffffff26;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  0% {
+    color: #fff;
+    background: #8b929a;
+  }
+  to {
+    color: #fff;
+    background: #67707b;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  0% {
+    color: #fff;
+    background: #ffffff4d;
+  }
+  to {
+    color: #fff;
+    background: #ffffff1a;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  0% {
+    color: #fff;
+    background: #ffffff80;
+  }
+  to {
+    color: #fff;
+    background: #fff3;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  0% {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  0% {
+    color: #8b929a;
+    background: #c9ffc9;
+  }
+  to {
+    color: #fff;
+    background: #59bf40;
+  }
 }
 html.client_chat_frame body,
 html.web_chat_frame body {
@@ -7294,9 +7615,6 @@ a.connectionStatus:visited {
   display: flex;
   position: relative;
 }
-.GamepadMode .ChatHistoryContainer {
-  margin-inline-end: 46px;
-}
 .gpfocus .ChatHistoryContainer .ChatHistorySelector,
 .ChatHistoryContainer.gpfocus .ChatHistorySelector {
   opacity: 1;
@@ -8696,8 +9014,7 @@ html.web_chat_frame .perf_timing_area {
   transition-timing-function: ease-in-out;
   position: relative;
 }
-.gpfocus .msg,
-.msg.gpfocus {
+.GamepadMode .msg.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -9411,7 +9728,6 @@ html.web_chat_frame .perf_timing_area {
   .ChatTabContent.ChatRoom
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
-  padding-top: 2px;
   font-size: 12px;
 }
 .ModalPosition_Content
@@ -9520,26 +9836,12 @@ html.web_chat_frame .perf_timing_area {
   height: 26px;
 }
 .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials {
-  padding-top: 4px;
   font-size: 16px;
 }
-.GamepadMode
-  #QuickAccess-Menu
-  .ChatRoomGroupAvatar.Small
-  .ChatRoomGroupAvatar_initials {
-  padding-top: 1px;
-}
-.ChatRoomGroupAvatar.Smallish .ChatRoomGroupAvatar_initials {
-  padding-top: 0;
-}
-.ChatRoomGroupAvatar.Smaller .ChatRoomGroupAvatar_initials {
-  padding-top: 1px;
-  font-size: 14px;
-}
+.ChatRoomGroupAvatar.Smaller .ChatRoomGroupAvatar_initials,
 .ChatTabContextMenuItem
   .ChatRoomGroupAvatar.Smaller
   .ChatRoomGroupAvatar_initials {
-  padding-top: 3px;
   font-size: 14px;
 }
 .ChatRoomGroupAvatar.Smaller {
@@ -9555,7 +9857,6 @@ html.web_chat_frame .perf_timing_area {
   height: 16px;
 }
 .ChatRoomGroupAvatar.Micro .ChatRoomGroupAvatar_initials {
-  padding-top: 2px;
   font-size: 7px;
 }
 .chatTab .MicStatus {
@@ -10259,23 +10560,10 @@ body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox {
   }
 }
 .favoriteElement .ChatRoomGroupAvatar_initials {
-  padding-top: 4px;
   font-size: 25px;
 }
 .compactQuickAccess .favoriteElement .ChatRoomGroupAvatar_initials {
-  padding-top: 4px;
   font-size: 14px;
-}
-.favoriteElement
-  .ChatRoomGroupAvatar.EmojiInitials
-  .ChatRoomGroupAvatar_initials {
-  padding-top: 3px;
-}
-.compactQuickAccess
-  .favoriteElement
-  .ChatRoomGroupAvatar.EmojiInitials
-  .ChatRoomGroupAvatar_initials {
-  padding-top: 1px;
 }
 .favoriteElement .ChatRoomMultiFriendAvatar {
   margin: 2px;
@@ -11381,21 +11669,18 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem .ChatRoomGroupAvatar .ChatRoomGroupAvatar_initials {
   border-width: 2px;
-  padding-top: 5px;
   font-size: 16px;
 }
 .GamepadMode
   .ChatRoomListGroupItem
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
-  padding-top: 6px;
   font-size: 18px;
 }
 .compactView
   .ChatRoomListGroupItem
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
-  padding-top: 2px;
   font-size: 12px;
 }
 .detailsView {
@@ -11824,7 +12109,7 @@ button.chatRoomHeaderButton:hover {
 }
 .InlineVolume .DialogSlider_Container {
   float: inline-start;
-  min-width: 140px;
+  min-width: 128px;
   margin: 2px;
   padding: 0;
 }
@@ -11836,8 +12121,9 @@ button.chatRoomHeaderButton:hover {
   background: linear-gradient(#687ab1 0%, #4e5969 80%);
 }
 .InlineVolume .volumePercentage {
+  white-space: nowrap;
   text-align: center;
-  width: 24px;
+  width: 30px;
   margin-inline-start: 2px;
   font-size: 10px;
   display: inline-block;
@@ -11998,12 +12284,6 @@ button.chatRoomHeaderButton:hover {
 .compactView .chatRoomGroupHeader .ChatRoomGroupAvatar {
   width: 48px;
   height: 48px;
-}
-.compactView
-  .chatRoomGroupHeader
-  .ChatRoomGroupAvatar
-  .ChatRoomGroupAvatar_initials {
-  margin-top: -6px;
 }
 .chatRoomGroupHeader .broadcastInfoContainer {
   cursor: pointer;
@@ -12300,12 +12580,19 @@ button.chatRoomHeaderButton:hover {
   color: #616c7a;
   -webkit-user-select: none;
   user-select: none;
+  letter-spacing: 0;
+  box-sizing: border-box;
   background: -webkit-linear-gradient(#fff, #92a2b8);
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #0005;
   -webkit-background-clip: text;
+  justify-content: center;
+  align-items: center;
   height: 100%;
+  padding-bottom: 0.1em;
   font-size: 32px;
+  line-height: 1;
+  display: flex;
 }
 .ChatRoomGroupAvatar.Large .ChatRoomGroupAvatar_initials {
   font-size: 56px;
@@ -12321,25 +12608,16 @@ button.chatRoomHeaderButton:hover {
   .ChatRoomGroupAvatar.EmojiInitials
   .ChatRoomGroupAvatar_initials {
   text-shadow: 1px 1px 4px #0008;
-  padding-top: 4px;
 }
 .ChatTabContent.ChatRoom
   .ChatRoomGroupAvatar.EmojiInitials
   .ChatRoomGroupAvatar_initials {
   text-shadow: 1px 1px 2px #0008;
-  padding-top: 4px;
 }
 .leftInviteContainer
   .ChatRoomGroupAvatar.EmojiInitials
   .ChatRoomGroupAvatar_initials {
   text-shadow: 1px 1px 8px #0009;
-  padding-top: 6px;
-}
-.Inviter
-  .leftInviteContainer
-  .ChatRoomGroupAvatar.EmojiInitials
-  .ChatRoomGroupAvatar_initials {
-  padding-top: 4px;
 }
 img.ChatRoomGroupAvatar_Avatar {
   width: 100%;
@@ -13320,7 +13598,6 @@ a.general_btn:hover {
   .dropGroupInviteDialog_Graphic
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
-  padding-top: 10px;
   font-size: 38px;
 }
 .dropGroupInviteDialog
@@ -13546,6 +13823,25 @@ a.general_btn:hover {
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
+  margin-bottom: 16px;
+}
+.GamepadMode .ChatRoomGroupInviteDialog.GamepadMode .DialogHeader .displayRow {
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.GamepadMode
+  .ChatRoomGroupInviteDialog.GamepadMode
+  .DialogHeader
+  .displayRow
+  .ChatRoomGroupAvatar,
+.GamepadMode
+  .ChatRoomGroupInviteDialog.GamepadMode
+  .DialogHeader
+  .displayRow
+  .ChatRoomMultiFriendAvatar {
+  flex-shrink: 0;
+  margin: 0;
 }
 .GamepadMode
   .ChatRoomGroupInviteDialog.GamepadMode
@@ -13722,8 +14018,14 @@ a.general_btn:hover {
 .contextMenuGameOptions {
   padding-inline-start: 32px;
 }
+.GamepadMode .contextMenuGameOptions {
+  padding-inline-start: 40px;
+}
 .contextMenuGameOptions.contextMenuPlayButton {
   padding-inline-start: 0;
+}
+.GamepadMode .contextMenuGameOptions.contextMenuPlayButton {
+  padding-inline-start: 14px;
 }
 .contextMenuGameOptions.contextMenuPartyBeacon {
   color: #91c257;
@@ -13746,6 +14048,29 @@ a.general_btn:hover {
 }
 .contextMenuGameOptions:hover .SVGIcon_Play .playTriangle {
   fill: #d0d9e9;
+}
+.contextMenuGameOptions.contextMenuPlayButton .SVGIcon_PlayInCircle {
+  margin: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-inline-end: 6px;
+  padding: 0;
+}
+.contextMenuGameOptions.contextMenuPlayButton
+  .SVGIcon_PlayInCircle
+  .playCircle {
+  fill: none;
+}
+.GamepadMode
+  .BasicUIContextMenu
+  .contextMenuVolumeSteamDeck.contextMenuVolumeSteamDeck {
+  box-sizing: border-box;
+  --gamepad-field-control-min-width: 0px;
+  width: 100%;
+  min-width: 0;
+  margin-top: 0;
+  padding: 8px 14px;
 }
 .contextMenuGameName {
   color: #cbdde4;
@@ -13804,13 +14129,11 @@ a.general_btn:hover {
 .ChatMessageInvite.GroupAlreadyJoined
   .ChatRoomGroupAvatar.Small
   .ChatRoomGroupAvatar_initials {
-  padding-top: 3px;
   font-size: 22px;
 }
 .ChatMessageInvite.Inviter
   .ChatRoomGroupAvatar.Small
   .ChatRoomGroupAvatar_initials {
-  padding-top: 4px;
   font-size: 20px;
 }
 .ChatRoomMultiFriendAvatar.Smaller {

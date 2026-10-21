@@ -4,271 +4,271 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [98620],
     {
-      54357: (N, L, t) => {
+      54357: (N, O, t) => {
         "use strict";
-        t.d(L, { B: () => m });
+        t.d(O, { B: () => m });
         var e = t(7850),
-          E = t(90626);
-        function j(p) {
-          const [D, i] = useState(!1);
+          h = t(90626);
+        function D(p) {
+          const [S, r] = useState(!1);
           return (
             useEffect(() => {
               window.SSR && (window.SSR.hydrated = !0),
-                startTransition(() => i(!0));
+                startTransition(() => r(!0));
             }, []),
-            jsx(a.Provider, { value: D, children: p.children })
+            jsx(o.Provider, { value: S, children: p.children })
           );
         }
-        const a = (0, E.createContext)(!1);
-        function M() {
+        const o = (0, h.createContext)(!1);
+        function j() {
           return !0;
         }
-        const T = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          C =
+        const y = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          x =
             "document" in globalThis
               ? document.cookie
                   .split(";")
                   .find((p) => p.trim().startsWith("timezoneName"))
                   ?.split("=")[1]
               : void 0,
-          B = C && decodeURIComponent(C);
+          L = x && decodeURIComponent(x);
         function m() {
-          return M() ? T : (B ?? T);
+          return j() ? y : (L ?? y);
         }
-        function o() {
+        function i() {
           "document" in globalThis &&
-            T &&
-            (document.cookie = `timezoneName=${T};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
+            y &&
+            (document.cookie = `timezoneName=${y};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
-        o();
+        i();
       },
-      16369: (N, L, t) => {
+      16369: (N, O, t) => {
         "use strict";
-        t.d(L, { H: () => j });
+        t.d(O, { H: () => D });
         var e = t(99412),
-          E = t(72609);
-        const j = () => (E.TS.EUNIVERSE === e.Rv ? 2581 : 45267781);
+          h = t(72609);
+        const D = () => (h.TS.EUNIVERSE === e.Rv ? 2581 : 45267781);
       },
-      69909: (N, L, t) => {
+      69909: (N, O, t) => {
         "use strict";
-        t.d(L, {
-          Lc: () => U,
-          Mr: () => R,
+        t.d(O, {
+          Lc: () => B,
+          Mr: () => U,
           Sk: () => b,
-          Ue: () => c,
-          _t: () => W,
-          ee: () => v,
-          hh: () => o,
-          mG: () => h,
-          my: () => D,
-          rF: () => S,
-          us: () => y,
+          Ue: () => T,
+          _t: () => w,
+          ee: () => E,
+          hh: () => i,
+          mG: () => _,
+          my: () => S,
+          rF: () => d,
+          us: () => C,
         });
         var e = t(16936),
-          E = t(54357),
-          j = t(80902),
-          a = t(16369),
-          M = t(36174),
-          T = t(65946),
-          C = t(92264),
-          B = t(87937),
-          m = t.n(B);
-        const o = "America/Los_Angeles";
-        function p(l, g) {
+          h = t(54357),
+          D = t(80902),
+          o = t(16369),
+          j = t(36174),
+          y = t(65946),
+          x = t(92264),
+          L = t(87937),
+          m = t.n(L);
+        const i = "America/Los_Angeles";
+        function p(n, v) {
           return {
-            queryKey: i(l, g),
-            queryFn: () => (0, e.t3)(g),
-            enabled: (0, a.H)() == l,
-            staleTime: M.Kp.PerMinute * 10,
+            queryKey: r(n, v),
+            queryFn: () => (0, e.t3)(v),
+            enabled: (0, o.H)() == n,
+            staleTime: j.Kp.PerMinute * 10,
           };
         }
-        function D(l, g) {
-          return (0, j.I)(p(l, g));
+        function S(n, v) {
+          return (0, D.I)(p(n, v));
         }
-        const i = (l, g) => ["useMeetSteamGetAvailability", l, g];
-        function O(l, g, I) {
+        const r = (n, v) => ["useMeetSteamGetAvailability", n, v];
+        function I(n, v, R) {
           return {
-            queryKey: P(l, g, I),
+            queryKey: A(n, v, R),
             queryFn: async () => {
-              const w = await (0, e.vd)(g);
-              return w ? JSON.parse(w) : {};
+              const W = await (0, e.vd)(v);
+              return W ? JSON.parse(W) : {};
             },
-            enabled: (0, a.H)() == l && !!I,
+            enabled: (0, o.H)() == n && !!R,
           };
         }
-        function h(l, g, I) {
-          return (0, j.I)(O(l, g, I));
+        function _(n, v, R) {
+          return (0, D.I)(I(n, v, R));
         }
-        const P = (l, g, I) => ["useMeetSteamGetRegistrationDetails", l, g, I];
-        function A(l) {
+        const A = (n, v, R) => ["useMeetSteamGetRegistrationDetails", n, v, R];
+        function P(n) {
           return {
-            queryKey: ["MeetSteamRegistrantInfo", l],
+            queryKey: ["MeetSteamRegistrantInfo", n],
             queryFn: () => (0, e.Nc)(),
-            enabled: !!l,
-            staleTime: M.Kp.PerMinute * 10,
+            enabled: !!n,
+            staleTime: j.Kp.PerMinute * 10,
           };
         }
-        function v(l) {
-          return (0, j.I)(A(l));
+        function E(n) {
+          return (0, D.I)(P(n));
         }
-        function x(l, g) {
+        function M(n, v) {
           return {
-            queryKey: ["useMeetSteamQRCode", l, g],
-            queryFn: () => (0, e.EI)(l, g),
-            enabled: !!g && !0,
-            staleTime: M.Kp.PerMinute * 10,
+            queryKey: ["useMeetSteamQRCode", n, v],
+            queryFn: () => (0, e.EI)(n, v),
+            enabled: !!v && !0,
+            staleTime: j.Kp.PerMinute * 10,
           };
         }
-        function U(l, g) {
-          return (0, j.I)(x(l, g)).data?.qrcode;
+        function B(n, v) {
+          return (0, D.I)(M(n, v)).data?.qrcode;
         }
-        function b(l, g = Intl.DateTimeFormat().resolvedOptions().timeZone) {
-          return l.location_type === "in_person"
-            ? (l.in_person_time_zone ?? o)
-            : g;
+        function b(n, v = Intl.DateTimeFormat().resolvedOptions().timeZone) {
+          return n.location_type === "in_person"
+            ? (n.in_person_time_zone ?? i)
+            : v;
         }
-        function W(l) {
-          const g = (0, E.B)();
-          return (0, T.q3)(() => ({
-            rtime_start: l.rtime_start,
-            rtime_end: l.rtime_end,
-            sDisplayTimeZone: b(l, g),
+        function w(n) {
+          const v = (0, h.B)();
+          return (0, y.q3)(() => ({
+            rtime_start: n.rtime_start,
+            rtime_end: n.rtime_end,
+            sDisplayTimeZone: b(n, v),
           }));
         }
-        function c(l, g) {
-          const I = m().unix(l),
-            F = m().unix(l).tz(g).utcOffset() - I.utcOffset();
-          return new Date((l + F * 60) * 1e3);
+        function T(n, v) {
+          const R = m().unix(n),
+            z = m().unix(n).tz(v).utcOffset() - R.utcOffset();
+          return new Date((n + z * 60) * 1e3);
         }
-        function S(l, g) {
-          const I = c(l, g),
-            w = new Date();
-          return I.getFullYear() == w.getFullYear()
-            ? (0, C.$w)(I)
-            : (0, C._9)(I);
+        function d(n, v) {
+          const R = T(n, v),
+            W = new Date();
+          return R.getFullYear() == W.getFullYear()
+            ? (0, x.$w)(R)
+            : (0, x._9)(R);
         }
-        function y(l, g) {
-          const I = m().unix(l),
-            F = m().unix(l).tz(g).utcOffset() - I.utcOffset();
-          return (0, C.KC)(l + F * 60);
+        function C(n, v) {
+          const R = m().unix(n),
+            z = m().unix(n).tz(v).utcOffset() - R.utcOffset();
+          return (0, x.KC)(n + z * 60);
         }
-        function R(l, g, I, w) {
-          const F = m().unix(l),
-            Q = m().unix(l).tz(I).utcOffset() - F.utcOffset(),
-            Z = m().unix(g),
-            de = m().unix(g).tz(I),
-            re = de.utcOffset() - Z.utcOffset();
+        function U(n, v, R, W) {
+          const z = m().unix(n),
+            J = m().unix(n).tz(R).utcOffset() - z.utcOffset(),
+            Q = m().unix(v),
+            de = m().unix(v).tz(R),
+            re = de.utcOffset() - Q.utcOffset();
           return (
-            (0, C.Vx)(l + Q * 60, g + re * 60, !0) +
-            (w ? "" : " " + de.format("z"))
+            (0, x.Vx)(n + J * 60, v + re * 60, !0) +
+            (W ? "" : " " + de.format("z"))
           );
         }
       },
-      16936: (N, L, t) => {
+      16936: (N, O, t) => {
         "use strict";
-        t.d(L, {
+        t.d(O, {
           t3: () => m,
-          EI: () => i,
-          Nc: () => D,
+          EI: () => r,
+          Nc: () => S,
           vd: () => p,
-          _V: () => o,
-          kR: () => O,
+          _V: () => i,
+          kR: () => I,
         });
         var e = t(72609);
-        const E = "meetsteam/availability",
-          j = "meetsteam/registrations",
-          a = "meetsteam/registrationdetails",
-          M = "meetsteam/updateregistration",
-          T = "meetsteam/registrantinfo",
-          C = "meetsteam/attendance_qrcode";
-        async function B(h, P) {
-          const A = new URL(e.TS.STORE_BASE_URL + h);
-          for (const [x, U] of Object.entries(P)) A.searchParams.set(x, U);
-          const v = await fetch(A, { credentials: "include" });
-          if (!v.ok) throw new Error(`${A} answered ${v.status}`);
-          return await v.json();
+        const h = "meetsteam/availability",
+          D = "meetsteam/registrations",
+          o = "meetsteam/registrationdetails",
+          j = "meetsteam/updateregistration",
+          y = "meetsteam/registrantinfo",
+          x = "meetsteam/attendance_qrcode";
+        async function L(_, A) {
+          const P = new URL(e.TS.STORE_BASE_URL + _);
+          for (const [M, B] of Object.entries(A)) P.searchParams.set(M, B);
+          const E = await fetch(P, { credentials: "include" });
+          if (!E.ok) throw new Error(`${P} answered ${E.status}`);
+          return await E.json();
         }
-        async function m(h) {
-          return (await B(E, { gid: h })).availability ?? [];
+        async function m(_) {
+          return (await L(h, { gid: _ })).availability ?? [];
         }
-        async function o(h) {
-          return (await B(j, { gid: h })).registrations ?? [];
+        async function i(_) {
+          return (await L(D, { gid: _ })).registrations ?? [];
         }
-        async function p(h) {
-          return (await B(a, { gid: h })).strJSONData ?? "";
+        async function p(_) {
+          return (await L(o, { gid: _ })).strJSONData ?? "";
         }
-        async function D() {
+        async function S() {
           return (
-            (await B(T, {})).info ?? { realname: "", email: "", partners: [] }
+            (await L(y, {})).info ?? { realname: "", email: "", partners: [] }
           );
         }
-        async function i(h, P) {
-          return await B(C, { gid: h, accountid: String(P) });
+        async function r(_, A) {
+          return await L(x, { gid: _, accountid: String(A) });
         }
-        async function O(h) {
-          const P = e.TS.STORE_BASE_URL + M,
-            A = new URLSearchParams({
-              gid: h.gid,
-              group_id: String(h.group_id),
-              session_id: String(h.session_id),
-              guest_count: String(h.guest_count),
-              jsondata: h.jsondata,
-              skip_email: h.skip_email ? "1" : "0",
+        async function I(_) {
+          const A = e.TS.STORE_BASE_URL + j,
+            P = new URLSearchParams({
+              gid: _.gid,
+              group_id: String(_.group_id),
+              session_id: String(_.session_id),
+              guest_count: String(_.guest_count),
+              jsondata: _.jsondata,
+              skip_email: _.skip_email ? "1" : "0",
             }),
-            v = await fetch(P, {
+            E = await fetch(A, {
               method: "POST",
               credentials: "include",
-              body: A,
+              body: P,
             });
-          if (!v.ok) throw new Error(`${P} answered ${v.status}`);
-          return (await v.json()).success;
+          if (!E.ok) throw new Error(`${A} answered ${E.status}`);
+          return (await E.json()).success;
         }
       },
-      24525: (N, L, t) => {
+      24525: (N, O, t) => {
         "use strict";
-        t.d(L, { $e: () => E, B7: () => a, Pe: () => x, Pv: () => j });
+        t.d(O, { $e: () => h, B7: () => o, Pe: () => M, Pv: () => D });
         const e = 0,
-          E = 1,
-          j = 2,
-          a = 4,
-          M = 8,
-          T = 16,
-          C = 32,
-          B = 64,
+          h = 1,
+          D = 2,
+          o = 4,
+          j = 8,
+          y = 16,
+          x = 32,
+          L = 64,
           m = 128,
-          o = 256,
+          i = 256,
           p = 512,
-          D = 1024,
-          i = 2048,
-          O = 4096,
-          h = 8192,
-          P = 16384,
-          A = 32768,
-          v = 65536,
-          x = 1073741824,
-          U = null;
+          S = 1024,
+          r = 2048,
+          I = 4096,
+          _ = 8192,
+          A = 16384,
+          P = 32768,
+          E = 65536,
+          M = 1073741824,
+          B = null;
       },
-      67529: (N, L, t) => {
+      67529: (N, O, t) => {
         "use strict";
-        t.d(L, { IU: () => m, by: () => o, sc: () => M });
+        t.d(O, { IU: () => m, by: () => i, sc: () => j });
         var e = t(3166),
-          E = t(35413),
-          j = t(71742),
-          a = t(24525);
-        const M = 0,
-          T = "061818254b2c99ac49e6626adb128ed1282a392f",
-          C = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
-          B = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
+          h = t(35413),
+          D = t(71742),
+          o = t(24525);
+        const j = 0,
+          y = "061818254b2c99ac49e6626adb128ed1282a392f",
+          x = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
+          L = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
           m = 120;
-        class o {
+        class i {
           m_unAppID;
           m_bInitialized = !1;
           m_strName;
           m_strIconURL;
           m_dtUpdatedFromServer;
           m_eAppType;
-          constructor(i) {
-            this.m_unAppID = i;
+          constructor(r) {
+            this.m_unAppID = r;
           }
           get appid() {
             return this.m_unAppID;
@@ -283,10 +283,10 @@
             return this.m_strName;
           }
           get icon_url_no_default() {
-            return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, T);
+            return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, y);
           }
           get icon_url() {
-            return this.BuildAppURL(this.m_strIconURL, T);
+            return this.BuildAppURL(this.m_strIconURL, y);
           }
           get time_updated_from_server() {
             return this.m_dtUpdatedFromServer;
@@ -295,46 +295,46 @@
             return this.m_eAppType;
           }
           BIsApplicationOrTool() {
-            return this.apptype == a.B7 || this.apptype == a.Pv;
+            return this.apptype == o.B7 || this.apptype == o.Pv;
           }
-          BuildAppURL(i, O) {
-            return i
+          BuildAppURL(r, I) {
+            return r
               ? e.TS.MEDIA_CDN_COMMUNITY_URL +
                   "images/apps/" +
                   this.appid +
                   "/" +
-                  i +
+                  r +
                   ".jpg"
-              : (0, E.t)(O);
+              : (0, h.t)(I);
           }
-          DeserializeFromMessage(i) {
+          DeserializeFromMessage(r) {
             (this.m_bInitialized = !0),
-              (this.m_strName = i.name()),
-              (this.m_strIconURL = i.icon()),
+              (this.m_strName = r.name()),
+              (this.m_strIconURL = r.icon()),
               (this.m_dtUpdatedFromServer = new Date()),
-              (this.m_eAppType = i.app_type());
+              (this.m_eAppType = r.app_type());
           }
-          DeserializeFromAppOverview(i) {
-            i.icon_hash() && i.app_type() != a.Pe
+          DeserializeFromAppOverview(r) {
+            r.icon_hash() && r.app_type() != o.Pe
               ? ((this.m_bInitialized = !0),
-                (this.m_strName = i.display_name()),
-                (this.m_strIconURL = i.icon_hash()),
+                (this.m_strName = r.display_name()),
+                (this.m_strIconURL = r.icon_hash()),
                 (this.m_dtUpdatedFromServer = new Date()),
-                (this.m_eAppType = i.app_type()))
+                (this.m_eAppType = r.app_type()))
               : (this.m_bInitialized = !1);
           }
-          DeserializeFromCacheObject(i) {
+          DeserializeFromCacheObject(r) {
             try {
-              (this.m_strName = i.strName),
-                (this.m_strIconURL = i.strIconURL),
-                (this.m_dtUpdatedFromServer = new Date(i.strUpdatedFromServer)),
-                (this.m_eAppType = i.eAppType),
+              (this.m_strName = r.strName),
+                (this.m_strIconURL = r.strIconURL),
+                (this.m_dtUpdatedFromServer = new Date(r.strUpdatedFromServer)),
+                (this.m_eAppType = r.eAppType),
                 (this.m_bInitialized = !0);
             } catch {}
           }
           SerializeToCacheObject() {
             return (
-              (0, j.wT)(
+              (0, D.wT)(
                 this.m_bInitialized,
                 "Attempting to serialize an uninitialized AppInfo object for caching!",
               ),
@@ -351,43 +351,43 @@
         }
         class p {}
       },
-      35413: (N, L, t) => {
+      35413: (N, O, t) => {
         "use strict";
-        t.d(L, { d: () => E, t: () => j });
+        t.d(O, { d: () => h, t: () => D });
         var e = t(3166);
-        const E = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-        function j(a, M) {
-          let T = ".jpg";
-          (!a || a === "0000000000000000000000000000000000000000") && (a = E),
-            a.length == 44 && ((T = a.substr(-4)), (a = a.substr(0, 40)));
-          let C = e.TS.AVATAR_BASE_URL;
+        const h = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+        function D(o, j) {
+          let y = ".jpg";
+          (!o || o === "0000000000000000000000000000000000000000") && (o = h),
+            o.length == 44 && ((y = o.substr(-4)), (o = o.substr(0, 40)));
+          let x = e.TS.AVATAR_BASE_URL;
           return (
-            C ||
-              ((C = e.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-              (C += a.substr(0, 2) + "/")),
-            (C += a),
-            M && M != "small" && (C += "_" + M),
-            (C += T),
-            C
+            x ||
+              ((x = e.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+              (x += o.substr(0, 2) + "/")),
+            (x += o),
+            j && j != "small" && (x += "_" + j),
+            (x += y),
+            x
           );
         }
       },
-      7582: (N, L, t) => {
+      7582: (N, O, t) => {
         "use strict";
-        t.d(L, { HD: () => B, f1: () => O, s4: () => h, sB: () => i });
+        t.d(O, { HD: () => L, f1: () => I, s4: () => _, sB: () => r });
         var e = t(19367),
-          E = t.n(e),
-          j = t(90626),
-          a = t(59432),
-          M = t(47689),
-          T = t(77291);
-        class C {
+          h = t.n(e),
+          D = t(90626),
+          o = t(59432),
+          j = t(47689),
+          y = t(77291);
+        class x {
           bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
-            return (0, a.mm)();
+            return (0, o.mm)();
           }
-          set nOverrideDateNow(A) {
-            (0, a.ai)(A);
+          set nOverrideDateNow(P) {
+            (0, o.ai)(P);
           }
           get bRequireAllEventsLoadedInTimeBlock() {
             return !1;
@@ -396,692 +396,695 @@
             return !0;
           }
           GetTimeNowWithOverride() {
-            return (0, a.Gw)();
+            return (0, o.Gw)();
           }
           GetTimeNowWithOverrideAsDate() {
-            return (0, a.Lk)();
+            return (0, o.Lk)();
           }
           BHasTimeOverride() {
-            return !!(0, a.mm)();
+            return !!(0, o.mm)();
           }
-          ParseDevOverrides(A) {
-            if (!A || A.length == 0) return;
-            new URLSearchParams(A[0] == "?" ? A.substring(1) : A).has("t");
+          ParseDevOverrides(P) {
+            if (!P || P.length == 0) return;
+            new URLSearchParams(P[0] == "?" ? P.substring(1) : P).has("t");
           }
         }
-        const B = new C();
-        (0, T.V)("g_EventCalendarDevFeatures", B);
-        function m(P = 1) {
-          const [A, v] = React.useState(() => D()),
-            x = useCancelTokenSource("useTimeNowWithOverride"),
-            U = React.useCallback(() => {
-              x.token.reason || v(D());
+        const L = new x();
+        (0, y.V)("g_EventCalendarDevFeatures", L);
+        function m(A = 1) {
+          const [P, E] = React.useState(() => S()),
+            M = useCancelTokenSource("useTimeNowWithOverride"),
+            B = React.useCallback(() => {
+              M.token.reason || E(S());
             }, []);
           return (
             React.useEffect(() => {
-              const b = 1e3 * P,
-                W = Date.now() % b,
-                c = b - W,
-                S = window.setTimeout(U, c);
+              const b = 1e3 * A,
+                w = Date.now() % b,
+                T = b - w,
+                d = window.setTimeout(B, T);
               return () => {
-                window.clearTimeout(S);
+                window.clearTimeout(d);
               };
-            }, [A, P, U]),
-            A
+            }, [P, A, B]),
+            P
           );
         }
         const p = Math.floor(new Date().getTime() / 1e3);
-        function D() {
-          const P = Math.floor(Date.now() / 1e3);
-          return B.nOverrideDateNow ? B.nOverrideDateNow + (P - p) : P;
+        function S() {
+          const A = Math.floor(Date.now() / 1e3);
+          return L.nOverrideDateNow ? L.nOverrideDateNow + (A - p) : A;
         }
-        function i() {
-          return B.nOverrideDateNow ?? p;
+        function r() {
+          return L.nOverrideDateNow ?? p;
         }
-        function O() {
-          return j.useMemo(() => i(), []);
+        function I() {
+          return D.useMemo(() => r(), []);
         }
-        function h() {
-          return j.useMemo(() => B.GetTimeNowWithOverrideAsDate(), []);
+        function _() {
+          return D.useMemo(() => L.GetTimeNowWithOverrideAsDate(), []);
         }
       },
-      54407: (N, L, t) => {
+      54407: (N, O, t) => {
         "use strict";
-        t.d(L, { B3: () => b, KM: () => P, KT: () => U });
+        t.d(O, { B3: () => w, KM: () => A, KT: () => b });
         var e = t(41735),
-          E = t.n(e),
-          j = t(58632),
-          a = t.n(j),
-          M = t(90626),
-          T = t(80902),
-          C = t(75233),
-          B = t(72604),
+          h = t.n(e),
+          D = t(58632),
+          o = t.n(D),
+          j = t(90626),
+          y = t(80902),
+          x = t(75233),
+          L = t(72604),
           m = t(76559),
-          o = t(34592),
+          i = t(34592),
           p = t(3166),
-          D = t(35038),
-          i = t(27386),
-          O = t(68312);
-        const h = "nicknames";
-        function P(c) {
-          const S = (0, O.KV)(),
-            { data: y, isLoading: R } = (0, T.I)({
-              queryKey: [h],
+          S = t(35038),
+          r = t(27386),
+          I = t(68312);
+        const _ = "nicknames";
+        function A(d) {
+          const C = (0, I.KV)(),
+            { data: U, isLoading: n } = (0, y.I)({
+              queryKey: [_],
               queryFn: async () => {
-                const l = new Map();
+                const v = new Map();
                 if (p.iA.logged_in) {
-                  const g = D.w.Init(i.w_T),
-                    w = (await i.xtC.GetNicknameList(S, g)).Body().toObject();
-                  w?.nicknames &&
-                    w.nicknames.length > 0 &&
-                    w.nicknames.forEach((F) => {
-                      F.accountid &&
-                        F.nickname &&
-                        l.set(F.accountid, F.nickname);
+                  const R = S.w.Init(r.w_T),
+                    z = (await r.xtC.GetNicknameList(C, R)).Body().toObject();
+                  z?.nicknames &&
+                    z.nicknames.length > 0 &&
+                    z.nicknames.forEach((Z) => {
+                      Z.accountid &&
+                        Z.nickname &&
+                        v.set(Z.accountid, Z.nickname);
                     });
                 }
-                return l;
+                return v;
               },
             });
-          return y ? y.get(c) : null;
+          return U ? U.get(d) : null;
         }
-        async function A(c) {
-          if (!c || c.length == 0) return [];
-          const S =
+        async function P(d) {
+          if (!d || d.length == 0) return [];
+          const C =
             (0, p.yK)() == "community"
               ? p.TS.COMMUNITY_BASE_URL
               : p.TS.STORE_BASE_URL;
-          if (c.length == 1) {
-            const y = { accountid: c[0], origin: self.origin },
-              R = await E().get(`${S}actions/ajaxgetavatarpersona`, {
-                params: y,
+          if (d.length == 1) {
+            const U = { accountid: d[0], origin: self.origin },
+              n = await h().get(`${C}actions/ajaxgetavatarpersona`, {
+                params: U,
               });
             if (
-              !R ||
-              R.status != 200 ||
-              R.data?.success != B.R ||
-              !R.data?.userinfo
+              !n ||
+              n.status != 200 ||
+              n.data?.success != L.R ||
+              !n.data?.userinfo
             )
-              throw `Load single avatar/persona failed ${((0, o.H))(R).strErrorMsg}`;
-            return [R.data.userinfo];
+              throw `Load single avatar/persona failed ${((0, i.H))(n).strErrorMsg}`;
+            return [n.data.userinfo];
           } else {
-            const y = { accountids: c.join(","), origin: self.origin },
-              R = await E().get(`${S}actions/ajaxgetmultiavatarpersona`, {
-                params: y,
+            const U = { accountids: d.join(","), origin: self.origin },
+              n = await h().get(`${C}actions/ajaxgetmultiavatarpersona`, {
+                params: U,
               });
             if (
-              !R ||
-              R.status != 200 ||
-              R.data?.success != B.R ||
-              !R.data?.userinfos
+              !n ||
+              n.status != 200 ||
+              n.data?.success != L.R ||
+              !n.data?.userinfos
             )
-              throw `Load single avatar/persona failed ${((0, o.H))(R).strErrorMsg}`;
-            const l = new Map();
+              throw `Load single avatar/persona failed ${((0, i.H))(n).strErrorMsg}`;
+            const v = new Map();
             return (
-              R.data.userinfos.forEach((g) =>
-                l.set(new m.b(g.steamid).GetAccountID(), g),
+              n.data.userinfos.forEach((R) =>
+                v.set(new m.b(R.steamid).GetAccountID(), R),
               ),
-              c.map((g) => l.get(g))
+              d.map((R) => v.get(R))
             );
           }
         }
-        const v = new (a())((c) => A(c), { cache: !1 }),
-          x = "avatarandpersonas";
-        function U(c) {
-          const { data: S, isLoading: y } = (0, T.I)({
-            queryKey: [x, c],
-            queryFn: () => v.load(c),
-          });
-          return [S, y];
+        const E = new (o())((d) => P(d), { cache: !1 }),
+          M = "avatarandpersonas";
+        function B(d) {
+          return [M, d];
         }
-        function b(c) {
-          const S = (0, C.jE)(),
-            { data: y, isLoading: R } = (0, T.I)({
-              queryKey: [x, c],
+        function b(d) {
+          const { data: C, isLoading: U } = (0, y.I)({
+            queryKey: B(d),
+            queryFn: () => E.load(d),
+          });
+          return [C, U];
+        }
+        function w(d) {
+          const C = (0, x.jE)(),
+            { data: U, isLoading: n } = (0, y.I)({
+              queryKey: [M, d],
               queryFn: async () => {
-                const g = await v.loadMany(c);
+                const R = await E.loadMany(d);
                 return (
-                  g.forEach((I) => {
-                    if (I instanceof Error) return;
-                    const w = [x, new m.b(I.steamid).GetAccountID()];
-                    S.setQueryData(w, I);
+                  R.forEach((W) => {
+                    if (W instanceof Error) return;
+                    const z = [M, new m.b(W.steamid).GetAccountID()];
+                    C.setQueryData(z, W);
                   }),
-                  g
+                  R
                 );
               },
-              enabled: c?.length > 0,
+              enabled: d?.length > 0,
             }),
-            l = (0, M.useMemo)(() => {
-              const g = new Array();
+            v = (0, j.useMemo)(() => {
+              const R = new Array();
               return (
-                y?.forEach((I) => {
-                  I instanceof Error || g.push(I);
+                U?.forEach((W) => {
+                  W instanceof Error || R.push(W);
                 }),
-                g
+                R
               );
-            }, [y]);
-          return R ? null : l;
+            }, [U]);
+          return n ? null : v;
         }
-        function W(c) {
-          return ReactQueryClient.getQueryData([x, c]);
+        function T(d) {
+          return ReactQueryClient.getQueryData([M, d]);
         }
       },
-      73191: (N, L, t) => {
+      73191: (N, O, t) => {
         "use strict";
-        t.d(L, { Hh: () => o, vs: () => B });
+        t.d(O, { Hh: () => i, vs: () => L });
         var e = t(7850),
-          E = t(90626),
-          j = t(96538),
-          a = t(56330),
-          M = t.n(a),
-          T = t(18210),
-          C = t(85599);
-        function B(p) {
-          const [D, i] = (0, E.useState)(() => !!p),
-            [O, h] = (0, E.useState)(!1),
-            [P, A] = (0, E.useState)(!1),
-            [v, x] = (0, E.useState)(null),
-            [U, b] = (0, E.useState)(null),
-            [W, c] = (0, E.useState)(null),
-            [S, y] = (0, E.useState)(null),
-            [R, l] = (0, E.useState)(null);
+          h = t(90626),
+          D = t(96538),
+          o = t(56330),
+          j = t.n(o),
+          y = t(18210),
+          x = t(85599);
+        function L(p) {
+          const [S, r] = (0, h.useState)(() => !!p),
+            [I, _] = (0, h.useState)(!1),
+            [A, P] = (0, h.useState)(!1),
+            [E, M] = (0, h.useState)(null),
+            [B, b] = (0, h.useState)(null),
+            [w, T] = (0, h.useState)(null),
+            [d, C] = (0, h.useState)(null),
+            [U, n] = (0, h.useState)(null);
           return {
-            bLoading: D,
-            bError: O,
-            bSuccess: P,
-            strError: v,
-            strSuccess: U,
-            elSuccess: S,
-            elError: W,
-            strThrobber: R,
-            fnSetLoading: i,
-            fnSetError: h,
-            fnSetSuccess: A,
-            fnSetStrError: x,
+            bLoading: S,
+            bError: I,
+            bSuccess: A,
+            strError: E,
+            strSuccess: B,
+            elSuccess: d,
+            elError: w,
+            strThrobber: U,
+            fnSetLoading: r,
+            fnSetError: _,
+            fnSetSuccess: P,
+            fnSetStrError: M,
             fnSetStrSuccess: b,
-            fnSetElSuccess: y,
-            fnSetElError: c,
-            fnSetThrobber: l,
+            fnSetElSuccess: C,
+            fnSetElError: T,
+            fnSetThrobber: n,
           };
         }
-        function m(p, D) {
-          D != k_EResultOK ? p.fnSetError(!0) : p.fnSetSuccess(!0);
+        function m(p, S) {
+          S != k_EResultOK ? p.fnSetError(!0) : p.fnSetSuccess(!0);
         }
-        function o(p) {
+        function i(p) {
           const {
-              strDialogTitle: D,
-              state: i,
-              closeModal: O,
-              strThrobber: h,
+              strDialogTitle: S,
+              state: r,
+              closeModal: I,
+              strThrobber: _,
             } = p,
             {
-              bLoading: P,
-              bError: A,
-              bSuccess: v,
-              strError: x,
-              strSuccess: U,
+              bLoading: A,
+              bError: P,
+              bSuccess: E,
+              strError: M,
+              strSuccess: B,
               elSuccess: b,
-              elError: W,
-              strThrobber: c,
-            } = i;
-          return A || x || W
-            ? (0, e.jsxs)(j.o0, {
-                strTitle: D,
+              elError: w,
+              strThrobber: T,
+            } = r;
+          return P || M || w
+            ? (0, e.jsxs)(D.o0, {
+                strTitle: S,
                 bAlertDialog: !0,
-                closeModal: O,
-                className: a.SuccessErrorDialog,
+                closeModal: I,
+                className: o.SuccessErrorDialog,
                 children: [
-                  !!x &&
+                  !!M &&
                     (0, e.jsx)("div", {
-                      className: a.ErrorStylesWithIcon,
+                      className: o.ErrorStylesWithIcon,
                       children:
-                        x || (0, T.we)("#Error_ErrorCommunicatingWithNetwork"),
+                        M || (0, y.we)("#Error_ErrorCommunicatingWithNetwork"),
                     }),
-                  !!W && W,
+                  !!w && w,
                 ],
               })
-            : v || U || b
-              ? (0, e.jsx)(j.o0, {
-                  strTitle: D,
-                  strDescription: U || (0, T.we)("#EventDisplay_Share_Success"),
+            : E || B || b
+              ? (0, e.jsx)(D.o0, {
+                  strTitle: S,
+                  strDescription: B || (0, y.we)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
-                  closeModal: O,
-                  className: a.SuccessErrorDialog,
+                  closeModal: I,
+                  className: o.SuccessErrorDialog,
                   children: (0, e.jsx)(e.Fragment, { children: !!b && b }),
                 })
-              : (0, e.jsx)(j.o0, {
-                  strTitle: D,
-                  className: a.SuccessErrorDialog,
+              : (0, e.jsx)(D.o0, {
+                  strTitle: S,
+                  className: o.SuccessErrorDialog,
                   bProgressDialog: !0,
                   closeModal: () => {},
-                  children: (0, e.jsx)(C.t, {
-                    string: h || c || (0, T.we)("#Loading"),
+                  children: (0, e.jsx)(x.t, {
+                    string: _ || T || (0, y.we)("#Loading"),
                     size: "medium",
                     position: "center",
                   }),
                 });
         }
       },
-      179: (N, L, t) => {
+      179: (N, O, t) => {
         "use strict";
-        t.d(L, {
-          Bm: () => a,
-          QD: () => T,
-          f3: () => j,
-          iV: () => B,
-          ip: () => C,
-          le: () => M,
+        t.d(O, {
+          Bm: () => o,
+          QD: () => y,
+          f3: () => D,
+          iV: () => L,
+          ip: () => x,
+          le: () => j,
         });
         var e = t(90626),
-          E = t(92757);
-        function j(m, o) {
+          h = t(92757);
+        function D(m, i) {
           let p;
           if (typeof m == "string") p = m;
           else if ("location" in m) p = m.location.search;
           else if ("search" in m) p = m.search;
           else return;
-          const D = new URLSearchParams(p.substring(1));
-          if (D.has(o)) {
-            const i = D.getAll(o);
-            return i[i.length - 1];
+          const S = new URLSearchParams(p.substring(1));
+          if (S.has(i)) {
+            const r = S.getAll(i);
+            return r[r.length - 1];
           }
         }
-        function a(m, o, p, D = !1) {
-          const i = new URLSearchParams(m.location.search.substring(1));
+        function o(m, i, p, S = !1) {
+          const r = new URLSearchParams(m.location.search.substring(1));
           if (p != null && p != null) {
-            if (i.get(o) == p) return;
-            i.set(o, p);
+            if (r.get(i) == p) return;
+            r.set(i, p);
           } else {
-            if (!i.has(o)) return;
-            i.delete(o);
+            if (!r.has(i)) return;
+            r.delete(i);
           }
-          D
-            ? m.replace(`?${i.toString()}`, { ...m.location.state })
-            : m.push(`?${i.toString()}`);
+          S
+            ? m.replace(`?${r.toString()}`, { ...m.location.state })
+            : m.push(`?${r.toString()}`);
         }
-        function M(m, o, p) {
-          a(m, o, p, !0);
+        function j(m, i, p) {
+          o(m, i, p, !0);
         }
-        function T(m, o) {
-          const p = (0, E.W6)(),
-            D = (0, E.zy)(),
-            i = (0, e.useMemo)(() => {
-              const h = j(D.search, m);
-              return h != null && h != null
-                ? o != null && o != null
-                  ? typeof o == "boolean"
-                    ? o.constructor(h !== "false")
-                    : o.constructor(h)
-                  : h
-                : o;
-            }, [D.search, m, o]),
-            O = (0, e.useCallback)(
-              (h, P = !1) => {
-                a(p, m, h != null && h != null ? String(h) : null, P);
+        function y(m, i) {
+          const p = (0, h.W6)(),
+            S = (0, h.zy)(),
+            r = (0, e.useMemo)(() => {
+              const _ = D(S.search, m);
+              return _ != null && _ != null
+                ? i != null && i != null
+                  ? typeof i == "boolean"
+                    ? i.constructor(_ !== "false")
+                    : i.constructor(_)
+                  : _
+                : i;
+            }, [S.search, m, i]),
+            I = (0, e.useCallback)(
+              (_, A = !1) => {
+                o(p, m, _ != null && _ != null ? String(_) : null, A);
               },
               [p, m],
             );
-          return [i, O];
+          return [r, I];
         }
-        function C(m, o, p = !1) {
-          const D = new URLSearchParams(m.location.search.substring(1));
-          for (const i in o)
-            if (o.hasOwnProperty(i)) {
-              const O = o[i];
-              D.delete(i), O != null && O != null && D.append(i, O);
+        function x(m, i, p = !1) {
+          const S = new URLSearchParams(m.location.search.substring(1));
+          for (const r in i)
+            if (i.hasOwnProperty(r)) {
+              const I = i[r];
+              S.delete(r), I != null && I != null && S.append(r, I);
             }
           p
-            ? m.replace(`?${D.toString()}`, { ...m.location.state })
-            : m.push(`?${D.toString()}`);
+            ? m.replace(`?${S.toString()}`, { ...m.location.state })
+            : m.push(`?${S.toString()}`);
         }
-        function B(m, o) {
-          C(m, o, !0);
+        function L(m, i) {
+          x(m, i, !0);
         }
       },
-      59490: (N, L, t) => {
+      59490: (N, O, t) => {
         "use strict";
-        t.d(L, { p: () => B });
+        t.d(O, { p: () => L });
         var e = t(7850),
-          E = t(90626),
-          j = t(76559),
-          a = t(54407),
-          M = t(15736),
-          T = t.n(M),
-          C = t(3166);
-        function B(m) {
+          h = t(90626),
+          D = t(76559),
+          o = t(54407),
+          j = t(15736),
+          y = t.n(j),
+          x = t(3166);
+        function L(m) {
           const {
-              accountID: o,
+              accountID: i,
               bHideWhenNotAvailable: p,
-              bHideName: D,
-              bLink: i = !0,
+              bHideName: S,
+              bLink: r = !0,
             } = m,
-            [O] = (0, a.KT)(o),
-            h = (0, a.KM)(o),
-            P = E.useMemo(() => j.b.InitFromAccountID(o), [o]),
-            A = `${C.TS.COMMUNITY_BASE_URL}profiles/${P.ConvertTo64BitString()}`,
-            v = i ? "a" : "span";
+            [I] = (0, o.KT)(i),
+            _ = (0, o.KM)(i),
+            A = h.useMemo(() => D.b.InitFromAccountID(i), [i]),
+            P = `${x.TS.COMMUNITY_BASE_URL}profiles/${A.ConvertTo64BitString()}`,
+            E = r ? "a" : "span";
           return (0, e.jsx)(e.Fragment, {
-            children: O
-              ? (0, e.jsxs)(v, {
-                  href: i ? A : void 0,
+            children: I
+              ? (0, e.jsxs)(E, {
+                  href: r ? P : void 0,
                   children: [
                     (0, e.jsx)("img", {
-                      className: M.SmallAvatar,
-                      src: O.avatar_url,
-                      "data-miniprofile": "s" + P.ConvertTo64BitString(),
+                      className: j.SmallAvatar,
+                      src: I.avatar_url,
+                      "data-miniprofile": "s" + A.ConvertTo64BitString(),
                     }),
-                    !D &&
+                    !S &&
                       (0, e.jsx)("span", {
-                        children: h
-                          ? `${h} (${O.persona_name})`
-                          : O.persona_name,
+                        children: _
+                          ? `${_} (${I.persona_name})`
+                          : I.persona_name,
                       }),
                   ],
                 })
               : (0, e.jsx)(e.Fragment, {
-                  children: !p && (0, e.jsx)("span", { children: o }),
+                  children: !p && (0, e.jsx)("span", { children: i }),
                 }),
           });
         }
       },
-      96538: (N, L, t) => {
+      96538: (N, O, t) => {
         "use strict";
-        t.d(L, {
-          mt: () => B,
-          o0: () => h.o0,
-          eV: () => P.eV,
-          KG: () => h.KG,
-          Ee: () => h.Ee,
-          x_: () => M.x_,
+        t.d(O, {
+          mt: () => L,
+          o0: () => _.o0,
+          eV: () => A.eV,
+          KG: () => _.KG,
+          Ee: () => _.Ee,
+          x_: () => j.x_,
           of: () => p,
-          pY: () => h.pY,
-          EN: () => a.E,
+          pY: () => _.pY,
+          EN: () => o.E,
         });
         var e = t(7850),
-          E = t(90626),
-          j = t(16412),
-          a = t(69168),
-          M = t(50731),
-          T = t(15568);
-        function C(v) {
-          const { labelledBy: x } = v || {},
-            [U, b] = E.useState(void 0),
-            W = E.useMemo(() => ({ setHeaderId: b }), []);
-          return { headerId: x || U, context: W };
+          h = t(90626),
+          D = t(16412),
+          o = t(69168),
+          j = t(50731),
+          y = t(15568);
+        function x(E) {
+          const { labelledBy: M } = E || {},
+            [B, b] = h.useState(void 0),
+            w = h.useMemo(() => ({ setHeaderId: b }), []);
+          return { headerId: M || B, context: w };
         }
-        function B(v) {
+        function L(E) {
           const {
-              active: x,
-              onDismiss: U,
+              active: M,
+              onDismiss: B,
               className: b,
-              modalClassName: W,
-              bGamepadUIScrollWithin: c,
-              children: S,
-              ...y
-            } = v,
-            { headerId: R, context: l } = C({
-              labelledBy: v["aria-labelledby"],
+              modalClassName: w,
+              bGamepadUIScrollWithin: T,
+              children: d,
+              ...C
+            } = E,
+            { headerId: U, context: n } = x({
+              labelledBy: E["aria-labelledby"],
             });
-          return (0, e.jsx)(j.t6.Provider, {
-            value: l,
-            children: (0, e.jsx)(a.E, {
-              active: x,
-              children: (0, e.jsx)(M.x_, {
-                onEscKeypress: U,
-                className: W,
-                bGamepadUIScrollWithin: c,
-                children: (0, e.jsx)(j.UC, {
+          return (0, e.jsx)(D.t6.Provider, {
+            value: n,
+            children: (0, e.jsx)(o.E, {
+              active: M,
+              children: (0, e.jsx)(j.x_, {
+                onEscKeypress: B,
+                className: w,
+                bGamepadUIScrollWithin: T,
+                children: (0, e.jsx)(D.UC, {
                   role: "dialog",
-                  "aria-labelledby": R,
+                  "aria-labelledby": U,
                   className: b,
-                  ...y,
-                  children: S,
+                  ...C,
+                  children: d,
                 }),
               }),
             }),
           });
         }
-        function m(v) {
+        function m(E) {
           const {
-              onDismiss: x,
-              className: U,
+              onDismiss: M,
+              className: B,
               modalClassName: b,
-              bGamepadUIScrollWithin: W,
-              children: c,
-              ...S
-            } = v,
-            { headerId: y, context: R } = C();
+              bGamepadUIScrollWithin: w,
+              children: T,
+              ...d
+            } = E,
+            { headerId: C, context: U } = x();
           return jsx(Dialog.DialogStructureContext.Provider, {
-            value: R,
+            value: U,
             children: jsx(PopupWindow, {
-              ...S,
-              onDismiss: x,
+              ...d,
+              onDismiss: M,
               children: jsx(ModalPosition, {
-                onEscKeypress: x,
+                onEscKeypress: M,
                 className: b,
-                bGamepadUIScrollWithin: W,
+                bGamepadUIScrollWithin: w,
                 children: jsx(Dialog.Content, {
                   role: "dialog",
-                  "aria-labelledby": y,
-                  "aria-label": S.strTitle,
-                  className: U,
-                  children: c,
+                  "aria-labelledby": C,
+                  "aria-label": d.strTitle,
+                  className: B,
+                  children: T,
                 }),
               }),
             }),
           });
         }
-        const o = (v) => m({ modal: !0, ...v });
-        function p(v) {
-          const { className: x, children: U } = v;
-          return (0, e.jsx)(a.E, {
+        const i = (E) => m({ modal: !0, ...E });
+        function p(E) {
+          const { className: M, children: B } = E;
+          return (0, e.jsx)(o.E, {
             active: !0,
-            children: (0, e.jsx)("div", { className: x, children: U }),
+            children: (0, e.jsx)("div", { className: M, children: B }),
           });
         }
-        var D = t(30343);
-        function i(v) {
-          const x = React.useMemo(() => O(), []);
-          return jsx(DialogOverlay, { ...v, DialogWrapper: x });
+        var S = t(30343);
+        function r(E) {
+          const M = React.useMemo(() => I(), []);
+          return jsx(DialogOverlay, { ...E, DialogWrapper: M });
         }
-        function O() {
-          return function (x) {
-            const { className: U, active: b, children: W, modalKey: c } = x,
-              S = React.useRef(void 0);
+        function I() {
+          return function (M) {
+            const { className: B, active: b, children: w, modalKey: T } = M,
+              d = React.useRef(void 0);
             return (
-              useActivateNavTree(S, b, !0),
+              useActivateNavTree(d, b, !0),
               jsx(FocusNavigationRoot, {
-                className: U,
-                navTreeRef: S,
+                className: B,
+                navTreeRef: d,
                 modal: !0,
                 enabled: b,
-                navID: `ModalDialogOverlay_${c}`,
-                children: W,
+                navID: `ModalDialogOverlay_${T}`,
+                children: w,
               })
             );
           };
         }
-        var h = t(1880),
-          P = t(90506),
-          A = t(47515);
+        var _ = t(1880),
+          A = t(90506),
+          P = t(47515);
       },
-      15568: (N, L, t) => {
+      15568: (N, O, t) => {
         "use strict";
-        t.d(L, { wA: () => v });
+        t.d(O, { wA: () => E });
         var e = t(7850),
-          E = t(1418),
-          j = t(2259),
-          a = t(90626),
-          M = t(72739),
-          T = t(71568),
-          C = t(9705),
-          B = t(34360),
+          h = t(1418),
+          D = t(2259),
+          o = t(90626),
+          j = t(72739),
+          y = t(71568),
+          x = t(9705),
+          L = t(34360),
           m = t(31032),
-          o = t(69168),
+          i = t(69168),
           p = t(83203),
-          D = t(44930),
-          i = t(36707),
-          O = t(25091);
-        function h(c) {
-          const { popup: S, className: y, ...R } = c,
-            l = (0, O.GD)(S),
-            g = a.useRef(null);
+          S = t(44930),
+          r = t(36707),
+          I = t(25091);
+        function _(T) {
+          const { popup: d, className: C, ...U } = T,
+            n = (0, I.GD)(d),
+            v = o.useRef(null);
           return (
-            a.useEffect(() => {
-              const I = g.current;
-              if (I && (0, D.Fj)(S, "Window.SetResizeGrip")) {
-                let w = 0,
-                  F = 0;
-                const q = I.getBoundingClientRect(),
-                  Q = I.ownerDocument.defaultView;
-                q &&
-                  Q &&
-                  !l &&
-                  ((w = Math.ceil(Q.innerWidth - q.left)),
-                  (F = Math.ceil(Q.innerHeight - q.top))),
-                  S.SteamClient.Window.SetResizeGrip(w, F);
+            o.useEffect(() => {
+              const R = v.current;
+              if (R && (0, S.Fj)(d, "Window.SetResizeGrip")) {
+                let W = 0,
+                  z = 0;
+                const Z = R.getBoundingClientRect(),
+                  J = R.ownerDocument.defaultView;
+                Z &&
+                  J &&
+                  !n &&
+                  ((W = Math.ceil(J.innerWidth - Z.left)),
+                  (z = Math.ceil(J.innerHeight - Z.top))),
+                  d.SteamClient.Window.SetResizeGrip(W, z);
               }
               return () => {
-                (0, D.Fj)(S, "Window.SetResizeGrip") &&
-                  S.SteamClient.Window.SetResizeGrip(0, 0);
+                (0, S.Fj)(d, "Window.SetResizeGrip") &&
+                  d.SteamClient.Window.SetResizeGrip(0, 0);
               };
-            }, [S, l]),
-            l
+            }, [d, n]),
+            n
               ? null
               : (0, e.jsx)("div", {
-                  className: (0, i.A)("window_resize_grip", y),
-                  ref: g,
-                  ...R,
+                  className: (0, r.A)("window_resize_grip", C),
+                  ref: v,
+                  ...U,
                 })
           );
         }
-        var P = t(30096),
-          A = t(3166);
-        const v = (c) => x({ modal: !0, ...c });
-        function x(c) {
-          const S = (0, T.R7)().ownerWindow,
-            y = (0, A.Qn)(),
-            [R, l] = a.useState(() =>
-              y ||
-              (c.onlyPopoutIfNeeded === !0 &&
-                c.popupHeight < S.innerHeight * 0.9 &&
-                c.popupWidth < S.innerWidth * 0.9 &&
-                S.document.visibilityState == "visible")
+        var A = t(30096),
+          P = t(3166);
+        const E = (T) => M({ modal: !0, ...T });
+        function M(T) {
+          const d = (0, y.R7)().ownerWindow,
+            C = (0, P.Qn)(),
+            [U, n] = o.useState(() =>
+              C ||
+              (T.onlyPopoutIfNeeded === !0 &&
+                T.popupHeight < d.innerHeight * 0.9 &&
+                T.popupWidth < d.innerWidth * 0.9 &&
+                d.document.visibilityState == "visible")
                 ? "inline"
                 : "popout",
             );
-          return R === "inline"
-            ? (0, e.jsx)(o.E, { active: !0, children: c.children })
-            : R === "popout"
-              ? (0, e.jsx)(b, { ...c })
+          return U === "inline"
+            ? (0, e.jsx)(i.E, { active: !0, children: T.children })
+            : U === "popout"
+              ? (0, e.jsx)(b, { ...T })
               : null;
         }
-        function U(c) {
+        function B(T) {
           const {
-              popup: S,
-              children: y,
-              bFitToContent: R,
-              className: l,
-              ...g
-            } = c,
-            I = a.useCallback(
-              (F) => {
-                const q = Math.ceil(F.borderBoxSize[0].inlineSize),
-                  Q = Math.ceil(F.borderBoxSize[0].blockSize);
-                S?.SteamClient.Window.ResizeTo(q, Q, !0);
+              popup: d,
+              children: C,
+              bFitToContent: U,
+              className: n,
+              ...v
+            } = T,
+            R = o.useCallback(
+              (z) => {
+                const Z = Math.ceil(z.borderBoxSize[0].inlineSize),
+                  J = Math.ceil(z.borderBoxSize[0].blockSize);
+                d?.SteamClient.Window.ResizeTo(Z, J, !0);
               },
-              [S],
+              [d],
             ),
-            w = (0, j.wY)(I);
+            W = (0, D.wY)(R);
           return (0, e.jsx)("div", {
-            className: (0, i.A)("PopupFullWindow", R && "FitToContent", l),
-            ref: R ? w : void 0,
-            ...g,
-            children: y,
+            className: (0, r.A)("PopupFullWindow", U && "FitToContent", n),
+            ref: U ? W : void 0,
+            ...v,
+            children: C,
           });
         }
-        function b(c) {
+        function b(T) {
           const {
-              strName: S,
-              strTitle: y,
-              popupWidth: R,
-              popupHeight: l,
-              browserType: g,
-              onDismiss: I,
-              bFitToContent: w,
-              refPopup: F,
-              children: q,
-              titleBarClassName: Q,
-              saveDimensionsKey: Z,
-            } = c,
-            re = (0, T.R7)()?.ownerWindow,
+              strName: d,
+              strTitle: C,
+              popupWidth: U,
+              popupHeight: n,
+              browserType: v,
+              onDismiss: R,
+              bFitToContent: W,
+              refPopup: z,
+              children: Z,
+              titleBarClassName: J,
+              saveDimensionsKey: Q,
+            } = T,
+            re = (0, y.R7)()?.ownerWindow,
             le = (0, m.yk)(),
-            ge = { ...(0, C.h3)(Z), onClose: I };
+            _e = { ...(0, x.h3)(Q), onClose: R };
           let ee = 0;
-          c.resizable && (ee |= T.Wf.Resizable),
-            (c.minWidth || c.minHeight) &&
-              (ee |= T.Wf.ApplyBrowserScaleToDimensions),
-            c.fullscreen && (ee |= T.Wf.FullScreen);
-          const he = "PopupWindow_" + (S ? `${S}_` : "") + a.useId(),
-            { popup: $, element: fe } = (0, C.OJ)(
+          T.resizable && (ee |= y.Wf.Resizable),
+            (T.minWidth || T.minHeight) &&
+              (ee |= y.Wf.ApplyBrowserScaleToDimensions),
+            T.fullscreen && (ee |= y.Wf.FullScreen);
+          const he = "PopupWindow_" + (d ? `${d}_` : "") + o.useId(),
+            { popup: X, element: fe } = (0, x.OJ)(
               he,
               {
-                title: y,
-                dimensions: { width: R, height: l },
+                title: C,
+                dimensions: { width: U, height: n },
                 html_class: "client_chat_frame fullheight ModalDialogPopup",
                 body_class: "fullheight ModalDialogBody",
                 popup_class: "fullheight",
-                browserType: g,
-                minWidth: c.minWidth,
-                minHeight: c.minHeight,
+                browserType: v,
+                minWidth: T.minWidth,
+                minHeight: T.minHeight,
                 replace_existing_popup: !0,
                 center_on_window: le?.BCenterPopupsOnWindow() ? re : void 0,
                 eCreationFlags: ee,
                 target_browser: le?.GetBrowserInfo(),
               },
-              ge,
+              _e,
             );
           if (
-            (a.useEffect(
-              () => ((0, P.cZ)(F, $), () => (0, P.cZ)(F, void 0)),
-              [F, $],
+            (o.useEffect(
+              () => ((0, A.cZ)(z, X), () => (0, A.cZ)(z, void 0)),
+              [z, X],
             ),
-            a.useEffect(() => {
-              $ && ($.document.title = y ?? S);
-            }, [$, y, S]),
+            o.useEffect(() => {
+              X && (X.document.title = C ?? d);
+            }, [X, C, d]),
             !fe)
           )
             return null;
-          const se = c.modal ?? c.onlyPopoutIfNeeded,
-            _e = !c.resizable;
+          const se = T.modal ?? T.onlyPopoutIfNeeded,
+            ge = !T.resizable;
           return (0, e.jsxs)(e.Fragment, {
             children: [
-              se && (0, e.jsx)(W, { popup: $ }),
-              M.createPortal(
-                (0, e.jsx)(T.kc, {
-                  ownerWindow: $,
-                  children: (0, e.jsxs)(E.Y, {
+              se && (0, e.jsx)(w, { popup: X }),
+              j.createPortal(
+                (0, e.jsx)(y.kc, {
+                  ownerWindow: X,
+                  children: (0, e.jsxs)(h.Y, {
                     children: [
-                      (0, e.jsxs)(U, {
-                        popup: $,
-                        bFitToContent: w,
-                        onContextMenu: B.aE,
+                      (0, e.jsxs)(B, {
+                        popup: X,
+                        bFitToContent: W,
+                        onContextMenu: L.aE,
                         children: [
                           (0, e.jsx)(p.c, {
-                            className: Q,
-                            hideMin: _e,
-                            hideMax: _e,
-                            popup: $,
-                            hideActions: !I,
+                            className: J,
+                            hideMin: ge,
+                            hideMax: ge,
+                            popup: X,
+                            hideActions: !R,
                           }),
                           (0, e.jsx)(m.EO, {
                             bCenterPopupsOnWindow: le?.BCenterPopupsOnWindow(),
                             browserInfo: le?.GetBrowserInfo(),
-                            children: q,
+                            children: Z,
                           }),
                         ],
                       }),
-                      c.resizable && !w && (0, e.jsx)(h, { popup: $ }),
+                      T.resizable && !W && (0, e.jsx)(_, { popup: X }),
                     ],
                   }),
                 }),
@@ -1090,14 +1093,14 @@
             ],
           });
         }
-        function W(c) {
-          const { popup: S } = c,
-            y = a.useCallback(() => {
-              S?.SteamClient.Window.BringToFront();
-            }, [S]);
+        function w(T) {
+          const { popup: d } = T,
+            C = o.useCallback(() => {
+              d?.SteamClient.Window.BringToFront();
+            }, [d]);
           return (
-            a.useEffect(y, [y]),
-            (0, e.jsx)(o.E, {
+            o.useEffect(C, [C]),
+            (0, e.jsx)(i.E, {
               active: !0,
               children: (0, e.jsx)("div", {
                 style: {
@@ -1107,277 +1110,277 @@
                   right: 0,
                   bottom: 0,
                 },
-                onClick: y,
+                onClick: C,
               }),
             })
           );
         }
       },
-      12932: (N, L, t) => {
+      12932: (N, O, t) => {
         "use strict";
-        t.d(L, { qx: () => h });
+        t.d(O, { qx: () => _ });
         var e = t(7850),
-          E = t(16412),
-          j = t(18210),
-          a = t(36118),
-          M = t(90626),
-          T = t(36707),
-          C = t(95695),
-          B = t.n(C),
+          h = t(16412),
+          D = t(18210),
+          o = t(36118),
+          j = t(90626),
+          y = t(36707),
+          x = t(95695),
+          L = t.n(x),
           m = t(25792),
-          o = t(64734),
-          p = t.n(o),
-          D = t(65946),
-          i = t(11243);
-        function O(A) {
+          i = t(64734),
+          p = t.n(i),
+          S = t(65946),
+          r = t(11243);
+        function I(P) {
           const {
-              title: v,
-              tooltip: x,
-              getMinimized: U,
+              title: E,
+              tooltip: M,
+              getMinimized: B,
               toggleMinimized: b,
-              className: W,
-              children: c,
-              elAdditionalButtons: S,
-            } = A,
-            y = (0, D.q3)(() => U());
+              className: w,
+              children: T,
+              elAdditionalButtons: d,
+            } = P,
+            C = (0, S.q3)(() => B());
           return (0, e.jsxs)(e.Fragment, {
             children: [
               (0, e.jsxs)("div", {
-                className: (0, T.A)(
-                  W,
-                  o.SectionTitleHeader,
-                  o.required_title,
+                className: (0, y.A)(
+                  w,
+                  i.SectionTitleHeader,
+                  i.required_title,
                   "SectionTitleHeader",
                 ),
                 children: [
                   (0, e.jsxs)("div", {
-                    className: (0, T.A)(
-                      C.CollapsableSectionTitle,
+                    className: (0, y.A)(
+                      x.CollapsableSectionTitle,
                       "EventEditorTextTitle",
                     ),
-                    children: [v, !!x && (0, e.jsx)(i.o, { tooltip: x })],
+                    children: [E, !!M && (0, e.jsx)(r.o, { tooltip: M })],
                   }),
                   (0, e.jsxs)("div", {
-                    className: o.SectionTitleButtons,
+                    className: i.SectionTitleButtons,
                     children: [
-                      S,
-                      (0, e.jsx)(P, { bIsMinimized: y, fnToggleMinimize: b }),
+                      d,
+                      (0, e.jsx)(A, { bIsMinimized: C, fnToggleMinimize: b }),
                     ],
                   }),
                 ],
               }),
-              !y && (0, e.jsx)(m.tH, { children: c }),
+              !C && (0, e.jsx)(m.tH, { children: T }),
             ],
           });
         }
-        function h(A) {
-          const [v, x] = M.useState(!!A.bStartMinimized);
-          return (0, e.jsx)(O, {
-            ...A,
-            getMinimized: () => v,
-            toggleMinimized: () => x(!v),
-            children: A.children,
+        function _(P) {
+          const [E, M] = j.useState(!!P.bStartMinimized);
+          return (0, e.jsx)(I, {
+            ...P,
+            getMinimized: () => E,
+            toggleMinimized: () => M(!E),
+            children: P.children,
           });
         }
-        function P(A) {
-          const { bIsMinimized: v, fnToggleMinimize: x } = A,
-            U = v ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-          return (0, e.jsx)(E.$n, {
-            "data-tooltip-text": (0, j.we)(U),
-            onClick: x,
-            children: A.bIsMinimized
-              ? (0, e.jsx)(a.hz4, {})
-              : (0, e.jsx)(a.Xjb, {}),
+        function A(P) {
+          const { bIsMinimized: E, fnToggleMinimize: M } = P,
+            B = E ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+          return (0, e.jsx)(h.$n, {
+            "data-tooltip-text": (0, D.we)(B),
+            onClick: M,
+            children: P.bIsMinimized
+              ? (0, e.jsx)(o.hz4, {})
+              : (0, e.jsx)(o.Xjb, {}),
           });
         }
       },
-      47689: (N, L, t) => {
+      47689: (N, O, t) => {
         "use strict";
-        t.d(L, { m: () => a });
+        t.d(O, { m: () => o });
         var e = t(41735),
-          E = t.n(e),
-          j = t(90626);
-        function a(M) {
-          const T = j.useRef(E().CancelToken.source());
+          h = t.n(e),
+          D = t(90626);
+        function o(j) {
+          const y = D.useRef(h().CancelToken.source());
           return (
-            j.useEffect(() => {
-              const C = T.current;
-              return () => C.cancel(M ? `${M}: unmounting` : "unmounting");
-            }, [M]),
-            T.current
+            D.useEffect(() => {
+              const x = y.current;
+              return () => x.cancel(j ? `${j}: unmounting` : "unmounting");
+            }, [j]),
+            y.current
           );
         }
       },
-      27628: (N, L, t) => {
+      27628: (N, O, t) => {
         "use strict";
-        t.r(L), t.d(L, { MeetSteamRoutes: () => Ee, default: () => We });
+        t.r(O), t.d(O, { MeetSteamRoutes: () => Ee, default: () => We });
         var e = t(7850),
-          E = t(58732),
-          j = t(92757),
-          a = t(25792),
-          M = t(99412),
-          T = t(72604),
-          C = t(51614),
-          B = t(41735),
-          m = t.n(B),
-          o = t(90626),
+          h = t(58732),
+          D = t(92757),
+          o = t(25792),
+          j = t(99412),
+          y = t(72604),
+          x = t(51614),
+          L = t(41735),
+          m = t.n(L),
+          i = t(90626),
           p = t(69909),
-          D = t(7582),
-          i = t(98609),
-          O = t(67705);
-        function h(_, s, n, u) {
-          return (0, C.n)({
-            mutationFn: async ({ bIncludeSelf: d, rgGuests: r }) => {
+          S = t(7582),
+          r = t(98609),
+          I = t(67705);
+        function _(g, s, a, u) {
+          return (0, x.n)({
+            mutationFn: async ({ bIncludeSelf: c, rgGuests: l }) => {
               const f = new FormData();
-              f.append("sessionid", (0, O.KC)()),
-                f.append("gid", _),
+              f.append("sessionid", (0, I.KC)()),
+                f.append("gid", g),
                 f.append("accountid", "" + s),
-                f.append("meetsteam_group_id", "" + n),
+                f.append("meetsteam_group_id", "" + a),
                 f.append("meetsteam_session_id", "" + u),
-                f.append("include_self", "" + (d ? 1 : 0)),
-                r?.length && f.append("guests", r.join("|"));
-              const z = `${i.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
+                f.append("include_self", "" + (c ? 1 : 0)),
+                l?.length && f.append("guests", l.join("|"));
+              const K = `${r.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`;
               return (
-                (await m().post(z, f, { withCredentials: !0 }))?.data
-                  ?.success == T.R
+                (await m().post(K, f, { withCredentials: !0 }))?.data
+                  ?.success == y.R
               );
             },
           });
         }
-        function P(_, s, n) {
-          return (0, C.n)({
+        function A(g, s, a) {
+          return (0, x.n)({
             mutationFn: async ({ nCapacity: u }) => {
-              const d = new FormData();
-              d.append("sessionid", (0, O.KC)()),
-                d.append("gid", _),
-                d.append("meetsteam_group_id", "" + s),
-                d.append("meetsteam_session_id", "" + n),
-                d.append("capacity", "" + u);
-              const r = `${i.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
+              const c = new FormData();
+              c.append("sessionid", (0, I.KC)()),
+                c.append("gid", g),
+                c.append("meetsteam_group_id", "" + s),
+                c.append("meetsteam_session_id", "" + a),
+                c.append("capacity", "" + u);
+              const l = `${r.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`;
               return (
-                (await m().post(r, d, { withCredentials: !0 }))?.data
-                  ?.success == T.R
+                (await m().post(l, c, { withCredentials: !0 }))?.data
+                  ?.success == y.R
               );
             },
           });
         }
-        function A(_) {
-          return _.reduce(
-            (s, n) => (
-              s[n.relativeToToday] || (s[n.relativeToToday] = []),
-              s[n.relativeToToday].push(n),
+        function P(g) {
+          return g.reduce(
+            (s, a) => (
+              s[a.relativeToToday] || (s[a.relativeToToday] = []),
+              s[a.relativeToToday].push(a),
               s
             ),
             { today: [], past: [], future: [] },
           );
         }
-        function v(_, s, n) {
-          for (const u of _)
+        function E(g, s, a) {
+          for (const u of g)
             if (u.group_id === s) {
-              const d = u.sessions.find((r) => r.id === n);
-              if (d) return { group: u, session: d };
+              const c = u.sessions.find((l) => l.id === a);
+              if (c) return { group: u, session: c };
             }
           return { group: null, session: null };
         }
-        function x(_, s) {
-          const n = (0, D.f1)(),
-            [u] = (0, o.useState)(() =>
-              (0, O.Tc)("registrations", "application_config")
-                .map((r) => ((r.userReg = JSON.parse(r.jsondata)), r))
-                .sort((r, f) => {
-                  const z = v(
-                    _.jsondata.meet_steam_groups,
-                    r.group_id,
-                    r.session_id,
+        function M(g, s) {
+          const a = (0, S.f1)(),
+            [u] = (0, i.useState)(() =>
+              (0, I.Tc)("registrations", "application_config")
+                .map((l) => ((l.userReg = JSON.parse(l.jsondata)), l))
+                .sort((l, f) => {
+                  const K = E(
+                    g.jsondata.meet_steam_groups,
+                    l.group_id,
+                    l.session_id,
                   );
                   return (
-                    (v(_.jsondata.meet_steam_groups, f.group_id, f.session_id)
+                    (E(g.jsondata.meet_steam_groups, f.group_id, f.session_id)
                       ?.session?.rtime_start || 0) -
-                    (z?.session?.rtime_start || 0)
+                    (K?.session?.rtime_start || 0)
                   );
                 })
-                .map((r) => {
-                  const f = v(
-                    _.jsondata.meet_steam_groups,
-                    r.group_id,
-                    r.session_id,
+                .map((l) => {
+                  const f = E(
+                    g.jsondata.meet_steam_groups,
+                    l.group_id,
+                    l.session_id,
                   );
                   return (
-                    (r.relativeToToday = b(f?.session, n)),
-                    (r.rtSesssionTime = f?.session?.rtime_start ?? 0),
-                    r
+                    (l.relativeToToday = b(f?.session, a)),
+                    (l.rtSesssionTime = f?.session?.rtime_start ?? 0),
+                    l
                   );
                 }),
             ),
-            d = s?.trim().toLowerCase() || "";
-          return (0, o.useMemo)(
+            c = s?.trim().toLowerCase() || "";
+          return (0, i.useMemo)(
             () =>
               u.filter(
-                (r) =>
-                  !d.length ||
-                  r.userReg.name?.toLowerCase().includes(d) ||
-                  r.userReg.company?.toLowerCase().includes(d) ||
-                  r.userReg.guest_names?.find((f) =>
-                    f.toLowerCase().includes(d),
+                (l) =>
+                  !c.length ||
+                  l.userReg.name?.toLowerCase().includes(c) ||
+                  l.userReg.company?.toLowerCase().includes(c) ||
+                  l.userReg.guest_names?.find((f) =>
+                    f.toLowerCase().includes(c),
                   ) ||
-                  r.userReg.email_override?.toLowerCase().includes(d),
+                  l.userReg.email_override?.toLowerCase().includes(c),
               ),
             [u, s],
           );
         }
-        function U(_, s) {
-          return (0, o.useMemo)(() => A(_), [_, s]);
+        function B(g, s) {
+          return (0, i.useMemo)(() => P(g), [g, s]);
         }
-        function b(_, s) {
-          if (!_) return "past";
-          const n = (0, p.Sk)(_),
-            u = (0, p.Ue)(_.rtime_start, n),
-            d = s !== void 0 ? new Date(s * 1e3) : new Date(),
-            r = new Date(d.getFullYear(), d.getMonth(), d.getDate()),
-            f = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1);
-          return u >= r && u < f ? "today" : u < r ? "past" : "future";
+        function b(g, s) {
+          if (!g) return "past";
+          const a = (0, p.Sk)(g),
+            u = (0, p.Ue)(g.rtime_start, a),
+            c = s !== void 0 ? new Date(s * 1e3) : new Date(),
+            l = new Date(c.getFullYear(), c.getMonth(), c.getDate()),
+            f = new Date(c.getFullYear(), c.getMonth(), c.getDate() + 1);
+          return u >= l && u < f ? "today" : u < l ? "past" : "future";
         }
-        var W = t(48421),
-          c = t(54407),
-          S = t(36118),
-          y = t(16412),
-          R = t(73191),
-          l = t(179),
-          g = t(59490),
-          I = t(1880),
-          w = t(69168),
-          F = t(85599),
-          q = t(12932),
-          Q = t(36707),
-          Z = t(18210),
+        var w = t(48421),
+          T = t(54407),
+          d = t(36118),
+          C = t(16412),
+          U = t(73191),
+          n = t(179),
+          v = t(59490),
+          R = t(1880),
+          W = t(69168),
+          z = t(85599),
+          Z = t(12932),
+          J = t(36707),
+          Q = t(18210),
           de = t(92264),
           re = t(30096),
           le = t(15588),
           V = t.n(le),
-          ge = t(40313),
-          ee = t.n(ge),
+          _e = t(40313),
+          ee = t.n(_e),
           he = t(20117);
-        function $(_) {
-          const [s] = (0, l.QD)("gid"),
-            n = (0, W.RR)(s),
-            u = (0, M.sfN)(i.TS.LANGUAGE),
-            d = (0, o.useCallback)(
+        function X(g) {
+          const [s] = (0, n.QD)("gid"),
+            a = (0, w.RR)(s),
+            u = (0, j.sfN)(r.TS.LANGUAGE),
+            c = (0, i.useCallback)(
               () =>
                 window.location.assign(
-                  `${i.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${s}`,
+                  `${r.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${s}`,
                 ),
               [s],
             );
-          return n
+          return a
             ? (0, e.jsxs)("div", {
                 className: V().Ctn,
                 children: [
                   (0, e.jsxs)("div", {
                     className: V().EventName,
                     children: [
-                      (0, e.jsx)("h2", { children: n.GetNameWithFallback(u) }),
+                      (0, e.jsx)("h2", { children: a.GetNameWithFallback(u) }),
                       (0, e.jsx)("a", {
-                        href: `${i.TS.STORE_BASE_URL}meetsteam/${s}`,
+                        href: `${r.TS.STORE_BASE_URL}meetsteam/${s}`,
                         target: "_blank",
                         children: "See Event Details",
                       }),
@@ -1385,10 +1388,10 @@
                   }),
                   (0, e.jsx)("div", {
                     className: ee().AtendeeListButtonRow,
-                    children: (0, e.jsxs)(y.$n, {
-                      onClick: d,
+                    children: (0, e.jsxs)(C.$n, {
+                      onClick: c,
                       children: [
-                        (0, e.jsx)(S.uMb, {
+                        (0, e.jsx)(d.uMb, {
                           angle: 180,
                           className: ee().BackToListIcon,
                         }),
@@ -1396,102 +1399,102 @@
                       ],
                     }),
                   }),
-                  (0, e.jsx)(fe, { eventModel: n }),
+                  (0, e.jsx)(fe, { eventModel: a }),
                 ],
               })
-            : (0, e.jsx)(F.t, { string: (0, Z.we)("#Loading") });
+            : (0, e.jsx)(z.t, { string: (0, Q.we)("#Loading") });
         }
-        function fe(_) {
-          const { eventModel: s } = _,
-            n = U(x(s)),
-            [u] = (0, l.QD)("accountid"),
-            d = (0, D.f1)();
+        function fe(g) {
+          const { eventModel: s } = g,
+            a = B(M(s)),
+            [u] = (0, n.QD)("accountid"),
+            c = (0, S.f1)();
           return (0, e.jsxs)("div", {
             children: [
               (0, e.jsx)("div", {
                 className: V().User,
-                children: (0, e.jsx)(g.p, { accountID: u }),
+                children: (0, e.jsx)(v.p, { accountID: u }),
               }),
               (0, e.jsx)(se, {
                 eventModel: s,
-                rgUserRegs: n.today,
-                strTitle: "Today " + (0, de.$z)(d),
+                rgUserRegs: a.today,
+                strTitle: "Today " + (0, de.$z)(c),
               }),
               (0, e.jsx)(se, {
                 eventModel: s,
-                rgUserRegs: n.future,
+                rgUserRegs: a.future,
                 bHideIfEmpty: !0,
                 strTitle: "Future",
               }),
               (0, e.jsx)(se, {
                 eventModel: s,
-                rgUserRegs: n.past,
+                rgUserRegs: a.past,
                 bHideIfEmpty: !0,
                 strTitle: "Past",
               }),
             ],
           });
         }
-        function se(_) {
+        function se(g) {
           const {
             eventModel: s,
-            rgUserRegs: n,
+            rgUserRegs: a,
             bHideIfEmpty: u,
-            strTitle: d,
-          } = _;
-          return n.length == 0 && u
+            strTitle: c,
+          } = g;
+          return a.length == 0 && u
             ? null
-            : (0, e.jsx)(q.qx, {
-                title: `${d} (${n.length})`,
+            : (0, e.jsx)(Z.qx, {
+                title: `${c} (${a.length})`,
                 bStartMinimized: u,
                 children:
-                  !n || n.length == 0
+                  !a || a.length == 0
                     ? (0, e.jsx)("div", {
                         children: u ? "" : "No registrations",
                       })
                     : (0, e.jsx)("div", {
-                        children: n
-                          .sort((r, f) => r.rtSesssionTime - f.rtSesssionTime)
-                          .map((r) =>
+                        children: a
+                          .sort((l, f) => l.rtSesssionTime - f.rtSesssionTime)
+                          .map((l) =>
                             (0, e.jsx)(
                               Me,
-                              { eventModel: s, reg: r },
-                              `${r.group_id}_${r.session_id}`,
+                              { eventModel: s, reg: l },
+                              `${l.group_id}_${l.session_id}`,
                             ),
                           ),
                       }),
               });
         }
-        function _e(_) {
-          const { desc: s } = _,
-            [n, u] = (0, o.useState)(!1),
-            d = (0, o.useCallback)(() => u((r) => !r), []);
+        function ge(g) {
+          const { desc: s } = g,
+            [a, u] = (0, i.useState)(!1),
+            c = (0, i.useCallback)(() => u((l) => !l), []);
           return (0, e.jsx)("div", {
-            className: (0, Q.A)({
+            className: (0, J.A)({
               [V().DescriptionWrapper]: !0,
-              [V().Expanded]: n,
+              [V().Expanded]: a,
             }),
-            onClick: d,
+            onClick: c,
             onMouseEnter: () => u(!0),
             onMouseLeave: () => u(!1),
             children: s,
           });
         }
-        function Me(_) {
-          const { reg: s, eventModel: n } = _,
+        function Me(g) {
+          const { reg: s, eventModel: a } = g,
             u = new he.b2(s.steamid).GetAccountID(),
-            [d] = (0, c.KT)(s.userReg.accountid),
-            [r, f] = (0, o.useState)(!0),
-            [z, K] = (0, o.useState)([]),
-            [X, k] = (0, o.useState)(!1),
+            [c] = (0, T.KT)(s.userReg.accountid),
+            [l, f] = (0, i.useState)(!0),
+            [K, F] = (0, i.useState)([]),
+            [q, k] = (0, i.useState)(!1),
             H = s.userReg,
-            { group: J, session: ne } = v(
-              n.jsondata.meet_steam_groups,
+            { group: $, session: ne } = E(
+              a.jsondata.meet_steam_groups,
               s.group_id,
               s.session_id,
             ),
             [Y, ae, me] = (0, re.uD)(),
-            pe = h(n.GID, u, s.group_id, s.session_id),
+            pe = _(a.GID, u, s.group_id, s.session_id),
             ce = new Set(
               s.guests_attendance?.length > 0
                 ? s.guests_attendance.split("|")
@@ -1531,8 +1534,8 @@
               });
           return (0, e.jsxs)("div", {
             children: [
-              (0, e.jsx)(xe, { group: J, session: ne }),
-              X
+              (0, e.jsx)(xe, { group: $, session: ne }),
+              q
                 ? (0, e.jsx)("div", {
                     className: V().CheckedIn,
                     children: "Attendee has been checked in",
@@ -1540,30 +1543,30 @@
                 : (0, e.jsxs)("div", {
                     className: V().RegisteredUsers,
                     children: [
-                      (0, e.jsx)(y.Yh, {
+                      (0, e.jsx)(C.Yh, {
                         label: (0, e.jsx)(e.Fragment, {
                           children: ye(
                             "Attendee",
-                            H.name || d.persona_name,
+                            H.name || c.persona_name,
                             H.email_override,
                             oe,
                           ),
                         }),
-                        checked: r,
+                        checked: l,
                         onChange: f,
                       }),
                       H.guest_names?.length > 0 &&
                         (0, e.jsx)(e.Fragment, {
                           children: H.guest_names.map((te) =>
                             (0, e.jsx)(
-                              y.Yh,
+                              C.Yh,
                               {
                                 label: (0, e.jsx)(e.Fragment, {
                                   children: ye("Guest", te, void 0, ce.has(te)),
                                 }),
-                                checked: z.includes(te),
+                                checked: K.includes(te),
                                 onChange: (ve) => {
-                                  K((ie) =>
+                                  F((ie) =>
                                     ve
                                       ? ie.includes(te)
                                         ? ie
@@ -1576,19 +1579,19 @@
                             ),
                           ),
                         }),
-                      (0, e.jsx)(y.jn, {
+                      (0, e.jsx)(C.jn, {
                         onClick: ae,
                         children: "Check in selected people",
                       }),
                     ],
                   }),
-              (0, e.jsx)(w.E, {
+              (0, e.jsx)(W.E, {
                 active: Y,
-                children: (0, e.jsx)(a.tH, {
+                children: (0, e.jsx)(o.tH, {
                   children: (0, e.jsx)(Te, {
                     closeModal: me,
-                    bIncludeSelf: r,
-                    rgGuestsAttending: z,
+                    bIncludeSelf: l,
+                    rgGuestsAttending: K,
                     fnMarkAttendance: pe,
                     fnOnSuccess: () => k(!0),
                   }),
@@ -1597,73 +1600,73 @@
             ],
           });
         }
-        function Te(_) {
+        function Te(g) {
           const {
               closeModal: s,
-              bIncludeSelf: n,
+              bIncludeSelf: a,
               rgGuestsAttending: u,
-              fnMarkAttendance: d,
-              fnOnSuccess: r,
-            } = _,
-            f = (0, R.vs)();
+              fnMarkAttendance: c,
+              fnOnSuccess: l,
+            } = g,
+            f = (0, U.vs)();
           return f.bLoading
-            ? (0, e.jsx)(R.Hh, {
+            ? (0, e.jsx)(U.Hh, {
                 state: f,
-                strDialogTitle: (0, Z.we)("#Saving"),
+                strDialogTitle: (0, Q.we)("#Saving"),
                 closeModal: s,
               })
-            : (0, e.jsx)(I.o0, {
+            : (0, e.jsx)(R.o0, {
                 onCancel: s,
-                strTitle: (0, Z.we)("#Button_Submit"),
+                strTitle: (0, Q.we)("#Button_Submit"),
                 bAllowFullSize: !0,
                 onOK: async () => {
                   f.fnSetLoading(!0),
-                    d
-                      .mutateAsync({ bIncludeSelf: n, rgGuests: u })
-                      .then((z) => {
-                        z
-                          ? (r(),
+                    c
+                      .mutateAsync({ bIncludeSelf: a, rgGuests: u })
+                      .then((K) => {
+                        K
+                          ? (l(),
                             f.fnSetStrSuccess(
                               "Success! This person has been checked in.",
                             ))
                           : f.fnSetStrError(
-                              (0, Z.we)("#Login_Error_Network_Description"),
+                              (0, Q.we)("#Login_Error_Network_Description"),
                             );
                       })
                       .catch(() =>
                         f.fnSetStrError(
-                          (0, Z.we)("#Login_Error_Network_Description"),
+                          (0, Q.we)("#Login_Error_Network_Description"),
                         ),
                       );
                 },
                 children: "Mark as checked in?",
               });
         }
-        function xe(_) {
-          const { session: s, group: n } = _,
+        function xe(g) {
+          const { session: s, group: a } = g,
             {
               sDisplayTimeZone: u,
-              rtime_start: d,
-              rtime_end: r,
-            } = (0, p._t)(_.session),
-            f = (0, p.rF)(d, u),
-            z = (0, p.Mr)(d, r, u);
-          return !s || !n
+              rtime_start: c,
+              rtime_end: l,
+            } = (0, p._t)(g.session),
+            f = (0, p.rF)(c, u),
+            K = (0, p.Mr)(c, l, u);
+          return !s || !a
             ? (0, e.jsx)("div", { children: "Session Infomrmation Missing" })
             : (0, e.jsxs)("div", {
                 className: V().SessionInfo,
                 children: [
                   (0, e.jsx)("div", {
                     className: V().SessionName,
-                    children: n.localized_session_title[M.Bhc],
+                    children: a.localized_session_title[j.Bhc],
                   }),
                   (0, e.jsxs)("div", {
                     className: V().SessionTime,
-                    children: [f, " @ ", (0, e.jsx)("b", { children: z })],
+                    children: [f, " @ ", (0, e.jsx)("b", { children: K })],
                   }),
                   (0, e.jsx)("div", {
-                    children: (0, e.jsx)(_e, {
-                      desc: `Description: ${n.localized_session_description[M.Bhc] || ""}`,
+                    children: (0, e.jsx)(ge, {
+                      desc: `Description: ${a.localized_session_description[j.Bhc] || ""}`,
                     }),
                   }),
                   !1,
@@ -1671,137 +1674,135 @@
               });
         }
         var Ce = t(90783),
-          Ae = t(29645),
-          G = t.n(Ae),
+          Re = t(29645),
+          G = t.n(Re),
           De = t(36174),
-          Re = t(3166);
-        function ue(_) {
-          const s = new Date(_.getTime());
+          Pe = t(3166);
+        function ue(g) {
+          const s = new Date(g.getTime());
           return s.setHours(0, 0, 0, 0), s;
         }
-        function we(_) {
-          const s = new Date(_.getTime());
+        function we(g) {
+          const s = new Date(g.getTime());
           return s.setDate(1), s.setHours(0, 0, 0, 0), s;
         }
-        function ze(_, s) {
-          const n = new Date(_);
-          return n.setDate(_.getDate() + s), n;
+        function ze(g, s) {
+          const a = new Date(g);
+          return a.setDate(g.getDate() + s), a;
         }
-        function Pe(_, s) {
-          return _.reduce((n, u) => {
-            const d = s(u),
-              r = Math.floor(d.getTime() / 1e3),
-              f = n.get(r) || [];
-            return n.set(r, [...f, u]), n;
+        function Ae(g, s) {
+          return g.reduce((a, u) => {
+            const c = s(u),
+              l = Math.floor(c.getTime() / 1e3),
+              f = a.get(l) || [];
+            return a.set(l, [...f, u]), a;
           }, new Map());
         }
-        function Ie(_) {
-          const [s] = (0, l.QD)("gid"),
-            n = (0, W.RR)(s),
-            u = (0, M.sfN)(i.TS.LANGUAGE),
-            [d, r] = (0, o.useState)("");
-          return n
+        function Ie(g) {
+          const [s] = (0, n.QD)("gid"),
+            a = (0, w.RR)(s),
+            u = (0, j.sfN)(r.TS.LANGUAGE),
+            [c, l] = (0, i.useState)("");
+          return a
             ? (0, e.jsxs)("div", {
                 className: G().Ctn,
                 children: [
                   (0, e.jsxs)("div", {
                     className: G().EventName,
                     children: [
-                      (0, e.jsx)("h1", { children: n.GetNameWithFallback(u) }),
+                      (0, e.jsx)("h1", { children: a.GetNameWithFallback(u) }),
                       (0, e.jsx)("a", {
-                        href: `${i.TS.STORE_BASE_URL}meetsteam/${s}`,
+                        href: `${r.TS.STORE_BASE_URL}meetsteam/${s}`,
                         target: "_blank",
                         children: "See Event Details",
                       }),
                     ],
                   }),
-                  (0, e.jsx)(Be, { eventModel: n }),
+                  (0, e.jsx)(Be, { eventModel: a }),
                   (0, e.jsx)("div", {
                     className: G().AtendeeSearchRow,
-                    children: (0, e.jsx)(y.pd, {
+                    children: (0, e.jsx)(C.pd, {
                       type: "text",
                       label: "Search for an attendee",
-                      value: d,
+                      value: c,
                       bShowClearAction: !0,
-                      onChange: (f) => r(f.currentTarget.value || ""),
+                      onChange: (f) => l(f.currentTarget.value || ""),
                       placeholder: "Type name or partner or email address",
                     }),
                   }),
-                  (0, e.jsx)(Oe, { eventModel: n, strSearch: d.toLowerCase() }),
+                  (0, e.jsx)(Oe, { eventModel: a, strSearch: c.toLowerCase() }),
                 ],
               })
-            : (0, e.jsx)(F.t, { string: (0, Z.we)("#Loading") });
+            : (0, e.jsx)(z.t, { string: (0, Q.we)("#Loading") });
         }
-        function Oe(_) {
-          const { eventModel: s, strSearch: n } = _,
-            u = x(s, n),
-            [d, r] = (0, o.useState)(null),
-            [f, z] = (0, o.useMemo)(() => {
-              const K = new Map();
+        function Oe(g) {
+          const { eventModel: s, strSearch: a } = g,
+            u = M(s, a),
+            [c, l] = (0, i.useState)(null),
+            [f, K] = (0, i.useMemo)(() => {
+              const F = new Map();
               return (
-                u.forEach((X) => {
-                  [X.userReg.name, ...(X.userReg.guest_names || [])].forEach(
+                u.forEach((q) => {
+                  [q.userReg.name, ...(q.userReg.guest_names || [])].forEach(
                     (H) => {
-                      const J = H.toLowerCase();
-                      K.has(J) ? K.get(J).push(X) : K.set(J, [X]);
+                      const $ = H.toLowerCase();
+                      F.has($) ? F.get($).push(q) : F.set($, [q]);
                     },
                   );
                 }),
-                [K, Array.from(K.keys()).sort()]
+                [F, Array.from(F.keys()).sort()]
               );
             }, [u]);
           return (
-            o.useEffect(() => {
-              r(null);
-            }, [n]),
+            i.useEffect(() => {
+              l(null);
+            }, [a]),
             (0, e.jsxs)("div", {
               children: [
                 (0, e.jsx)("h3", { children: "Attendees" }),
-                d
+                c
                   ? (0, e.jsx)(Le, {
                       eventModel: s,
-                      rgSelected: d,
-                      strSearch: n,
-                      onCleanSelection: () => r(null),
+                      rgSelected: c,
+                      strSearch: a,
+                      onCleanSelection: () => l(null),
                     })
                   : (0, e.jsx)(e.Fragment, {
-                      children: z
-                        .filter((K) => !n || K.includes(n))
-                        .map((K) =>
-                          (0, e.jsx)(
-                            "div",
-                            {
-                              className: G().AttendeeRow,
-                              children: (0, e.jsx)(y.$n, {
-                                onClick: () => r(f.get(K.toLowerCase())),
-                                children: K,
-                              }),
-                            },
-                            K,
-                          ),
+                      children: K.filter((F) => !a || F.includes(a)).map((F) =>
+                        (0, e.jsx)(
+                          "div",
+                          {
+                            className: G().AttendeeRow,
+                            children: (0, e.jsx)(C.$n, {
+                              onClick: () => l(f.get(F.toLowerCase())),
+                              children: F,
+                            }),
+                          },
+                          F,
                         ),
+                      ),
                     }),
               ],
             })
           );
         }
-        function Le(_) {
+        function Le(g) {
           const {
               eventModel: s,
-              rgSelected: n,
+              rgSelected: a,
               strSearch: u,
-              onCleanSelection: d,
-            } = _,
-            r = (0, D.f1)(),
-            f = U(n, u);
+              onCleanSelection: c,
+            } = g,
+            l = (0, S.f1)(),
+            f = B(a, u);
           return (0, e.jsxs)("div", {
             children: [
               (0, e.jsx)("div", {
                 className: ee().AtendeeListButtonRow,
-                children: (0, e.jsxs)(y.$n, {
-                  onClick: d,
+                children: (0, e.jsxs)(C.$n, {
+                  onClick: c,
                   children: [
-                    (0, e.jsx)(S.uMb, {
+                    (0, e.jsx)(d.uMb, {
                       angle: 180,
                       className: ee().BackToListIcon,
                     }),
@@ -1812,7 +1813,7 @@
               (0, e.jsx)(se, {
                 eventModel: s,
                 rgUserRegs: f.today,
-                strTitle: "Today " + (0, Z.$z)(r),
+                strTitle: "Today " + (0, Q.$z)(l),
               }),
               (0, e.jsx)(se, {
                 eventModel: s,
@@ -1829,11 +1830,11 @@
             ],
           });
         }
-        function Be(_) {
-          const { eventModel: s } = _,
-            n = (0, D.s4)(),
-            [u, d] = o.useState(!1),
-            { rgGroupedSessions: r, bMoreSessions: f } = o.useMemo(() => {
+        function Be(g) {
+          const { eventModel: s } = g,
+            a = (0, S.s4)(),
+            [u, c] = i.useState(!1),
+            { rgGroupedSessions: l, bMoreSessions: f } = i.useMemo(() => {
               const k = s?.jsondata?.meet_steam_groups?.flatMap((Y) =>
                   Y.sessions.map((ae) => {
                     const me = (0, p.Sk)(ae),
@@ -1841,53 +1842,53 @@
                     return { group: Y, session: ae, displayDate: pe };
                   }),
                 ),
-                H = k?.filter((Y) => u || ue(Y.displayDate) >= ue(n)),
-                J = u || (k && k.length > H.length);
+                H = k?.filter((Y) => u || ue(Y.displayDate) >= ue(a)),
+                $ = u || (k && k.length > H.length);
               return {
-                rgGroupedSessions: Pe(H ?? [], (Y) => ue(Y.displayDate)),
-                bMoreSessions: J,
+                rgGroupedSessions: Ae(H ?? [], (Y) => ue(Y.displayDate)),
+                bMoreSessions: $,
               };
-            }, [s?.jsondata?.meet_steam_groups, n, u]),
-            z = o.useMemo(() => {
-              const k = (0, Re.Tc)("registrations", "application_config");
+            }, [s?.jsondata?.meet_steam_groups, a, u]),
+            K = i.useMemo(() => {
+              const k = (0, Pe.Tc)("registrations", "application_config");
               if (!(!k || typeof k != "object"))
-                return k.reduce((H, J) => {
-                  const ne = `${J.group_id}_${J.session_id}`,
+                return k.reduce((H, $) => {
+                  const ne = `${$.group_id}_${$.session_id}`,
                     Y = H.get(ne) ?? [];
-                  return Y.push(J), H.set(ne, Y), H;
+                  return Y.push($), H.set(ne, Y), H;
                 }, new Map());
             }, []);
-          if (!z || (r.size == 0 && !f)) return;
-          const K =
-              Array.from(r.keys()).reduce(
+          if (!K || (l.size == 0 && !f)) return;
+          const F =
+              Array.from(l.keys()).reduce(
                 (k, H) =>
-                  k == null || (H * 1e3 > n.getTime() && H < k) ? H : k,
+                  k == null || (H * 1e3 > a.getTime() && H < k) ? H : k,
                 void 0,
               ) ?? 0,
-            X = Array.from(r.keys()).some((k) =>
-              (0, De.JD)(n, new Date(k * 1e3)),
+            q = Array.from(l.keys()).some((k) =>
+              (0, De.JD)(a, new Date(k * 1e3)),
             );
           return (0, e.jsxs)("div", {
             className: G().DisplayAllDaysCtn,
             children: [
               f &&
-                (0, e.jsx)(y.Yh, {
+                (0, e.jsx)(C.Yh, {
                   label: "Show past events",
                   checked: u,
-                  onChange: d,
+                  onChange: c,
                 }),
               (0, e.jsx)("div", {
                 className: G().DisplayDaysCtn,
-                children: Array.from(r.keys()).map((k) =>
+                children: Array.from(l.keys()).map((k) =>
                   (0, e.jsx)(
                     Ue,
                     {
                       eventModel: s,
                       date: new Date(k * 1e3),
-                      sessionsAndGroups: r.get(k),
-                      rgRegistrationInfo: z,
+                      sessionsAndGroups: l.get(k),
+                      rgRegistrationInfo: K,
                       isToday: (0, De.JD)(
-                        X ? n : new Date(K * 1e3),
+                        q ? a : new Date(F * 1e3),
                         new Date(k * 1e3),
                       ),
                     },
@@ -1898,20 +1899,20 @@
             ],
           });
         }
-        function Ue(_) {
+        function Ue(g) {
           const {
             eventModel: s,
-            date: n,
+            date: a,
             sessionsAndGroups: u,
-            rgRegistrationInfo: d,
-            isToday: r,
-          } = _;
+            rgRegistrationInfo: c,
+            isToday: l,
+          } = g;
           return (0, e.jsxs)("div", {
-            className: (0, Q.A)(G().DisplayDaySessions, !r && G().NotToday),
+            className: (0, J.A)(G().DisplayDaySessions, !l && G().NotToday),
             children: [
               (0, e.jsx)("div", {
                 className: G().DateName,
-                children: (0, Z.$w)(n),
+                children: (0, Q.$w)(a),
               }),
               (0, e.jsx)("div", {
                 className: G().DisplayDaySessionsRow,
@@ -1920,9 +1921,9 @@
                     Ne,
                     {
                       eventModel: s,
-                      date: n,
+                      date: a,
                       registrations:
-                        d.get(`${f.group.group_id}_${f.session.id}`) ?? [],
+                        c.get(`${f.group.group_id}_${f.session.id}`) ?? [],
                       group: f.group,
                       session: f.session,
                     },
@@ -1933,20 +1934,20 @@
             ],
           });
         }
-        function Ne(_) {
+        function Ne(g) {
           const {
               eventModel: s,
-              date: n,
+              date: a,
               group: u,
-              session: d,
-              registrations: r,
-            } = _,
-            f = (0, M.sfN)(i.TS.LANGUAGE),
-            z = (0, D.s4)(),
-            { sDisplayTimeZone: K, rtime_start: X } = (0, p._t)(d),
-            k = (0, p.us)(X, K),
-            H = r.reduce((ce, oe) => ce + (oe.guests_registered ?? 0), 0),
-            J = r.reduce(
+              session: c,
+              registrations: l,
+            } = g,
+            f = (0, j.sfN)(r.TS.LANGUAGE),
+            K = (0, S.s4)(),
+            { sDisplayTimeZone: F, rtime_start: q } = (0, p._t)(c),
+            k = (0, p.us)(q, F),
+            H = l.reduce((ce, oe) => ce + (oe.guests_registered ?? 0), 0),
+            $ = l.reduce(
               (ce, oe) =>
                 ce +
                 (oe.rt_attendance_marked > 0 && oe.guests_registered
@@ -1955,7 +1956,7 @@
               0,
             ),
             [ne, Y, ae] = (0, re.uD)(),
-            me = P(s.GID, u.group_id, d.id),
+            me = A(s.GID, u.group_id, c.id),
             pe = () => window.location.reload();
           return (0, e.jsxs)("div", {
             className: G().DisplaySession,
@@ -1967,7 +1968,7 @@
                     className: G().SessionName,
                     children:
                       u.localized_session_title[f] ??
-                      u.localized_session_title[M.Bhc],
+                      u.localized_session_title[j.Bhc],
                   }),
                   (0, e.jsx)("div", {
                     className: G().SessionTime,
@@ -1978,27 +1979,27 @@
               (0, e.jsx)(je, {
                 title: "Registered:",
                 nCount: H,
-                nCapacity: d.max_capacity,
+                nCapacity: c.max_capacity,
               }),
               (0, e.jsx)(je, {
                 title: "Checked in:",
-                nCount: J,
-                nCapacity: d.max_capacity,
+                nCount: $,
+                nCapacity: c.max_capacity,
               }),
-              ue(n) >= ue(z) &&
+              ue(a) >= ue(K) &&
                 (0, e.jsxs)(e.Fragment, {
                   children: [
-                    (0, e.jsx)(y.$n, {
-                      className: (0, Q.A)(G().SetCapacityButton),
+                    (0, e.jsx)(C.$n, {
+                      className: (0, J.A)(G().SetCapacityButton),
                       onClick: Y,
                       children: "Update capacity...",
                     }),
-                    (0, e.jsx)(w.E, {
+                    (0, e.jsx)(W.E, {
                       active: ne,
-                      children: (0, e.jsx)(a.tH, {
+                      children: (0, e.jsx)(o.tH, {
                         children: (0, e.jsx)(be, {
                           closeModal: ae,
-                          nCapacity: d.max_capacity ?? 0,
+                          nCapacity: c.max_capacity ?? 0,
                           fnUpdateCapacity: me,
                           fnOnSuccess: () => pe(),
                         }),
@@ -2009,69 +2010,69 @@
             ],
           });
         }
-        function be(_) {
+        function be(g) {
           const {
               closeModal: s,
-              nCapacity: n,
+              nCapacity: a,
               fnUpdateCapacity: u,
-              fnOnSuccess: d,
-            } = _,
-            [r, f] = o.useState(n.toString()),
-            z = (0, R.vs)();
-          return z.bLoading
-            ? (0, e.jsx)(R.Hh, {
-                state: z,
-                strDialogTitle: (0, Z.we)("#Saving"),
+              fnOnSuccess: c,
+            } = g,
+            [l, f] = i.useState(a.toString()),
+            K = (0, U.vs)();
+          return K.bLoading
+            ? (0, e.jsx)(U.Hh, {
+                state: K,
+                strDialogTitle: (0, Q.we)("#Saving"),
                 closeModal: s,
               })
-            : (0, e.jsx)(I.o0, {
+            : (0, e.jsx)(R.o0, {
                 onCancel: s,
-                strTitle: (0, Z.we)("Update Capacity"),
+                strTitle: (0, Q.we)("Update Capacity"),
                 bAllowFullSize: !0,
                 onOK: async () => {
-                  z.fnSetLoading(!0);
-                  const K = Number.isNaN(Number.parseInt(r))
+                  K.fnSetLoading(!0);
+                  const F = Number.isNaN(Number.parseInt(l))
                     ? void 0
-                    : Number.parseInt(r);
-                  u.mutateAsync({ nCapacity: K })
-                    .then((X) => {
-                      X
-                        ? (d(), z.fnSetStrSuccess("Max capacity updated."))
-                        : z.fnSetStrError(
-                            (0, Z.we)("#Login_Error_Network_Description"),
+                    : Number.parseInt(l);
+                  u.mutateAsync({ nCapacity: F })
+                    .then((q) => {
+                      q
+                        ? (c(), K.fnSetStrSuccess("Max capacity updated."))
+                        : K.fnSetStrError(
+                            (0, Q.we)("#Login_Error_Network_Description"),
                           );
                     })
                     .catch(() =>
-                      z.fnSetStrError(
-                        (0, Z.we)("#Login_Error_Network_Description"),
+                      K.fnSetStrError(
+                        (0, Q.we)("#Login_Error_Network_Description"),
                       ),
                     );
                 },
-                children: (0, e.jsx)(y.pd, {
+                children: (0, e.jsx)(C.pd, {
                   className: G().SetCapacityInput,
                   label: "New capacity",
                   type: "text",
                   autoComplete: "off",
-                  value: r,
-                  onChange: (K) => f(K.currentTarget.value),
+                  value: l,
+                  onChange: (F) => f(F.currentTarget.value),
                 }),
               });
         }
-        function je(_) {
-          const { title: s, nCount: n, nCapacity: u } = _,
-            d = n >= u,
-            r = Math.min((n / u) * 100, 100),
-            f = n > 0 ? `${r}%` : "0%";
+        function je(g) {
+          const { title: s, nCount: a, nCapacity: u } = g,
+            c = a >= u,
+            l = Math.min((a / u) * 100, 100),
+            f = a > 0 ? `${l}%` : "0%";
           return (0, e.jsxs)("div", {
             className: G().CapacityCtn,
             children: [
-              (0, e.jsxs)("span", { children: [s, " ", n, " / ", u] }),
+              (0, e.jsxs)("span", { children: [s, " ", a, " / ", u] }),
               (0, e.jsx)("div", {
                 className: G().CapacityBarMax,
                 children: (0, e.jsx)("div", {
-                  className: (0, Q.A)(
+                  className: (0, J.A)(
                     G().CapacityBarCurrent,
-                    d ? G().Full : "",
+                    c ? G().Full : "",
                   ),
                   style: { width: f },
                 }),
@@ -2080,21 +2081,21 @@
           });
         }
         const Ee = {
-          MeetSteamAttendance: () => `${E.B.MeetSteamRoute()}attendance`,
-          MeetSteamAttendeeList: () => `${E.B.MeetSteamRoute()}attendeelist`,
+          MeetSteamAttendance: () => `${h.B.MeetSteamRoute()}attendance`,
+          MeetSteamAttendeeList: () => `${h.B.MeetSteamRoute()}attendeelist`,
         };
-        function We(_) {
-          return (0, e.jsxs)(j.dO, {
+        function We(g) {
+          return (0, e.jsxs)(D.dO, {
             children: [
-              (0, e.jsx)(j.qh, {
+              (0, e.jsx)(D.qh, {
                 path: Ee.MeetSteamAttendance(),
-                render: (s) => (0, e.jsx)($, { ...s }),
+                render: (s) => (0, e.jsx)(X, { ...s }),
               }),
-              (0, e.jsx)(j.qh, {
+              (0, e.jsx)(D.qh, {
                 path: Ee.MeetSteamAttendeeList(),
                 render: (s) => (0, e.jsx)(Ie, { ...s }),
               }),
-              (0, e.jsx)(j.qh, { children: (0, e.jsx)(Ce.a, {}) }),
+              (0, e.jsx)(D.qh, { children: (0, e.jsx)(Ce.a, {}) }),
             ],
           });
         }
@@ -2234,18 +2235,6 @@
           PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
           Error: "mSSEDpLo6ibX1Ed5anQD_",
           GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
-          BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
-          "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
-          "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
-          "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
-          "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
-          "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
-          "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
-          "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
-          "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
-          focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
-          hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
         };
       },
       15736: (N) => {
@@ -2303,7 +2292,7 @@
           DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
         };
       },
-      61738: (N, L, t) => {
+      61738: (N, O, t) => {
         var e = {
           "./af": 30911,
           "./af.js": 30911,
@@ -2580,23 +2569,23 @@
           "./zh-tw": 34518,
           "./zh-tw.js": 34518,
         };
-        function E(a) {
-          var M = j(a);
-          return t(M);
+        function h(o) {
+          var j = D(o);
+          return t(j);
         }
-        function j(a) {
-          if (!t.o(e, a)) {
-            var M = new Error("Cannot find module '" + a + "'");
-            throw ((M.code = "MODULE_NOT_FOUND"), M);
+        function D(o) {
+          if (!t.o(e, o)) {
+            var j = new Error("Cannot find module '" + o + "'");
+            throw ((j.code = "MODULE_NOT_FOUND"), j);
           }
-          return e[a];
+          return e[o];
         }
-        (E.keys = function () {
+        (h.keys = function () {
           return Object.keys(e);
         }),
-          (E.resolve = j),
-          (N.exports = E),
-          (E.id = 61738);
+          (h.resolve = D),
+          (N.exports = h),
+          (h.id = 61738);
       },
     },
   ]);

@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "スレッドのロックを解除（%1$s件）",
     "moderation_actions_sustain": "モデレーションを維持",
     "moderation_actions_sustain_multiple": "モデレーションを維持（%1$s件）",
+    "moderation_actions_sustain_short": "維持",
     "moderation_actions_suspicious": "「疑わしい」としてマークを付ける",
     "moderation_actions_suspicious_multiple": "「疑わしい」としてマークを付ける（%1$s件）",
     "moderation_actions_unknown": "不明",

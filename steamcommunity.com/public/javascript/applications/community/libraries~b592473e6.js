@@ -900,7 +900,7 @@
         33171: (D) => {
           function V(d) {
             return function (s) {
-              return s == null ? void 0 : s[d];
+              return s?.[d];
             };
           }
           D.exports = V;
@@ -1423,7 +1423,7 @@
         },
         49490: (D) => {
           function V(d, s) {
-            return d == null ? void 0 : d[s];
+            return d?.[s];
           }
           D.exports = V;
         },
@@ -1591,7 +1591,7 @@
           function s(g, M) {
             var _ = typeof g;
             return (
-              (M = M == null ? V : M),
+              (M = M ?? V),
               !!M &&
                 (_ == "number" || (_ != "symbol" && d.test(g))) &&
                 g > -1 &&
@@ -2250,7 +2250,7 @@
             },
             _ = {},
             T = function (t, a, u, p) {
-              if (typeof document == "undefined" && !p) return null;
+              if (typeof document > "u" && !p) return null;
               var R = p ? new p() : document.createElement("canvas");
               (R.width = u * 2), (R.height = u * 2);
               var j = R.getContext("2d");
@@ -3180,7 +3180,7 @@
           }
           const te = J;
           function q(i, t) {
-            return i == null ? void 0 : i[t];
+            return i?.[t];
           }
           const le = q;
           function ke(i, t) {
@@ -3595,7 +3595,7 @@
           function al(i, t) {
             var a = typeof i;
             return (
-              (t = t == null ? sl : t),
+              (t = t ?? sl),
               !!t &&
                 (a == "number" || (a != "symbol" && ll.test(i))) &&
                 i > -1 &&
@@ -6215,7 +6215,7 @@
           const xu = yu;
           function vu(i) {
             return function (t) {
-              return t == null ? void 0 : t[i];
+              return t?.[i];
             };
           }
           const wu = vu;
@@ -11082,9 +11082,9 @@
             };
           for (let be in yt) Ct[be] = yt[be];
           const Bt = (
-            typeof navigator != "undefined"
+            typeof navigator < "u"
               ? /Mac|iP(hone|[oa]d)/.test(navigator.platform)
-              : typeof os != "undefined" && os.platform
+              : typeof os < "u" && os.platform
                 ? os.platform() == "darwin"
                 : !1
           )
@@ -11382,11 +11382,9 @@
                 221: "}",
                 222: '"',
               },
-              M =
-                typeof navigator != "undefined" &&
-                /Mac/.test(navigator.platform),
+              M = typeof navigator < "u" && /Mac/.test(navigator.platform),
               _ =
-                typeof navigator != "undefined" &&
+                typeof navigator < "u" &&
                 /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(
                   navigator.userAgent,
                 ),
@@ -11422,7 +11420,7 @@
           }
           var I = d(52893);
           const G =
-            typeof navigator != "undefined"
+            typeof navigator < "u"
               ? /Mac|iP(hone|[oa]d)/.test(navigator.platform)
               : !1;
           function se(Me) {
@@ -14797,7 +14795,7 @@
                   ? this.replaceSelectionWith(X.text(B), !0)
                   : this.deleteSelection();
               {
-                if (($ == null && ($ = ne), ($ = $ == null ? ne : $), !B))
+                if (($ == null && ($ = ne), ($ = $ ?? ne), !B))
                   return this.deleteRange(ne, $);
                 let ie = this.storedMarks;
                 if (!ie) {
@@ -15115,7 +15113,7 @@
             T = d(63734),
             K,
             U;
-          if (typeof WeakMap != "undefined") {
+          if (typeof WeakMap < "u") {
             let w = new WeakMap();
             (K = (x) => w.get(x)), (U = (x, E) => (w.set(x, E), E));
           } else {
@@ -16019,7 +16017,7 @@
                       : (z = O.nodeAt(x.map[ke + q * x.width])) == null
                         ? void 0
                         : z.type,
-                  He = Oe == null ? void 0 : Oe.createAndFill();
+                  He = Oe?.createAndFill();
                 He && te.push(He);
               }
             return w.insert(J, Q(O.type.schema).row.create(null, te)), w;
@@ -17021,8 +17019,7 @@
               z.removeEventListener("mouseup", le),
                 z.removeEventListener("mousemove", ke);
               const He = Vt.getState(w.state);
-              He != null &&
-                He.dragging &&
+              He?.dragging &&
                 (Vn(w, He.activeHandle, Cr(He.dragging, Oe, E)),
                 w.dispatch(w.state.tr.setMeta(Vt, { setDragging: null })));
             }
@@ -18947,9 +18944,7 @@
           const U = function (n, e, r) {
               let l = K || (K = document.createRange());
               return (
-                l.setEnd(n, r == null ? n.nodeValue.length : r),
-                l.setStart(n, e || 0),
-                l
+                l.setEnd(n, r ?? n.nodeValue.length), l.setStart(n, e || 0), l
               );
             },
             I = function () {
@@ -19053,8 +19048,8 @@
               if (l) return { node: l.startContainer, offset: l.startOffset };
             }
           }
-          const fe = typeof navigator != "undefined" ? navigator : null,
-            Pe = typeof document != "undefined" ? document : null,
+          const fe = typeof navigator < "u" ? navigator : null,
+            Pe = typeof document < "u" ? document : null,
             he = (fe && fe.userAgent) || "",
             Le = /Edge\/(\d+)/.exec(he),
             Je = /MSIE \d/.exec(he),
@@ -19728,7 +19723,7 @@
                     if (h.nextSibling) break;
                   }
               }
-              return (f == null ? l > 0 : f) ? this.posAtEnd : this.posAtStart;
+              return (f ?? l > 0) ? this.posAtEnd : this.posAtStart;
             }
             nearestDesc(e, r = !1) {
               for (let l = !0, f = e; f; f = f.parentNode) {
@@ -22713,10 +22708,7 @@
             }
             find(e, r, l) {
               let f = [];
-              return (
-                this.findInner(e == null ? 0 : e, r == null ? 1e9 : r, f, 0, l),
-                f
-              );
+              return this.findInner(e ?? 0, r ?? 1e9, f, 0, l), f;
             }
             findInner(e, r, l, f, h) {
               for (let v = 0; v < this.local.length; v++) {
@@ -24640,7 +24632,7 @@
                 G.empty,
                 vt,
                 ie.time,
-                rt == null ? $.prevComposition : rt,
+                rt ?? $.prevComposition,
               );
             } else
               return (Ve = ie.getMeta("rebased"))

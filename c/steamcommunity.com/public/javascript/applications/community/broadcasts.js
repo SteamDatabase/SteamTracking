@@ -4,25 +4,25 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
+        __webpack_require__.module_exports(module_exports),
+          __webpack_require__.module_exports(module_exports, {
             default: () => _,
           });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = Object.defineProperty,
+          module_exports = Object.getOwnPropertyDescriptor,
+          module_exports = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -31,13 +31,16 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           };
-        const _ = class _ {
+        const module_exports = class _ {
           constructor() {
-            (this.m_bShowOnlyVideo = !1),
-              (this.m_bShowOnlyChat = !1),
-              (this.m_curDebugInfo = null),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          static s_Singleton;
+          m_steamid;
+          m_bShowOnlyVideo = !1;
+          m_bShowOnlyChat = !1;
+          m_strIFrameParentOrigin;
+          m_curDebugInfo = null;
           GetBroadcasterSteamID() {
             return this.m_steamid;
           }
@@ -227,35 +230,35 @@
               : !1;
           }
         };
-        _([_._], _.prototype, "m_curDebugInfo", 2);
-        let _ = _;
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (_) => {
+        _([_.module_exports], _.prototype, "m_curDebugInfo", 2);
+        let module_exports = _;
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        const module_exports = (_) => {
             const _ = (0, _.useRef)(null),
               [_, _] = (0, _.useState)(null);
             return (
@@ -291,8 +294,7 @@
               })
             );
           },
-          _ = (_) => {
-            var _;
+          module_exports = (_) => {
             const { info: _ } = _,
               [_, _] = (0, _.useState)(!1);
             if (!_) return null;
@@ -492,37 +494,35 @@
                       className: _.Header,
                       children: "Origin Info",
                     }),
-                    (_ = _ == null ? void 0 : _.origin_video_streams) == null
-                      ? void 0
-                      : _.map((_) =>
-                          (0, _.jsxs)(
-                            "div",
-                            {
-                              children: [
-                                "Video Stream ",
-                                _.representation_id,
-                                " ( ",
-                                _.height,
-                                "x",
-                                _.width,
-                                "@",
-                                _.fps,
-                                " ",
-                                _.bitrate,
-                                " kbps ) : \xA0",
-                                _.num_frames_queued,
-                                " frames queued, \xA0",
-                                _.num_segments_received,
-                                " segments received, \xA0",
-                                _.num_segments_cached * 2,
-                                " seconds cached ( ",
-                                (0, _._)(_.memory_used, 2),
-                                " )",
-                              ],
-                            },
+                    _?.origin_video_streams?.map((_) =>
+                      (0, _.jsxs)(
+                        "div",
+                        {
+                          children: [
+                            "Video Stream ",
                             _.representation_id,
-                          ),
-                        ),
+                            " ( ",
+                            _.height,
+                            "x",
+                            _.width,
+                            "@",
+                            _.fps,
+                            " ",
+                            _.bitrate,
+                            " kbps ) : \xA0",
+                            _.num_frames_queued,
+                            " frames queued, \xA0",
+                            _.num_segments_received,
+                            " segments received, \xA0",
+                            _.num_segments_cached * 2,
+                            " seconds cached ( ",
+                            (0, _._)(_.memory_used, 2),
+                            " )",
+                          ],
+                        },
+                        _.representation_id,
+                      ),
+                    ),
                     "Audio Stream ",
                     _.origin_audio_stream.representation_id,
                     " ( ",
@@ -687,7 +687,7 @@
                       (0, _.jsx)("div", {
                         className: _.SubSection,
                         children: (0, _.jsx)(_._, {
-                          data: (_ == null ? void 0 : _.m_data) || "",
+                          data: _?.m_data || "",
                         }),
                       }),
                     ],
@@ -695,11 +695,11 @@
               ],
             });
           };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (_) => {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        const module_exports = (_) => {
           const _ = _.steamid.GetAccountID(),
             { data: _ } = (0, _._)(_);
           return (0, _.jsxs)("div", {
@@ -730,15 +730,15 @@
             ],
           });
         };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
         function _(_) {
           const { broadcasterSteamID: _ } = _,
             _ = _.ConvertTo64BitString(),
@@ -750,7 +750,7 @@
             [_] = (0, _._)(_, {
               include_assets: !0,
             });
-          let _ = _ == null ? void 0 : _.GetAssets().GetMainCapsuleURL(),
+          let _ = _?.GetAssets().GetMainCapsuleURL(),
             _ = _ && _.length > 0;
           return (0, _.jsx)(_._, {
             children: (0, _.jsxs)("div", {
@@ -760,8 +760,7 @@
                   (0, _.jsx)("a", {
                     className: _.GameCapsule,
                     href: (0, _._)(
-                      (_ == null ? void 0 : _.GetStorePageURL()) ||
-                        _._.STORE_BASE_URL + "app/" + _,
+                      _?.GetStorePageURL() || _._.STORE_BASE_URL + "app/" + _,
                     ),
                     children: (0, _.jsx)("img", {
                       src: _,
@@ -804,7 +803,7 @@
             }),
           });
         }
-        const _ = (0, _._)((_) => {
+        const module_exports = (0, _.module_exports)((_) => {
             const { broadcasterSteamID: _ } = _,
               _ = _.ConvertTo64BitString(),
               [_, _] = (0, _._)(() => {
@@ -821,19 +820,18 @@
                 (0, _._)("#Broadcast_Playing"),
                 (0, _.jsx)("a", {
                   href: (0, _._)(
-                    (_ == null ? void 0 : _.GetStorePageURL()) ||
-                      _._.STORE_BASE_URL + "app/" + _,
+                    _?.GetStorePageURL() || _._.STORE_BASE_URL + "app/" + _,
                   ),
-                  children: _ || (_ == null ? void 0 : _.GetName()),
+                  children: _ || _?.GetName(),
                 }),
-                (_ == null ? void 0 : _.length) > 0 &&
+                _?.length > 0 &&
                   (0, _.jsxs)("span", {
                     children: [" - ", _],
                   }),
               ],
             });
           }),
-          _ = (0, _._)((_) => {
+          module_exports = (0, _.module_exports)((_) => {
             const { broadcasterSteamID: _ } = _,
               _ = _.ConvertTo64BitString(),
               _ = (_) => {
@@ -881,7 +879,7 @@
               ],
             });
           }),
-          _ = (_) => {
+          module_exports = (_) => {
             const [_, _] = (0, _.useState)(""),
               _ = async () => {
                 await _.Get().SendUserReportOnBroadcast(_),
@@ -901,9 +899,9 @@
               }),
             });
           };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (_) => {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        const module_exports = (_) => {
             if (!_._.is_support) return null;
             const _ = (_, _) => {
                 (0, _._)(
@@ -950,7 +948,7 @@
               ],
             });
           },
-          _ = (0, _._)((_) => {
+          module_exports = (0, _.module_exports)((_) => {
             const { broadcastSteamID: _, strAction: _ } = _,
               [_, _] = (0, _.useState)(1),
               [_, _] = (0, _.useState)(!1),
@@ -1062,7 +1060,7 @@
               }),
             });
           }),
-          _ = (_) => {
+          module_exports = (_) => {
             const [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(!1),
               [_, _] = (0, _.useState)(!1),
@@ -1138,8 +1136,8 @@
               }),
             });
           };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
         function _() {
           const [_] = (0, _.useState)(
             () => (0, _._)("ewatchlocation", "application_config") || _._._,
@@ -1167,11 +1165,9 @@
             (0, _.useEffect)(() => {
               const _ = _.Get().GetIFrameParentOrigin(),
                 _ = (_) => {
-                  var _;
                   !_ ||
                     _.origin !== _ ||
-                    ((_ = _.data) == null ? void 0 : _.msg) !==
-                      "OnVideoIFrameBroadcastIDChanged" ||
+                    _.data?.msg !== "OnVideoIFrameBroadcastIDChanged" ||
                     !_.data.broadcastid ||
                     _(String(_.data.broadcastid));
                 };
@@ -1183,16 +1179,16 @@
             _
           );
         }
-        const _ = (0, _._)((_) => {
+        const module_exports = (0, _.module_exports)((_) => {
           const _ = _.Get().GetBroadcasterSteamID(),
-            _ = _ == null ? void 0 : _.ConvertTo64BitString(),
+            _ = _?.ConvertTo64BitString(),
             _ = _(),
             [_, _] = (0, _._)("muted", !0),
             _ = _._.GetBroadcast(_),
             _ = _._.GetOrCreateBroadcastInfo(_),
             _ = _();
           if (!_) return null;
-          let _ = _ == null ? void 0 : _.m_ulBroadcastID;
+          let _ = _?.m_ulBroadcastID;
           _.Get().BShowOnlyChat() && (_ = _);
           let _;
           return (
@@ -1259,7 +1255,7 @@
         function _(_) {
           return _ != 0 && _ != _._;
         }
-        const _ = (0, _._)((_) => {
+        const module_exports = (0, _.module_exports)((_) => {
             const { broadcasterSteamID: _, broadcastInfo: _ } = _,
               [_, _] = (0, _.useState)(null);
             let _ = _.m_nAppID;
@@ -1339,7 +1335,7 @@
               })
             );
           }),
-          _ = (0, _._)((_) => {
+          module_exports = (0, _.module_exports)((_) => {
             const _ = (0, _.useRef)(null);
             let _ = _._.GetOrCreateBroadcastInfo(
               _.steamid.ConvertTo64BitString(),
@@ -1454,7 +1450,7 @@
               ],
             });
           });
-        let _ = {
+        let module_exports = {
           BroadcastWatch: (_) => `/broadcast/(watch|watchnew)/${_}`,
         };
         function _(_) {
@@ -1478,39 +1474,30 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module_exports(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ =
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        const module_exports =
             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
-          _ =
+          module_exports =
             "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-          _ =
-            __webpack_require__._ +
+          module_exports =
+            __webpack_require__.module_exports +
             "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _, _) => {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = Object.defineProperty,
+          module_exports = Object.getOwnPropertyDescriptor,
+          module_exports = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -1518,8 +1505,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           switch (_) {
             case "X-Small":
@@ -1536,8 +1522,45 @@
               return (0, _._)(_, `Unhandled size ${_}`), _;
           }
         }
-        const _ = _.memo(function (_) {
-          const {
+        const module_exports = _.memo(function (_) {
+            const {
+                strAvatarURL: _,
+                size: _ = "Medium",
+                className: _,
+                statusStyle: _,
+                statusPosition: _,
+                children: _,
+                ..._
+              } = _,
+              _ = _.useMemo(() => {
+                const _ = [];
+                return _ && _.push(_), _.push(_(_)), _;
+              }, [_, _]);
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  rgSources: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
+          }),
+          module_exports = _.memo(function (_) {
+            const {
               strAvatarURL: _,
               size: _ = "Medium",
               className: _,
@@ -1545,35 +1568,31 @@
               statusPosition: _,
               children: _,
               ..._
-            } = _,
-            _ = _.useMemo(() => {
-              const _ = [];
-              return _ && _.push(_), _.push(_(_)), _;
-            }, [_, _]);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              _,
-              _,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-                style: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_().avatar, "avatar"),
-                rgSources: _,
-                draggable: !1,
-              }),
-              _,
-            ],
+            } = _;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  src: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
           });
-        });
-        let _ = class extends _.Component {
+        let module_exports = class extends _.Component {
           render() {
             const {
               persona: _,
@@ -1603,8 +1622,8 @@
             );
           }
         };
-        _ = _([_._], _);
-        const _ = (0, _._)((_) => {
+        _ = _([_.module_exports], _);
+        const module_exports = (0, _.module_exports)((_) => {
           const {
             profileItem: _,
             className: _,
@@ -1627,10 +1646,10 @@
             })
           );
         });
-        let _ = class extends _.Component {
+        let module_exports = class extends _.Component {
+          m_timer;
           constructor(_) {
             super(_),
-              _(this, "m_timer"),
               (this.state = {
                 bAnimate: this.props.loopDuration != "None",
               }),
@@ -1716,7 +1735,7 @@
                 ..._,
                 cursor: "pointer",
               });
-            const _ = this.state.bAnimate && _ != null ? _ : void 0;
+            const _ = this.state.bAnimate ? (_ ?? void 0) : void 0;
             return (0, _.jsx)("div", {
               onMouseEnter: () =>
                 this.setState({
@@ -1729,7 +1748,7 @@
                 children: [
                   _,
                   (0, _.jsx)(_, {
-                    profileItem: _ != null ? _ : null,
+                    profileItem: _ ?? null,
                     bDisableAnimation: _ && !this.state.bAnimate,
                   }),
                 ],
@@ -1737,7 +1756,7 @@
             });
           }
         };
-        _ = _([_._], _);
+        _ = _([_.module_exports], _);
       },
       chunkid: (module) => {
         module.exports = {

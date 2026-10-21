@@ -4,39 +4,29 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports),
-          __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports),
+          __webpack_require__._(module_exports, {
             GameRecordingClipContent: () => _,
             default: () => _,
             useTimelineLoaderForCommunityClip: () => _,
           });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = class _ extends _.Message {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.representation_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [11], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -135,16 +125,16 @@
           getClassName() {
             return "CMsgVideoGameRecordingRepresentation";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.component_name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -218,16 +208,16 @@
           getClassName() {
             return "CMsgVideoGameRecordingComponent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -321,16 +311,16 @@
           getClassName() {
             return "CMsgVideoGameRecordingDef";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.segment_number || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -398,16 +388,16 @@
           getClassName() {
             return "CVideo_GameRecordingSegmentInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.segment_info || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -480,16 +470,16 @@
           getClassName() {
             return "CVideo_GameRecordingSegmentUploadInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -547,28 +537,16 @@
           getClassName() {
             return "CVideo_GameRecordingSegmentUploadInfo_HTTPHeaders";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        var __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.video_manager_clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -646,16 +624,16 @@
           getClassName() {
             return "CVideoManagerClipID";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -744,16 +722,16 @@
           getClassName() {
             return "CGameRecordingClip";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -811,16 +789,16 @@
           getClassName() {
             return "CGameRecording_CreateShareClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -872,16 +850,16 @@
           getClassName() {
             return "CGameRecording_CreateShareClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -934,9 +912,7 @@
           getClassName() {
             return "CGameRecording_DeleteSharedClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -978,13 +954,15 @@
             return "CGameRecording_DeleteSharedClip_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1037,16 +1015,16 @@
           getClassName() {
             return "CGameRecording_GetSingleSharedClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1098,16 +1076,16 @@
           getClassName() {
             return "CGameRecording_GetSingleSharedClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1176,16 +1154,16 @@
           getClassName() {
             return "CVideo_BeginGameRecordingSegmentsUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.segments_needed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1244,16 +1222,16 @@
           getClassName() {
             return "CVideo_BeginGameRecordingSegmentsUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1331,9 +1309,7 @@
           getClassName() {
             return "CVideo_CommitGameRecordingSegmentsUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -1375,13 +1351,15 @@
             return "CVideo_CommitGameRecordingSegmentsUpload_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1434,16 +1412,16 @@
           getClassName() {
             return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.segments_needed || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1497,16 +1475,16 @@
           getClassName() {
             return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1565,9 +1543,7 @@
           getClassName() {
             return "CVideo_GameRecordingCommitSegmentUploads_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -1609,7 +1585,7 @@
             return "CVideo_GameRecordingCommitSegmentUploads_Response";
           }
         }
-        var __webpack_require__;
+        var _;
         ((_) => {
           function _(_, _, _) {
             return _.SendMsg(
@@ -1647,7 +1623,7 @@
           }
           _.GetSingleSharedClip = _;
         })(_ || (_ = {}));
-        var __webpack_require__;
+        var _;
         ((_) => {
           function _(_, _, _) {
             return _.SendMsg(
@@ -1694,9 +1670,9 @@
           }
           _.CommitSegmentUploads = _;
         })(_ || (_ = {}));
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        let __webpack_require__ = null;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        let _ = null;
         function _(_) {
           if (_) {
             console.error("Attempt to set timeline marker hook a second time");
@@ -1761,11 +1737,10 @@
           return _().GetTimelineLoaderForSharedClip(_);
         }
         function _(_) {
-          var _, _;
           return _() != null
             ? {
-                bLoading: (_ = _()) == null ? void 0 : _.BLoadingClips(),
-                rgClipHandles: (_ = _()) == null ? void 0 : _.GetClipIDs(_),
+                bLoading: _()?.BLoadingClips(),
+                rgClipHandles: _()?.GetClipIDs(_),
               }
             : {
                 bLoading: !1,
@@ -1777,36 +1752,25 @@
           return useEffect(() => (_(_(_)), reaction(() => _(_), _)), [_]), _;
         }
         function _(_) {
-          return useObserver(() => {
-            var _;
-            return (_ = _()) == null ? void 0 : _.GetClipSummaries(_);
-          });
+          return useObserver(() => _()?.GetClipSummaries(_));
         }
         function _(_) {
-          var _;
-          return (_ = _()) == null ? void 0 : _.GetClipSummary(_);
+          return _()?.GetClipSummary(_);
         }
         function _(_) {
           return _() != null && _ ? _().GetClipSummariesForGame(_) || [] : [];
         }
         function _(_) {
-          return useObserver(() => {
-            var _;
-            return (_ = _()) == null ? void 0 : _.GetClipSummary(_);
-          });
+          return useObserver(() => _()?.GetClipSummary(_));
         }
         function _(_) {
-          return useObserver(() => {
-            var _;
-            return _
-              ? ((_ = _()) == null ? void 0 : _.GetClipSummariesForGame(_)) ||
-                  []
-              : [];
-          });
+          return useObserver(() =>
+            _ ? _()?.GetClipSummariesForGame(_) || [] : [],
+          );
         }
         function _(_, _, _, _, _, _) {
           return _() != null
-            ? _().LoadThumbnails(_, _, _, _, _, _ != null ? _ : !0)
+            ? _().LoadThumbnails(_, _, _, _, _, _ ?? !0)
             : null;
         }
         function _() {
@@ -1938,29 +1902,20 @@
         async function _(_, _) {
           return await _().GetRecordingHighlights(_, _);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -1969,9 +1924,7 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          __webpack_require__ = ((_) => (
+          _ = ((_) => (
             (_[(_.None = 0)] = "None"),
             (_[(_.DownloadFailed = 1)] = "DownloadFailed"),
             (_[(_.PlaybackError = 2)] = "PlaybackError"),
@@ -1979,31 +1932,30 @@
             _
           ))(_ || {});
         class _ {
+          m_elVideo = null;
+          m_player = null;
+          m_listeners = new _._();
+          m_nDownloadFailureCount = 0;
+          m_bInitailized = !1;
+          m_bPaused = !1;
+          m_bAtEnd = !1;
+          m_strMediaTypeError = null;
+          m_ePlayerError = 0;
+          m_bUserInputNeeded = !1;
+          m_bMuted = !1;
+          m_bSeekReadyToPlay = !1;
+          m_bVideoElementPlaying = !1;
+          m_nPlaybackSpeed = 1;
+          m_bIsWaiting = !0;
+          m_bAutoPlay;
+          m_bLoadedMetadata = !1;
+          m_nPlaybackTime = 0;
+          m_nVideoStartTime = 0;
+          m_nVideoDuration = 0;
+          m_nVolume = 1;
+          m_eSeekType = _._.Absolute;
           constructor(_) {
-            _(this, "m_elVideo", null),
-              _(this, "m_player", null),
-              _(this, "m_listeners", new _._()),
-              _(this, "m_nDownloadFailureCount", 0),
-              _(this, "m_bInitailized", !1),
-              _(this, "m_bPaused", !1),
-              _(this, "m_bAtEnd", !1),
-              _(this, "m_strMediaTypeError", null),
-              _(this, "m_ePlayerError", 0),
-              _(this, "m_bUserInputNeeded", !1),
-              _(this, "m_bMuted", !1),
-              _(this, "m_bSeekReadyToPlay", !1),
-              _(this, "m_bVideoElementPlaying", !1),
-              _(this, "m_nPlaybackSpeed", 1),
-              _(this, "m_bIsWaiting", !0),
-              _(this, "m_bAutoPlay"),
-              _(this, "m_bLoadedMetadata", !1),
-              _(this, "m_nPlaybackTime", 0),
-              _(this, "m_nVideoStartTime", 0),
-              _(this, "m_nVideoDuration", 0),
-              _(this, "m_nVolume", 1),
-              _(this, "m_eSeekType", _._.Absolute),
-              (0, _._)(this),
-              (this.m_bAutoPlay = !!_);
+            (0, _._)(this), (this.m_bAutoPlay = !!_);
           }
           IsPaused() {
             return this.m_bPaused;
@@ -2040,12 +1992,10 @@
             return this.m_bMuted;
           }
           GetMPDURL() {
-            var _;
-            return (_ = this.m_player) == null ? void 0 : _.GetMPDURL();
+            return this.m_player?.GetMPDURL();
           }
           GetVideoElementCurrentTime() {
-            var _;
-            return (_ = this.m_elVideo) == null ? void 0 : _.currentTime;
+            return this.m_elVideo?.currentTime;
           }
           BVideoElementPlaying() {
             return this.m_bVideoElementPlaying;
@@ -2054,14 +2004,10 @@
             return this.m_bIsWaiting;
           }
           GetVideoHeight() {
-            var _;
-            return (
-              ((_ = this.m_elVideo) == null ? void 0 : _.clientHeight) || 0
-            );
+            return this.m_elVideo?.clientHeight || 0;
           }
           GetVideoWidth() {
-            var _;
-            return ((_ = this.m_elVideo) == null ? void 0 : _.clientWidth) || 0;
+            return this.m_elVideo?.clientWidth || 0;
           }
           GetLoadedMetadata() {
             return this.m_bLoadedMetadata;
@@ -2180,8 +2126,7 @@
               (this.m_bIsWaiting = !0);
           }
           async UpdateMPD() {
-            var _;
-            await ((_ = this.m_player) == null ? void 0 : _.UpdateMPD());
+            await this.m_player?.UpdateMPD();
           }
           IsInitialized() {
             return this.m_bInitailized;
@@ -2222,14 +2167,13 @@
             this.m_bLoadedMetadata = !0;
           }
           async OnDownloadFailed(_) {
-            var _;
             if ((_.detail || _._.PlaybackError) == _._.UnsupportedMediaType) {
               (0, _._)("media type error"), (this.m_ePlayerError = 3);
               return;
             }
             (0, _._)("video download failed", _.detail),
               this.m_nDownloadFailureCount < 2
-                ? (await ((_ = this.m_player) == null ? void 0 : _.UpdateMPD()),
+                ? (await this.m_player?.UpdateMPD(),
                   this.m_nDownloadFailureCount++)
                 : (this.m_ePlayerError = 1);
           }
@@ -2300,43 +2244,43 @@
               this.m_player.Seek(_, this.m_eSeekType);
           }
         }
-        _([_.__webpack_require__], _.prototype, "m_bInitailized", 2),
-          _([_.__webpack_require__], _.prototype, "m_bPaused", 2),
-          _([_.__webpack_require__], _.prototype, "m_bAtEnd", 2),
-          _([_.__webpack_require__], _.prototype, "m_strMediaTypeError", 2),
-          _([_.__webpack_require__], _.prototype, "m_ePlayerError", 2),
-          _([_.__webpack_require__], _.prototype, "m_bUserInputNeeded", 2),
-          _([_.__webpack_require__], _.prototype, "m_bMuted", 2),
-          _([_.__webpack_require__], _.prototype, "m_bSeekReadyToPlay", 2),
-          _([_.__webpack_require__], _.prototype, "m_bVideoElementPlaying", 2),
-          _([_.__webpack_require__], _.prototype, "m_nPlaybackSpeed", 2),
-          _([_.__webpack_require__], _.prototype, "m_bIsWaiting", 2),
-          _([_.__webpack_require__], _.prototype, "m_bLoadedMetadata", 2),
-          _([_.__webpack_require__], _.prototype, "m_nPlaybackTime", 2),
-          _([_.__webpack_require__], _.prototype, "m_nVideoStartTime", 2),
-          _([_.__webpack_require__], _.prototype, "m_nVideoDuration", 2),
-          _([_.__webpack_require__], _.prototype, "m_nVolume", 2),
-          _([_.__webpack_require__], _.prototype, "m_eSeekType", 2),
-          _([_.__webpack_require__], _.prototype, "Start", 1),
-          _([_.__webpack_require__], _.prototype, "Stop", 1),
-          _([_.__webpack_require__], _.prototype, "OnCanPlay", 1),
-          _([_.__webpack_require__], _.prototype, "OnUserPauseChange", 1),
-          _([_.__webpack_require__], _.prototype, "OnVideoPlaying", 1),
-          _([_.__webpack_require__], _.prototype, "OnVideoPause", 1),
-          _([_.__webpack_require__], _.prototype, "OnVideoTimeUpdate", 1),
-          _([_.__webpack_require__], _.prototype, "OnVideoEnd", 1),
-          _([_.__webpack_require__], _.prototype, "OnSeeking", 1),
-          _([_.__webpack_require__], _.prototype, "OnLoadedMetadata", 1),
-          _([_.__webpack_require__], _.prototype, "OnDownloadFailed", 1),
-          _([_.__webpack_require__], _.prototype, "OnPlaybackError", 1),
-          _([_.__webpack_require__], _.prototype, "OnUserInputNeeded", 1),
-          _([_.__webpack_require__], _.prototype, "OnVolumeChange", 1),
-          _([_.__webpack_require__], _.prototype, "OnVideoWaiting", 1),
-          _([_.__webpack_require__], _.prototype, "UserInputReceived", 1);
+        _([_._], _.prototype, "m_bInitailized", 2),
+          _([_._], _.prototype, "m_bPaused", 2),
+          _([_._], _.prototype, "m_bAtEnd", 2),
+          _([_._], _.prototype, "m_strMediaTypeError", 2),
+          _([_._], _.prototype, "m_ePlayerError", 2),
+          _([_._], _.prototype, "m_bUserInputNeeded", 2),
+          _([_._], _.prototype, "m_bMuted", 2),
+          _([_._], _.prototype, "m_bSeekReadyToPlay", 2),
+          _([_._], _.prototype, "m_bVideoElementPlaying", 2),
+          _([_._], _.prototype, "m_nPlaybackSpeed", 2),
+          _([_._], _.prototype, "m_bIsWaiting", 2),
+          _([_._], _.prototype, "m_bLoadedMetadata", 2),
+          _([_._], _.prototype, "m_nPlaybackTime", 2),
+          _([_._], _.prototype, "m_nVideoStartTime", 2),
+          _([_._], _.prototype, "m_nVideoDuration", 2),
+          _([_._], _.prototype, "m_nVolume", 2),
+          _([_._], _.prototype, "m_eSeekType", 2),
+          _([_._], _.prototype, "Start", 1),
+          _([_._], _.prototype, "Stop", 1),
+          _([_._], _.prototype, "OnCanPlay", 1),
+          _([_._], _.prototype, "OnUserPauseChange", 1),
+          _([_._], _.prototype, "OnVideoPlaying", 1),
+          _([_._], _.prototype, "OnVideoPause", 1),
+          _([_._], _.prototype, "OnVideoTimeUpdate", 1),
+          _([_._], _.prototype, "OnVideoEnd", 1),
+          _([_._], _.prototype, "OnSeeking", 1),
+          _([_._], _.prototype, "OnLoadedMetadata", 1),
+          _([_._], _.prototype, "OnDownloadFailed", 1),
+          _([_._], _.prototype, "OnPlaybackError", 1),
+          _([_._], _.prototype, "OnUserInputNeeded", 1),
+          _([_._], _.prototype, "OnVolumeChange", 1),
+          _([_._], _.prototype, "OnVideoWaiting", 1),
+          _([_._], _.prototype, "UserInputReceived", 1);
         function _(_, _) {
           return (0, _._)((_) => (_(_), () => _()), [_]);
         }
-        let __webpack_require__;
+        let _;
         function _() {
           if (!_) {
             let _ = window.localStorage.getItem("gameRecordingPlayer") || "{}",
@@ -2362,18 +2306,18 @@
           let _ = JSON.stringify(_);
           window.localStorage.setItem("gameRecordingPlayer", _);
         }
-        const __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4;
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4;
         function _(_) {
           const { app: _ } = useRecordingActiveApp(_),
             { loader: _ } = useTimelineLoaderForGame(_),
             _ =
-              (_ == null ? void 0 : _.recording_type) ===
+              _?.recording_type ===
                 EGameRecordingType.k_EGameRecordingType_BackgroundRecording ||
-              (_ == null ? void 0 : _.recording_type) ===
+              _?.recording_type ===
                 EGameRecordingType.k_EGameRecordingType_ManualRecording,
             [_, _] = useState(null);
           if (
@@ -2410,7 +2354,7 @@
               ? _.video_duration_seconds
               : 0;
         }
-        var __webpack_require__ = ((_) => (
+        var _ = ((_) => (
           (_.NotRunning = "NotRunning"),
           (_.NotRecording = "NotRecording"),
           (_.ManualRecording = "ManualRecording"),
@@ -2431,18 +2375,9 @@
               return "BackgroundRecording";
           }
         }
-        var __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -2451,9 +2386,7 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _),
-          __webpack_require__ = ((_) => (
+          _ = ((_) => (
             (_.Overlay = "Overlay"),
             (_.Clips = "Clips"),
             (_.Background = "Background"),
@@ -2462,46 +2395,46 @@
             (_.Partner = "Partner"),
             _
           ))(_ || {}),
-          __webpack_require__ = ((_) => (
+          _ = ((_) => (
             (_.Never = "Never"), (_.Always = "Always"), (_.Manual = "Manual"), _
           ))(_ || {});
-        const __webpack_require__ = 3 * _.__webpack_require__,
-          __webpack_require__ = 5 * _.__webpack_require__,
-          __webpack_require__ = _.__webpack_require__ + 2e3,
-          __webpack_require__ = 1e3;
+        const _ = 3 * _._,
+          _ = 5 * _._,
+          _ = _._ + 2e3,
+          _ = 1e3;
         class _ {
+          m_gameRecordingVideo = null;
+          m_timelineLoader = null;
+          m_fnUnregisterLoader = null;
+          m_rgListeners = [];
+          m_videoRef;
+          m_bHidePlayer = !1;
+          m_fnGetManifest;
+          m_strRecordingID = null;
+          m_nPendingSeekSec = -1;
+          m_playbackDefinition = null;
+          m_pendingStop = null;
+          m_durationMS = (0, _._)(null);
+          m_lastRecordingGlobalMS = (0, _._)(null);
+          m_bWasLiveEdge = !1;
+          m_nGlobalTimelinePlaybackMS = null;
+          m_nGlobalTimelinePlaybackSec = null;
+          m_fnUnregisterAutorun = [];
+          m_eGameRecordingMode;
+          m_rgSeekPerf = [];
+          m_eRecordingState = _.NotRecording;
+          m_eRecordingSetting = "Never";
+          m_bGamepadMode = !1;
+          m_bControlsVisible = !0;
+          m_fnRenderGlyph = void 0;
+          m_previousHighlightEntry = null;
+          m_nextHighlightEntry = null;
+          m_displayHighlightEntry = null;
+          m_nRelativeTimeForDisplay = void 0;
+          m_rgClipOffsets = [];
+          m_phasePreview = void 0;
           constructor(_, _, _, _, _, _, _, _) {
-            _(this, "m_gameRecordingVideo", null),
-              _(this, "m_timelineLoader", null),
-              _(this, "m_fnUnregisterLoader", null),
-              _(this, "m_rgListeners", []),
-              _(this, "m_videoRef"),
-              _(this, "m_bHidePlayer", !1),
-              _(this, "m_fnGetManifest"),
-              _(this, "m_strRecordingID", null),
-              _(this, "m_nPendingSeekSec", -1),
-              _(this, "m_playbackDefinition", null),
-              _(this, "m_pendingStop", null),
-              _(this, "m_durationMS", (0, _._)(null)),
-              _(this, "m_lastRecordingGlobalMS", (0, _._)(null)),
-              _(this, "m_bWasLiveEdge", !1),
-              _(this, "m_nGlobalTimelinePlaybackMS", null),
-              _(this, "m_nGlobalTimelinePlaybackSec", null),
-              _(this, "m_fnUnregisterAutorun", []),
-              _(this, "m_eGameRecordingMode"),
-              _(this, "m_rgSeekPerf", []),
-              _(this, "m_eRecordingState", _.NotRecording),
-              _(this, "m_eRecordingSetting", "Never"),
-              _(this, "m_bGamepadMode", !1),
-              _(this, "m_bControlsVisible", !0),
-              _(this, "m_fnRenderGlyph"),
-              _(this, "m_previousHighlightEntry", null),
-              _(this, "m_nextHighlightEntry", null),
-              _(this, "m_displayHighlightEntry", null),
-              _(this, "m_nRelativeTimeForDisplay"),
-              _(this, "m_rgClipOffsets", []),
-              _(this, "m_phasePreview"),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_fnGetManifest = _),
               (this.m_gameRecordingVideo = new _(!0)),
               (this.m_eGameRecordingMode = _),
@@ -2531,17 +2464,13 @@
                 (0, _._)(
                   () => this.m_gameRecordingVideo.GetPlaybackTime(),
                   (_) => {
-                    var _;
                     if (
                       this.m_pendingStop &&
                       this.m_pendingStop.m_strRecordingID ==
                         this.m_strRecordingID &&
                       this.m_pendingStop.m_nOffsetMS <= _ * 1e3
                     ) {
-                      if (
-                        (_ = this.m_playbackDefinition) != null &&
-                        _.m_nLoopDurationMS
-                      ) {
+                      if (this.m_playbackDefinition?.m_nLoopDurationMS) {
                         this.StartPlaybackForRange();
                         return;
                       }
@@ -2599,28 +2528,21 @@
                     bHidePlayer: this.m_bHidePlayer,
                   }),
                   (_) => {
-                    var _, _, _, _;
-                    if (
-                      !((_ = this.m_timelineLoader) != null && _.BInitialized())
-                    )
-                      return;
+                    if (!this.m_timelineLoader?.BInitialized()) return;
                     if (_.bHidePlayer) {
                       this.SetEntriesForLiveEdge();
                       return;
                     }
                     (!this.m_previousHighlightEntry ||
                       !this.m_nextHighlightEntry ||
-                      ((_ = this.m_nextHighlightEntry) != null &&
-                        _.globalMS &&
+                      (this.m_nextHighlightEntry?.globalMS &&
                         _.globalPlaybackMS >=
                           this.m_nextHighlightEntry.globalMS.valMS) ||
-                      ((_ = this.m_previousHighlightEntry) != null &&
-                        _.globalMS &&
+                      (this.m_previousHighlightEntry?.globalMS &&
                         _.globalPlaybackMS <=
                           this.m_previousHighlightEntry.globalMS.valMS) ||
                       (_.bVideoPaused &&
-                        (_ = this.m_previousHighlightEntry) != null &&
-                        _.globalMS &&
+                        this.m_previousHighlightEntry?.globalMS &&
                         _.globalPlaybackMS >=
                           this.m_previousHighlightEntry.globalMS.valMS + _)) &&
                       (this.CalculatePreviousHighlightEntry(
@@ -2811,9 +2733,7 @@
             return this.m_rgClipOffsets;
           }
           SetClipOffsets(_) {
-            var _;
-            if (!((_ = this.m_timelineLoader) != null && _.BInitialized()))
-              return;
+            if (!this.m_timelineLoader?.BInitialized()) return;
             let _ = [];
             _ &&
               _.length &&
@@ -2935,11 +2855,11 @@
             };
           }
           async StartPlaybackForRange() {
-            let _ = this.m_timelineLoader.GetGlobalOffsetDataForTimeline(
+            let _ =
+              this.m_timelineLoader.GetGlobalOffsetDataForTimeline(
                 this.m_playbackDefinition.m_strTimelineID,
                 0,
-              ),
-              _ = (_ == null ? void 0 : _.nGlobalOffsetMS) || 0;
+              )?.nGlobalOffsetMS || 0;
             _ += this.m_playbackDefinition.m_nTimelineStartMS;
             let _;
             if (
@@ -3079,25 +2999,22 @@
             );
           }
           PlayNextTimelineRecording(_) {
-            var _;
-            if (
-              (_ = this.m_playbackDefinition) != null &&
-              _.m_nLoopDurationMS
-            ) {
+            if (this.m_playbackDefinition?.m_nLoopDurationMS) {
               this.StartPlaybackForRange();
               return;
             }
             let _;
-            if (this.m_strRecordingID)
-              _ = this.m_timelineLoader.GetNextRecording(this.m_strRecordingID);
-            else {
-              const _ =
-                this.m_timelineLoader.GetClosestNextRecordingInGlobalTimeline(
-                  (0, _._)(this.m_nGlobalTimelinePlaybackMS),
-                );
-              _ = _ == null ? void 0 : _.recording_id;
-            }
-            if (_) {
+            if (
+              (this.m_strRecordingID
+                ? (_ = this.m_timelineLoader.GetNextRecording(
+                    this.m_strRecordingID,
+                  ))
+                : (_ =
+                    this.m_timelineLoader.GetClosestNextRecordingInGlobalTimeline(
+                      (0, _._)(this.m_nGlobalTimelinePlaybackMS),
+                    )?.recording_id),
+              _)
+            ) {
               this.SetPlaytimeFromRecordingOffset(_, 0);
               return;
             }
@@ -3174,16 +3091,11 @@
             this.m_gameRecordingVideo.Stop();
           }
           TogglePlayPause() {
-            var _, _;
             this.m_gameRecordingVideo.IsPaused() ||
             !this.m_gameRecordingVideo.IsInitialized()
               ? (this.m_nGlobalTimelinePlaybackMS >
-                  ((_ =
-                    (_ = this.m_lastRecordingGlobalMS) == null
-                      ? void 0
-                      : _.valMS) != null
-                    ? _
-                    : 0) && this.TryPlayInitialTimelineVideo(),
+                  (this.m_lastRecordingGlobalMS?.valMS ?? 0) &&
+                  this.TryPlayInitialTimelineVideo(),
                 this.m_gameRecordingVideo.GetTimelineDuration() -
                   this.m_gameRecordingVideo.GetPlaybackTime() <
                 0.05
@@ -3198,7 +3110,6 @@
             return this.m_nGlobalTimelinePlaybackSec;
           }
           UpdateGlobalPlayTime(_) {
-            var _;
             if (
               ((this.m_nGlobalTimelinePlaybackMS = _),
               (this.m_nGlobalTimelinePlaybackSec = Math.floor(_ / 1e3)),
@@ -3208,9 +3119,7 @@
               const _ = this.m_bWasLiveEdge ? _ : _;
               this.m_bWasLiveEdge =
                 this.m_lastRecordingGlobalMS.valMS -
-                  (((_ = this.GetGlobalMSPlaytime()) == null
-                    ? void 0
-                    : _.valMS) || 0) <
+                  (this.GetGlobalMSPlaytime()?.valMS || 0) <
                 _;
             }
           }
@@ -3227,11 +3136,7 @@
                     0,
                   ).nGlobalOffsetMS,
                 ),
-                this.ChangePlaybackRecording(
-                  _ == null ? void 0 : _.recording_id,
-                  _ / 1e3,
-                  _,
-                );
+                this.ChangePlaybackRecording(_?.recording_id, _ / 1e3, _);
             } else
               _ || (this.m_nRelativeTimeForDisplay = 0),
                 this.UpdateGlobalPlayTime(0),
@@ -3248,11 +3153,7 @@
                     0,
                   ).nGlobalOffsetMS,
                 ),
-                this.ChangePlaybackRecording(
-                  _ == null ? void 0 : _.recording_id,
-                  0,
-                  _,
-                ))
+                this.ChangePlaybackRecording(_?.recording_id, 0, _))
               : (_ ||
                   (this.m_nRelativeTimeForDisplay = this.GetTotalMS().valMS),
                 this.ChangePlaybackRecording(
@@ -3271,14 +3172,14 @@
               ? (_ || (this.m_nRelativeTimeForDisplay = _.valMS),
                 this.UpdateGlobalPlayTime(_.valMS),
                 this.ChangePlaybackRecording(
-                  _ == null ? void 0 : _.strRecordingID,
-                  (_ == null ? void 0 : _.nRecordingOffsetMS) / 1e3,
+                  _?.strRecordingID,
+                  _?.nRecordingOffsetMS / 1e3,
                   _,
                 ))
               : _
                 ? this.ChangePlaybackRecording(
-                    _ == null ? void 0 : _.strRecordingID,
-                    (_ == null ? void 0 : _.nRecordingOffsetMS) / 1e3,
+                    _?.strRecordingID,
+                    _?.nRecordingOffsetMS / 1e3,
                     _,
                   )
                 : _.valMS > this.m_nGlobalTimelinePlaybackMS
@@ -3414,54 +3315,34 @@
             _ != null && (this.m_bControlsVisible = _);
           }
         }
-        _([_.__webpack_require__], _.prototype, "m_bHidePlayer", 2),
-          _([_.__webpack_require__], _.prototype, "m_strRecordingID", 2),
-          _([_.__webpack_require__], _.prototype, "m_durationMS", 2),
-          _([_.__webpack_require__], _.prototype, "m_lastRecordingGlobalMS", 2),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_nGlobalTimelinePlaybackMS",
-            2,
-          ),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_nGlobalTimelinePlaybackSec",
-            2,
-          ),
-          _([_.__webpack_require__], _.prototype, "m_rgSeekPerf", 2),
-          _([_.__webpack_require__], _.prototype, "m_eRecordingState", 2),
-          _([_.__webpack_require__], _.prototype, "m_eRecordingSetting", 2),
-          _([_.__webpack_require__], _.prototype, "m_bGamepadMode", 2),
-          _([_.__webpack_require__], _.prototype, "m_bControlsVisible", 2),
-          _([_.__webpack_require__], _.prototype, "m_fnRenderGlyph", 2),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_previousHighlightEntry",
-            2,
-          ),
-          _([_.__webpack_require__], _.prototype, "m_nextHighlightEntry", 2),
-          _([_.__webpack_require__], _.prototype, "m_displayHighlightEntry", 2),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_nRelativeTimeForDisplay",
-            2,
-          ),
-          _([_.__webpack_require__.ref], _.prototype, "m_rgClipOffsets", 2),
-          _([_.__webpack_require__.ref], _.prototype, "m_phasePreview", 2),
-          _([_.__webpack_require__], _.prototype, "SetVideoElement", 1),
-          _([_.__webpack_require__], _.prototype, "OnInvalidateRecording", 1),
-          _([_.__webpack_require__], _.prototype, "OnLoaderInitialized", 1),
-          _([_.__webpack_require__], _.prototype, "OnInvalidate", 1),
-          _([_.__webpack_require__], _.prototype, "OnTimelineLoaded", 1),
-          _([_.__webpack_require__], _.prototype, "GetLiveEdgeMS", 1),
-          _([_.__webpack_require__], _.prototype, "StopPlayback", 1),
-          _([_.__webpack_require__], _.prototype, "TogglePlayPause", 1),
-          _([_.__webpack_require__], _.prototype, "UpdateGlobalPlayTime", 1);
-        const __webpack_require__ = _.createContext({
+        _([_._], _.prototype, "m_bHidePlayer", 2),
+          _([_._], _.prototype, "m_strRecordingID", 2),
+          _([_._], _.prototype, "m_durationMS", 2),
+          _([_._], _.prototype, "m_lastRecordingGlobalMS", 2),
+          _([_._], _.prototype, "m_nGlobalTimelinePlaybackMS", 2),
+          _([_._], _.prototype, "m_nGlobalTimelinePlaybackSec", 2),
+          _([_._], _.prototype, "m_rgSeekPerf", 2),
+          _([_._], _.prototype, "m_eRecordingState", 2),
+          _([_._], _.prototype, "m_eRecordingSetting", 2),
+          _([_._], _.prototype, "m_bGamepadMode", 2),
+          _([_._], _.prototype, "m_bControlsVisible", 2),
+          _([_._], _.prototype, "m_fnRenderGlyph", 2),
+          _([_._], _.prototype, "m_previousHighlightEntry", 2),
+          _([_._], _.prototype, "m_nextHighlightEntry", 2),
+          _([_._], _.prototype, "m_displayHighlightEntry", 2),
+          _([_._], _.prototype, "m_nRelativeTimeForDisplay", 2),
+          _([_._.ref], _.prototype, "m_rgClipOffsets", 2),
+          _([_._.ref], _.prototype, "m_phasePreview", 2),
+          _([_._], _.prototype, "SetVideoElement", 1),
+          _([_._], _.prototype, "OnInvalidateRecording", 1),
+          _([_._], _.prototype, "OnLoaderInitialized", 1),
+          _([_._], _.prototype, "OnInvalidate", 1),
+          _([_._], _.prototype, "OnTimelineLoaded", 1),
+          _([_._], _.prototype, "GetLiveEdgeMS", 1),
+          _([_._], _.prototype, "StopPlayback", 1),
+          _([_._], _.prototype, "TogglePlayPause", 1),
+          _([_._], _.prototype, "UpdateGlobalPlayTime", 1);
+        const _ = _.createContext({
           timelinePlaybackCoordinator: null,
         });
         function _(_) {
@@ -3526,29 +3407,20 @@
         function _() {
           const _ = _();
           return [
-            (0, _._)(() => (_ == null ? void 0 : _.GetPhasePreview()) || null),
-            (_) => (_ == null ? void 0 : _.SetPhasePreview(_)),
+            (0, _._)(() => _?.GetPhasePreview() || null),
+            (_) => _?.SetPhasePreview(_),
           ];
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -3556,10 +3428,8 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = 30;
+          };
+        const _ = 30;
         function _(_, _) {
           return (
             _.strRecordingID === _.strRecordingID &&
@@ -3570,21 +3440,21 @@
             _.bPreciseTiming == _.bPreciseTiming
           );
         }
-        const __webpack_require__ = class _ {
+        const _ = class _ {
+          k_QueueWaitUntilRequestMS = 10;
+          k_nMaxBatchSize = 50;
+          m_nMaxCacheSize = (_ * 60 * 1e3) / _._;
+          m_LRUTrackerSet = new Set();
+          m_mapPromises = new Map();
+          m_mapThumbnailImages = new Map();
+          m_rgPendingRequest = new Array();
+          m_PendingInfoPromise;
+          m_PendingInfoResolve = void 0;
+          m_PendingTimer = void 0;
+          k_AlreadyResolvedOK = Promise.resolve(!0);
+          m_rgThumbnailPerf = [];
           constructor() {
-            _(this, "k_QueueWaitUntilRequestMS", 10),
-              _(this, "k_nMaxBatchSize", 50),
-              _(this, "m_nMaxCacheSize", (_ * 60 * 1e3) / _._),
-              _(this, "m_LRUTrackerSet", new Set()),
-              _(this, "m_mapPromises", new Map()),
-              _(this, "m_mapThumbnailImages", new Map()),
-              _(this, "m_rgPendingRequest", new Array()),
-              _(this, "m_PendingInfoPromise"),
-              _(this, "m_PendingInfoResolve"),
-              _(this, "m_PendingTimer"),
-              _(this, "k_AlreadyResolvedOK", Promise.resolve(!0)),
-              _(this, "m_rgThumbnailPerf", []),
-              (0, _._)(this);
+            (0, _._)(this);
           }
           AddPerfMeasure(_) {
             this.m_rgThumbnailPerf.push(_);
@@ -3704,7 +3574,7 @@
             );
           }
           async FlushPendingInfo() {
-            if (typeof this.m_PendingInfoResolve == "undefined") return;
+            if (typeof this.m_PendingInfoResolve > "u") return;
             const _ = this.m_PendingInfoResolve,
               _ = this.m_rgPendingRequest;
             (this.m_PendingInfoPromise = void 0),
@@ -3727,14 +3597,10 @@
                   _[0].bPreciseTiming,
                 );
               (0, _._)(
-                (_ == null ? void 0 : _.length) == _.length,
-                `CThumbnailCache.InternalLoadMultipleThumbnails request ${_.length} and got back ${_ == null ? void 0 : _.length}`,
+                _?.length == _.length,
+                `CThumbnailCache.InternalLoadMultipleThumbnails request ${_.length} and got back ${_?.length}`,
               );
-              for (
-                let _ = 0;
-                _ < _.length && _ < (_ == null ? void 0 : _.length);
-                ++_
-              ) {
+              for (let _ = 0; _ < _.length && _ < _?.length; ++_) {
                 const _ = _[_],
                   _ = this.GetKey(
                     _.gameID,
@@ -3787,7 +3653,7 @@
             const _ = this.GetKey(_, _, _, _, _, _, _);
             try {
               const _ = await _(_, _, void 0, [_ * 1e3], _, _);
-              if ((_ == null ? void 0 : _.length) > 0) {
+              if (_?.length > 0) {
                 let _ = _ ? _[0].image_data() : null;
                 return (
                   this.SetThumbnailData(_, {
@@ -3811,25 +3677,20 @@
             }
             return !1;
           }
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
         };
-        _(_, "s_Singleton"),
-          _([_.__webpack_require__], _.prototype, "m_mapThumbnailImages", 2);
-        let __webpack_require__ = _;
+        _([_._], _.prototype, "m_mapThumbnailImages", 2);
+        let _ = _;
         function _(_) {
-          var _;
           const _ = (0, _.useRef)(null),
             _ = (0, _._)(),
             _ = (0, _._)("useThumbnailAsURL");
           return (
             (0, _.useEffect)(() => {
-              var _;
-              if (
-                _ &&
-                !((_ = _ == null ? void 0 : _.token) != null && _.reason)
-              ) {
+              if (_ && !_?.token?.reason) {
                 const _ = new Blob([_], {
                     type: "image/jpeg",
                   }),
@@ -3840,11 +3701,7 @@
                 _.current &&
                   (URL.revokeObjectURL(_.current), (_.current = void 0));
               };
-            }, [
-              (_ = _ == null ? void 0 : _.token) == null ? void 0 : _.reason,
-              _,
-              _,
-            ]),
+            }, [_?.token?.reason, _, _]),
             _.current
           );
         }
@@ -3855,19 +3712,19 @@
           const _ = (0, _._)(() =>
             _.Get().GetOrQueueThumbnail(_, _, _, _, _, _, _),
           );
-          return _(_ == null ? void 0 : _.data);
+          return _(_?.data);
         }
         function _() {
           return _.Get().ClearThumbnailData();
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = {
             nBeforeMS: 0,
             nAfterMS: 12e3,
           },
-          __webpack_require__ = _.createContext({
+          _ = _.createContext({
             globalStartMS: void 0,
             globalEndMS: void 0,
             setRange: null,
@@ -3939,12 +3796,9 @@
             _ = React.useCallback(
               (_, _) => {
                 if (_ !== void 0) {
-                  let _ =
-                    _ != null
-                      ? _
-                      : {
-                          ..._,
-                        };
+                  let _ = _ ?? {
+                    ..._,
+                  };
                   _.originalGlobalMS == 0 &&
                     ((_.originalRangeMethod = _),
                     (_.originalGlobalMS = _.valMS)),
@@ -3958,12 +3812,9 @@
             _ = React.useCallback(
               (_, _) => {
                 if (_ !== void 0) {
-                  let _ =
-                    _ != null
-                      ? _
-                      : {
-                          ..._,
-                        };
+                  let _ = _ ?? {
+                    ..._,
+                  };
                   _.originalGlobalMS == 0 &&
                     ((_.originalRangeMethod = _),
                     (_.originalGlobalMS = _.valMS)),
@@ -4088,12 +3939,8 @@
           };
         }
         function _() {
-          var _, _;
           const _ = (0, _.useContext)(_);
-          return (
-            !isNaN((_ = _.globalStartMS) == null ? void 0 : _.valMS) &&
-            !isNaN((_ = _.globalEndMS) == null ? void 0 : _.valMS)
-          );
+          return !isNaN(_.globalStartMS?.valMS) && !isNaN(_.globalEndMS?.valMS);
         }
         function _() {
           return (0, _.useContext)(_).clearSelection;
@@ -4109,11 +3956,10 @@
           };
         }
         function _() {
-          var _, _;
           const _ = useContext(_);
           return (
-            !isNaN((_ = _.globalPreviewStartMS) == null ? void 0 : _.valMS) &&
-            !isNaN((_ = _.globalPreviewEndMS) == null ? void 0 : _.valMS)
+            !isNaN(_.globalPreviewStartMS?.valMS) &&
+            !isNaN(_.globalPreviewEndMS?.valMS)
           );
         }
         function _() {
@@ -4182,28 +4028,17 @@
           (_.current = _),
             (0, _.useEffect)(() => {
               if (!_.current) return;
-              let _ =
-                !isNaN(_ == null ? void 0 : _.valMS) &&
-                !isNaN(_ == null ? void 0 : _.valMS);
+              let _ = !isNaN(_?.valMS) && !isNaN(_?.valMS);
               (_.current == _ && _) ||
                 ((_.current = _),
                 _ && _ ? _.current(_, _) : _.current(null, null));
             }, [_, _, _, _, _]);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -4211,15 +4046,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = 5e3,
-          __webpack_require__ = 300 * 1e3,
-          __webpack_require__ = 1e3,
-          __webpack_require__ = 10,
-          __webpack_require__ = 10;
-        var __webpack_require__ = ((_) => (
+          };
+        const _ = 5e3,
+          _ = 300 * 1e3,
+          _ = 1e3,
+          _ = 10,
+          _ = 10;
+        var _ = ((_) => (
           (_.Playhead = "Playhead"),
           (_.RangeLeft = "RangeLeft"),
           (_.RangeRight = "RangeRight"),
@@ -4227,14 +4060,12 @@
           _
         ))(_ || {});
         class _ {
+          m_fnUnregisterFromLoader;
+          m_loader;
+          m_maskBounds = [-1, -1];
+          m_eventTarget;
           constructor(_, _) {
-            _(this, "m_fnUnregisterFromLoader"),
-              _(this, "m_loader"),
-              _(this, "m_maskBounds", [-1, -1]),
-              _(this, "m_eventTarget"),
-              (0, _._)(this),
-              (this.m_loader = _),
-              (this.m_eventTarget = _);
+            (0, _._)(this), (this.m_loader = _), (this.m_eventTarget = _);
           }
           Init() {
             (this.m_fnUnregisterFromLoader =
@@ -4261,7 +4092,7 @@
           }
           GetTimelineStartTime(_) {
             const _ = this.m_loader.GetTimelineMetadata(_);
-            return _ != null && _.metadata ? _.metadata.date_recorded : null;
+            return _?.metadata ? _.metadata.date_recorded : null;
           }
           BEmpty() {
             return !1;
@@ -4308,42 +4139,34 @@
           }
         }
         class _ {
+          m_playbackCoordinator;
+          m_fnUnregisterPlaybackCoordinator;
+          m_refTimelineParentCtn;
+          m_timelineMask;
+          m_durationMS = 0;
+          m_mapTimelineClips = _._.map([], {
+            deep: !1,
+          });
+          m_scrollLeftPX = 0;
+          m_scrollWindowWidth = null;
+          m_scrollWindowOffsetPX = null;
+          m_bAutoScrollPaused = !1;
+          m_autoScrollPauseTimeout = null;
+          m_msVisible = 0;
+          m_bCustomZoom = !1;
+          m_bUserClipping = !1;
+          m_prevLeftAndVisible = null;
+          m_rgTimelineOffsets = [];
+          m_mapTimelineEntries = _._.map([], {
+            deep: !1,
+          });
+          m_bInitialized = !1;
+          m_eThumbnailComponent = null;
+          m_nGlobalRelativeThumbnailPositionPX = void 0;
+          m_thumbnailHighlightEntry = void 0;
+          m_phaseToHighlight = void 0;
           constructor(_, _, _) {
-            _(this, "m_playbackCoordinator"),
-              _(this, "m_fnUnregisterPlaybackCoordinator"),
-              _(this, "m_refTimelineParentCtn"),
-              _(this, "m_timelineMask"),
-              _(this, "m_durationMS", 0),
-              _(
-                this,
-                "m_mapTimelineClips",
-                _._.map([], {
-                  deep: !1,
-                }),
-              ),
-              _(this, "m_scrollLeftPX", 0),
-              _(this, "m_scrollWindowWidth", null),
-              _(this, "m_scrollWindowOffsetPX", null),
-              _(this, "m_bAutoScrollPaused", !1),
-              _(this, "m_autoScrollPauseTimeout", null),
-              _(this, "m_msVisible", 0),
-              _(this, "m_bCustomZoom", !1),
-              _(this, "m_bUserClipping", !1),
-              _(this, "m_prevLeftAndVisible", null),
-              _(this, "m_rgTimelineOffsets", []),
-              _(
-                this,
-                "m_mapTimelineEntries",
-                _._.map([], {
-                  deep: !1,
-                }),
-              ),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_eThumbnailComponent", null),
-              _(this, "m_nGlobalRelativeThumbnailPositionPX"),
-              _(this, "m_thumbnailHighlightEntry"),
-              _(this, "m_phaseToHighlight"),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_playbackCoordinator = _),
               (this.m_timelineMask = new _(_, this)),
               (this.m_fnUnregisterPlaybackCoordinator =
@@ -4622,16 +4445,10 @@
               });
           }
           GetVisibleTimelineGameModes(_) {
-            var _;
-            return (_ = this.m_mapTimelineEntries.get(_)) == null
-              ? void 0
-              : _.rgGameModes;
+            return this.m_mapTimelineEntries.get(_)?.rgGameModes;
           }
           GetVisibleTimelineHighlights(_) {
-            var _;
-            return (_ = this.m_mapTimelineEntries.get(_)) == null
-              ? void 0
-              : _.rgHighlights;
+            return this.m_mapTimelineEntries.get(_)?.rgHighlights;
           }
           GetStateDescriptionAtGlobalMS(_) {
             return this.m_timelineMask.GetStateDescriptionAtGlobalMS(_);
@@ -4693,8 +4510,7 @@
             return this.m_scrollWindowOffsetPX;
           }
           GetScrollableWidthPX() {
-            var _;
-            if (!((_ = this.m_rgTimelineOffsets) != null && _.length)) return 0;
+            if (!this.m_rgTimelineOffsets?.length) return 0;
             const _ = this.m_rgTimelineOffsets.length - 1,
               _ = this.m_rgTimelineOffsets[_];
             return (
@@ -4968,45 +4784,30 @@
             return this.m_phaseToHighlight;
           }
         }
-        _([_.__webpack_require__], _.prototype, "m_durationMS", 2),
-          _([_.__webpack_require__], _.prototype, "m_scrollLeftPX", 2),
-          _([_.__webpack_require__], _.prototype, "m_scrollWindowWidth", 2),
-          _([_.__webpack_require__], _.prototype, "m_scrollWindowOffsetPX", 2),
-          _([_.__webpack_require__], _.prototype, "m_bAutoScrollPaused", 2),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_autoScrollPauseTimeout",
-            2,
-          ),
-          _([_.__webpack_require__], _.prototype, "m_msVisible", 2),
-          _([_.__webpack_require__.ref], _.prototype, "m_rgTimelineOffsets", 2),
-          _([_.__webpack_require__], _.prototype, "m_bInitialized", 2),
-          _([_.__webpack_require__], _.prototype, "m_eThumbnailComponent", 2),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_nGlobalRelativeThumbnailPositionPX",
-            2,
-          ),
-          _(
-            [_.__webpack_require__],
-            _.prototype,
-            "m_thumbnailHighlightEntry",
-            2,
-          ),
-          _([_.__webpack_require__], _.prototype, "m_phaseToHighlight", 2),
-          _([_.__webpack_require__], _.prototype, "OnLoaderInitialized", 1),
-          _([_.__webpack_require__], _.prototype, "InitDefaultsIfReady", 1),
-          _([_.__webpack_require__], _.prototype, "OnInvalidate", 1),
-          _([_.__webpack_require__], _.prototype, "ZoomIn", 1),
-          _([_.__webpack_require__], _.prototype, "ZoomOut", 1),
-          _([_.__webpack_require__], _.prototype, "SetTempZoomScale", 1),
-          _([_.__webpack_require__], _.prototype, "ClearTempZoomScale", 1),
-          _([_.__webpack_require__], _.prototype, "UpdateClipSummaries", 1),
-          _([_.__webpack_require__], _.prototype, "BReachedMaxScroll", 1),
-          _([_.__webpack_require__], _.prototype, "BReachedMinScroll", 1);
-        const __webpack_require__ = _.createContext(null);
+        _([_._], _.prototype, "m_durationMS", 2),
+          _([_._], _.prototype, "m_scrollLeftPX", 2),
+          _([_._], _.prototype, "m_scrollWindowWidth", 2),
+          _([_._], _.prototype, "m_scrollWindowOffsetPX", 2),
+          _([_._], _.prototype, "m_bAutoScrollPaused", 2),
+          _([_._], _.prototype, "m_autoScrollPauseTimeout", 2),
+          _([_._], _.prototype, "m_msVisible", 2),
+          _([_._.ref], _.prototype, "m_rgTimelineOffsets", 2),
+          _([_._], _.prototype, "m_bInitialized", 2),
+          _([_._], _.prototype, "m_eThumbnailComponent", 2),
+          _([_._], _.prototype, "m_nGlobalRelativeThumbnailPositionPX", 2),
+          _([_._], _.prototype, "m_thumbnailHighlightEntry", 2),
+          _([_._], _.prototype, "m_phaseToHighlight", 2),
+          _([_._], _.prototype, "OnLoaderInitialized", 1),
+          _([_._], _.prototype, "InitDefaultsIfReady", 1),
+          _([_._], _.prototype, "OnInvalidate", 1),
+          _([_._], _.prototype, "ZoomIn", 1),
+          _([_._], _.prototype, "ZoomOut", 1),
+          _([_._], _.prototype, "SetTempZoomScale", 1),
+          _([_._], _.prototype, "ClearTempZoomScale", 1),
+          _([_._], _.prototype, "UpdateClipSummaries", 1),
+          _([_._], _.prototype, "BReachedMaxScroll", 1),
+          _([_._], _.prototype, "BReachedMinScroll", 1);
+        const _ = _.createContext(null);
         function _(_) {
           let {
               loader: _,
@@ -5066,9 +4867,9 @@
         function _() {
           return (0, _.useContext)(_);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = (0, _.createContext)({});
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _.createContext)({});
         function _(_) {
           const {
               children: _,
@@ -5104,20 +4905,11 @@
         function _() {
           return (0, _.useContext)(_);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -5125,10 +4917,8 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = null;
+          };
+        const _ = null;
         async function _(_, _, _, _, _) {
           const _ = _.GetTimelineAndOffsetRelativeToCurrentPlayback(),
             _ = _.GetTimelineAndOffsetRelativeToCurrentPlayback(_);
@@ -5187,19 +4977,19 @@
           return null;
         }
         class _ {
+          m_bCreationWasTemporary;
+          m_fnCreate;
+          m_creationResult;
+          m_bCleanedUp = !1;
+          m_nClipLengthSeconds;
+          m_strSuggestedClipName;
+          m_strGameID;
+          m_strSrcClipID;
+          m_eInitMethod;
+          m_startMetrics;
+          m_endMetrics;
           constructor(_, _, _, _, _, _, _, _) {
-            _(this, "m_bCreationWasTemporary"),
-              _(this, "m_fnCreate"),
-              _(this, "m_creationResult"),
-              _(this, "m_bCleanedUp", !1),
-              _(this, "m_nClipLengthSeconds"),
-              _(this, "m_strSuggestedClipName"),
-              _(this, "m_strGameID"),
-              _(this, "m_strSrcClipID"),
-              _(this, "m_eInitMethod"),
-              _(this, "m_startMetrics"),
-              _(this, "m_endMetrics"),
-              (this.m_fnCreate = _),
+            (this.m_fnCreate = _),
               (this.m_nClipLengthSeconds = _),
               (this.m_strSuggestedClipName = _),
               (this.m_strGameID = _),
@@ -5237,13 +5027,11 @@
                 Promise.resolve(this.m_creationResult));
           }
           async cleanup() {
-            var _;
             if (this.m_bCleanedUp)
               throw new Error("cleanup called twice on clip creation");
             if (
               ((this.m_bCleanedUp = !0),
-              (_ = this.m_creationResult) != null &&
-                _.clipSummary &&
+              this.m_creationResult?.clipSummary &&
                 this.m_bCreationWasTemporary)
             ) {
               const { fnDeleteClip: _ } = _();
@@ -5251,8 +5039,7 @@
             }
           }
         }
-        _([_.__webpack_require__], _.prototype, "create", 1),
-          _([_.__webpack_require__], _.prototype, "cleanup", 1);
+        _([_._], _.prototype, "create", 1), _([_._], _.prototype, "cleanup", 1);
         function _(_, _, _, _, _, _, _, _, _, _, _) {
           const _ = (_, _) => _(_, _, _, _, _, _, _, _, _);
           return new _(_, _ / 1e3, _, _, _, _, _, _).Request();
@@ -5264,9 +5051,7 @@
             _ = parseInt(_.duration_ms) / 1e3,
             _ = _.file_size ? (parseInt(_.file_size) * 8) / (1024 * _) : void 0;
           class _ {
-            constructor() {
-              _(this, "m_bCreated", !1);
-            }
+            m_bCreated = !1;
             async create(_) {
               return (
                 this.m_bCreated ||
@@ -5309,7 +5094,7 @@
             nClipLengthSeconds: _,
             bExistingClip: !0,
             strSuggestedClipName: _.name,
-            strCurrentExportPath: _ == null ? void 0 : _.exportPath,
+            strCurrentExportPath: _?.exportPath,
             strSrcClipID: _,
             gameID: new CGameID(_.game_id),
             nEstimatedBitrateKbps: _,
@@ -5361,8 +5146,8 @@
             result: _._,
           };
         }
-        const __webpack_require__ = 20,
-          __webpack_require__ = "PhaseList";
+        const _ = 20,
+          _ = "PhaseList";
         function _(_) {
           const _ = _.tags || {};
           return {
@@ -5573,9 +5358,9 @@
             },
           ).create(!1);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = _.createContext({
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = _.createContext({
           bInContainer: !1,
           bContainerFocus: !1,
           nMouseClientXPX: null,
@@ -5616,12 +5401,7 @@
             _ = (0, _.useCallback)(
               (_, _) => (
                 _.current && _.current.addEventListener(_, _),
-                () => {
-                  var _;
-                  return (_ = _.current) == null
-                    ? void 0
-                    : _.removeEventListener(_, _);
-                }
+                () => _.current?.removeEventListener(_, _)
               ),
               [],
             ),
@@ -6022,22 +5802,10 @@
             _
           );
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = "steam_";
-        var __webpack_require__ = ((_) => (
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = "steam_";
+        var _ = ((_) => (
           (_[(_.White = 0)] = "White"),
           (_[(_.Red = 1)] = "Red"),
           (_[(_.Orange = 2)] = "Orange"),
@@ -6085,108 +5853,105 @@
         function _(_) {
           return Object.keys(_).filter((_) => !Number.isNaN(_));
         }
-        const __webpack_require__ = _(_).map((_) => _[_]),
-          __webpack_require__ = class _ {
-            constructor() {
-              _(this, "m_mapSteamTimelineMarkers", new Map());
-            }
-            GetMarkerByID(_) {
-              const _ = _.toLowerCase().startsWith(_)
-                ? _.slice(_.length).toLowerCase()
-                : _.toLowerCase();
-              if (this.m_mapSteamTimelineMarkers.has(_))
-                return this.m_mapSteamTimelineMarkers.get(_);
-              const _ = parseInt(_);
-              return typeof _ == "number" && _ >= 0 && _ <= 99
-                ? {
-                    func: (_) =>
-                      _._({
-                        nNumber: _,
-                      }),
-                    color: 8,
-                  }
-                : _();
-            }
-            GetAllUseableMarkerID() {
-              return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
-                (_) => _ + _,
-              );
-            }
-            static Get() {
-              return (
-                _.s_Singleton ||
-                  ((_.s_Singleton = new _()), _.s_Singleton.Init()),
-                _.s_Singleton
-              );
-            }
-            AddMarker(_, _, _) {
-              const _ = _ != null ? _ : 0;
+        const _ = _(_).map((_) => _[_]);
+        class _ {
+          m_mapSteamTimelineMarkers = new Map();
+          GetMarkerByID(_) {
+            const _ = _.toLowerCase().startsWith(_)
+              ? _.slice(_.length).toLowerCase()
+              : _.toLowerCase();
+            if (this.m_mapSteamTimelineMarkers.has(_))
+              return this.m_mapSteamTimelineMarkers.get(_);
+            const _ = parseInt(_);
+            return typeof _ == "number" && _ >= 0 && _ <= 99
+              ? {
+                  func: (_) =>
+                    _._({
+                      nNumber: _,
+                    }),
+                  color: 8,
+                }
+              : _();
+          }
+          GetAllUseableMarkerID() {
+            return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
+              (_) => _ + _,
+            );
+          }
+          static s_Singleton;
+          static Get() {
+            return (
+              _.s_Singleton ||
+                ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+              _.s_Singleton
+            );
+          }
+          AddMarker(_, _, _) {
+            const _ = _ ?? 0;
+            this.m_mapSteamTimelineMarkers.set(_, {
+              func: _,
+              color: _,
+            });
+            for (const _ of _) {
+              const _ = `${_}_${_[_]}`.toLowerCase();
               this.m_mapSteamTimelineMarkers.set(_, {
                 func: _,
                 color: _,
               });
-              for (const _ of _) {
-                const _ = `${_}_${_[_]}`.toLowerCase();
-                this.m_mapSteamTimelineMarkers.set(_, {
-                  func: _,
-                  color: _,
-                });
-              }
             }
-            Init() {
-              this.AddMarker("explosion", _._, 8),
-                this.AddMarker("attack", _._, 8),
-                this.AddMarker("defend", _._, 8),
-                this.AddMarker("combat", _._, 8),
-                this.AddMarker("chest", _._, 8),
-                this.AddMarker("view", _._, 8),
-                (0, _._)()
-                  ? this.AddMarker("death", _._, 8)
-                  : this.AddMarker("death", _._, 8),
-                this.AddMarker("x", _._, 8),
-                this.AddMarker("plus", _._, 8),
-                this.AddMarker("minus", _._, 8),
-                this.AddMarker("info", _._, 8),
-                this.AddMarker("bolt", _._, 8),
-                this.AddMarker("caution", _._, 8),
-                this.AddMarker("completed", _._, 8),
-                this.AddMarker("checkmark", _._, 8),
-                this.AddMarker("effect", _._, 8),
-                this.AddMarker("purchase", _._, 8),
-                this.AddMarker("ribbon", _._, 8),
-                this.AddMarker("scroll", _._, 8),
-                this.AddMarker("crown", _._, 8),
-                this.AddMarker("starburst", _._, 8),
-                this.AddMarker("flag", _._, 8),
-                this.AddMarker("cart", _._, 8),
-                this.AddMarker("timer", _._, 8),
-                this.AddMarker("chat", _._, 8),
-                this.AddMarker("wrench", _._, 8),
-                this.AddMarker("transfer", _._, 8),
-                this.AddMarker("edit", _._, 8),
-                this.AddMarker("bookmark", _._, 8),
-                this.AddMarker("invalid", _._, 8),
-                this.AddMarker("star", _._, 8),
-                this.AddMarker("circle", _._, 8),
-                this.AddMarker("square", _._, 8),
-                this.AddMarker("triangle", _._, 8),
-                this.AddMarker("heart", _._, 8),
-                this.AddMarker("diamond", _._, 8),
-                this.AddMarker("gem", _._, 8),
-                this.AddMarker("group", _._, 8),
-                this.AddMarker("pair", _._, 8),
-                this.AddMarker("single", _._, 8),
-                this.AddMarker("trophy", _._, 8),
-                this.AddMarker("achievement", _._, 8),
-                this.AddMarker("screenshot", _._, 8),
-                this.AddMarker("bug", _._, 8),
-                this.AddMarker("fix", _._, 8),
-                this.AddMarker("person", _._, 8),
-                this.AddMarker("question", _._, 8);
-            }
-          };
-        _(_, "s_Singleton");
-        let __webpack_require__ = _;
+          }
+          Init() {
+            this.AddMarker("explosion", _._, 8),
+              this.AddMarker("attack", _._, 8),
+              this.AddMarker("defend", _._, 8),
+              this.AddMarker("combat", _._, 8),
+              this.AddMarker("chest", _._, 8),
+              this.AddMarker("view", _._, 8),
+              (0, _._)()
+                ? this.AddMarker("death", _._, 8)
+                : this.AddMarker("death", _._, 8),
+              this.AddMarker("x", _._, 8),
+              this.AddMarker("plus", _._, 8),
+              this.AddMarker("minus", _._, 8),
+              this.AddMarker("info", _._, 8),
+              this.AddMarker("bolt", _._, 8),
+              this.AddMarker("caution", _._, 8),
+              this.AddMarker("completed", _._, 8),
+              this.AddMarker("checkmark", _._, 8),
+              this.AddMarker("effect", _._, 8),
+              this.AddMarker("purchase", _._, 8),
+              this.AddMarker("ribbon", _._, 8),
+              this.AddMarker("scroll", _._, 8),
+              this.AddMarker("crown", _._, 8),
+              this.AddMarker("starburst", _._, 8),
+              this.AddMarker("flag", _._, 8),
+              this.AddMarker("cart", _._, 8),
+              this.AddMarker("timer", _._, 8),
+              this.AddMarker("chat", _._, 8),
+              this.AddMarker("wrench", _._, 8),
+              this.AddMarker("transfer", _._, 8),
+              this.AddMarker("edit", _._, 8),
+              this.AddMarker("bookmark", _._, 8),
+              this.AddMarker("invalid", _._, 8),
+              this.AddMarker("star", _._, 8),
+              this.AddMarker("circle", _._, 8),
+              this.AddMarker("square", _._, 8),
+              this.AddMarker("triangle", _._, 8),
+              this.AddMarker("heart", _._, 8),
+              this.AddMarker("diamond", _._, 8),
+              this.AddMarker("gem", _._, 8),
+              this.AddMarker("group", _._, 8),
+              this.AddMarker("pair", _._, 8),
+              this.AddMarker("single", _._, 8),
+              this.AddMarker("trophy", _._, 8),
+              this.AddMarker("achievement", _._, 8),
+              this.AddMarker("screenshot", _._, 8),
+              this.AddMarker("bug", _._, 8),
+              this.AddMarker("fix", _._, 8),
+              this.AddMarker("person", _._, 8),
+              this.AddMarker("question", _._, 8);
+          }
+        }
         function _() {
           return _.Get().GetAllUseableMarkerID();
         }
@@ -6214,7 +5979,7 @@
         function _(_) {
           return _ && _.toLowerCase().startsWith(_);
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           let {
             entry: _,
@@ -6229,7 +5994,7 @@
             bSelectedMarker: _,
           } = _;
           return (0, _.jsx)("div", {
-            style: _ != null ? _ : {},
+            style: _ ?? {},
             className: (0, _._)(_, {
               [_.HighlightIcon]: !0,
               [_.Selected]: _,
@@ -6375,9 +6140,9 @@
             }),
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_);
-        const __webpack_require__ = parseInt(_().animationDuration);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = parseInt(_().animationDuration);
         function _() {
           const _ = _(),
             _ = (0, _._)(() => _.GetDisplayHighlightEntry()),
@@ -6385,11 +6150,7 @@
             _ = _.useRef(0);
           return (
             (0, _.useEffect)(() => {
-              if (
-                !(_ != null && _.entry) ||
-                (0, _._)(_.entry) ||
-                (0, _._)(_.entry)
-              ) {
+              if (!_?.entry || (0, _._)(_.entry) || (0, _._)(_.entry)) {
                 _(null);
                 return;
               }
@@ -6477,7 +6238,6 @@
           );
         }
         function _(_) {
-          var _, _;
           const { entry: _, strGameID: _ } = _,
             _ = new _._(_),
             _ = _(_.GetAppID(), _.achievement_name);
@@ -6487,8 +6247,8 @@
                 {
                   entry: _,
                   strMarkerIcon: "steam_achievement",
-                  title: (_ = _.name) != null ? _ : "",
-                  description: (_ = _.description) != null ? _ : "",
+                  title: _.name ?? "",
+                  description: _.description ?? "",
                 },
                 _._,
               )
@@ -6527,13 +6287,13 @@
             }),
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = parseInt(_().animationDuration);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = parseInt(_().animationDuration);
         function _() {
           const _ = _(),
             _ = _.GetGameRecordingVideo(),
@@ -6975,11 +6735,11 @@
             ],
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 20,
-          __webpack_require__ = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
-          __webpack_require__ = _.memo(function (_) {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 20,
+          _ = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
+          _ = _.memo(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetVisibleTimelines());
             return (0, _.jsx)(_.Fragment, {
@@ -6997,7 +6757,7 @@
               ),
             });
           }),
-          __webpack_require__ = _.memo(function (_) {
+          _ = _.memo(function (_) {
             const {
                 msVisibleStart: _,
                 msTimelineStart: _,
@@ -7073,27 +6833,15 @@
             pxTickSpacing: _,
           };
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid");
         function _(_, _) {
           return !(_.nStart >= _.nEnd || _.nEnd <= _.nStart);
         }
         class _ {
+          m_reservations = [];
+          m_nIconWidth;
           constructor(_) {
-            _(this, "m_reservations", []),
-              _(this, "m_nIconWidth"),
-              (this.m_nIconWidth = _);
+            this.m_nIconWidth = _;
           }
           BAllowIcon(_) {
             const _ = {
@@ -7109,10 +6857,10 @@
             return this.m_reservations.splice(_, 0, _), !0;
           }
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           const {
               closeModal: _,
@@ -7157,7 +6905,7 @@
                 ],
               });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _() {
           const _ = _(),
             _ = _(),
@@ -7215,7 +6963,7 @@
                 _,
               );
               _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                _ == null || _(_.entry._, _.strTimelineID, _, _),
+                _?.(_.entry._, _.strTimelineID, _, _),
                 _._.ReportTrackedAction(
                   "/GameRecording/HighlightCtxMenu/ClipFromHighlight",
                 ),
@@ -7249,9 +6997,8 @@
                 _.RemoveUserMarker(_.strTimelineID, _.entry._));
             },
             _ = () => {
-              var _;
               !(0, _._)(_.entry) ||
-                !((_ = _.entry) != null && _.handle) ||
+                !_.entry?.handle ||
                 (_._.ReportTrackedAction(
                   "/GameRecording/HighlightCtxMenu/Screenshot",
                 ),
@@ -7277,8 +7024,7 @@
                   "edit",
                 ),
               ),
-            _ != null &&
-              _.strRecordingID &&
+            _?.strRecordingID &&
               !_ &&
               _.push(
                 (0, _.jsx)(
@@ -7360,11 +7106,10 @@
               : null
           );
         }
-        const __webpack_require__ = 5e3,
-          __webpack_require__ = 3e3,
-          __webpack_require__ = 5e3;
+        const _ = 5e3,
+          _ = 3e3,
+          _ = 5e3;
         function _(_) {
-          var _;
           const {
               markerInfo: _,
               view: _,
@@ -7383,9 +7128,8 @@
             _ = _(),
             { selectedMarker: _ } = _(),
             _ =
-              ((_ = _.entry) == null ? void 0 : _._) ==
-                (_ == null ? void 0 : _.strEntryID) &&
-              _.strTimelineID == (_ == null ? void 0 : _.strTimelineID),
+              _.entry?._ == _?.strEntryID &&
+              _.strTimelineID == _?.strTimelineID,
             { ref: _, ..._ } = _(_, _),
             _ = _.useCallback(
               (_) => {
@@ -7451,7 +7195,7 @@
             ],
           });
         }
-        const __webpack_require__ = 150;
+        const _ = 150;
         function _(_, _) {
           const _ = _.useRef(void 0),
             _ = _.useRef(void 0),
@@ -7523,11 +7267,11 @@
             }
           );
         }
-        const __webpack_require__ = 16;
+        const _ = 16;
         function _(_) {
           return _.type === "achievement" ? 9e3 : _.priority;
         }
-        const __webpack_require__ = _.memo(function (_) {
+        const _ = _.memo(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetVisibleTimelines());
             return (0, _.jsx)(_.Fragment, {
@@ -7542,7 +7286,7 @@
               ),
             });
           }),
-          __webpack_require__ = {
+          _ = {
             screenshot: 0,
             event: 0,
             achievement: 1,
@@ -7558,7 +7302,7 @@
               ? parseInt(_.time) - parseInt(_.time)
               : _._.localeCompare(_._);
         }
-        const __webpack_require__ = _.memo(function (_) {
+        const _ = _.memo(function (_) {
           const { timeline: _ } = _,
             _ = _(),
             _ = _(),
@@ -7634,7 +7378,7 @@
               return "none";
           }
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const {
               view: _,
@@ -7678,7 +7422,7 @@
             _._,
           );
         }
-        const __webpack_require__ = _.memo(function (_) {
+        const _ = _.memo(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetVisibleTimelines());
             return (0, _.jsx)(_.Fragment, {
@@ -7693,7 +7437,7 @@
               ),
             });
           }),
-          __webpack_require__ = _.memo(function (_) {
+          _ = _.memo(function (_) {
             const {
                 timelineID: _,
                 globalOffsetMS: _,
@@ -7738,10 +7482,10 @@
               children: _,
             });
           });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 500,
-          __webpack_require__ = (0, _.memo)(function (_) {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 500,
+          _ = (0, _.memo)(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetHidePlayer()),
               [_, _] = (0, _.useState)({
@@ -7789,7 +7533,7 @@
             }),
           });
         }
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        const _ = (0, _.memo)(function (_) {
             const { setDragActive: _ } = _,
               _ = _(),
               _ = (0, _._)(() => _.GetScrollableWidthPX()),
@@ -7812,7 +7556,7 @@
               })
             );
           }),
-          __webpack_require__ = (0, _.memo)(function (_) {
+          _ = (0, _.memo)(function (_) {
             const { dragState: _, setDragActive: _ } = _,
               { bDragActive: _, bPausedOnDragStart: _ } = _,
               _ = _(),
@@ -7847,7 +7591,7 @@
               })
             );
           }),
-          __webpack_require__ = (0, _.memo)(function (_) {
+          _ = (0, _.memo)(function (_) {
             const { setDragActive: _, bDragActive: _ } = _,
               _ = _(),
               _ = (_) => {
@@ -7867,7 +7611,7 @@
               }),
             });
           }),
-          __webpack_require__ = _.memo(function (_) {
+          _ = _.memo(function (_) {
             const { setDragActive: _ } = _,
               _ = _(),
               _ = _(),
@@ -8106,9 +7850,9 @@
             children: _,
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = parseInt(_.thumbnailWidth),
-          __webpack_require__ = _.forwardRef(function (_, _) {
+        var _ = __webpack_require__("chunkid");
+        const _ = parseInt(_.thumbnailWidth),
+          _ = _.forwardRef(function (_, _) {
             const {
                 globalMS: _,
                 children: _,
@@ -8128,18 +7872,8 @@
               _ =
                 _ && _
                   ? Math.round(_.nRecordingOffsetMS * 100) / 100
-                  : _ == null
-                    ? void 0
-                    : _.nRecordingOffsetMS,
-              _ = _(
-                _,
-                _,
-                _ == null ? void 0 : _.strRecordingID,
-                _,
-                _ == null ? void 0 : _.nStartOffsetMS,
-                _,
-                _,
-              ),
+                  : _?.nRecordingOffsetMS,
+              _ = _(_, _, _?.strRecordingID, _, _?.nStartOffsetMS, _, _),
               [_, _] = (0, _.useState)();
             return (
               (0, _.useEffect)(() => {
@@ -8153,7 +7887,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)(
                       _.ThumbnailContents,
-                      (_ == null ? void 0 : _.strRecordingID) && !_ && _.Hide,
+                      _?.strRecordingID && !_ && _.Hide,
                       _[_],
                     ),
                     children: [
@@ -8162,7 +7896,7 @@
                         children: (0, _.jsxs)("div", {
                           className: _.ImageContainer,
                           children: [
-                            _ != null && _.strRecordingID
+                            _?.strRecordingID
                               ? (0, _.jsx)("img", {
                                   className: _.ThumbnailImage,
                                   src: _,
@@ -8226,14 +7960,13 @@
           );
         }
         function _(_) {
-          var _, _;
           const { strGameID: _, thumbnailEntry: _, achievementEntry: _ } = _,
             _ = new _._(_),
             _ = _(_.GetAppID(), _.achievement_name);
           return _
             ? (0, _.jsx)(_, {
-                title: (_ = _.name) != null ? _ : "",
-                description: (_ = _.description) != null ? _ : "",
+                title: _.name ?? "",
+                description: _.description ?? "",
                 thumbnailEntry: _,
               })
             : null;
@@ -8272,7 +8005,7 @@
             ],
           });
         }
-        const __webpack_require__ = _.forwardRef(function (_, _) {
+        const _ = _.forwardRef(function (_, _) {
           const { globalPX: _, onMouseEnter: _, onMouseLeave: _ } = _,
             _ = _(),
             _ = (0, _._)(() => _.ConvertPXOffsetToGlobalMS(_, !1)),
@@ -8312,7 +8045,7 @@
           const { globalMS: _ } = _,
             _ = _(),
             _ = (0, _._)(() => _.GetStateDescriptionAtGlobalMS(_));
-          return _ != null && _.title
+          return _?.title
             ? (0, _.jsx)("div", {
                 className: _.StateDescription,
                 children: _.title,
@@ -8337,7 +8070,7 @@
                 _ = _ - _.valMS + parseInt(_.time),
                 [_, _] = _.GetLoader().CreateGlobalRangeForTimeline(_, _, 0, _);
               _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                _ == null || _(_._, _, _, _),
+                _?.(_._, _, _, _),
                 _._.ReportTrackedAction(
                   "/GameRecording/Tooltip/ClipFromRangeEvent",
                 ),
@@ -8540,14 +8273,14 @@
                 _,
               );
               _.SetPlaytimeFromGlobalMS((0, _._)(_)),
-                _ == null || _(_.entry._, _.strTimelineID, _, _),
+                _?.(_.entry._, _.strTimelineID, _, _),
                 _(),
                 _._.ReportTrackedAction(
                   "/GameRecording/Tooltip/ClipFromHighlight",
                 ),
                 _.stopPropagation();
             };
-          return !(_ != null && _.strRecordingID) || !_
+          return !_?.strRecordingID || !_
             ? null
             : (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)(
@@ -8664,11 +8397,12 @@
         }
         function _(_) {
           const { globalMS: _ } = _,
-            _ = _(),
-            _ = (0, _._)(() =>
-              _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_),
-            );
-          if (!(_ != null && _.strRecordingID)) return null;
+            _ = _();
+          if (
+            !(0, _._)(() => _.ConvertGlobaOffsetToRecordingAndRelativeOffset(_))
+              ?.strRecordingID
+          )
+            return null;
           const _ = () => {
             _.AddUserMarkerAtGlobalMS(
               (0, _._)(_),
@@ -8711,7 +8445,7 @@
               })
             : null;
         }
-        const __webpack_require__ = _.memo(function (_) {
+        const _ = _.memo(function (_) {
             const _ = _(),
               _ = _(),
               _ = _(),
@@ -8753,7 +8487,7 @@
               })
             );
           }),
-          __webpack_require__ = _.memo(function (_) {
+          _ = _.memo(function (_) {
             const { globalMouseXPX: _ } = _,
               _ = _(),
               _ = _(),
@@ -8891,12 +8625,12 @@
             ],
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 500;
-        var __webpack_require__ = ((_) => (
+        var _ = __webpack_require__("chunkid");
+        const _ = 500;
+        var _ = ((_) => (
           (_.none = "none"), (_.left = "left"), (_.right = "right"), _
         ))(_ || {});
-        const __webpack_require__ = (0, _.memo)(function () {
+        const _ = (0, _.memo)(function () {
             const [_, _] = (0, _.useState)("none"),
               _ = _(),
               _ = _(),
@@ -8911,7 +8645,7 @@
                   }),
                 });
           }),
-          __webpack_require__ = (0, _.memo)(function (_) {
+          _ = (0, _.memo)(function (_) {
             const { activeControlState: _, setActiveControlState: _ } = _,
               [_, _] = (0, _.useState)(),
               [_, _] = (0, _.useState)(),
@@ -9071,7 +8805,7 @@
             _.current = _.valPX;
           }, [_.valPX, _.valMS, _.valPX, _, _, _, _, _, _]);
         }
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        const _ = (0, _.memo)(function (_) {
           const {
               isActive: _,
               setControlState: _,
@@ -9112,7 +8846,7 @@
             })
           );
         }
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        const _ = (0, _.memo)(function (_) {
           const {
               isActive: _,
               setControlState: _,
@@ -9307,7 +9041,7 @@
             }),
           });
         }
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        const _ = (0, _.memo)(function (_) {
             const { startOffsetPX: _, endOffsetPX: _, className: _ } = _;
             if (isNaN(_) || isNaN(_)) return null;
             const _ = {
@@ -9319,7 +9053,7 @@
               style: _,
             });
           }),
-          __webpack_require__ = (0, _.memo)(function (_) {
+          _ = (0, _.memo)(function (_) {
             const { direction: _, offsetPX: _ } = _,
               _ = {
                 transform: `translateX( calc( ${_}px - 50%) )`,
@@ -9378,9 +9112,9 @@
             ],
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = 100,
-          __webpack_require__ = _.memo(function (_) {
+        var _ = __webpack_require__("chunkid");
+        const _ = 100,
+          _ = _.memo(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetVisibleWindowRelativeTimelines()),
               _ = _().GetRecordingMode();
@@ -9426,8 +9160,8 @@
             children: _,
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        var _ = __webpack_require__("chunkid");
+        const _ = (0, _.memo)(function (_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleRecordings());
           return (0, _.jsx)(_.Fragment, {
@@ -9493,8 +9227,8 @@
             style: _,
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        var _ = __webpack_require__("chunkid");
+        const _ = (0, _.memo)(function (_) {
             const _ = _(),
               _ = (0, _._)(() => _.GetVisibleClips());
             return (0, _.jsx)(_.Fragment, {
@@ -9510,7 +9244,7 @@
               ),
             });
           }),
-          __webpack_require__ = (0, _.memo)(function (_) {
+          _ = (0, _.memo)(function (_) {
             const { endPX: _, startPX: _ } = _,
               _ = {
                 width: _ - _ || 0,
@@ -9521,8 +9255,8 @@
               style: _,
             });
           });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _() {
           const _ = _(),
             _ = _(_.GetGameID());
@@ -9553,7 +9287,7 @@
             }),
           });
         }
-        const __webpack_require__ = (0, _.forwardRef)(function (_, _) {
+        const _ = (0, _.forwardRef)(function (_, _) {
             const _ = _();
             return (0, _._)(() => !_.BEmpty())
               ? (0, _.jsx)(_, {
@@ -9565,13 +9299,13 @@
                   ref: _,
                 });
           }),
-          __webpack_require__ = (0, _.forwardRef)(function (_, _) {
+          _ = (0, _.forwardRef)(function (_, _) {
             return (0, _.jsx)("div", {
               ref: _,
               className: (0, _._)(_.ScrollbarPlaceholder, _.className),
             });
           }),
-          __webpack_require__ = (0, _.forwardRef)(function (_, _) {
+          _ = (0, _.forwardRef)(function (_, _) {
             const _ = _(),
               {
                 children: _,
@@ -9906,11 +9640,9 @@
           }, [_, _]);
           const _ = (0, _.useCallback)(
               (_) => {
-                var _;
                 _(_), _(!0);
                 const _ = _.nativeEvent.offsetX,
-                  _ =
-                    (_ = _.GetTimelineParentCtnRef()) != null ? _ : (0, _._)(_);
+                  _ = _.GetTimelineParentCtnRef() ?? (0, _._)(_);
                 let _, _, _;
                 const _ = (_) => {
                   _(_.clientX - _.scrollBarXOffset - _);
@@ -9967,24 +9699,15 @@
             return requestAnimationFrame(_), () => (_ = !0);
           }, [_, _, _]);
         }
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -9992,16 +9715,14 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_tours = {};
+          m_strActiveTour = "";
+          m_storage = void 0;
+          m_bReady = !1;
           constructor() {
-            _(this, "m_tours", {}),
-              _(this, "m_strActiveTour", ""),
-              _(this, "m_storage"),
-              _(this, "m_bReady", !1),
-              (0, _._)(this);
+            (0, _._)(this);
           }
           async Init(_) {
             if (this.m_storage) return;
@@ -10035,8 +9756,7 @@
               : !0;
           }
           GetTrackedStops(_) {
-            var _;
-            return ((_ = this.m_tours[_]) == null ? void 0 : _.stops) || {};
+            return this.m_tours[_]?.stops || {};
           }
           ActivateTour(_) {
             this.m_strActiveTour &&
@@ -10057,13 +9777,13 @@
             return _(this.m_storage, _, void 0);
           }
         }
-        _([_.__webpack_require__], _.prototype, "m_tours", 2),
-          _([_.__webpack_require__], _.prototype, "m_strActiveTour", 2),
-          _([_.__webpack_require__], _.prototype, "m_bReady", 2),
-          _([_.__webpack_require__.bound], _.prototype, "UpdateStop", 1),
-          _([_.__webpack_require__], _.prototype, "ActivateTour", 1),
-          _([_.__webpack_require__], _.prototype, "DismissTour", 1);
-        const __webpack_require__ = "tour_history";
+        _([_._], _.prototype, "m_tours", 2),
+          _([_._], _.prototype, "m_strActiveTour", 2),
+          _([_._], _.prototype, "m_bReady", 2),
+          _([_._.bound], _.prototype, "UpdateStop", 1),
+          _([_._], _.prototype, "ActivateTour", 1),
+          _([_._], _.prototype, "DismissTour", 1);
+        const _ = "tour_history";
         async function _(_) {
           const _ = await _.GetObject(_);
           return !_ || typeof _ != "object" ? {} : _;
@@ -10075,7 +9795,7 @@
             [_]: _,
           });
         }
-        const __webpack_require__ = new _();
+        const _ = new _();
         function _() {
           const _ = (0, _._)();
           return (
@@ -10313,8 +10033,8 @@
             }),
           });
         }
-        const __webpack_require__ = 28,
-          __webpack_require__ = 10;
+        const _ = 28,
+          _ = 10;
         function _(_, _) {
           const _ = {
             width: `${_}px`,
@@ -10341,7 +10061,7 @@
           const _ = _();
           return useCallback((_) => _.MarkTourUnseen(_), [_]);
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleTimelines());
@@ -10370,7 +10090,6 @@
           });
         }
         function _(_) {
-          var _;
           const {
               children: _,
               timeline: _,
@@ -10380,7 +10099,7 @@
             } = _,
             _ = _(),
             _ = _(),
-            _ = ((_ = _()) == null ? void 0 : _.valPX) || -1,
+            _ = _()?.valPX || -1,
             _ = _(),
             [_] = _(),
             {
@@ -10441,7 +10160,7 @@
             className: _.Edge,
           });
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const _ = _(),
             _ = (0, _._)(() => _.GetVisibleTimelines());
@@ -10508,7 +10227,7 @@
             }),
           });
         }
-        const __webpack_require__ = 0.08;
+        const _ = 0.08;
         function _(_) {
           const {
               loader: _,
@@ -10556,7 +10275,7 @@
             }),
           });
         }
-        const __webpack_require__ = (0, _.memo)(function (_) {
+        const _ = (0, _.memo)(function (_) {
           const _ = _();
           return (0, _._)(() => _.BInitialized()) ? (0, _.jsx)(_, {}) : null;
         });
@@ -10655,7 +10374,7 @@
           const _ = _().GetRenderGlyph();
           return _ ? _(_._.TRIGGER_RIGHT, !1, !1, _.PositionRight) : null;
         }
-        var __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           const [_, _] = _.useState(!1);
           return (
@@ -10780,7 +10499,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -10788,26 +10507,26 @@
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid");
-        const __webpack_require__ = new _.__webpack_require__("GR");
+        var _ = __webpack_require__("chunkid");
+        const _ = new _._("GR");
         function _(_) {
           return (..._) => {
             const _ = `[${(performance.now() / 1e3).toFixed(3)}]`;
             _(_, ..._);
           };
         }
-        const __webpack_require__ = _(_.Debug),
-          __webpack_require__ = _(_.Info),
-          __webpack_require__ = _(_.Warning),
-          __webpack_require__ = _(_.Error),
-          __webpack_require__ = _;
+        const _ = _(_.Debug),
+          _ = _(_.Info),
+          _ = _(_.Warning),
+          _ = _(_.Error),
+          _ = _;
         function _() {
           return _.IsDebugEnabled();
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -10819,15 +10538,15 @@
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = ((_) => (
+        var _ = __webpack_require__("chunkid"),
+          _ = ((_) => (
             (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.Playing = 1)] = "Playing"),
             (_[(_.Staging = 2)] = "Staging"),
             (_[(_.Menus = 3)] = "Menus"),
             _
           ))(_ || {}),
-          __webpack_require__ = ((_) => (
+          _ = ((_) => (
             (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.None = 1)] = "None"),
             (_[(_.Standard = 2)] = "Standard"),
@@ -10923,7 +10642,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -10956,10 +10675,10 @@
         function _(_) {
           return (_) => _.type === _;
         }
-        const __webpack_require__ = _("global"),
-          __webpack_require__ = _("timeline"),
-          __webpack_require__ = _("recording"),
-          __webpack_require__ = _("clip");
+        const _ = _("global"),
+          _ = _("timeline"),
+          _ = _("recording"),
+          _ = _("clip");
         function _(_) {
           return {
             type: "global",
@@ -10987,46 +10706,37 @@
         function _(_) {
           return (_) => _.type === _;
         }
-        const __webpack_require__ = _("global"),
-          __webpack_require__ = _("clientWindow"),
-          __webpack_require__ = _("virtualWindow"),
-          __webpack_require__ = _("scrollWindow");
+        const _ = _("global"),
+          _ = _("clientWindow"),
+          _ = _("virtualWindow"),
+          _ = _("scrollWindow");
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -11034,26 +10744,24 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = 10 * 1e3,
-          __webpack_require__ = 3e3,
-          __webpack_require__ = _ + 1e3,
-          __webpack_require__ = class _ {
+          };
+        const _ = 10 * 1e3,
+          _ = 3e3,
+          _ = _ + 1e3,
+          _ = class _ {
             constructor() {
-              _(this, "m_bInitialized", !1),
-                _(this, "m_rgListeners", []),
-                _(this, "m_gameID"),
-                _(this, "m_clipID"),
-                _(this, "m_ulFirstTimelineOffsetMS", 0),
-                _(this, "m_rgTimelineMetadata", []),
-                _(this, "m_mapTimelineData", new Map()),
-                _(this, "m_mapRunningTimelines", new Map()),
-                _(this, "m_schUpdateRunning", new _._()),
-                _(this, "m_fnTimelineURLBuilder"),
-                (0, _._)(this);
+              (0, _._)(this);
             }
+            m_bInitialized = !1;
+            m_rgListeners = [];
+            m_gameID;
+            m_clipID;
+            m_ulFirstTimelineOffsetMS = 0;
+            m_rgTimelineMetadata = [];
+            m_mapTimelineData = new Map();
+            m_mapRunningTimelines = new Map();
+            m_schUpdateRunning = new _._();
+            m_fnTimelineURLBuilder;
             BInitialized() {
               return this.m_bInitialized;
             }
@@ -11540,7 +11248,7 @@
               }
               return {
                 entry: _,
-                timelineState: _ == null ? void 0 : _.m_strState,
+                timelineState: _?.m_strState,
               };
             }
             GetClosestNextEntryInTimeline(_, _) {
@@ -11559,7 +11267,7 @@
               }
               return {
                 entry: _,
-                timelineState: _ == null ? void 0 : _.m_strState,
+                timelineState: _?.m_strState,
               };
             }
             GetClosestPreviousEntryInGlobalTimeline(_) {
@@ -11567,8 +11275,8 @@
                 _ = this.GetTimelineData(_.strTimelineID);
               if (!_ || _.m_strState !== "loaded")
                 return {
-                  timelineID: _ == null ? void 0 : _.strTimelineID,
-                  timelineState: _ == null ? void 0 : _.m_strState,
+                  timelineID: _?.strTimelineID,
+                  timelineState: _?.m_strState,
                   entry: null,
                   globalMS: null,
                 };
@@ -11651,8 +11359,8 @@
                 _ = this.GetTimelineData(_.strTimelineID);
               if (!_ || _.m_strState !== "loaded")
                 return {
-                  timelineID: _ == null ? void 0 : _.strTimelineID,
-                  timelineState: _ == null ? void 0 : _.m_strState,
+                  timelineID: _?.strTimelineID,
+                  timelineState: _?.m_strState,
                   entry: null,
                   globalMS: null,
                 };
@@ -11792,7 +11500,7 @@
                 ),
                 _ = -1,
                 _ = -1;
-              if ((_ == null ? void 0 : _.m_strState) == "loaded") {
+              if (_?.m_strState == "loaded") {
                 let _ = (_) => _.ulGlobalToTimelineOffset - parseInt(_.time);
                 (_ = _._(_.m_rgGameModeChanges, _)),
                   (_ = _._(_.m_rgEntries, _));
@@ -12234,7 +11942,6 @@
                 : 0;
             }
             async GenerateNamePartsFromTimeline(_, _, _, _) {
-              var _;
               let _,
                 _ = !1,
                 _,
@@ -12269,15 +11976,9 @@
                 }
                 if (_) break;
               }
-              const _ =
-                  (_ = _ == null ? void 0 : _.strTitle) != null
-                    ? _
-                    : _ == null
-                      ? void 0
-                      : _.title,
+              const _ = _?.strTitle ?? _?.title,
                 _ = new _._(this.GetGameID()),
-                _ = _._.GetAppInfo(_.GetInternalAppID()),
-                _ = _ == null ? void 0 : _.name;
+                _ = _._.GetAppInfo(_.GetInternalAppID())?.name;
               return {
                 strTimelinePart: _,
                 strAppNamePart: _,
@@ -12294,9 +11995,9 @@
               return (0, _._)(`Generated clip name "${_}"`), _;
             }
           };
-        _([_.__webpack_require__], _.prototype, "m_bInitialized", 2),
-          _([_.__webpack_require__], _.prototype, "UpdateRunningTimelines", 1);
-        let __webpack_require__ = _;
+        _([_._], _.prototype, "m_bInitialized", 2),
+          _([_._], _.prototype, "UpdateRunningTimelines", 1);
+        let _ = _;
         function _(_) {
           switch (_.type) {
             case "event":
@@ -12370,11 +12071,11 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _() {
           return (0, _._)().languages.map((_) => _(_.strISOCode));
         }
@@ -12384,7 +12085,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -12392,9 +12093,9 @@
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
             _: () => _,
@@ -12403,9 +12104,9 @@
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
             _: () => _,
@@ -12413,50 +12114,40 @@
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = {};
-        __webpack_require__.__webpack_require__(_),
-          __webpack_require__.__webpack_require__(_, {
+        var _ = {};
+        __webpack_require__._(_),
+          __webpack_require__._(_, {
             _: () => _,
             _: () => _,
           });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__.__webpack_require__(_),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = class _ extends _.Message {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timelines || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2, 3, 4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12529,16 +12220,16 @@
           getClassName() {
             return "CGameRecordingFile";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = null;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timelines || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 14, 15], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12664,16 +12355,16 @@
           getClassName() {
             return "CGameRecordingClipFile";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = null;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timeline_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5, 6, 7], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12759,16 +12450,16 @@
           getClassName() {
             return "CGameRecordingTimelineMetadata";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12866,16 +12557,16 @@
           getClassName() {
             return "CGameRecordingTimelineMetadata_Recording";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -12934,16 +12625,16 @@
           getClassName() {
             return "CGameRecordingPostGameSummary";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13041,16 +12732,16 @@
           getClassName() {
             return "CGameRecordingTimelineEvent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13113,16 +12804,16 @@
           getClassName() {
             return "CGameRecordingTag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13185,16 +12876,16 @@
           getClassName() {
             return "CGameRecordingTag_Timeline";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timeline_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13262,16 +12953,16 @@
           getClassName() {
             return "CGameRecordingTagInstance";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = null;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.phase_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6, 7, 9], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13352,16 +13043,16 @@
           getClassName() {
             return "CGameRecordingPhase";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13419,16 +13110,16 @@
           getClassName() {
             return "CGameRecordingPhase_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.name || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13496,16 +13187,16 @@
           getClassName() {
             return "CTimelineTag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.group || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13568,47 +13259,33 @@
           getClassName() {
             return "CPhaseAttribute";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 5,
-          __webpack_require__ = 6,
-          __webpack_require__ = 7,
-          __webpack_require__ = 8,
-          __webpack_require__ = 9,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 5,
-          __webpack_require__ = 6,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2,
-          __webpack_require__ = 3,
-          __webpack_require__ = 4,
-          __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 0,
-          __webpack_require__ = 1,
-          __webpack_require__ = 1,
-          __webpack_require__ = 2;
-        var __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        }
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 0,
+          _ = 1,
+          _ = 0,
+          _ = 1,
+          _ = 1,
+          _ = 2;
         function _(_) {
           return "unknown ETimelineEntryType ( " + _ + " )";
         }
@@ -13673,13 +13350,15 @@
             return "CGameRecording_GetAppsWithBackgroundVideo_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13733,16 +13412,16 @@
           getClassName() {
             return "CGameRecording_GetAppsWithBackgroundVideo_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13825,16 +13504,16 @@
           getClassName() {
             return "CGameRecording_GetAppsWithBackgroundVideo_Response_App";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13887,16 +13566,16 @@
           getClassName() {
             return "CGameRecording_GetTimelinesForApp_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timelines || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -13950,16 +13629,16 @@
           getClassName() {
             return "CGameRecording_GetTimelinesForApp_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14012,16 +13691,16 @@
           getClassName() {
             return "CGameRecording_GetTimelinesForClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14085,16 +13764,16 @@
           getClassName() {
             return "CGameRecording_GetTimelinesForClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.page || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [12], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14173,16 +13852,16 @@
           getClassName() {
             return "CGameRecording_QueryPhases_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.group || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14240,16 +13919,16 @@
           getClassName() {
             return "CGameRecording_QueryPhases_Request_Tag";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.phases || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14308,10 +13987,8 @@
           getClassName() {
             return "CGameRecording_QueryPhases_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
@@ -14325,6 +14002,8 @@
                 null,
               );
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14450,16 +14129,16 @@
           getClassName() {
             return "CGameRecording_QueryPhases_Response_Phase";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timeline_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14522,16 +14201,16 @@
           getClassName() {
             return "CGameRecording_QueryPhases_Response_Phase_BackgroundRecording";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14584,16 +14263,16 @@
           getClassName() {
             return "CGameRecording_GetTags_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.tags || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14647,9 +14326,7 @@
           getClassName() {
             return "CGameRecording_GetTags_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -14691,13 +14368,15 @@
             return "CGameRecording_GetEnoughDiskSpace_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.enough_space || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14750,9 +14429,7 @@
           getClassName() {
             return "CGameRecording_GetEnoughDiskSpace_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -14794,13 +14471,15 @@
             return "CGameRecording_GetAvailableDiskSpace_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.size || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14853,16 +14532,16 @@
           getClassName() {
             return "CGameRecording_GetAvailableDiskSpace_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notification_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -14935,16 +14614,16 @@
           getClassName() {
             return "CGameRecording_TimelineChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.notification_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15027,16 +14706,16 @@
           getClassName() {
             return "CGameRecording_RecordingSessionChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timeline_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [17, 19], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15171,16 +14850,16 @@
           getClassName() {
             return "CTimelineEntry";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entry || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15237,16 +14916,16 @@
           getClassName() {
             return "CGameRecording_TimelineEntryChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15309,9 +14988,7 @@
           getClassName() {
             return "CGameRecording_TimelineEntryRemoved_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -15353,13 +15030,15 @@
             return "CGameRecording_LowDiskSpace_Notification";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15412,16 +15091,16 @@
           getClassName() {
             return "CGameRecording_PostGameHighlightsChanged_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15479,16 +15158,16 @@
           getClassName() {
             return "CGameRecording_OpenOverlayToGamePhase_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15546,9 +15225,7 @@
           getClassName() {
             return "CGameRecording_OpenOverlayToTimelineEvent_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -15590,13 +15267,15 @@
             return "CGameRecording_PhaseListChanged_Notification";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15729,16 +15408,16 @@
           getClassName() {
             return "CGameRecording_ClipSummary";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15819,16 +15498,16 @@
           getClassName() {
             return "CGameRecording_SaveClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timeline_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15886,16 +15565,16 @@
           getClassName() {
             return "CGameRecording_SaveClip_Request_Position";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -15947,16 +15626,16 @@
           getClassName() {
             return "CGameRecording_SaveClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16009,9 +15688,7 @@
           getClassName() {
             return "CGameRecording_DeleteClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -16053,13 +15730,15 @@
             return "CGameRecording_DeleteClip_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bitrate_kbps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16132,16 +15811,16 @@
           getClassName() {
             return "CGameRecording_ExportClip_Settings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16208,16 +15887,16 @@
           getClassName() {
             return "CGameRecording_ExportClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.result || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16270,16 +15949,16 @@
           getClassName() {
             return "CGameRecording_ExportClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16341,16 +16020,16 @@
           getClassName() {
             return "CGameRecording_ExportClipPreview_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.estimated_size || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16412,16 +16091,16 @@
           getClassName() {
             return "CGameRecording_ExportClipPreview_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16489,16 +16168,16 @@
           getClassName() {
             return "CGameRecording_TakeScreenshot_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.screenshot_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16551,16 +16230,16 @@
           getClassName() {
             return "CGameRecording_TakeScreenshot_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16628,16 +16307,16 @@
           getClassName() {
             return "CGameRecording_UploadClipToSteam_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16689,16 +16368,16 @@
           getClassName() {
             return "CGameRecording_UploadClipToSteam_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16751,16 +16430,16 @@
           getClassName() {
             return "CGameRecording_ZipClip_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.zip_path || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16813,16 +16492,16 @@
           getClassName() {
             return "CGameRecording_ZipClip_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16885,16 +16564,16 @@
           getClassName() {
             return "CGameRecording_GetClips_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -16948,16 +16627,16 @@
           getClassName() {
             return "CGameRecording_GetClips_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17015,16 +16694,16 @@
           getClassName() {
             return "CGameRecording_GetAndTrimPostGameHighlights_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.events || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17078,16 +16757,16 @@
           getClassName() {
             return "CGameRecording_GetAndTrimPostGameHighlights_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17149,16 +16828,16 @@
           getClassName() {
             return "CGameRecording_UserAddTimelineEntry_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.entry_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17211,16 +16890,16 @@
           getClassName() {
             return "CGameRecording_UserAddTimelineEntry_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17282,9 +16961,7 @@
           getClassName() {
             return "CGameRecording_UserUpdateTimelineEntry_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -17326,13 +17003,15 @@
             return "CGameRecording_UserUpdateTimelineEntry_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17400,9 +17079,7 @@
           getClassName() {
             return "CGameRecording_UserRemoveTimelineEntry_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -17444,13 +17121,15 @@
             return "CGameRecording_UserRemoveTimelineEntry_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17506,9 +17185,7 @@
           getClassName() {
             return "CGameRecording_ManuallyDeleteRecordingsForApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -17550,13 +17227,15 @@
             return "CGameRecording_ManuallyDeleteRecordingsForApps_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.folder_path || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17614,16 +17293,16 @@
           getClassName() {
             return "CGameRecording_GetTotalDiskSpaceUsage_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.size || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17676,16 +17355,16 @@
           getClassName() {
             return "CGameRecording_GetTotalDiskSpaceUsage_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recording_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17774,16 +17453,16 @@
           getClassName() {
             return "CGameRecording_GetThumbnails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.thumbnails || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17837,16 +17516,16 @@
           getClassName() {
             return "CGameRecording_GetThumbnails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.image_data || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17909,16 +17588,16 @@
           getClassName() {
             return "CGameRecording_GetThumbnails_Response_Thumbnail";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -17971,9 +17650,7 @@
           getClassName() {
             return "CGameRecording_StartRecording_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -18015,13 +17692,15 @@
             return "CGameRecording_StartRecording_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18074,16 +17753,16 @@
           getClassName() {
             return "CGameRecording_StopRecording_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18135,16 +17814,16 @@
           getClassName() {
             return "CGameRecording_StopRecording_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18197,16 +17876,16 @@
           getClassName() {
             return "CGameRecording_GetRecordingSize_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.file_size || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18259,9 +17938,7 @@
           getClassName() {
             return "CGameRecording_GetRecordingSize_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -18385,13 +18062,15 @@
             return "CGameRecording_GetPlatformCapabilities_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.per_process_audio_capture || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18444,16 +18123,16 @@
           getClassName() {
             return "CGameRecording_GetPlatformCapabilities_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18505,16 +18184,16 @@
           getClassName() {
             return "CGameRecording_ClipCreated_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clip_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18572,16 +18251,16 @@
           getClassName() {
             return "CGameRecording_ClipDeleted_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.progress || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18639,16 +18318,16 @@
           getClassName() {
             return "CGameRecording_ExportProgress_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18721,9 +18400,7 @@
           getClassName() {
             return "CGameRecording_PerGameSettings";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -18765,13 +18442,15 @@
             return "CGameRecording_GetPerGameSettings_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18825,16 +18504,16 @@
           getClassName() {
             return "CGameRecording_GetPerGameSettings_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_settings || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18886,9 +18565,7 @@
           getClassName() {
             return "CGameRecording_SetPerGameSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -18930,13 +18607,15 @@
             return "CGameRecording_SetPerGameSettings_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gameid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -18989,9 +18668,7 @@
           getClassName() {
             return "CGameRecording_DeletePerGameSettings_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -19033,13 +18710,15 @@
             return "CGameRecording_DeletePerGameSettings_Response";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.progress || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19102,16 +18781,16 @@
           getClassName() {
             return "CGameRecording_UploadProgress_Notification";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
-        const __webpack_require__ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.game_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19164,9 +18843,7 @@
           getClassName() {
             return "CGameRecording_SwitchBackgroundRecordingGame_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -19249,13 +18926,15 @@
             return "CGameRecording_GetState_Request";
           }
         }
-        const __webpack_require__ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.is_h265_enabled || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -19308,9 +18987,7 @@
           getClassName() {
             return "CGameRecording_GetState_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let __webpack_require__ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -19352,7 +19029,7 @@
             return "CGameRecording_StateChanged_Notification";
           }
         }
-        var __webpack_require__;
+        var _;
         ((_) => {
           _.GetAppsWithBackgroundVideoHandler = {
             name: "GameRecording.GetAppsWithBackgroundVideo#1",
@@ -21772,29 +21449,17 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_ulGameID;
           constructor(_, _, _) {
-            if ((_(this, "m_ulGameID"), typeof _ == "string"))
-              this.m_ulGameID = _._.fromString(_, !0);
+            if (typeof _ == "string") this.m_ulGameID = _._.fromString(_, !0);
             else {
               const _ = _,
                 _ = ((_ & 255) << 24) + (_ & 16777215);
@@ -21857,26 +21522,17 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = Object.defineProperty,
-          __webpack_require__ = Object.getOwnPropertyDescriptor,
-          __webpack_require__ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          __webpack_require__ = (_, _, _, _) => {
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -21884,25 +21540,19 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          __webpack_require__ = (_, _, _) =>
-            _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const __webpack_require__ = new _.__webpack_require__(
-            "ReactUsageReporting",
-          ).Debug,
-          __webpack_require__ = 100,
-          __webpack_require__ = _.__webpack_require__.PerMinute * 1e3;
+          };
+        const _ = new _._("ReactUsageReporting").Debug,
+          _ = 100,
+          _ = _._.PerMinute * 1e3;
         class _ {
-          constructor() {
-            _(this, "m_strProduct"),
-              _(this, "m_strVersion"),
-              _(this, "m_transport", null),
-              _(this, "m_mapRoutes", new Map()),
-              _(this, "m_mapComponents", new Map()),
-              _(this, "m_mapActions", new Map()),
-              _(this, "m_reportCount", 0),
-              _(this, "m_bInitialized", !1);
-          }
+          m_strProduct;
+          m_strVersion;
+          m_transport = null;
+          m_mapRoutes = new Map();
+          m_mapComponents = new Map();
+          m_mapActions = new Map();
+          m_reportCount = 0;
+          m_bInitialized = !1;
           Init(_, _, _) {
             (this.m_bInitialized = !0),
               (this.m_strProduct = _),
@@ -21965,17 +21615,17 @@
             return this.m_strProduct;
           }
         }
-        _([_.__webpack_require__], _.prototype, "CheckSend", 1);
-        const __webpack_require__ = new _();
+        _([_._], _.prototype, "CheckSend", 1);
+        const _ = new _();
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__.__webpack_require__(module_exports, {
+        __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var __webpack_require__ = __webpack_require__("chunkid"),
-          __webpack_require__ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = _.bUseBinary1K ? 1024 : 1e3,
             _ = _ * _,
@@ -22124,31 +21774,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "_3AC5PeKRkSoB1JUS8LCinu",
-          ScrollAndControlsCtn: "_1CYsmnIqkn90UQTVYK63be",
-          GamepadMode: "_1wi1J1l41xYwh6lx7zH4Aw",
-          Controls: "_1l2J-z02NZ7-HU23Bk7FwR",
-          TimelineScrollContainer: "_3v-bzPuU4mVOvwvq1wX6Z6",
-          ContentContainer: "_1Jjb0RXXDDj5JSQTNRIeRi",
-          AbsoluteLayer: "_2F0d9JLSNH0gY26UBXIZYS",
-          HideOverflow: "_2GDis70-E8G-El7mDlayt8",
-          RelativeLayer: "_1xZCNiE6ZMwQsUHLh2y9t1",
-          WithPointerEvents: "_12MLk3-t1rqZ33U6DiMKg1",
-          RecordingDecorators: "_2PJGDULdt2ctu6R0EkUHPj",
-          ClipDecorators: "tbss_z2HLa4Oa0yS4mGrb",
-          GameModes: "_1Bh3PscPMEMGlegOtxPEWM",
-          DateDecorator: "_2w-ta9UJW1Y73wRilaD9l-",
-          BackgroundTicks: "xD30aylfCATSjNrytpUAm",
-          Highlights: "_56YDWYPBkNJazWmgg83Sk",
-          RangeHighlights: "s20SLnZnerU68G2dHOWRW",
-          Timestamps: "xLUyqvUeXIgxuJpmmte1i",
-          RangeSelector: "_2vqUVszLX8jrl8soNo84qt",
-          SeekScrubber: "_3MV0K4aiJwcuWauL5dt6gY",
-          PlayHead: "_37u67bibEd1DUyQFBTBNzb",
-          Thumbnails: "_1pOPbtOaUeqeJm3nrdEkyx",
-          PositionLeft: "_2lo44W-Sy4zMrYWnl55XBD",
-          PositionRight: "_2tl3cTX_fsKtBrtcctB5wc",
-          Phases: "_29M5GL7LdzPRq4bOtIu5My",
           ContentAndGradient: "XrJofUthOAZ7wCkD_C2fE",
           ScrollbarPlaceholder: "_1NhP7G104P9VPsp6bTxyBb",
           LeftControlsAndContent: "_1vc8f5bCHfDynpWgwyhf5m",
@@ -22202,31 +21827,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "JGGVRlj-AwNguh4wa7807",
-          ScrollAndControlsCtn: "_2RzAySWe-9uzCJA9oGykll",
-          GamepadMode: "_3lpEJRNBcA9EpAgLomD0jn",
-          Controls: "HvZN6nroENhLkhniNutuR",
-          TimelineScrollContainer: "_1cFVEeJk2np6JpMKYq0m9t",
-          ContentContainer: "_3wqjsEPRzSGUpOgWYezV30",
-          AbsoluteLayer: "_1vYBX3E1lB7wsdRdmsRSwV",
-          HideOverflow: "C6chOG85M6_-hqwofg04b",
-          RelativeLayer: "_1_XjIyiq_P7oZk4Aa3PZsk",
-          WithPointerEvents: "_2GrriEvGl2vEPERHoIkg9X",
-          RecordingDecorators: "T_GKyHV01N-0Mw4V9Q8N4",
-          ClipDecorators: "_3jAa31iOtuHCYOt1cyYPHU",
-          GameModes: "z3tClNy49hdbgj0NVx7R5",
-          DateDecorator: "EiFtpT2NTMMovW9unJLGu",
-          BackgroundTicks: "_2abPmFPmW_oPE349VO2TpA",
-          Highlights: "_2_8rC82wthkPbfuHxBkHYk",
-          RangeHighlights: "_2Lj8ZYpDL8HxfPJRXg0kgm",
-          Timestamps: "_1e7MByQ-W7P_ftMx-4WcMV",
-          RangeSelector: "_4kLbmnRkHeqUQus1ItdUY",
-          SeekScrubber: "_23WuCkYUy41WcwdxqycJXb",
-          PlayHead: "_1Zf0UX5Nyt7ZflIvx86a9K",
-          Thumbnails: "Px56HgqgodVj1s1lELr9s",
-          PositionLeft: "PftJQL7hFlMD6fyCmJ94X",
-          PositionRight: "_3lMvwFfrxKrrjEOlUf7ov3",
-          Phases: "_3CMHPm1gab4V9JTfZYAp1E",
           TimelineBacking: "_18sxaBKg910kJmmJS3zaaE",
           TimeTick: "faIAh3Zzg4MdulktB1IFo",
           TickLine: "iLLznzt7Npcsc-y_9tyCc",
@@ -22236,93 +21836,18 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "_1ZSym6hTh_XycEHZQv3waF",
-          ScrollAndControlsCtn: "_1q95sqXb4oTj5LekKlUWqI",
-          GamepadMode: "_1F4jNXOr-Gwt5oygH9F_mh",
-          Controls: "z15TYuRsvRt6Li7EM3mM5",
-          TimelineScrollContainer: "R0SGdHf8Z6rpbQGEf06ZP",
-          ContentContainer: "_2XMJZ6Tb3zjNYuh91Il3rA",
-          AbsoluteLayer: "_3AkqWv_vVG7IcuxTsw4FBK",
-          HideOverflow: "qGvsK6jhx7uQrlMTQ6zSP",
-          RelativeLayer: "_3zzAfZQcPSWB4Gj3tebKrI",
-          WithPointerEvents: "_3z05uqMI8WeroTsIbWYYr0",
-          RecordingDecorators: "TlW7mv6AQcJacn3I9Wcho",
-          ClipDecorators: "_2HPd50upMLAGM4Ne2mOpIA",
-          GameModes: "mKXM660QBtJ7Qy_5uNGdP",
-          DateDecorator: "_1KAHyZKmBLACfUu9XXht0l",
-          BackgroundTicks: "_1sDp4tXvu6KF6yaTe5Y65b",
-          Highlights: "_3vFdT_Qdu7unGt0x2UBIOz",
-          RangeHighlights: "P3bkvf7j3c-xSz6s7HtHY",
-          Timestamps: "_3esOhQ7c-vdhQ6yUCny4aA",
-          RangeSelector: "NMfai6QhLJB5lfGE-3T3o",
-          SeekScrubber: "_3n81RbB8WDAKT_q_iUYF6P",
-          PlayHead: "_1j_4JBYTjJZ3L044d9QjQL",
-          Thumbnails: "_1a1mkc6mxngGs0scqTx8Rv",
-          PositionLeft: "_3Tw8uk4rZfrmmyGfql1eTc",
-          PositionRight: "_3OI9MLjE2183pXrrzjZlZ",
-          Phases: "_1j2D4HXwIaWGBWeUeZiWve",
           ClipDecorator: "_3EWp_eWXsvKB-Lwz-Afl0S",
           gradient: "_3vAWnjV6c5oyReAPoGg-Ln",
         };
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "_3KG8zrhAf5BZd7OOkiM3Vn",
-          ScrollAndControlsCtn: "_2Ox4l0Syi-OBMfeLLwGB0S",
-          GamepadMode: "_1Nc3R34LFcFFu9xxGczIZx",
-          Controls: "_1S92sYYyOl3-hAGUyKk3mT",
-          TimelineScrollContainer: "_2yvt6-n0jndik9woSi9oiV",
-          ContentContainer: "_28oA65JjmGpgktil_Spx8V",
-          AbsoluteLayer: "_3RYVNG8TM3G95eG8DCgVCb",
-          HideOverflow: "_1kDYn7vvEbKlU7Z4VfveI8",
-          RelativeLayer: "_189IQalI-kinGc53wY8Btm",
-          WithPointerEvents: "V18cwfJ6UCohOoz26FN68",
-          RecordingDecorators: "_2u47IazTp8la3TplHQ4uMB",
-          ClipDecorators: "_2LgpdbDk3onwK4JvCZ39GV",
-          GameModes: "_32FUOpVgoy1QDT7K79IbqA",
-          DateDecorator: "_3I1C0omMrwDJGYMspB33xc",
-          BackgroundTicks: "-YJsXiYQ82zAY6sIPD-Z3",
-          Highlights: "_1YMPrXbYXRhzivMd0RAOk-",
-          RangeHighlights: "MxB0pCFqE_x6FHJiO8vGU",
-          Timestamps: "_2GK8qqQxwH2_oWzF5rDbv6",
-          RangeSelector: "pUP4yzI_BrVbBm7Bv9_ta",
-          SeekScrubber: "_4LzfJqGOGDmemv2y4TUvS",
-          PlayHead: "_7tgJLenOXLuiHf4FQsal-",
-          Thumbnails: "TulKT7sbANoIafI9_KJza",
-          PositionLeft: "_2g51I5QZegiV94lHBGsUhw",
-          PositionRight: "_1AQnsvHDMaK1BJGY5kAcTl",
-          Phases: "_3rPpP9lH-E-fnlD-DUERH3",
           TimelineRelativeDate: "xYXziACgvkSwOnjGsjrll",
           Overlay: "c1Fn5e_N42Q5Oz4gyqRvL",
         };
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "ALhsP_3HUfx4PHrpqy8R9",
-          ScrollAndControlsCtn: "_5tbL0FKI0tuPTIa9Kh7Eo",
-          GamepadMode: "_1dlSZNEhvmBeFco9nqqgCu",
-          Controls: "u1VLCsRiWRO141U_KrOsN",
-          TimelineScrollContainer: "_2IbHVvHaXnfviOahuULDQE",
-          ContentContainer: "_2akKkTmA-GSqjV0ZuWZrxH",
-          AbsoluteLayer: "_2e4HsYQIYWCzm4AUpHqlD2",
-          HideOverflow: "_2Cp350sAx9clmoB_LKnqbp",
-          RelativeLayer: "_124G22Z6qukxV-0yFjpk6h",
-          WithPointerEvents: "ZoJ5cv5eX5Scw_K3FbQVA",
-          RecordingDecorators: "_1b3xBvE7bRvkHIrvljgLJb",
-          ClipDecorators: "_12hX8NvmhU3g8lrWcYZmia",
-          GameModes: "_1w4ECxgpqgm_8JHSj5S_ys",
-          DateDecorator: "_2_LxF0wGALV2Jtr6yimHGW",
-          BackgroundTicks: "_1wC4nFbVKj98NDRuVnW2DK",
-          Highlights: "_3Mwk0XzURhRyn-iKASG7Yj",
-          RangeHighlights: "AwYHl8RlppVEH0g3dKMjP",
-          Timestamps: "_2_I_TyIeQdR-V7l562aVwJ",
-          RangeSelector: "_2509eCzShezVSGfZFWi9BW",
-          SeekScrubber: "_3Re46KW-L5PLoUYxCq_k6W",
-          PlayHead: "_3BW9NlhX6WYWHXM6WNBI54",
-          Thumbnails: "_3WC2e0zUqP5LoUxckgI6Fv",
-          PositionLeft: "m29ndF7OUcWuJyQ7gz0r9",
-          PositionRight: "_3scLcN4HvBYNivCKDSVIGj",
-          Phases: "_25KI7BuIZxgifkWKhYIy4m",
           GameModeMarker: "_XZRbjOovnp3-oJB1FHsX",
           Playing: "_1QXuDX8p22dW30Dq7Q4cY1",
           Staging: "_5elfnsld99d9XPrRSVVMb",
@@ -22344,31 +21869,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "_2i7CkGHUrVZKOMEsrhI1p_",
-          ScrollAndControlsCtn: "_3fITrWggW83OcggiMJdPz3",
-          GamepadMode: "_2hCXeP62uQrMldE08f-mjT",
-          Controls: "_1EiX3eLLYicyYcDHtIM6_s",
-          TimelineScrollContainer: "_2RYEV5Q8tyI-Z488xqMdJh",
-          ContentContainer: "_2lWpy5QzYnH2pWhRjUASJL",
-          AbsoluteLayer: "_3wd1JlZa9wOIFFMqdVmsh8",
-          HideOverflow: "_2PTM3ppOv1W0jPmlXV9zeK",
-          RelativeLayer: "_237IHLV36I9F3GAeSC3Ast",
-          WithPointerEvents: "sMhiTRaHJInFdVQZ6J0-m",
-          RecordingDecorators: "_3S9aExsAjU_DTaDbMIj5i9",
-          ClipDecorators: "_3sy9QqiqMextSXnKc1AMAN",
-          GameModes: "_2zfITr74kyUJlBfMyJLgnn",
-          DateDecorator: "_2ad7ZMfcbWLopAqjoc1dQy",
-          BackgroundTicks: "_2rdq8jGEzjIT8wAFNFhiYQ",
-          Highlights: "_2MKxDzVJV5-FqyH991s2MT",
-          RangeHighlights: "_2pwNSvaiG6OMTbuF-NyeqL",
-          Timestamps: "_1BmX-E7ljnjRC-DwV0vehq",
-          RangeSelector: "_3Kw_btjCsTccf081ReOvQp",
-          SeekScrubber: "lP4qnNu-VBcvUzlXNQtyt",
-          PlayHead: "_3pAXAVoqYOE6IKmH5vVcvy",
-          Thumbnails: "_26VL6vWz_H-HdOIX-WB1NV",
-          PositionLeft: "_1UQilx5P8cBrDKId9y9Zml",
-          PositionRight: "vmWKsPz2yK9DdAMmGopBd",
-          Phases: "_3hNl6_lWZBob973Eyo8tN7",
           MarkerAndDropline: "KxkV7ibv4HxiLzsJDo09y",
           Faded: "_2YIhgvCldNrTquf5YdDweU",
           NoPointer: "_2ebcCpkh2QhQIrtDjawNTL",
@@ -22376,6 +21876,7 @@
           TimelineMarker: "_2CNnKSqRD_9z5U0Knq2yjM",
           DroplineCtn: "_2KKJRZF-_QAqfpR0e-20x6",
           TimelineMarkerDropLine: "_3JsMmXCkE-NhKNzxarPwuc",
+          RangeSelector: "_3Kw_btjCsTccf081ReOvQp",
         };
       },
       chunkid: (module) => {
@@ -22391,31 +21892,7 @@
       chunkid: (module) => {
         module.exports = {
           thumbnailWidth: "320",
-          LoadingTimeline: "_2X7jhW-qi_3UccesLWrrSi",
-          ScrollAndControlsCtn: "_3NY57YPlBtVmbManJByw3B",
-          GamepadMode: "_3LWcSQg02x6_mKFAC2HnOA",
-          Controls: "_3iXWpF78DL2KpP8zwC0a0D",
-          TimelineScrollContainer: "_3A2oPv5e_smY5BRZYb44oC",
-          ContentContainer: "_37F8Twe4-MEGnPuMdrRjdV",
-          AbsoluteLayer: "_2TPYTXJ5LTahFqYyrgyybY",
-          HideOverflow: "_1GDbd0Ag6dx77g7HNg9fjA",
-          RelativeLayer: "_1Gp1jY_vrVhkryDDlAy5XA",
-          WithPointerEvents: "_2Wca3Yup3sepGJyb3yB9Wx",
-          RecordingDecorators: "_2yAWbzlcRBmXGKBJxO5Q6K",
-          ClipDecorators: "_1vxxhyF1HrGzKc8R-wGDGw",
-          GameModes: "_2W6eCuNryz1pMcGhYEyFag",
-          DateDecorator: "_2XW6UMjMH0uXl0q6gIOKs7",
-          BackgroundTicks: "_3Tt6WBdl000PCM7C2kwD2c",
-          Highlights: "_1epMF6kwn7KeUBakQKPhCm",
-          RangeHighlights: "aRAHUpKDR27OMcL2xHCSC",
-          Timestamps: "_2of-NiJ1-JIp_fPSufxZJ3",
-          RangeSelector: "bBVOLxbX1EUhwt_Oez4GK",
-          SeekScrubber: "_1c_f2oDp_5tIKiGQcvboIB",
           PlayHead: "NAXFU_K2NP9xmH2cnITpG",
-          Thumbnails: "FNvG_yK3LCIcUTGSfMhVP",
-          PositionLeft: "GECyynaguvZTc6_17XpFd",
-          PositionRight: "_3Rwz0Dale6Fxyu3k2khbuf",
-          Phases: "_xSGH0PVjr0l8tuXz9-3f",
           PlayheadInteractionCtn: "_3_VTfkSR95EXQBQCvfM-ua",
           ActiveCtn: "_2bsFx5e6IWGwk1Smh_yRl",
           PlayHeadContainer: "_2RtcuI1Wk2JRTn39xig3OS",
@@ -22434,31 +21911,6 @@
       chunkid: (module) => {
         module.exports = {
           thumbnailWidth: "320",
-          LoadingTimeline: "_15xYd1duz4CX9ojFz0CE0r",
-          ScrollAndControlsCtn: "_39WVqvqzprHCxsDbq6RIVi",
-          GamepadMode: "_1iVq_Vso_g-hPu4I6clDcI",
-          Controls: "q39fhjQv3o2GqRMkZeGeA",
-          TimelineScrollContainer: "_2Ns82DABvcHzpa7h2Z1yN0",
-          ContentContainer: "_2flM04qSQgffE6G2_pghpT",
-          AbsoluteLayer: "hPYovdeG0fnX79y5Lq6i8",
-          HideOverflow: "zl42_yRu36YJmTpwkrll3",
-          RelativeLayer: "wxj4IaR3D-7lPHenwnyaS",
-          WithPointerEvents: "_2AobDyHPf2lTm9ZzZIsGop",
-          RecordingDecorators: "_1hCGwoXgxZG5aIyUcumoan",
-          ClipDecorators: "_1d_mX4rNoLcSBlpCOOZ9d-",
-          GameModes: "_26Bbv689gSTq0MjmYL-Y6Y",
-          DateDecorator: "_2BqCIYg1x7daCu3oF0vicq",
-          BackgroundTicks: "_2YoyAw0aHd57nTMyCX8Ek8",
-          Highlights: "_2hsueyKwIwA6dgxRFhAuEw",
-          RangeHighlights: "_3eoxS78PdZxxZaBBmdJDZB",
-          Timestamps: "_3O3iRzw4rwhbFvTKLV7s2J",
-          RangeSelector: "_2gSg55gNLQhpokogPcJ-As",
-          SeekScrubber: "sTaCR323nQeC8QrAQW3Cr",
-          PlayHead: "_3Ra6BfYOEPCrvdKvrXpd2i",
-          Thumbnails: "_7KwbBvSEcjyRsmZ0g6j6z",
-          PositionLeft: "_27IW3T5nky75Oz6a17zWSg",
-          PositionRight: "xf_NxJ83twPRPic2nUu3s",
-          Phases: "IIuLWvFELtrtCRCvRlpo",
           RangeControls: "_3TsJzrPgtC5rqLcR6ihpFi",
           RangeSelectorCtn: "_2ULjGYMNYTiUllQtzFXS11",
           Active: "_2bFlccGjBmvO9sTXH-UhId",
@@ -22474,31 +21926,6 @@
       },
       chunkid: (module) => {
         module.exports = {
-          LoadingTimeline: "_3tH-UmmBxFZv85a4VmjR83",
-          ScrollAndControlsCtn: "_3EGBZkS2chHJ5KaKxGam9e",
-          GamepadMode: "_3Wahmr7e1VA6i9w9Iq0-Vg",
-          Controls: "_3nrFGW_JIvdhMPBQvVaqby",
-          TimelineScrollContainer: "_3vqWS2_hdUvKZO0Vipm-Pa",
-          ContentContainer: "_2_mqytSivE2wDjb0DQRqEp",
-          AbsoluteLayer: "CiFLrniSN_egwVrtxdvwm",
-          HideOverflow: "_2BoIL1h7HxeuUr9oEBJu5e",
-          RelativeLayer: "_3obgM4lCFV2Ggqbiz0HJZX",
-          WithPointerEvents: "_1e6-Zdv13LsrP3qEPoBDr9",
-          RecordingDecorators: "_3l9q4-8eUf8mm3ml4NZ-9m",
-          ClipDecorators: "_1HU0h3xOeCJtdhA_ieKKsf",
-          GameModes: "_2FL-NrMawaFVKSgQr2NRu7",
-          DateDecorator: "_2bCxb7i3bzq1DCZWl04h-n",
-          BackgroundTicks: "_2UfqYYX9g4-SFlozy19diE",
-          Highlights: "_2iZX0eAmOssSWzNwVW2Sk2",
-          RangeHighlights: "_1aNkPwMsxHkCpTJ3zueNmV",
-          Timestamps: "_2TfF2B8IJjQO4cxcYnzNv-",
-          RangeSelector: "wMeTvFQex5TV0NsHdu1En",
-          SeekScrubber: "_1x23j31qyK2ov8527ywrtY",
-          PlayHead: "_3hU0qsPL5AdwVbmHfPQjz8",
-          Thumbnails: "_3U1E2lH8PHXEKmmCidFYET",
-          PositionLeft: "_3a7NFvp83NwS--Uea7c18J",
-          PositionRight: "_2aWYEMKtLLTVAg5lTA30Du",
-          Phases: "_2HWX2m_BjCepXubvHC-OBI",
           RecordingDecorator: "_24zNSxRiQlHxbGT_RvZsoY",
           Clip: "_3Q-H1_vR-NtTfQf_Ohljdx",
           ClipMode: "_7MCqjcHde47TGpwTMEK5",
@@ -22511,31 +21938,7 @@
       chunkid: (module) => {
         module.exports = {
           thumbnailWidth: "320",
-          LoadingTimeline: "_3Tmq42XNJAOKkmYYNLwhYt",
-          ScrollAndControlsCtn: "_2zSlRD5EZdNkxEXqxX19xj",
-          GamepadMode: "_1iEsh140l3SOV-CHmx1gPK",
-          Controls: "_3Sigu8Ua4QhAoaSILhJjnk",
-          TimelineScrollContainer: "_36TGeLVHkkcngviDfI1e3w",
-          ContentContainer: "_2mJpXt1qXS1THVBTX6wQIh",
-          AbsoluteLayer: "_1hyNg-11fi93ggy44EPp0D",
-          HideOverflow: "_1IkW2bCIFdXrtYpOKZJT78",
-          RelativeLayer: "_1RLJoHOySeNow6t6Gb4q2I",
-          WithPointerEvents: "_1o2r-Bw4voSyttJ2TnlIMF",
-          RecordingDecorators: "_2qcUYqRha1_HKm_YVHzDFf",
-          ClipDecorators: "_3qqUOckgF-Vne9B37h2VNV",
-          GameModes: "_2K3UBqeIoBHg4LbvxflBnI",
-          DateDecorator: "_2BEmrgSvLIuVLtOq4uyk-b",
-          BackgroundTicks: "WbVOga7uck_kj9-xd1ZBj",
-          Highlights: "_2nvnMUT2DtnJcH1Rlz3i04",
-          RangeHighlights: "_2PKtguqz5iQChuLNLyEq-9",
-          Timestamps: "R3B96ZoLAEXfwE5F5VAlS",
-          RangeSelector: "_3DWyeaU2HR8tgw6IYQIrF2",
-          SeekScrubber: "_2wVY5UH9H5eVSyRfPhgV10",
           PlayHead: "_3knz_EuOFUYwJ-8OisxbLi",
-          Thumbnails: "JjnuXWzLmCm63Y-6KipH6",
-          PositionLeft: "feeCzNA4u_b9e5tzS9oa6",
-          PositionRight: "_1uGyz62lktHAb9_wh3QEUn",
-          Phases: "_2wzBXR-nPbsfwcRPnqJ4yk",
           PlayheadInteractionCtn: "cxkAkBK32ah0etQ7VXfDI",
           ActiveCtn: "_3HMQwpcr66jg7N3RW9U4r1",
           PlayHeadContainer: "_3Fg3Bef5dt1s1SK8yzivuJ",
@@ -22563,31 +21966,6 @@
       chunkid: (module) => {
         module.exports = {
           thumbnailWidth: "320",
-          LoadingTimeline: "_3Q5mItz1omGnn-T1D3hSx6",
-          ScrollAndControlsCtn: "_1fH0OLSeGlehC7ZroCzqe9",
-          GamepadMode: "_2t0z1NBG3JkzrwgVIk_P3W",
-          Controls: "_2LpY_Ns-dcnT5PHQQLiXPp",
-          TimelineScrollContainer: "_1q2QlUl7dhMQoUemqokVst",
-          ContentContainer: "cUBJWpslwHW62w7LbnL7c",
-          AbsoluteLayer: "_1pSOlypnO47E0bAGUg8vzb",
-          HideOverflow: "_2hT8Akt7q9EZvx2C0IFuRR",
-          RelativeLayer: "_3zkquJ_VVnjp1lWbN1tTxS",
-          WithPointerEvents: "_2KJPu1BcFSB6UeyCGC1Q9l",
-          RecordingDecorators: "_2lJHaMtseWGNtKzez_c-tR",
-          ClipDecorators: "Xqf7VLN_JqMJeMe-gjyHj",
-          GameModes: "Z9nyGreF6wFTFgKjwuTur",
-          DateDecorator: "_1H35HfLIngfg1Spx8-se-m",
-          BackgroundTicks: "_2Qp-oYu2NVGRgnr-MnIi2c",
-          Highlights: "_1pFb1qr2LgVW_Epi61zjiM",
-          RangeHighlights: "F3-cbznHCNkLM3OoAmQEK",
-          Timestamps: "_3fHbNOeEXYFGE31WD5XnOr",
-          RangeSelector: "_3ovQqX7ALXvRC1ekegy7Lf",
-          SeekScrubber: "_3YSduxpL8KnXHYHJkjuwvv",
-          PlayHead: "_3uZ7PVoL2PO3WBpvCAnoK9",
-          Thumbnails: "_2ZT_p0F8NlyiN2w9uK0V-8",
-          PositionLeft: "_2dupDWRctKjVqN0z4s0oyR",
-          PositionRight: "_1PDRoz5nG__plPLMJYlHLW",
-          Phases: "_26bhPWtFCbtjxSwlbSIltM",
           TooltipOffset: "_2dYuDsUYCHiGRqSksoc2iU",
           ThumbnailContainerOffset: "iJ-nnbMoplnO7sW4GoKZE",
           ThumbnailContents: "_1p6K1C-xCaggsPiZeYS6xb",
@@ -22658,18 +22036,6 @@
           Action: "_39eWK3BcJKYP9H1X1cTdyV",
           TipCount: "_1T5ZuXrxnGb4BDtEbYTuGz",
           TourStopArrow: "_2JvQPEForHWVgljtxxAwRP",
-          BackgroundAnimation: "_15yvWK6GCakW5yZ0YB66fv",
-          "ItemFocusAnim-darkerGrey-nocolor": "Eu2HOvMbunn7MzCLIJ5ES",
-          "ItemFocusAnim-darkerGrey": "DvP1wiF6eV9afdQaEkods",
-          "ItemFocusAnim-darkGreySettings": "_2MNkLvIOgwx0GSMCjDlkL8",
-          "ItemFocusAnim-darkGrey": "_2tQsBdyAzzF2_nY65OSwNm",
-          "ItemFocusAnim-grey": "Qg-4WEghuaXqBRIE-lEVs",
-          "ItemFocusAnim-translucent-white-10": "_18ENJxMfn40_y_8CMeuuMm",
-          "ItemFocusAnim-translucent-white-20": "_1wbIEe3KnohwpAw2O4M9YP",
-          "ItemFocusAnimBorder-darkGrey": "_3hC5OOIGfv0lY8ykI4qpNa",
-          "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
-          focusAnimation: "_2KA789f9Y4_LCtoyqU3FM3",
-          hoverAnimation: "VH09gZfzWmSxuuocDY_-n",
         };
       },
     },

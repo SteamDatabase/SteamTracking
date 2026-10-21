@@ -173,15 +173,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -190,17 +181,15 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = _._.PerMinute;
         class _ {
+          m_accountid;
+          m_bLoadingData = !1;
+          m_rtLastLoad = 0;
+          m_communityData = void 0;
           constructor(_) {
-            _(this, "m_accountid"),
-              _(this, "m_bLoadingData", !1),
-              _(this, "m_rtLastLoad", 0),
-              _(this, "m_communityData"),
-              (0, _._)(this),
-              (this.m_accountid = _);
+            (0, _._)(this), (this.m_accountid = _);
           }
           get community_data() {
             return this.m_communityData;
@@ -332,7 +321,6 @@
         _ = _([_._], _);
         let _ = class extends _.Component {
           render() {
-            var _;
             let _ = this.props.persona,
               _ = this.props.community_data;
             return (0, _.jsxs)("div", {
@@ -341,9 +329,7 @@
                 this.props.className,
               ),
               children: [
-                ((_ = _ == null ? void 0 : _.in_game) == null
-                  ? void 0
-                  : _.logo) &&
+                _?.in_game?.logo &&
                   (0, _.jsx)("img", {
                     className: _().gameLogo,
                     src: _.in_game.logo,
@@ -380,15 +366,11 @@
         };
         _ = _([_._], _);
         function _(_) {
-          var _;
           const { appID: _ } = _,
             [_] = (0, _._)(_, {
               include_assets_without_overrides: !0,
             }),
-            _ =
-              (_ = _ == null ? void 0 : _.GetAssetsWithoutOverrides()) == null
-                ? void 0
-                : _.GetHeaderURL();
+            _ = _?.GetAssetsWithoutOverrides()?.GetHeaderURL();
           return _
             ? (0, _.jsx)("img", {
                 className: _().gameLogo,
@@ -754,10 +736,11 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_SteamInterface;
+          m_rgPreviousAvatars = [];
+          m_promiseLoading;
           constructor(_) {
-            (this.m_rgPreviousAvatars = []),
-              (0, _._)(this),
-              (this.m_SteamInterface = _);
+            (0, _._)(this), (this.m_SteamInterface = _);
           }
           GetAvatarHistory() {
             return this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || [];
@@ -835,8 +818,10 @@
           };
         class _ {
           constructor() {
-            (this.m_AvatarData = void 0), (0, _._)(this);
+            (0, _._)(this);
           }
+          m_AvatarData = void 0;
+          m_promiseLoading;
           GetRecentGameAvatars() {
             return (
               this.StartLoadIfNeeded(),
@@ -973,12 +958,12 @@
           return _ == _.uvF ? _ : _ == _.Snd && _ == _ ? _ : _;
         }
         class _ {
+          m_PrivacySettings = void 0;
+          m_eCommentPermission = void 0;
+          m_eSaveStateByKey = new Map();
+          m_eCommentSaveState = _;
           constructor(_, _) {
-            (this.m_PrivacySettings = void 0),
-              (this.m_eCommentPermission = void 0),
-              (this.m_eSaveStateByKey = new Map()),
-              (this.m_eCommentSaveState = _),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_PrivacySettings = _),
               (this.m_eCommentPermission = _);
           }
@@ -1108,12 +1093,13 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_rgBadges = [];
+          m_FavoriteBadge = void 0;
+          m_CommittedFavoriteBadge;
+          m_AppInfoStore;
+          m_CMInterface;
           constructor(_, _, _) {
-            (this.m_rgBadges = []),
-              (this.m_FavoriteBadge = void 0),
-              (0, _._)(this),
-              (this.m_CMInterface = _),
-              (this.m_AppInfoStore = _);
+            (0, _._)(this), (this.m_CMInterface = _), (this.m_AppInfoStore = _);
             const _ = _.rgBadges,
               _ = _.FavoriteBadge;
             if (!Array.isArray(_))
@@ -1184,6 +1170,9 @@
           _([_._], _.prototype, "SetFavoriteBadge", 1),
           _([_._], _.prototype, "RevertFavoriteBadge", 1);
         class _ {
+          m_strIconURL;
+          m_strName;
+          m_strXP;
           constructor(_) {
             (this.m_strIconURL = _.icon),
               (this.m_strName = _.name),
@@ -1206,6 +1195,7 @@
           }
         }
         class _ extends _ {
+          m_unBadgeID;
           constructor(_) {
             super(_), (this.m_unBadgeID = _.badgeid);
           }
@@ -1219,6 +1209,11 @@
           }
         }
         class _ extends _ {
+          m_ulCommunityItemID;
+          m_usItemType;
+          m_unAppID;
+          m_unBorderColor;
+          m_AppInfoStore;
           constructor(_, _) {
             super(_),
               (this.m_ulCommunityItemID = _.communityitemid),
@@ -1296,15 +1291,19 @@
           return _ ? `${_._.MEDIA_CDN_COMMUNITY_URL}images/${_}` : null;
         }
         class _ {
+          m_SteamInterface;
+          m_AppInfoStore;
+          m_promiseOwned;
+          m_promiseEquipped;
+          m_Backgrounds = new _(this);
+          m_MiniProfileBackgrounds = new _(this);
+          m_Avatars = new _(this);
+          m_AvatarFrames = new _(this);
+          m_ProfileModifiers = new _(this);
+          m_OnAvatarEquipmentChangedCallbacks = new _._();
+          m_mapGoldenProfileConfigByAppID = new Map();
           constructor(_, _, _) {
-            (this.m_Backgrounds = new _(this)),
-              (this.m_MiniProfileBackgrounds = new _(this)),
-              (this.m_Avatars = new _(this)),
-              (this.m_AvatarFrames = new _(this)),
-              (this.m_ProfileModifiers = new _(this)),
-              (this.m_OnAvatarEquipmentChangedCallbacks = new _._()),
-              (this.m_mapGoldenProfileConfigByAppID = new Map()),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_SteamInterface = _),
               (this.m_AppInfoStore = _);
             for (let _ of _)
@@ -1696,15 +1695,16 @@
           _([_._], _.prototype, "RevertAvatarChanges", 1),
           _([_._], _.prototype, "ReloadEquippedItems", 1);
         class _ {
+          m_cItemsOwned = void 0;
+          m_bEquippedLoaded = !1;
+          m_bUnsavedChanges = !1;
+          m_CommittedEquippedItem = void 0;
+          m_EquippedItem = void 0;
+          m_EquipFlags = void 0;
+          m_rgOwnedItems;
+          m_parent;
           constructor(_) {
-            (this.m_cItemsOwned = void 0),
-              (this.m_bEquippedLoaded = !1),
-              (this.m_bUnsavedChanges = !1),
-              (this.m_CommittedEquippedItem = void 0),
-              (this.m_EquippedItem = void 0),
-              (this.m_EquipFlags = void 0),
-              (0, _._)(this),
-              (this.m_parent = _);
+            (0, _._)(this), (this.m_parent = _);
           }
           GetOwnedItemCount() {
             return this.m_cItemsOwned;
@@ -1792,16 +1792,20 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_strDisplayCountry = void 0;
+          m_strDisplayState = void 0;
+          m_strDisplayCity = void 0;
+          m_strCountryCode = void 0;
+          m_strStateCode = void 0;
+          m_strCityCode = void 0;
+          m_CountryCur;
+          m_StateCur;
+          m_rgCountryList;
+          m_promiseLoadCountries;
+          m_bStateSelectionAvailable = !1;
+          m_bCitySelectionAvailable = !1;
           constructor(_, _, _, _, _, _) {
-            (this.m_strDisplayCountry = void 0),
-              (this.m_strDisplayState = void 0),
-              (this.m_strDisplayCity = void 0),
-              (this.m_strCountryCode = void 0),
-              (this.m_strStateCode = void 0),
-              (this.m_strCityCode = void 0),
-              (this.m_bStateSelectionAvailable = !1),
-              (this.m_bCitySelectionAvailable = !1),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_strDisplayCountry = _),
               (this.m_strDisplayState = _),
               (this.m_strDisplayCity = _),
@@ -1972,9 +1976,12 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_ActiveTheme = void 0;
+          m_ComittedActiveTheme;
+          m_rgAvailableThemes;
+          m_CMInterface;
           constructor(_, _, _) {
-            (this.m_ActiveTheme = void 0),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_CMInterface = _),
               (this.m_rgAvailableThemes = _.map((_) => ({
                 ..._,
@@ -2064,10 +2071,13 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_rgUserGroups;
+          m_PrimaryGroup = void 0;
+          m_CommittedPrimaryGroup;
+          m_bLoaded = !1;
+          m_promiseLoading;
           constructor(_) {
-            (this.m_PrimaryGroup = void 0),
-              (this.m_bLoaded = !1),
-              (0, _._)(this),
+            (0, _._)(this),
               _ &&
                 (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
                   new _(new _._(_.steamid), _.name, _.avatarHash));
@@ -2140,6 +2150,9 @@
           _([_._], _.prototype, "SetPrimaryGroup", 1),
           _([_._], _.prototype, "RevertPrimaryGroupChanges", 1);
         class _ {
+          m_steamID;
+          m_strName;
+          m_strAvatarHash;
           constructor(_, _, _) {
             (this.m_steamID = _),
               (this.m_strName = _),
@@ -2171,10 +2184,18 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_Profile;
+          m_ProfileBadges;
+          m_ProfileItems;
+          m_ProfileTheme;
+          m_ProfilePrivacy;
+          m_OGGAvatars = new _();
+          m_AvatarHistory;
+          m_EmoticonStore = new _._();
+          m_WebAPI;
+          m_AppInfoStore;
           constructor(_, _, _) {
-            (this.m_OGGAvatars = new _()),
-              (this.m_EmoticonStore = new _._()),
-              (this.m_Profile = new _(_)),
+            (this.m_Profile = new _(_)),
               (this.m_WebAPI = _),
               (this.m_AppInfoStore = new _._()),
               this.m_AppInfoStore.Init(this.m_WebAPI),
@@ -2238,16 +2259,30 @@
           }
         }
         class _ {
+          m_strPersonaName = void 0;
+          m_strCommittedPersonaName = void 0;
+          m_strFilteredPersonaName;
+          m_strCommittedFilteredPersonaName;
+          m_strCustomURL = void 0;
+          m_strComittedCustomURL;
+          m_strRealName = void 0;
+          m_strComittedRealName;
+          m_strFilteredRealName;
+          m_strCommittedFilteredRealName;
+          m_strSummary = void 0;
+          m_strComittedSummary;
+          m_strAvatarHash = void 0;
+          m_strCommittedAvatarHash = void 0;
+          m_persona;
+          m_MiniProfileData;
+          m_Location;
+          m_GroupList;
+          m_rtPersonaNameBannedUntil;
+          m_rtProfileSummaryBannedUntil;
+          m_rtAvatarBannedUntil;
+          m_Preferences = void 0;
           constructor(_) {
-            (this.m_strPersonaName = void 0),
-              (this.m_strCommittedPersonaName = void 0),
-              (this.m_strCustomURL = void 0),
-              (this.m_strRealName = void 0),
-              (this.m_strSummary = void 0),
-              (this.m_strAvatarHash = void 0),
-              (this.m_strCommittedAvatarHash = void 0),
-              (this.m_Preferences = void 0),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_strPersonaName = _.strPersonaName),
               (this.m_strFilteredPersonaName = _.strFilteredPersonaName),
               (this.m_strCustomURL = _.strCustomURL),
@@ -2304,7 +2339,7 @@
           }
           NotifyRNMobileAppStateChanged() {
             const _ = Reflect.get(window, "ReactNativeWebView");
-            if (_ != null && _.postMessage) {
+            if (_?.postMessage) {
               const _ = {
                 event_name: "personastatechanged",
                 steamid: _._.steamid,
@@ -2448,16 +2483,16 @@
           GetAvatarChangeCooldownEndRTime() {
             return this.m_rtAvatarBannedUntil;
           }
+          static k_strPersonaNameCooldownSupportURL =
+            "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B";
+          static k_strProfileSummaryCooldownSupportURL =
+            "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B";
+          static k_strAvatarCooldownSupportURL =
+            "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B";
+          static k_strNameFilteredSupportURL =
+            "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415";
         }
-        (_.k_strPersonaNameCooldownSupportURL =
-          "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-          (_.k_strProfileSummaryCooldownSupportURL =
-            "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-          (_.k_strAvatarCooldownSupportURL =
-            "https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B"),
-          (_.k_strNameFilteredSupportURL =
-            "https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415"),
-          _([_._], _.prototype, "m_strPersonaName", 2),
+        _([_._], _.prototype, "m_strPersonaName", 2),
           _([_._], _.prototype, "m_strCommittedPersonaName", 2),
           _([_._], _.prototype, "m_strCustomURL", 2),
           _([_._], _.prototype, "m_strRealName", 2),
@@ -2561,13 +2596,10 @@
           });
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                activeItem: void 0,
-                bSaving: !1,
-              });
-          }
+          state = {
+            activeItem: void 0,
+            bSaving: !1,
+          };
           static getDerivedStateFromProps(_, _) {
             return {
               activeItem: _.activeItem !== void 0 ? _.activeItem : _.ActiveItem,
@@ -2651,14 +2683,12 @@
           return _ ? _.toLocaleLowerCase().replace(/\W/g, "") : "";
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                strSearch: "",
-              }),
-              (this.m_rgSearchableItems = null),
-              (this.m_refRootDiv = _.createRef());
-          }
+          state = {
+            strSearch: "",
+          };
+          m_rgSearchableItems = null;
+          m_fnSearchFieldsDisposer;
+          m_refRootDiv = _.createRef();
           async componentDidMount() {
             if (this.m_rgSearchableItems === null) {
               const {
@@ -2899,12 +2929,10 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bReady: !1,
-              });
-          }
+          state = {
+            bReady: !1,
+          };
+          m_rgAvatars;
           async componentDidMount() {
             let _;
             ([this.m_rgAvatars, _] = await Promise.all([
@@ -3279,12 +3307,10 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bReady: !1,
-              });
-          }
+          state = {
+            bReady: !1,
+          };
+          m_rgFrames;
           async componentDidMount() {
             (this.m_rgFrames =
               await this.props.ProfileItems.GetOwnedAvatarFrames()),
@@ -3474,6 +3500,7 @@
         };
         _ = _([_._], _);
         class _ extends _.Component {
+          m_disposer;
           componentDidMount() {
             document
               .querySelector(".profile_small_header_avatar")
@@ -3511,18 +3538,15 @@
           }
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                uploadImage: null,
-                strUploadError: "",
-                bAvatarCollectionExpanded: !1,
-                bFrameCollectionExpanded: !1,
-                bSaving: !1,
-                bHTMLError: !1,
-              }),
-              (this.cropRef = _.createRef());
-          }
+          state = {
+            uploadImage: null,
+            strUploadError: "",
+            bAvatarCollectionExpanded: !1,
+            bFrameCollectionExpanded: !1,
+            bSaving: !1,
+            bHTMLError: !1,
+          };
+          cropRef = _.createRef();
           OnUploadSelected(_) {
             this.setState({
               uploadImage: _,
@@ -3570,17 +3594,12 @@
               this.props.Profile.NotifyRNMobileAppStateChanged();
           }
           async SaveUpload() {
-            var _;
             const {
                 Profile: _,
                 ProfileItems: _,
                 AvatarHistory: _,
               } = this.props,
-              _ = await _.UploadAvatar(
-                await ((_ = this.cropRef.current) == null
-                  ? void 0
-                  : _.getBlob()),
-              );
+              _ = await _.UploadAvatar(await this.cropRef.current?.getBlob());
             if (!_.bSuccess) {
               this.setState({
                 strUploadError: _.strError,
@@ -3757,7 +3776,7 @@
               });
         function _(_, _, _, _) {
           return _
-            ? _ != null && _.disableAnimation
+            ? _?.disableAnimation
               ? _(_)
               : _(_)
             : (0, _._)(_ || _._, _);
@@ -3841,9 +3860,8 @@
           const { OnAvatarSelected: _, disabled: _, strError: _ } = _,
             _ = _.useRef(void 0),
             _ = _.useCallback(() => {
-              var _;
-              const _ = (_ = _.current) == null ? void 0 : _.files;
-              (_ == null ? void 0 : _.length) > 0 &&
+              const _ = _.current?.files;
+              _?.length > 0 &&
                 _[0].type.startsWith("image/") &&
                 (_(_[0]), (_.current.value = null));
             }, [_]);
@@ -3955,32 +3973,16 @@
               staleTime: 1 / 0,
             });
           _.useEffect(() => {
-            var _, _, _;
             _(
-              (_ =
-                (_ = _.data) == null
-                  ? void 0
-                  : _.find((_) => {
-                      var _;
-                      return (
-                        ((_ = _.data) == null ? void 0 : _.strCode) ==
-                        _.CountryCode
-                      );
-                    })) != null
-                ? _
-                : ((_ = _.data) == null ? void 0 : _.length) > 0
-                  ? _.data[0]
-                  : void 0,
+              _.data?.find((_) => _.data?.strCode == _.CountryCode) ??
+                (_.data?.length > 0 ? _.data[0] : void 0),
             );
           }, [_.data, _.CountryCode]);
           const _ = _.useCallback(
             (_) => {
-              var _, _;
               _.SetCountry(
-                (_ = _.data) == null ? void 0 : _.strCode,
-                (_ = _.data) != null && _.strCode
-                  ? _.data.strDisplayText
-                  : void 0,
+                _.data?.strCode,
+                _.data?.strCode ? _.data.strDisplayText : void 0,
               ),
                 _(_);
             },
@@ -3999,7 +4001,7 @@
                 },
                 label: (0, _._)("#Profile_FieldCountry"),
                 rgOptions: _.data,
-                selectedOption: _ == null ? void 0 : _.data,
+                selectedOption: _?.data,
                 controlled: !0,
                 disabled: _.isFetching,
                 onChange: _,
@@ -4033,32 +4035,16 @@
               staleTime: 1 / 0,
             });
           _.useEffect(() => {
-            var _, _, _;
             _(
-              (_ =
-                (_ = _.data) == null
-                  ? void 0
-                  : _.find((_) => {
-                      var _;
-                      return (
-                        ((_ = _.data) == null ? void 0 : _.strCode) ==
-                        _.StateCode
-                      );
-                    })) != null
-                ? _
-                : ((_ = _.data) == null ? void 0 : _.length) > 0
-                  ? _.data[0]
-                  : void 0,
+              _.data?.find((_) => _.data?.strCode == _.StateCode) ??
+                (_.data?.length > 0 ? _.data[0] : void 0),
             );
           }, [_.data, _.StateCode]);
           const _ = _.useCallback(
               (_) => {
-                var _, _;
                 _.SetState(
-                  (_ = _.data) == null ? void 0 : _.strCode,
-                  (_ = _.data) != null && _.strCode
-                    ? _.data.strDisplayText
-                    : void 0,
+                  _.data?.strCode,
+                  _.data?.strCode ? _.data.strDisplayText : void 0,
                 ),
                   _(_);
               },
@@ -4079,7 +4065,7 @@
                   },
                   label: (0, _._)("#Profile_FieldState"),
                   rgOptions: _.data,
-                  selectedOption: _ == null ? void 0 : _.data,
+                  selectedOption: _?.data,
                   controlled: !0,
                   disabled: _.isFetching,
                   onChange: _,
@@ -4116,32 +4102,16 @@
               retry: !1,
             });
           _.useEffect(() => {
-            var _, _, _;
             _(
-              (_ =
-                (_ = _.data) == null
-                  ? void 0
-                  : _.find((_) => {
-                      var _;
-                      return (
-                        ((_ = _.data) == null ? void 0 : _.strCode) ==
-                        _.CityCode
-                      );
-                    })) != null
-                ? _
-                : ((_ = _.data) == null ? void 0 : _.length) > 0
-                  ? _.data[0]
-                  : void 0,
+              _.data?.find((_) => _.data?.strCode == _.CityCode) ??
+                (_.data?.length > 0 ? _.data[0] : void 0),
             );
           }, [_.data, _.CityCode]);
           const _ = _.useCallback(
               (_) => {
-                var _, _;
                 _.SetCity(
-                  (_ = _.data) == null ? void 0 : _.strCode,
-                  (_ = _.data) != null && _.strCode
-                    ? _.data.strDisplayText
-                    : void 0,
+                  _.data?.strCode,
+                  _.data?.strCode ? _.data.strDisplayText : void 0,
                 ),
                   _(_);
               },
@@ -4162,7 +4132,7 @@
                   },
                   label: (0, _._)("#Profile_FieldCity"),
                   rgOptions: _.data,
-                  selectedOption: _ == null ? void 0 : _.data,
+                  selectedOption: _?.data,
                   controlled: !0,
                   disabled: _.isFetching,
                   onChange: _,
@@ -4187,13 +4157,10 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                strSummary: "",
-              }),
-              (this.m_refTextInput = _.createRef());
-          }
+          state = {
+            strSummary: "",
+          };
+          m_refTextInput = _.createRef();
           static getDerivedStateFromProps(_) {
             return {
               strSummary: _.Profile.GetSummary(),
@@ -4285,13 +4252,10 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSaving: !1,
-                strHTMLError: "",
-              });
-          }
+          state = {
+            bSaving: !1,
+            strHTMLError: "",
+          };
           OnSubmit(_) {
             _.preventDefault(), this.CommitChanges(_.currentTarget);
           }
@@ -4579,6 +4543,7 @@
         };
         _([_._], _.prototype, "OnProfileURLChange", 1), (_ = _([_._], _));
         let _ = class extends _.Component {
+          m_disposer;
           componentDidMount() {
             this.m_disposer = (0, _._)(() => {
               const { Profile: _ } = this.props;
@@ -4636,13 +4601,10 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSaving: !1,
-                strHTMLError: "",
-              });
-          }
+          state = {
+            bSaving: !1,
+            strHTMLError: "",
+          };
           async CommitFavoriteBadge() {
             const _ = this.props.Badges;
             this.setState({
@@ -4810,13 +4772,10 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSaving: !1,
-                strHTMLError: "",
-              });
-          }
+          state = {
+            bSaving: !1,
+            strHTMLError: "",
+          };
           async CommitFavoriteGroup() {
             const _ = this.props.Profile.GroupList;
             this.setState({
@@ -5379,7 +5338,7 @@
                 data: _.uvF,
               },
             ],
-            _ = _ != null ? _ : _.Quy;
+            _ = _ ?? _.Quy;
           return _.filter((_) => _ >= _.data);
         }
         const _ = (0, _._)(function (_) {
@@ -5486,7 +5445,7 @@
                 data: _,
               },
             ],
-            _ = _ != null ? _ : _.Quy;
+            _ = _ ?? _.Quy;
           return _.filter((_) => _ >= _.data);
         }
         let _ = class extends _.Component {
@@ -5969,12 +5928,9 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                equipFlags: 0,
-              });
-          }
+          state = {
+            equipFlags: 0,
+          };
           async componentDidMount() {
             const { ProfileItems: _ } = this.props;
             let _ = await _.GetEquippedBackground();
@@ -6052,7 +6008,7 @@
           }
           render() {
             let { Background: _, ProfileItems: _ } = this.props;
-            const _ = !_ || (_ == null ? void 0 : _.tiled),
+            const _ = !_ || _?.tiled,
               _ = _.GetEquippedBackgroundFlags();
             let _ = (0, _.jsx)(_, {
                 flag: _.JA9._,
@@ -6374,12 +6330,9 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bDialogActive: !1,
-              });
-          }
+          state = {
+            bDialogActive: !1,
+          };
           ShowDialog() {
             this.setState({
               bDialogActive: !0,
@@ -6561,13 +6514,10 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSaving: !1,
-                strHTMLError: "",
-              });
-          }
+          state = {
+            bSaving: !1,
+            strHTMLError: "",
+          };
           async CommitChanges(_) {
             const { ProfileTheme: _ } = this.props;
             this.setState({
@@ -6637,8 +6587,7 @@
             return (
               typeof _ == "string"
                 ? (_ = _ + "Theme")
-                : (_ =
-                    ((_ == null ? void 0 : _.theme_id) || "Default") + "Theme"),
+                : (_ = (_?.theme_id || "Default") + "Theme"),
               (0, _.jsx)("div", {
                 className: _[_],
                 children: _,
@@ -6780,14 +6729,11 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.m_refDiv = _.createRef()),
-              (this.state = {
-                bSaving: !1,
-                strHTMLError: "",
-              });
-          }
+          m_refDiv = _.createRef();
+          state = {
+            bSaving: !1,
+            strHTMLError: "",
+          };
           OnSubmit(_) {
             _.preventDefault(), this.CommitChanges(_.currentTarget);
           }
@@ -7022,15 +6968,11 @@
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)(_.steamid),
             _ = async () => {
-              var _, _;
               if ((_(!0), !_.current)) return;
               const _ = _.current.value,
                 _ = parseInt(_) * 86400,
                 _ = Math.floor(new Date().getTime() / 1e3) + _,
-                _ =
-                  (_ = (_ = _.current) == null ? void 0 : _.checked) != null
-                    ? _
-                    : !1;
+                _ = _.current?.checked ?? !1;
               await _.mutateAsync({
                 rtCooldownEnds: _,
                 bClearOpenReports: _,
@@ -7150,12 +7092,11 @@
           return (0, _._)({
             queryKey: ["reportercooldown", _],
             queryFn: async () => {
-              var _;
               const _ = _._.Init(_._);
               _.Body().set_steamid(_);
               const _ = await _._.GetReporterCooldown(_, _);
               if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
-              return (_ = _.Body().rtime_cooldown_ends()) != null ? _ : 0;
+              return _.Body().rtime_cooldown_ends() ?? 0;
             },
           });
         }
@@ -7552,15 +7493,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -7569,8 +7501,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           let _ = "offline";
           return (
@@ -7585,36 +7516,35 @@
           );
         }
         class _ {
+          m_steamid;
+          m_bInitialized = !1;
+          m_ePersonaState = _.cU3;
+          m_unGamePlayedAppID = 0;
+          m_gameid = "0";
+          m_unPersonaStateFlags = 0;
+          m_strPlayerName = "";
+          m_strAvatarHash = _._;
+          m_strAccountName = "";
+          m_rtLastSeenOnline = 0;
+          m_strGameExtraInfo = "";
+          m_unGameServerIP = 0;
+          m_unGameServerPort = 0;
+          m_game_lobby_id = "";
+          m_bPlayerNamePending = !1;
+          m_bAvatarPending = !1;
+          m_broadcastId = void 0;
+          m_broadcastAccountId = void 0;
+          m_broadcastAppId = void 0;
+          m_broadcastViewerCount = void 0;
+          m_strBroadcastTitle = void 0;
+          m_bCommunityBanned = void 0;
+          m_eGamingDeviceType = _.eSB;
+          m_mapRichPresence = _._.map();
+          m_bNameInitialized = !1;
+          m_bStatusInitialized = !1;
+          m_strProfileURL = void 0;
           constructor(_) {
-            _(this, "m_steamid"),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_ePersonaState", _.cU3),
-              _(this, "m_unGamePlayedAppID", 0),
-              _(this, "m_gameid", "0"),
-              _(this, "m_unPersonaStateFlags", 0),
-              _(this, "m_strPlayerName", ""),
-              _(this, "m_strAvatarHash", _._),
-              _(this, "m_strAccountName", ""),
-              _(this, "m_rtLastSeenOnline", 0),
-              _(this, "m_strGameExtraInfo", ""),
-              _(this, "m_unGameServerIP", 0),
-              _(this, "m_unGameServerPort", 0),
-              _(this, "m_game_lobby_id", ""),
-              _(this, "m_bPlayerNamePending", !1),
-              _(this, "m_bAvatarPending", !1),
-              _(this, "m_broadcastId"),
-              _(this, "m_broadcastAccountId"),
-              _(this, "m_broadcastAppId"),
-              _(this, "m_broadcastViewerCount"),
-              _(this, "m_strBroadcastTitle"),
-              _(this, "m_bCommunityBanned"),
-              _(this, "m_eGamingDeviceType", _.eSB),
-              _(this, "m_mapRichPresence", _._.map()),
-              _(this, "m_bNameInitialized", !1),
-              _(this, "m_bStatusInitialized", !1),
-              _(this, "m_strProfileURL"),
-              (0, _._)(this),
-              (this.m_steamid = _);
+            (0, _._)(this), (this.m_steamid = _);
           }
           Reset() {
             (this.m_ePersonaState = _.cU3),
@@ -7663,10 +7593,7 @@
             );
           }
           get has_joinable_game_flag() {
-            var _;
-            return (
-              (((_ = this.m_unPersonaStateFlags) != null ? _ : 0) & _._) != 0
-            );
+            return ((this.m_unPersonaStateFlags ?? 0) & _._) != 0;
           }
           get connect_string() {
             return this.m_mapRichPresence.get("connect");
@@ -7683,10 +7610,7 @@
             );
           }
           HasStateFlag(_) {
-            var _;
-            return (
-              (((_ = this.m_unPersonaStateFlags) != null ? _ : 0) & _) != 0
-            );
+            return ((this.m_unPersonaStateFlags ?? 0) & _) != 0;
           }
           get last_seen_online() {
             return this.m_rtLastSeenOnline;
@@ -7899,15 +7823,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -7916,8 +7831,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           switch (_) {
             case "X-Small":
@@ -7935,7 +7849,44 @@
           }
         }
         const _ = _.memo(function (_) {
-          const {
+            const {
+                strAvatarURL: _,
+                size: _ = "Medium",
+                className: _,
+                statusStyle: _,
+                statusPosition: _,
+                children: _,
+                ..._
+              } = _,
+              _ = _.useMemo(() => {
+                const _ = [];
+                return _ && _.push(_), _.push(_(_)), _;
+              }, [_, _]);
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  rgSources: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
+          }),
+          _ = _.memo(function (_) {
+            const {
               strAvatarURL: _,
               size: _ = "Medium",
               className: _,
@@ -7943,34 +7894,30 @@
               statusPosition: _,
               children: _,
               ..._
-            } = _,
-            _ = _.useMemo(() => {
-              const _ = [];
-              return _ && _.push(_), _.push(_(_)), _;
-            }, [_, _]);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              _,
-              _,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-                style: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_().avatar, "avatar"),
-                rgSources: _,
-                draggable: !1,
-              }),
-              _,
-            ],
+            } = _;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  src: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
           });
-        });
         let _ = class extends _.Component {
           render() {
             const {
@@ -8026,9 +7973,9 @@
           );
         });
         let _ = class extends _.Component {
+          m_timer;
           constructor(_) {
             super(_),
-              _(this, "m_timer"),
               (this.state = {
                 bAnimate: this.props.loopDuration != "None",
               }),
@@ -8114,7 +8061,7 @@
                 ..._,
                 cursor: "pointer",
               });
-            const _ = this.state.bAnimate && _ != null ? _ : void 0;
+            const _ = this.state.bAnimate ? (_ ?? void 0) : void 0;
             return (0, _.jsx)("div", {
               onMouseEnter: () =>
                 this.setState({
@@ -8127,7 +8074,7 @@
                 children: [
                   _,
                   (0, _.jsx)(_, {
-                    profileItem: _ != null ? _ : null,
+                    profileItem: _ ?? null,
                     bDisableAnimation: _ && !this.state.bAnimate,
                   }),
                 ],
@@ -8251,18 +8198,6 @@
           grey_bevel: "TyiecoVJmS6-thhLSt8g3",
           ProfileEditLine: "_58Mghr8vhm_-IZP3Mkcb_",
           BackToProfileCtn: "_1YOt2792y012GM8bOQs0kh",
-          BackgroundAnimation: "_2KBoHhvcLeo2vQwWuj0IRb",
-          "ItemFocusAnim-darkerGrey-nocolor": "tmP6KcnuW7UY3GT67_yjy",
-          "ItemFocusAnim-darkerGrey": "_2z9xuC0Na9M0VX4xEFjoSR",
-          "ItemFocusAnim-darkGreySettings": "_2AOpRetkacszHSv5tq9OQa",
-          "ItemFocusAnim-darkGrey": "_1X0OQa5fPKjWOsHz5d-xAO",
-          "ItemFocusAnim-grey": "X_zua7jreE_f2rGbT4l-O",
-          "ItemFocusAnim-translucent-white-10": "_3PmOIuJLR5U9VhCcOub_Uz",
-          "ItemFocusAnim-translucent-white-20": "YMb3o1HrEEjr7vA9uSIUi",
-          "ItemFocusAnimBorder-darkGrey": "_1zSKntJJ3QOyql8hDShLJz",
-          "ItemFocusAnim-green": "_1fvU-7Mr4_64KzW_eUa87u",
-          focusAnimation: "_1gK9ZDrO_OJkKiiO1p7daU",
-          hoverAnimation: "MK_YH9374l4-TSjBSAaxv",
         };
       },
       chunkid: (module) => {
@@ -8317,18 +8252,6 @@
           formattingButton: "LhNoIaEKN1cIpOrnt59wq",
           summaryTextArea: "_2ipSt29jAqoPXf-_iTAL0-",
           summaryContainer: "_3sH5hzWvrCU2QOKpNxfq3m",
-          BackgroundAnimation: "iQhnWyYlwgFi5YWYBMwJ4",
-          "ItemFocusAnim-darkerGrey-nocolor": "_12rtn7LW8NeHZuOZRYrQUr",
-          "ItemFocusAnim-darkerGrey": "_3ASpBDSwq0FQWK7k3PCaCE",
-          "ItemFocusAnim-darkGreySettings": "_2imfEHKAKkMI4e0U6blAKg",
-          "ItemFocusAnim-darkGrey": "_2eY89CR3ALmqkaa5c8qJnd",
-          "ItemFocusAnim-grey": "mGBoBubSOBDji6ZhWGlSk",
-          "ItemFocusAnim-translucent-white-10": "jQ_HCKVuc3Rbnyna4TT6k",
-          "ItemFocusAnim-translucent-white-20": "_31vG8GURxLO6NzzoGFspfp",
-          "ItemFocusAnimBorder-darkGrey": "_3y-gKQtRDkvMB_jhfgrSpC",
-          "ItemFocusAnim-green": "_2CI6zPlogHCygbXcFwfdub",
-          focusAnimation: "_3JagW-WJua436yyI1Rep86",
-          hoverAnimation: "TNBcq_UtYAx1mhBY2fZD9",
         };
       },
       chunkid: (module) => {
@@ -8431,18 +8354,6 @@
           MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
           SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
           VRIcon: "_368tz9TSOLGiG2mNMLScMz",
-          BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
-          "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
-          "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
-          "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
-          "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
-          "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
-          "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
-          "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
-          "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
-          focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
-          hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
         };
       },
       chunkid: (module) => {

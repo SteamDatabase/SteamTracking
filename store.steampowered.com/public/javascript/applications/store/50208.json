@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Этот продукт не работает на системах macOS с процессорами Intel. <1>Узнать больше</1>.",
     "AppPage_PurchaseNote_Mod_Title": "Модификация от сообщества",
     "AppPage_PurchaseNote_Mod_LearnMore": "Нажмите<1>здесь</1>, чтобы узнать больше о модификациях в Steam.",
+    "AppPage_Franchise_SeeAll": "Посмотрите все игры из коллекции %1$s в Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Посмотрите все игры из серии %1$s в Steam",
     "AppPage_Series_ContentTitle": "Содержимое сериала",
     "AppPage_Series_ExtraContent": "Дополнительный контент",
     "AppPage_Series_SeasonName_Season": "Сезон %1$s",

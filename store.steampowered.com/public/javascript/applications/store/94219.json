@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Інтерактивні елементи",
     "GameRating_OnlineMusicNotice": "ESRB не оцінює музику в мережі",
     "GameRating_OnlineInteractionsNotice": "ESRB не оцінює взаємодії в мережі",
-    "GameRating_ContentCategoryDescriptor_64": "Відфільтрований внутрішньоігровий чат"
+    "GameRating_ContentCategoryDescriptor_64": "Відфільтрований внутрішньоігровий чат",
+    "GameRating_ContentCategories_Title": "Вміст",
+    "GameRating_Ratings_Title": "Оцінки"
 }

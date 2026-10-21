@@ -555,10 +555,12 @@
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const _ = new _();
@@ -597,10 +599,11 @@
             );
           }
           GetNextDrawChangeCallback(_) {
+            let _ = this.m_mapNextDrawChangeCallback.get(_);
             return (
-              this.m_mapNextDrawChangeCallback.has(_) ||
-                this.m_mapNextDrawChangeCallback.set(_, new _._()),
-              this.m_mapNextDrawChangeCallback.get(_)
+              _ ||
+                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
+              _
             );
           }
           CopyToGiveaway(_, _) {
@@ -616,41 +619,31 @@
           async ReloadGiveaway(_, _) {
             if (!_) return null;
             let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = null,
               _ = {
                 origin: self.origin,
               };
-            return (
-              (_ = await _().get(_, {
+            const _ = await _().get(_, {
                 params: _,
-              })),
-              (0, _._)(() => {
+              }),
+              _ = (0, _._)(() => {
+                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                  ),
+                  (_ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
+                  this.CopyToGiveaway(_.data, _),
                   _ !== void 0)
                 ) {
                   const _ = this.GetKey(_, _);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      _,
-                      new _(),
-                    ),
-                    this.CopyToGiveaway(
-                      _.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                    );
+                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
+                  _ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
+                    this.CopyToGiveaway(_.data, _);
                 }
-              }),
-              this.GetNextDrawChangeCallback(_).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(_),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(_)
-            );
+                return _;
+              });
+            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
           }
           static s_Singleton;
           static Get() {
@@ -697,12 +690,18 @@
           SetupRefreshDataInterval(_, _) {
             if ((this.ClearRefreshInterval(), !_.closed)) {
               let _ =
-                _.seconds_until_drawing <= 0 && _.winner_count == 0 ? 6e4 : 5e3;
+                _.seconds_until_drawing !== void 0 &&
+                _.seconds_until_drawing <= 0 &&
+                _.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
               this.m_intervalID = window.setInterval(_, _);
             }
           }
           SetupCountDown(_, _) {
-            _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
+            _ !== void 0 &&
+              _ > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
           }
         };
         _([_._], _.prototype, "ClearRefreshInterval", 1),
@@ -712,20 +711,23 @@
         let _ = _;
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          (_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown();
+          !_ ||
+            _.seconds_until_drawing === void 0 ||
+            ((_.seconds_until_drawing -= 1),
+            _.seconds_until_drawing == 0 && _.ClearCountDown());
         }
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
           _ &&
             _.BIsValid() &&
+            _.seconds_until_drawing !== void 0 &&
             _.seconds_until_drawing <= 0 &&
             !_.closed &&
             (_.ClearCountDown(),
             _.Get()
               .ReloadGiveaway(_, _.m_myInstanceNumber)
               .then((_) => {
-                _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
+                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
               }));
         }
         function _(_) {
@@ -736,9 +738,10 @@
               _.Get()
                 .ReloadGiveaway(_, _.m_myInstanceNumber)
                 .then((_) => {
-                  _.SetupRefreshDataInterval(_, () => _(_, _)),
+                  _ &&
+                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
                     _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _();
+                    _());
                 }),
               () => {
                 _.ClearRefreshInterval(), _.ClearCountDown();
@@ -1113,6 +1116,49 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return _.jsondata.sale_logo_cross_promo_only
+            ? !1
+            : (_.jsondata.localized_sale_logo?.filter(Boolean).length ?? 0) > 0;
+        }
+        function _(_) {
+          const { eventModel: _, language: _ } = _,
+            [_, _] = (0, _._)(() => [
+              _.jsondata.sale_logo_url,
+              _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
+            ]);
+          return _ && _?.length > 0
+            ? _
+              ? (0, _.jsx)("a", {
+                  className: _().SalePageLogoCtn,
+                  href: _._.STORE_BASE_URL + _,
+                  children: (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
+                  children: (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                })
+            : null;
+        }
+        function _(_) {
+          const { eventModel: _, language: _ } = _,
+            _ = (0, _._)(_, "sale_logo", _);
+          return (0, _.jsx)("img", {
+            src: _,
+            alt: "logo",
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { strURL: _ } = _;
@@ -1130,13 +1176,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { event: _, bIsPreview: _ } = _;
@@ -1178,7 +1220,13 @@
             : null;
         }
         function _(_) {
-          const { event: _, language: _, children: _, bIsPreview: _ } = _,
+          const {
+              event: _,
+              language: _,
+              children: _,
+              bIsPreview: _,
+              personalizedCarousels: _,
+            } = _,
             _ = _.useRef(null),
             _ = (0, _._)(_, "sale_header", _),
             [_] = (0, _._)(() => [_.jsondata.sale_sub_menu]);
@@ -1209,6 +1257,7 @@
                     bIsPreview: _,
                     subMenu: _,
                     styleVariation: _._.k_SubMenu,
+                    personalizedCarousels: _,
                   })
                 : (0, _.jsx)(_, {
                     strURL: _,
@@ -1331,40 +1380,6 @@
             });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { eventModel: _, language: _ } = _,
-            [_, _] = (0, _._)(() => [
-              _.jsondata.sale_logo_url,
-              _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
-            ]);
-          return _ && _?.length > 0
-            ? _
-              ? (0, _.jsx)("a", {
-                  className: _().SalePageLogoCtn,
-                  href: _._.STORE_BASE_URL + _,
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                })
-            : null;
-        }
-        function _(_) {
-          const { eventModel: _, language: _ } = _,
-            _ = (0, _._)(_, "sale_logo", _);
-          return (0, _.jsx)("img", {
-            src: _,
-            alt: "logo",
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
@@ -1426,6 +1441,7 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -5814,6 +5830,7 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -5828,6 +5845,7 @@
             [_, _] = _.useState(_?.GetDayIndexFromEventStart()),
             [_, _] = _.useState(null),
             _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
+            _ = (0, _._)(_, !!(0, _._)(_)),
             _ = _(_, _, (0, _._)(!!_)),
             [_, _] = (0, _.useState)(!1);
           _.useEffect(() => {
@@ -5887,9 +5905,7 @@
               }),
             });
           {
-            const _ =
-                _.jsondata.localized_sale_logo &&
-                _.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
+            const _ = _(_),
               _ = _.BUsesContentHubForItemSource(),
               _ = _.GetSaleSections().some(
                 (_) => _.section_type === "contenthubtitle",
@@ -5936,6 +5952,7 @@
                     event: _,
                     language: _,
                     bIsPreview: !!_,
+                    personalizedCarousels: _,
                     children: [
                       _ && (0, _.jsx)(_._, {}),
                       (0, _.jsx)(_, {
@@ -5958,10 +5975,11 @@
                         className: _,
                         scrollIntoViewType: _,
                         children: [
-                          (0, _.jsx)(_, {
-                            eventModel: _,
-                            language: _,
-                          }),
+                          _ &&
+                            (0, _.jsx)(_, {
+                              eventModel: _,
+                              language: _,
+                            }),
                           (0, _.jsx)(_, {
                             rgPresenters: _.jsondata.sale_presenters,
                           }),
@@ -7541,18 +7559,6 @@
           FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
           FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
           FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
         };
       },
       chunkid: (module) => {
@@ -7566,18 +7572,6 @@
           "duration-app-launch": "800ms",
           narrowWidth: "500px",
           SalePageLogoCtn: "_3Rukhd1HqXzPiBrK5hwPT-",
-          BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
-          "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
-          "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
-          "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
-          "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
-          "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
-          "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
-          "ItemFocusAnim-translucent-white-20": "_3PT6d0B4zsV60BfrKuIA1r",
-          "ItemFocusAnimBorder-darkGrey": "_1Z9KMCmIY9huHpqwfwRypj",
-          "ItemFocusAnim-green": "_1WZWN5W96O7pMURRF2eleh",
-          focusAnimation: "_2hRoGMM5UsM8oeV-txHPNu",
-          hoverAnimation: "_1YMbPvrOkuzyOJDFmv_N8s",
         };
       },
       chunkid: (module) => {
@@ -7826,18 +7820,6 @@
           MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
           MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
           AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
-          BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
-          "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
-          "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
-          "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
-          "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
-          "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
-          "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
-          "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
-          "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
-          focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
-          hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
         };
       },
       chunkid: (module) => {
@@ -7847,18 +7829,6 @@
           SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
           WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
           BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
         };
       },
       chunkid: (module) => {
@@ -7880,18 +7850,6 @@
           CategoryGradient: "_27LrTrejiaFAMHuA0df3qP",
           CategoryName: "_3VNsED3Ez-vqDraw_8QWsp",
           TopLevelCategory: "_2ZYjRLgkQLHW5_cstUffIp",
-          BackgroundAnimation: "_10Bfh_1KHpFNk8qNyewY_F",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3LFS9sVPAAjvuyGeJ1peaT",
-          "ItemFocusAnim-darkerGrey": "_1S59zff-jnAxDy8rr0hHlS",
-          "ItemFocusAnim-darkGreySettings": "_34Uv5_hzQOvOrw1Unrblim",
-          "ItemFocusAnim-darkGrey": "Hh_85_Fjw1YP9H4vzXEu_",
-          "ItemFocusAnim-grey": "_2-9pWSpKgjrjUj71iLnJo7",
-          "ItemFocusAnim-translucent-white-10": "W_bdqnE_ztejA8mOAYb6D",
-          "ItemFocusAnim-translucent-white-20": "_2rFvANRdudDnTxPKgIBcZd",
-          "ItemFocusAnimBorder-darkGrey": "_2b9hABAip8cwkuxxNVwPSw",
-          "ItemFocusAnim-green": "_3Jf28OMYy3a68jmK-GOBsc",
-          focusAnimation: "MlTzZ1Co7fkjpq6p2zQ0",
-          hoverAnimation: "_19RLtomnrOIiHhk5GWSMdR",
         };
       },
       chunkid: (module, module_exports, __webpack_require__) => {

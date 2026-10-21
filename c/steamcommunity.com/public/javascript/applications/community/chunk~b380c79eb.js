@@ -24,7 +24,7 @@
               ..._
             } = _,
             [_, _] = (0, _.useState)(null),
-            _ = _ != null ? _ : _ === void 0 ? "" : _(_),
+            _ = _ ?? (_ === void 0 ? "" : _(_)),
             _ = (_) => {
               const _ = _(_);
               _ !== _ && _ === _(_) ? (_(null), _(_)) : (!_ || _(_, _)) && _(_);
@@ -464,9 +464,7 @@
               [_, _, _],
             ),
             _ = (_) => {
-              _(_ ? [] : null),
-                _ == null || _.stopPropagation(),
-                _ == null || _.preventDefault();
+              _(_ ? [] : null), _?.stopPropagation(), _?.preventDefault();
             },
             _ = (0, _.useCallback)(
               (_) => {
@@ -1007,18 +1005,15 @@
             return {
               strURL: _,
               bFromBody: !1,
-              bHasCustomText: !(_ != null && _.match(/^https?:\/\//i)),
+              bHasCustomText: !_?.match(/^https?:\/\//i),
             };
         }
         function _(_) {
-          var _;
-          const _ =
-            (_ = (0, _._)(_.args)) != null ? _ : (0, _._)(_.args, "href");
+          const _ = (0, _._)(_.args) ?? (0, _._)(_.args, "href");
           if (_) return _(_, _(_.children));
           if (typeof _.children == "string") {
-            const _ = _.children.trim(),
-              _ = _._.exec(_);
-            if ((_ == null ? void 0 : _[0]) == _)
+            const _ = _.children.trim();
+            if (_._.exec(_)?.[0] == _)
               return {
                 strURL: _,
                 bFromBody: !0,

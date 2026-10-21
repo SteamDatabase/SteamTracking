@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Destrancar tópico (%1$s)",
     "moderation_actions_sustain": "Manter decisão",
     "moderation_actions_sustain_multiple": "Manter decisão (%1$s)",
+    "moderation_actions_sustain_short": "Manter",
     "moderation_actions_suspicious": "Marcar como suspeito",
     "moderation_actions_suspicious_multiple": "Marcar como suspeito (%1$s)",
     "moderation_actions_unknown": "Desconhecida",

@@ -153,9 +153,9 @@
               !(_ && _ && _ === null),
             _ = () => {
               _(!0);
-              const _ = _ == "malware" ? _._ : _ != null ? _ : _._;
+              const _ = _ == "malware" ? _._ : (_ ?? _._);
               Promise.resolve(_(_.trim(), _)).then(_, (_) => {
-                _(!1), _ == null || _(_);
+                _(!1), _?.(_);
               });
             },
             _ = (_) => {
@@ -376,14 +376,10 @@
           return !!_ && _ !== _;
         }
         function _(_) {
-          var _, _;
           return (
             _.subject_type === _._ &&
-            ((_ = _.coordinates) == null ? void 0 : _.ugc_content_type) ===
-              16 &&
-            !!(
-              (_ = _.reports) != null && _.some((_) => _.report_reason === _._)
-            )
+            _.coordinates?.ugc_content_type === 16 &&
+            !!_.reports?.some((_) => _.report_reason === _._)
           );
         }
         function _(_) {
@@ -456,7 +452,6 @@
           return (0, _._)(_(_));
         }
         function _(_) {
-          var _, _, _;
           const _ = (0, _._)(_(_.publishedFileID)),
             [_, _] = (0, _.useState)(!1);
           if (_.isPending) return null;
@@ -464,7 +459,7 @@
             return (0, _.jsx)(_._, {
               children: _._.Localize("#ugcsubjectpanel_error"),
             });
-          const _ = (_ = _.data.subjects) == null ? void 0 : _[0];
+          const _ = _.data.subjects?.[0];
           return _
             ? (0, _.jsxs)(_._, {
                 direction: "column",
@@ -479,8 +474,8 @@
                   (0, _.jsx)(_._, {
                     children: _._.Localize(
                       "#forumsubjectlist_subjectreportsummary",
-                      (_ = _.unresolved_report_count) != null ? _ : 0,
-                      (_ = _.unresolved_dispute_count) != null ? _ : 0,
+                      _.unresolved_report_count ?? 0,
+                      _.unresolved_dispute_count ?? 0,
                     ),
                   }),
                   (0, _.jsxs)(_._, {
@@ -558,13 +553,12 @@
               });
         }
         function _(_) {
-          var _, _, _;
           const { subject: _ } = _,
             _ = (0, _._)();
           return !!_.reported_content_id &&
-            ((_ = _.resolved) != null ? _ : _._) !== _._ &&
-            (((_ = _.unresolved_report_count) != null ? _ : 0) > 0 ||
-              ((_ = _.unresolved_dispute_count) != null ? _ : 0) > 0)
+            (_.resolved ?? _._) !== _._ &&
+            ((_.unresolved_report_count ?? 0) > 0 ||
+              (_.unresolved_dispute_count ?? 0) > 0)
             ? (0, _.jsx)(_._, {
                 size: "1",
                 color: "dull",
@@ -620,8 +614,7 @@
           return (
             (0, _.useEffect)(() => {
               const _ = (_) => {
-                var _;
-                ((_ = _.detail) == null ? void 0 : _.publishedFileID) == _ &&
+                _.detail?.publishedFileID == _ &&
                   _.invalidateQueries({
                     queryKey: _(_),
                   });

@@ -3,6 +3,7 @@
     "TrailerPlayer_Settings_Tooltip": "การตั้งค่า",
     "TrailerPlayer_Captions_Tooltip": "คำบรรยาย/คำบรรยายทดแทนการได้ยิน",
     "TrailerPlayer_Play_Tooltip": "เล่น",
+    "TrailerPlayer_Seek_Label": "หา",
     "TrailerPlayer_Pause_Tooltip": "หยุดชั่วคราว",
     "TrailerPlayer_Mute_Tooltip": "ปิดเสียง",
     "TrailerPlayer_Unmute_Tooltip": "เลิกปิดเสียง",

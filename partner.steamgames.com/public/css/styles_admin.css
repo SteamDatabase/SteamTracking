@@ -990,6 +990,37 @@ pre.results {
 	background-position: center;
 }
 
+.screenshot_thumb .screenshot_category {
+	display: inline-block;
+	vertical-align: top;
+	margin: 4px 8px;
+}
+
+.screenshot_thumb .screenshot_category label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+/* Required asterisk that swaps to a green checkmark once the field has content */
+.required_status .required,
+.required_status .required_check {
+	font-size: 20px;
+}
+
+.required_status .required_check {
+	display: none;
+	color: #4c9a2a;
+	margin-left: 4px;
+}
+
+.required_status.required_set .required {
+	display: none;
+}
+
+.required_status.required_set .required_check {
+	display: inline;
+}
+
 .screenshot_thumb .screenshot_delete {
 	position: absolute;
 	margin-left: 226px;
@@ -2925,6 +2956,29 @@ html, body { height:100%; }
 	background-color: #3f4855;
 	border: 1px solid #5b687b;
 	float: left;
+	position: relative;
+}
+
+.screenshot_upload_preview_remove
+{
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: rgba( 0, 0, 0, 0.7 );
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.screenshot_upload_preview_remove:hover
+{
+	background-color: #c23a3a;
 }
 
 div.image_all_ages_appropriate

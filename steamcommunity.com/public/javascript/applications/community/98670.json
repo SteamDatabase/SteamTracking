@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Ξεκλείδωμα συζήτησης (%1$s)",
     "moderation_actions_sustain": "Διατήρηση απόφασης επιτηρητή",
     "moderation_actions_sustain_multiple": "Διατήρηση απόφασης επιτηρητή (%1$s)",
+    "moderation_actions_sustain_short": "Διατήρηση",
     "moderation_actions_suspicious": "Επισήμανση ως ύποπτο",
     "moderation_actions_suspicious_multiple": "Επισήμανση ως ύποπτο (%1$s)",
     "moderation_actions_unknown": "Άγνωστα",

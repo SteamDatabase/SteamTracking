@@ -23,9 +23,7 @@
             _ = _.useRef(null),
             [_, _] = _.useState(""),
             _ = () => {
-              var _;
-              const _ =
-                (_ = _.current) == null ? void 0 : _.ownerDocument.defaultView;
+              const _ = _.current?.ownerDocument.defaultView;
               !_.current ||
                 !_ ||
                 _.navigator.clipboard
@@ -45,9 +43,7 @@
                 children: [
                   (0, _.jsx)("span", {
                     className: _().LinkInputLabel,
-                    children: (0, _._)(
-                      _ != null ? _ : "#EventDisplay_Share_Link",
-                    ),
+                    children: (0, _._)(_ ?? "#EventDisplay_Share_Link"),
                   }),
                   (0, _.jsx)("input", {
                     className: _().LinkInput,
@@ -128,7 +124,6 @@
             : _;
         }
         async function _(_, _, _) {
-          var _;
           if (_._.IN_STEAMUI) {
             const _ = _._.Init(_.kVt);
             _.Body().set_appid(_), _.Body().set_status_text(_);
@@ -140,7 +135,7 @@
             return;
           }
           const _ = new FormData();
-          _.append("appid", String(_ != null ? _ : 0)),
+          _.append("appid", String(_ ?? 0)),
             _.append("status_text", _),
             _.append("sessionid", (0, _._)());
           const _ = await fetch(_ + "ajaxpostuserstatus", {
@@ -154,10 +149,7 @@
           } catch {
             _ = void 0;
           }
-          if ((_ == null ? void 0 : _.success) != _._)
-            throw new Error(
-              (_ = _ == null ? void 0 : _.message) != null ? _ : _.statusText,
-            );
+          if (_?.success != _._) throw new Error(_?.message ?? _.statusText);
         }
         function _(_) {
           const { appid: _, eventLink: _, emoticonStore: _, closeModal: _ } = _,
@@ -196,7 +188,7 @@
                           children: [
                             (0, _.jsx)("img", {
                               className: _().SmallAvatar,
-                              src: _ == null ? void 0 : _.avatar_url,
+                              src: _?.avatar_url,
                               alt: "",
                               "data-miniprofile": "s" + _._.steamid,
                             }),

@@ -1,5 +1,7 @@
 {
     "language": "english",
+    "YearInReview_Share_Title": "Check out my %1$s Steam Replay",
+    "YearInReview_Share_Private": "This profile is not public",
     "YearInReview_LoginPrompt": "Please sign in to view Steam Replay",
     "YearInReview_LoginBtn": "Sign in now",
     "YearInReview_SteamRewindHeader": "%1$s STEAM REPLAY %2$s",

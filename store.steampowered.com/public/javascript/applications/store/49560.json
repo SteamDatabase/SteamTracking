@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "インタラクティブ要素",
     "GameRating_OnlineMusicNotice": "ESRBによるレーティング対象外のオンラインミュージック",
     "GameRating_OnlineInteractionsNotice": "ESRBによるレーティング対象外のオンラインプレイ",
-    "GameRating_ContentCategoryDescriptor_64": "ゲーム内チャットのフィルタリング"
+    "GameRating_ContentCategoryDescriptor_64": "ゲーム内チャットのフィルタリング",
+    "GameRating_ContentCategories_Title": "コンテンツ",
+    "GameRating_Ratings_Title": "レーティング"
 }

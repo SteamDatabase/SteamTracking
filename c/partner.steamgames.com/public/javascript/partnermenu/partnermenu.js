@@ -34393,6 +34393,11 @@ Error generating stack: ` +
                 _: ReaderProto.readEnum,
                 _: WriterProto.writeEnum,
               },
+              has_community_hub: {
+                _: 33,
+                _: ReaderProto.readBool,
+                _: WriterProto.writeBool,
+              },
             },
           }),
           _.sm_m
@@ -37989,7 +37994,7 @@ Error generating stack: ` +
           bConstMethod: !0,
           ePrivilege: 1,
           eWebAPIKeyRequirement: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `help`],
         },
       );
     }
@@ -38815,7 +38820,7 @@ Error generating stack: ` +
         {
           bConstMethod: !0,
           ePrivilege: 1,
-          rgBrowserAPISites: [`partner`],
+          rgBrowserAPISites: [`partner`, `help`],
         },
       );
     }
@@ -38848,7 +38853,7 @@ Error generating stack: ` +
     },
   };
   function WriteCookie(_, _) {
-    if (!document.cookie || !IsCookieAllowedByPreferences(_)) return;
+    if (!(`document` in globalThis) || !IsCookieAllowedByPreferences(_)) return;
     let _ = _.options?.path ?? `/`,
       _ = ``;
     _.options?.expires
@@ -40200,17 +40205,17 @@ Error generating stack: ` +
           (_ != _ &&
             _.Element &&
             _.m_Properties?.scrollRegionToStartOrEnd &&
-            PerformScrollToStartOrEnd(_.Element, _, _),
+            PerformScrollToStartOrEnd(_.Element, _, _, _ == _.Tree.Root),
           _ == _)
         );
         _ = _.GetNavParentCrossingTrees()
       );
   }
-  function PerformScrollToStartOrEnd(_, _, _) {
+  function PerformScrollToStartOrEnd(_, _, _, _) {
     let _ = _,
       _ = _.ownerDocument;
     if (
-      (_ == _.body &&
+      ((_ || _ == _.body) &&
         _.defaultView &&
         !BIsElementScrollableOnAxis(_, _) &&
         (_ = _.defaultView),
@@ -41126,6 +41131,8 @@ Error generating stack: ` +
         if (_ && _) {
           let _ = _.GetWrappedTree();
           if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+          for (let _ = _; _ && _ != this; _ = _.m_Parent)
+            if (_.m_Properties?.excludeFromScrollRegionSearch) return !1;
         }
         return !!_;
       }
@@ -41895,7 +41902,7 @@ Error generating stack: ` +
         onGlobalButtonDown: _,
         disableFocusClasses: _,
         disabledRoot: _,
-        excludeFromScrollRegionSearch: _,
+        excludeTreeFromScrollRegionSearch: _,
         "flow-children": _,
         ..._
       } = _,
@@ -41914,7 +41921,7 @@ Error generating stack: ` +
           onGlobalButtonDown: _,
           disableFocusClasses: _,
           disabledRoot: _,
-          excludeFromScrollRegionSearch: _,
+          excludeTreeFromScrollRegionSearch: _,
           "flow-children": _,
           ..._,
           ..._,
@@ -41943,7 +41950,7 @@ Error generating stack: ` +
         onGlobalButtonDown: _,
         disableFocusClasses: _ = !1,
         disabledRoot: _ = !1,
-        excludeFromScrollRegionSearch: _ = !1,
+        excludeTreeFromScrollRegionSearch: _ = !1,
         "flow-children": _,
         ..._
       } = _,
@@ -41958,7 +41965,7 @@ Error generating stack: ` +
         virtualFocus: _,
         modal: _,
         historyMode: _,
-        excludeFromScrollRegionSearch: _,
+        excludeTreeFromScrollRegionSearch: _,
       });
     useCallbackList(_.OnActivateCallbacks, _),
       useCallbackList(_.OnDeactivateCallbacks, _),
@@ -41989,7 +41996,7 @@ Error generating stack: ` +
         navID: _,
         parentEmbeddedNavTree: _,
         disabledRoot: _,
-        excludeFromScrollRegionSearch: _,
+        excludeTreeFromScrollRegionSearch: _,
         enabled: _,
         navTreeRef: _,
         onGlobalButtonDown: _,
@@ -42216,6 +42223,7 @@ Error generating stack: ` +
         scrollIntoViewType: _,
         resetNavOnEntry: _,
         scrollRegionToStartOrEnd: _,
+        excludeFromScrollRegionSearch: _,
         ..._
       } = _,
       {
@@ -42249,6 +42257,7 @@ Error generating stack: ` +
         scrollIntoViewType: _,
         resetNavOnEntry: _,
         scrollRegionToStartOrEnd: _,
+        excludeFromScrollRegionSearch: _,
         actionDescriptionMap: {
           ..._,
           ..._,
@@ -68078,7 +68087,7 @@ Error generating stack: ` +
         (m_ext_new = `MỚI`),
         (Cart_CountWidget = `Giỏ hàng (%1$s)`),
         (responsive_menu_wallet_balance = `Ví (%1$s)`),
-        (responsive_footer_copyright = `© Valve Corporation. Bảo lưu mọi quyền. Tất cả các thương hiệu là tài sản của chủ sở hữu tương ứng tại Hoa Kỳ và các quốc gia khác.`),
+        (responsive_footer_copyright = `© Valve Corporation. Bảo lưu mọi quyền. Tất cả các nhãn hiệu là tài sản của chủ sở hữu tương ứng tại Hoa Kỳ và các quốc gia khác.`),
         (Common_Footer_PrivacyPolicy = `Chính sách bảo mật`),
         (Common_Footer_Legal = `Pháp lý`),
         (Common_Footer_SSA = `Thỏa thuận người đăng ký Steam`),

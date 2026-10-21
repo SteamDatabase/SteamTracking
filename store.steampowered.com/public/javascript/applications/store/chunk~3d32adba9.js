@@ -4,58 +4,58 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [61975],
     {
-      71698: (p, W, e) => {
+      71698: (E, K, e) => {
         "use strict";
-        e.d(W, { H: () => F, s: () => b });
+        e.d(K, { H: () => W, s: () => N });
         var n = e(90626),
-          U = e(41623);
-        let d = 0;
-        function F(w, D) {
+          H = e(41623);
+        let c = 0;
+        function W(x, h) {
           (0, n.useEffect)(() => {
-            if (!(w || D))
+            if (!(x || h))
               return (
-                d++,
+                c++,
                 () => {
-                  --d == 0 && (0, U.s)();
+                  --c == 0 && (0, H.s)();
                 }
               );
-          }, [w, D]);
+          }, [x, h]);
         }
-        function b(w) {
-          const [D, O] = (0, n.useState)(!1);
+        function N(x) {
+          const [h, S] = (0, n.useState)(!1);
           (0, n.useEffect)(() => {
-            const x = window.setTimeout(() => O(!0), w);
-            return () => window.clearTimeout(x);
-          }, [w]),
-            F(D);
+            const P = window.setTimeout(() => S(!0), x);
+            return () => window.clearTimeout(P);
+          }, [x]),
+            W(h);
         }
       },
-      37656: (p, W, e) => {
+      37656: (E, K, e) => {
         "use strict";
-        e.d(W, { w: () => $ });
+        e.d(K, { w: () => X });
         var n = e(41735),
-          U = e.n(n),
-          d = e(14947),
-          F = e(65946),
-          b = e(90626),
-          w = e(27066),
-          D = e(8323),
-          O = e(30096),
-          x = e(3166),
-          H = Object.defineProperty,
-          ee = Object.getOwnPropertyDescriptor,
-          I = (y, s, r, m) => {
+          H = e.n(n),
+          c = e(14947),
+          W = e(65946),
+          N = e(90626),
+          x = e(27066),
+          h = e(8323),
+          S = e(30096),
+          P = e(3166),
+          J = Object.defineProperty,
+          $ = Object.getOwnPropertyDescriptor,
+          w = (C, s, a, g) => {
             for (
-              var c = m > 1 ? void 0 : m ? ee(s, r) : s, h = y.length - 1, v;
-              h >= 0;
-              h--
+              var y = g > 1 ? void 0 : g ? $(s, a) : s, d = C.length - 1, f;
+              d >= 0;
+              d--
             )
-              (v = y[h]) && (c = (m ? v(s, r, c) : v(c)) || c);
-            return m && c && H(s, r, c), c;
+              (f = C[d]) && (y = (g ? f(s, a, y) : f(y)) || y);
+            return g && y && J(s, a, y), y;
           };
-        const S = class ye {
+        const M = class Ce {
           constructor() {
-            (0, d.Gn)(this);
+            (0, c.Gn)(this);
           }
           giveaway_id = void 0;
           seconds_until_drawing = void 0;
@@ -67,13 +67,15 @@
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
-            const s = new ye();
+            const s = new Ce();
             return (
               (s.giveaway_id = this.giveaway_id),
               (s.seconds_until_drawing = this.seconds_until_drawing),
@@ -85,112 +87,103 @@
             );
           }
         };
-        I([d.sH], S.prototype, "giveaway_id", 2),
-          I([d.sH], S.prototype, "seconds_until_drawing", 2),
-          I([d.sH], S.prototype, "rtime_start", 2),
-          I([d.sH], S.prototype, "rtime_end", 2),
-          I([d.sH], S.prototype, "closed", 2),
-          I([d.sH], S.prototype, "winner_count", 2);
-        let K = S;
-        const Q = class J {
+        w([c.sH], M.prototype, "giveaway_id", 2),
+          w([c.sH], M.prototype, "seconds_until_drawing", 2),
+          w([c.sH], M.prototype, "rtime_start", 2),
+          w([c.sH], M.prototype, "rtime_end", 2),
+          w([c.sH], M.prototype, "closed", 2),
+          w([c.sH], M.prototype, "winner_count", 2);
+        let z = M;
+        const Q = class q {
           constructor() {
-            (0, d.Gn)(this);
+            (0, c.Gn)(this);
           }
           m_mapGiveawayIDToNextDrawInfo = new Map();
           m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
           m_bLoadedFromConfig = !1;
           m_mapNextDrawChangeCallback = new Map();
-          GetKey(s, r) {
-            return s + "_" + r;
+          GetKey(s, a) {
+            return s + "_" + a;
           }
-          GetInfoByInstance(s, r) {
+          GetInfoByInstance(s, a) {
             return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-              this.GetKey(s, r),
+              this.GetKey(s, a),
             );
           }
           GetNextDrawChangeCallback(s) {
+            let a = this.m_mapNextDrawChangeCallback.get(s);
             return (
-              this.m_mapNextDrawChangeCallback.has(s) ||
-                this.m_mapNextDrawChangeCallback.set(s, new D.lu()),
-              this.m_mapNextDrawChangeCallback.get(s)
+              a ||
+                ((a = new h.lu()), this.m_mapNextDrawChangeCallback.set(s, a)),
+              a
             );
           }
-          CopyToGiveaway(s, r) {
-            r.closed != s.closed && (r.closed = s.closed),
-              r.giveaway_id != s.giveaway_id && (r.giveaway_id = s.giveaway_id),
-              r.rtime_start != s.rtime_start && (r.rtime_start = s.rtime_start),
-              r.rtime_end != s.rtime_end && (r.rtime_end = s.rtime_end),
-              r.winner_count != s.winner_count &&
-                (r.winner_count = s.winner_count),
-              r.seconds_until_drawing != s.seconds_until_drawing &&
-                (r.seconds_until_drawing = s.seconds_until_drawing);
+          CopyToGiveaway(s, a) {
+            a.closed != s.closed && (a.closed = s.closed),
+              a.giveaway_id != s.giveaway_id && (a.giveaway_id = s.giveaway_id),
+              a.rtime_start != s.rtime_start && (a.rtime_start = s.rtime_start),
+              a.rtime_end != s.rtime_end && (a.rtime_end = s.rtime_end),
+              a.winner_count != s.winner_count &&
+                (a.winner_count = s.winner_count),
+              a.seconds_until_drawing != s.seconds_until_drawing &&
+                (a.seconds_until_drawing = s.seconds_until_drawing);
           }
-          async ReloadGiveaway(s, r) {
+          async ReloadGiveaway(s, a) {
             if (!s) return null;
-            let m = x.TS.STORE_BASE_URL + "prizes/nextdraw/" + s,
-              c = null,
-              h = { origin: self.origin };
-            return (
-              (c = await U().get(m, { params: h })),
-              (0, d.h5)(() => {
+            let g = P.TS.STORE_BASE_URL + "prizes/nextdraw/" + s,
+              y = { origin: self.origin };
+            const d = await H().get(g, { params: y }),
+              f = (0, c.h5)(() => {
+                let v = this.m_mapGiveawayIDToNextDrawInfo.get(s);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(s) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(s, new K()),
-                  this.CopyToGiveaway(
-                    c.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(s),
-                  ),
-                  r !== void 0)
+                  (v ||
+                    ((v = new z()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(s, v)),
+                  this.CopyToGiveaway(d.data, v),
+                  a !== void 0)
                 ) {
-                  const v = this.GetKey(s, r);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(v) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      v,
-                      new K(),
-                    ),
-                    this.CopyToGiveaway(
-                      c.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(v),
-                    );
+                  const p = this.GetKey(s, a);
+                  let I = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(p);
+                  I ||
+                    ((I = new z()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(p, I)),
+                    this.CopyToGiveaway(d.data, I);
                 }
-              }),
-              this.GetNextDrawChangeCallback(s).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(s),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(s)
-            );
+                return v;
+              });
+            return this.GetNextDrawChangeCallback(s).Dispatch(f), f;
           }
           static s_Singleton;
           static Get() {
             return (
-              J.s_Singleton ||
-                ((J.s_Singleton = new J()), J.s_Singleton.Init()),
-              J.s_Singleton
+              q.s_Singleton ||
+                ((q.s_Singleton = new q()), q.s_Singleton.Init()),
+              q.s_Singleton
             );
           }
           Init() {
             if (!this.m_bLoadedFromConfig) {
-              let s = (0, x.Tc)("giveawaynextdraw", "application_config");
+              let s = (0, P.Tc)("giveawaynextdraw", "application_config");
               if (s && s.giveaway_id) {
-                let r = new K();
-                this.CopyToGiveaway(s, r),
-                  this.m_mapGiveawayIDToNextDrawInfo.set(s.giveaway_id, r);
+                let a = new z();
+                this.CopyToGiveaway(s, a),
+                  this.m_mapGiveawayIDToNextDrawInfo.set(s.giveaway_id, a);
               }
               this.m_bLoadedFromConfig = !0;
             }
           }
         };
-        I([d.sH], Q.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
-          I([d.XI], Q.prototype, "CopyToGiveaway", 1);
-        let N = Q;
-        const G = class ue {
+        w([c.sH], Q.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
+          w([c.XI], Q.prototype, "CopyToGiveaway", 1);
+        let G = Q;
+        const A = class ve {
           m_intervalID;
           m_intervalCountDownID;
           static s_GlobalInstance = 0;
           m_myInstanceNumber = 0;
           constructor() {
-            (this.m_myInstanceNumber = ue.s_GlobalInstance),
-              (ue.s_GlobalInstance += 1);
+            (this.m_myInstanceNumber = ve.s_GlobalInstance),
+              (ve.s_GlobalInstance += 1);
           }
           ClearRefreshInterval() {
             this.m_intervalID &&
@@ -202,137 +195,148 @@
               (window.clearInterval(this.m_intervalCountDownID),
               (this.m_intervalCountDownID = void 0));
           }
-          SetupRefreshDataInterval(s, r) {
+          SetupRefreshDataInterval(s, a) {
             if ((this.ClearRefreshInterval(), !s.closed)) {
-              let m =
-                s.seconds_until_drawing <= 0 && s.winner_count == 0 ? 6e4 : 5e3;
-              this.m_intervalID = window.setInterval(r, m);
+              let y =
+                s.seconds_until_drawing !== void 0 &&
+                s.seconds_until_drawing <= 0 &&
+                s.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
+              this.m_intervalID = window.setInterval(a, y);
             }
           }
-          SetupCountDown(s, r) {
-            s > 0 && (this.m_intervalCountDownID = window.setInterval(r, 1e3));
+          SetupCountDown(s, a) {
+            s !== void 0 &&
+              s > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(a, 1e3));
           }
         };
-        I([w.o], G.prototype, "ClearRefreshInterval", 1),
-          I([w.o], G.prototype, "ClearCountDown", 1),
-          I([w.o], G.prototype, "SetupRefreshDataInterval", 1),
-          I([w.o], G.prototype, "SetupCountDown", 1);
-        let g = G;
-        function X(y, s) {
-          const r = N.Get().GetInfoByInstance(y, s.m_myInstanceNumber);
-          (r.seconds_until_drawing -= 1),
-            r.seconds_until_drawing == 0 && s.ClearCountDown();
+        w([x.o], A.prototype, "ClearRefreshInterval", 1),
+          w([x.o], A.prototype, "ClearCountDown", 1),
+          w([x.o], A.prototype, "SetupRefreshDataInterval", 1),
+          w([x.o], A.prototype, "SetupCountDown", 1);
+        let D = A;
+        function V(C, s) {
+          const a = G.Get().GetInfoByInstance(C, s.m_myInstanceNumber);
+          !a ||
+            a.seconds_until_drawing === void 0 ||
+            ((a.seconds_until_drawing -= 1),
+            a.seconds_until_drawing == 0 && s.ClearCountDown());
         }
-        function z(y, s) {
-          const r = N.Get().GetInfoByInstance(y, s.m_myInstanceNumber);
-          r &&
-            r.BIsValid() &&
-            r.seconds_until_drawing <= 0 &&
-            !r.closed &&
+        function Y(C, s) {
+          const a = G.Get().GetInfoByInstance(C, s.m_myInstanceNumber);
+          a &&
+            a.BIsValid() &&
+            a.seconds_until_drawing !== void 0 &&
+            a.seconds_until_drawing <= 0 &&
+            !a.closed &&
             (s.ClearCountDown(),
-            N.Get()
-              .ReloadGiveaway(y, s.m_myInstanceNumber)
-              .then((m) => {
-                s.SetupCountDown(m.seconds_until_drawing, () => X(y, s));
+            G.Get()
+              .ReloadGiveaway(C, s.m_myInstanceNumber)
+              .then((g) => {
+                g && s.SetupCountDown(g.seconds_until_drawing, () => V(C, s));
               }));
         }
-        function $(y) {
-          const [s] = (0, b.useState)(new g()),
-            r = (0, O.CH)();
-          (0, b.useEffect)(
+        function X(C) {
+          const [s] = (0, N.useState)(new D()),
+            a = (0, S.CH)();
+          (0, N.useEffect)(
             () => (
-              N.Get()
-                .ReloadGiveaway(y, s.m_myInstanceNumber)
-                .then((C) => {
-                  s.SetupRefreshDataInterval(C, () => z(y, s)),
-                    s.SetupCountDown(C.seconds_until_drawing, () => X(y, s)),
-                    r();
+              G.Get()
+                .ReloadGiveaway(C, s.m_myInstanceNumber)
+                .then((v) => {
+                  v &&
+                    (s.SetupRefreshDataInterval(v, () => Y(C, s)),
+                    s.SetupCountDown(v.seconds_until_drawing, () => V(C, s)),
+                    a());
                 }),
               () => {
                 s.ClearRefreshInterval(), s.ClearCountDown();
               }
             ),
-            [s, y, r],
+            [s, C, a],
           );
-          const m = N.Get().GetInfoByInstance(y, s.m_myInstanceNumber),
-            [c, h, v] = (0, F.q3)(() => [
-              m?.winner_count,
-              m?.closed,
-              m?.seconds_until_drawing,
+          const g = G.Get().GetInfoByInstance(C, s.m_myInstanceNumber),
+            [y, d, f] = (0, W.q3)(() => [
+              g?.winner_count,
+              g?.closed,
+              g?.seconds_until_drawing,
             ]);
           return {
             bLoadingGiveawayInfo:
-              !m || m.giveaway_id == null || !m.BStarted() || c === void 0,
-            winner_count: c,
-            closed: h,
-            seconds_until_drawing: v,
+              !g || g.giveaway_id == null || !g.BStarted() || y === void 0,
+            winner_count: y,
+            closed: d,
+            seconds_until_drawing: f,
           };
         }
       },
-      19188: (p, W, e) => {
+      19188: (E, K, e) => {
         "use strict";
-        e.d(W, { N: () => r });
+        e.d(K, { N: () => g });
         var n = e(7850),
-          U = e(41735),
-          d = e.n(U),
-          F = e(75844),
-          b = e(90626),
-          w = e(90537),
-          D = e(58483),
-          O = e(82385),
-          x = e(96538),
-          H = e(88843),
-          ee = e.n(H),
-          I = e(64641),
-          S = e.n(I),
-          K = e(85599),
-          Q = e(34592),
-          N = e(3166),
-          G = e(72609),
-          g = e(6469),
-          X = e(53107),
-          z = e(25792),
-          $ = Object.defineProperty,
-          y = Object.getOwnPropertyDescriptor,
-          s = (c, h, v, C) => {
+          H = e(41735),
+          c = e.n(H),
+          W = e(75844),
+          N = e(90626),
+          x = e(72849),
+          h = e(90537),
+          S = e(58483),
+          P = e(82385),
+          J = e(96538),
+          $ = e(88843),
+          w = e.n($),
+          M = e(64641),
+          z = e.n(M),
+          Q = e(85599),
+          G = e(34592),
+          A = e(3166),
+          D = e(72609),
+          V = e(6469),
+          Y = e(53107),
+          X = e(25792),
+          C = Object.defineProperty,
+          s = Object.getOwnPropertyDescriptor,
+          a = (d, f, v, p) => {
             for (
-              var E = C > 1 ? void 0 : C ? y(h, v) : h, P = c.length - 1, T;
-              P >= 0;
-              P--
+              var I = p > 1 ? void 0 : p ? s(f, v) : f, j = d.length - 1, _;
+              j >= 0;
+              j--
             )
-              (T = c[P]) && (E = (C ? T(h, v, E) : T(E)) || E);
-            return C && E && $(h, v, E), E;
+              (_ = d[j]) && (I = (p ? _(f, v, I) : _(I)) || I);
+            return p && I && C(f, v, I), I;
           };
-        const r = (c) => {
-          let { bShowOnlyInitialEvent: h } = c;
-          const v = (0, N.Qn)(),
-            C = (0, w.Y)();
-          return (0, n.jsx)(z.tH, {
-            children: (0, n.jsx)(m, {
-              ...c,
-              bShowOnlyInitialEvent: h || v,
-              tracker: C,
+        const g = (d) => {
+          let { bShowOnlyInitialEvent: f } = d;
+          const v = (0, A.Qn)(),
+            p = (0, h.Y)();
+          return (0, n.jsx)(X.tH, {
+            children: (0, n.jsx)(y, {
+              ...d,
+              bShowOnlyInitialEvent: f || v,
+              tracker: p,
             }),
           });
         };
-        let m = class extends b.Component {
+        let y = class extends N.Component {
           state = { bLoading: !1, eventModel: this.props.eventModel };
-          m_refParent = b.createRef();
-          m_cancelSignal = d().CancelToken.source();
+          m_refParent = N.createRef();
+          m_cancelSignal = c().CancelToken.source();
           componentDidMount() {
             this.state.eventModel ||
               this.setState({ bLoading: !0 }, this.LoadEvent);
-            let c = this.GetBodyElement();
-            c &&
+            let d = this.GetBodyElement();
+            d &&
               this.props.bPrimaryPageFeature &&
-              c.classList.add(H.BodyNoScroll);
+              d.classList.add($.BodyNoScroll);
           }
           componentWillUnmount() {
             this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
-            let c = this.GetBodyElement();
-            c &&
+            let d = this.GetBodyElement();
+            d &&
               this.props.bPrimaryPageFeature &&
-              c.classList.remove(H.BodyNoScroll);
+              d.classList.remove($.BodyNoScroll);
           }
           GetBodyElement() {
             return this.m_refParent.current
@@ -341,116 +345,118 @@
           }
           async LoadEvent() {
             const {
-              appid: c,
-              clanSteamID: h,
+              appid: d,
+              clanSteamID: f,
               announcementGID: v,
-              partnerEventStore: C,
-              additionalParams: E,
+              partnerEventStore: p,
+              additionalParams: I,
             } = this.props;
-            C.LoadAdjacentPartnerEventsByAnnouncement(
+            p.LoadAdjacentPartnerEventsByAnnouncement(
               v,
-              h,
-              c,
+              f,
+              d,
               0,
               3,
-              E,
+              I,
               this.m_cancelSignal,
             )
-              .then((P) => {
-                P.length > 0
+              .then((j) => {
+                j.length > 0
                   ? this.setState(
-                      { bLoading: !1, eventModel: P[0] },
+                      { bLoading: !1, eventModel: j[0] },
                       this.HandleReadEvent,
                     )
                   : (this.props.onEventNotFound && this.props.onEventNotFound(),
                     this.setState({ bLoading: !1 }));
               })
-              .catch((P) => {
-                let T = (0, Q.H)(P);
+              .catch((j) => {
+                let _ = (0, G.H)(j);
                 console.error(
-                  "EventInfiniteScrollModal failed " + T.strErrorMsg,
-                  T,
+                  "EventInfiniteScrollModal failed " + _.strErrorMsg,
+                  _,
                 ),
                   this.setState({ bLoading: !1 });
               });
           }
           async HandleReadEvent() {
-            const { eventModel: c } = this.state,
-              { trackingLocation: h, tracker: v } = this.props;
-            c && c.BIsPartnerEvent() && (v.RecordEventRead(c, h), v.Flush());
+            const { eventModel: d } = this.state,
+              { trackingLocation: f, tracker: v } = this.props;
+            d &&
+              d.BIsPartnerEvent() &&
+              (v.RecordEventRead(d, f ?? x.Tc.br), v.Flush());
           }
           render() {
-            const { bShowOnlyInitialEvent: c } = this.props,
-              { bLoading: h, eventModel: v } = this.state;
-            if (h)
-              return (0, n.jsx)(x.EN, {
+            const { bShowOnlyInitialEvent: d } = this.props,
+              { bLoading: f, eventModel: v } = this.state;
+            if (f)
+              return (0, n.jsx)(J.EN, {
                 active: !0,
                 children: (0, n.jsx)("div", {
-                  className: S().FlexCenter,
+                  className: z().FlexCenter,
                   style: { height: "400px" },
-                  children: (0, n.jsx)(K.t, {}),
+                  children: (0, n.jsx)(Q.t, {}),
                 }),
               });
             const {
-              closeModal: C,
-              appid: E,
-              clanSteamID: P,
-              className: T,
-              partnerEventStore: te,
-              showAppHeader: se,
-              bPrimaryPageFeature: V,
-              additionalParams: k,
-              eventClassName: R,
+              closeModal: p,
+              appid: I,
+              clanSteamID: j,
+              className: _,
+              partnerEventStore: se,
+              showAppHeader: ee,
+              bPrimaryPageFeature: F,
+              additionalParams: U,
+              eventClassName: ae,
             } = this.props;
             let ne;
-            G.TS.IN_CLIENT &&
+            D.TS.IN_CLIENT &&
               v?.appid &&
-              (g.Fm.Get().HintLoad(),
-              g.Fm.Get().BOwnsApp(v.appid) &&
-                (ne = (q) =>
-                  (0, X.EP)(q, "steam://nav/games/details/" + v.appid)));
-            const oe = (0, n.jsx)(D.sU, {
-              children: (q) =>
-                (0, n.jsx)(O.AD, {
+              (V.Fm.Get().HintLoad(),
+              V.Fm.Get().BOwnsApp(v.appid) &&
+                (ne = (te) =>
+                  (0, Y.EP)(te, "steam://nav/games/details/" + v.appid)));
+            const oe = (0, n.jsx)(S.sU, {
+              children: (te) =>
+                (0, n.jsx)(P.AD, {
                   initialEvent: v,
-                  appid: E,
-                  clanSteamID: P,
-                  partnerEventStore: te,
-                  emoticonStore: q,
-                  closeModal: !V && C,
-                  showAppHeader: se,
-                  bShowOnlyInitialEvent: c,
-                  additionalParams: k,
-                  eventClassName: R,
+                  appid: I,
+                  clanSteamID: j,
+                  partnerEventStore: se,
+                  emoticonStore: te,
+                  closeModal: F ? void 0 : p,
+                  showAppHeader: ee,
+                  bShowOnlyInitialEvent: d,
+                  additionalParams: U,
+                  eventClassName: ae,
                   onAppIconClick: ne,
                 }),
             });
-            return V
+            return F
               ? oe
-              : (0, n.jsx)(x.EN, {
+              : (0, n.jsx)(J.EN, {
                   active: !0,
-                  children: (0, n.jsx)("div", { className: T, children: oe }),
+                  children: (0, n.jsx)("div", { className: _, children: oe }),
                 });
           }
         };
-        m = s([F.PA], m);
+        y = a([W.PA], y);
       },
-      59970: (p, W, e) => {
+      59970: (E, K, e) => {
         "use strict";
-        e.d(W, { d: () => ht });
+        e.d(K, { d: () => Dt });
         var n = e(7850),
-          U = e(19367),
-          d = e(90626),
-          F = e(3685),
-          b = e(85528),
-          w = e(77495),
-          D = e(18210),
-          O = e(3166),
-          x = e(75779),
-          H = e(80902),
-          ee = e(30454);
-        async function I() {
-          const t = await (0, ee.d)(
+          H = e(19367),
+          c = e(90626),
+          W = e(3685),
+          N = e(85528),
+          x = e(77495),
+          h = e(18210),
+          S = e(3166),
+          P = e(75779),
+          J = e(80902),
+          $ = e(30454);
+        async function w() {
+          const t = await (0, $.d)(
             "ajaxgetuserdeckcompatcounts",
             new URLSearchParams(),
           );
@@ -460,42 +466,42 @@
             );
           return t.counts;
         }
-        const S = 300 * 1e3;
-        function K() {
+        const M = 300 * 1e3;
+        function z() {
           return ["DeckCompatCounts"];
         }
         function Q() {
-          return { queryKey: K(), queryFn: () => I(), staleTime: S, retry: !1 };
+          return { queryKey: z(), queryFn: () => w(), staleTime: M, retry: !1 };
         }
-        function N() {
-          const { data: t } = (0, H.I)(Q());
+        function G() {
+          const { data: t } = (0, J.I)(Q());
           return t;
         }
-        function G(t, o) {
+        function A(t, o) {
           switch (o) {
-            case x.sd:
+            case P.sd:
               return t?.playable;
-            case x.V8:
+            case P.V8:
               return t?.unsupported;
             default:
               return t?.verified;
           }
         }
-        var g = e(70187),
-          X = e(36549),
-          z = e(39153),
-          $ = e(99412),
-          y = e(72609),
+        var D = e(70187),
+          V = e(36549),
+          Y = e(39153),
+          X = e(99412),
+          C = e(72609),
           s = e(25792),
-          r = e(85599),
-          m = e(41635),
-          c = e(47610),
-          h = e(18860),
-          v = e(87805);
-        function C(t) {
+          a = e(85599),
+          g = e(41635),
+          y = e(47610),
+          d = e(18860),
+          f = e(87805);
+        function v(t) {
           const { event: o } = t.context,
-            a = Number.parseInt((0, g.j$)(t.args)),
-            l = d.useMemo(() => {
+            r = Number.parseInt((0, D.j$)(t.args)),
+            l = c.useMemo(() => {
               if (o)
                 return o.jsondata.sale_sections?.find(
                   (i) =>
@@ -506,104 +512,104 @@
                         "while_supplies_last"),
                 );
             }, [o]);
-          if (a && l) {
-            const i = Number.parseInt((0, g.j$)(t.args, "depositpackageid")),
-              u = Number.parseInt((0, g.j$)(t.args, "psulesspackageid")),
-              f = (0, g.j$)(t.args, "out_of_stock_override"),
-              j = (0, g.j$)(t.args, "delivery_override"),
-              M = (0, g.j$)(t.args, "delivery_override_out_of_stock");
-            return (0, n.jsx)(E, {
+          if (r && l) {
+            const i = Number.parseInt((0, D.j$)(t.args, "depositpackageid")),
+              u = Number.parseInt((0, D.j$)(t.args, "psulesspackageid")),
+              m = (0, D.j$)(t.args, "out_of_stock_override"),
+              O = (0, D.j$)(t.args, "delivery_override"),
+              b = (0, D.j$)(t.args, "delivery_override_out_of_stock");
+            return (0, n.jsx)(p, {
               section: l,
-              reservationPackageID: a,
+              reservationPackageID: r,
               depositPackageID: i,
               psuLessPackageID: u,
-              strOutOfStockOverride: f,
-              strDeliveryOverride: M || j,
-              bDeliveryOverrideOnlyIfOutOfStock: !!M,
+              strOutOfStockOverride: m,
+              strDeliveryOverride: b || O,
+              bDeliveryOverrideOnlyIfOutOfStock: !!b,
               PreviewActions: t.PreviewActions,
             });
           }
           return (0, n.jsx)(n.Fragment, {});
         }
-        function E(t) {
+        function p(t) {
           const {
               reservationPackageID: o,
-              depositPackageID: a,
+              depositPackageID: r,
               bIsPreview: l,
               psuLessPackageID: i,
               strOutOfStockOverride: u,
-              strDeliveryOverride: f,
-              bDeliveryOverrideOnlyIfOutOfStock: j,
-              section: M,
-              PreviewActions: _,
+              strDeliveryOverride: m,
+              bDeliveryOverrideOnlyIfOutOfStock: O,
+              section: b,
+              PreviewActions: T,
             } = t,
-            { data: B } = (0, c.DR)(o),
-            { data: Z } = (0, c.DR)(i),
-            A = (0, d.useMemo)(
+            { data: B } = (0, y.DR)(o),
+            { data: Z } = (0, y.DR)(i),
+            L = (0, c.useMemo)(
               () => [
                 {
                   unique_id: "reservation_bbcode_" + o,
                   reservation_package: o,
-                  deposit_package: a,
-                  localized_reservation_desc: (0, m.$Y)([], $.bP9, null),
-                  localized_out_of_stock_override: (0, m.$Y)(
+                  deposit_package: r,
+                  localized_reservation_desc: (0, g.$Y)([], X.bP9, null),
+                  localized_out_of_stock_override: (0, g.$Y)(
                     [u || null],
-                    $.bP9,
+                    X.bP9,
                     null,
                   ),
-                  localized_delivery_override_desc: (0, m.$Y)(
-                    [f || null],
-                    $.bP9,
+                  localized_delivery_override_desc: (0, g.$Y)(
+                    [m || null],
+                    X.bP9,
                     null,
                   ),
-                  override_delivery_only_out_of_stock: !!j,
+                  override_delivery_only_out_of_stock: !!O,
                   psu_less_package: i,
                 },
               ],
-              [o, a, u, f, j, i],
+              [o, r, u, m, O, i],
             );
           if (!B || (i && !Z))
-            return (0, n.jsx)(r.t, {
-              string: (0, D.we)("#Loading"),
+            return (0, n.jsx)(a.t, {
+              string: (0, h.we)("#Loading"),
               size: "small",
               position: "center",
             });
-          const Dt = !y.iA.logged_in || !B.account_restricted_from_purchasing,
-            De =
-              B.reservation_state == h.G.k_EPurchaseReservationState_Reserved
+          const ht = !C.iA.logged_in || !B.account_restricted_from_purchasing,
+            ye =
+              B.reservation_state == d.G.k_EPurchaseReservationState_Reserved
                 ? B
                 : void 0;
           return (0, n.jsxs)(s.tH, {
             children: [
-              _ &&
-                (0, n.jsx)(d.Suspense, {
+              T &&
+                (0, n.jsx)(c.Suspense, {
                   fallback: null,
-                  children: (0, n.jsx)(_, {
+                  children: (0, n.jsx)(T, {
                     bIsPreview: !!l,
-                    rgReservationDef: A,
+                    rgReservationDef: L,
                   }),
                 }),
               !!B.allow_purchase_in_country &&
                 (0, n.jsxs)("div", {
-                  className: A[0].unique_id,
+                  className: L[0].unique_id,
                   children: [
-                    (0, n.jsx)(v.b, {
-                      reservationDef: A[0],
+                    (0, n.jsx)(f.b, {
+                      reservationDef: L[0],
                       hardwareDetail: B,
                       bPSULessModel: !1,
-                      reservedHardwareDetail: De,
+                      reservedHardwareDetail: ye,
                     }),
-                    Dt &&
-                      (0, n.jsx)(v.p, {
-                        section: M,
-                        reservationDef: A[0],
+                    ht &&
+                      (0, n.jsx)(f.p, {
+                        section: b,
+                        reservationDef: L[0],
                         hardwareDetail: B,
-                        reservedHardwareDetail: De,
+                        reservedHardwareDetail: ye,
                       }),
                     Z &&
                       Z?.allow_purchase_in_country &&
-                      (0, n.jsx)(v.b, {
-                        reservationDef: A[0],
+                      (0, n.jsx)(f.b, {
+                        reservationDef: L[0],
                         hardwareDetail: Z,
                         bPSULessModel: !0,
                         reservedHardwareDetail: void 0,
@@ -613,92 +619,92 @@
             ],
           });
         }
-        var P = e(6878),
-          T = e(21035),
-          te = e(72865),
+        var I = e(6878),
+          j = e(21035),
+          _ = e(72865),
           se = e(38081),
-          V = e.n(se),
-          k = e(36707),
-          R = e(69596),
-          ne = e(10026),
-          oe = e.n(ne),
-          q = e(19298),
-          Ie = e(11996),
-          Ce = e(19047),
-          ae = e(36118),
+          ee = e.n(se),
+          F = e(36707),
+          U = e(69596),
+          ae = e(10026),
+          ne = e.n(ae),
+          oe = e(19298),
+          te = e(11996),
+          Ie = e(19047),
+          re = e(36118),
           we = e(47689),
-          ve = e(89926),
+          fe = e(89926),
           pe = e(32545),
-          re = e.n(pe);
+          ie = e.n(pe);
         function xe(t) {
-          const { appID: o, classOverride: a, styleOverride: l } = t,
-            [i, u] = (0, d.useState)(!1),
-            f = (0, we.m)("GameHoverFollowButton"),
-            { elDialogElement: j, fnShowLogonDialog: M } = (0, ve.l)(),
-            _ = (0, Ie.Fh)(o),
-            { mutateAsync: B } = (0, Ce.L)(o, !_, void 0),
-            Z = async (A) => {
-              A.preventDefault(),
-                A.stopPropagation(),
-                O.iA.logged_in
-                  ? (u(!0), await B(), f.token.reason || u(!1))
-                  : M();
+          const { appID: o, classOverride: r, styleOverride: l } = t,
+            [i, u] = (0, c.useState)(!1),
+            m = (0, we.m)("GameHoverFollowButton"),
+            { elDialogElement: O, fnShowLogonDialog: b } = (0, fe.l)(),
+            T = (0, te.Fh)(o),
+            { mutateAsync: B } = (0, Ie.L)(o, !T, void 0),
+            Z = async (L) => {
+              L.preventDefault(),
+                L.stopPropagation(),
+                S.iA.logged_in
+                  ? (u(!0), await B(), m.token.reason || u(!1))
+                  : b();
             };
-          return (0, n.jsxs)(q.Z, {
-            className: (0, k.A)(re().FollowButton, a),
+          return (0, n.jsxs)(oe.Z, {
+            className: (0, F.A)(ie().FollowButton, r),
             onClick: Z,
             style: l,
             children: [
-              _ ? (0, n.jsx)(ae.pPV, {}) : (0, n.jsx)(ae.c9e, {}),
+              T ? (0, n.jsx)(re.pPV, {}) : (0, n.jsx)(re.c9e, {}),
               (0, n.jsx)("div", {
-                className: (0, k.A)(
-                  re().FollowButtonText,
-                  i && re().FollowLoadingText,
+                className: (0, F.A)(
+                  ie().FollowButtonText,
+                  i && ie().FollowLoadingText,
                   "FollowGameButton",
                 ),
-                children: (0, D.we)(
-                  _ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
+                children: (0, h.we)(
+                  T ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
                 ),
               }),
-              j,
+              O,
             ],
           });
         }
         function Ee(t) {
-          const { appid: o, color: a, bgcolor: l } = t,
-            i = (0, te.n9)();
+          const { appid: o, color: r, bgcolor: l } = t,
+            i = (0, _.n9)();
           return (0, n.jsx)(xe, {
             appID: o,
-            classOverride: (0, k.A)(
-              V().FollowGameButtonNotTop,
-              oe().BBCodeFollowButton,
+            classOverride: (0, F.A)(
+              ee().FollowGameButtonNotTop,
+              ne().BBCodeFollowButton,
             ),
-            styleOverride: { color: a, backgroundColor: l },
+            styleOverride: { color: r, backgroundColor: l },
           });
         }
         function Be(t) {
           const o = Number(t.args.appid);
           if (!o) return null;
-          const a = (0, R.O)(t.args.color, "black"),
-            l = (0, R.O)(t.args.bgcolor, "white");
-          return (0, n.jsx)(Ee, { appid: o, color: a, bgcolor: l });
+          const r = (0, U.O)(t.args.color, "black"),
+            l = (0, U.O)(t.args.bgcolor, "white");
+          return (0, n.jsx)(Ee, { appid: o, color: r, bgcolor: l });
         }
-        var ie = e(57646);
+        var le = e(57646);
         function Pe(t) {
           const o = Number(t.args.packageid);
           return o
-            ? (0, n.jsx)(ie.eF, {
+            ? (0, n.jsx)(le.eF, {
                 packageID: o,
-                display_style: (0, ie._w)(t.args.display),
+                display_style: (0, le._w)(t.args.display),
               })
             : null;
         }
         function je(t) {
           const o = Number(t.args.packageid),
-            a = Number(t.args.compareid);
-          return !o || !a
+            r = Number(t.args.compareid);
+          return !o || !r
             ? null
-            : (0, n.jsx)(ie.hJ, { packageID: o, compareID: a });
+            : (0, n.jsx)(le.hJ, { packageID: o, compareID: r });
         }
         function Oe(t) {
           const o = t.args[""]?.trim();
@@ -710,145 +716,145 @@
           me = e.n(Se),
           Me = e(63026);
         function _e(t) {
-          const { clanAccountID: o, color: a, bgcolor: l } = t,
-            [i, u] = d.useState(!1);
+          const { clanAccountID: o, color: r, bgcolor: l } = t,
+            [i, u] = c.useState(!1);
           return (0, n.jsx)("div", {
-            className: (0, k.A)(me().BBCodeFollowButton, i && me().isHovered),
+            className: (0, F.A)(me().BBCodeFollowButton, i && me().isHovered),
             onMouseEnter: () => u(!0),
             onMouseLeave: () => u(!1),
             children: (0, n.jsx)(Me.Q, {
               nCreatorAccountID: o,
-              classOverride: V().FollowGameButtonNotTop,
-              styleOverride: { color: a, backgroundColor: l },
+              classOverride: ee().FollowGameButtonNotTop,
+              styleOverride: { color: r, backgroundColor: l },
               followType: "group",
             }),
           });
         }
-        function Te(t) {
+        function be(t) {
           const { event: o } = t.context,
-            a = Number(t.args.groupid) || o?.clanSteamID.GetAccountID();
-          if (!a) return null;
-          const l = (0, R.O)(t.args.color, "black"),
-            i = (0, R.O)(t.args.bgcolor, "white");
-          return (0, n.jsx)(_e, { clanAccountID: a, color: l, bgcolor: i });
+            r = Number(t.args.groupid) || o?.clanSteamID.GetAccountID();
+          if (!r) return null;
+          const l = (0, U.O)(t.args.color, "black"),
+            i = (0, U.O)(t.args.bgcolor, "white");
+          return (0, n.jsx)(_e, { clanAccountID: r, color: l, bgcolor: i });
         }
-        var Ae = e(83482),
-          be = e(44267),
+        var Te = e(83482),
+          Le = e(44267),
           Ne = e(9202),
-          fe = e.n(Ne),
+          ge = e.n(Ne),
           Ge = e(29522);
-        function Le(t) {
-          const { appid: o, color: a, bgcolor: l } = t,
-            i = (0, te.n9)(),
+        function Ae(t) {
+          const { appid: o, color: r, bgcolor: l } = t,
+            i = (0, _.n9)(),
             u = (0, Ge.$5)(o),
-            f = (0, Ae.L3)(i);
+            m = (0, Te.L3)(i);
           return (0, n.jsx)("div", {
-            className: fe().WishlistHoverCtn,
-            children: (0, n.jsx)(be.E, {
-              snr: f,
+            className: ge().WishlistHoverCtn,
+            children: (0, n.jsx)(Le.E, {
+              snr: m,
               id: u,
-              classOverride: (0, k.A)(
-                V().WishlistButtonNotTop,
-                fe().BBCodeWishlistButton,
+              classOverride: (0, F.A)(
+                ee().WishlistButtonNotTop,
+                ge().BBCodeWishlistButton,
                 "WishlistButton",
               ),
-              styleOverride: { color: a, backgroundColor: l },
+              styleOverride: { color: r, backgroundColor: l },
               bShowInGamepadUI: !0,
             }),
           });
         }
-        function Fe(t) {
+        function Re(t) {
           const o = Number(t.args.appid);
           if (!o) return null;
-          const a = (0, R.O)(t.args.color, "black"),
-            l = (0, R.O)(t.args.bgcolor, "white");
-          return (0, n.jsx)(Le, { appid: o, color: a, bgcolor: l });
+          const r = (0, U.O)(t.args.color, "black"),
+            l = (0, U.O)(t.args.bgcolor, "white");
+          return (0, n.jsx)(Ae, { appid: o, color: r, bgcolor: l });
         }
-        let le = null;
-        function Re() {
+        let ce = null;
+        function We() {
           return (
-            le == null &&
-              (le = new Map([
-                ["wishlist", { Constructor: Fe, autocloses: !1 }],
-                ["followgroup", { Constructor: Te, autocloses: !1 }],
+            ce == null &&
+              (ce = new Map([
+                ["wishlist", { Constructor: Re, autocloses: !1 }],
+                ["followgroup", { Constructor: be, autocloses: !1 }],
                 ["classname", { Constructor: Oe, autocloses: !1 }],
                 ["price", { Constructor: Pe, autocloses: !1 }],
                 ["pricesavings", { Constructor: je, autocloses: !1 }],
-                ["reservationbutton", { Constructor: C, autocloses: !1 }],
+                ["reservationbutton", { Constructor: v, autocloses: !1 }],
               ])),
-            le
+            ce
           );
         }
-        var We = e(37656),
-          L = e(29868),
-          Y = e(24642);
-        function ge(t) {
+        var Fe = e(37656),
+          R = e(29868),
+          k = e(24642);
+        function De(t) {
           return t < 10 ? "0" + t : t;
         }
         function Ue(t) {
           const { giveawayid: o } = t,
-            a = (0, We.w)(o),
+            r = (0, Fe.w)(o),
             {
               bLoadingGiveawayInfo: l,
               winner_count: i,
               closed: u,
-              seconds_until_drawing: f,
-            } = a;
+              seconds_until_drawing: m,
+            } = r;
           return l
             ? null
             : (0, n.jsxs)("div", {
-                className: L.countdownCtn,
+                className: R.countdownCtn,
                 children: [
                   !!u &&
                     (0, n.jsx)("div", {
-                      className: L.Closed,
+                      className: R.Closed,
                       children:
                         i > 0
-                          ? (0, D.we)("#Giveaway_Closed", (0, Y.D)(i))
-                          : (0, D.we)("#Giveaway_Closed_NoWinnerInfo"),
+                          ? (0, h.we)("#Giveaway_Closed", (0, k.D)(i))
+                          : (0, h.we)("#Giveaway_Closed_NoWinnerInfo"),
                     }),
                   !u &&
-                    (0, n.jsxs)(d.Fragment, {
+                    (0, n.jsxs)(c.Fragment, {
                       children: [
-                        f <= 0
+                        m <= 0
                           ? (0, n.jsxs)("div", {
-                              className: L.Throbber,
+                              className: R.Throbber,
                               children: [
-                                (0, n.jsx)(r.t, { size: "small" }),
+                                (0, n.jsx)(a.t, { size: "small" }),
                                 (0, n.jsx)("div", {
-                                  children: (0, D.we)("#Giveaway_RandomDraw"),
+                                  children: (0, h.we)("#Giveaway_RandomDraw"),
                                 }),
                               ],
                             })
                           : (0, n.jsxs)("div", {
-                              className: L.CountDownCtn,
+                              className: R.CountDownCtn,
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: L.CountDownTime,
+                                  className: R.CountDownTime,
                                   children:
-                                    ge(Math.floor(f / 60)) + ":" + ge(f % 60),
+                                    De(Math.floor(m / 60)) + ":" + De(m % 60),
                                 }),
                                 (0, n.jsxs)("div", {
-                                  className: L.CountDownText,
+                                  className: R.CountDownText,
                                   children: [
-                                    (0, D.we)("#Giveaway_CountDown2"),
+                                    (0, h.we)("#Giveaway_CountDown2"),
                                     " ",
-                                    (0, D.we)("#Giveaway_KeepWatching"),
+                                    (0, h.we)("#Giveaway_KeepWatching"),
                                   ],
                                 }),
                               ],
                             }),
                         i > 0 &&
                           (0, n.jsxs)("div", {
-                            className: L.WinnerInfo,
+                            className: R.WinnerInfo,
                             children: [
                               (0, n.jsx)("div", {
-                                className: L.WinnerCount,
-                                children: (0, Y.D)(i),
+                                className: R.WinnerCount,
+                                children: (0, k.D)(i),
                               }),
                               (0, n.jsx)("div", {
-                                className: L.WinnerText,
-                                children: (0, D.we)("#Giveaway_Congratulation"),
+                                className: R.WinnerText,
+                                children: (0, h.we)("#Giveaway_Congratulation"),
                               }),
                             ],
                           }),
@@ -857,131 +863,131 @@
                 ],
               });
         }
-        var He = e(88245),
-          Ke = e(35702),
-          Qe = e(16412),
+        var Ke = e(88245),
+          He = e(35702),
+          $e = e(16412),
           ze = e(92757),
-          $e = e(39256),
-          ke = e(4720),
-          Ze = e(37375),
+          Qe = e(39256),
+          Ve = e(4720),
+          Ye = e(75110),
           Xe = e(57810),
-          ce = e(36631),
-          Ve = e(76281),
+          de = e(36631),
+          Ze = e(76281),
           he = e(81416);
-        function Ye(t) {
-          const { eventModel: o, nEventBadgeID: a } = t,
-            l = (0, Ke.fy)(a);
+        function Je(t) {
+          const { eventModel: o, nEventBadgeID: r } = t,
+            l = (0, He.fy)(r);
           if (l?.level > 0) {
             let i = l.level;
             if (o?.BHasSaleEnabled()) {
               const u = o.GetSaleSectionsByType("badge_progress");
               if (u?.length == 1) {
-                const f = u[0].badge_progress;
-                if (f?.event_badgeid == a && f?.granted_by_discovery_queue) {
-                  const j = f.levels[f.levels.length - 1].level;
-                  return (0, n.jsx)(Je, {
+                const m = u[0].badge_progress;
+                if (m?.event_badgeid == r && m?.granted_by_discovery_queue) {
+                  const O = m.levels[m.levels.length - 1].level;
+                  return (0, n.jsx)(ke, {
                     eventModel: o,
                     nBadgeLevel: i,
-                    nMaxLevel: j,
+                    nMaxLevel: O,
                   });
                 }
               }
             }
             return (0, n.jsx)("span", {
               className: "DisplayBadgeProgress",
-              children: (0, Y.D)(i),
+              children: (0, k.D)(i),
             });
           }
           return null;
         }
-        function Je(t) {
-          const { eventModel: o, nBadgeLevel: a, nMaxLevel: l } = t,
-            i = d.useMemo(() => {
-              const _ = o
+        function ke(t) {
+          const { eventModel: o, nBadgeLevel: r, nMaxLevel: l } = t,
+            i = c.useMemo(() => {
+              const T = o
                 .GetSaleSections()
                 .filter((B) => B.section_type == "discoveryqueue");
-              return _?.length > 0 ? _[0] : null;
+              return T?.length > 0 ? T[0] : null;
             }, [o]),
-            { storePageFilter: u, eStoreDiscoveryQueueType: f } = d.useMemo(
-              () => (0, Ze.lx)(o, i),
+            { storePageFilter: u, eStoreDiscoveryQueueType: m } = c.useMemo(
+              () => (0, Ye.lx)(o, i),
               [o, i],
             ),
-            j = (0, Xe.Uf)(f, u),
-            M = Math.min(a + j, l);
+            O = (0, Xe.Uf)(m, u),
+            b = Math.min(r + O, l);
           return (0, n.jsx)("span", {
             className: "DisplayBadgeProgress",
-            children: (0, Y.D)(M),
+            children: (0, k.D)(b),
           });
         }
         function qe(t) {
           const { event: o } = t.context,
-            a = Number.parseInt((0, g.j$)(t.args, "eventid"));
-          return O.iA.logged_in && a
-            ? (0, n.jsx)(Ye, { nEventBadgeID: a, eventModel: o })
+            r = Number.parseInt((0, D.j$)(t.args, "eventid"));
+          return S.iA.logged_in && r
+            ? (0, n.jsx)(Je, { nEventBadgeID: r, eventModel: o })
             : null;
         }
         function et(t) {
-          const { nDoorIndex: o, children: a } = t,
-            l = (0, z.OM)(o),
-            i = (0, z.gP)(),
-            [u, f] = d.useState(!1),
-            [j, M] = d.useState(!1),
-            { elDialogElement: _, fnShowLogonDialog: B } = (0, ve.l)();
+          const { nDoorIndex: o, children: r } = t,
+            l = (0, Y.OM)(o),
+            i = (0, Y.gP)(),
+            [u, m] = c.useState(!1),
+            [O, b] = c.useState(!1),
+            { elDialogElement: T, fnShowLogonDialog: B } = (0, fe.l)();
           return (0, n.jsxs)(n.Fragment, {
             children: [
-              (0, n.jsx)(Qe.$n, {
+              (0, n.jsx)($e.$n, {
                 disabled: l,
                 onClick: (Z) => {
                   u ||
-                    (O.iA.logged_in
-                      ? (f(!0),
+                    (S.iA.logged_in
+                      ? (m(!0),
                         i({ iDoorIndex: o })
-                          .then((A) => {
-                            A || M(!0), f(!1);
+                          .then((L) => {
+                            L || b(!0), m(!1);
                           })
                           .catch(() => {
-                            M(!0), f(!1);
+                            b(!0), m(!1);
                           }))
                       : B());
                 },
-                children: j
+                children: O
                   ? (0, n.jsx)("div", {
-                      children: (0, D.we)("#GrantAwardError_Busy"),
+                      children: (0, h.we)("#GrantAwardError_Busy"),
                     })
                   : (0, n.jsxs)(n.Fragment, {
                       children: [
-                        !!u && (0, n.jsx)(r.t, { size: "small" }),
-                        !!l && (0, n.jsx)(ae.Jlk, {}),
-                        a,
+                        !!u && (0, n.jsx)(a.t, { size: "small" }),
+                        !!l && (0, n.jsx)(re.Jlk, {}),
+                        r,
                       ],
                     }),
               }),
-              _,
+              T,
             ],
           });
         }
         function tt(t) {
-          const o = Number.parseInt((0, g.j$)(t.args)) || 0;
+          const o = Number.parseInt((0, D.j$)(t.args)) || 0;
           return o >= 0 && o < 32
             ? (0, n.jsx)(et, { nDoorIndex: o, children: t.children })
             : null;
         }
-        const nt = (0, ze.y)(Ve.H);
+        const nt = (0, ze.y)(Ze.H);
         function ot(t) {
-          const o = Number.parseInt((0, g.j$)(t.args)),
-            { event: a, showErrorInfo: l } = t.context;
+          const o = Number.parseInt((0, D.j$)(t.args)),
+            { event: r, showErrorInfo: l } = t.context;
           if (o) {
-            const i = a?.jsondata?.sale_sections?.findIndex(
+            const i = r?.jsondata?.sale_sections?.findIndex(
               (u) => u.unique_id == o,
             );
             if (i >= 0) {
-              const u = a.GetDayIndexFromEventStart();
-              return (0, n.jsx)(ce.Cs, {
-                location: l ? ce.HY : ce.bs,
+              const u = r.GetDayIndexFromEventStart();
+              return (0, n.jsx)(de.Cs, {
+                location: l ? de.HY : de.bs,
                 children: (0, n.jsx)(nt, {
-                  event: a,
-                  section: a.jsondata.sale_sections[i],
-                  activeTab: new ke.y(null, u),
+                  event: r,
+                  section: r.jsondata.sale_sections[i],
+                  activeTab: new Ve.y(null, u),
                   language: t.language,
                   nSaleDayIndex: u,
                   promotionName: "",
@@ -993,18 +999,18 @@
               });
             } else if (l)
               return (0, n.jsxs)("div", {
-                className: $e.ErrorDiv,
+                className: Qe.ErrorDiv,
                 children: ["Error could not find sale section ", o],
               });
           }
           return null;
         }
-        let de = null;
+        let ue = null;
         function st() {
           return (
-            de == null &&
-              (de = new Map([
-                ...Array.from(Re().entries()),
+            ue == null &&
+              (ue = new Map([
+                ...Array.from(We().entries()),
                 [
                   "itemdef",
                   {
@@ -1026,75 +1032,75 @@
                 ["optindoorquest", { Constructor: tt, autocloses: !1 }],
                 ["localize", { Constructor: dt, autocloses: !1 }],
                 ["salesection", { Constructor: ot, autocloses: !1 }],
-                ["reservationbutton", { Constructor: mt, autocloses: !1 }],
+                ["reservationbutton", { Constructor: ft, autocloses: !1 }],
               ])),
-            de
+            ue
           );
         }
         function at(t) {
           const { event: o } = t.context,
-            a = Number.parseInt((0, g.j$)(t.args, "appid")),
-            l = Number.parseInt((0, g.j$)(t.args, "itemdefid")),
-            i = Number.parseInt((0, g.j$)(t.args, "maxquantity")),
-            u = (0, g.j$)(t.args, "calltoaction");
-          return !(0, He.gS)(a, l, !1) || !o
-            ? (0, n.jsx)(r.t, {
+            r = Number.parseInt((0, D.j$)(t.args, "appid")),
+            l = Number.parseInt((0, D.j$)(t.args, "itemdefid")),
+            i = Number.parseInt((0, D.j$)(t.args, "maxquantity")),
+            u = (0, D.j$)(t.args, "calltoaction");
+          return !(0, Ke.gS)(r, l, !1) || !o
+            ? (0, n.jsx)(a.t, {
                 size: "small",
                 position: "center",
-                string: (0, D.we)("#Loading"),
+                string: (0, h.we)("#Loading"),
               })
-            : (0, n.jsx)(T.f, {
+            : (0, n.jsx)(j.f, {
                 language: t.language,
                 clanAccountID: o.clanSteamID.GetAccountID(),
-                itemDefSetting: { nAppID: a, nItemDefID: l, max_quantity: i },
+                itemDefSetting: { nAppID: r, nItemDefID: l, max_quantity: i },
                 strCallToAction: u,
               });
         }
         function rt(t) {
-          const o = N();
-          if (!o) return (0, n.jsx)(r.t, { size: "small" });
-          const a = Number.parseInt((0, g.j$)(t.args));
-          return (0, n.jsx)("span", { children: (0, Y.D)(Number(G(o, a))) });
+          const o = G();
+          if (!o) return (0, n.jsx)(a.t, { size: "small" });
+          const r = Number.parseInt((0, D.j$)(t.args));
+          return (0, n.jsx)("span", { children: (0, k.D)(Number(A(o, r))) });
         }
         function it(t) {
-          const o = (0, X.jR)(O.iA.accountid, "library");
-          if (!o) return (0, n.jsx)(r.t, { size: "small" });
-          const a = Number.parseInt((0, g.j$)(t.args));
+          const o = (0, V.jR)(S.iA.accountid, "library");
+          if (!o) return (0, n.jsx)(a.t, { size: "small" });
+          const r = Number.parseInt((0, D.j$)(t.args));
           let l = o.verifiedList?.length || 0;
-          switch (a) {
-            case x.sd:
+          switch (r) {
+            case P.sd:
               l = o.playableList?.length || 0;
               break;
-            case x.V8:
+            case P.V8:
               l = o.unsupportedList?.length || 0;
               break;
-            case x.YX:
+            case P.YX:
               l = o.unknownList?.length || 0;
               break;
           }
-          return (0, n.jsx)("span", { children: (0, Y.D)(Number(l)) });
+          return (0, n.jsx)("span", { children: (0, k.D)(Number(l)) });
         }
         function lt(t) {
-          const o = Number.parseInt((0, g.j$)(t.args)),
-            a =
-              "hide" in t.args && !!Number.parseInt((0, g.j$)(t.args, "hide"));
+          const o = Number.parseInt((0, D.j$)(t.args)),
+            r =
+              "hide" in t.args && !!Number.parseInt((0, D.j$)(t.args, "hide"));
           return o >= 0
-            ? (0, n.jsx)(ct, { nDoorIndex: o, bHide: a, children: t.children })
+            ? (0, n.jsx)(ct, { nDoorIndex: o, bHide: r, children: t.children })
             : null;
         }
         function ct(t) {
-          const { nDoorIndex: o, bHide: a, children: l } = t,
-            i = (0, z.OM)(o);
+          const { nDoorIndex: o, bHide: r, children: l } = t,
+            i = (0, Y.OM)(o);
           return i == null
             ? null
-            : (i && !a) || (!i && a)
+            : (i && !r) || (!i && r)
               ? (0, n.jsx)(n.Fragment, { children: t.children })
               : null;
         }
         function dt(t) {
           return (0, n.jsx)("span", {
-            className: P.LocalizeBlock,
-            children: (0, D.oW)(
+            className: I.LocalizeBlock,
+            children: (0, h.oW)(
               t.children,
               (0, n.jsx)("b", {}),
               (0, n.jsx)("b", {}),
@@ -1104,30 +1110,30 @@
           });
         }
         function ut(t) {
-          let o = (0, g.j$)(t.args);
+          let o = (0, D.j$)(t.args);
           return o
             ? (0, n.jsx)(Ue, { giveawayid: o })
-            : (0, n.jsx)(d.Fragment, {});
+            : (0, n.jsx)(c.Fragment, {});
         }
         const vt = void 0;
-        function mt(t) {
-          return (0, n.jsx)(C, { ...t, PreviewActions: vt });
+        function ft(t) {
+          return (0, n.jsx)(v, { ...t, PreviewActions: vt });
         }
-        var ft = e(71698),
+        var mt = e(71698),
           gt = e(94520);
-        function ht(t) {
+        function Dt(t) {
           const { bSalePage: o } = t,
-            [a, l] = d.useState(!1);
+            [r, l] = c.useState(!1);
           return (
-            (0, ft.H)(a, o),
-            d.useEffect(() => {
-              b.Vw.Init(new F.D(O.TS.WEBAPI_BASE_URL)), w.O3.Init(), l(!0);
+            (0, mt.H)(r, o),
+            c.useEffect(() => {
+              N.Vw.Init(new W.D(S.TS.WEBAPI_BASE_URL)), x.O3.Init(), l(!0);
             }, []),
-            d.useEffect(() => {
-              const i = (0, D.l4)();
-              i && U.locale(i);
+            c.useEffect(() => {
+              const i = (0, h.l4)();
+              i && H.locale(i);
             }, []),
-            a
+            r
               ? o
                 ? (0, n.jsx)(gt.d3, { dictionary: st(), children: t.children })
                 : t.children
@@ -1135,37 +1141,25 @@
           );
         }
       },
-      32545: (p) => {
-        p.exports = {
+      32545: (E) => {
+        E.exports = {
           "duration-app-launch": "800ms",
           FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
           FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
           FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
         };
       },
-      10026: (p) => {
-        p.exports = { BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk" };
+      10026: (E) => {
+        E.exports = { BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk" };
       },
-      18657: (p) => {
-        p.exports = {
+      18657: (E) => {
+        E.exports = {
           BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
           isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
         };
       },
-      29868: (p) => {
-        p.exports = {
+      29868: (E) => {
+        E.exports = {
           countdownCtn: "GWWacIf04lQysYMFJma0A",
           Closed: "ATX_xEE69rX8wVxQvONEx",
           CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
@@ -1178,25 +1172,13 @@
           WinnerText: "chkuqox_QD6U5ID_AHTLk",
         };
       },
-      9202: (p) => {
-        p.exports = {
+      9202: (E) => {
+        E.exports = {
           "duration-app-launch": "800ms",
           storeMenuResponsiveModeWidth: "730px",
           SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
           WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
           BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
         };
       },
     },

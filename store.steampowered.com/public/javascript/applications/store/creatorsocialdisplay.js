@@ -4,32 +4,32 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [41402],
     {
-      73644: (s, E, i) => {
+      73644: (r, E, i) => {
         "use strict";
         i.d(E, {
-          D1: () => B,
-          Nk: () => O,
+          D1: () => O,
+          Nk: () => T,
           k6: () => M,
-          lS: () => P,
-          lz: () => g,
+          lS: () => g,
+          lz: () => f,
         });
         var t = i(7850),
-          d = i(32093),
+          c = i(32093),
           e = i(48156),
-          u = i(72609),
-          m = i(40358),
-          r = i(90626),
-          L = i(95695),
-          v = i.n(L),
+          L = i(72609),
+          u = i(40358),
+          s = i(90626),
+          m = i(95695),
+          v = i.n(m),
           a = i(36118),
           C = i(71421),
           D = i(36707),
           S = i(18210),
-          x = i(53113),
-          k = i(19890),
-          p = i.n(k),
-          A = i(4515);
-        function P(o) {
+          P = i(53113),
+          I = i(19890),
+          p = i.n(I),
+          k = i(4515);
+        function g(o) {
           const { appid: n } = o;
           return (0, t.jsx)("div", {
             className: p().AppSocialLinksCtn,
@@ -38,40 +38,40 @@
         }
         function h(o) {
           const { appid: n } = o,
-            { data: _ } = (0, m.bg)({ appid: n });
-          return !_ || _.length == 0
+            { data: l } = (0, u.bg)({ appid: n });
+          return !l || l.length == 0
             ? null
-            : (0, t.jsx)(T, {
+            : (0, t.jsx)(B, {
                 strTitle: (0, S.we)("#EventDisplay_SocialTitle"),
                 id: "" + n,
-                rgSocialMedia: _,
+                rgSocialMedia: l,
               });
         }
-        function O(o) {
-          return (0, r.useMemo)(
+        function T(o) {
+          return (0, s.useMemo)(
             () =>
               o
                 ? o.map((n) => {
-                    const _ = (0, A.v)(n.type);
-                    return _ == e.jL.EK || _ == e.jL.Or
-                      ? { link_type: _, text: n.link }
-                      : { link_type: _, url: n.link };
+                    const l = (0, k.v)(n.type);
+                    return l == e.jL.EK || l == e.jL.Or
+                      ? { link_type: l, text: n.link }
+                      : { link_type: l, url: n.link };
                   })
                 : [],
             [o],
           );
         }
-        function g(o) {
-          const { gidClanEvent: n, rgSocial: _, bIsCreatorHomeEvent: c } = o,
-            j = O(_);
+        function f(o) {
+          const { gidClanEvent: n, rgSocial: l, bIsCreatorHomeEvent: d } = o,
+            j = T(l);
           if (j.length == 0) return null;
-          const l = c
+          const _ = d
             ? (0, S.we)("#EventDisplay_Sale_SocialTitle_Dev")
             : (0, S.we)("#EventDisplay_Sale_SocialTitle");
-          return (0, t.jsx)(T, { strTitle: l, id: n, rgSocialMedia: j });
+          return (0, t.jsx)(B, { strTitle: _, id: n, rgSocialMedia: j });
         }
-        function T(o) {
-          const { strTitle: n, id: _, rgSocialMedia: c } = o;
+        function B(o) {
+          const { strTitle: n, id: l, rgSocialMedia: d } = o;
           return (0, t.jsxs)(t.Fragment, {
             children: [
               (0, t.jsx)("div", {
@@ -81,11 +81,11 @@
                 ),
                 children: n,
               }),
-              (0, t.jsx)(B, { id: _, rgSocialMedia: c }),
+              (0, t.jsx)(O, { id: l, rgSocialMedia: d }),
             ],
           });
         }
-        const f = [
+        const b = [
           e.jL.EK,
           e.jL.$3,
           e.jL.M0,
@@ -94,38 +94,38 @@
           e.jL.qe,
           e.jL.Lk,
         ];
-        function B(o) {
-          const { id: n, rgSocialMedia: _, className: c } = o,
-            j = u.TS.EREALM === d.TU.k_ESteamRealmChina;
+        function O(o) {
+          const { id: n, rgSocialMedia: l, className: d } = o,
+            j = L.TS.EREALM === c.TU.k_ESteamRealmChina;
           return (0, t.jsx)("div", {
-            className: (0, D.A)(p().AppSocialLinks, c),
-            children: _.filter(
-              (l) => !j || f.includes(l.link_type || e.jL.I0),
-            ).map((l) =>
-              l.url
-                ? (0, t.jsx)(
-                    b,
-                    { social: l },
-                    "app_social_link_" + n + "_" + l.link_type,
-                  )
-                : (0, t.jsx)(
-                    y,
-                    { social: l },
-                    "app_social_text_" + n + "_" + l.link_type + "_" + l.text,
-                  ),
-            ),
+            className: (0, D.A)(p().AppSocialLinks, d),
+            children: l
+              .filter((_) => !j || b.includes(_.link_type || e.jL.I0))
+              .map((_) =>
+                _.url
+                  ? (0, t.jsx)(
+                      A,
+                      { social: _ },
+                      "app_social_link_" + n + "_" + _.link_type,
+                    )
+                  : (0, t.jsx)(
+                      y,
+                      { social: _ },
+                      "app_social_text_" + n + "_" + _.link_type + "_" + _.text,
+                    ),
+              ),
           });
         }
-        function b(o) {
+        function A(o) {
           const { social: n } = o;
           return n.url
             ? (0, t.jsx)("a", {
-                href: (0, x.NT)(n.url, !0),
-                target: u.TS.IN_CLIENT ? void 0 : "_blank",
+                href: (0, P.NT)(n.url, !0),
+                target: L.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
                 children: (0, t.jsx)(C.he, {
                   toolTipContent: n.url,
-                  children: (0, t.jsx)(I, { social: n }),
+                  children: (0, t.jsx)(x, { social: n }),
                 }),
               })
             : null;
@@ -137,7 +137,7 @@
             children: [
               (0, t.jsx)(C.he, {
                 toolTipContent: n.text,
-                children: (0, t.jsx)(I, { social: n }),
+                children: (0, t.jsx)(x, { social: n }),
               }),
               (0, t.jsx)("div", {
                 className: p().AppSocialText,
@@ -146,7 +146,7 @@
             ],
           });
         }
-        function I(o) {
+        function x(o) {
           const { social: n } = o;
           return (0, t.jsx)(M, {
             linkType: n.link_type || e.jL.I0,
@@ -180,16 +180,16 @@
           [e.jL.Lk]: a.Yoo,
         };
         function M(o) {
-          const { linkType: n, ..._ } = o,
-            c = W[n];
-          return c ? (0, t.jsx)(c, { ..._ }) : null;
+          const { linkType: n, ...l } = o,
+            d = W[n];
+          return d ? (0, t.jsx)(d, { ...l }) : null;
         }
       },
-      4515: (s, E, i) => {
+      4515: (r, E, i) => {
         "use strict";
-        i.d(E, { X: () => m, v: () => e });
+        i.d(E, { X: () => u, v: () => e });
         var t = i(48156);
-        const d = {
+        const c = {
           discord_server: t.jL.Eb,
           youtube: t.jL.lQ,
           facebook: t.jL.GO,
@@ -215,35 +215,35 @@
           linkedin: t.jL.EM,
           rednote: t.jL.Lk,
         };
-        function e(r) {
-          return d[r] ?? t.jL.I0;
+        function e(s) {
+          return c[s] ?? t.jL.I0;
         }
-        const u = new Map(Object.entries(d).map(([r, L]) => [L, r]));
-        function m(r) {
-          return u.get(r);
+        const L = new Map(Object.entries(c).map(([s, m]) => [m, s]));
+        function u(s) {
+          return L.get(s);
         }
       },
-      57106: (s, E, i) => {
+      57106: (r, E, i) => {
         "use strict";
-        i.r(E), i.d(E, { default: () => m });
+        i.r(E), i.d(E, { default: () => u });
         var t = i(7850),
-          d = i(73644),
+          c = i(73644),
           e = i(28194),
-          u = i.n(e);
-        function m(r) {
-          const { clanAccountID: L, items: v } = r,
-            a = (0, d.Nk)(v);
+          L = i.n(e);
+        function u(s) {
+          const { clanAccountID: m, items: v } = s,
+            a = (0, c.Nk)(v);
           return a.length == 0
             ? null
-            : (0, t.jsx)(d.D1, {
-                id: "social_" + L,
+            : (0, t.jsx)(c.D1, {
+                id: "social_" + m,
                 rgSocialMedia: a,
-                className: u().Ctn,
+                className: L().Ctn,
               });
         }
       },
-      19890: (s) => {
-        s.exports = {
+      19890: (r) => {
+        r.exports = {
           AppSocialLinksCtn: "JlFZxFyO0IOSiYmJt-NlE",
           AppSocialLinks: "_1SBP3NCWhesT_T7Zncoe_x",
           AppSocialLinkIcon: "_2p4QK5FnPikdfXUGvhz-rj",
@@ -251,8 +251,8 @@
           AppSocialText: "V88BDse5RqlvrzYpxlgFS",
         };
       },
-      95695: (s) => {
-        s.exports = {
+      95695: (r) => {
+        r.exports = {
           "duration-app-launch": "800ms",
           narrowWidth: "500px",
           PartnerEventFont: "LK4bXmKAknKopK864hJFM",
@@ -363,22 +363,10 @@
           PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
           Error: "mSSEDpLo6ibX1Ed5anQD_",
           GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
-          BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
-          "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
-          "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
-          "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
-          "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
-          "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
-          "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
-          "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
-          "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
-          focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
-          hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
         };
       },
-      28194: (s) => {
-        s.exports = { Ctn: "_2ZSkHhlXwxpsIInroemxBn" };
+      28194: (r) => {
+        r.exports = { Ctn: "_2ZSkHhlXwxpsIInroemxBn" };
       },
     },
   ]);

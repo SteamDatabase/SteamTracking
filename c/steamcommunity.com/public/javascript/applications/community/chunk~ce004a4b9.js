@@ -56,14 +56,10 @@
           return ["apptoclanid", _];
         }
         function _(_, _ = "group") {
-          return [
-            "vanitytoclanid",
-            _,
-            _ == null ? void 0 : _.toLocaleLowerCase(),
-          ];
+          return ["vanitytoclanid", _, _?.toLocaleLowerCase()];
         }
         function _(_) {
-          const _ = _ == null ? void 0 : _[0];
+          const _ = _?.[0];
           return (
             _ == "clantoclaninfo" || _ == "apptoclanid" || _ == "vanitytoclanid"
           );
@@ -130,7 +126,7 @@
           return (
             _(_),
             {
-              queryKey: _(_ != null ? _ : null),
+              queryKey: _(_ ?? null),
               queryFn: async () => (_ ? _(_, await _(_)) : null),
               enabled: _ !== void 0,
               select: _,
@@ -142,14 +138,7 @@
             _(_),
             {
               queryKey: _(_),
-              queryFn: async () => {
-                var _, _;
-                return (_ =
-                  (_ = _(_, await _(_))) == null ? void 0 : _.clanAccountID) !=
-                  null
-                  ? _
-                  : null;
-              },
+              queryFn: async () => _(_, await _(_))?.clanAccountID ?? null,
               enabled: !!_,
             }
           );
@@ -160,24 +149,19 @@
             {
               queryKey: _(_, _),
               queryFn: async () => {
-                var _, _;
                 if (_ == "store") {
                   const _ = _.getQueryData(_(_, "group"));
                   if (_) return _;
                 }
                 const _ = _ == "store" ? await _(_) : await _(_);
-                return (_ = (_ = _(_, _)) == null ? void 0 : _.clanAccountID) !=
-                  null
-                  ? _
-                  : null;
+                return _(_, _)?.clanAccountID ?? null;
               },
               enabled: !!_,
             }
           );
         }
         function _(_) {
-          var _;
-          return _.isPending ? void 0 : (_ = _.data) != null ? _ : null;
+          return _.isPending ? void 0 : (_.data ?? null);
         }
         function _(_) {
           return _(_.BIsClanAccount() ? _.GetAccountID() : void 0);
@@ -193,8 +177,7 @@
           return _(_ ? _(_) : void 0);
         }
         function _(_, _) {
-          var _;
-          if (_) return (_ = _(_.getQueryData(_(_)))) != null ? _ : void 0;
+          if (_) return _(_.getQueryData(_(_))) ?? void 0;
         }
         function _(_, _) {
           if (_) return _(_.getQueryData(_(_)), _);
@@ -233,28 +216,19 @@
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown ELineItemPurchaseNotice ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.accountid_giftee || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -321,16 +295,16 @@
           getClassName() {
             return "CartGiftInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gifteename || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -398,16 +372,16 @@
           getClassName() {
             return "CartGiftMessage";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.amount_in_cents || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -470,16 +444,16 @@
           getClassName() {
             return "CartAmount";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.couponid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -557,9 +531,7 @@
           getClassName() {
             return "CartCoupon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         __webpack_require__._(module_exports, {
@@ -592,27 +564,18 @@
           _ = 64,
           _ = 128,
           _ = 256;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EClanAccountFlags ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -670,9 +633,7 @@
           getClassName() {
             return "CClan_RespondToClanInvite_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -714,13 +675,15 @@
             return "CClan_RespondToClanInvite_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -778,16 +741,16 @@
           getClassName() {
             return "CClan_GetDraftAndRecentPartnerEventSnippet_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.snippets || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -841,16 +804,16 @@
           getClassName() {
             return "CClan_GetDraftAndRecentPartnerEventSnippet_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -933,16 +896,16 @@
           getClassName() {
             return "CClan_GetDraftAndRecentPartnerEventSnippet_Response_CEventSnippetData";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.requests || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1007,16 +970,16 @@
           getClassName() {
             return "CClan_GetPartnerEventsByBuildIDRange_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1084,16 +1047,16 @@
           getClassName() {
             return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.matches || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1157,16 +1120,16 @@
           getClassName() {
             return "CClan_GetPartnerEventsByBuildIDRange_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1239,9 +1202,7 @@
           getClassName() {
             return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -1288,25 +1249,16 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+          _ = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid_requester || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1364,16 +1316,16 @@
           getClassName() {
             return "CShoppingCart_CreateNew_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1426,16 +1378,16 @@
           getClassName() {
             return "CShoppingCart_CreateNew_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.amount || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1493,16 +1445,16 @@
           getClassName() {
             return "CShoppingCart_Amount";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.packageid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1578,16 +1530,16 @@
           getClassName() {
             return "CShoppingCart_PackageItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.walletcredit || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1639,16 +1591,16 @@
           getClassName() {
             return "CShoppingCart_WalletCreditItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.couponid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1716,16 +1668,16 @@
           getClassName() {
             return "CShoppingCart_CouponItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.microtxnappid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1783,16 +1735,16 @@
           getClassName() {
             return "CShoppingCart_MicroTxnAsset";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.bundleid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1859,16 +1811,16 @@
           getClassName() {
             return "CShoppingCart_BundleItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.reward_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1921,16 +1873,16 @@
           getClassName() {
             return "CShoppingCart_LoyaltyRewardItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidparent || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1989,16 +1941,16 @@
           getClassName() {
             return "CShoppingCart_RelationShip";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.couponid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2061,16 +2013,16 @@
           getClassName() {
             return "CShoppingCart_AvailableCoupon";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidlineitem || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2147,16 +2099,16 @@
           getClassName() {
             return "CShoppingCart_Item";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.coupons || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2210,16 +2162,16 @@
           getClassName() {
             return "CShoppingCart_Potentials";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2272,16 +2224,16 @@
           getClassName() {
             return "CShoppingCart_GetContents_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.lineitems || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1, 2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2345,16 +2297,16 @@
           getClassName() {
             return "CShoppingCart_Contents";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2431,16 +2383,16 @@
           getClassName() {
             return "CShoppingCart_GetContents_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [4], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2515,16 +2467,16 @@
           getClassName() {
             return "CShoppingCart_AddPackages_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2589,16 +2541,16 @@
           getClassName() {
             return "CShoppingCart_AddPackages_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2661,16 +2613,16 @@
           getClassName() {
             return "CShoppingCart_UpdatePackageQuantity_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2735,16 +2687,16 @@
           getClassName() {
             return "CShoppingCart_UpdatePackageQuantity_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2827,16 +2779,16 @@
           getClassName() {
             return "CShoppingCart_AddBundle_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.contents || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2896,16 +2848,16 @@
           getClassName() {
             return "CShoppingCart_AddBundle_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2967,16 +2919,16 @@
           getClassName() {
             return "CShoppingCart_ModifyLineItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.contents || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3028,16 +2980,16 @@
           getClassName() {
             return "CShoppingCart_ModifyLineItem_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.gidshoppingcart || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3103,16 +3055,16 @@
           getClassName() {
             return "CShoppingCart_RemoveLineItems_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.contents || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3172,9 +3124,7 @@
           getClassName() {
             return "CShoppingCart_RemoveLineItems_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -3291,17 +3241,6 @@
           _ = 0,
           _ = 1,
           _ = 2;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EStoreCuratorRecommendationState ( " + _ + " )";
         }
@@ -3311,13 +3250,15 @@
         function _(_) {
           return "unknown EStoreCuratorListState ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3425,16 +3366,16 @@
           getClassName() {
             return "CStoreCuration_RecommendedApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.listid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [10, 12, 13, 14], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3576,16 +3517,16 @@
           getClassName() {
             return "CStoreCuration_ListDetails";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.recommended_app || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3647,16 +3588,16 @@
           getClassName() {
             return "CStoreCuration_ListDetails_ListItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3744,16 +3685,16 @@
           getClassName() {
             return "CStoreCuration_GetLists_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.list_details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3812,16 +3753,16 @@
           getClassName() {
             return "CStoreCuration_GetLists_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3879,16 +3820,16 @@
           getClassName() {
             return "CStoreCuration_GetListDetails_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.list_details || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -3940,9 +3881,7 @@
           getClassName() {
             return "CStoreCuration_GetListDetails_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -4049,7 +3988,7 @@
           return _(_, ..._);
         }
         function _(_, ..._) {
-          if (!(_ != null && _.asset_url_format)) return;
+          if (!_?.asset_url_format) return;
           const _ = _.find((_) => {
             const _ = _[_];
             return typeof _ == "string" && _.trim() !== "";
@@ -4079,26 +4018,10 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = new WeakSet();
         function _(_ = _._) {
-          if (
-            typeof window == "undefined" ||
-            typeof document == "undefined" ||
-            _.has(_)
-          )
-            return;
+          if (typeof window > "u" || typeof document > "u" || _.has(_)) return;
           const _ = (0, _._)("groupvanityinfo", "application_config");
           (_ === void 0 && document.readyState != "complete") ||
             (_.add(_), _(_) && (0, _._)(_, _));
@@ -4121,12 +4044,10 @@
           return typeof _ == "string" ? Number.parseInt(_) : _;
         }
         class _ {
-          constructor() {
-            _(this, "m_queryClient", _._),
-              _(this, "m_boxCacheVersion", _._.box(0)),
-              _(this, "m_bWatchingCache", !1),
-              _(this, "m_bBumpScheduled", !1);
-          }
+          m_queryClient = _._;
+          m_boxCacheVersion = _._.box(0);
+          m_bWatchingCache = !1;
+          m_bBumpScheduled = !1;
           Init() {
             this.LazyInit();
           }
@@ -4135,11 +4056,10 @@
               this.m_bWatchingCache ||
                 ((this.m_bWatchingCache = !0),
                 this.m_queryClient.getQueryCache().subscribe((_) => {
-                  var _;
-                  ((_ == null ? void 0 : _.type) != "added" &&
-                    (_ == null ? void 0 : _.type) != "updated" &&
-                    (_ == null ? void 0 : _.type) != "removed") ||
-                    ((0, _._)((_ = _.query) == null ? void 0 : _.queryKey) &&
+                  (_?.type != "added" &&
+                    _?.type != "updated" &&
+                    _?.type != "removed") ||
+                    ((0, _._)(_.query?.queryKey) &&
                       this.ScheduleCacheVersionBump());
                 }));
           }
@@ -4211,28 +4131,16 @@
             return _ ? _._.InitFromClanID(_.clanAccountID) : void 0;
           }
           GetClanVanityForAppID(_) {
-            var _;
-            return (_ = (0, _._)(_(_), this.ReadCache())) == null
-              ? void 0
-              : _.vanity_url;
+            return (0, _._)(_(_), this.ReadCache())?.vanity_url;
           }
           GetClanVanityForClanSteamID(_) {
-            var _;
-            return (_ = (0, _._)(_.GetAccountID(), this.ReadCache())) == null
-              ? void 0
-              : _.vanity_url;
+            return (0, _._)(_.GetAccountID(), this.ReadCache())?.vanity_url;
           }
           HasLoadedClanAccountID(_) {
             return this.BHasClanInfoLoadedByAccountID(_);
           }
           GetClanMemberCount(_) {
-            var _, _;
-            return (_ =
-              (_ = (0, _._)(_(_), this.ReadCache())) == null
-                ? void 0
-                : _.member_count) != null
-              ? _
-              : 0;
+            return (0, _._)(_(_), this.ReadCache())?.member_count ?? 0;
           }
           GetClanInfoByClanAccountID(_) {
             return (
@@ -4264,7 +4172,7 @@
         function _(_) {
           _();
           const { data: _, isPending: _ } = (0, _._)(_ ? _(_) : void 0);
-          return [!!_ && _, _ != null ? _ : void 0];
+          return [!!_ && _, _ ?? void 0];
         }
         function _(_) {
           const _ = _();
@@ -4276,8 +4184,7 @@
           }, [_, _]);
         }
         function _(_) {
-          var _;
-          return _(), (_ = (0, _._)(_).data) != null ? _ : null;
+          return _(), (0, _._)(_).data ?? null;
         }
         function _(_) {
           _();
@@ -4285,7 +4192,7 @@
             { data: _, isPending: _ } = useClanInfoByAppIDQuery(_);
           return {
             bLoadingClanInfo: !!_ && _,
-            clanInfo: _ != null ? _ : null,
+            clanInfo: _ ?? null,
           };
         }
         function _(_, _) {
@@ -4394,31 +4301,22 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EAppDevsRelationship ( " + _ + " )";
         }
         function _(_) {
           return "unknown ECreatorHomeLinkRole ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4491,16 +4389,16 @@
           getClassName() {
             return "CDeveloperPageLink";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clan_account_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4561,27 +4459,16 @@
           getClassName() {
             return "CDeveloperPageToApps";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4661,9 +4548,7 @@
           getClassName() {
             return "CStoreCatalog_SetDevPageLink_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -4705,13 +4590,15 @@
             return "CStoreCatalog_SetDevPageLink_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4764,16 +4651,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageLinks_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.links || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4827,16 +4714,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageLinks_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clan_account_ids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4897,16 +4784,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageAllAppsLinked_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -4960,16 +4847,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageAllAppsLinked_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clan_account_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5032,16 +4919,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageListApps_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.apps || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5095,16 +4982,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageListApps_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5162,16 +5049,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPageListApps_Response_ListApp";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.partnerid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5224,16 +5111,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPagesForPartner_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.results || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5287,16 +5174,16 @@
           getClassName() {
             return "CStoreCatalog_GetDevPagesForPartner_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.clan_accountid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -5356,9 +5243,7 @@
           getClassName() {
             return "CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         var _;
         ((_) => {
           function _(_, _, _) {
@@ -5437,15 +5322,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -5454,29 +5330,26 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_clanSteamID;
+          m_appidList = new Array();
+          m_strName = "";
+          m_strAvatarURLFullSize = "";
+          m_strTagLineLoc = "";
+          m_nFollowers = 0;
+          m_strVanity = "";
+          m_webLink = void 0;
+          m_linkedEvent = void 0;
+          m_mapListInfo = new Map();
+          m_promise;
+          m_bIsLoaded = !1;
+          m_bIsHidden = !1;
+          m_clanAccountFlags = 0;
           constructor(_) {
-            _(this, "m_clanSteamID"),
-              _(this, "m_appidList", new Array()),
-              _(this, "m_strName", ""),
-              _(this, "m_strAvatarURLFullSize", ""),
-              _(this, "m_strTagLineLoc", ""),
-              _(this, "m_nFollowers", 0),
-              _(this, "m_strVanity", ""),
-              _(this, "m_webLink"),
-              _(this, "m_linkedEvent"),
-              _(this, "m_mapListInfo", new Map()),
-              _(this, "m_promise"),
-              _(this, "m_bIsLoaded", !1),
-              _(this, "m_bIsHidden", !1),
-              _(this, "m_clanAccountFlags", 0),
-              (0, _._)(this),
-              (this.m_clanSteamID = _);
+            (0, _._)(this), (this.m_clanSteamID = _);
           }
           Initialize(_) {
-            var _, _;
             (this.m_strName = _.name || ""),
               (this.m_strAvatarURLFullSize =
                 _.avatar_url_full_size ||
@@ -5486,12 +5359,9 @@
               (this.m_strVanity = _.vanity || void 0),
               (this.m_webLink = _.weblink),
               (this.m_bIsHidden = _.hidden || !1),
-              (this.m_clanAccountFlags =
-                (_ = _.clan_account_flags) != null ? _ : 0),
+              (this.m_clanAccountFlags = _.clan_account_flags ?? 0),
               (this.m_linkedEvent = _.linked_event),
-              (this.m_mapListInfo = new Map(
-                Object.entries((_ = _.list_info) != null ? _ : {}),
-              )),
+              (this.m_mapListInfo = new Map(Object.entries(_.list_info ?? {}))),
               _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
               (this.m_bIsLoaded = !0);
           }
@@ -5619,15 +5489,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -5636,16 +5497,15 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
           constructor() {
-            _(this, "m_mapClanToCreatorHome", new Map()),
-              _(this, "m_mapAppToCreatorIDList", new Map()),
-              _(this, "m_bLoadedFromConfig", !1),
-              _(this, "m_serviceTransport"),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapClanToCreatorHome = new Map();
+          m_mapAppToCreatorIDList = new Map();
+          m_bLoadedFromConfig = !1;
+          m_serviceTransport = void 0;
           LazyInit() {
             if (!this.m_bLoadedFromConfig) {
               const _ = (0, _._)("creatorhome", "application_config");
@@ -5805,12 +5665,9 @@
           const _ = _.BHasCreatorHomeLoaded(_.clanSteamID)
             ? _.GetCreatorHome(_.clanSteamID)
             : void 0;
-          return _.GetSaleURL(
-            _ == null ? void 0 : _.GetCreatorHomeURL("developer"),
-          );
+          return _.GetSaleURL(_?.GetCreatorHomeURL("developer"));
         }
         function _(_) {
-          var _, _;
           if (!_) return;
           const _ = (0, _._)("creator_home_list_info", "application_config");
           if (_ == null || typeof _ != "object" || Array.isArray(_)) return;
@@ -5818,27 +5675,18 @@
           if (!(!_ || !_.title))
             return {
               title: _.title,
-              description:
-                (_ = _.description) != null && _.length
-                  ? _.description
-                  : void 0,
-              imageUrl:
-                (_ = _.listtileimage) != null && _.length
-                  ? _.listtileimage
-                  : void 0,
+              description: _.description?.length ? _.description : void 0,
+              imageUrl: _.listtileimage?.length ? _.listtileimage : void 0,
             };
         }
         function _(_) {
-          var _;
-          return (_ = _(_)) == null ? void 0 : _.title;
+          return _(_)?.title;
         }
         function _(_) {
-          var _;
-          return (_ = _(_)) == null ? void 0 : _.description;
+          return _(_)?.description;
         }
         function _(_) {
-          var _;
-          return (_ = _(_)) == null ? void 0 : _.imageUrl;
+          return _(_)?.imageUrl;
         }
         function _(_) {
           const _ = _._.InitFromClanID(_);
@@ -5879,7 +5727,7 @@
             },
             enabled: !!(_ > 0 && _),
           });
-          return _ != null && _.isLoading ? null : _.data;
+          return _?.isLoading ? null : _.data;
         }
         function _(_, _, _) {
           return {
@@ -5898,17 +5746,8 @@
               return _.Body()
                 .apps()
                 .slice()
-                .sort((_, _) => {
-                  var _, _;
-                  return (
-                    ((_ = _.sort_order()) != null ? _ : 0) -
-                    ((_ = _.sort_order()) != null ? _ : 0)
-                  );
-                })
-                .map((_) => {
-                  var _;
-                  return (_ = _.appid()) != null ? _ : 0;
-                })
+                .sort((_, _) => (_.sort_order() ?? 0) - (_.sort_order() ?? 0))
+                .map((_) => _.appid() ?? 0)
                 .filter((_) => _ > 0);
             },
             enabled: !!(_ > 0 && _),
@@ -5916,7 +5755,7 @@
         }
         function _(_, _, _) {
           const _ = (0, _._)(_(_, _, _));
-          return _ != null && _.isLoading ? null : _.data;
+          return _?.isLoading ? null : _.data;
         }
         function _(_, _) {
           return {
@@ -5950,7 +5789,6 @@
           return {
             queryKey: ["GetCreatorHomeGetListsDetailsQuery", _, _],
             queryFn: async () => {
-              var _;
               const _ = _.GetServiceTransport(),
                 _ = _._.Init(_._);
               _.Body().set_steamid(
@@ -5958,9 +5796,7 @@
               ),
                 _.Body().set_listid(_);
               const _ = await _._.GetListDetails(_, _);
-              return _.BSuccess() && (_ = _.Body().list_details()) != null
-                ? _
-                : null;
+              return _.BSuccess() ? (_.Body().list_details() ?? null) : null;
             },
             enabled: _ > 0,
           };

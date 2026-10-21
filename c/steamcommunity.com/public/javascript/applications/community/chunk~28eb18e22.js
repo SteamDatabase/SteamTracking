@@ -29,7 +29,7 @@
               ..._
             } = _,
             _ = _ === "indeterminate",
-            _ = _ != null ? _ : _ ? _ : _._,
+            _ = _ ?? (_ ? _ : _._),
             _ = () => {
               _ || (_ && _(_ ? !0 : !_));
             },
@@ -225,7 +225,7 @@
         function _(_) {
           const { children: _, className: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _ == null ? void 0 : _.floating.refs.setFloating]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]);
           if (!_)
             return (
               console.error(
@@ -369,15 +369,7 @@
             strategy: "fixed",
             platform: {
               ..._._,
-              getOffsetParent: (_) => {
-                var _, _;
-                return (_ =
-                  (_ = _ == null ? void 0 : _.ownerDocument) == null
-                    ? void 0
-                    : _.defaultView) != null
-                  ? _
-                  : window;
-              },
+              getOffsetParent: (_) => _?.ownerDocument?.defaultView ?? window,
             },
           });
         }
@@ -534,10 +526,7 @@
           const { children: _ } = _,
             _ = _.Children.only(_),
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([
-              _ == null ? void 0 : _.floating.refs.setReference,
-              _ == null ? void 0 : _.props.ref,
-            ]);
+            _ = (0, _._)([_?.floating.refs.setReference, _?.props.ref]);
           if (!_) return null;
           if (!_)
             return (
@@ -555,7 +544,7 @@
         function _(_) {
           const { children: _, render: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _ == null ? void 0 : _.floating.refs.setFloating]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]);
           return _
             ? _.open
               ? (0, _.jsx)(_, {
@@ -1161,9 +1150,7 @@
             ),
             _ = (0, _.useCallback)(
               (_) => {
-                _(_ ? [] : null),
-                  _ == null || _.stopPropagation(),
-                  _ == null || _.preventDefault();
+                _(_ ? [] : null), _?.stopPropagation(), _?.preventDefault();
               },
               [_, _],
             ),

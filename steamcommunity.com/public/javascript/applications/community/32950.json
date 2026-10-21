@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "解锁讨论串（%1$s 份）",
     "moderation_actions_sustain": "维持处理结果",
     "moderation_actions_sustain_multiple": "维持处理结果（%1$s 份）",
+    "moderation_actions_sustain_short": "维持",
     "moderation_actions_suspicious": "标记为可疑",
     "moderation_actions_suspicious_multiple": "标记为可疑（%1$s）",
     "moderation_actions_unknown": "未知",

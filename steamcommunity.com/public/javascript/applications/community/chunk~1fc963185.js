@@ -4,118 +4,101 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [20864],
     {
-      54357: (M, A, n) => {
+      54357: (M, x, n) => {
         "use strict";
-        n.d(A, { B: () => o });
+        n.d(x, { B: () => a });
         var e = n(7850),
-          v = n(90626);
-        function E(u) {
-          const [D, g] = useState(!1);
+          j = n(90626);
+        function _(m) {
+          const [h, u] = useState(!1);
           return (
             useEffect(() => {
               window.SSR && (window.SSR.hydrated = !0),
-                startTransition(() => g(!0));
+                startTransition(() => u(!0));
             }, []),
-            jsx(s.Provider, { value: D, children: u.children })
+            jsx(t.Provider, { value: h, children: m.children })
           );
         }
-        const s = (0, v.createContext)(!1);
-        function f() {
+        const t = (0, j.createContext)(!1);
+        function T() {
           return !0;
         }
-        var x;
-        const m = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          y =
+        const f = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          v =
             "document" in globalThis
-              ? (x = document.cookie
+              ? document.cookie
                   .split(";")
-                  .find((u) => u.trim().startsWith("timezoneName"))) == null
-                ? void 0
-                : x.split("=")[1]
+                  .find((m) => m.trim().startsWith("timezoneName"))
+                  ?.split("=")[1]
               : void 0,
-          i = y && decodeURIComponent(y);
-        function o() {
-          return f() ? m : i != null ? i : m;
+          g = v && decodeURIComponent(v);
+        function a() {
+          return T() ? f : (g ?? f);
         }
-        function j() {
+        function l() {
           "document" in globalThis &&
-            m &&
-            (document.cookie = `timezoneName=${m};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
+            f &&
+            (document.cookie = `timezoneName=${f};expires=${new Date(Date.now() + 36e5 * 24 * 365).toUTCString()};path=/;Secure;SameSite=None;`);
         }
-        j();
+        l();
       },
-      59432: (M, A, n) => {
+      59432: (M, x, n) => {
         "use strict";
-        n.d(A, { Gw: () => f, Lk: () => x, ai: () => s, mm: () => E });
+        n.d(x, { Gw: () => T, Lk: () => f, ai: () => t, mm: () => _ });
         var e = n(14947);
-        const v = e.sH.box(void 0);
-        function E() {
-          return v.get();
+        const j = e.sH.box(void 0);
+        function _() {
+          return j.get();
         }
-        function s(m) {
-          (0, e.h5)(() => v.set(m));
+        function t(v) {
+          (0, e.h5)(() => j.set(v));
+        }
+        function T() {
+          const v = j.get();
+          return v || Math.floor(Date.now() / 1e3);
         }
         function f() {
-          const m = v.get();
-          return m || Math.floor(Date.now() / 1e3);
-        }
-        function x() {
-          const m = v.get();
-          return m ? new Date(m * 1e3) : new Date();
+          const v = j.get();
+          return v ? new Date(v * 1e3) : new Date();
         }
       },
-      28515: (M, A, n) => {
+      28515: (M, x, n) => {
         "use strict";
-        n.d(A, { n: () => x });
+        n.d(x, { n: () => f });
         var e = n(7850),
-          v = n(90626),
-          E = n(59432);
-        const s = v.createContext(void 0);
-        function f(m) {
-          const [y, i] = React.useState(m.rtServerNow),
-            o = !!m.bHoldSeed;
+          j = n(90626),
+          _ = n(59432);
+        const t = j.createContext(void 0);
+        function T(v) {
+          const [g, a] = React.useState(v.rtServerNow),
+            l = !!v.bHoldSeed;
           return (
             React.useEffect(() => {
-              o || i(void 0);
-            }, [o]),
-            jsx(s.Provider, { value: y, children: m.children })
+              l || a(void 0);
+            }, [l]),
+            jsx(t.Provider, { value: g, children: v.children })
           );
         }
-        function x() {
-          var m;
-          return (m = v.useContext(s)) != null ? m : (0, E.Gw)();
+        function f() {
+          return j.useContext(t) ?? (0, _.Gw)();
         }
       },
-      7582: (M, A, n) => {
+      7582: (M, x, n) => {
         "use strict";
-        n.d(A, { HD: () => u, P_: () => D, f1: () => B, sB: () => w });
+        n.d(x, { HD: () => g, P_: () => a, f1: () => E, sB: () => u });
         var e = n(19367),
-          v = n.n(e),
-          E = n(90626),
-          s = n(59432),
-          f = n(47689),
-          x = n(82734),
-          m = n(77291),
-          y = Object.defineProperty,
-          i = (h, T, L) =>
-            T in h
-              ? y(h, T, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: L,
-                })
-              : (h[T] = L),
-          o = (h, T, L) => i(h, typeof T != "symbol" ? T + "" : T, L);
-        class j {
-          constructor() {
-            o(this, "bIncludeFeaturedAsGameSource", !0);
-          }
+          j = n.n(e),
+          _ = n(90626),
+          t = n(59432),
+          T = n(47689),
+          f = n(77291);
+        class v {
+          bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
-            return (0, s.mm)();
+            return (0, t.mm)();
           }
-          set nOverrideDateNow(T) {
-            (0, s.ai)(T);
+          set nOverrideDateNow(P) {
+            (0, t.ai)(P);
           }
           get bRequireAllEventsLoadedInTimeBlock() {
             return !1;
@@ -124,175 +107,174 @@
             return !0;
           }
           GetTimeNowWithOverride() {
-            return (0, s.Gw)();
+            return (0, t.Gw)();
           }
           GetTimeNowWithOverrideAsDate() {
-            return (0, s.Lk)();
+            return (0, t.Lk)();
           }
           BHasTimeOverride() {
-            return !!(0, s.mm)();
+            return !!(0, t.mm)();
           }
-          ParseDevOverrides(T) {
-            if (!T || T.length == 0) return;
-            new URLSearchParams(T[0] == "?" ? T.substring(1) : T).has("t");
+          ParseDevOverrides(P) {
+            if (!P || P.length == 0) return;
+            new URLSearchParams(P[0] == "?" ? P.substring(1) : P).has("t");
           }
         }
-        const u = new j();
-        (0, m.V)("g_EventCalendarDevFeatures", u);
-        function D(h = 1) {
-          const [T, L] = E.useState(() => b()),
-            I = (0, f.m)("useTimeNowWithOverride"),
-            W = E.useCallback(() => {
-              I.token.reason || L(b());
+        const g = new v();
+        (0, f.V)("g_EventCalendarDevFeatures", g);
+        function a(A = 1) {
+          const [P, b] = _.useState(() => h()),
+            L = (0, T.m)("useTimeNowWithOverride"),
+            w = _.useCallback(() => {
+              L.token.reason || b(h());
             }, []);
           return (
-            E.useEffect(() => {
-              const l = 1e3 * h,
-                t = Date.now() % l,
-                a = l - t,
-                d = window.setTimeout(W, a);
+            _.useEffect(() => {
+              const B = 1e3 * A,
+                U = Date.now() % B,
+                W = B - U,
+                k = window.setTimeout(w, W);
               return () => {
-                window.clearTimeout(d);
+                window.clearTimeout(k);
               };
-            }, [T, h, W]),
-            T
+            }, [P, A, w]),
+            P
           );
         }
-        const P = Math.floor(new Date().getTime() / 1e3);
-        function b() {
-          const h = Math.floor(Date.now() / 1e3);
-          return u.nOverrideDateNow ? u.nOverrideDateNow + (h - P) : h;
+        const m = Math.floor(new Date().getTime() / 1e3);
+        function h() {
+          const A = Math.floor(Date.now() / 1e3);
+          return g.nOverrideDateNow ? g.nOverrideDateNow + (A - m) : A;
         }
-        function w() {
-          var h;
-          return (h = u.nOverrideDateNow) != null ? h : P;
+        function u() {
+          return g.nOverrideDateNow ?? m;
         }
-        function B() {
-          return E.useMemo(() => w(), []);
+        function E() {
+          return _.useMemo(() => u(), []);
         }
-        function N() {
-          return React.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
+        function S() {
+          return React.useMemo(() => g.GetTimeNowWithOverrideAsDate(), []);
         }
       },
-      179: (M, A, n) => {
+      179: (M, x, n) => {
         "use strict";
-        n.d(A, {
-          Bm: () => s,
-          QD: () => x,
-          f3: () => E,
-          iV: () => y,
-          ip: () => m,
-          le: () => f,
+        n.d(x, {
+          Bm: () => t,
+          QD: () => f,
+          f3: () => _,
+          iV: () => g,
+          ip: () => v,
+          le: () => T,
         });
         var e = n(90626),
-          v = n(92757);
-        function E(i, o) {
-          let j;
-          if (typeof i == "string") j = i;
-          else if ("location" in i) j = i.location.search;
-          else if ("search" in i) j = i.search;
+          j = n(92757);
+        function _(a, l) {
+          let m;
+          if (typeof a == "string") m = a;
+          else if ("location" in a) m = a.location.search;
+          else if ("search" in a) m = a.search;
           else return;
-          const u = new URLSearchParams(j.substring(1));
-          if (u.has(o)) {
-            const D = u.getAll(o);
-            return D[D.length - 1];
+          const h = new URLSearchParams(m.substring(1));
+          if (h.has(l)) {
+            const u = h.getAll(l);
+            return u[u.length - 1];
           }
         }
-        function s(i, o, j, u = !1) {
-          const D = new URLSearchParams(i.location.search.substring(1));
-          if (j != null && j != null) {
-            if (D.get(o) == j) return;
-            D.set(o, j);
+        function t(a, l, m, h = !1) {
+          const u = new URLSearchParams(a.location.search.substring(1));
+          if (m != null && m != null) {
+            if (u.get(l) == m) return;
+            u.set(l, m);
           } else {
-            if (!D.has(o)) return;
-            D.delete(o);
+            if (!u.has(l)) return;
+            u.delete(l);
           }
-          u
-            ? i.replace(`?${D.toString()}`, { ...i.location.state })
-            : i.push(`?${D.toString()}`);
+          h
+            ? a.replace(`?${u.toString()}`, { ...a.location.state })
+            : a.push(`?${u.toString()}`);
         }
-        function f(i, o, j) {
-          s(i, o, j, !0);
+        function T(a, l, m) {
+          t(a, l, m, !0);
         }
-        function x(i, o) {
-          const j = (0, v.W6)(),
-            u = (0, v.zy)(),
-            D = (0, e.useMemo)(() => {
-              const P = E(u.search, i);
-              return P != null && P != null
-                ? o != null && o != null
-                  ? typeof o == "boolean"
-                    ? o.constructor(P !== "false")
-                    : o.constructor(P)
-                  : P
-                : o;
-            }, [u.search, i, o]),
-            g = (0, e.useCallback)(
-              (P, b = !1) => {
-                s(j, i, P != null && P != null ? String(P) : null, b);
+        function f(a, l) {
+          const m = (0, j.W6)(),
+            h = (0, j.zy)(),
+            u = (0, e.useMemo)(() => {
+              const S = _(h.search, a);
+              return S != null && S != null
+                ? l != null && l != null
+                  ? typeof l == "boolean"
+                    ? l.constructor(S !== "false")
+                    : l.constructor(S)
+                  : S
+                : l;
+            }, [h.search, a, l]),
+            E = (0, e.useCallback)(
+              (S, A = !1) => {
+                t(m, a, S != null && S != null ? String(S) : null, A);
               },
-              [j, i],
+              [m, a],
             );
-          return [D, g];
+          return [u, E];
         }
-        function m(i, o, j = !1) {
-          const u = new URLSearchParams(i.location.search.substring(1));
-          for (const D in o)
-            if (o.hasOwnProperty(D)) {
-              const g = o[D];
-              u.delete(D), g != null && g != null && u.append(D, g);
+        function v(a, l, m = !1) {
+          const h = new URLSearchParams(a.location.search.substring(1));
+          for (const u in l)
+            if (l.hasOwnProperty(u)) {
+              const E = l[u];
+              h.delete(u), E != null && E != null && h.append(u, E);
             }
-          j
-            ? i.replace(`?${u.toString()}`, { ...i.location.state })
-            : i.push(`?${u.toString()}`);
+          m
+            ? a.replace(`?${h.toString()}`, { ...a.location.state })
+            : a.push(`?${h.toString()}`);
         }
-        function y(i, o) {
-          m(i, o, !0);
+        function g(a, l) {
+          v(a, l, !0);
         }
       },
-      18057: (M, A, n) => {
+      18057: (M, x, n) => {
         "use strict";
-        n.d(A, {
-          K4: () => N,
-          X0: () => W,
-          gS: () => h,
-          pg: () => P,
-          u1: () => L,
-          v9: () => T,
-          yi: () => b,
+        n.d(x, {
+          K4: () => L,
+          X0: () => k,
+          gS: () => w,
+          pg: () => S,
+          u1: () => U,
+          v9: () => B,
+          yi: () => A,
         });
         var e = n(7850),
-          v = n(90626),
-          E = n(71421),
-          s = n(18210),
-          f = n(75844),
-          x = n(36707),
-          m = n(36174),
-          y = n(55351),
-          i = n.n(y),
-          o = n(7582),
-          j = n(28515),
-          u = n(54357),
-          D = n(87937),
-          g = n.n(D);
-        function P(l, t) {
-          const d = t != null ? t : g().tz.guess(),
-            r = g().unix(l).tz(d),
-            c = (0, s.l4)();
-          return c && r.locale(c), r.format("LT");
+          j = n(90626),
+          _ = n(71421),
+          t = n(18210),
+          T = n(75844),
+          f = n(36707),
+          v = n(36174),
+          g = n(55351),
+          a = n.n(g),
+          l = n(7582),
+          m = n(28515),
+          h = n(54357),
+          u = n(87937),
+          E = n.n(u);
+        function S(o, s) {
+          const d = s ?? E().tz.guess(),
+            i = E().unix(o).tz(d),
+            c = (0, t.l4)();
+          return c && i.locale(c), i.format("LT");
         }
-        function b(l, t, a) {
-          const r = a != null ? a : g().tz.guess(),
-            c = g().unix(l).tz(r),
-            _ = (0, s.l4)();
+        function A(o, s, r) {
+          const i = r ?? E().tz.guess(),
+            c = E().unix(o).tz(i),
+            D = (0, t.l4)();
           return (
-            _ && c.locale(_),
-            (0, e.jsxs)(v.Fragment, {
+            D && c.locale(D),
+            (0, e.jsxs)(j.Fragment, {
               children: [
                 c.format("LT"),
-                t
-                  ? (0, e.jsx)(E.Gq, {
-                      toolTipContent: c.format("Z") + ", " + r,
+                s
+                  ? (0, e.jsx)(_.Gq, {
+                      toolTipContent: c.format("Z") + ", " + i,
                       children: (0, e.jsxs)("span", {
                         children: ["\xA0", c.zoneAbbr()],
                       }),
@@ -302,44 +284,44 @@
             })
           );
         }
-        function w(l, t, a) {
-          return (0, s.TW)(l, {
+        function P(o, s, r) {
+          return (0, t.TW)(o, {
             weekday: "short",
-            year: a ? void 0 : "numeric",
-            timeZone: t,
+            year: r ? void 0 : "numeric",
+            timeZone: s,
           });
         }
-        function B(l, t, a, d) {
+        function b(o, s, r, d) {
           return (
-            a || (a = g().tz.guess()),
-            g().unix(l).tz(a).isSame(g().unix(t).tz(a), d)
+            r || (r = E().tz.guess()),
+            E().unix(o).tz(r).isSame(E().unix(s).tz(r), d)
           );
         }
-        const N = (0, f.PA)((l) => {
+        const L = (0, T.PA)((o) => {
             const {
-                dateAndTime: t,
-                bSingleLine: a,
+                dateAndTime: s,
+                bSingleLine: r,
                 bOnlyTime: d,
-                bOnlyDate: r,
-              } = l,
-              c = (0, u.B)(),
-              _ = !d && !!t,
-              S = !r && !!t,
-              R = _ && w(t, c),
-              O = l.stylesmodule ? { ...i(), ...l.stylesmodule } : i();
-            return a
+                bOnlyDate: i,
+              } = o,
+              c = (0, h.B)(),
+              D = !d && !!s,
+              y = !i && !!s,
+              R = D && P(s, c),
+              O = o.stylesmodule ? { ...a(), ...o.stylesmodule } : a();
+            return r
               ? (0, e.jsxs)("span", {
-                  className: d || r ? O.DateAndTimeInline : O.DateAndTime,
+                  className: d || i ? O.DateAndTimeInline : O.DateAndTime,
                   children: [
-                    _ && R,
-                    _ && S ? (0, e.jsx)("span", { children: "\xA0" }) : void 0,
-                    !!(t && S) && b(t, S, c),
+                    D && R,
+                    D && y ? (0, e.jsx)("span", { children: "\xA0" }) : void 0,
+                    !!(s && y) && A(s, y, c),
                   ],
                 })
               : (0, e.jsxs)("div", {
                   className: O.DateAndTime,
                   children: [
-                    _ &&
+                    D &&
                       (0, e.jsxs)(e.Fragment, {
                         children: [
                           (0, e.jsx)("div", {
@@ -349,7 +331,7 @@
                           " ",
                           (0, e.jsx)("span", {
                             className: O.At,
-                            children: (0, s.we)(
+                            children: (0, t.we)(
                               "#EventDisplay_DateAndTimeCombiner",
                             ),
                           }),
@@ -357,69 +339,68 @@
                       }),
                     (0, e.jsx)("div", {
                       className: O.LocalizedTime,
-                      children: !!(t && S) && b(t, S, c),
+                      children: !!(s && y) && A(s, y, c),
                     }),
                   ],
                 });
           }),
-          h = (l) => {
-            var t;
-            const a = (0, e.jsx)("div", {
-              className: (t = l.stylesmodule) == null ? void 0 : t.DateToolTip,
-              children: (0, e.jsx)(N, {
-                dateAndTime: l.rtFullDate,
+          w = (o) => {
+            const s = (0, e.jsx)("div", {
+              className: o.stylesmodule?.DateToolTip,
+              children: (0, e.jsx)(L, {
+                dateAndTime: o.rtFullDate,
                 bSingleLine: !0,
-                stylesmodule: l.stylesmodule,
+                stylesmodule: o.stylesmodule,
               }),
             });
-            return (0, e.jsx)(E.m9, {
-              toolTipContent: a,
+            return (0, e.jsx)(_.m9, {
+              toolTipContent: s,
               direction: "top",
-              className: l.className,
+              className: o.className,
               bTopmost: !0,
-              children: l.children,
+              children: o.children,
             });
           },
-          T = (0, f.PA)((l) => {
-            const { startDateAndTime: t, endDateAndTime: a = 0 } = l,
-              d = l.stylesmodule ? { ...i(), ...l.stylesmodule } : i(),
-              r = (0, u.B)(),
-              c = (0, j.n)(),
-              _ =
-                l.bHideEndTime ||
-                l.endDateAndTime == null ||
-                l.endDateAndTime < 1;
-            if (t == null || t == 0)
+          B = (0, T.PA)((o) => {
+            const { startDateAndTime: s, endDateAndTime: r = 0 } = o,
+              d = o.stylesmodule ? { ...a(), ...o.stylesmodule } : a(),
+              i = (0, h.B)(),
+              c = (0, m.n)(),
+              D =
+                o.bHideEndTime ||
+                o.endDateAndTime == null ||
+                o.endDateAndTime < 1;
+            if (s == null || s == 0)
               return (0, e.jsxs)("div", {
                 className: d.DateAndTime,
                 children: [
                   (0, e.jsx)("span", {
                     className: d.RightSideTitles,
-                    children: (0, s.we)("#EventDisplay_TimeRange"),
+                    children: (0, t.we)("#EventDisplay_TimeRange"),
                   }),
-                  (0, s.we)("#EventDisplay_TimeDisplayNone"),
+                  (0, t.we)("#EventDisplay_TimeDisplayNone"),
                 ],
               });
-            if (_)
+            if (D)
               return (0, e.jsxs)("div", {
                 className: d.StartDate,
                 children: [
                   (0, e.jsxs)("div", {
                     className: d.RightSideTitles,
                     children: [
-                      (0, s.we)(
-                        t < c
+                      (0, t.we)(
+                        s < c
                           ? "#EventDisplay_TimeInPast"
                           : "#EventDisplay_TimeUpcoming",
                       ),
                       "\xA0",
                     ],
                   }),
-                  (0, e.jsx)(N, { stylesmodule: d, dateAndTime: t }),
+                  (0, e.jsx)(L, { stylesmodule: d, dateAndTime: s }),
                 ],
               });
-            const S = t <= c && c <= a,
-              R = B(t, a, r, "day");
+            const y = s <= c && c <= r,
+              R = b(s, r, i, "day");
             return (0, e.jsxs)("div", {
               className: d.MultiDateAndTime,
               children: [
@@ -428,18 +409,18 @@
                   children: [
                     (0, e.jsx)("span", {
                       className: d.RightSideTitles,
-                      children: (0, s.we)(
-                        t >= c
+                      children: (0, t.we)(
+                        s >= c
                           ? "#EventDisplay_TimeBeginsOn"
-                          : a >= c
+                          : r >= c
                             ? "#EventDisplay_TimeBeginsOn_Past"
                             : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                       ),
                     }),
-                    (0, e.jsx)(N, {
+                    (0, e.jsx)(L, {
                       stylesmodule: d,
                       bSingleLine: !0,
-                      dateAndTime: t,
+                      dateAndTime: s,
                     }),
                   ],
                 }),
@@ -448,67 +429,67 @@
                   children: [
                     (0, e.jsx)("span", {
                       className: d.RightSideTitles,
-                      children: (0, s.we)(
-                        a < c
+                      children: (0, t.we)(
+                        r < c
                           ? "#EventDisplay_TimeEndsOn_Past"
                           : "#EventDisplay_TimeEndsOn",
                       ),
                     }),
-                    (0, e.jsx)(N, {
+                    (0, e.jsx)(L, {
                       stylesmodule: d,
                       bSingleLine: !0,
                       bOnlyTime: R,
-                      dateAndTime: a,
+                      dateAndTime: r,
                     }),
                   ],
                 }),
-                S &&
+                y &&
                   (0, e.jsx)("span", {
                     className: d.ActiveEvent,
                     children: (0, e.jsx)("span", {
-                      className: (0, x.A)(
+                      className: (0, f.A)(
                         d.RightSideTitles,
                         d.ActiveEventCallOut,
                       ),
-                      children: (0, s.we)("#Time_Now"),
+                      children: (0, t.we)("#Time_Now"),
                     }),
                   }),
               ],
             });
           }),
-          L = (0, f.PA)((l) => {
+          U = (0, T.PA)((o) => {
             const {
-                startDateAndTime: t,
-                endDateAndTime: a,
+                startDateAndTime: s,
+                endDateAndTime: r,
                 bHideEndTime: d,
-              } = l,
-              r = l.stylesmodule ? { ...i(), ...l.stylesmodule } : i(),
-              c = (0, u.B)(),
-              _ = (0, j.n)();
-            if (t == null || t == 0)
+              } = o,
+              i = o.stylesmodule ? { ...a(), ...o.stylesmodule } : a(),
+              c = (0, h.B)(),
+              D = (0, m.n)();
+            if (s == null || s == 0)
               return (0, e.jsxs)("div", {
-                className: r.DateAndTime,
+                className: i.DateAndTime,
                 children: [
                   (0, e.jsx)("span", {
-                    className: r.RightSideTitles,
-                    children: (0, s.we)("#EventDisplay_TimeRange"),
+                    className: i.RightSideTitles,
+                    children: (0, t.we)("#EventDisplay_TimeRange"),
                   }),
-                  (0, s.we)("#EventDisplay_TimeDisplayNone"),
+                  (0, t.we)("#EventDisplay_TimeDisplayNone"),
                 ],
               });
-            const S = B(t, _, c, "year"),
+            const y = b(s, D, c, "year"),
               R = (0, e.jsx)("div", {
-                className: r.ShortDateAndTime,
-                children: w(t, c, S),
+                className: i.ShortDateAndTime,
+                children: P(s, c, y),
               });
-            let O = (0, e.jsxs)(h, {
-              rtFullDate: t,
-              stylesmodule: r,
+            let O = (0, e.jsxs)(w, {
+              rtFullDate: s,
+              stylesmodule: i,
               children: [
                 (0, e.jsx)("div", {
-                  className: r.RightSideTitles,
-                  children: (0, s.we)(
-                    t < _
+                  className: i.RightSideTitles,
+                  children: (0, t.we)(
+                    s < D
                       ? "#EventDisplay_TimeInPast"
                       : "#EventDisplay_TimeUpcoming",
                   ),
@@ -517,123 +498,123 @@
               ],
             });
             if (
-              (_ < t &&
-                t < _ + m.Kp.PerWeek &&
-                (O = (0, e.jsx)(h, {
-                  rtFullDate: t,
-                  stylesmodule: r,
+              (D < s &&
+                s < D + v.Kp.PerWeek &&
+                (O = (0, e.jsx)(w, {
+                  rtFullDate: s,
+                  stylesmodule: i,
                   children: (0, e.jsx)("div", {
-                    className: r.RightSideTitles,
-                    children: (0, s.PP)(
+                    className: i.RightSideTitles,
+                    children: (0, t.PP)(
                       "#EventDisplay_EventUpcoming_WithDateAndTime",
                       R,
                       (0, e.jsxs)("div", {
-                        className: r.ShortDateAndTime,
-                        children: [b(t, !1, c), " "],
+                        className: i.ShortDateAndTime,
+                        children: [A(s, !1, c), " "],
                       }),
                     ),
                   }),
                 })),
-              d || a == null || a < 1)
+              d || r == null || r < 1)
             )
               return O;
-            const z = t <= _ && _ <= a;
+            const z = s <= D && D <= r;
             z &&
-              (O = (0, e.jsx)(h, {
-                rtFullDate: t,
-                className: r.ActiveEvent,
-                stylesmodule: r,
+              (O = (0, e.jsx)(w, {
+                rtFullDate: s,
+                className: i.ActiveEvent,
+                stylesmodule: i,
                 children: (0, e.jsx)("span", {
-                  className: r.ActiveEventCallOut,
-                  children: (0, s.we)("#Time_Now"),
+                  className: i.ActiveEventCallOut,
+                  children: (0, t.we)("#Time_Now"),
                 }),
               }));
-            let C = null;
-            const U = z ? a - _ : a - t;
-            if (U <= m.Kp.PerDay) {
-              const p = (0, e.jsx)("div", {
-                className: r.ShortDateAndTime,
-                children: (0, s.Hq)(U, !0),
+            let N = null;
+            const p = z ? r - D : r - s;
+            if (p <= v.Kp.PerDay) {
+              const C = (0, e.jsx)("div", {
+                className: i.ShortDateAndTime,
+                children: (0, t.Hq)(p, !0),
               });
-              a < _
-                ? (C = (0, e.jsxs)("div", {
-                    className: r.RightSideTitles,
-                    children: [(0, s.we)("#EventDisplay_TimeEndsOn_Ran"), p],
+              r < D
+                ? (N = (0, e.jsxs)("div", {
+                    className: i.RightSideTitles,
+                    children: [(0, t.we)("#EventDisplay_TimeEndsOn_Ran"), C],
                   }))
-                : (C = (0, e.jsx)("div", {
-                    className: r.RightSideTitles,
-                    children: (0, s.PP)(
+                : (N = (0, e.jsx)("div", {
+                    className: i.RightSideTitles,
+                    children: (0, t.PP)(
                       z
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
-                      p,
+                      C,
                     ),
                   }));
             } else {
-              const p = B(a, _, c, "year");
-              C = (0, e.jsxs)(v.Fragment, {
+              const C = b(r, D, c, "year");
+              N = (0, e.jsxs)(j.Fragment, {
                 children: [
                   (0, e.jsx)("div", {
-                    className: r.RightSideTitles,
-                    children: (0, s.we)(
-                      a < _
+                    className: i.RightSideTitles,
+                    children: (0, t.we)(
+                      r < D
                         ? "#EventDisplay_TimeEndsOn_Past"
                         : "#EventDisplay_TimeEndsOn",
                     ),
                   }),
                   (0, e.jsx)("div", {
-                    className: r.ShortDateAndTime,
-                    children: w(a, c, p),
+                    className: i.ShortDateAndTime,
+                    children: P(r, c, C),
                   }),
                 ],
               });
             }
-            const k = (0, e.jsx)(h, {
-              rtFullDate: a,
-              stylesmodule: r,
-              children: C,
+            const I = (0, e.jsx)(w, {
+              rtFullDate: r,
+              stylesmodule: i,
+              children: N,
             });
             return (0, e.jsxs)("div", {
-              className: r.ShortDateRange,
-              children: [O, k],
+              className: i.ShortDateRange,
+              children: [O, I],
             });
           });
-        function I(l, t, a) {
-          const d = o.HD.GetTimeNowWithOverrideAsDate(),
-            r = new Date(l * 1e3),
-            c = new Date(t * 1e3),
-            _ = d.getFullYear() == r.getFullYear(),
-            S = d.getFullYear() == c.getFullYear(),
-            R = r.getFullYear() == c.getFullYear(),
-            O = R && r.getMonth() == c.getMonth(),
-            z = O && r.getDate() == c.getDate(),
-            C = {
+        function W(o, s, r) {
+          const d = l.HD.GetTimeNowWithOverrideAsDate(),
+            i = new Date(o * 1e3),
+            c = new Date(s * 1e3),
+            D = d.getFullYear() == i.getFullYear(),
+            y = d.getFullYear() == c.getFullYear(),
+            R = i.getFullYear() == c.getFullYear(),
+            O = R && i.getMonth() == c.getMonth(),
+            z = O && i.getDate() == c.getDate(),
+            N = {
               day: "numeric",
-              month: a != null ? a : "long",
-              year: _ ? void 0 : "numeric",
+              month: r ?? "long",
+              year: D ? void 0 : "numeric",
             },
-            U = r.toLocaleDateString(s.pf.GetPreferredLocales(), C);
-          if (z) return U;
+            p = i.toLocaleDateString(t.pf.GetPreferredLocales(), N);
+          if (z) return p;
           {
-            const k = {
+            const I = {
                 day: "numeric",
-                month: O && S ? void 0 : a != null ? a : "long",
+                month: O && y ? void 0 : (r ?? "long"),
                 year: R ? void 0 : "numeric",
               },
-              p = c.toLocaleDateString(s.pf.GetPreferredLocales(), k);
-            return U + " - " + p;
+              C = c.toLocaleDateString(t.pf.GetPreferredLocales(), I);
+            return p + " - " + C;
           }
         }
-        function W(l) {
+        function k(o) {
           const {
-            rtStartDate: t,
-            rtEndDate: a,
+            rtStartDate: s,
+            rtEndDate: r,
             strMonthFormat: d,
-            className: r,
-          } = l;
+            className: i,
+          } = o;
           return (0, e.jsxs)("div", {
-            className: r,
-            children: [I(t, a, d), " "],
+            className: i,
+            children: [W(s, r, d), " "],
           });
         }
       },
@@ -650,7 +631,7 @@
           ShortDateRange: "_3CN6I3krBRNzD7kCuKQ_w7",
         };
       },
-      61738: (M, A, n) => {
+      61738: (M, x, n) => {
         var e = {
           "./af": 30911,
           "./af.js": 30911,
@@ -927,23 +908,23 @@
           "./zh-tw": 34518,
           "./zh-tw.js": 34518,
         };
-        function v(s) {
-          var f = E(s);
-          return n(f);
+        function j(t) {
+          var T = _(t);
+          return n(T);
         }
-        function E(s) {
-          if (!n.o(e, s)) {
-            var f = new Error("Cannot find module '" + s + "'");
-            throw ((f.code = "MODULE_NOT_FOUND"), f);
+        function _(t) {
+          if (!n.o(e, t)) {
+            var T = new Error("Cannot find module '" + t + "'");
+            throw ((T.code = "MODULE_NOT_FOUND"), T);
           }
-          return e[s];
+          return e[t];
         }
-        (v.keys = function () {
+        (j.keys = function () {
           return Object.keys(e);
         }),
-          (v.resolve = E),
-          (M.exports = v),
-          (v.id = 61738);
+          (j.resolve = _),
+          (M.exports = j),
+          (j.id = 61738);
       },
     },
   ]);

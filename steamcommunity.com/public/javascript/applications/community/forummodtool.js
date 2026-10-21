@@ -4,116 +4,102 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [30140],
     {
-      23980: (f, j, o) => {
+      23980: (y, I, e) => {
         "use strict";
-        o.d(j, { A: () => C });
-        var s = o(7850),
-          u = o(90626),
-          m = o(561),
-          c = o(87100),
-          O = o.n(c),
-          D = o(56718),
-          M = o(36707);
-        function C(a) {
-          const [i, P] = (0, u.useState)(!1),
-            l = (0, u.useRef)(null),
-            h = (B) => (
-              P(!0),
-              B.stopPropagation(),
+        e.d(I, { A: () => M });
+        var s = e(7850),
+          _ = e(90626),
+          r = e(561),
+          c = e(87100),
+          f = e.n(c),
+          j = e(56718),
+          D = e(36707);
+        function M(a) {
+          const [i, C] = (0, _.useState)(!1),
+            m = (0, _.useRef)(null),
+            O = (P) => (
+              C(!0),
+              P.stopPropagation(),
               navigator.clipboard.writeText(a.text),
-              setTimeout(() => P(!1), 1e3),
+              setTimeout(() => C(!1), 1e3),
               !1
             );
           return (0, s.jsx)("span", {
             children: (0, s.jsxs)("button", {
-              onClick: h,
-              className: (0, M.A)(
+              onClick: O,
+              className: (0, D.A)(
                 c.CopyButton,
                 a.size === "large" ? c.BigButton : c.NormalButton,
               ),
-              ref: l,
+              ref: m,
               title: a.text,
               children: [
                 i &&
-                  l.current &&
-                  (0, s.jsx)(m.g, {
-                    target: l.current,
+                  m.current &&
+                  (0, s.jsx)(r.g, {
+                    target: m.current,
                     direction: "bottom",
                     children: (0, s.jsx)("div", {
                       className: c.CopiedNotice,
                       children: "Copied.",
                     }),
                   }),
-                (0, s.jsx)(D.cKB, {}),
+                (0, s.jsx)(j.cKB, {}),
               ],
             }),
           });
         }
       },
-      92083: (f, j, o) => {
+      92083: (y, I, e) => {
         "use strict";
-        o.r(j),
-          o.d(j, {
-            default: () => l,
-            useAcquitForumComment: () => B,
-            useSanctionForumComment: () => R,
+        e.r(I),
+          e.d(I, {
+            default: () => m,
+            useAcquitForumComment: () => P,
+            useSanctionForumComment: () => v,
           });
-        var s = o(7850),
-          u = o(64981),
-          m = o(46085),
-          c = o(86392),
-          O = o(68312),
-          D = o(29385),
-          M = o(61739),
-          C = o(35038),
-          a = o(90109),
-          i = o(23980),
-          P = o(23582);
-        function l(t) {
-          var _, r;
+        var s = e(7850),
+          _ = e(64981),
+          r = e(46085),
+          c = e(86392),
+          f = e(68312),
+          j = e(29385),
+          D = e(61739),
+          M = e(35038),
+          a = e(90109),
+          i = e(23980),
+          C = e(23582);
+        function m(t) {
           const d = (
-              (r =
-                (_ = (0, m.w3)({
-                  subject_type: u.lN,
-                  topic: t.topicId,
-                }).data) == null
-                  ? void 0
-                  : _.subjects) != null
-                ? r
-                : []
-            ).find((n) => {
-              var e;
-              return (
-                ((e = n.coordinates) == null ? void 0 : e.comment) ===
-                t.subjectId
-              );
-            }),
-            E = R(
+              (0, r.w3)({ subject_type: _.lN, topic: t.topicId }).data
+                ?.subjects ?? []
+            ).find((E) => E.coordinates?.comment === t.subjectId),
+            u = v(
               t.clanSteamId,
               t.forumId,
               t.topicId,
               t.subjectId,
-              d == null ? void 0 : d.reported_content_id,
+              d?.reported_content_id,
             ),
-            I = B(
+            l = P(
               t.clanSteamId,
               t.forumId,
               t.topicId,
               t.subjectId,
-              d == null ? void 0 : d.reported_content_id,
+              d?.reported_content_id,
             );
-          return (0, s.jsx)(P.l, {
-            sanctionMutation: E,
-            acquitMutation: I,
+          return (0, s.jsx)(C.l, {
+            sanctionMutation: u,
+            acquitMutation: l,
             subject: d,
-            eSubjectType: u.lN,
+            eSubjectType: _.lN,
             gidComment: t.subjectId,
             authorSteamID: t.authorSteamId,
             clanSteamID: t.clanSteamId,
-            children: (0, s.jsx)(h, { ...t }),
+            children: (0, s.jsx)(O, { ...t }),
           });
         }
-        function h(t) {
+        function O(t) {
           return (0, s.jsx)("table", {
             children: (0, s.jsxs)("tbody", {
               children: [
@@ -170,62 +156,62 @@
             }),
           });
         }
-        function B(t, _, r, y, d) {
-          const E = (0, O.KV)(),
-            I = (0, D.jE)();
-          return (0, M.n)({
+        function P(t, B, d, u, l) {
+          const E = (0, f.KV)(),
+            h = (0, j.jE)();
+          return (0, D.n)({
             mutationFn: async () => {
-              const n = C.w.Init(a.Km);
-              n.Body().set_steamid(t),
-                n.Body().set_gidforum(_),
-                n.Body().set_gidtopic(r),
-                n.Body().set_gidpost(y);
-              const e = await a.el.ResolveReportedPost(E, n);
-              if (!e.BSuccess())
+              const o = M.w.Init(a.Km);
+              o.Body().set_steamid(t),
+                o.Body().set_gidforum(B),
+                o.Body().set_gidtopic(d),
+                o.Body().set_gidpost(u);
+              const n = await a.el.ResolveReportedPost(E, o);
+              if (!n.BSuccess())
                 throw new Error(
-                  "Failed to acquit forum comment: " + e.GetEMsg(),
+                  "Failed to acquit forum comment: " + n.GetEMsg(),
                 );
             },
-            onSuccess: async (n) => {
-              await (0, m.Ky)(I, d);
+            onSuccess: async (o) => {
+              await (0, r.Ky)(h, l);
             },
           });
         }
-        function R(t, _, r, y, d) {
-          const E = (0, O.KV)(),
-            I = (0, D.jE)();
-          return (0, M.n)({
-            mutationFn: async (n) => {
-              const e = C.w.Init(a.FD);
-              e.Body().set_steamid(t),
-                e.Body().set_gidforum(_),
-                e.Body().set_gidtopic(r),
-                e.Body().set_gidpost(y),
-                e.Body().set_reason(n.reason),
-                e.Body().set_note(n.message);
-              for (const x of n.sanctions) {
-                const g = new a.RQ();
-                g.set_sanction(x.sanction),
-                  x.days !== void 0 && g.set_days(x.days),
-                  e.Body().add_sanctions(g);
+        function v(t, B, d, u, l) {
+          const E = (0, f.KV)(),
+            h = (0, j.jE)();
+          return (0, D.n)({
+            mutationFn: async (o) => {
+              const n = M.w.Init(a.FD);
+              n.Body().set_steamid(t),
+                n.Body().set_gidforum(B),
+                n.Body().set_gidtopic(d),
+                n.Body().set_gidpost(u),
+                n.Body().set_reason(o.reason),
+                n.Body().set_note(o.message);
+              for (const g of o.sanctions) {
+                const R = new a.RQ();
+                R.set_sanction(g.sanction),
+                  g.days !== void 0 && R.set_days(g.days),
+                  n.Body().add_sanctions(R);
               }
-              const v = await a.el.SanctionReportedPost(E, e);
-              if (!v.BSuccess())
+              const x = await a.el.SanctionReportedPost(E, n);
+              if (!x.BSuccess())
                 throw new Error(
                   "Failed to sanction forum comment: (" +
-                    v.GetEResult() +
+                    x.GetEResult() +
                     ") " +
-                    v.GetErrorMessage(),
+                    x.GetErrorMessage(),
                 );
             },
-            onSuccess: async (n) => {
-              await (0, m.Ky)(I, d);
+            onSuccess: async (o) => {
+              await (0, r.Ky)(h, l);
             },
           });
         }
       },
-      87100: (f) => {
-        f.exports = {
+      87100: (y) => {
+        y.exports = {
           CopyButton: "_2IGMSIG6hbIQPg-K1KoY-W",
           CopiedNotice: "_1G568MNm7rDJNLFkzReXEc",
           BigButton: "_3QFnwUCRHpPU2YWoxMv2b8",

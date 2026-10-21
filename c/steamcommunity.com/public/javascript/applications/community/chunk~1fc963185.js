@@ -26,19 +26,17 @@
         function _() {
           return !0;
         }
-        var _;
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
           _ =
             "document" in globalThis
-              ? (_ = document.cookie
+              ? document.cookie
                   .split(";")
-                  .find((_) => _.trim().startsWith("timezoneName"))) == null
-                ? void 0
-                : _.split("=")[1]
+                  .find((_) => _.trim().startsWith("timezoneName"))
+                  ?.split("=")[1]
               : void 0,
           _ = _ && decodeURIComponent(_);
         function _() {
-          return _() ? _ : _ != null ? _ : _;
+          return _() ? _ : (_ ?? _);
         }
         function _() {
           "document" in globalThis &&
@@ -95,8 +93,7 @@
           );
         }
         function _() {
-          var _;
-          return (_ = _.useContext(_)) != null ? _ : (0, _._)();
+          return _.useContext(_) ?? (0, _._)();
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -112,23 +109,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "bIncludeFeaturedAsGameSource", !0);
-          }
+          bIncludeFeaturedAsGameSource = !0;
           get nOverrideDateNow() {
             return (0, _._)();
           }
@@ -182,8 +165,7 @@
           return _.nOverrideDateNow ? _.nOverrideDateNow + (_ - _) : _;
         }
         function _() {
-          var _;
-          return (_ = _.nOverrideDateNow) != null ? _ : _;
+          return _.nOverrideDateNow ?? _;
         }
         function _() {
           return _.useMemo(() => _(), []);
@@ -298,13 +280,13 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_, _) {
-          const _ = _ != null ? _ : _()._.guess(),
+          const _ = _ ?? _()._.guess(),
             _ = _().unix(_)._(_),
             _ = (0, _._)();
           return _ && _.locale(_), _.format("LT");
         }
         function _(_, _, _) {
-          const _ = _ != null ? _ : _()._.guess(),
+          const _ = _ ?? _()._.guess(),
             _ = _().unix(_)._(_),
             _ = (0, _._)();
           return (
@@ -394,9 +376,8 @@
                 });
           }),
           _ = (_) => {
-            var _;
             const _ = (0, _.jsx)("div", {
-              className: (_ = _.stylesmodule) == null ? void 0 : _.DateToolTip,
+              className: _.stylesmodule?.DateToolTip,
               children: (0, _.jsx)(_, {
                 dateAndTime: _.rtFullDate,
                 bSingleLine: !0,
@@ -653,7 +634,7 @@
             _ = _ && _.getDate() == _.getDate(),
             _ = {
               day: "numeric",
-              month: _ != null ? _ : "long",
+              month: _ ?? "long",
               year: _ ? void 0 : "numeric",
             },
             _ = _.toLocaleDateString(_._.GetPreferredLocales(), _);
@@ -661,7 +642,7 @@
           {
             const _ = {
                 day: "numeric",
-                month: _ && _ ? void 0 : _ != null ? _ : "long",
+                month: _ && _ ? void 0 : (_ ?? "long"),
                 year: _ ? void 0 : "numeric",
               },
               _ = _.toLocaleDateString(_._.GetPreferredLocales(), _);

@@ -240,7 +240,44 @@
           }
         }
         const _ = _.memo(function (_) {
-          const {
+            const {
+                strAvatarURL: _,
+                size: _ = "Medium",
+                className: _,
+                statusStyle: _,
+                statusPosition: _,
+                children: _,
+                ..._
+              } = _,
+              _ = _.useMemo(() => {
+                const _ = [];
+                return _ && _.push(_), _.push(_(_)), _;
+              }, [_, _]);
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  rgSources: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
+          }),
+          _ = _.memo(function (_) {
+            const {
               strAvatarURL: _,
               size: _ = "Medium",
               className: _,
@@ -248,34 +285,30 @@
               statusPosition: _,
               children: _,
               ..._
-            } = _,
-            _ = _.useMemo(() => {
-              const _ = [];
-              return _ && _.push(_), _.push(_(_)), _;
-            }, [_, _]);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              _,
-              _,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-                style: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_().avatar, "avatar"),
-                rgSources: _,
-                draggable: !1,
-              }),
-              _,
-            ],
+            } = _;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  src: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
           });
-        });
         let _ = class extends _.Component {
           render() {
             const {
@@ -19609,18 +19642,6 @@
           BundleFooter: "zpf5CKyDLVd_Y7gpM2TcR",
           BundleName: "_2PEeMkB64SwxcEorhFOsf2",
           BundleDiscount: "wenYAzW_zDGzPFKYz4Ij9",
-          BackgroundAnimation: "_2uOgp6viCndXuqbh5K6oj2",
-          "ItemFocusAnim-darkerGrey-nocolor": "_9B8ICY6Oo0c30ezPxO0Z_",
-          "ItemFocusAnim-darkerGrey": "_1Xqj0mDS9JNyCPKAWoAToR",
-          "ItemFocusAnim-darkGreySettings": "_1w6Lzcv_0r4ltB3J0eyPkz",
-          "ItemFocusAnim-darkGrey": "_3Dp8rud7c_UMhzMi0aoSOB",
-          "ItemFocusAnim-grey": "_2YgKF8YUTgdNlK6XXn3TRU",
-          "ItemFocusAnim-translucent-white-10": "_1qgSBZEjQU4y0QLXRHj5Pv",
-          "ItemFocusAnim-translucent-white-20": "fyCmDAKGGnjbFIT0esDXA",
-          "ItemFocusAnimBorder-darkGrey": "_1j1DTgwy4WCH0xOyh2S1W7",
-          "ItemFocusAnim-green": "_1-Vpr924kDLL5Oi-DqkiLT",
-          focusAnimation: "_27qMNQujdqIUuDvL4SmMFY",
-          hoverAnimation: "_1xFsznei-KmkJgdW9jNV9n",
         };
       },
       chunkid: (module) => {
@@ -19666,18 +19687,6 @@
           BackgroundFadeImageBlurred: "_1TX8MTfNTg-C5c8w44F6aZ",
           BackgroundFadeTheme: "_2hAzwOWXPLxiZZAeFvZNWC",
           BackgroundFadeThemeBlurred: "n9hHYQ7UzwxxSc-W4ay2l",
-          BackgroundAnimation: "-ipp2QE1_kU6DTe9nmRRp",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2UkB7RAKrJ6HiA1CJGk-F1",
-          "ItemFocusAnim-darkerGrey": "_15rEZFrkU0SBrMZVF6-6Mr",
-          "ItemFocusAnim-darkGreySettings": "ajRiFwyYbclt4xwkyqu3l",
-          "ItemFocusAnim-darkGrey": "_2kImwWhC-tb2H6I99ndnAP",
-          "ItemFocusAnim-grey": "_27Bdvmqrm5bgsPLD_22h53",
-          "ItemFocusAnim-translucent-white-10": "_3vEbBKWxD-rEJWNp299K_k",
-          "ItemFocusAnim-translucent-white-20": "_1qlW44yg90CMbl7nM2orUq",
-          "ItemFocusAnimBorder-darkGrey": "_1jqKRxCzlpA3jnJUKoJRdF",
-          "ItemFocusAnim-green": "_1tQcdbppIphvPMvWeXNsk8",
-          focusAnimation: "_3jrK-etbiQN7Rfpk2c-3W",
-          hoverAnimation: "_2TRamNtnxxaGdXXeO_cdZc",
         };
       },
       chunkid: (module) => {
@@ -19698,18 +19707,6 @@
           Title: "y7h7uY1EfA5wfjcywdtWU",
           Description: "_20hSz29Uoq1of7cRa2XKEr",
           TitleSkeleton: "_3yIAMsf2PHWGCe9Ud6qpPh",
-          BackgroundAnimation: "_1bThz3qdu8FEDUhblPrqi5",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2ukneD9j0NJdCUY9d0WE4F",
-          "ItemFocusAnim-darkerGrey": "_1fArijzDHP1CXifgnKdmHv",
-          "ItemFocusAnim-darkGreySettings": "_1VMAs4BWw-banmr1e94Jrl",
-          "ItemFocusAnim-darkGrey": "_29aEvbT3uKb0j4YDCcuH-n",
-          "ItemFocusAnim-grey": "EEcTlJAis5J33-H61rQjM",
-          "ItemFocusAnim-translucent-white-10": "_2w1nSidx_OQXvBLGEotrPX",
-          "ItemFocusAnim-translucent-white-20": "RgXh2nNS89IeH57dPVdT-",
-          "ItemFocusAnimBorder-darkGrey": "_16jYiElv_0ukb67rWKG0yi",
-          "ItemFocusAnim-green": "_3lE4njho2_Lfx1zVM3gkdQ",
-          focusAnimation: "XGGbdl5XsVRFcMgYC2oJN",
-          hoverAnimation: "kYlt9oWPrIFqSUt3goKgn",
         };
       },
       chunkid: (module) => {
@@ -19729,18 +19726,6 @@
           Body: "_1mnC40Cowmo0o75_JM07jO",
           Footer: "beNH0vEoCPTCIbODMRb2A",
           NoBackdropSupportBackdrop: "_2Tay_NXhab44RW0UsKTk3P",
-          BackgroundAnimation: "_28UdAwJL1VVNIhToTVkbzn",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1qCZl4y_2oHrrYZI9Hibra",
-          "ItemFocusAnim-darkerGrey": "BWhWNNktZxzexLOsIcbZY",
-          "ItemFocusAnim-darkGreySettings": "_3HUuLrH4odZLiP9dxRicVX",
-          "ItemFocusAnim-darkGrey": "_2aCcnrjhXGo4bFOX9hqx79",
-          "ItemFocusAnim-grey": "_1nYlSZZ9jBVou7McpZBX5-",
-          "ItemFocusAnim-translucent-white-10": "_3mjaRD07EQNBZmbGtP1-FX",
-          "ItemFocusAnim-translucent-white-20": "_3Tvgj6jUd_qpCEfZspWbs6",
-          "ItemFocusAnimBorder-darkGrey": "_2hpbNUI0TX7O5NJbwWgDl-",
-          "ItemFocusAnim-green": "_1M5Kcom5NMC57cVijSl1Bo",
-          focusAnimation: "pyf-7y-D2pW55M881BnEY",
-          hoverAnimation: "_3FrDfofvymmn-hB5GwUKQr",
         };
       },
       chunkid: (module) => {
@@ -19764,18 +19749,6 @@
           Icon: "KGxYEDdGupsk1y7BpcyWx",
           Container: "_3OgqCQJqe6pWH7tFo-VlHP",
           Amount: "BqFe2n5bs-NKOIO-N-o-P",
-          BackgroundAnimation: "_2wkaLTk9SmV_u4ZHstmlSJ",
-          "ItemFocusAnim-darkerGrey-nocolor": "_31zN1d6H6K0tF5idJm3paY",
-          "ItemFocusAnim-darkerGrey": "_1LfZVHlVf77A_er0HCiVK3",
-          "ItemFocusAnim-darkGreySettings": "XQS7iveLneKXomk_ReDoF",
-          "ItemFocusAnim-darkGrey": "_34Eq9-X4jq5rmkwMwv8Ymi",
-          "ItemFocusAnim-grey": "_3ywoHgZlDMw2J1XU2BCYXd",
-          "ItemFocusAnim-translucent-white-10": "_1GF0iBfeo_kfHsAWYDHIiC",
-          "ItemFocusAnim-translucent-white-20": "_1b9qmWSg2AK4byAr8eQ69Q",
-          "ItemFocusAnimBorder-darkGrey": "yj99VPn2uTgsAI6uLB9k4",
-          "ItemFocusAnim-green": "_2HZTjV9c_mpIce3saWq5w4",
-          focusAnimation: "_3yhao1A_FOqR-26bIou9NH",
-          hoverAnimation: "UbIQ-0MyafN0I-ZW887n-",
         };
       },
       chunkid: (module) => {
@@ -19813,18 +19786,6 @@
           PointsContainer: "_3F5iu5eLMKJWPO589tdk9p",
           RewardsPointsIcon: "_1Sm-XRJI4bnKl_Lp4l8aV1",
           YourBalanceLabel: "_2ZMLACWCW1yy3-vWDavbX",
-          BackgroundAnimation: "_3ZhKghHKiEoYopTsZKPlOu",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1X-gv48clp-W7ekh8RhZpS",
-          "ItemFocusAnim-darkerGrey": "_20uaFxoUUSH1KxRwt8-eI",
-          "ItemFocusAnim-darkGreySettings": "_2AXaukKUAwVTf1D0N9E3qa",
-          "ItemFocusAnim-darkGrey": "_9RYslq7SlUYzCp0EU3l69",
-          "ItemFocusAnim-grey": "G2bZ8HxRp72vmjXBfy7-x",
-          "ItemFocusAnim-translucent-white-10": "dmoeNG_z_D7ykrd4Bo278",
-          "ItemFocusAnim-translucent-white-20": "T87FKL5tWTEzHMWvdOdnr",
-          "ItemFocusAnimBorder-darkGrey": "_1PnF_eafrax7hwcChqHlVc",
-          "ItemFocusAnim-green": "-cCJkFoAmi7MJ9EA8XNqy",
-          focusAnimation: "_21_zE_cIvTzDGofd7RnPPk",
-          hoverAnimation: "gE3-B95B24SS45liZAVgd",
         };
       },
       chunkid: (module) => {
@@ -19855,18 +19816,6 @@
           PageTitle: "_2g7YPY3A5uZVqbtFiYwK7J",
           PageSubtitle: "_1j9rPjdq4_IWNkY49opKvj",
           PagePointShopTitle: "SdoN2zN2sE_mZXWRcgWCp",
-          BackgroundAnimation: "_375cQ8FmE8BgJE77tuipIf",
-          "ItemFocusAnim-darkerGrey-nocolor": "opbJ3m-yDGEVxryg4WY8-",
-          "ItemFocusAnim-darkerGrey": "_1XUgeIEn3o_04GAMhl7xSv",
-          "ItemFocusAnim-darkGreySettings": "_2tWuiPFmbG8rPTNGtdPscl",
-          "ItemFocusAnim-darkGrey": "_9cKQt2YPvr9KrQHiG4nLX",
-          "ItemFocusAnim-grey": "_2sFi6kDbLCLJRc8Ypoghsl",
-          "ItemFocusAnim-translucent-white-10": "_1JkulQf7Q7sJEl9MX6dUg1",
-          "ItemFocusAnim-translucent-white-20": "bOhXLNF4O7n-FpeD2VCsk",
-          "ItemFocusAnimBorder-darkGrey": "_1YoBJepHppaDIXckG8sE5k",
-          "ItemFocusAnim-green": "_3k8YmkrgJeJYewCTAxL6Vp",
-          focusAnimation: "_1xvNBE2NJ-NuLHNvC0mvL0",
-          hoverAnimation: "_1bx2W5jPwvD-GQIGlB0TY3",
         };
       },
       chunkid: (module) => {
@@ -19897,18 +19846,6 @@
           AppIcon: "nVFnhJbdqGNSqX9KveGIi",
           ProfileBundleFooter: "_2uRyMe5Hn0JlQhul02AVMA",
           ProfileBundleName: "_12OueZ1NitZc-cr4favXzq",
-          BackgroundAnimation: "_2DoHl9fOHLtQkJ2pJxTboJ",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1Mi5wtTGbcvGWKdmMn3tk1",
-          "ItemFocusAnim-darkerGrey": "_3NJob8sEWSYkde3eHQ93-E",
-          "ItemFocusAnim-darkGreySettings": "_13rah3OuxMQNX8VUP4vB03",
-          "ItemFocusAnim-darkGrey": "_24CEGZhdSEOnbOXyQAej5K",
-          "ItemFocusAnim-grey": "_3JIUTBdPImT1FVCWdHwPBX",
-          "ItemFocusAnim-translucent-white-10": "_31GRmKSe8UiygqWJWjM98x",
-          "ItemFocusAnim-translucent-white-20": "_1MFLHoENAzKfYUhSCaABLF",
-          "ItemFocusAnimBorder-darkGrey": "OepCx-eyift_1-1DUcEdU",
-          "ItemFocusAnim-green": "_3PJyyjA2wR9wkuwu26cPAH",
-          focusAnimation: "LLx4t-MP5O9q6WKwpd7SS",
-          hoverAnimation: "aEFOZh8pT_gDbndWEs9db",
         };
       },
       chunkid: (module) => {
@@ -20035,18 +19972,6 @@
           PreviewLinkContainer: "_2uwx7xJTNFc_vVnv-dN1BM",
           PreviewLink: "_1F7sBdJ_NTOQVbfTSnCIBm",
           RedeemModalMobileScroll: "_37xDgImnOU-YaJs_WSEozb",
-          BackgroundAnimation: "_2qpjzIdNNgP3z2l3UWROEB",
-          "ItemFocusAnim-darkerGrey-nocolor": "-IsMyprEstj11hBrNQ-KR",
-          "ItemFocusAnim-darkerGrey": "_2XxOQFNd4CnajOqLBv-i5W",
-          "ItemFocusAnim-darkGreySettings": "AqMi4ObfRgO_TS-O4IwNl",
-          "ItemFocusAnim-darkGrey": "_3IO5aDCt-UnWHDc2f76BlU",
-          "ItemFocusAnim-grey": "_21Xnwo44Ghddi9lXAqodn3",
-          "ItemFocusAnim-translucent-white-10": "_2DmiSIzSyFuvAxTp3DroWW",
-          "ItemFocusAnim-translucent-white-20": "_1iesbDBY86cFB9QMfIHjvF",
-          "ItemFocusAnimBorder-darkGrey": "_2h7IadomvRB87YS4POTgWm",
-          "ItemFocusAnim-green": "_3PyhGqVfOmxxQZ_4BQ2ylb",
-          focusAnimation: "HcQchYFfs9rVriFob7_CW",
-          hoverAnimation: "_3IdBGPG-h1AkVJce-3-UOx",
         };
       },
       chunkid: (module) => {
@@ -20106,18 +20031,6 @@
           SkeletonName: "_2dNdsI0fJOny4stZtgAfff",
           SkeletonSubtitle: "_1BU-YfkwDgGddw0CCzSA3k",
           VisibilityTracker: "_1O9RoBfb2qNsyFibTI5EEs",
-          BackgroundAnimation: "_1d8eTDZ5xZBczD6PKxTaTU",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2JZGG7-Ia_90Kay_tcOTQz",
-          "ItemFocusAnim-darkerGrey": "FVOrp2CBQuVmN48aQtl75",
-          "ItemFocusAnim-darkGreySettings": "_3aPfksRWQGfh_vKaSHiAh6",
-          "ItemFocusAnim-darkGrey": "IlxfrAr3w61RoxS7mlVDR",
-          "ItemFocusAnim-grey": "_3WdJdCPEzGTJ4nL48WgaLv",
-          "ItemFocusAnim-translucent-white-10": "_2QPbYVa2PSRR4A-zvoVa5J",
-          "ItemFocusAnim-translucent-white-20": "_2c4Mt-mjjegh_nq9_SRAk4",
-          "ItemFocusAnimBorder-darkGrey": "OkFW3H-shPMEafS5ojeZc",
-          "ItemFocusAnim-green": "_10UVxuFrMYX9ivRKrgkNOd",
-          focusAnimation: "_35MRy7ZSNKMmoGKDXRPtV6",
-          hoverAnimation: "_1Yex-YheuLZHfClSUegY4Y",
         };
       },
       chunkid: (module) => {
@@ -20130,18 +20043,6 @@
           RightArrow: "_3vKwrVjIyKAkovj545omby",
           Disabled: "_1yQ71J_0gBkKAycQ_oGvvm",
           Item: "_1J5UBa5UcC4aZ_7_RMAZNf",
-          BackgroundAnimation: "YP90WLVdeEGY0X9rxN1I4",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2NOI6WOZFh_sJu9IbK4TD",
-          "ItemFocusAnim-darkerGrey": "_2Og5Fv2lBl-pBA07_kZLwr",
-          "ItemFocusAnim-darkGreySettings": "_1YowsimLJZRNE_uj2y4CwN",
-          "ItemFocusAnim-darkGrey": "_4IgdOZMfUbaGnc2xy7z7_",
-          "ItemFocusAnim-grey": "_1bBi0gzMWDF2_RQMCVXhdm",
-          "ItemFocusAnim-translucent-white-10": "MvMeOTXNHHylMs272gYJg",
-          "ItemFocusAnim-translucent-white-20": "fqwMzPa5g1nKn9I2-eoYz",
-          "ItemFocusAnimBorder-darkGrey": "_32yBEFmILuvIR8aIw-zYu4",
-          "ItemFocusAnim-green": "Tzm9Guby5AgNNq-PsW3qR",
-          focusAnimation: "_38HpanZPvyEgvXOaUz8GIY",
-          hoverAnimation: "_1F2JUmJVYns7w3AHxyUCMY",
         };
       },
       chunkid: (module) => {
@@ -20167,18 +20068,6 @@
           SectionTitle: "_1U-QFj8ZqTxnWWbDXQjlm4",
           SectionSubtitle: "_1CqztIyPIck06bjwelo2vz",
           SectionCallout: "_2tQyoFl0ilITEK586SpZlQ",
-          BackgroundAnimation: "_2_dbMnIf_4y-JuJqZPYF2_",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3-VXH54VFRTZYQ_x5mozwM",
-          "ItemFocusAnim-darkerGrey": "_1X1ASoW1QaZzBcxT8-IcEM",
-          "ItemFocusAnim-darkGreySettings": "_33Iipaz0_1WLhrAgoWBlWf",
-          "ItemFocusAnim-darkGrey": "_1VOu_fBH85UcywUkShbJVJ",
-          "ItemFocusAnim-grey": "_2bvy7JKRs_uPtQiFepxqpp",
-          "ItemFocusAnim-translucent-white-10": "_3Vtgi78kFrv1NJXRpj4p7N",
-          "ItemFocusAnim-translucent-white-20": "_1IwvLGxqzMyxbrPZY9kLBu",
-          "ItemFocusAnimBorder-darkGrey": "_1VYRKHPVBC2fISP3FoO8jO",
-          "ItemFocusAnim-green": "v0VERs_Hho957wDhTyx3Z",
-          focusAnimation: "_1iy8_0z1vKHbnXn-wxVeAD",
-          hoverAnimation: "_3zmIdTf-Tbj-nIo-efpnyN",
         };
       },
       chunkid: (module) => {
@@ -20205,18 +20094,6 @@
           NextStop: "_1WxxpZ3OWbnqv7wXHJB1qS",
           Title: "_34PnVFOKUDgJj8Y2a5u-gW",
           Timer: "_3aFQPpgZw9MiyDlO4e6qM",
-          BackgroundAnimation: "_3WTclVbHyztmZGAdhryyKa",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2IIOl8apowCn9wwSjdcI8X",
-          "ItemFocusAnim-darkerGrey": "VcnTHzR7EZsCQ4bvhW79E",
-          "ItemFocusAnim-darkGreySettings": "qn0qFipOMXD0xZIBdQj0M",
-          "ItemFocusAnim-darkGrey": "_1zRcvLP-RPxfWUzpQvwE_W",
-          "ItemFocusAnim-grey": "_1N-5ZejTb7mx-hBD0Jrtxa",
-          "ItemFocusAnim-translucent-white-10": "_2a7brG42GaZB7LhEWYdB-b",
-          "ItemFocusAnim-translucent-white-20": "_3mdb7pH6-rmTAqHBO0Fprm",
-          "ItemFocusAnimBorder-darkGrey": "_1wUT1cg_y-eN_yR-dJqvwe",
-          "ItemFocusAnim-green": "_2RwmSMShnq907Rv6yPHv5G",
-          focusAnimation: "_1icw_7-NAcSITerS27_vm6",
-          hoverAnimation: "_1NVfDvpq6EBACnWyZoC2Q4",
         };
       },
       chunkid: (module) => {
@@ -20240,18 +20117,6 @@
           ItemHoverZIndex: "_3OPQYp5rFwNRra1pJDXEA5",
           ActionButton: "FgTBsFJl4vO_zmVKkFKgI",
           Icon: "_3XqyIZxPIPIQaQL-gSBKkC",
-          BackgroundAnimation: "_1WlCEPAox_gLXs_1gQopXd",
-          "ItemFocusAnim-darkerGrey-nocolor": "M2jHEVZcNWgf3m9RqEBQA",
-          "ItemFocusAnim-darkerGrey": "S4ZdIgjj8HG4SpINCswEd",
-          "ItemFocusAnim-darkGreySettings": "_1QOb_ENu9_zinBFVPHdBSh",
-          "ItemFocusAnim-darkGrey": "_3tDihFPnnTgNjEOuVMa3x9",
-          "ItemFocusAnim-grey": "_3IKIFF_wwfDopC7Irn5OPX",
-          "ItemFocusAnim-translucent-white-10": "_2rfgxI-zIiT9yVy3P-SVS",
-          "ItemFocusAnim-translucent-white-20": "_3YM842xeQLUYTXf8LdN5rF",
-          "ItemFocusAnimBorder-darkGrey": "_2VYfoIJkffQZti7jfT0Qo7",
-          "ItemFocusAnim-green": "fsGWiIozCwef8EazvVzMM",
-          focusAnimation: "_3iTtGjKN91ZRVmERHJemVP",
-          hoverAnimation: "h1-6TGCp3BWGEmwl31guN",
         };
       },
       chunkid: (module) => {
@@ -20277,18 +20142,6 @@
           PageHeader: "_1qSTIvgnxkcB1Obl3XmtN4",
           SectionHeader: "_3C3OEl9gqRz-p2c-RUBLoq",
           SectionContent: "_24eAN88wEUVo9s9fs3DkX8",
-          BackgroundAnimation: "lPImFt2IEcrCe3ZggeLoL",
-          "ItemFocusAnim-darkerGrey-nocolor": "_29MogmEonZprflz36Y7HKu",
-          "ItemFocusAnim-darkerGrey": "_1WmFb5_5fubgMmgB4VMvH2",
-          "ItemFocusAnim-darkGreySettings": "_3uAHzQ33mv-3u2u5WlPH72",
-          "ItemFocusAnim-darkGrey": "_2V4XjQuZvZnw0wH1F7jsp",
-          "ItemFocusAnim-grey": "_1f5Wt-yMcACXU5B0De5xx7",
-          "ItemFocusAnim-translucent-white-10": "_11asHiM8NKR0ipmYWDQiR2",
-          "ItemFocusAnim-translucent-white-20": "_12qDEX_A9fLyxwE67N1N_l",
-          "ItemFocusAnimBorder-darkGrey": "_1wDHDAysqdgHHQYNtaExIA",
-          "ItemFocusAnim-green": "WeQiGB84bnTvkmc6ZK963",
-          focusAnimation: "LqQrJmzPMa04u_5ssFqsr",
-          hoverAnimation: "_3TvmOAEtclA7XzQnOqE2ar",
         };
       },
       chunkid: (module) => {
@@ -20371,18 +20224,6 @@
           FaqTitle: "_16G14OyvG_lpaLOi4aTG7R",
           FaqQuestion: "g7OCNyUsukZzPVIuhZQR0",
           FaqAnswer: "_2zL7njD0d8xMmfhd9gqIsB",
-          BackgroundAnimation: "_3Y8yA_7-GVQX7gCQvFXM29",
-          "ItemFocusAnim-darkerGrey-nocolor": "ASYOY-ScnNwVcgERA8BlY",
-          "ItemFocusAnim-darkerGrey": "_1w2Sb9TMRsuWIMVZbt_4SX",
-          "ItemFocusAnim-darkGreySettings": "YVgcC-MwM3-D66DrQhM5",
-          "ItemFocusAnim-darkGrey": "_158F2Fis-BlMC8f3Osfq3t",
-          "ItemFocusAnim-grey": "_1B12faVExLUgmBlOcuz0PE",
-          "ItemFocusAnim-translucent-white-10": "_3C_7jJPFHmVXhBHm1LmkE7",
-          "ItemFocusAnim-translucent-white-20": "_19XHq3dW_Sy-Xjv0m1bCwI",
-          "ItemFocusAnimBorder-darkGrey": "_27vQL6-OTnTvGfzFCp7Tp7",
-          "ItemFocusAnim-green": "_1-AmD09PUprG3-qKf3cWw3",
-          focusAnimation: "_1VbuC-8v20yCSJO8hIIXga",
-          hoverAnimation: "_36vIvX8niFkkS5wfiaxGnN",
         };
       },
       chunkid: (module) => {
@@ -20457,18 +20298,6 @@
           DescriptorDrivenEventPageTitle: "UIMULcMvZKXpAu7iWuxz",
           ParallaxRoot: "_399XJVziSRXteE0UwuS2Cj",
           ParallaxBackground: "_1Lf5512-BMNbp1bfLQXpQG",
-          BackgroundAnimation: "_1ymKWv42z0aE0xTToWtVRP",
-          "ItemFocusAnim-darkerGrey-nocolor": "_21NW6WUbNFxExDM-kwUfez",
-          "ItemFocusAnim-darkerGrey": "_1-1YaVLp_RYVZfUzhnEeUA",
-          "ItemFocusAnim-darkGreySettings": "_3OOHoeyg_v_4BewjZToPRP",
-          "ItemFocusAnim-darkGrey": "FjTuOsA5YWqQJ734mIpJ-",
-          "ItemFocusAnim-grey": "_3dvlfksypIFgBlX3z1RxeB",
-          "ItemFocusAnim-translucent-white-10": "_1Q7-IQw61FJGRrjzZqNl7y",
-          "ItemFocusAnim-translucent-white-20": "_1cY4v76vusry2If9F7eglH",
-          "ItemFocusAnimBorder-darkGrey": "_2t5yqpD8ZOsOhPy7_SOkOw",
-          "ItemFocusAnim-green": "nqXm6vFVQZkUV3SH3uFbv",
-          focusAnimation: "_2Mzs3v2DI4nlDv1X-P_xTK",
-          hoverAnimation: "_1yzlAlm5VWFsk25PQm5ySe",
         };
       },
       chunkid: (module, module_exports, __webpack_require__) => {

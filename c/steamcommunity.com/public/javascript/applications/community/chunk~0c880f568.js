@@ -40,32 +40,21 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         const _ = 0,
           _ = "061818254b2c99ac49e6626adb128ed1282a392f",
           _ = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
           _ = "338200c5d6c4d9bdcf6632642a2aeb591fb8a5c2.gif",
           _ = 120;
         class _ {
+          m_unAppID;
+          m_bInitialized = !1;
+          m_strName;
+          m_strIconURL;
+          m_dtUpdatedFromServer;
+          m_eAppType;
           constructor(_) {
-            _(this, "m_unAppID"),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_strName"),
-              _(this, "m_strIconURL"),
-              _(this, "m_dtUpdatedFromServer"),
-              _(this, "m_eAppType"),
-              (this.m_unAppID = _);
+            this.m_unAppID = _;
           }
           get appid() {
             return this.m_unAppID;
@@ -158,25 +147,14 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_nLastUpdated = 0;
+          m_mapLanguages = _._.map();
+          m_appid;
+          m_fetching = null;
           constructor(_) {
-            _(this, "m_nLastUpdated", 0),
-              _(this, "m_mapLanguages", _._.map()),
-              _(this, "m_appid"),
-              _(this, "m_fetching", null),
-              (this.m_appid = _);
+            this.m_appid = _;
           }
           GetAppID() {
             return this.m_appid;
@@ -268,15 +246,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -285,8 +254,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           return useObserver(() => _.GetAppInfo(_));
         }
@@ -295,17 +263,17 @@
         }
         const _ = 3600 * 24 * 7 * 2;
         class _ {
+          m_CMInterface;
+          m_mapAppInfo = _._.map();
+          m_mapRichPresenceLoc = _._.map();
+          m_cAppInfoRequestsInFlight = 0;
+          m_setPendingAppInfo = new Set();
+          m_PendingAppInfoPromise;
+          m_PendingAppInfoResolve;
+          m_CacheStorage = null;
+          m_fnCallbackOnAppInfoLoaded = new _._();
           constructor() {
-            _(this, "m_CMInterface"),
-              _(this, "m_mapAppInfo", _._.map()),
-              _(this, "m_mapRichPresenceLoc", _._.map()),
-              _(this, "m_cAppInfoRequestsInFlight", 0),
-              _(this, "m_setPendingAppInfo", new Set()),
-              _(this, "m_PendingAppInfoPromise"),
-              _(this, "m_PendingAppInfoResolve"),
-              _(this, "m_CacheStorage", null),
-              _(this, "m_fnCallbackOnAppInfoLoaded", new _._()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
           Init(_) {
             this.m_CMInterface = _;
@@ -364,17 +332,14 @@
               (this.m_PendingAppInfoResolve = void 0),
               this.m_setPendingAppInfo.clear(),
               await this.LoadAppInfoBatch(_),
-              _ == null || _();
+              _?.();
           }
           async LoadAppInfoBatch(_) {
-            var _;
             this.m_cAppInfoRequestsInFlight++;
             let _ = await this.LoadAppInfoBatchFromLocalCache(_);
             if (_.length) {
               console.log("Loading batch of App Info from Steam: ", _),
-                await ((_ = this.m_CMInterface) == null
-                  ? void 0
-                  : _.WaitUntilLoggedOn());
+                await this.m_CMInterface?.WaitUntilLoggedOn();
               let _ = _._.Init(_._);
               _.Body().set_language((0, _.sfN)(_._.LANGUAGE));
               const _ = 50;
@@ -452,10 +417,9 @@
             console.log("Loading batch of App Info from Local Cache: ", _);
             const _ = new Date(new Date().getTime() - _ * 1e3),
               _ = async (_) => {
-                var _;
-                const _ = await ((_ = this.m_CacheStorage) == null
-                  ? void 0
-                  : _.GetObject(this.GetCacheKeyForAppID(_)));
+                const _ = await this.m_CacheStorage?.GetObject(
+                  this.GetCacheKeyForAppID(_),
+                );
                 if (!_) return _;
                 let _ = this.m_mapAppInfo.get(_);
                 return (
@@ -538,7 +502,7 @@
                 : (_.m_mapLanguages.set(_, new Map()),
                   (_ = _.m_mapLanguages.get(_)));
               for (let _ of _.tokens())
-                _ == null || _.set(_.name().toLowerCase(), _.value());
+                _?.set(_.name().toLowerCase(), _.value());
             }
           }
           QueueRichPresenceLocRequest(_) {

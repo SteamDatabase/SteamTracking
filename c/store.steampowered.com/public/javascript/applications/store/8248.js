@@ -1272,6 +1272,7 @@
             followButton: _,
             bSmallFormat: _,
             bMinimalDisplay: _,
+            bCompact: _,
           } = _;
           return (0, _.jsx)(_._, {
             feature: "salecreatorhome",
@@ -1280,6 +1281,7 @@
                 _().DevSummaryCtn,
                 _ ? _().SmallFormat : _().LargeFormat,
                 _ ? _().MinimalDisplay : "",
+                _ ? _().Compact : "",
               ),
               "flow-children": "row",
               children: [
@@ -1458,7 +1460,13 @@
           });
         }
         function _(_) {
-          const { creatorID: _, bSmallFormat: _ } = _,
+          const {
+              creatorID: _,
+              bSmallFormat: _,
+              bHideCreatorType: _,
+              bMinimalDisplay: _,
+              bCompact: _,
+            } = _,
             { data: _ } = (0, _._)(_.clan_account_id);
           return _
             ? (0, _.jsx)(_, {
@@ -1466,12 +1474,14 @@
                 strName: _.name ?? "",
                 strAvatarURL: _.avatar_url_full_size ?? "",
                 nFollowers: _.followers ?? 0,
-                strCreatorType: _(_.type),
+                strCreatorType: _ ? void 0 : _(_.type),
                 followButton: (0, _.jsx)(_._, {
                   clanAccountID: _.clan_account_id,
                   followType: "creatorhome",
                 }),
                 bSmallFormat: _,
+                bMinimalDisplay: _,
+                bCompact: _,
               })
             : null;
         }
@@ -1516,6 +1526,7 @@
               bHideFollowButton: _,
               bAddLinkToMemberList: _,
               bMinimalDisplay: _,
+              bCompact: _,
             } = _,
             { creatorHome: _, isFetching: _ } = (0, _._)(_.clan_account_id),
             [_] = (0, _._)();
@@ -1551,6 +1562,7 @@
                         }),
                     bSmallFormat: _,
                     bMinimalDisplay: _,
+                    bCompact: _,
                   }),
                 })
               : null;
@@ -1741,18 +1753,6 @@
           TweaksMenu: "_3N0H151KuH7D3iNrbRNL3D",
           MenuTitle: "_1qcGKxEKb2AANDw4iXQ0kF",
           MenuOptions: "_2BNKaMvGCPl8BE2y48Zyu2",
-          BackgroundAnimation: "_26VKCvvlOekXO3gQ4lt52K",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3wTkpIb4XE7F7ZZDUXHgm_",
-          "ItemFocusAnim-darkerGrey": "_2JTxWE9ODcqL4KEwAQsSC5",
-          "ItemFocusAnim-darkGreySettings": "_1t6voKc6Z9o4Tv6RxMOxKZ",
-          "ItemFocusAnim-darkGrey": "_3hNDwFLzATB9Rlsqzdi0SL",
-          "ItemFocusAnim-grey": "DO3pGo-5_dzvOUiQSw2fW",
-          "ItemFocusAnim-translucent-white-10": "_1yAke0XKqQ2OeiVkyNRJPm",
-          "ItemFocusAnim-translucent-white-20": "_3HsFu62m74Ss4hGpugGIY",
-          "ItemFocusAnimBorder-darkGrey": "_2rbzbmBTlYOt4Kd3V_AurK",
-          "ItemFocusAnim-green": "_2ha4PsCJYLF62a1zUQzOkG",
-          focusAnimation: "yX4eIfH38xAjJpSzr9zFe",
-          hoverAnimation: "ib5aU4OmCxpvW7mx1Gkl7",
         };
       },
       chunkid: (module, module_exports, __webpack_require__) => {

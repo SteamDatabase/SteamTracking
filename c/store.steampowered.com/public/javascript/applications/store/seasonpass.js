@@ -21,6 +21,12 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = {
           include_assets: !0,
@@ -29,8 +35,9 @@
         function _(_) {
           const { appid: _ } = _,
             [_] = (0, _._)(_, _),
-            _ = (0, _._)();
-          return !_ || !_
+            _ = (0, _._)(),
+            _ = _?.GetAssets();
+          return !_ || !_ || !_
             ? null
             : (0, _.jsx)("div", {
                 className: _().StoreItemCtn,
@@ -40,7 +47,7 @@
                     href: (0, _._)(_.GetStorePageURL(), _),
                     children: [
                       (0, _.jsx)("img", {
-                        src: _.GetAssets().GetSmallCapsuleURL(),
+                        src: _.GetSmallCapsuleURL(),
                       }),
                       (0, _.jsxs)("div", {
                         className: _().StoreItemDescription,
@@ -76,24 +83,37 @@
           const _ = _.milestones.every((_) => !!_.shipped);
           return (0, _.jsx)(_._, {
             feature: "seasonpassproductpage",
-            children: (0, _.jsxs)("div", {
-              className:
-                "game_area_description overflow_allowed season_pass_area",
+            children: (0, _.jsxs)(_._, {
+              marginTop: "5",
               children: [
-                (0, _.jsx)("h2", {
+                (0, _.jsx)(_._, {
+                  level: "2",
+                  size: "2",
+                  weight: "heavy",
+                  contrast: "title",
+                  marginBottom: "2",
                   children: (0, _._)("#SeasonPass_Header"),
                 }),
                 !_ &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
-                      (0, _.jsx)("p", {
+                      (0, _.jsx)(_._, {
+                        _: "p",
+                        size: "4",
+                        contrast: "body",
+                        marginBottom: "2",
                         children: (0, _._)("#SeasonPass_Incomplete_Desc"),
                       }),
-                      (0, _.jsx)("p", {
+                      (0, _.jsx)(_._, {
+                        _: "p",
+                        size: "4",
+                        contrast: "body",
+                        marginBottom: "2",
                         children: (0, _._)(
                           "#SeasonPass_Incomplete_Desc2",
-                          (0, _.jsx)("a", {
+                          (0, _.jsx)(_._, {
                             href: `${_._.STORE_BASE_URL}account/notificationsettings`,
+                            contrast: "title",
                           }),
                         ),
                       }),
@@ -130,24 +150,29 @@
         function _(_) {
           const { milestone: _, baseGameAppID: _ } = _,
             _ = (_.milestone_desc?.length ?? 0) > 0;
-          return (0, _.jsxs)("div", {
+          return (0, _.jsxs)(_._, {
             className: _().SeasonPass,
+            marginBottom: "2",
             children: [
-              (0, _.jsxs)("div", {
+              (0, _.jsxs)(_._, {
                 className: (0, _._)(_().Title, !!_.shipped && _().Shipped),
+                justify: "between",
+                align: "center",
+                padding: "3",
                 children: [
-                  (0, _.jsxs)("span", {
+                  (0, _.jsxs)(_._, {
+                    size: "4",
+                    weight: "medium",
+                    color: _.shipped ? "lime-11" : void 0,
+                    contrast: "title",
                     children: [
                       !!_.shipped && "\u2713",
                       "\xA0",
                       _._.GetTokenWithFallback(_.title ?? []),
                     ],
                   }),
-                  (0, _.jsx)("div", {
-                    className: _().DateAndControl,
-                    children: (0, _.jsx)(_, {
-                      milestone: _,
-                    }),
+                  (0, _.jsx)(_, {
+                    milestone: _,
                   }),
                 ],
               }),
@@ -170,18 +195,23 @@
                     appid: _,
                   })
                 : null,
-              (0, _.jsxs)("div", {
-                className: _().Description,
-                children: [
-                  (0, _.jsx)(_._, {
-                    text: _,
-                  }),
-                  !!_.shipped &&
-                    (0, _.jsx)(_, {
-                      milestone: _,
-                      baseGameAppID: _,
+              (0, _.jsx)(_._, {
+                padding: "4",
+                children: (0, _.jsxs)(_._, {
+                  _: "div",
+                  size: "4",
+                  color: "greyneutral-12",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      text: _,
                     }),
-                ],
+                    !!_.shipped &&
+                      (0, _.jsx)(_, {
+                        milestone: _,
+                        baseGameAppID: _,
+                      }),
+                  ],
+                }),
               }),
             ],
           });
@@ -195,8 +225,12 @@
           const _ = _.dates ?? [],
             _ = _[0]?.rtime ?? 0,
             _ = _.filter((_, _) => _ == 0 || (_.rtime ?? 0) < _);
-          return (0, _.jsx)("div", {
-            className: _().Upcoming,
+          return (0, _.jsx)(_._, {
+            _: "div",
+            size: "3",
+            weight: "light",
+            color: "greyneutral-12",
+            align: "end",
             children: (0, _._)(
               "#SeasonPass_Release_Date",
               (0, _.jsx)("br", {}),
@@ -224,8 +258,12 @@
             _ = (0, _._)(_.appid),
             { data: _ } = (0, _._)(_),
             _ = _?.steam_release_date || _.rtime_complete || 0;
-          return (0, _.jsx)("div", {
-            className: _().Shipped,
+          return (0, _.jsx)(_._, {
+            _: "div",
+            size: "2",
+            weight: "light",
+            color: "lime-11",
+            align: "end",
             children: (0, _._)(
               "#SeasonPass_Released_Date",
               (0, _.jsx)("br", {}),
@@ -237,27 +275,32 @@
           const { milestone: _, baseGameAppID: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
+              (0, _.jsx)(_._, {
+                size: "4",
+                color: "greyneutral-4",
+                marginY: "3",
+              }),
               (0, _.jsx)("div", {
-                className: _().Status,
                 children: (0, _._)(
                   _.appid
                     ? "#SeasonPass_DLC_Status"
                     : "#SeasonPass_Event_Status",
                 ),
               }),
-              !!_.appid &&
-                (0, _.jsx)(_, {
-                  milestone: _,
-                }),
-              !!(_.appid && _.event_gid) &&
-                (0, _.jsx)("span", {
-                  className: _().Padding,
-                }),
-              !!_.event_gid &&
-                (0, _.jsx)(_, {
-                  milestone: _,
-                  baseGameAppID: _,
-                }),
+              (0, _.jsxs)(_._, {
+                gap: "2",
+                children: [
+                  !!_.appid &&
+                    (0, _.jsx)(_, {
+                      milestone: _,
+                    }),
+                  !!_.event_gid &&
+                    (0, _.jsx)(_, {
+                      milestone: _,
+                      baseGameAppID: _,
+                    }),
+                ],
+              }),
             ],
           });
         }
@@ -265,8 +308,10 @@
           const { milestone: _ } = _,
             _ = (0, _._)(_.appid),
             { data: _ } = (0, _._)(_);
-          return (0, _.jsx)("a", {
+          return (0, _.jsx)(_._, {
             href: (0, _._)(_) || `${_._.STORE_BASE_URL}app/${_.appid}`,
+            underline: "always",
+            contrast: "title",
             children: (0, _._)("#SeasonPass_ShowStore"),
           });
         }
@@ -277,8 +322,9 @@
           return _
             ? (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsx)("a", {
-                    href: `${_._.STORE_BASE_URL}news/app/${_}/view/${_.event_gid}`,
+                  (0, _.jsx)(_._, {
+                    underline: "always",
+                    contrast: "title",
                     onClick: (_) => {
                       _.preventDefault(), _.stopPropagation(), _(!0);
                     },
@@ -297,8 +343,10 @@
                     }),
                 ],
               })
-            : (0, _.jsx)("a", {
+            : (0, _.jsx)(_._, {
                 href: `${_._.STORE_BASE_URL}news/app/${_}/view/${_.event_gid}`,
+                underline: "always",
+                contrast: "title",
                 children: (0, _._)("#SeasonPass_ReadEvent"),
               });
         }
@@ -306,17 +354,9 @@
       chunkid: (module) => {
         module.exports = {
           SeasonPass: "_3gfJe6nIkr6ZriDDPYp-z7",
-          Description: "_3sdNbLRZYrhEi9HWS1XAdu",
           Title: "_3u0Ar8iq66LfqUbdXK2Scn",
           Shipped: "_14Z4vFKjBcbizLEXIFSvWg",
-          DateAndControl: "_1bjdoxghswkEhrMsa43lpE",
-          Upcoming: "_2P0yy2pWYDXAg02ywBc6xc",
-          Status: "_2_JVEcPrnkP9U8YnlcUaV7",
-          Content: "FL3zV7J5DHOjOZzklSfsu",
-          Text: "_2bVkdku0nL6ga2QxSvR0Np",
-          Padding: "_3ENBi7dhQgbnK6NpZ-ut67",
           Strike: "_33nXsC2--p10FL6D9ICf9W",
-          Chevron: "z1O0vP7Inz1H3vHuEjrUl",
         };
       },
       chunkid: (module) => {

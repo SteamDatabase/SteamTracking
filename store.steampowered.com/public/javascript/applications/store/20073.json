@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Elemen Interaktif",
     "GameRating_OnlineMusicNotice": "Muzik Dalam Talian Tidak Diberi Rating oleh ESRB",
     "GameRating_OnlineInteractionsNotice": "Interaksi Dalam Talian Tidak Diberi Rating oleh ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Sembang Dalam Permainan ditapis"
+    "GameRating_ContentCategoryDescriptor_64": "Sembang Dalam Permainan ditapis",
+    "GameRating_ContentCategories_Title": "Kandungan",
+    "GameRating_Ratings_Title": "Rating"
 }

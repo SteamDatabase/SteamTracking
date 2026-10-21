@@ -263,8 +263,11 @@
           }),
           _ = "avatarandpersonas";
         function _(_) {
+          return [_, _];
+        }
+        function _(_) {
           const { data: _, isLoading: _ } = (0, _._)({
-            queryKey: [_, _],
+            queryKey: _(_),
             queryFn: () => _.load(_),
           });
           return [_, _];

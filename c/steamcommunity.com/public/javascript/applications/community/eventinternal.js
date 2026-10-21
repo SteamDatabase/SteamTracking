@@ -443,13 +443,10 @@
               : null;
           },
           _ = class _ {
-            constructor() {
-              (this.m_mapSaleIDToInfo = new Map()),
-                (this.m_listSaleState = new Array()),
-                (this.m_stateLoadPromise = null),
-                (this.m_bLoadComplete = !1),
-                (0, _._)(this);
-            }
+            m_mapSaleIDToInfo = new Map();
+            m_listSaleState = new Array();
+            m_stateLoadPromise = null;
+            m_bLoadComplete = !1;
             BHasLoadCompleted() {
               return this.m_bLoadComplete;
             }
@@ -457,7 +454,6 @@
               return this.m_listSaleState;
             }
             async MigrateOrUpdateSalePage(_, _, _) {
-              var _, _;
               const _ = this.m_mapSaleIDToInfo.get(_);
               if (!_)
                 return [
@@ -484,12 +480,9 @@
                   withCredentials: !0,
                 });
                 if (
-                  (_ == null ? void 0 : _.status) == 200 &&
-                  ((_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.success) == _._ &&
-                  (_ = _ == null ? void 0 : _.data) != null &&
-                  _.gidClanEvent
+                  _?.status == 200 &&
+                  _?.data?.success == _._ &&
+                  _?.data?.gidClanEvent
                 )
                   return (
                     (0, _._)(() => {
@@ -532,7 +525,6 @@
               );
             }
             async InternalLoadSalePageMigrationInfo() {
-              var _, _;
               try {
                 const _ =
                     _._.COMMUNITY_BASE_URL +
@@ -546,12 +538,7 @@
                   });
                 if (
                   ((this.m_bLoadComplete = !0),
-                  (_ == null ? void 0 : _.status) == 200 &&
-                    ((_ = _ == null ? void 0 : _.data) == null
-                      ? void 0
-                      : _.success) == _._ &&
-                    (_ = _ == null ? void 0 : _.data) != null &&
-                    _.data)
+                  _?.status == 200 && _?.data?.success == _._ && _?.data?.data)
                 )
                   return (
                     (0, _._)(() => {
@@ -586,8 +573,12 @@
               }
               return [];
             }
+            static s_Singleton;
             static Get() {
               return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+            }
+            constructor() {
+              (0, _._)(this);
             }
           };
         _([_._], _.prototype, "m_mapSaleIDToInfo", 2),
@@ -620,12 +611,15 @@
           };
         const _ = class _ {
           constructor() {
-            (this.m_rgApps = []),
-              (this.m_rgClanAccountIDs = []),
-              (this.m_nHighestAppOffsetRequested = 0),
-              (this.m_nHighestClanOffsetRequested = 0),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_rgApps = [];
+          m_rgClanAccountIDs = [];
+          m_nHighestAppOffsetRequested = 0;
+          m_nHighestClanOffsetRequested = 0;
+          m_mostRecentRequest;
+          m_startAppID;
+          static s_globalSingletonStore;
           static Get() {
             return (
               _.s_globalSingletonStore ||
@@ -644,7 +638,6 @@
             );
           }
           async FetchApps(_, _, _, _) {
-            var _;
             if (this.m_startAppID && this.m_startAppID != _)
               throw new Error(
                 "Cannot switch starting AppID from " +
@@ -671,14 +664,9 @@
                 const _ = await _().get(_, {
                   params: _,
                   withCredentials: !0,
-                  cancelToken: _ == null ? void 0 : _.token,
+                  cancelToken: _?.token,
                 });
-                if (
-                  ((_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.success) == _._ &&
-                  _.data.apps
-                ) {
+                if (_?.data?.success == _._ && _.data.apps) {
                   (0, _._)(() => {
                     if (_ > this.m_rgApps.length)
                       for (let _ = this.m_rgApps.length; _ < _; _++)
@@ -690,7 +678,7 @@
                     (_ -= _);
                   continue;
                 }
-                _ = (0, _._)(_ == null ? void 0 : _.data);
+                _ = (0, _._)(_?.data);
               } catch (_) {
                 _ = (0, _._)(_);
               }
@@ -712,7 +700,6 @@
             );
           }
           async FetchClans(_, _, _) {
-            var _;
             this.m_nHighestClanOffsetRequested = _ + _;
             const _ = {
                 offset: _,
@@ -724,20 +711,15 @@
               const _ = await _().get(_, {
                 params: _,
                 withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
+                cancelToken: _?.token,
               });
-              if (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.success) == _._ &&
-                _.data.accountids
-              ) {
+              if (_?.data?.success == _._ && _.data.accountids) {
                 this.m_rgClanAccountIDs = this.m_rgClanAccountIDs.concat(
                   _.data.accountids.map(Number),
                 );
                 return;
               }
-              _ = (0, _._)(_ == null ? void 0 : _.data);
+              _ = (0, _._)(_?.data);
             } catch (_) {
               _ = (0, _._)(_);
             }
@@ -846,17 +828,14 @@
               _ = (0, _.useRef)(new Set()),
               _ = (0, _.useRef)(0);
             (0, _.useEffect)(() => {
-              _._.LoadOGGClanInfoForAppID(_).then((_) => {
-                var _;
-                return console.log(
+              _._.LoadOGGClanInfoForAppID(_).then((_) =>
+                console.log(
                   "Loaded app",
                   _,
-                  _ == null ? void 0 : _.group_name,
-                  (_ = _ == null ? void 0 : _.clanSteamID) == null
-                    ? void 0
-                    : _.ConvertTo64BitString(),
-                );
-              });
+                  _?.group_name,
+                  _?.clanSteamID?.ConvertTo64BitString(),
+                ),
+              );
             }, [_]);
             const _ = _._.GetOGGClanInfo(_),
               _ = _ ? _.group_name : _.app.name,
@@ -880,7 +859,7 @@
                       _.announcementClanSteamID.GetAccountID()),
               ),
               _ = _.length,
-              _ = !_ && _ > 0 && (_ == null ? void 0 : _.clanSteamID),
+              _ = !_ && _ > 0 && _?.clanSteamID,
               _ = async () => {
                 const _ = _;
                 _(_ + _), _(!0);

@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Αυτό το προϊόν δεν είναι συμβατό με συστήματα macOS που χρησιμοποιούν επεξεργαστές Intel. <1>Κάντε κλικ εδώ</1> για περισσότερες πληροφορίες.",
     "AppPage_PurchaseNote_Mod_Title": "Τροποποίηση φτιαγμένη από την Κοινότητα",
     "AppPage_PurchaseNote_Mod_LearnMore": "Κάντε κλικ <1>εδώ</1> για να μάθετε περισσότερα σχετικά με τις τροποποιήσεις στο Steam.",
+    "AppPage_Franchise_SeeAll": "Δείτε όλα τα παιχνίδια %1$s στο Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Δείτε όλη τη σειρά %1$s στο Steam",
     "AppPage_Series_ContentTitle": "Περιεχόμενο σειράς",
     "AppPage_Series_ExtraContent": "Επιπλέον περιεχόμενο",
     "AppPage_Series_SeasonName_Season": "Σεζόν %1$s",

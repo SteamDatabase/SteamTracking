@@ -593,6 +593,7 @@
     "Workshop_ItemAdmin_Ban_Preset_NoCounterNotice": "Sin contranotificación",
     "Workshop_ItemAdmin_Ban_Preset_NoCounterNoticeReason": "Sin respuesta a la contranotificación. Contenido restaurado.",
     "Workshop_ItemAdmin_Ban_Category_Malware": "Malware",
+    "Workshop_ItemAdmin_Ban_Category_Other": "Otras",
     "Workshop_ItemAdmin_Ban_Category_MalwareDesc": "Este artículo también se denunciará a Valve para su revisión.",
     "Workshop_ItemAdmin_ClearContentCheckResults": "Borrar resultados de revisión de contenido",
     "Workshop_ItemAdmin_MarkAsSuspicious": "Marcar como sospechoso",

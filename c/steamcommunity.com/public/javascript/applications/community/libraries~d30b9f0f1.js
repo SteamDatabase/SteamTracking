@@ -96,9 +96,9 @@
             throw new Error(_(0));
           if (
             (typeof _ == "function" &&
-              typeof _ == "undefined" &&
+              typeof _ > "u" &&
               ((_ = _), (_ = void 0)),
-            typeof _ != "undefined")
+            typeof _ < "u")
           ) {
             if (typeof _ != "function") throw new Error(_(1));
             return _(_)(_, _);
@@ -138,7 +138,7 @@
           }
           function _(_) {
             if (!_(_)) throw new Error(_(7));
-            if (typeof _.type == "undefined") throw new Error(_(8));
+            if (typeof _.type > "u") throw new Error(_(8));
             if (typeof _.type != "string") throw new Error(_(17));
             if (_) throw new Error(_(9));
             try {
@@ -198,7 +198,7 @@
           return _(_, _, _);
         }
         function _(_) {
-          typeof console != "undefined" &&
+          typeof console < "u" &&
             typeof console.error == "function" &&
             console.error(_);
           try {
@@ -230,13 +230,13 @@
             if (
               typeof _(void 0, {
                 type: _.INIT,
-              }) == "undefined"
+              }) > "u"
             )
               throw new Error(_(12));
             if (
               typeof _(void 0, {
                 type: _.PROBE_UNKNOWN_ACTION(),
-              }) == "undefined"
+              }) > "u"
             )
               throw new Error(_(13));
           });
@@ -264,7 +264,7 @@
                 _ = _[_],
                 _ = _[_],
                 _ = _(_, _);
-              if (typeof _ == "undefined") {
+              if (typeof _ > "u") {
                 const _ = _ && _.type;
                 throw new Error(_(14));
               }
@@ -398,7 +398,7 @@
           return _(_) === _;
         }
         function _(_) {
-          typeof console != "undefined" &&
+          typeof console < "u" &&
             typeof console.error == "function" &&
             console.error(_);
           try {
@@ -687,13 +687,12 @@
           return _;
         }
         var _ = () =>
-            typeof window != "undefined" &&
-            typeof window.document != "undefined" &&
-            typeof window.document.createElement != "undefined",
+            typeof window < "u" &&
+            typeof window.document < "u" &&
+            typeof window.document.createElement < "u",
           _ = _(),
           _ = () =>
-            typeof navigator != "undefined" &&
-            navigator.product === "ReactNative",
+            typeof navigator < "u" && navigator.product === "ReactNative",
           _ = _(),
           _ = () => (_ || _ ? _.useLayoutEffect : _.useEffect),
           _ = _();
@@ -795,11 +794,10 @@
           return _;
         }
         var _ = Symbol.for("react-redux-context"),
-          _ = typeof globalThis != "undefined" ? globalThis : {};
+          _ = typeof globalThis < "u" ? globalThis : {};
         function _() {
-          var _;
           if (!_.createContext) return {};
-          const _ = (_ = _[_]) != null ? _ : (_[_] = new Map());
+          const _ = (_[_] ??= new Map());
           let _ = _.get(_.createContext);
           return (
             _ || ((_ = _.createContext(null)), _.set(_.createContext, _)), _
@@ -896,7 +894,7 @@
                 }, [_]),
                 _ = _.useMemo(() => {
                   let _ = _;
-                  return _ != null && _.Consumer, _;
+                  return _?.Consumer, _;
                 }, [_, _]),
                 _ = _.useContext(_),
                 _ = !!_.store && !!_.store.getState && !!_.store.dispatch,
@@ -1285,9 +1283,7 @@ ${_.current.stack}
           ],
           _ = "__@hello-pangea/dnd-disable-dev-warnings";
         function _(_, _) {
-          _ ||
-            (typeof window != "undefined" && window[_]) ||
-            console[_](..._(_));
+          _ || (typeof window < "u" && window[_]) || console[_](..._(_));
         }
         const _ = _.bind(null, "warn"),
           _ = _.bind(null, "error");
@@ -4808,9 +4804,9 @@ ${_.current.stack}
           };
         };
         const _ =
-            typeof window != "undefined" &&
-            typeof window.document != "undefined" &&
-            typeof window.document.createElement != "undefined"
+            typeof window < "u" &&
+            typeof window.document < "u" &&
+            typeof window.document.createElement < "u"
               ? _.useLayoutEffect
               : _.useEffect,
           _ = () => {
@@ -5276,7 +5272,7 @@ ${_.current.stack}
         };
         const _ = (() => {
             const _ = "visibilitychange";
-            return typeof document == "undefined"
+            return typeof document > "u"
               ? _
               : [_, `ms${_}`, `webkit${_}`, `moz${_}`, `o${_}`].find(
                   (_) => `on${_}` in document,
@@ -5904,7 +5900,7 @@ ${_.current.stack}
         }
         const _ = (() => {
           const _ = "matches";
-          return typeof document == "undefined"
+          return typeof document > "u"
             ? _
             : [_, "msMatchesSelector", "webkitMatchesSelector"].find(
                 (_) => _ in Element.prototype,
@@ -8784,7 +8780,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           _ = !0,
           _ = {}.hasOwnProperty,
           _ = _.createContext(
-            typeof HTMLElement != "undefined"
+            typeof HTMLElement < "u"
               ? (0, _._)({
                   key: "css",
                 })
@@ -9178,7 +9174,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
         (_ = _),
           (_.TYPED_ARRAY_SUPPORT = _()),
           !_.TYPED_ARRAY_SUPPORT &&
-            typeof console != "undefined" &&
+            typeof console < "u" &&
             typeof console.error == "function" &&
             console.error(
               "This browser lacks typed array (Uint8Array) support which is required by `buffer` v5.x. Use `buffer` v4.x if you require old browser support.",
@@ -9242,7 +9238,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           if (
             _(_, ArrayBuffer) ||
             (_ && _(_.buffer, ArrayBuffer)) ||
-            (typeof SharedArrayBuffer != "undefined" &&
+            (typeof SharedArrayBuffer < "u" &&
               (_(_, SharedArrayBuffer) ||
                 (_ && _(_.buffer, SharedArrayBuffer))))
           )
@@ -9256,7 +9252,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           const _ = _(_);
           if (_) return _;
           if (
-            typeof Symbol != "undefined" &&
+            typeof Symbol < "u" &&
             Symbol.toPrimitive != null &&
             typeof _[Symbol.toPrimitive] == "function"
           )
@@ -10607,7 +10603,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           return _;
         })();
         function _(_) {
-          return typeof BigInt == "undefined" ? _ : _;
+          return typeof BigInt > "u" ? _ : _;
         }
         function _() {
           throw new Error("BigInt not supported");
@@ -10684,7 +10680,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
         });
         const _ = (_) => {
             if (
-              typeof _ == "undefined" ||
+              typeof _ > "u" ||
               _ === null ||
               typeof _ == "bigint" ||
               Number.isNaN(_) ||
@@ -10693,12 +10689,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             )
               return;
             if (["string", "number", "boolean"].includes(typeof _)) return _;
-            if (Array.isArray(_))
-              return _.map(_).filter((_) => typeof _ != "undefined");
+            if (Array.isArray(_)) return _.map(_).filter((_) => typeof _ < "u");
             const _ = {};
             for (const [_, _] of Object.entries(_)) {
               const _ = _(_);
-              typeof _ != "undefined" && (_[_] = _);
+              typeof _ < "u" && (_[_] = _);
             }
             return _;
           },
@@ -10802,9 +10797,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                               ? 8
                               : -1,
           _ = (_, _, _) => {
-            var _, _;
-            const _ = (_ = _.keyOrdersMap) == null ? void 0 : _.get(_),
-              _ = (_ = _.keyOrdersMap) == null ? void 0 : _.get(_);
+            const _ = _.keyOrdersMap?.get(_),
+              _ = _.keyOrdersMap?.get(_);
             if (_ !== void 0 && _ !== void 0) return _ - _;
             const _ = _(_),
               _ = _(_);
@@ -10843,7 +10837,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           _ = (_) =>
             Array.isArray(_) ? "array" : _ === null ? "null" : typeof _,
           _ = (_, _, _, _, _, _, _, _) => {
-            var _, _, _, _, _, _, _, _, _, _, _, _;
             const _ = {
                 ignoreCase: _.ignoreCase,
               },
@@ -10863,13 +10856,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 });
                 for (let _ = 1; _ < _.length; _++)
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "modify",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -10886,13 +10873,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 });
                 for (let _ = 1; _ < _.length; _++)
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "modify",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -10910,13 +10891,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 });
                 for (let _ = 1; _ < _.length; _++)
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "remove",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -10939,13 +10914,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 });
                 for (let _ = 1; _ < _.length; _++)
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "add",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -10961,12 +10930,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               });
               for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    (((_ = (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                    null
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "equal",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
@@ -10977,12 +10941,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               });
               for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    (((_ = (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                    null
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "equal",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
@@ -10995,7 +10954,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               }),
             ),
           _ = (_, _, _ = 1, _, _) => {
-            var _, _, _, _, _, _, _, _, _, _, _, _;
             if (_ > (_.maxDepth || 1 / 0))
               return [
                 [
@@ -11027,13 +10985,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   text: "",
                 }),
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "add",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -11043,12 +10995,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 `);
               for (let _ = 0; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    (((_ = (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                    null
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "remove",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 }),
@@ -11138,13 +11085,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   for (let _ = 0; _ < _.length; _++) {
                     const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                     _.push({
-                      level:
-                        _ +
-                        (((_ =
-                          (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "remove",
                       text: _ ? _ : `"${_}": ${_}`,
                     }),
@@ -11171,13 +11112,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                       text: "",
                     }),
                       _.push({
-                        level:
-                          _ +
-                          (((_ =
-                            (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                          null
-                            ? void 0
-                            : _.length) || 0),
+                        level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                         type: "add",
                         text: _ ? _ : `"${_}": ${_}`,
                       });
@@ -11195,13 +11130,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 for (let _ = 0; _ < _.length; _++) {
                   const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                   _.push({
-                    level:
-                      _ +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "remove",
                     text: _ ? _ : `"${_}": ${_}`,
                   }),
@@ -11228,13 +11157,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                     text: "",
                   }),
                     _.push({
-                      level:
-                        _ +
-                        (((_ =
-                          (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "add",
                       text: _ ? _ : `"${_}": ${_}`,
                     });
@@ -11339,13 +11262,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
         }
         var _ = _,
           _ =
-            typeof globalThis != "undefined"
+            typeof globalThis < "u"
               ? globalThis
-              : typeof window != "undefined"
+              : typeof window < "u"
                 ? window
-                : typeof __webpack_require__._ != "undefined"
+                : typeof __webpack_require__._ < "u"
                   ? __webpack_require__._
-                  : typeof self != "undefined"
+                  : typeof self < "u"
                     ? self
                     : {},
           _ = typeof _ == "object" && _ && _.Object === Object && _,
@@ -11465,7 +11388,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
         }
         var _ = _;
         function _(_, _) {
-          return _ == null ? void 0 : _[_];
+          return _?.[_];
         }
         var _ = _,
           _ = _,
@@ -11895,7 +11818,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
         function _(_, _) {
           var _ = typeof _;
           return (
-            (_ = _ == null ? _ : _),
+            (_ = _ ?? _),
             !!_ &&
               (_ == "number" || (_ != "symbol" && _.test(_))) &&
               _ > -1 &&
@@ -12320,7 +12243,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               });
           },
           _ = (_, _, _, _, _, _) => {
-            var _, _, _, _;
             const _ = Array(_.length + 1)
                 .fill(0)
                 .map(() => Array(_.length + 1).fill(0)),
@@ -12466,14 +12388,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 `);
                   for (let _ = _.length - 1; _ >= 0; _--)
                     _.unshift({
-                      level:
-                        _ +
-                        1 +
-                        (((_ =
-                          (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "remove",
                       text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                     }),
@@ -12500,14 +12415,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                     text: "",
                   }),
                     _.unshift({
-                      level:
-                        _ +
-                        1 +
-                        (((_ =
-                          (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "add",
                       text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                     });
@@ -12533,7 +12441,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           return !0;
         }
         function _(_, _, _, _, _, _, _ = [], _ = []) {
-          var _, _, _, _;
           if (!_.compareKey) return _(_, _, _, _, _, _, _, _);
           const _ = (_) => _.every((_) => _(_) === "object");
           if (!_(_) || !_(_) || !_(_, _.compareKey) || !_(_, _.compareKey))
@@ -12666,13 +12573,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 `);
               for (let _ = 0; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    1 +
-                    (((_ = (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                    null
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "remove",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 }),
@@ -12694,14 +12595,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   text: "",
                 }),
                   _.push({
-                    level:
-                      _ +
-                      1 +
-                      (((_ =
-                        (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "add",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   });
@@ -12753,7 +12647,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           return [_, _];
         }
         const _ = (_, _, _, _, _, _, _ = [], _ = []) => {
-            var _, _, _, _;
             if (
               ((_ = [..._]),
               (_ = [..._]),
@@ -12865,14 +12758,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 `);
                   for (let _ = 0; _ < _.length; _++)
                     _.push({
-                      level:
-                        _ +
-                        1 +
-                        (((_ =
-                          (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "remove",
                       text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                     }),
@@ -12892,14 +12778,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                       text: "",
                     }),
                       _.push({
-                        level:
-                          _ +
-                          1 +
-                          (((_ =
-                            (_ = _[_].match(/^\s+/)) == null ? void 0 : _[0]) ==
-                          null
-                            ? void 0
-                            : _.length) || 0),
+                        level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                         type: "add",
                         text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                       });
@@ -12915,7 +12794,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               return (
                 _.sort((_, _) =>
                   _(_, _, {
-                    ignoreCase: _ == null ? void 0 : _.ignoreCase,
+                    ignoreCase: _?.ignoreCase,
                   }),
                 ),
                 _.map((_) => _(_, _))
@@ -12996,15 +12875,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 (_[_].comma = !0);
           }
           diff(_, _) {
-            var _, _;
             this.detectCircular(_),
               this.detectCircular(_),
               (this.options.arrayDiffMethod === "unorder-normal" ||
                 this.options.arrayDiffMethod === "unorder-lcs") &&
                 ((_ = _(_, this.options)), (_ = _(_, this.options))),
               this.options.undefinedBehavior === "ignore" &&
-                ((_ = (_ = _(_)) != null ? _ : null),
-                (_ = (_ = _(_)) != null ? _ : null));
+                ((_ = _(_) ?? null), (_ = _(_) ?? null));
             let _ = [],
               _ = [];
             const _ = _(_),
@@ -13019,19 +12896,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               )
                 .split(`
 `)
-                .map((_) => {
-                  var _, _;
-                  return {
-                    level:
-                      ((_ = (_ = _.match(/^\s+/)) == null ? void 0 : _[0]) ==
-                      null
-                        ? void 0
-                        : _.length) || 0,
-                    type: "remove",
-                    text: _.replace(/^\s+/, "").replace(/,$/g, ""),
-                    comma: _.endsWith(","),
-                  };
-                })),
+                .map((_) => ({
+                  level: _.match(/^\s+/)?.[0]?.length || 0,
+                  type: "remove",
+                  text: _.replace(/^\s+/, "").replace(/,$/g, ""),
+                  comma: _.endsWith(","),
+                }))),
                 (_ = _(
                   _,
                   void 0,
@@ -13041,19 +12911,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 )
                   .split(`
 `)
-                  .map((_) => {
-                    var _, _;
-                    return {
-                      level:
-                        ((_ = (_ = _.match(/^\s+/)) == null ? void 0 : _[0]) ==
-                        null
-                          ? void 0
-                          : _.length) || 0,
-                      type: "add",
-                      text: _.replace(/^\s+/, "").replace(/,$/g, ""),
-                      comma: _.endsWith(","),
-                    };
-                  }));
+                  .map((_) => ({
+                    level: _.match(/^\s+/)?.[0]?.length || 0,
+                    type: "add",
+                    text: _.replace(/^\s+/, "").replace(/,$/g, ""),
+                    comma: _.endsWith(","),
+                  })));
               const _ = _.length,
                 _ = _.length;
               (_ = _(
@@ -13925,7 +13788,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             showAll: "\u2B65 Show all unchanged lines",
           },
           _ = (_) => {
-            var _, _, _, _;
             const [_, _] = _.diff,
               _ = _.useMemo(
                 () =>
@@ -13941,19 +13803,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               _ = _.lineNumbers
                 ? `calc(${String(_.length).length}ch + 16px)`
                 : 0,
-              _ = (_ = _.indent) != null ? _ : _,
+              _ = _.indent ?? _,
               _ = _ === "tab" ? "	" : " ",
               _ = _ === "tab" ? 1 : _,
               _ = {
-                mode:
-                  ((_ = _.inlineDiffOptions) == null ? void 0 : _.mode) ||
-                  "char",
-                wordSeparator:
-                  ((_ = _.inlineDiffOptions) == null
-                    ? void 0
-                    : _.wordSeparator) || "",
+                mode: _.inlineDiffOptions?.mode || "char",
+                wordSeparator: _.inlineDiffOptions?.wordSeparator || "",
               },
-              _ = (_ = _.hideUnchangedLines) != null ? _ : !1,
+              _ = _.hideUnchangedLines ?? !1,
               {
                 scrollContainer: _ = "body",
                 itemHeight: _ = 18,
@@ -14081,7 +13938,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                       : ","),
                 ),
               _ = (_, _) => {
-                var _, _, _, _;
                 const _ = _.current[_],
                   _ = _.current[_],
                   [_, _] =
@@ -14094,16 +13950,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   _ = _(_, _.text, 0),
                   _ = _(_, _),
                   _ = _(_, _),
-                  _ =
-                    _.type !== "equal" &&
-                    (_ = (_ = _.bgColour) == null ? void 0 : _[_.type]) != null
-                      ? _
-                      : "",
-                  _ =
-                    _.type !== "equal" &&
-                    (_ = (_ = _.bgColour) == null ? void 0 : _[_.type]) != null
-                      ? _
-                      : "";
+                  _ = _.type !== "equal" ? (_.bgColour?.[_.type] ?? "") : "",
+                  _ = _.type !== "equal" ? (_.bgColour?.[_.type] ?? "") : "";
                 return _.createElement(
                   "tr",
                   {
@@ -14228,7 +14076,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 ];
               },
               _ = (_) => {
-                var _, _, _;
                 if (_ && _)
                   return _.createElement(
                     "tr",
@@ -14248,18 +14095,12 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   return _.current.map((_, _) =>
                     _(_, _, 0, _.current.length, _),
                   );
-                const _ =
-                    (_ = _ == null ? void 0 : _.clientHeight) != null ? _ : 0,
-                  _ = (_ = _ == null ? void 0 : _.scrollTop) != null ? _ : 0,
+                const _ = _?.clientHeight ?? 0,
+                  _ = _?.scrollTop ?? 0,
                   _ = _ + _;
                 let _ = _.current,
-                  _ = (_ = _ == null ? void 0 : _.offsetTop) != null ? _ : 0;
-                for (
-                  ;
-                  _ != null &&
-                  _.offsetParent &&
-                  (_ == null ? void 0 : _.offsetParent) !== _;
-                )
+                  _ = _?.offsetTop ?? 0;
+                for (; _?.offsetParent && _?.offsetParent !== _; )
                   (_ = _.offsetParent), (_ += _.offsetTop);
                 if (_ > _ || _ + _.current < _)
                   return _.createElement(
@@ -14374,9 +14215,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             _ !== void 0 && (_.exports = _);
         })(this, function _() {
           var _ =
-              typeof self != "undefined"
+              typeof self < "u"
                 ? self
-                : typeof window != "undefined"
+                : typeof window < "u"
                   ? window
                   : _ !== void 0
                     ? _
@@ -14565,7 +14406,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               _.call(this, _);
             var _,
               _,
-              _ = typeof FileReader != "undefined";
+              _ = typeof FileReader < "u";
             (this.stream = function (_) {
               (this._input = _),
                 (_ = _.slice || _.webkitSlice || _.mozSlice),
@@ -15594,7 +15435,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 });
             }),
             (_._ = function (_) {
-              typeof Symbol != "undefined" &&
+              typeof Symbol < "u" &&
                 Symbol.toStringTag &&
                 Object.defineProperty(_, Symbol.toStringTag, {
                   value: "Module",
@@ -15811,7 +15652,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             function _(_) {
               var _ = (function () {
                 if (
-                  typeof Reflect == "undefined" ||
+                  typeof Reflect > "u" ||
                   !Reflect.construct ||
                   Reflect.construct.sham
                 )
@@ -16120,7 +15961,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             function _(_) {
               var _ = (function () {
                 if (
-                  typeof Reflect == "undefined" ||
+                  typeof Reflect > "u" ||
                   !Reflect.construct ||
                   Reflect.construct.sham
                 )
@@ -16404,7 +16245,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             function _(_) {
               var _ = (function () {
                 if (
-                  typeof Reflect == "undefined" ||
+                  typeof Reflect > "u" ||
                   !Reflect.construct ||
                   Reflect.construct.sham
                 )
@@ -16679,7 +16520,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             function _(_) {
               var _ = (function () {
                 if (
-                  typeof Reflect == "undefined" ||
+                  typeof Reflect > "u" ||
                   !Reflect.construct ||
                   Reflect.construct.sham
                 )
@@ -17205,11 +17046,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                               : Object(_.findDOMNode)(_);
                         }),
                         (_.enableOnClickOutside = function () {
-                          if (typeof document != "undefined" && !_[_._uid]) {
+                          if (typeof document < "u" && !_[_._uid]) {
                             _ === void 0 &&
                               (_ = (function () {
                                 if (
-                                  typeof window != "undefined" &&
+                                  typeof window < "u" &&
                                   typeof window.addEventListener == "function"
                                 ) {
                                   var _ = !1,
@@ -17279,7 +17120,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                         (_.disableOnClickOutside = function () {
                           delete _[_._uid];
                           var _ = _[_._uid];
-                          if (_ && typeof document != "undefined") {
+                          if (_ && typeof document < "u") {
                             var _ = _.props.eventTypes;
                             _.forEach || (_ = [_]),
                               _.forEach(function (_) {
@@ -17312,10 +17153,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                         return _.getInstance ? _.getInstance() : _;
                       }),
                       (_.componentDidMount = function () {
-                        if (
-                          typeof document != "undefined" &&
-                          document.createElement
-                        ) {
+                        if (typeof document < "u" && document.createElement) {
                           var _ = this.getInstance();
                           if (
                             _ &&
@@ -17480,7 +17318,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             function _(_) {
               var _ = (function () {
                 if (
-                  typeof Reflect == "undefined" ||
+                  typeof Reflect > "u" ||
                   !Reflect.construct ||
                   Reflect.construct.sham
                 )
@@ -18113,7 +17951,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                 );
               })(_._.Component);
             function _(_, _) {
-              var _ = typeof window != "undefined" && window.console;
+              var _ = typeof window < "u" && window.console;
               _ && (_ || (_ = "warn"), _[_]("***react-datetime:" + _));
             }
             _(_, "propTypes", {
@@ -18677,7 +18515,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                   },
                   [_, _, _, _, _, _, _],
                 ),
-                _ = (_ == null ? void 0 : _.action) === "initial-input-focus",
+                _ = _?.action === "initial-input-focus",
                 _ = (0, _.useMemo)(
                   function () {
                     var _ = "";
@@ -19344,7 +19182,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           return "ontouchstart" in window || navigator.maxTouchPoints;
         }
         var _ = !!(
-            typeof window != "undefined" &&
+            typeof window < "u" &&
             window.document &&
             window.document.createElement
           ),
@@ -19506,7 +19344,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           _ = _;
         function _(_) {
           var _;
-          return typeof window != "undefined" && window.navigator != null
+          return typeof window < "u" && window.navigator != null
             ? _.test(
                 ((_ = window.navigator.userAgentData) === null || _ === void 0
                   ? void 0
@@ -20746,8 +20584,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                             },
                           ),
                           this.hasValue()
-                            ? (_ == null ? void 0 : _.action) ===
-                                "initial-input-focus" && {
+                            ? _?.action === "initial-input-focus" && {
                                 "aria-describedby":
                                   this.getElementId("live-region"),
                               }
@@ -21380,8 +21217,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                             action: "initial-input-focus",
                           }),
                           (_ = !_)),
-                        (_ == null ? void 0 : _.action) ===
-                          "initial-input-focus" && (_ = null),
+                        _?.action === "initial-input-focus" && (_ = null),
                         (0, _._)(
                           (0, _._)((0, _._)({}, _), _),
                           {},
@@ -21536,7 +21372,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               _ = _.className;
             return {
               css: _(_, _),
-              className: _(_ != null ? _ : {}, _(_, _), _),
+              className: _(_ ?? {}, _(_, _), _),
             };
           };
         function _(_, _, _) {
@@ -21648,7 +21484,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
               return (_ = !0);
             },
           },
-          _ = typeof window != "undefined" ? window : {};
+          _ = typeof window < "u" ? window : {};
         _.addEventListener &&
           _.removeEventListener &&
           (_.addEventListener("p", _, _), _.removeEventListener("p", _, !1));
@@ -21875,7 +21711,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                         isFixedPosition: _,
                         controlHeight: _,
                       });
-                    _(_.maxHeight), _(_.placement), _ == null || _(_.placement);
+                    _(_.maxHeight), _(_.placement), _?.(_.placement);
                   }
                 },
                 [_, _, _, _, _, _, _],
@@ -22068,23 +21904,16 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
                     var _ = _(_),
                       _ = _ === "fixed" ? 0 : window.pageYOffset,
                       _ = _[_] + _;
-                    (_ !== (_ == null ? void 0 : _.offset) ||
-                      _.left !== (_ == null ? void 0 : _.rect.left) ||
-                      _.width !== (_ == null ? void 0 : _.rect.width)) &&
+                    (_ !== _?.offset ||
+                      _.left !== _?.rect.left ||
+                      _.width !== _?.rect.width) &&
                       _({
                         offset: _,
                         rect: _,
                       });
                   }
                 },
-                [
-                  _,
-                  _,
-                  _,
-                  _ == null ? void 0 : _.offset,
-                  _ == null ? void 0 : _.rect.left,
-                  _ == null ? void 0 : _.rect.width,
-                ],
+                [_, _, _, _?.offset, _?.rect.left, _?.rect.width],
               );
             (0, _._)(
               function () {
@@ -23490,8 +23319,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           var _ =
             _ == null
               ? null
-              : (typeof Symbol != "undefined" && _[Symbol.iterator]) ||
-                _["@@iterator"];
+              : (typeof Symbol < "u" && _[Symbol.iterator]) || _["@@iterator"];
           if (_ != null) {
             var _,
               _,
@@ -23548,7 +23376,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         function _(_) {
           if (
-            (typeof Symbol != "undefined" && _[Symbol.iterator] != null) ||
+            (typeof Symbol < "u" && _[Symbol.iterator] != null) ||
             _["@@iterator"] != null
           )
             return Array.from(_);

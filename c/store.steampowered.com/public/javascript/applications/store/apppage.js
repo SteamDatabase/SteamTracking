@@ -1,7 +1,238 @@
 (() => {
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
-    [57333, 38843],
+    [57333, 38843, 4874],
     {
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = 10;
+        function _(_) {
+          return _ === void 0 ? !1 : _ <= _;
+        }
+        const _ = new WeakMap();
+        function _(_, _) {
+          for (const _ of _.groups) {
+            let _ = _.get(_.achievements);
+            _ ||
+              ((_ = new Map(
+                _.achievements.map((_) => [_.api_name, _.internal_key]),
+              )),
+              _.set(_.achievements, _));
+            const _ = _.get(_);
+            if (_ !== void 0) return _;
+          }
+        }
+        function _(_) {
+          return (_?.groups_achievable?.total ?? 0) != 0;
+        }
+        function _(_, _, _) {
+          return _.achievements.some(
+            (_) => (!_.archived && !_.archived) || _(_, _, _),
+          );
+        }
+        function _(_, _, _) {
+          return (
+            _?.achievements[_.internal_key]?.unlocked == !0 ||
+            (_?.some((_) => _?.achievements[_.internal_key]?.unlocked == !0) ??
+              !1)
+          );
+        }
+        function _(_, _) {
+          if (Array.isArray(_))
+            return (
+              _.length > 1 ||
+              (_.length == 1 && _[0] !== k_DefaultAchievementGroup)
+            );
+          {
+            const _ = _.groups.filter((_) => _(_, _));
+            return (
+              _.length > 1 ||
+              (_.length == 1 && _[0]._ !== k_DefaultAchievementGroup)
+            );
+          }
+        }
+        function _(_, _) {
+          return new Intl.DateTimeFormat(GetPreferredLocales(), {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hourCycle: _ ? "h23" : void 0,
+          }).format(new Date(_ * 1e3));
+        }
+        function _(_, _) {
+          return AchievementsLocalization.Localize(
+            "#Achievements_PercentFormat",
+            _.toLocaleString(GetPreferredLocales(), _),
+          );
+        }
+        function _(_, _) {
+          const _ = _ > 0 ? _ / _ : 0,
+            _ = _(_ * 100, {
+              maximumFractionDigits: _ > 100 ? 1 : 0,
+            });
+          return {
+            percentUnlocked: _,
+            percentUnlockedStr: _,
+          };
+        }
+        function _(_) {
+          return _ === void 0
+            ? ""
+            : _(_, {
+                maximumFractionDigits: 1,
+                minimumFractionDigits: 1,
+              });
+        }
+        function _(_) {
+          return AchievementsLocalization.Localize(
+            "#Achievements_Tooltip_GlobalUnlockPercent",
+            _(_),
+          );
+        }
+        function _(_, _) {
+          return _
+            ? {
+                name: AchievementsLocalization.Localize(
+                  "#AchievementSpoilerName",
+                ),
+                description: AchievementsLocalization.Localize(
+                  "#AchievementSpoilerDescription",
+                ),
+              }
+            : {
+                name: _.name ?? "",
+                description: _.description ?? "",
+              };
+        }
+        function _(_) {
+          return _ >= 17891964e-1;
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          if (_ !== void 0)
+            return {
+              "--icon-size": _ == "fill" ? "100%" : `${_}px`,
+            };
+        }
+        function _(_) {
+          const {
+              imgURL: _,
+              glow: _,
+              pauseAnimation: _,
+              hidden: _,
+              alt: _,
+              hideNativeTooltip: _ = !1,
+              className: _,
+              size: _,
+              ..._
+            } = _,
+            [_, _] = _.useState(!1),
+            _ = _.useCallback((_) => {
+              _ &&
+                (_.complete
+                  ? _(!0)
+                  : (_.onload = () => {
+                      _(!0);
+                    }));
+            }, []),
+            _ = _ && (_ || _),
+            _ = _(_);
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(
+              _().AchievementIconWrapper,
+              _,
+              _ && _().RareAchievementNoAnimation,
+            ),
+            style: _,
+            ..._,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().RareAchievementIconGlowContainerRoot,
+                  children: (0, _.jsx)("div", {
+                    className: _().RareAchievementIconGlowContainer,
+                    children: (0, _.jsx)("div", {
+                      className: _().RareAchievementIconGlow,
+                    }),
+                  }),
+                }),
+              _
+                ? (0, _.jsx)("div", {
+                    className: (0, _._)(_().HiddenLabel, _ && _().IconGlow),
+                    children: "?",
+                  })
+                : (0, _.jsx)("img", {
+                    ref: _,
+                    className: (0, _._)(_().Icon, _ && _().IconGlow),
+                    src: _ == "" ? void 0 : _,
+                    loading: "lazy",
+                    alt: _,
+                    title: _ ? void 0 : _,
+                  }),
+            ],
+          });
+        }
+        function _(_) {
+          const {
+              achievement: _,
+              globalUnlockPercentage: _,
+              unlocked: _,
+              forceVisible: _ = !1,
+              hidden: _,
+              ..._
+            } = _,
+            _ = _ ?? (_ ? !1 : !_ && _.hidden),
+            _ = (_ ? _.icon_achieved : _.icon_unachieved) ?? "",
+            _ = _ && _(_),
+            _ = _ ? _._.Localize("#AchievementSpoilerName") : (_.name ?? " ");
+          return (0, _.jsx)(_, {
+            hidden: _,
+            imgURL: _,
+            glow: _,
+            alt: _,
+            ..._,
+          });
+        }
+        function _(_) {
+          const {
+              hidden: _,
+              forceVisible: _,
+              size: _,
+              className: _,
+              style: _,
+              onClick: _,
+              unlocked: _,
+              ..._
+            } = _,
+            { appid: _, achievement: _, progress: _ } = _,
+            _ = useGlobalAchievementPercentage(_, _.internal_key);
+          return jsx(AchievementToolTip, {
+            ..._,
+            children: jsx(_, {
+              achievement: _,
+              globalUnlockPercentage: _,
+              unlocked: _ ?? _?.unlocked ?? !1,
+              hidden: _,
+              forceVisible: _,
+              size: _,
+              className: _,
+              style: _,
+              onClick: _,
+              hideNativeTooltip: !0,
+            }),
+          });
+        }
+      },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
@@ -18,6 +249,118 @@
         function _(_) {
           return _(_);
         }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94507, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 29815, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79200, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 81142, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 42394, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 80559, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 92885, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 22754, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 89627, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 8281, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 53749, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 88180, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 13303, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28757, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 88468, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 82558, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3894, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 35957, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 43081, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 63822, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 16470, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 46488, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 50272, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 88794, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15171, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 34341, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61844, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 71088, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 49829, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 95917, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 15151, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 53460, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const _ = (0, _._)(
+            {
+              ..._,
+              className: _.className,
+            },
+            _,
+          );
+          return (0, _.jsx)("img", {
+            ..._,
+          });
+        }
+        const _ = [
+          ..._._,
+          {
+            prop: "objectFit",
+            className: _.ObjectFit,
+            cssProperty: "--object-fit",
+          },
+          {
+            prop: "objectPosition",
+            className: _.ObjectPosition,
+            cssProperty: "--object-position",
+          },
+        ];
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -288,6 +631,44 @@
           Positioner: _,
           FocusManager: _,
         };
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
+          return (0, _.jsx)("div", {
+            role: "separator",
+            "aria-orientation": _,
+            ...(0, _._)(
+              {
+                ..._,
+                size: _,
+                className: _.Separator,
+              },
+              _,
+            ),
+          });
+        }
+        const _ = [
+          ..._._,
+          {
+            prop: "size",
+            className: (_) => _[`Size-${_}`],
+            responsive: !0,
+          },
+          {
+            prop: "color",
+            cssProperty: (_) => ["--separator-color", (0, _._)(_)],
+          },
+        ];
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -770,6 +1151,2092 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
+        __webpack_require__._(module_exports),
+          __webpack_require__._(module_exports, {
+            GameRatingBlock: () => _,
+          });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = {};
+        (_.arabic = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 3143, 19))),
+          (_.brazilian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 38043, 19))),
+          (_.bulgarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 60308, 19))),
+          (_.czech = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 99922, 19))),
+          (_.danish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 32134, 19))),
+          (_.dutch = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 47899, 19))),
+          (_.english = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 31513, 19))),
+          (_.finnish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 86910, 19))),
+          (_.french = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 67007, 19))),
+          (_.german = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 84597, 19))),
+          (_.greek = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 79169, 19))),
+          (_.hungarian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 28968, 19))),
+          (_.indonesian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 17427, 19))),
+          (_.italian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 65521, 19))),
+          (_.japanese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 49560, 19))),
+          (_.koreana = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 68858, 19))),
+          (_.latam = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 73682, 19))),
+          (_.malay = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 20073, 19))),
+          (_.norwegian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 93341, 19))),
+          (_.polish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 48634, 19))),
+          (_.portuguese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 64794, 19))),
+          (_.romanian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3380, 19))),
+          (_.russian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 37940, 19))),
+          (_.sc_schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 72910, 19))),
+          (_.schinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 3431, 19))),
+          (_.spanish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 12737, 19))),
+          (_.swedish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 61123, 19))),
+          (_.tchinese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 25804, 19))),
+          (_.thai = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 25401, 19))),
+          (_.turkish = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 2593, 19))),
+          (_.ukrainian = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 94219, 19))),
+          (_.vietnamese = () =>
+            __webpack_require__._("chunkid").then(_._.bind(_, 95784, 19)));
+        async function _(_) {
+          if (_[_]) return _[_]();
+        }
+        const _ = (0, _._)(_);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 14,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 0,
+          _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9;
+        function _(_) {
+          return "unknown ERatingAgency ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EAppRatingSource ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown ERatingDescriptorImage ( " + _ + " )";
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.descriptors || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [1, 2, 6], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    descriptors: {
+                      _: 1,
+                      _: !0,
+                      _: !0,
+                      _: _._.readString,
+                      _: _._.writeRepeatedString,
+                    },
+                    interactive_elements: {
+                      _: 2,
+                      _: !0,
+                      _: !0,
+                      _: _._.readString,
+                      _: _._.writeRepeatedString,
+                    },
+                    official_id: {
+                      _: 3,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    esrb_online_music_not_rated: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    esrb_online_interactions_not_rated: {
+                      _: 5,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    descriptor_images: {
+                      _: 6,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "AppRatingAuxData";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.rating_agency || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    rating_agency: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    rating: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    source: {
+                      _: 3,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    banned: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    required_age: {
+                      _: 5,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    use_age_gate: {
+                      _: 6,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    aux_data: {
+                      _: 7,
+                      _: _,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "AppRating";
+          }
+        }
+        var _ = __webpack_require__("chunkid");
+        function _(_) {
+          return "unknown EContentSurveyMatureTag ( " + _ + " )";
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.elanguage || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    elanguage: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    text: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ContentSurveyLocalizedText";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.customer_notes || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    customer_notes: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    customer_notes_ai: {
+                      _: 2,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    mature_tags: {
+                      _: 3,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                    has_mature_content: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    ai_external_service_name: {
+                      _: 5,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    ai_external_service_url: {
+                      _: 6,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ContentSurveyDisclosure";
+          }
+        }
+        const _ = 1,
+          _ = 2,
+          _ = 3,
+          _ = 4,
+          _ = 5,
+          _ = 6,
+          _ = 7,
+          _ = 8,
+          _ = 9,
+          _ = 10,
+          _ = 11,
+          _ = 12,
+          _ = 13,
+          _ = 14,
+          _ = 15,
+          _ = 16,
+          _ = 17,
+          _ = 18,
+          _ = 19,
+          _ = 20,
+          _ = 21,
+          _ = 22,
+          _ = 23,
+          _ = 24,
+          _ = 25,
+          _ = 26,
+          _ = 27,
+          _ = 28,
+          _ = 29,
+          _ = 30,
+          _ = 31,
+          _ = 32,
+          _ = 33,
+          _ = 34,
+          _ = 35,
+          _ = 36,
+          _ = 37,
+          _ = 38,
+          _ = 39,
+          _ = 40,
+          _ = 41,
+          _ = 42,
+          _ = 43,
+          _ = 44,
+          _ = 45,
+          _ = 46,
+          _ = 47,
+          _ = 48,
+          _ = 49,
+          _ = 50,
+          _ = 60,
+          _ = 61,
+          _ = 62,
+          _ = 63,
+          _ = 64,
+          _ = 80,
+          _ = 81,
+          _ = 82,
+          _ = 83,
+          _ = 90,
+          _ = 91,
+          _ = 95;
+        function _(_) {
+          return "unknown EPriceConversionMethod ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EProtoBillingType ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EProtoActivationCode ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EProtoProposalState ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EContentDescriptorSurveyState ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown ERatingQuestionaireCategory ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EGeneratedGameRatingVersion ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EGameContentCategory ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EContentSurveySection ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EContentSurveySource ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EContentSurveyChildAppType ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EContentSurveyInheritAction ( " + _ + " )";
+        }
+        function _(_) {
+          return "unknown EGeneratedAIContentType ( " + _ + " )";
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.method || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    method: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CProductInfo_ForceEmitPriceConversion";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.survey_section || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    survey_section: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    time_reviewed: {
+                      _: 2,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    accountid_reviewer: {
+                      _: 3,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "SurveySectionReviewed";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.content_category || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [2], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    content_category: {
+                      _: 1,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    questionaire_categories: {
+                      _: 2,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "GeneratedGameContent";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.rating_agency || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [4], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    rating_agency: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    rating: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    required_age: {
+                      _: 3,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    descriptors: {
+                      _: 4,
+                      _: !0,
+                      _: !0,
+                      _: _._.readString,
+                      _: _._.writeRepeatedString,
+                    },
+                    banned: {
+                      _: 5,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "GeneratedGameRating";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.timestamp_generated || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [3, 4], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    timestamp_generated: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    generated_version: {
+                      _: 2,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    ratings: {
+                      _: 3,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    content_categories: {
+                      _: 4,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "GeneratedGameRatings";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.desc_code_generated || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    desc_code_generated: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    desc_copyright_infringement_guarantee: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    desc_content_moderation_strategy: {
+                      _: 3,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    external_service_name: {
+                      _: 4,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    external_service_url: {
+                      _: 5,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    desc_external_service_how_content_available_to_players: {
+                      _: 6,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    desc_external_service_monetization: {
+                      _: 7,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "AIContentSurvey";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.disclosure || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [2], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    disclosure: {
+                      _: 1,
+                      _: _,
+                    },
+                    interactive_elements: {
+                      _: 2,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ContentSurveyAuxData";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ContentDescriptor";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.surveyid || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, [3, 11, 14, 15], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    surveyid: {
+                      _: 1,
+                      _: _._.readUint64String,
+                      _: _._.writeUint64String,
+                    },
+                    state: {
+                      _: 2,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    descriptors: {
+                      _: 3,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    timestamp_started: {
+                      _: 4,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    timestamp_updated: {
+                      _: 5,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    timestamp_finished: {
+                      _: 6,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    accountid: {
+                      _: 7,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    developer_notes: {
+                      _: 8,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    keyvalues: {
+                      _: 9,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    ratings: {
+                      _: 10,
+                      _: _,
+                    },
+                    categories: {
+                      _: 11,
+                      _: !0,
+                      _: !0,
+                      _: _._.readEnum,
+                      pbr: _._.readPackedEnum,
+                      _: _._.writeRepeatedEnum,
+                    },
+                    ai_survey: {
+                      _: 12,
+                      _: _,
+                    },
+                    internal_notes: {
+                      _: 13,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    all_ratings: {
+                      _: 14,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    sections_reviewed: {
+                      _: 15,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    disclosure: {
+                      _: 16,
+                      _: _,
+                    },
+                    inherited_surveyid: {
+                      _: 17,
+                      _: _._.readUint64String,
+                      _: _._.writeUint64String,
+                    },
+                    started_from_scratch: {
+                      _: 18,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    survey_aux_data: {
+                      _: 19,
+                      _: _,
+                    },
+                    source: {
+                      _: 20,
+                      _: _._.readEnum,
+                      _: _._.writeEnum,
+                    },
+                    flags: {
+                      _: 21,
+                      _: _._.readUint64String,
+                      _: _._.writeUint64String,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ContentDescriptorSurvey";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.appid || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    appid: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    include_descriptors: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_keyvalues: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_categories: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_ai_survey: {
+                      _: 5,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_all_ratings: {
+                      _: 6,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAppContentDescriptors_GetActiveSurvey_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.appid || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    appid: {
+                      _: 1,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    include_descriptors: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_keyvalues: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_categories: {
+                      _: 4,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_ai_survey: {
+                      _: 5,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_all_ratings: {
+                      _: 6,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAppContentDescriptors_GetWorkingSurvey_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.surveyid || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    surveyid: {
+                      _: 1,
+                      _: _._.readUint64String,
+                      _: _._.writeUint64String,
+                    },
+                    survey: {
+                      _: 2,
+                      _: _,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAppContentDescriptors_GetSurvey_Response";
+          }
+        }
+        var _;
+        ((_) => {
+          function _(_, _, _) {
+            return _.SendMsg(
+              "AppContentDescriptor.GetActiveSurvey#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 7,
+              },
+            );
+          }
+          _.GetActiveSurvey = _;
+          function _(_, _, _) {
+            return _.SendMsg(
+              "AppContentDescriptor.GetWorkingSurvey#1",
+              (0, _._)(_, _, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 7,
+              },
+            );
+          }
+          _.GetWorkingSurvey = _;
+        })(_ || (_ = {}));
+        var _ = __webpack_require__("chunkid");
+        const _ = new Map([
+            [_, "esrb"],
+            [_, "pegi"],
+            [_, "bbfc"],
+            [_, "usk"],
+            [_, "oflc"],
+            [_, "nzoflc"],
+            [_, "cero"],
+            [_, "kgrb"],
+            [_, "gmedia"],
+            [_, "dejus"],
+            [_, "mda"],
+            [_, "fpb"],
+            [_, "csrr"],
+            [_, "crl"],
+            [_, "agcom"],
+            [_, "igrs"],
+            [_, "steam_germany"],
+            [_, "steam_australia"],
+            [_, "cadpa"],
+          ]),
+          _ = "crl",
+          _ = "dejus",
+          _ = "0",
+          _ = "pending";
+        function _(_) {
+          return _.get(_) ?? "";
+        }
+        function _(_) {
+          return _ ? _.Localize("#GameRating_Agency_" + _.toUpperCase()) : "";
+        }
+        function _(_, _) {
+          return !_ || !_
+            ? ""
+            : _.Localize("#GameRating_Rating_" + _ + "_" + _);
+        }
+        function _(_) {
+          return _.Localize("#GameRating_RARSText_" + _);
+        }
+        const _ = new Map([
+          [
+            _,
+            {
+              strFile: "love",
+              strToken: "#GameRating_DescriptorImage_CERO_Love",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "sexual_content",
+              strToken: "#GameRating_DescriptorImage_CERO_SexualContent",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "violence",
+              strToken: "#GameRating_DescriptorImage_CERO_Violence",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "horror",
+              strToken: "#GameRating_DescriptorImage_CERO_Horror",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "drinking_smoking",
+              strToken: "#GameRating_DescriptorImage_CERO_DrinkingSmoking",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "gambling",
+              strToken: "#GameRating_DescriptorImage_CERO_Gambling",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "crime",
+              strToken: "#GameRating_DescriptorImage_CERO_Crime",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "drugs",
+              strToken: "#GameRating_DescriptorImage_CERO_Drugs",
+            },
+          ],
+          [
+            _,
+            {
+              strFile: "language",
+              strToken: "#GameRating_DescriptorImage_CERO_Language",
+            },
+          ],
+        ]);
+        function _(_) {
+          const _ = _.get(_);
+          if (_)
+            return {
+              strURL: `${_._.STORE_CDN_URL}public/shared/images/game_ratings/CERO/descriptors/${_.strFile}.png`,
+              strAlt: _.Localize(_.strToken),
+            };
+        }
+        function _(_) {
+          const _ = _.get(_);
+          if (_)
+            return `[img]${Config.MEDIA_CDN_URL}store/Ratings/CERO/${_.strFile}.png[/img]`;
+        }
+        function _(_) {
+          const _ = [];
+          for (const _ of _) {
+            const _ = _.toLowerCase();
+            for (const [_, _] of _)
+              if (_.includes(`cero/${_.strFile}.png`)) {
+                _.push(_);
+                break;
+              }
+          }
+          return _;
+        }
+        const _ = new Map([
+          [_, "#GameRating_ContentCategoryDescriptor_60"],
+          [_, "#GameRating_ContentCategoryDescriptor_61"],
+          [_, "#GameRating_ContentCategoryDescriptor_62"],
+          [_, "#GameRating_ContentCategoryDescriptor_63"],
+        ]);
+        function _(_) {
+          return _.map((_) => _.get(_))
+            .filter((_) => _ !== void 0)
+            .map((_) => _.Localize(_));
+        }
+        const _ = new Map([
+          ["in-game purchases", _],
+          ["in-game purchases (includes random items)", _],
+          ["users interact", _],
+        ]);
+        function _(_) {
+          const _ = [];
+          for (const _ of _) {
+            const _ = _.trim();
+            if (!_) continue;
+            const _ = _.get(_.toLowerCase()),
+              _ = _ !== void 0 ? _([_])[0] : _;
+            _.includes(_) || _.push(_);
+          }
+          return _;
+        }
+        const _ = new Map([
+          [_, "#GameRating_ContentCategoryDescriptor_60"],
+          [_, "#GameRating_ContentCategoryDescriptor_61"],
+          [_, "#GameRating_ContentCategoryDescriptor_62"],
+          [_, "#GameRating_ContentCategoryDescriptor_63"],
+          [_, "#GameRating_ContentCategoryDescriptor_64"],
+        ]);
+        function _(_) {
+          const _ = [];
+          for (const _ of _)
+            if (
+              _.content_category ===
+              EGameContentCategory.k_EGameContentCategory_InteractiveElements
+            )
+              for (const _ of _.questionaire_categories ?? []) {
+                const _ = _.get(_);
+                _ && _.push(GameRatingLocalization.Localize(_));
+              }
+          return _;
+        }
+        function _(_) {
+          const { rating: _ } = _,
+            { strType: _, strRating: _ } = _;
+          if (_ === _)
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(_().GameRating, "GameRating"),
+              children: [
+                (0, _.jsx)(_._, {
+                  direction: "row",
+                  justify: "between",
+                  className: _().Title,
+                  children: _.Localize("#GameRating_Pending"),
+                }),
+                (0, _.jsx)(_, {
+                  strType: _,
+                }),
+              ],
+            });
+          const _ = _ === _ ? [_(_)] : _.rgDescriptors,
+            _ = _.bOnlineMusicNotRated || _.bOnlineInteractionsNotRated;
+          return (0, _.jsxs)(_._, {
+            direction: "column",
+            gap: "3",
+            className: _().GameRating,
+            children: [
+              _ === _
+                ? _.nRequiredAge > 0 &&
+                  (0, _.jsx)(_._, {
+                    size: "3",
+                    contrast: "title",
+                    className: (0, _._)(_().RequiredAge, "RequiredAge"),
+                    children: _.Localize(
+                      "#GameRating_Age_DEJUS",
+                      _.nRequiredAge,
+                    ),
+                  })
+                : _.bBanned && (0, _.jsx)(_, {}),
+              !_.bBanned &&
+                (0, _.jsxs)(_._, {
+                  direction: "row",
+                  gap: "3",
+                  className: _().Details,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().Icon,
+                      children: (0, _.jsx)(_, {
+                        rating: _,
+                      }),
+                    }),
+                    (0, _.jsxs)(_._, {
+                      direction: "column",
+                      gap: "2",
+                      children: [
+                        _.length > 0 &&
+                          (0, _.jsx)(_._, {
+                            _: "p",
+                            contrast: "body",
+                            className: _().DescriptorText,
+                            children: _.join(`
+`),
+                          }),
+                        (0, _.jsx)(_, {
+                          rating: _,
+                        }),
+                        _ &&
+                          (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              _.bOnlineMusicNotRated &&
+                                (0, _.jsx)(_._, {
+                                  _: "p",
+                                  contrast: "body",
+                                  className: _().DescriptorText,
+                                  children: _.Localize(
+                                    "#GameRating_OnlineMusicNotice",
+                                  ),
+                                }),
+                              _.bOnlineInteractionsNotRated &&
+                                (0, _.jsx)(_._, {
+                                  _: "p",
+                                  contrast: "body",
+                                  className: _().DescriptorText,
+                                  children: _.Localize(
+                                    "#GameRating_OnlineInteractionsNotice",
+                                  ),
+                                }),
+                            ],
+                          }),
+                        (0, _.jsx)(_, {
+                          rating: _,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              (0, _.jsx)(_, {
+                strType: _,
+              }),
+            ],
+          });
+        }
+        function _() {
+          return (0, _.jsx)(_._, {
+            direction: "row",
+            justify: "between",
+            className: _().Title,
+            children: _.LocalizeReact(
+              "#GameRating_ContentClassification",
+              (0, _.jsx)("span", {
+                className: _().Banned,
+                children: _.Localize("#GameRating_Banned"),
+              }),
+            ),
+          });
+        }
+        function _(_) {
+          const {
+            strType: _,
+            strRating: _,
+            strImageURL: _,
+            strImageTarget: _,
+          } = _.rating;
+          if (_ === _)
+            return (0, _.jsx)("div", {
+              className: _().AllAges,
+              children: _.Localize("#GameRating_AllAges"),
+            });
+          if (!_) return null;
+          const _ = _(_, _);
+          return _
+            ? (0, _.jsx)(_._, {
+                href: _,
+                onOKActionDescription: _,
+                children: (0, _.jsx)(_._, {
+                  src: _,
+                  alt: _,
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                src: _,
+                alt: _,
+              });
+        }
+        function _(_) {
+          const _ = (_.rating.rgDescriptorImages ?? [])
+            .map((_) => _(_))
+            .filter((_) => _ !== void 0);
+          return _.length === 0
+            ? null
+            : (0, _.jsx)(_._, {
+                direction: "row",
+                wrap: "wrap",
+                align: "start",
+                gap: "1",
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      src: _.strURL,
+                      alt: _.strAlt,
+                      title: _.strAlt,
+                    },
+                    _,
+                  ),
+                ),
+              });
+        }
+        function _(_) {
+          const {
+              rgRatingInteractiveElements: _,
+              rgSurveyInteractiveElements: _,
+            } = _.rating,
+            _ = _.length > 0,
+            _ = _ ? _ : _;
+          return _.length === 0
+            ? null
+            : (0, _.jsx)(_, {
+                strTitle: _.Localize(
+                  _
+                    ? "#GameRating_InteractiveElements_Title"
+                    : "#GameRating_ContentCategory_InteractiveElements",
+                ),
+                rgElements: _,
+              });
+        }
+        function _(_) {
+          return (0, _.jsxs)("div", {
+            className: _().GameRating,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().Title,
+                children: _.Localize("#GameRating_ContentCategories_Title"),
+              }),
+              (0, _.jsx)(_, {
+                strTitle: _.Localize(
+                  "#GameRating_ContentCategory_InteractiveElements",
+                ),
+                rgElements: _.rgInteractiveElements,
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          return (0, _.jsxs)(_._, {
+            children: [
+              (0, _.jsx)(_._, {
+                _: "p",
+                contrast: "note",
+                children: _.strTitle,
+              }),
+              (0, _.jsx)(_._, {
+                _: "p",
+                contrast: "body",
+                className: _().DescriptorText,
+                children: _.rgElements.join(
+                  _.Localize("#GameRating_ListDelimiter"),
+                ),
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const _ = _(_.strType);
+          return _
+            ? (0, _.jsx)(_._, {
+                contrast: "body",
+                size: "2",
+                className: "Agency",
+                children: _.Localize("#GameRating_RatingBy", _),
+              })
+            : null;
+        }
+        function _(_) {
+          return {
+            strType: _.type || (_.agency !== void 0 ? _(_.agency) : ""),
+            strRating: _.rating ?? "",
+            bBanned: !!_.banned,
+            nRequiredAge: _.required_age ?? 0,
+            rgDescriptors: _.descriptors ?? [],
+            rgDescriptorImages: _.descriptor_images ?? [],
+            bOnlineMusicNotRated: !!_.esrb_online_music_not_rated,
+            bOnlineInteractionsNotRated: !!_.esrb_online_interactions_not_rated,
+            rgRatingInteractiveElements: _(
+              (_.interactive_elements ?? "").split(/[\r\n,]+/),
+            ),
+            rgSurveyInteractiveElements: _(_.survey_interactive_elements ?? []),
+            strImageURL: _(_),
+            strImageTarget: _.image_target || void 0,
+          };
+        }
+        function _(_) {
+          if (_.image_url)
+            return `${_._.STORE_CDN_URL}${_.image_url}?${_.image_target ? "v=3" : "v=2"}`;
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          const {
+              _: _,
+              eLayout: _ = "rightcolumn",
+              bRatingAllowed: _,
+              bHideRatingTitle: _,
+            } = _,
+            { data: _, isPending: _ } = (0, _._)(_ ? _ : void 0),
+            _ = _ && _,
+            _ = _ && !!_?.rating,
+            _ = _(_ || _ ? void 0 : _),
+            _ = (0, _._)();
+          if ((_.use(_.Ready()), _)) return null;
+          const _ = _ === "details";
+          let _ = _ ? "block app_ratings_block" : "block";
+          return (
+            _ && (_ = "game_rating_area details_block"),
+            _ && _
+              ? (0, _.jsxs)("div", {
+                  className: _,
+                  children: [
+                    !_ &&
+                      (0, _.jsx)("div", {
+                        className: "responsive_block_header ratings_title",
+                        style: _
+                          ? {
+                              display: "none",
+                            }
+                          : void 0,
+                        children: _.Localize("#GameRating_Ratings_Title"),
+                      }),
+                    (0, _.jsx)(_, {
+                      rating: _(_),
+                    }),
+                  ],
+                })
+              : _.length === 0
+                ? null
+                : (0, _.jsx)("div", {
+                    className: _,
+                    children: (0, _.jsx)(_, {
+                      rgInteractiveElements: _,
+                    }),
+                  })
+          );
+        }
+        function _(_) {
+          const { data: _ } = (0, _._)(_);
+          return _(_?.interactive_elements ?? []);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
         });
@@ -909,6 +3376,896 @@
                   alt: _,
                 });
           }
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = (_, _) =>
+            _ === void 0
+              ? ["get_family_group_for_user ", _]
+              : ["get_family_group_for_user ", _, _],
+          _ = (_) => ["get_family_group", _],
+          _ = (_) => ["get_family_history", _],
+          _ = (_) => ["get_users_sharing_device", _],
+          _ = (_) => ["get_shopping_cart_contents", _],
+          _ = (_) => ["recent_playtime_sessions", _],
+          _ = (_) => ["get_playtime_summary", _],
+          _ = (_, _) => ["get_invite_check_results", _, _];
+        function _(_, _, _) {
+          return _
+            ? ["get_purchase_requests", _, _, _]
+            : _
+              ? ["get_purchase_requests", _, _]
+              : ["get_purchase_requests", _];
+        }
+        function _(_, _) {
+          if (_ != _._) throw _;
+        }
+        const _ = _.createContext({
+          staleTimeMs: 1 / 0,
+        });
+        function _(_) {
+          const { staleTimeMs: _, children: _ } = _,
+            _ = _.useMemo(
+              () => ({
+                staleTimeMs: _ ?? 3e3,
+              }),
+              [_],
+            );
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
+        }
+        function _(_ = !1) {
+          return _((0, _._)(), _);
+        }
+        function _(_, _ = !1) {
+          const _ = (0, _._)(),
+            _ = (0, _.useContext)(_).staleTimeMs;
+          return (0, _._)({
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_steamid(_),
+                _.Body().set_include_family_group_response(_);
+              const _ = await _._.GetFamilyGroupForUser(_, _);
+              return _(_.GetEResult(), "GetFamilyGroupForUser"), _.Body();
+            },
+            staleTime: _,
+            enabled: !!_,
+            placeholderData: _ ? void 0 : new _._(),
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _.useContext)(_).staleTimeMs;
+          return (0, _._)({
+            queryKey: _(_),
+            queryFn: async () => {
+              if (_) {
+                const _ = _._.Init(_._);
+                _.Body().set_family_groupid(_);
+                const _ = await _._.GetFamilyGroup(_, _);
+                return _(_.GetEResult(), "GetFamilyGroup"), _.Body();
+              } else throw _._;
+            },
+            staleTime: _,
+          });
+        }
+        function _() {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async (_) => {
+              const _ = _._.Init(_._);
+              _.Body().set_name(_);
+              const _ = await _._.CreateFamilyGroup(_, _);
+              return _(_.GetEResult(), "CreateFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              });
+            },
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_);
+              const _ = await _._.DeleteFamilyGroup(_, _);
+              return _(_.GetEResult(), "DeleteFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async (_) => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_), _.Body().set_name(_);
+              const _ = await _._.ModifyFamilyGroupDetails(_, _);
+              return _(_.GetEResult(), "ModifyFamilyGroupDetails"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_receiver_steamid(_),
+                _.Body().set_receiver_role(_);
+              const _ = await _._.InviteToFamilyGroup(_, _);
+              return _(_.GetEResult(), "InviteToFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_);
+              const _ = await _._.JoinFamilyGroup(_, _);
+              return _(_.GetEResult(), "JoinFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_), _.Body().set_steamid_to_cancel(_);
+              const _ = await _._.CancelFamilyGroupInvite(_, _);
+              return _(_.GetEResult(), "CancelFamilyGroupInvite"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_), _.Body().set_steamid_to_remove(_);
+              const _ = await _._.RemoveFromFamilyGroup(_, _);
+              return _(_.GetEResult(), "RemoveFromFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = (0, _._)("clientsessionid"),
+                _ = _ && BigInt("0x" + _).toString(),
+                _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_client_instance_id(_ ?? void 0);
+              const _ = await _._.GetUsersSharingDevice(_, _);
+              return _(_.GetEResult(), "GetUsersSharingDevice"), _.Body();
+            },
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return _(_)
+            .data?.members()
+            .find((_) => _.steamid() == _)
+            ?.role();
+        }
+        function _(_, _) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_use_account_cart(!0),
+                _.Body().set_store_country_code(_);
+              const _ = await _._.RequestPurchase(_, _);
+              return _(_.GetEResult(), "RequestPurchase"), _.Body();
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _ !== void 0 && _.Body().set_rt_include_completed_since(_);
+              const _ = await _._.GetPurchaseRequests(_, _);
+              return _(_.GetEResult(), "GetPurchaseRequests"), _.Body();
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            queryKey: _(_, _, _),
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_), _.Body().add_request_ids(_);
+              const _ = await _._.GetPurchaseRequests(_, _);
+              return _(_.GetEResult(), "GetPurchaseRequests"), _.Body();
+            },
+            select: (_) =>
+              _.toObject().requests?.find(({ request_id: _ }) => _ === _),
+          });
+        }
+        function _(_, _, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_request_id(_),
+                _.Body().set_action(_);
+              const _ = await _._.RespondToRequestedPurchase(_, _);
+              return _(_.GetEResult(), "RespondToRequestedPurchase"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        const _ = (0, _.createContext)({
+          errorMessage: null,
+          setErrorMessage: (_) => {},
+        });
+        function _(_, _) {
+          return _;
+        }
+        var _ = ((_) => (
+          (_[(_.k_EFamilyQueryNone = 0)] = "k_EFamilyQueryNone"),
+          (_[(_.k_EFamilyQueryLoadFamily = 1)] = "k_EFamilyQueryLoadFamily"),
+          (_[(_.k_EFamilyQueryJoinFamily = 2)] = "k_EFamilyQueryJoinFamily"),
+          (_[(_.k_EFamilyQueryDeclineInvite = 3)] =
+            "k_EFamilyQueryDeclineInvite"),
+          (_[(_.k_EFamilyQueryInviteToFamily = 4)] =
+            "k_EFamilyQueryInviteToFamily"),
+          (_[(_.k_EFamilyQueryCreateFamily = 5)] =
+            "k_EFamilyQueryCreateFamily"),
+          (_[(_.k_EFamilyQueryDeleteFamily = 6)] =
+            "k_EFamilyQueryDeleteFamily"),
+          (_[(_.k_EFamilyQueryModifyFamily = 7)] =
+            "k_EFamilyQueryModifyFamily"),
+          (_[(_.k_EFamilyQueryRemoveFromFamily = 8)] =
+            "k_EFamilyQueryRemoveFromFamily"),
+          (_[(_.k_EFamilyQueryGetUsersSharingDevice = 9)] =
+            "k_EFamilyQueryGetUsersSharingDevice"),
+          (_[(_.k_EFamilyQueryPurchaseRequest = 10)] =
+            "k_EFamilyQueryPurchaseRequest"),
+          (_[(_.k_EFamilyQueryGetPurchaseRequests = 11)] =
+            "k_EFamilyQueryGetPurchaseRequests"),
+          (_[(_.k_EFamilyQueryDeclinePurchaseRequest = 12)] =
+            "k_EFamilyQueryDeclinePurchaseRequest"),
+          (_[(_.k_EFamilyQueryLoadHistory = 13)] = "k_EFamilyQueryLoadHistory"),
+          (_[(_.k_EFamilyQueryLoadCart = 14)] = "k_EFamilyQueryLoadCart"),
+          (_[(_.k_EFamilyQuerySetCooldownOverrides = 15)] =
+            "k_EFamilyQuerySetCooldownOverrides"),
+          (_[(_.k_EFamilyQueryResendInvite = 16)] =
+            "k_EFamilyQueryResendInvite"),
+          _
+        ))(_ || {});
+        const _ = {
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_ErrorInternalServerError",
+          [_._]: "#FamilyManagement_AccessDenied",
+          [_._]: "#FamilyManagement_ErrorNoMatch",
+          [_._]: "#FamilyManagement_ErrorAccountDisabled",
+          [_._]: "#FamilyManagement_ErrorNoActiveInvite",
+          [_._]: "#FamilyManagement_PartnerAccountCannotJoinAsChild",
+          [_._]: "#FamilyManagement_ErrorFamilySizeLimitExceeded",
+          [_._]: "#FamilyManagement_ErrorLimitExceeded",
+          [_._]: "#FamilyManagement_ErrorAccountActivityLimitExceeded",
+          [_._]: "#FamilyManagement_LimitedAccount_CreateFamily",
+          [_._]: {
+            5: "#FamilyManagement_RateLimitExceeded_CreateFamily",
+          },
+          [_._]: {
+            5: "#FamilyManagement_RegionLocked_CreateFamily",
+            2: "#FamilyManagement_RegionLocked_JoinFamily",
+          },
+          [_._]: {
+            2: "#FamilyManagement_Household_JoinFamily",
+          },
+          [_._]: {
+            5: "#FamilyManagement_ErrorAccountLimitExceeded_CreateFamily",
+            2: "#FamilyManagement_ErrorAccountLimitExceeded_JoinFamily",
+            8: "#FamilyManagement_ErrorAccountLimitExceeded_RemoveFromFamily",
+          },
+          [_._]: {
+            2: "#FamilyManagement_ErrorDuplicateRequest_JoinFamily",
+            4: "#FamilyManagement_ErrorDuplicateRequest_InviteToFamily",
+            8: "#FamilyManagement_ErrorDuplicateRequest_RemoveFromFamily",
+          },
+          [_._]: {
+            4: "#FamilyManagement_ErrorFailed_NoAdditionalDetails",
+          },
+        };
+        function _(_, _, _, _) {
+          let _ = "";
+          if (_ in _) {
+            const _ = _[_];
+            if (typeof _ == "string") _ = (0, _._)(_, ..._);
+            else {
+              const _ = _;
+              _ in _ && (_ = (0, _._)(_[_], ..._));
+            }
+          }
+          return _((0, _._)(_, _), _);
+        }
+        function _() {
+          const { setErrorMessage: _ } = (0, _.useContext)(_);
+          return {
+            setErrorMessage: _,
+          };
+        }
+        function _(_, _, _) {
+          const { setErrorMessage: _ } = _(),
+            { isError: _, error: _ } = _,
+            _ = _();
+          (0, _.useEffect)(() => {
+            if (_) {
+              const _ = _,
+                _ = [];
+              if (_ === _._ || _ === _._) {
+                let _;
+                _.isSuccess &&
+                  _.data &&
+                  (_ = _.data.cooldown_seconds_remaining()),
+                  _.push(_(_));
+              }
+              _(_(_, _, _, _));
+            }
+          }, [_, _, _, _, _, _.isSuccess, _.data]);
+        }
+        function _(_) {
+          if (!_) return (0, _._)("#FamilyManagement_LoadingPlaceholder");
+          const _ = {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            weekday: void 0,
+          };
+          return (0, _._)(Date.now() / 1e3 + _, _);
+        }
+        function _(_, _) {
+          const { setErrorMessage: _ } = _();
+          (0, _.useEffect)(() => {
+            _.isError && _((0, _._)(_));
+          }, [_, _.isError, _]);
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_);
+              const _ = await _._.GetChangeLog(_, _);
+              return (
+                _(_.GetEResult(), "GetFamilyGroupChangeLog"), _.Body().changes()
+              );
+            },
+            staleTime: 0,
+          });
+        }
+        function _(_) {
+          const _ = useActiveServiceTransport();
+          return useQuery({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = CProtoBufMsg.Init(CShoppingCart_GetContents_Request);
+              _.Body().set_gidshoppingcart(_);
+              const _ = await ShoppingCartService.GetShoppingCartContents(_, _);
+              return _(_.GetEResult(), "GetShoppingCartContents"), _.Body();
+            },
+          });
+        }
+        function _(_) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient();
+          return useMutation({
+            mutationFn: async (_) => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_SetFamilyCooldownOverrides_Request,
+              );
+              _.Body().set_family_groupid(_), _.Body().set_cooldown_count(_);
+              const _ =
+                await FGS.FamilyGroupsService.SetFamilyCooldownOverrides(_, _);
+              return _(_.GetEResult(), "SetFamilyCooldownOverrides"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          return `${_._.STORE_BASE_URL}cart/purchaserequest/${_}/${_}`;
+        }
+        function _(_) {
+          return `${_._.STORE_BASE_URL}cart/purchaserequested/${_}`;
+        }
+        function _(_, _) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient();
+          return useMutation({
+            mutationFn: async () => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_CreateFamilyGroup_Request,
+              );
+              _.Body().set_steamid(_), _.Body().set_name(_);
+              const _ = await FGS.FamilyGroupsService.CreateFamilyGroup(_, _);
+              return (
+                _(_.GetEResult(), "ForceCreateFamilyGroup"),
+                _.Body().family_groupid()
+              );
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              });
+            },
+          });
+        }
+        function _(_, _, _, _) {
+          return [
+            "get_shared_library_apps",
+            _,
+            _?.bIncludeOwn,
+            _?.bIncludeExcluded,
+            _?.bIncludeNonGames,
+            _?.for_account_id,
+            _,
+            _,
+          ];
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            { settings: _, mapAppsAllowed: _ } = (0, _._)(_).data,
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            {
+              bIncludeOwn: _,
+              bIncludeExcluded: _,
+              bIncludeNonGames: _,
+              for_account_id: _,
+            } = _ ?? {},
+            _ = _?.enabled !== void 0 ? _.enabled : !0,
+            _ = _(_, _, _, _),
+            _ = (_) => !(0, _._)(_.appid(), _, _, _);
+          return (0, _._)({
+            queryKey: _,
+            queryFn: async () => {
+              const _ = _._.Init(_._);
+              if (
+                (_.Body().set_family_groupid(_),
+                _.Body().set_include_own(_),
+                _.Body().set_include_excluded(_),
+                _.Body().set_language(_._.LANGUAGE),
+                _.Body().set_include_non_games(_),
+                _)
+              ) {
+                const _ = _._.InitFromAccountID(_, _._.EUNIVERSE);
+                _.Body().set_steamid(_.ConvertTo64BitString());
+              }
+              const _ = await _._.GetSharedLibraryApps(_, _);
+              return (
+                _(_.GetEResult(), "GetSharedLibraryApps"),
+                _.Body()
+                  .apps()
+                  .filter(_)
+                  .map((_) => _.toObject())
+              );
+            },
+            enabled: !!_ && _,
+            placeholderData: _._,
+            select: _?.select,
+          });
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            { settings: _ } = (0, _._)(_).data ?? {},
+            _ = (0, _._)(),
+            _ = _(_, _, _, _);
+          return (0, _.useCallback)(() => {
+            _.invalidateQueries({
+              queryKey: _,
+            });
+          }, [_, _]);
+        }
+        function _(_, _) {
+          let _ = _.sort_as || _.name,
+            _ = _.sort_as || _.name;
+          return (0, _._)(_, _);
+        }
+        function _(_, _) {
+          return _.rt_time_acquired - _.rt_time_acquired || _(_, _);
+        }
+        function _(_, _, _) {
+          if (!_ && _.length === 0) return !0;
+          const _ = _.name?.toLocaleLowerCase(),
+            _ = _.toLocaleLowerCase(),
+            _ = _?.includes(_) || _.appid?.toString() == _;
+          let _ = !0;
+          if (_.content_descriptors) {
+            for (const _ of _)
+              if (!_.content_descriptors.includes(_)) {
+                _ = !1;
+                break;
+              }
+          }
+          return _ && _;
+        }
+        function _(_, _, _, _ = []) {
+          const _ = (0, _.useMemo)(
+              () => _?.filter((_) => _(_, _, _)) || [],
+              [_, _, _],
+            ),
+            _ = (0, _.useCallback)(
+              (_, _) => {
+                let _ = _;
+                switch (_) {
+                  case "alpha-asc":
+                    _ = _;
+                    break;
+                  case "alpha-desc":
+                    _ = (_, _) => _(_, _);
+                    break;
+                  case "date_acquired-asc":
+                    _ = (_, _) => _(_, _);
+                    break;
+                  case "date_acquired-desc":
+                    _ = _;
+                    break;
+                }
+                return _(_, _);
+              },
+              [_],
+            );
+          return (0, _.useMemo)(() => _.slice().sort(_), [_, _]);
+        }
+        function _(_, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async (_) => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_invite_id(_),
+                _.Body().set_nonce(_);
+              const _ = await _._.ConfirmJoinFamilyGroup(_, _);
+              return _(_.GetEResult(), "ConfirmJoinFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _, _) {
+          const _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_),
+                _.Body().set_invite_id(_),
+                _.Body().set_nonce(_);
+              const _ = await _._.ConfirmInviteToFamilyGroup(_, _);
+              return _(_.GetEResult(), "ConfirmInviteToFamilyGroup"), _.Body();
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = useActiveServiceTransport();
+          return useMutation({
+            mutationFn: async () => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_ResendInvitationToFamilyGroup_Request,
+              );
+              _.Body().set_family_groupid(_), _.Body().set_steamid(_);
+              const _ =
+                await FGS.FamilyGroupsService.ResendInvitationToFamilyGroup(
+                  _,
+                  _,
+                );
+              return _(_.GetEResult(), "ResendInvitationToFamilyGroup"), _;
+            },
+          });
+        }
+        function _(_) {
+          let _ = [];
+          _.sort((_, _) => _.time_start - _.time_start);
+          let _ = new Map();
+          for (const _ of _) {
+            let _ = _.get(_.appid);
+            _ === void 0
+              ? _.set(_.appid, _)
+              : _.time_start <= _.time_end
+                ? (_.time_end = Math.max(_.time_end, _.time_end))
+                : (_.push(_), _.set(_.appid, _));
+          }
+          for (const _ of _.values()) _.push(_);
+          return _.sort((_, _) => _.time_start - _.time_start), _;
+        }
+        function _(_) {
+          const _ = (0, _._)();
+          return (0, _._)({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = _._.Init(_.m8g);
+              _.Body().set_steamid(_);
+              const _ = await _.xtC.GetRecentPlaytimeSessionsForChild(_, _);
+              _(_.GetEResult(), "GetRecentPlaytimeSessionsForChild");
+              let _ = _.Body().toObject().sessions || [];
+              return _(_);
+            },
+          });
+        }
+        function _(_) {
+          const _ = useActiveServiceTransport();
+          return useQuery({
+            queryKey: _(_),
+            queryFn: async () => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_GetPlaytimeSummary_Request,
+              );
+              _.Body().set_family_groupid(_);
+              const _ = await FGS.FamilyGroupsService.GetPlaytimeSummary(_, _);
+              _(_.GetEResult(), "GetPlaytimeSummary");
+              let _ = _.Body().toObject().entries ?? [];
+              _.sort((_, _) => _.seconds_played - _.seconds_played);
+              let _ = _.Body().toObject().entries_by_owner ?? [];
+              return (
+                _.sort((_, _) => _.seconds_played - _.seconds_played),
+                {
+                  borrowed: _,
+                  loaned: _,
+                }
+              );
+            },
+            enabled: _ !== "0",
+          });
+        }
+        function _(_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async () => {
+              const _ = _._.Init(_._);
+              _.Body().set_family_groupid(_);
+              const _ = await _._.UndeleteFamilyGroup(_, _);
+              return _(_.GetEResult(), "UndeleteFamilyGroup"), _;
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient();
+          return useMutation({
+            mutationFn: async () => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_ForceAcceptInvite_Request,
+              );
+              _.Body().set_family_groupid(_), _.Body().set_steamid(_);
+              const _ = await FGS.FamilyGroupsService.ForceAcceptInvite(_, _);
+              return _(_.GetEResult(), "ForceAcceptInvite"), null;
+            },
+            onSuccess: () => {
+              _.invalidateQueries({
+                queryKey: _(_),
+              }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                }),
+                _.invalidateQueries({
+                  queryKey: _(_),
+                });
+            },
+          });
+        }
+        function _(_, _) {
+          const _ = useActiveServiceTransport();
+          return useQuery({
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = CProtoBufMsg.Init(
+                FGS.CFamilyGroups_GetInviteCheckResults_Request,
+              );
+              _.Body().set_family_groupid(_), _.Body().set_steamid(_);
+              const _ = await FGS.FamilyGroupsService.GetInviteCheckResults(
+                _,
+                _,
+              );
+              return (
+                _(_.GetEResult(), "GetInviteCheckResults"), _.Body().toObject()
+              );
+            },
+          });
+        }
+        function _(_, _) {
+          return _.members().find((_) => _.steamid() == _);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -7560,34 +10917,7 @@
             : null;
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = (0, _._)(
-            {
-              ..._,
-              className: _.className,
-            },
-            _,
-          );
-          return (0, _.jsx)("img", {
-            ..._,
-          });
-        }
-        const _ = [
-          ..._._,
-          {
-            prop: "objectFit",
-            className: _.ObjectFit,
-            cssProperty: "--object-fit",
-          },
-          {
-            prop: "objectPosition",
-            className: _.ObjectPosition,
-            cssProperty: "--object-position",
-          },
-        ];
         function _(_, _) {
           return _._.STORE_ITEM_BASE_URL + _.replace("${FILENAME}", _);
         }
@@ -7616,7 +10946,7 @@
                 children:
                   _ &&
                   _ &&
-                  (0, _.jsx)(_, {
+                  (0, _.jsx)(_._, {
                     width: "100%",
                     src: _(_.asset_url_format, _.edition_comparison),
                     alt: _.name,
@@ -9869,7 +13199,7 @@
                 style: {
                   zIndex: _,
                 },
-                children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
                   height: "100%",
                   width: "100%",
                   src: _,
@@ -10102,7 +13432,7 @@
             children: [
               _ &&
                 _ &&
-                (0, _.jsx)(_, {
+                (0, _.jsx)(_._, {
                   maxHeight: "87px",
                   flexGrow: "0",
                   src: _,
@@ -10334,7 +13664,7 @@
                 className: _().Link,
                 children: [
                   _ &&
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       display: "block",
                       width: "100%",
                       src: _,
@@ -11201,8 +14531,6 @@
           return _?.length
             ? (_.use(_.Ready()),
               (0, _.jsx)(_._, {
-                width: "616px",
-                maxWidth: "100%",
                 marginTop: "5",
                 children: (0, _.jsxs)(_._, {
                   children: [
@@ -11387,12 +14715,6 @@
           });
         }
         function _(_) {
-          return _.filter((_) => !_(_, _)).map((_) => _.descid);
-        }
-        function _(_, _) {
-          return [...new Set([..._, ..._(_)])].sort((_, _) => _ - _);
-        }
-        function _(_) {
           const { appid: _ } = _,
             { data: _ } = (0, _._)({
               appid: _,
@@ -11464,8 +14786,6 @@
             ? null
             : (_.use(_.Ready()),
               (0, _.jsx)(_._, {
-                width: "616px",
-                maxWidth: "100%",
                 marginTop: "5",
                 children: (0, _.jsxs)(_, {
                   children: [
@@ -11743,7 +15063,7 @@
                     paddingY: "1",
                     paddingLeft: "2",
                     paddingRight: "5",
-                    children: (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
                       src: _.strBadgeImage,
                       alt: "",
                       height: "18px",
@@ -11957,7 +15277,7 @@
                       (0, _.jsx)(
                         _._,
                         {
-                          variant: _ === _ ? "default" : "basic",
+                          variant: _ === _ ? "default" : "outline",
                           onClick: () => _(_.index),
                           children: _(_),
                         },
@@ -12158,7 +15478,7 @@
             children: [
               _ &&
                 (0, _.jsx)(_._, {
-                  children: (0, _.jsx)(_, {
+                  children: (0, _.jsx)(_._, {
                     src: _,
                     alt: "",
                     width: "100%",
@@ -14773,25 +18093,21 @@
           const { strURL: _, strText: _, bPlayIcon: _ } = _;
           return (0, _.jsx)(_._, {
             toolTipContent: _,
-            children: (0, _.jsx)(_._, {
-              className: (0, _._)(
-                "btnv6_blue_hoverfade",
-                "btn_small_thin",
-                _().ActionButton,
-              ),
+            children: (0, _.jsxs)(_._, {
               href: _,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: (0, _.jsxs)("span", {
-                children: [
-                  _ &&
-                    (0, _.jsx)("span", {
-                      className: _().PlayIcon,
-                      children: (0, _.jsx)(_.jGG, {}),
-                    }),
-                  _,
-                ],
-              }),
+              openInNewWindow: !0,
+              size: "1",
+              variant: "inverted",
+              color: "sky",
+              width: "100%",
+              children: [
+                _ &&
+                  (0, _.jsx)("span", {
+                    className: _().PlayIcon,
+                    children: (0, _.jsx)(_.jGG, {}),
+                  }),
+                _,
+              ],
             }),
           });
         }
@@ -14839,2011 +18155,8 @@
               };
           }
         }
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3143, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 38043, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 60308, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 99922, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 32134, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 47899, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 31513, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 86910, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 67007, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 84597, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 79169, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 28968, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 17427, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 65521, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 49560, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 68858, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 73682, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 20073, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 93341, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 48634, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64794, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 3380, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 37940, 19))),
-          (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 72910, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 3431, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 12737, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 61123, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 25804, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 25401, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 2593, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 94219, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 95784, 19)));
-        async function _(_) {
-          if (_[_]) return _[_]();
-        }
-        const _ = (0, _._)(_);
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        const _ = 0,
-          _ = 1,
-          _ = 2,
-          _ = 3,
-          _ = 4;
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
-        const _ = 0,
-          _ = 1,
-          _ = 2,
-          _ = 3,
-          _ = 4,
-          _ = 5,
-          _ = 6,
-          _ = 7,
-          _ = 8,
-          _ = 9,
-          _ = 10,
-          _ = 11,
-          _ = 12,
-          _ = 13,
-          _ = 14,
-          _ = 15,
-          _ = 16,
-          _ = 17,
-          _ = 18,
-          _ = 19,
-          _ = 0,
-          _ = 1,
-          _ = 2,
-          _ = 3,
-          _ = 4,
-          _ = 5,
-          _ = 6,
-          _ = 7,
-          _ = 8,
-          _ = 9;
-        function _(_) {
-          return "unknown ERatingAgency ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EAppRatingSource ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown ERatingDescriptorImage ( " + _ + " )";
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.descriptors || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1, 2, 6], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    descriptors: {
-                      _: 1,
-                      _: !0,
-                      _: !0,
-                      _: _._.readString,
-                      _: _._.writeRepeatedString,
-                    },
-                    interactive_elements: {
-                      _: 2,
-                      _: !0,
-                      _: !0,
-                      _: _._.readString,
-                      _: _._.writeRepeatedString,
-                    },
-                    official_id: {
-                      _: 3,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    esrb_online_music_not_rated: {
-                      _: 4,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    esrb_online_interactions_not_rated: {
-                      _: 5,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    descriptor_images: {
-                      _: 6,
-                      _: !0,
-                      _: !0,
-                      _: _._.readEnum,
-                      pbr: _._.readPackedEnum,
-                      _: _._.writeRepeatedEnum,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "AppRatingAuxData";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.rating_agency || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    rating_agency: {
-                      _: 1,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    rating: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    source: {
-                      _: 3,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    banned: {
-                      _: 4,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    required_age: {
-                      _: 5,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    use_age_gate: {
-                      _: 6,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    aux_data: {
-                      _: 7,
-                      _: _,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "AppRating";
-          }
-        }
-        function _(_) {
-          return "unknown EContentSurveyMatureTag ( " + _ + " )";
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.elanguage || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    elanguage: {
-                      _: 1,
-                      _: _._.readInt32,
-                      _: _._.writeInt32,
-                    },
-                    text: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "ContentSurveyLocalizedText";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.customer_notes || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    customer_notes: {
-                      _: 1,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    customer_notes_ai: {
-                      _: 2,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    mature_tags: {
-                      _: 3,
-                      _: !0,
-                      _: !0,
-                      _: _._.readEnum,
-                      pbr: _._.readPackedEnum,
-                      _: _._.writeRepeatedEnum,
-                    },
-                    has_mature_content: {
-                      _: 4,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    ai_external_service_name: {
-                      _: 5,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    ai_external_service_url: {
-                      _: 6,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "ContentSurveyDisclosure";
-          }
-        }
-        const _ = 1,
-          _ = 2,
-          _ = 3,
-          _ = 4,
-          _ = 5,
-          _ = 6,
-          _ = 7,
-          _ = 8,
-          _ = 9,
-          _ = 10,
-          _ = 11,
-          _ = 12,
-          _ = 13,
-          _ = 14,
-          _ = 15,
-          _ = 16,
-          _ = 17,
-          _ = 18,
-          _ = 19,
-          _ = 20,
-          _ = 21,
-          _ = 22,
-          _ = 23,
-          _ = 24,
-          _ = 25,
-          _ = 26,
-          _ = 27,
-          _ = 28,
-          _ = 29,
-          _ = 30,
-          _ = 31,
-          _ = 32,
-          _ = 33,
-          _ = 34,
-          _ = 35,
-          _ = 36,
-          _ = 37,
-          _ = 38,
-          _ = 39,
-          _ = 40,
-          _ = 41,
-          _ = 42,
-          _ = 43,
-          _ = 44,
-          _ = 45,
-          _ = 46,
-          _ = 47,
-          _ = 48,
-          _ = 49,
-          _ = 50,
-          _ = 60,
-          _ = 61,
-          _ = 62,
-          _ = 63,
-          _ = 64,
-          _ = 80,
-          _ = 81,
-          _ = 82,
-          _ = 83,
-          _ = 90,
-          _ = 91,
-          _ = 95;
-        function _(_) {
-          return "unknown EPriceConversionMethod ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EProtoBillingType ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EProtoActivationCode ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EProtoProposalState ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EContentDescriptorSurveyState ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown ERatingQuestionaireCategory ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EGeneratedGameRatingVersion ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EGameContentCategory ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EContentSurveySection ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EContentSurveySource ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EContentSurveyChildAppType ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EContentSurveyInheritAction ( " + _ + " )";
-        }
-        function _(_) {
-          return "unknown EGeneratedAIContentType ( " + _ + " )";
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.method || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    method: {
-                      _: 1,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CProductInfo_ForceEmitPriceConversion";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.survey_section || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    survey_section: {
-                      _: 1,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    time_reviewed: {
-                      _: 2,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    accountid_reviewer: {
-                      _: 3,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "SurveySectionReviewed";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.content_category || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [2], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    content_category: {
-                      _: 1,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    questionaire_categories: {
-                      _: 2,
-                      _: !0,
-                      _: !0,
-                      _: _._.readEnum,
-                      pbr: _._.readPackedEnum,
-                      _: _._.writeRepeatedEnum,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "GeneratedGameContent";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.rating_agency || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [4], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    rating_agency: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    rating: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    required_age: {
-                      _: 3,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    descriptors: {
-                      _: 4,
-                      _: !0,
-                      _: !0,
-                      _: _._.readString,
-                      _: _._.writeRepeatedString,
-                    },
-                    banned: {
-                      _: 5,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "GeneratedGameRating";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.timestamp_generated || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [3, 4], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    timestamp_generated: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    generated_version: {
-                      _: 2,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    ratings: {
-                      _: 3,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    content_categories: {
-                      _: 4,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "GeneratedGameRatings";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.desc_code_generated || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    desc_code_generated: {
-                      _: 1,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    desc_copyright_infringement_guarantee: {
-                      _: 2,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    desc_content_moderation_strategy: {
-                      _: 3,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    external_service_name: {
-                      _: 4,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    external_service_url: {
-                      _: 5,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    desc_external_service_how_content_available_to_players: {
-                      _: 6,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    desc_external_service_monetization: {
-                      _: 7,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "AIContentSurvey";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.disclosure || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [2], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    disclosure: {
-                      _: 1,
-                      _: _,
-                    },
-                    interactive_elements: {
-                      _: 2,
-                      _: !0,
-                      _: !0,
-                      _: _._.readEnum,
-                      pbr: _._.readPackedEnum,
-                      _: _._.writeRepeatedEnum,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "ContentSurveyAuxData";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype._ || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    _: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "ContentDescriptor";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.surveyid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, [3, 11, 14, 15], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    surveyid: {
-                      _: 1,
-                      _: _._.readUint64String,
-                      _: _._.writeUint64String,
-                    },
-                    state: {
-                      _: 2,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    descriptors: {
-                      _: 3,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    timestamp_started: {
-                      _: 4,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    timestamp_updated: {
-                      _: 5,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    timestamp_finished: {
-                      _: 6,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    accountid: {
-                      _: 7,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    developer_notes: {
-                      _: 8,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    keyvalues: {
-                      _: 9,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    ratings: {
-                      _: 10,
-                      _: _,
-                    },
-                    categories: {
-                      _: 11,
-                      _: !0,
-                      _: !0,
-                      _: _._.readEnum,
-                      pbr: _._.readPackedEnum,
-                      _: _._.writeRepeatedEnum,
-                    },
-                    ai_survey: {
-                      _: 12,
-                      _: _,
-                    },
-                    internal_notes: {
-                      _: 13,
-                      _: _._.readString,
-                      _: _._.writeString,
-                    },
-                    all_ratings: {
-                      _: 14,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    sections_reviewed: {
-                      _: 15,
-                      _: _,
-                      _: !0,
-                      _: !0,
-                    },
-                    disclosure: {
-                      _: 16,
-                      _: _,
-                    },
-                    inherited_surveyid: {
-                      _: 17,
-                      _: _._.readUint64String,
-                      _: _._.writeUint64String,
-                    },
-                    started_from_scratch: {
-                      _: 18,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    survey_aux_data: {
-                      _: 19,
-                      _: _,
-                    },
-                    source: {
-                      _: 20,
-                      _: _._.readEnum,
-                      _: _._.writeEnum,
-                    },
-                    flags: {
-                      _: 21,
-                      _: _._.readUint64String,
-                      _: _._.writeUint64String,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "ContentDescriptorSurvey";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.appid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    appid: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    include_descriptors: {
-                      _: 2,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_keyvalues: {
-                      _: 3,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_categories: {
-                      _: 4,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_ai_survey: {
-                      _: 5,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_all_ratings: {
-                      _: 6,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CAppContentDescriptors_GetActiveSurvey_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.appid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    appid: {
-                      _: 1,
-                      _: _._.readUint32,
-                      _: _._.writeUint32,
-                    },
-                    include_descriptors: {
-                      _: 2,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_keyvalues: {
-                      _: 3,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_categories: {
-                      _: 4,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_ai_survey: {
-                      _: 5,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                    include_all_ratings: {
-                      _: 6,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CAppContentDescriptors_GetWorkingSurvey_Request";
-          }
-        }
-        class _ extends _.Message {
-          static ImplementsStaticInterface() {}
-          constructor(_ = null) {
-            super(),
-              _.prototype.surveyid || _._(_._()),
-              _.Message.initialize(this, _, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              _.sm_m ||
-                (_.sm_m = {
-                  proto: _,
-                  fields: {
-                    surveyid: {
-                      _: 1,
-                      _: _._.readUint64String,
-                      _: _._.writeUint64String,
-                    },
-                    survey: {
-                      _: 2,
-                      _: _,
-                    },
-                  },
-                }),
-              _.sm_m
-            );
-          }
-          static MBF() {
-            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-          }
-          toObject(_ = !1) {
-            return _.toObject(_, this);
-          }
-          static toObject(_, _) {
-            return _._(_._(), _, _);
-          }
-          static fromObject(_) {
-            return _._(_._(), _);
-          }
-          static deserializeBinary(_) {
-            let _ = new (_().BinaryReader)(_),
-              _ = new _();
-            return _.deserializeBinaryFromReader(_, _);
-          }
-          static deserializeBinaryFromReader(_, _) {
-            return _._(_.MBF(), _, _);
-          }
-          serializeBinary() {
-            var _ = new (_().BinaryWriter)();
-            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-          }
-          static serializeBinaryToWriter(_, _) {
-            _._(_._(), _, _);
-          }
-          serializeBase64String() {
-            var _ = new (_().BinaryWriter)();
-            return (
-              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CAppContentDescriptors_GetSurvey_Response";
-          }
-        }
-        var _;
-        ((_) => {
-          function _(_, _, _) {
-            return _.SendMsg(
-              "AppContentDescriptor.GetActiveSurvey#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 7,
-              },
-            );
-          }
-          _.GetActiveSurvey = _;
-          function _(_, _, _) {
-            return _.SendMsg(
-              "AppContentDescriptor.GetWorkingSurvey#1",
-              (0, _._)(_, _, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 7,
-              },
-            );
-          }
-          _.GetWorkingSurvey = _;
-        })(_ || (_ = {}));
-        const _ = new Map([
-            [_, "esrb"],
-            [_, "pegi"],
-            [_, "bbfc"],
-            [_, "usk"],
-            [_, "oflc"],
-            [_, "nzoflc"],
-            [_, "cero"],
-            [_, "kgrb"],
-            [_, "gmedia"],
-            [_, "dejus"],
-            [_, "mda"],
-            [_, "fpb"],
-            [_, "csrr"],
-            [_, "crl"],
-            [_, "agcom"],
-            [_, "igrs"],
-            [_, "steam_germany"],
-            [_, "steam_australia"],
-            [_, "cadpa"],
-          ]),
-          _ = "crl",
-          _ = "dejus",
-          _ = "0",
-          _ = "pending";
-        function _(_) {
-          return _.get(_) ?? "";
-        }
-        function _(_) {
-          return _ ? _.Localize("#GameRating_Agency_" + _.toUpperCase()) : "";
-        }
-        function _(_, _) {
-          return !_ || !_
-            ? ""
-            : _.Localize("#GameRating_Rating_" + _ + "_" + _);
-        }
-        function _(_) {
-          return _.Localize("#GameRating_RARSText_" + _);
-        }
-        const _ = new Map([
-          [
-            _,
-            {
-              strFile: "love",
-              strToken: "#GameRating_DescriptorImage_CERO_Love",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "sexual_content",
-              strToken: "#GameRating_DescriptorImage_CERO_SexualContent",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "violence",
-              strToken: "#GameRating_DescriptorImage_CERO_Violence",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "horror",
-              strToken: "#GameRating_DescriptorImage_CERO_Horror",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "drinking_smoking",
-              strToken: "#GameRating_DescriptorImage_CERO_DrinkingSmoking",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "gambling",
-              strToken: "#GameRating_DescriptorImage_CERO_Gambling",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "crime",
-              strToken: "#GameRating_DescriptorImage_CERO_Crime",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "drugs",
-              strToken: "#GameRating_DescriptorImage_CERO_Drugs",
-            },
-          ],
-          [
-            _,
-            {
-              strFile: "language",
-              strToken: "#GameRating_DescriptorImage_CERO_Language",
-            },
-          ],
-        ]);
-        function _(_) {
-          const _ = _.get(_);
-          if (_)
-            return {
-              strURL: `${_._.STORE_CDN_URL}public/shared/images/game_ratings/CERO/descriptors/${_.strFile}.png`,
-              strAlt: _.Localize(_.strToken),
-            };
-        }
-        function _(_) {
-          const _ = _.get(_);
-          if (_)
-            return `[img]${Config.MEDIA_CDN_URL}store/Ratings/CERO/${_.strFile}.png[/img]`;
-        }
-        function _(_) {
-          const _ = [];
-          for (const _ of _) {
-            const _ = _.toLowerCase();
-            for (const [_, _] of _)
-              if (_.includes(`cero/${_.strFile}.png`)) {
-                _.push(_);
-                break;
-              }
-          }
-          return _;
-        }
-        const _ = new Map([
-          [_, "#GameRating_ContentCategoryDescriptor_60"],
-          [_, "#GameRating_ContentCategoryDescriptor_61"],
-          [_, "#GameRating_ContentCategoryDescriptor_62"],
-          [_, "#GameRating_ContentCategoryDescriptor_63"],
-        ]);
-        function _(_) {
-          return _.map((_) => _.get(_))
-            .filter((_) => _ !== void 0)
-            .map((_) => _.Localize(_));
-        }
-        const _ = new Map([
-          ["in-game purchases", _],
-          ["in-game purchases (includes random items)", _],
-          ["users interact", _],
-        ]);
-        function _(_) {
-          const _ = [];
-          for (const _ of _) {
-            const _ = _.trim();
-            if (!_) continue;
-            const _ = _.get(_.toLowerCase()),
-              _ = _ !== void 0 ? _([_])[0] : _;
-            _.includes(_) || _.push(_);
-          }
-          return _;
-        }
-        const _ = new Map([
-          [_, "#GameRating_ContentCategoryDescriptor_60"],
-          [_, "#GameRating_ContentCategoryDescriptor_61"],
-          [_, "#GameRating_ContentCategoryDescriptor_62"],
-          [_, "#GameRating_ContentCategoryDescriptor_63"],
-          [_, "#GameRating_ContentCategoryDescriptor_64"],
-        ]);
-        function _(_) {
-          const _ = [];
-          for (const _ of _)
-            if (
-              _.content_category ===
-              EGameContentCategory.k_EGameContentCategory_InteractiveElements
-            )
-              for (const _ of _.questionaire_categories ?? []) {
-                const _ = _.get(_);
-                _ && _.push(GameRatingLocalization.Localize(_));
-              }
-          return _;
-        }
-        function _(_) {
-          const { rating: _ } = _,
-            { strType: _, strRating: _ } = _;
-          if (_ === _)
-            return (0, _.jsxs)("div", {
-              className: (0, _._)(_().GameRating, "GameRating"),
-              children: [
-                (0, _.jsx)(_._, {
-                  direction: "row",
-                  justify: "between",
-                  className: _().Title,
-                  children: _.Localize("#GameRating_Pending"),
-                }),
-                (0, _.jsx)(_, {
-                  strType: _,
-                }),
-              ],
-            });
-          const _ = _ === _ ? [_(_)] : _.rgDescriptors,
-            _ = _.bOnlineMusicNotRated || _.bOnlineInteractionsNotRated;
-          return (0, _.jsxs)(_._, {
-            direction: "column",
-            gap: "3",
-            className: _().GameRating,
-            children: [
-              _ === _
-                ? _.nRequiredAge > 0 &&
-                  (0, _.jsx)(_._, {
-                    size: "3",
-                    contrast: "title",
-                    className: (0, _._)(_().RequiredAge, "RequiredAge"),
-                    children: _.Localize(
-                      "#GameRating_Age_DEJUS",
-                      _.nRequiredAge,
-                    ),
-                  })
-                : _.bBanned && (0, _.jsx)(_, {}),
-              !_.bBanned &&
-                (0, _.jsxs)(_._, {
-                  direction: "row",
-                  gap: "3",
-                  className: _().Details,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().Icon,
-                      children: (0, _.jsx)(_, {
-                        rating: _,
-                      }),
-                    }),
-                    (0, _.jsxs)(_._, {
-                      direction: "column",
-                      gap: "2",
-                      children: [
-                        _.length > 0 &&
-                          (0, _.jsx)(_._, {
-                            _: "p",
-                            contrast: "body",
-                            className: _().DescriptorText,
-                            children: _.join(`
-`),
-                          }),
-                        (0, _.jsx)(_, {
-                          rating: _,
-                        }),
-                        _ &&
-                          (0, _.jsxs)(_.Fragment, {
-                            children: [
-                              _.bOnlineMusicNotRated &&
-                                (0, _.jsx)(_._, {
-                                  _: "p",
-                                  contrast: "body",
-                                  className: _().DescriptorText,
-                                  children: _.Localize(
-                                    "#GameRating_OnlineMusicNotice",
-                                  ),
-                                }),
-                              _.bOnlineInteractionsNotRated &&
-                                (0, _.jsx)(_._, {
-                                  _: "p",
-                                  contrast: "body",
-                                  className: _().DescriptorText,
-                                  children: _.Localize(
-                                    "#GameRating_OnlineInteractionsNotice",
-                                  ),
-                                }),
-                            ],
-                          }),
-                        (0, _.jsx)(_, {
-                          rating: _,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              (0, _.jsx)(_, {
-                strType: _,
-              }),
-            ],
-          });
-        }
-        function _() {
-          return (0, _.jsx)(_._, {
-            direction: "row",
-            justify: "between",
-            className: _().Title,
-            children: _.LocalizeReact(
-              "#GameRating_ContentClassification",
-              (0, _.jsx)("span", {
-                className: _().Banned,
-                children: _.Localize("#GameRating_Banned"),
-              }),
-            ),
-          });
-        }
-        function _(_) {
-          const {
-            strType: _,
-            strRating: _,
-            strImageURL: _,
-            strImageTarget: _,
-          } = _.rating;
-          if (_ === _)
-            return (0, _.jsx)("div", {
-              className: _().AllAges,
-              children: _.Localize("#GameRating_AllAges"),
-            });
-          if (!_) return null;
-          const _ = _(_, _);
-          return _
-            ? (0, _.jsx)(_._, {
-                href: _,
-                onOKActionDescription: _,
-                children: (0, _.jsx)(_, {
-                  src: _,
-                  alt: _,
-                }),
-              })
-            : (0, _.jsx)(_, {
-                src: _,
-                alt: _,
-              });
-        }
-        function _(_) {
-          const _ = (_.rating.rgDescriptorImages ?? [])
-            .map((_) => _(_))
-            .filter((_) => _ !== void 0);
-          return _.length === 0
-            ? null
-            : (0, _.jsx)(_._, {
-                direction: "row",
-                wrap: "wrap",
-                align: "start",
-                gap: "1",
-                children: _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      src: _.strURL,
-                      alt: _.strAlt,
-                      title: _.strAlt,
-                    },
-                    _,
-                  ),
-                ),
-              });
-        }
-        function _(_) {
-          const {
-              rgRatingInteractiveElements: _,
-              rgSurveyInteractiveElements: _,
-            } = _.rating,
-            _ = _.length > 0,
-            _ = _ ? _ : _;
-          return _.length === 0
-            ? null
-            : (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    _: "p",
-                    contrast: "note",
-                    children: _.Localize(
-                      _
-                        ? "#GameRating_InteractiveElements_Title"
-                        : "#GameRating_ContentCategory_InteractiveElements",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: "p",
-                    contrast: "body",
-                    className: _().DescriptorText,
-                    children: _.join(_.Localize("#GameRating_ListDelimiter")),
-                  }),
-                ],
-              });
-        }
-        function _(_) {
-          const _ = _(_.strType);
-          return _
-            ? (0, _.jsx)(_._, {
-                contrast: "body",
-                size: "2",
-                className: "Agency",
-                children: _.Localize("#GameRating_RatingBy", _),
-              })
-            : null;
-        }
-        function _(_) {
-          return {
-            strType: _.type || (_.agency !== void 0 ? _(_.agency) : ""),
-            strRating: _.rating ?? "",
-            bBanned: !!_.banned,
-            nRequiredAge: _.required_age ?? 0,
-            rgDescriptors: _.descriptors ?? [],
-            rgDescriptorImages: _.descriptor_images ?? [],
-            bOnlineMusicNotRated: !!_.esrb_online_music_not_rated,
-            bOnlineInteractionsNotRated: !!_.esrb_online_interactions_not_rated,
-            rgRatingInteractiveElements: _(
-              (_.interactive_elements ?? "").split(/[\r\n,]+/),
-            ),
-            rgSurveyInteractiveElements: _(_.survey_interactive_elements ?? []),
-            strImageURL: _(_),
-            strImageTarget: _.image_target || void 0,
-          };
-        }
-        function _(_) {
-          if (_.image_url)
-            return `${_._.STORE_CDN_URL}${_.image_url}?${_.image_target ? "v=3" : "v=2"}`;
-        }
-        function _(_) {
-          const { data: _ } = (0, _._)({
-            appid: _.appid,
-          });
-          return (
-            _.use(_.Ready()),
-            _?.rating
-              ? (0, _.jsx)(_, {
-                  rating: _(_),
-                })
-              : null
-          );
-        }
-        var _ = __webpack_require__("chunkid");
         function _(_, _) {
           return ["OwnReview", _, _];
         }
@@ -17142,35 +18455,8 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { orientation: _ = "horizontal", size: _ = "1", ..._ } = _;
-          return (0, _.jsx)("div", {
-            role: "separator",
-            "aria-orientation": _,
-            ...(0, _._)(
-              {
-                ..._,
-                size: _,
-                className: _.Separator,
-              },
-              _,
-            ),
-          });
-        }
-        const _ = [
-          ..._._,
-          {
-            prop: "size",
-            className: (_) => _[`Size-${_}`],
-            responsive: !0,
-          },
-          {
-            prop: "color",
-            cssProperty: (_) => ["--separator-color", (0, _._)(_)],
-          },
-        ];
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
           const _ = (0, _._)(_),
@@ -17245,6 +18531,9 @@
             .json()
             .catch(() => ({}));
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return "unknown EValveIndexComponent ( " + _ + " )";
         }
@@ -20445,7 +21734,7 @@
                           ),
                         }),
                       }),
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       color: "greyneutral-9 50%",
                       size: "4",
                     }),
@@ -20882,7 +22171,7 @@
             gap: "1",
             align: "center",
             children: [
-              (0, _.jsx)(_, {
+              (0, _.jsx)(_._, {
                 src: `${_._.IMG_URL}v6/mc_logo_no_text.png`,
                 alt: "",
                 width: "24px",
@@ -21127,7 +22416,7 @@
                       _._,
                       {
                         alignSelf: "center",
-                        children: (0, _.jsx)(_, {
+                        children: (0, _.jsx)(_._, {
                           className: (0, _._)(
                             _().ItemImage,
                             _.item_class == _._ && _().ProfileBackground,
@@ -21170,7 +22459,7 @@
                         className: _().Item,
                         textAlign: "center",
                         children: [
-                          (0, _.jsx)(_, {
+                          (0, _.jsx)(_._, {
                             className: _().ItemImage,
                             ..._(_.icon_url),
                             alt: _.name,
@@ -21463,75 +22752,7 @@
             );
           return _(_, _, _.Body(), _.Body()?.schema_hash() ?? 0);
         }
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94507, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 29815, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 79200, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 81142, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 42394, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 80559, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 92885, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22754, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 89627, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 8281, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 53749, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 88180, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 13303, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 28757, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 88468, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 82558, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 3894, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 35957, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 43081, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 63822, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 16470, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 46488, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 50272, 19))),
-          (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 88794, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 15171, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 34341, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 61844, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 71088, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 49829, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 95917, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 15151, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 53460, 19)));
-        async function _(_) {
-          if (_[_]) return _[_]();
-        }
-        const _ = (0, _._)(_);
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           return _?.bNoRetryOnError
             ? {
@@ -21549,7 +22770,7 @@
               _._ === _
                 ? {
                     ..._,
-                    name: _.Localize("#Achievements_Set_BaseGame"),
+                    name: _._.Localize("#Achievements_Set_BaseGame"),
                   }
                 : _,
             ),
@@ -21747,222 +22968,7 @@
         async function _(_, _, _) {
           await FetchPersistedQuery(_, _(_, _));
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        const _ = 10;
-        function _(_) {
-          return _ === void 0 ? !1 : _ <= _;
-        }
-        const _ = new WeakMap();
-        function _(_, _) {
-          for (const _ of _.groups) {
-            let _ = _.get(_.achievements);
-            _ ||
-              ((_ = new Map(
-                _.achievements.map((_) => [_.api_name, _.internal_key]),
-              )),
-              _.set(_.achievements, _));
-            const _ = _.get(_);
-            if (_ !== void 0) return _;
-          }
-        }
-        function _(_) {
-          return (_?.groups_achievable?.total ?? 0) != 0;
-        }
-        function _(_, _, _) {
-          return _.achievements.some(
-            (_) => (!_.archived && !_.archived) || _(_, _, _),
-          );
-        }
-        function _(_, _, _) {
-          return (
-            _?.achievements[_.internal_key]?.unlocked == !0 ||
-            (_?.some((_) => _?.achievements[_.internal_key]?.unlocked == !0) ??
-              !1)
-          );
-        }
-        function _(_, _) {
-          if (Array.isArray(_))
-            return (
-              _.length > 1 ||
-              (_.length == 1 && _[0] !== k_DefaultAchievementGroup)
-            );
-          {
-            const _ = _.groups.filter((_) => _(_, _));
-            return (
-              _.length > 1 ||
-              (_.length == 1 && _[0]._ !== k_DefaultAchievementGroup)
-            );
-          }
-        }
-        function _(_, _) {
-          return new Intl.DateTimeFormat(GetPreferredLocales(), {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            hourCycle: _ ? "h23" : void 0,
-          }).format(new Date(_ * 1e3));
-        }
-        function _(_, _) {
-          const _ = _ > 0 ? _ / _ : 0,
-            _ = _.toLocaleString(GetPreferredLocales(), {
-              style: "percent",
-              maximumFractionDigits: _ > 100 ? 1 : 0,
-            });
-          return {
-            percentUnlocked: _,
-            percentUnlockedStr: _,
-          };
-        }
-        function _(_) {
-          return _ === void 0
-            ? ""
-            : (_ / 100).toLocaleString(GetPreferredLocales(), {
-                style: "percent",
-                maximumFractionDigits: 1,
-                minimumFractionDigits: 1,
-              });
-        }
-        function _(_) {
-          return AchievementsLocalization.Localize(
-            "#Achievements_Tooltip_GlobalUnlockPercent",
-            _(_),
-          );
-        }
-        function _(_, _) {
-          return _
-            ? {
-                name: AchievementsLocalization.Localize(
-                  "#AchievementSpoilerName",
-                ),
-                description: AchievementsLocalization.Localize(
-                  "#AchievementSpoilerDescription",
-                ),
-              }
-            : {
-                name: _.name ?? "",
-                description: _.description ?? "",
-              };
-        }
-        function _(_) {
-          return _ >= 17891964e-1;
-        }
-        function _(_) {
-          if (_ !== void 0)
-            return {
-              "--icon-size": _ == "fill" ? "100%" : `${_}px`,
-            };
-        }
-        function _(_) {
-          const {
-              imgURL: _,
-              glow: _,
-              pauseAnimation: _,
-              hidden: _,
-              alt: _,
-              hideNativeTooltip: _ = !1,
-              className: _,
-              size: _,
-              ..._
-            } = _,
-            [_, _] = _.useState(!1),
-            _ = _.useCallback((_) => {
-              _ &&
-                (_.complete
-                  ? _(!0)
-                  : (_.onload = () => {
-                      _(!0);
-                    }));
-            }, []),
-            _ = _ && (_ || _),
-            _ = _(_);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().AchievementIconWrapper,
-              _,
-              _ && _().RareAchievementNoAnimation,
-            ),
-            style: _,
-            ..._,
-            children: [
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().RareAchievementIconGlowContainerRoot,
-                  children: (0, _.jsx)("div", {
-                    className: _().RareAchievementIconGlowContainer,
-                    children: (0, _.jsx)("div", {
-                      className: _().RareAchievementIconGlow,
-                    }),
-                  }),
-                }),
-              _
-                ? (0, _.jsx)("div", {
-                    className: (0, _._)(_().HiddenLabel, _ && _().IconGlow),
-                    children: "?",
-                  })
-                : (0, _.jsx)("img", {
-                    ref: _,
-                    className: (0, _._)(_().Icon, _ && _().IconGlow),
-                    src: _ == "" ? void 0 : _,
-                    loading: "lazy",
-                    alt: _,
-                    title: _ ? void 0 : _,
-                  }),
-            ],
-          });
-        }
-        function _(_) {
-          const {
-              achievement: _,
-              globalUnlockPercentage: _,
-              unlocked: _,
-              forceVisible: _ = !1,
-              hidden: _,
-              ..._
-            } = _,
-            _ = _ ?? (_ ? !1 : !_ && _.hidden),
-            _ = (_ ? _.icon_achieved : _.icon_unachieved) ?? "",
-            _ = _ && _(_),
-            _ = _ ? _.Localize("#AchievementSpoilerName") : (_.name ?? " ");
-          return (0, _.jsx)(_, {
-            hidden: _,
-            imgURL: _,
-            glow: _,
-            alt: _,
-            ..._,
-          });
-        }
-        function _(_) {
-          const {
-              hidden: _,
-              forceVisible: _,
-              size: _,
-              className: _,
-              style: _,
-              onClick: _,
-              unlocked: _,
-              ..._
-            } = _,
-            { appid: _, achievement: _, progress: _ } = _,
-            _ = useGlobalAchievementPercentage(_, _.internal_key);
-          return jsx(AchievementToolTip, {
-            ..._,
-            children: jsx(_, {
-              achievement: _,
-              globalUnlockPercentage: _,
-              unlocked: _ ?? _?.unlocked ?? !1,
-              hidden: _,
-              forceVisible: _,
-              size: _,
-              className: _,
-              style: _,
-              onClick: _,
-              hideNativeTooltip: !0,
-            }),
-          });
-        }
+        var _ = __webpack_require__("chunkid");
         function _(_, _) {
           const { data: _ } = _(_);
           if (!_) return;
@@ -22064,7 +23070,7 @@
               _.map((_, _) => (0, _.jsx)(_._, {}, _)),
               _.map((_, _) =>
                 (0, _.jsx)(
-                  _,
+                  _._,
                   {
                     achievement: _,
                     unlocked: !_.hidden,
@@ -22148,16 +23154,29 @@
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsxs)(_._, {
-                className: "responsive_banner_link",
-                onActivate: _,
+                align: "center",
+                cursor: "pointer",
+                background: "sky-6 50%",
+                radius: "sm",
+                role: "button",
+                onClick: _,
                 "aria-expanded": _,
                 children: [
-                  (0, _.jsx)("div", {
-                    className: "responsive_banner_link_title",
-                    children: _.Localize("#AppPage_LinksAndInfo_MoreLinks"),
+                  (0, _.jsx)(_._, {
+                    flexGrow: "1",
+                    paddingX: "3",
+                    paddingY: "2",
+                    children: (0, _.jsx)(_._, {
+                      size: "2",
+                      color: "blue-8",
+                      children: _.Localize("#AppPage_LinksAndInfo_MoreLinks"),
+                    }),
                   }),
-                  (0, _.jsx)("div", {
-                    className: _ ? "expand_section expanded" : "expand_section",
+                  (0, _.jsx)(_._, {
+                    paddingX: "2",
+                    children: (0, _.jsx)(_, {
+                      bExpanded: _,
+                    }),
                   }),
                 ],
               }),
@@ -22167,6 +23186,23 @@
                   children: _.children,
                 }),
             ],
+          });
+        }
+        function _(_) {
+          const { bExpanded: _ } = _;
+          return (0, _.jsx)("svg", {
+            width: "16",
+            height: "16",
+            viewBox: "0 0 18 18",
+            fill: "#e5e5e5",
+            "aria-hidden": "true",
+            children: _
+              ? (0, _.jsx)("path", {
+                  _: "M9.7,9.7h4.7C14.7,9.7,15,9.4,15,9s-0.3-0.7-0.7-0.7H9.7H8.3H3.7C3.3,8.3,3,8.6,3,9s0.3,0.7,0.7,0.7h4.7H9.7z",
+                })
+              : (0, _.jsx)("path", {
+                  _: "M9.7,3.7C9.7,3.3,9.4,3,9,3S8.3,3.3,8.3,3.7v4.7H3.7C3.3,8.3,3,8.6,3,9s0.3,0.7,0.7,0.7h4.7v4.7C8.3,14.7,8.6,15,9,15s0.7-0.3,0.7-0.7V9.7h4.7C14.7,9.7,15,9.4,15,9s-0.3-0.7-0.7-0.7H9.7V3.7z",
+                }),
           });
         }
         function _(_) {
@@ -22350,6 +23386,70 @@
             children: (0, _.jsx)(_.GrD, {}),
           });
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        function _(_) {
+          const { appid: _ } = _,
+            { data: _ } = (0, _._)({
+              appid: _,
+            }),
+            { data: _ } = (0, _._)({
+              appid: _,
+            }),
+            _ = _?.franchises?.find(
+              (_) => !!_.creator_clan_account_id,
+            )?.creator_clan_account_id,
+            _ = _?.type == _._._ || _?.type == _._._,
+            _ =
+              _ && !_
+                ? {
+                    creatorid: _,
+                  }
+                : void 0,
+            { data: _ } = (0, _._)(_),
+            { data: _ } = (0, _._)(_),
+            _ = _?.name,
+            _ = (0, _._)(
+              _ && _ ? _(_, _, _?.store_url_slug) : void 0,
+              "franchise-home-link",
+            );
+          if (!_ || !_) return null;
+          _.use(_.Ready());
+          const _ = _?.creator_home_background,
+            _ = _
+              ? `${_._.CLAN_CDN_ASSET_URL}images/${_}/${encodeURIComponent(_)}`
+              : void 0,
+            _ = _.toLowerCase().includes("franchise");
+          return (0, _.jsxs)(_._, {
+            className: _().FranchiseNotice,
+            href: _,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().Background,
+                  style: {
+                    backgroundImage: `url( "${_}" )`,
+                  },
+                }),
+              (0, _.jsx)("div", {
+                className: _().Name,
+                children: _.Localize(
+                  _
+                    ? "#AppPage_Franchise_SeeAll_NamedFranchise"
+                    : "#AppPage_Franchise_SeeAll",
+                  _,
+                ),
+              }),
+            ],
+          });
+        }
+        function _(_, _, _) {
+          return _._.EREALM === _._.k_ESteamRealmChina
+            ? `${_._.STORE_BASE_URL}search/?franchise=${encodeURIComponent(_)}`
+            : _
+              ? `${_._.STORE_BASE_URL}franchise/${encodeURIComponent(_)}`
+              : `${_._.STORE_BASE_URL}curator/${_}`;
+        }
         const _ = _.lazy(() =>
             __webpack_require__
               ._("chunkid")
@@ -22393,7 +23493,6 @@
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _.lazy(() =>
@@ -22413,13 +23512,10 @@
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _.lazy(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -22657,9 +23753,12 @@
                           (0, _.jsx)(_, {
                             ..._,
                           }),
-                        "game-rating-section": () =>
-                          (0, _.jsx)(_, {
-                            appid: _,
+                        "game-rating-block": (_) =>
+                          (0, _.jsx)(_.GameRatingBlock, {
+                            ..._,
+                            _: {
+                              appid: _,
+                            },
                           }),
                         achievements: (_) =>
                           (0, _.jsx)(_, {
@@ -22692,6 +23791,10 @@
                             ..._,
                           }),
                         "links-and-info": () =>
+                          (0, _.jsx)(_, {
+                            appid: _,
+                          }),
+                        "franchise-notice": () =>
                           (0, _.jsx)(_, {
                             appid: _,
                           }),
@@ -22775,18 +23878,6 @@
           RareAchievementIconGlow: "_3vFmYitX2pXuOenxR0blk8",
           IconGlow: "_2BCoqu4wd4ehkJkelVhjb3",
           HiddenLabel: "_1smYxH70zcX0D3CUQDwF3o",
-          BackgroundAnimation: "_2XvhZ8yFczR-W7gwjaWoPT",
-          "ItemFocusAnim-darkerGrey-nocolor": "NK0YaI2_mwagRH7-tm_GE",
-          "ItemFocusAnim-darkerGrey": "_1HU-Kl32lDEq7yT3ba8R5G",
-          "ItemFocusAnim-darkGreySettings": "_3PM-EU4OtOaw12xVeiCzRL",
-          "ItemFocusAnim-darkGrey": "_1EXXhQ3MOk6cW2xYESY_2i",
-          "ItemFocusAnim-grey": "_2V88aGECYldq8tqX286rzp",
-          "ItemFocusAnim-translucent-white-10": "_9lQAMImHGe5qClr8AL2Vc",
-          "ItemFocusAnim-translucent-white-20": "_3I_vGf7ujHONdHYkGitG6t",
-          "ItemFocusAnimBorder-darkGrey": "YU4V8GFJ50LIlOS68c6Wc",
-          "ItemFocusAnim-green": "_1qBrpfK0gqYyjGTNuC0FHo",
-          focusAnimation: "_1vLld9YwBtNMfxoDxGo2Z4",
-          hoverAnimation: "_3JxsbmkLDkwKiYvrnnqOtd",
         };
       },
       chunkid: (module) => {
@@ -22923,7 +24014,6 @@
           ReviewDate: "_1-xxEVmOFH_ALirCqnOMnk",
           ReviewText: "_1bxDLybmzg3qlRHA0uPpgw",
           ActionButtonContainer: "_2DQYZmNg65M853z4QxNcEm",
-          ActionButton: "_38k1l9_8MwKGpdKbFVO0iR",
         };
       },
       chunkid: (module) => {
@@ -23032,6 +24122,13 @@
           BootProtection: "_1SiKZVlI9CdyQnLvyTUYLy",
           ThirdPartyAccount: "_1oaAmtSoqPhwLiGjQ0Y3OG",
           Type: "_1qNe_uLNeOV6BKlQ09jU3n",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          FranchiseNotice: "_3cc4dI9V3PqeoQqj5SxBZz",
+          Background: "njXxktHY4WsietvAfQD6Q",
+          Name: "zxG9gBQG2fVTPjAa87gWf",
         };
       },
       chunkid: (module) => {
@@ -23467,18 +24564,6 @@
           LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
           LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
           LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-          BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
-          "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
-          "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
-          "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
-          "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
-          "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
-          "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
-          "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
-          "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
-          "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
-          focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
-          hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
         };
       },
       chunkid: (module) => {
@@ -23503,18 +24588,6 @@
           PurchaseNoticeImage: "_19Tk4I5-EL-sVXsUaa3hwU",
           Tilt: "_3dAAfHHQ8xq74OLmQXo9V4",
           VROnly: "_11BzgaR-a1UCE-aOC3bMCD",
-          BackgroundAnimation: "_1J1jrrETaG-3_8wMEeqpxY",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3yvzhClP6mJaghIH0GHKiv",
-          "ItemFocusAnim-darkerGrey": "_1czfyTnV7yzFQJdFsTmDJT",
-          "ItemFocusAnim-darkGreySettings": "_20J2LUfIRwm4TI5vyu-UFE",
-          "ItemFocusAnim-darkGrey": "_1_qHMTE8sRRjCMuxLoZMl2",
-          "ItemFocusAnim-grey": "jagchSyBiPamV4PALsowV",
-          "ItemFocusAnim-translucent-white-10": "_3ZVEkEzGePMK1PBQ_GpIb1",
-          "ItemFocusAnim-translucent-white-20": "_38eVNkJEvCSuIwBUyo7Qrg",
-          "ItemFocusAnimBorder-darkGrey": "_2C7zuRFt6F6RcgTOiWBVnr",
-          "ItemFocusAnim-green": "_1IMTjdceyCiJjpowdAaHgY",
-          focusAnimation: "_1tLo_FTRTZsAztlpw36eHl",
-          hoverAnimation: "_3oGieUcvOTZppk7m3PHA6L",
         };
       },
       chunkid: (module) => {
@@ -23631,18 +24704,6 @@
           TwoWide: "_25IMXSN3XeXOPiu-sYHV1U",
           Placeholder: "_1tX6f_kWb07D_qLWgL7-Ah",
           SeeAllLink: "_1SnxJyZ5foWgNRCNLmKm6H",
-          BackgroundAnimation: "_1upvVPGAs4gPDPuPdiwYLw",
-          "ItemFocusAnim-darkerGrey-nocolor": "HZYxQObJqyV14ZPiEV6Lk",
-          "ItemFocusAnim-darkerGrey": "_2ezINEgZ6JsrAsAeqd9me7",
-          "ItemFocusAnim-darkGreySettings": "_3hMFH9HQiviY-7U9Fku-Bk",
-          "ItemFocusAnim-darkGrey": "_1X6dhTonzVQgrOwVCmKMAA",
-          "ItemFocusAnim-grey": "_10lr_URcMaBKxQoDCDSiW9",
-          "ItemFocusAnim-translucent-white-10": "_2qAvXvRSJ5YY0wBBIwBCVs",
-          "ItemFocusAnim-translucent-white-20": "_1jA2vfdCnoLEOAQXduMla",
-          "ItemFocusAnimBorder-darkGrey": "_24pyz7i5duUDYEkH6dcM8a",
-          "ItemFocusAnim-green": "_1Z9fl4e9G4PQnLxyIHXNKG",
-          focusAnimation: "_268HCaPK9gD6A2Mw_o7sqP",
-          hoverAnimation: "DbNTwkzqEh5siXLRNvICD",
         };
       },
     },

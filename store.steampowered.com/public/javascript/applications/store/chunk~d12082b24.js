@@ -4,28 +4,28 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [8319],
     {
-      22714: (R, V, l) => {
+      22714: (U, V, l) => {
         "use strict";
-        l.d(V, { A: () => H });
+        l.d(V, { A: () => b });
         var e = l(7850),
-          A = l(90626),
+          P = l(90626),
           v = l(75844),
           p = l(30096),
-          P = l(24660),
-          F = l(19298),
-          N = l(16346),
+          A = l(24660),
+          B = l(19298),
+          M = l(16346),
           j = l(38655),
           c = l(18210),
           O = l(36707),
           G = l(90024),
-          B = l.n(G),
+          F = l.n(G),
           w = l(75975),
           D = l(71421),
           f = Object.defineProperty,
-          M = Object.getOwnPropertyDescriptor,
-          y = (S, u, E, _) => {
+          k = Object.getOwnPropertyDescriptor,
+          H = (S, u, E, _) => {
             for (
-              var m = _ > 1 ? void 0 : _ ? M(u, E) : u, L = S.length - 1, d;
+              var m = _ > 1 ? void 0 : _ ? k(u, E) : u, L = S.length - 1, d;
               L >= 0;
               L--
             )
@@ -33,7 +33,7 @@
             return _ && m && f(u, E, m), m;
           };
         const T = 1576780700;
-        let U = class extends A.Component {
+        let R = class extends P.Component {
           OnEmoticonClick(S) {
             const {
                 emoticonStore: u,
@@ -45,11 +45,11 @@
               {
                 roomEffectSettings: d,
                 onRoomEffectSelected: g,
-                onStickerSelected: k,
+                onStickerSelected: N,
               } = this.props;
             let h = null;
             if (
-              (L && d && g && k
+              (L && d && g && N
                 ? (h = (0, e.jsx)(j.Q4, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -57,7 +57,7 @@
                       this.props.OnEmoticonSelected(I, !1),
                     roomEffectSettings: d,
                     onRoomEffectSelected: g,
-                    onStickerSelected: k,
+                    onStickerSelected: N,
                   }))
                 : E && u.flair_list && u.GetFlairListByGroupID(E)?.length > 0
                   ? (h = (0, e.jsx)(j.CE, {
@@ -70,7 +70,7 @@
                       strFlairGroupID: this.props.strFlairGroupID,
                       OnSelected: this.props.OnEmoticonSelected,
                     })),
-              (0, N.lX)(
+              (0, M.lX)(
                 h,
                 S,
                 m || {
@@ -113,7 +113,7 @@
               S ? m.push("disabled") : this.BHaveUnseenEmoticons() && (L = !0),
               E && m.push("ttip"),
               _
-                ? (0, e.jsx)(F.Z, {
+                ? (0, e.jsx)(B.Z, {
                     onClick: this.OnEmoticonClick,
                     onOKActionDescription: (0, c.we)(
                       "#ChatEntryButton_Emoticon",
@@ -130,8 +130,8 @@
                       }),
                     }),
                   })
-                : (m.push(B().chatSubmitButton, B().EmoticonPickerButton),
-                  (0, e.jsx)(P.fu, {
+                : (m.push(F().chatSubmitButton, F().EmoticonPickerButton),
+                  (0, e.jsx)(A.fu, {
                     className: (0, O.A)(...m),
                     onOKActionDescription: (0, c.we)(
                       "#ChatEntryButton_Emoticon",
@@ -153,30 +153,30 @@
             );
           }
         };
-        y([p.oI], U.prototype, "OnEmoticonClick", 1), (U = y([v.PA], U));
-        const H = U;
+        H([p.oI], R.prototype, "OnEmoticonClick", 1), (R = H([v.PA], R));
+        const b = R;
       },
-      38655: (R, V, l) => {
+      38655: (U, V, l) => {
         "use strict";
         l.d(V, { Q4: () => le, iY: () => ae, CE: () => de, iD: () => re });
         var e = l(7850),
-          A = l(14947),
+          P = l(14947),
           v = l(75844),
           p = l(90626),
-          P = l(76842),
-          F = l(84676),
-          N = l(34360),
+          A = l(76842),
+          B = l(84676),
+          M = l(34360),
           j = l(36707),
           c = l(18210);
         function O(n, t, s = !1) {
           return `${n}economy/sticker${s ? "static" : ""}/${encodeURIComponent(t)}`;
         }
         var G = l(3166),
-          B = l(16412),
+          F = l(16412),
           w = l(19298),
           D = l(64415),
           f = l(19418);
-        class M extends p.Component {
+        class k extends p.Component {
           constructor(t) {
             super(t), (this.state = { activeIndex: t.initialActiveIndex || 0 });
           }
@@ -205,7 +205,7 @@
               className: f.Picker,
               onButtonDown: a,
               children: [
-                i && (0, e.jsx)(y, { children: this.RenderTabs() }),
+                i && (0, e.jsx)(H, { children: this.RenderTabs() }),
                 o,
               ],
             });
@@ -214,7 +214,7 @@
             return this.props.config.map(({ renderTab: t }, s) => {
               const r = this.state.activeIndex === s;
               return (0, e.jsx)(
-                U,
+                R,
                 {
                   active: r,
                   onClick: () => this.setState({ activeIndex: s }),
@@ -225,7 +225,7 @@
             });
           }
         }
-        function y(n) {
+        function H(n) {
           return (0, e.jsx)(w.Z, {
             className: f.Tabs,
             "flow-children": "row",
@@ -238,7 +238,7 @@
             children: n.children,
           });
         }
-        function U(n) {
+        function R(n) {
           const { active: t, children: s, onClick: r } = n;
           return (0, e.jsx)(w.Z, {
             className: (0, j.A)(f.Tab, t && f.Active),
@@ -250,7 +250,7 @@
             }),
           });
         }
-        function H(n) {
+        function b(n) {
           const {
             items: t,
             renderItem: s,
@@ -293,7 +293,7 @@
               (0, e.jsx)(T, {
                 children: (0, e.jsx)(E, {
                   title: t,
-                  children: (0, e.jsx)(H, { ...i }),
+                  children: (0, e.jsx)(b, { ...i }),
                 }),
               }),
               (0, e.jsx)(_, { value: r, onChange: s, onSubmit: o }),
@@ -314,7 +314,7 @@
                   r.map(({ title: i, ...a }) =>
                     (0, e.jsx)(
                       E,
-                      { title: i, children: (0, e.jsx)(H, { ...a }) },
+                      { title: i, children: (0, e.jsx)(b, { ...a }) },
                       i,
                     ),
                   ),
@@ -343,7 +343,7 @@
           const { value: t, onChange: s, onSubmit: r } = n;
           return (0, e.jsx)("div", {
             className: f.FilterInputContainer,
-            children: (0, e.jsx)(B.pd, {
+            children: (0, e.jsx)(F.pd, {
               type: "text",
               placeholder: (0, c.we)("#AddonPicker_Search"),
               className: f.FilterInput,
@@ -363,7 +363,7 @@
         var L = l(42060),
           d = l.n(L),
           g = l(53107),
-          k = l(96197),
+          N = l(96197),
           h = Object.defineProperty,
           I = Object.getOwnPropertyDescriptor,
           W = (n, t, s, r) => {
@@ -375,15 +375,15 @@
               (a = n[i]) && (o = (r ? a(t, s, o) : a(o)) || o);
             return r && o && h(t, s, o), o;
           };
-        const J = 1e3;
-        function b(n) {
+        const Y = 1e3;
+        function y(n) {
           return n.recent_emoticons;
         }
         function K(n) {
           return n.recent_stickers;
         }
         function $(n) {
-          return b(n).length + K(n).length > 0;
+          return y(n).length + K(n).length > 0;
         }
         function ce(n) {
           const [t, s] = (0, p.useState)(n.is_initialized);
@@ -391,7 +391,7 @@
             (0, p.useEffect)(() => {
               if (!n.is_initialized) {
                 n.UpdateEmoticonList();
-                const r = (0, A.z7)(
+                const r = (0, P.z7)(
                   () => n.is_initialized,
                   () => s(n.is_initialized),
                 );
@@ -434,8 +434,8 @@
                     flairGroupID: r,
                   }),
               }),
-            (0, e.jsx)(N.tz, {
-              children: (0, e.jsx)(M, {
+            (0, e.jsx)(M.tz, {
+              children: (0, e.jsx)(k, {
                 config: [
                   ...C,
                   {
@@ -491,7 +491,7 @@
             let t = this.props.emoticonStore;
             t.is_initialized ||
               (t.UpdateEmoticonList(),
-              (this.m_disposeEmoticonStore = (0, A.z7)(
+              (this.m_disposeEmoticonStore = (0, P.z7)(
                 () => t.is_initialized,
                 () => this.forceUpdate(),
               )));
@@ -528,8 +528,8 @@
                       flairGroupID: r,
                     }),
                 }),
-              (0, e.jsx)(N.tz, {
-                children: (0, e.jsx)(M, {
+              (0, e.jsx)(M.tz, {
+                children: (0, e.jsx)(k, {
                   config: [
                     ...o,
                     {
@@ -579,7 +579,7 @@
             let s = this.props.emoticonStore;
             s.is_initialized ||
               (s.UpdateEmoticonList(),
-              (this.m_disposeEmoticonStore = (0, A.z7)(
+              (this.m_disposeEmoticonStore = (0, P.z7)(
                 () => s.is_initialized,
                 () => this.forceUpdate(),
               )));
@@ -588,8 +588,8 @@
             this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
           }
           render() {
-            return (0, e.jsx)(N.tz, {
-              children: (0, e.jsx)(M, {
+            return (0, e.jsx)(M.tz, {
+              children: (0, e.jsx)(k, {
                 config: [
                   {
                     renderTab: () =>
@@ -617,7 +617,7 @@
             let s = this.props.emoticonStore;
             s.is_initialized ||
               (s.UpdateEmoticonList(),
-              (this.m_disposeEmoticonStore = (0, A.z7)(
+              (this.m_disposeEmoticonStore = (0, P.z7)(
                 () => s.is_initialized,
                 () => this.forceUpdate(),
               )));
@@ -626,8 +626,8 @@
             this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
           }
           render() {
-            return (0, e.jsx)(N.tz, {
-              children: (0, e.jsx)(M, {
+            return (0, e.jsx)(M.tz, {
+              children: (0, e.jsx)(k, {
                 config: [
                   {
                     renderTab: () =>
@@ -637,7 +637,7 @@
                         children: (0, e.jsx)(Z, {}),
                       }),
                     renderContent: () =>
-                      (0, e.jsx)(Y, {
+                      (0, e.jsx)(J, {
                         store: this.props.emoticonStore,
                         onItemSelect: (t) => this.props.OnSelected(t.name, !1),
                         flairGroupID: this.props.strFlairGroupID,
@@ -659,10 +659,10 @@
               { filter: o } = this.state,
               i = [];
             return (
-              b(t) &&
+              y(t) &&
                 i.push({
                   title: (0, c.we)("#AddonPicker_RecentEmoticons"),
-                  items: P.pN.FilterEmoticons(b(t), o),
+                  items: A.pN.FilterEmoticons(y(t), o),
                   onItemSelect: s,
                   renderItem: (a) => (0, e.jsx)(z, { emoticon: a }),
                   keyExtractor: (a) => a.name,
@@ -679,7 +679,7 @@
               K(t).length &&
                 i.push({
                   title: (0, c.we)("#AddonPicker_RecentStickers"),
-                  items: P.pN.FilterStickers(K(t), o),
+                  items: A.pN.FilterStickers(K(t), o),
                   onItemSelect: r,
                   renderItem: (a) => (0, e.jsx)(se, { sticker: a }),
                   keyExtractor: ({ name: a }) => a,
@@ -707,7 +707,7 @@
             const { store: t, onItemSelect: s, flairGroupID: r } = this.props,
               { filter: o } = this.state,
               i = !o && r ? t.GetFlairListByGroupID(r) : t.emoticon_list,
-              a = P.pN.FilterEmoticons(i, o).slice(0, J);
+              a = A.pN.FilterEmoticons(i, o).slice(0, Y);
             return (0, e.jsx)(S, {
               title: (0, c.we)("#AddonPicker_Emoticons"),
               items: a,
@@ -760,7 +760,7 @@
           render() {
             const { store: t, onItemSelect: s } = this.props,
               { filter: r } = this.state,
-              o = P.pN.FilterStickers(t.GetStickerList(), r),
+              o = A.pN.FilterStickers(t.GetStickerList(), r),
               i = () =>
                 r
                   ? (0, e.jsx)(m, {
@@ -853,10 +853,10 @@
               { filter: r } = this.state,
               o = [];
             return (
-              b(n).length &&
+              y(n).length &&
                 o.push({
                   title: (0, c.we)("#AddonPicker_RecentEmoticons"),
-                  items: P.pN.FilterEmoticons(b(n), r),
+                  items: A.pN.FilterEmoticons(y(n), r),
                   onItemSelect: t,
                   renderItem: (i) => (0, e.jsx)(z, { emoticon: i }),
                   keyExtractor: (i) => i.name,
@@ -877,7 +877,7 @@
                   ...o,
                   {
                     title: (0, c.we)("#AddonPicker_AllEmoticons"),
-                    items: P.pN.FilterStickers(n.emoticon_list, r).slice(0, J),
+                    items: A.pN.FilterStickers(n.emoticon_list, r).slice(0, Y),
                     onItemSelect: t,
                     renderItem: (i) => (0, e.jsx)(z, { emoticon: i }),
                     keyExtractor: (i) => i.name,
@@ -894,7 +894,7 @@
           }
         };
         Q = W([v.PA], Q);
-        let Y = class extends p.Component {
+        let J = class extends p.Component {
           state = { filter: "" };
           render() {
             const { store: n, onItemSelect: t, flairGroupID: s } = this.props,
@@ -905,7 +905,7 @@
               sections: [
                 {
                   title: (0, c.we)("#ChatEntryButton_Flair"),
-                  items: P.pN.FilterStickers(n.GetFlairListByGroupID(s), r),
+                  items: A.pN.FilterStickers(n.GetFlairListByGroupID(s), r),
                   onItemSelect: t,
                   renderItem: (o) => (0, e.jsx)(z, { emoticon: o }),
                   keyExtractor: (o) => o.name,
@@ -920,14 +920,14 @@
             });
           }
         };
-        Y = W([v.PA], Y);
+        J = W([v.PA], J);
         const z = (n) => {
           const { emoticon: t, large: s } = n,
             r = !t.last_used && t.time_received;
           return (0, e.jsxs)("div", {
             className: d().EmoticonItem,
             children: [
-              (0, e.jsx)(k.n, { emoticon: t.name, large: s }),
+              (0, e.jsx)(N.n, { emoticon: t.name, large: s }),
               r && (0, e.jsx)(re, {}),
             ],
           });
@@ -960,8 +960,8 @@
               target: t,
               sticker: { name: s, appid: r },
             } = n,
-            [o] = (0, F.t7)(r, {});
-          return (0, e.jsx)(k.c, {
+            [o] = (0, B.t7)(r, {});
+          return (0, e.jsx)(N.c, {
             target: t,
             title: s,
             subtitle: o?.GetName(),
@@ -1010,8 +1010,8 @@
               roomEffectSettings: o,
             } = n,
             i = o[s],
-            [a] = (0, F.t7)(r, {});
-          return (0, e.jsx)(k.c, {
+            [a] = (0, B.t7)(r, {});
+          return (0, e.jsx)(N.c, {
             target: t,
             title: s,
             subtitle: a?.GetName(),
@@ -1252,19 +1252,19 @@
           });
         }
       },
-      75975: (R, V, l) => {
+      75975: (U, V, l) => {
         "use strict";
-        l.d(V, { Jl: () => c, nl: () => k, rf: () => g });
+        l.d(V, { Jl: () => c, nl: () => N, rf: () => g });
         var e = l(7850),
-          A = l(36118),
+          P = l(36118),
           v = l(56718),
           p = l(3166);
-        function P() {
+        function A() {
           return useInGamepadUI()
             ? jsx(GamepadSVG.Settings, {})
             : jsx(SVG.Settings, {});
         }
-        function F(h) {
+        function B(h) {
           const I = h.filled ?? !0;
           return useInGamepadUI()
             ? I
@@ -1272,7 +1272,7 @@
               : jsx(GamepadSVG.EmptyStar, {})
             : jsx(SVG.Star, {});
         }
-        function N(h) {
+        function M(h) {
           const I = h.filled ?? !0;
           return useInGamepadUI()
             ? I
@@ -1288,7 +1288,7 @@
         function c(h) {
           return (0, p.Qn)()
             ? (0, e.jsx)(v.MGO, { ...h })
-            : (0, e.jsx)(A.Jlk, { ...h });
+            : (0, e.jsx)(P.Jlk, { ...h });
         }
         function O() {
           return useInGamepadUI()
@@ -1300,7 +1300,7 @@
             ? jsx(GamepadSVG.Information, {})
             : jsx(SVG.Information, {});
         }
-        function B(h) {
+        function F(h) {
           return useInGamepadUI()
             ? jsx(GamepadSVG.Lock, {})
             : jsx(SVG.Lock, {});
@@ -1320,12 +1320,12 @@
             ? jsx(GamepadSVG.Achievement, {})
             : jsx(SVG.AwardIcon, {});
         }
-        function M(h) {
+        function k(h) {
           return useInGamepadUI()
             ? jsx(GamepadSVG.ThumbsUp, {})
             : jsx(SVG.ThumbsUpUserNews, { className: h.className });
         }
-        function y(h) {
+        function H(h) {
           return useInGamepadUI()
             ? jsx(GamepadSVG.ThumbsDown, {})
             : jsx(SVG.ThumbsUpUserNews, { className: h.className });
@@ -1335,12 +1335,12 @@
             ? jsx(GamepadSVG.CommentThread, { className: h.className })
             : jsx(SVG.CommentThread, { className: h.className });
         }
-        function U() {
+        function R() {
           return useInGamepadUI()
             ? jsx(GamepadSVG.Pause, {})
             : jsx(SVG.Pause, {});
         }
-        function H() {
+        function b() {
           return useInGamepadUI()
             ? jsx(GamepadSVG.Reload, {})
             : jsx(SVG.Reload, {});
@@ -1377,14 +1377,14 @@
             : jsx(SVG.Edit, {});
         }
         function g() {
-          return (0, e.jsx)(A.rfv, {});
+          return (0, e.jsx)(P.rfv, {});
         }
-        function k() {
-          return (0, p.Qn)() ? (0, e.jsx)(v.nl, {}) : (0, e.jsx)(A.jZW, {});
+        function N() {
+          return (0, p.Qn)() ? (0, e.jsx)(v.nl, {}) : (0, e.jsx)(P.jZW, {});
         }
       },
-      19418: (R) => {
-        R.exports = {
+      19418: (U) => {
+        U.exports = {
           "duration-app-launch": "800ms",
           Picker: "tid_OE5NJWCCVJQP1PfRc",
           Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
@@ -1400,22 +1400,10 @@
           FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
           FilterInput: "_2l4z-U60lABvd9XWArGjAf",
           AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
-          BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
-          "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
-          "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
-          "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
-          "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
-          "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
-          "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
-          "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
-          "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
-          focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
-          hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
         };
       },
-      90024: (R) => {
-        R.exports = {
+      90024: (U) => {
+        U.exports = {
           narrowWidth: "500px",
           chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
           chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",

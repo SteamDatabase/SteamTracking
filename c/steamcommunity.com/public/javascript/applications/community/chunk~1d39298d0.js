@@ -27,10 +27,7 @@
                     const _ = _.toObject();
                     _.set(_.public_data.steamid, _);
                   }),
-                _.map((_) => {
-                  var _;
-                  return (_ = _.get(_)) != null ? _ : null;
-                })
+                _.map((_) => _.get(_) ?? null)
               );
             },
             {
@@ -74,7 +71,7 @@
         function _(_) {
           if (!_(_)) return !1;
           const _ = _.constructor;
-          if (typeof _ == "undefined") return !0;
+          if (typeof _ > "u") return !0;
           const _ = _.prototype;
           return !(
             !_(_) || !Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
@@ -123,7 +120,6 @@
           });
         }
         function _(_, _) {
-          var _;
           const _ = (0, _.useContext)(_),
             _ = typeof _ == "string" ? _ : _(..._);
           let _ = _;
@@ -132,10 +128,8 @@
             if (_ in _.factories) break;
             _ = _.parent;
           }
-          const _ = (
-            (_ = _ == null ? void 0 : _.factories[_]) != null ? _ : _
-          )();
-          return ((_ != null ? _ : _).instances[_] = _), _;
+          const _ = (_?.factories[_] ?? _)();
+          return ((_ ?? _).instances[_] = _), _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -155,15 +149,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -172,8 +157,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           let _ = "offline";
           return (
@@ -188,36 +172,35 @@
           );
         }
         class _ {
+          m_steamid;
+          m_bInitialized = !1;
+          m_ePersonaState = _.cU3;
+          m_unGamePlayedAppID = 0;
+          m_gameid = "0";
+          m_unPersonaStateFlags = 0;
+          m_strPlayerName = "";
+          m_strAvatarHash = _._;
+          m_strAccountName = "";
+          m_rtLastSeenOnline = 0;
+          m_strGameExtraInfo = "";
+          m_unGameServerIP = 0;
+          m_unGameServerPort = 0;
+          m_game_lobby_id = "";
+          m_bPlayerNamePending = !1;
+          m_bAvatarPending = !1;
+          m_broadcastId = void 0;
+          m_broadcastAccountId = void 0;
+          m_broadcastAppId = void 0;
+          m_broadcastViewerCount = void 0;
+          m_strBroadcastTitle = void 0;
+          m_bCommunityBanned = void 0;
+          m_eGamingDeviceType = _.eSB;
+          m_mapRichPresence = _._.map();
+          m_bNameInitialized = !1;
+          m_bStatusInitialized = !1;
+          m_strProfileURL = void 0;
           constructor(_) {
-            _(this, "m_steamid"),
-              _(this, "m_bInitialized", !1),
-              _(this, "m_ePersonaState", _.cU3),
-              _(this, "m_unGamePlayedAppID", 0),
-              _(this, "m_gameid", "0"),
-              _(this, "m_unPersonaStateFlags", 0),
-              _(this, "m_strPlayerName", ""),
-              _(this, "m_strAvatarHash", _._),
-              _(this, "m_strAccountName", ""),
-              _(this, "m_rtLastSeenOnline", 0),
-              _(this, "m_strGameExtraInfo", ""),
-              _(this, "m_unGameServerIP", 0),
-              _(this, "m_unGameServerPort", 0),
-              _(this, "m_game_lobby_id", ""),
-              _(this, "m_bPlayerNamePending", !1),
-              _(this, "m_bAvatarPending", !1),
-              _(this, "m_broadcastId"),
-              _(this, "m_broadcastAccountId"),
-              _(this, "m_broadcastAppId"),
-              _(this, "m_broadcastViewerCount"),
-              _(this, "m_strBroadcastTitle"),
-              _(this, "m_bCommunityBanned"),
-              _(this, "m_eGamingDeviceType", _.eSB),
-              _(this, "m_mapRichPresence", _._.map()),
-              _(this, "m_bNameInitialized", !1),
-              _(this, "m_bStatusInitialized", !1),
-              _(this, "m_strProfileURL"),
-              (0, _._)(this),
-              (this.m_steamid = _);
+            (0, _._)(this), (this.m_steamid = _);
           }
           Reset() {
             (this.m_ePersonaState = _.cU3),
@@ -266,10 +249,7 @@
             );
           }
           get has_joinable_game_flag() {
-            var _;
-            return (
-              (((_ = this.m_unPersonaStateFlags) != null ? _ : 0) & _._) != 0
-            );
+            return ((this.m_unPersonaStateFlags ?? 0) & _._) != 0;
           }
           get connect_string() {
             return this.m_mapRichPresence.get("connect");
@@ -286,10 +266,7 @@
             );
           }
           HasStateFlag(_) {
-            var _;
-            return (
-              (((_ = this.m_unPersonaStateFlags) != null ? _ : 0) & _) != 0
-            );
+            return ((this.m_unPersonaStateFlags ?? 0) & _) != 0;
           }
           get last_seen_online() {
             return this.m_rtLastSeenOnline;
@@ -557,44 +534,28 @@
         }
         let _;
         function _(_) {
-          return _ != null ? _ : (_ = (0, _._)(_));
+          return (_ ??= (0, _._)(_));
         }
         function _(_, _) {
-          var _, _;
           let _ = new _._(_);
-          const _ = _ == null ? void 0 : _.public_data,
-            _ = _ == null ? void 0 : _.private_data;
+          const _ = _?.public_data,
+            _ = _?.private_data;
           return (
             (_.m_bInitialized = !!_),
-            (_.m_ePersonaState =
-              (_ = _ == null ? void 0 : _.persona_state) != null ? _ : _.cU3),
-            (_.m_strAvatarHash =
-              _ != null && _.sha_digest_avatar
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-            (_.m_strPlayerName =
-              (_ = _ == null ? void 0 : _.persona_name) != null
-                ? _
-                : _.ConvertTo64BitString()),
-            (_.m_strAccountName = _ == null ? void 0 : _.account_name),
-            _ != null &&
-              _.persona_state_flags &&
-              (_.m_unPersonaStateFlags =
-                _ == null ? void 0 : _.persona_state_flags),
-            _ != null &&
-              _.game_id &&
-              (_.m_gameid = _ == null ? void 0 : _.game_id),
-            _ != null &&
-              _.game_server_ip_address &&
-              (_.m_unGameServerIP =
-                _ == null ? void 0 : _.game_server_ip_address),
-            _ != null &&
-              _.lobby_steam_id &&
-              (_.m_game_lobby_id = _ == null ? void 0 : _.lobby_steam_id),
-            _ != null &&
-              _.game_extra_info &&
-              (_.m_strGameExtraInfo = _ == null ? void 0 : _.game_extra_info),
-            _ != null && _.profile_url && (_.m_strProfileURL = _.profile_url),
+            (_.m_ePersonaState = _?.persona_state ?? _.cU3),
+            (_.m_strAvatarHash = _?.sha_digest_avatar
+              ? (0, _._)(_.sha_digest_avatar)
+              : _._),
+            (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
+            (_.m_strAccountName = _?.account_name),
+            _?.persona_state_flags &&
+              (_.m_unPersonaStateFlags = _?.persona_state_flags),
+            _?.game_id && (_.m_gameid = _?.game_id),
+            _?.game_server_ip_address &&
+              (_.m_unGameServerIP = _?.game_server_ip_address),
+            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id),
+            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info),
+            _?.profile_url && (_.m_strProfileURL = _.profile_url),
             _
           );
         }

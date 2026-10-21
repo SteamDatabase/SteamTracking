@@ -70,10 +70,12 @@
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const _ = new _();
@@ -112,10 +114,11 @@
             );
           }
           GetNextDrawChangeCallback(_) {
+            let _ = this.m_mapNextDrawChangeCallback.get(_);
             return (
-              this.m_mapNextDrawChangeCallback.has(_) ||
-                this.m_mapNextDrawChangeCallback.set(_, new _._()),
-              this.m_mapNextDrawChangeCallback.get(_)
+              _ ||
+                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
+              _
             );
           }
           CopyToGiveaway(_, _) {
@@ -131,41 +134,31 @@
           async ReloadGiveaway(_, _) {
             if (!_) return null;
             let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = null,
               _ = {
                 origin: self.origin,
               };
-            return (
-              (_ = await _().get(_, {
+            const _ = await _().get(_, {
                 params: _,
-              })),
-              (0, _._)(() => {
+              }),
+              _ = (0, _._)(() => {
+                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                  ),
+                  (_ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
+                  this.CopyToGiveaway(_.data, _),
                   _ !== void 0)
                 ) {
                   const _ = this.GetKey(_, _);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      _,
-                      new _(),
-                    ),
-                    this.CopyToGiveaway(
-                      _.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                    );
+                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
+                  _ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
+                    this.CopyToGiveaway(_.data, _);
                 }
-              }),
-              this.GetNextDrawChangeCallback(_).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(_),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(_)
-            );
+                return _;
+              });
+            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
           }
           static s_Singleton;
           static Get() {
@@ -212,12 +205,18 @@
           SetupRefreshDataInterval(_, _) {
             if ((this.ClearRefreshInterval(), !_.closed)) {
               let _ =
-                _.seconds_until_drawing <= 0 && _.winner_count == 0 ? 6e4 : 5e3;
+                _.seconds_until_drawing !== void 0 &&
+                _.seconds_until_drawing <= 0 &&
+                _.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
               this.m_intervalID = window.setInterval(_, _);
             }
           }
           SetupCountDown(_, _) {
-            _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
+            _ !== void 0 &&
+              _ > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
           }
         };
         _([_._], _.prototype, "ClearRefreshInterval", 1),
@@ -227,20 +226,23 @@
         let _ = _;
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          (_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown();
+          !_ ||
+            _.seconds_until_drawing === void 0 ||
+            ((_.seconds_until_drawing -= 1),
+            _.seconds_until_drawing == 0 && _.ClearCountDown());
         }
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
           _ &&
             _.BIsValid() &&
+            _.seconds_until_drawing !== void 0 &&
             _.seconds_until_drawing <= 0 &&
             !_.closed &&
             (_.ClearCountDown(),
             _.Get()
               .ReloadGiveaway(_, _.m_myInstanceNumber)
               .then((_) => {
-                _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
+                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
               }));
         }
         function _(_) {
@@ -251,9 +253,10 @@
               _.Get()
                 .ReloadGiveaway(_, _.m_myInstanceNumber)
                 .then((_) => {
-                  _.SetupRefreshDataInterval(_, () => _(_, _)),
+                  _ &&
+                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
                     _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _();
+                    _());
                 }),
               () => {
                 _.ClearRefreshInterval(), _.ClearCountDown();
@@ -284,6 +287,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -401,7 +405,9 @@
           async HandleReadEvent() {
             const { eventModel: _ } = this.state,
               { trackingLocation: _, tracker: _ } = this.props;
-            _ && _.BIsPartnerEvent() && (_.RecordEventRead(_, _), _.Flush());
+            _ &&
+              _.BIsPartnerEvent() &&
+              (_.RecordEventRead(_, _ ?? _._._), _.Flush());
           }
           render() {
             const { bShowOnlyInitialEvent: _ } = this.props,
@@ -443,7 +449,7 @@
                   clanSteamID: _,
                   partnerEventStore: _,
                   emoticonStore: _,
-                  closeModal: !_ && _,
+                  closeModal: _ ? void 0 : _,
                   showAppHeader: _,
                   bShowOnlyInitialEvent: _,
                   additionalParams: _,
@@ -1339,18 +1345,6 @@
           FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
           FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
           FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
         };
       },
       chunkid: (module) => {
@@ -1385,18 +1379,6 @@
           SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
           WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
           BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
         };
       },
     },

@@ -584,6 +584,7 @@
     "Workshop_ItemAdmin_Incompatible_UnsetConfirm": "Confermi di voler contrassegnare questo oggetto come compatibile?",
     "Workshop_ItemAdmin_Ban_Set": "Blocca oggetto",
     "Workshop_ItemAdmin_Ban_Unset": "Sblocca oggetto",
+    "Workshop_ItemAdmin_Ban_Sustain": "Conferma ban",
     "Workshop_ItemAdmin_Ban_Reason": "Fornisci una motivazione:",
     "Workshop_ItemAdmin_Ban_Reason_Unselected": "Clicca per selezionare...",
     "Workshop_ItemAdmin_Ban_Presets": "Preset:",

@@ -509,6 +509,49 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_) {
+          return _.jsondata.sale_logo_cross_promo_only
+            ? !1
+            : (_.jsondata.localized_sale_logo?.filter(Boolean).length ?? 0) > 0;
+        }
+        function _(_) {
+          const { eventModel: _, language: _ } = _,
+            [_, _] = (0, _._)(() => [
+              _.jsondata.sale_logo_url,
+              _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
+            ]);
+          return _ && _?.length > 0
+            ? _
+              ? (0, _.jsx)("a", {
+                  className: _().SalePageLogoCtn,
+                  href: _._.STORE_BASE_URL + _,
+                  children: (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
+                  children: (0, _.jsx)(_, {
+                    ..._,
+                  }),
+                })
+            : null;
+        }
+        function _(_) {
+          const { eventModel: _, language: _ } = _,
+            _ = (0, _._)(_, "sale_logo", _);
+          return (0, _.jsx)("img", {
+            src: _,
+            alt: "logo",
+          });
+        }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { strURL: _ } = _;
@@ -526,13 +569,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { event: _, bIsPreview: _ } = _;
@@ -574,7 +613,13 @@
             : null;
         }
         function _(_) {
-          const { event: _, language: _, children: _, bIsPreview: _ } = _,
+          const {
+              event: _,
+              language: _,
+              children: _,
+              bIsPreview: _,
+              personalizedCarousels: _,
+            } = _,
             _ = _.useRef(null),
             _ = (0, _._)(_, "sale_header", _),
             [_] = (0, _._)(() => [_.jsondata.sale_sub_menu]);
@@ -605,6 +650,7 @@
                     bIsPreview: _,
                     subMenu: _,
                     styleVariation: _._.k_SubMenu,
+                    personalizedCarousels: _,
                   })
                 : (0, _.jsx)(_, {
                     strURL: _,
@@ -727,40 +773,6 @@
             });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { eventModel: _, language: _ } = _,
-            [_, _] = (0, _._)(() => [
-              _.jsondata.sale_logo_url,
-              _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
-            ]);
-          return _ && _?.length > 0
-            ? _
-              ? (0, _.jsx)("a", {
-                  className: _().SalePageLogoCtn,
-                  href: _._.STORE_BASE_URL + _,
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
-                  children: (0, _.jsx)(_, {
-                    ..._,
-                  }),
-                })
-            : null;
-        }
-        function _(_) {
-          const { eventModel: _, language: _ } = _,
-            _ = (0, _._)(_, "sale_logo", _);
-          return (0, _.jsx)("img", {
-            src: _,
-            alt: "logo",
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
@@ -822,6 +834,7 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -5210,6 +5223,7 @@
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const {
@@ -5224,6 +5238,7 @@
             [_, _] = _.useState(_?.GetDayIndexFromEventStart()),
             [_, _] = _.useState(null),
             _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
+            _ = (0, _._)(_, !!(0, _._)(_)),
             _ = _(_, _, (0, _._)(!!_)),
             [_, _] = (0, _.useState)(!1);
           _.useEffect(() => {
@@ -5283,9 +5298,7 @@
               }),
             });
           {
-            const _ =
-                _.jsondata.localized_sale_logo &&
-                _.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
+            const _ = _(_),
               _ = _.BUsesContentHubForItemSource(),
               _ = _.GetSaleSections().some(
                 (_) => _.section_type === "contenthubtitle",
@@ -5332,6 +5345,7 @@
                     event: _,
                     language: _,
                     bIsPreview: !!_,
+                    personalizedCarousels: _,
                     children: [
                       _ && (0, _.jsx)(_._, {}),
                       (0, _.jsx)(_, {
@@ -5354,10 +5368,11 @@
                         className: _,
                         scrollIntoViewType: _,
                         children: [
-                          (0, _.jsx)(_, {
-                            eventModel: _,
-                            language: _,
-                          }),
+                          _ &&
+                            (0, _.jsx)(_, {
+                              eventModel: _,
+                              language: _,
+                            }),
                           (0, _.jsx)(_, {
                             rgPresenters: _.jsondata.sale_presenters,
                           }),
@@ -8589,18 +8604,6 @@
           "duration-app-launch": "800ms",
           narrowWidth: "500px",
           SalePageLogoCtn: "_3Rukhd1HqXzPiBrK5hwPT-",
-          BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
-          "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
-          "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
-          "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
-          "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
-          "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
-          "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
-          "ItemFocusAnim-translucent-white-20": "_3PT6d0B4zsV60BfrKuIA1r",
-          "ItemFocusAnimBorder-darkGrey": "_1Z9KMCmIY9huHpqwfwRypj",
-          "ItemFocusAnim-green": "_1WZWN5W96O7pMURRF2eleh",
-          focusAnimation: "_2hRoGMM5UsM8oeV-txHPNu",
-          hoverAnimation: "_1YMbPvrOkuzyOJDFmv_N8s",
         };
       },
       chunkid: (module) => {
@@ -8831,18 +8834,6 @@
           MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
           MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
           AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
-          BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
-          "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
-          "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
-          "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
-          "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
-          "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
-          "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
-          "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
-          "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
-          focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
-          hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
         };
       },
       chunkid: (module) => {

@@ -396,11 +396,8 @@
           });
         }
         function _(_) {
-          var _;
           const { group: _, fnSetGroup: _ } = _,
-            [_, _] = (0, _.useState)(
-              ((_ = _.group_visibility_tokens) == null ? void 0 : _.length) > 0,
-            );
+            [_, _] = (0, _.useState)(_.group_visibility_tokens?.length > 0);
           return _
             ? (0, _.jsxs)(_.Fragment, {
                 children: [
@@ -481,7 +478,7 @@
             });
           const _ = Math.max(0, Math.floor((_ - _) / 60)),
             _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
-            _ = _ === "in_person" ? (_ != null ? _ : _._) : _;
+            _ = _ === "in_person" ? (_ ?? _._) : _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
@@ -609,10 +606,7 @@
                 _.reduce((_, _) => _.set(_.name, _.friendly_name), new Map()),
               [_],
             ),
-            _ = (_) => {
-              var _;
-              return (_ = _.get(_)) != null ? _ : _;
-            },
+            _ = (_) => _.get(_) ?? _,
             _ = _.useId(),
             _ = _.useId();
           return (0, _.jsxs)(_.Fragment, {
@@ -676,11 +670,12 @@
               const _ = `${_._.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                 _ = {
                   reference_time: _,
-                },
-                _ = await _().get(_, {
+                };
+              return (
+                await _().get(_, {
                   params: _,
-                });
-              return _ == null ? void 0 : _.data.timezones;
+                })
+              )?.data.timezones;
             },
           });
           return _.isSuccess ? _.data : [];
@@ -727,11 +722,12 @@
         function _(_, _) {
           if (_) {
             const _ = _._.GetTimeNowWithOverride(),
-              _ = _._.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
-              _ =
-                _ == null
-                  ? void 0
-                  : _.reduce((_, _) => _.concat(_.sessions), []);
+              _ = _._.GetEditModel()
+                .GetEventModel()
+                .jsondata.meet_steam_groups?.reduce(
+                  (_, _) => _.concat(_.sessions),
+                  [],
+                );
             let _ = 0;
             do _ = Math.floor(1e4 + Math.random() * 9e4);
             while (_ && _.findIndex((_) => _._ == _) >= 0);
@@ -817,15 +813,13 @@
           );
         }
         function _(_) {
-          var _;
           const { focusView: _, removeNode: _, group_id: _ } = _,
             _ = (0, _._)(),
-            _ = (0, _._)(() => {
-              var _;
-              return (_ = _.GetEventModel().jsondata.meet_steam_groups) == null
-                ? void 0
-                : _.find((_) => _.group_id == _);
-            }),
+            _ = (0, _._)(() =>
+              _.GetEventModel().jsondata.meet_steam_groups?.find(
+                (_) => _.group_id == _,
+              ),
+            ),
             [_, _, _] = (0, _._)(),
             _ = _.useCallback(() => {
               _(), _();
@@ -858,9 +852,7 @@
                         tooltip: (0, _._)("#Button_Delete"),
                         children: (0, _.jsx)(_.sED, {}),
                       }),
-                      ((_ = _.group_visibility_tokens) == null
-                        ? void 0
-                        : _.length) > 0 &&
+                      _.group_visibility_tokens?.length > 0 &&
                         (0, _.jsx)(_._, {
                           onClick: () => {},
                           tooltip:
@@ -1349,7 +1341,6 @@
               ),
               (0, _.jsx)(_._, {
                 onClick: () => {
-                  var _;
                   const _ = _.session_breaks ? [..._.session_breaks] : [];
                   let _ = Math.floor(1 + Math.random() * 1e5);
                   for (; _.findIndex((_) => _.break_id == _) >= 0; )
@@ -1361,7 +1352,7 @@
                       rtime_start: _,
                       rtime_end: _ + _._.PerHour,
                     },
-                    ((_ = _.session_breaks) == null ? void 0 : _.length) || 0,
+                    _.session_breaks?.length || 0,
                   );
                 },
                 children: "+ Add Break",
@@ -1439,13 +1430,11 @@
         function _(_) {
           const { focusView: _, removeNode: _, schedule_id: _ } = _,
             _ = (0, _._)(),
-            _ = (0, _._)(() => {
-              var _;
-              return (_ = _.GetEventModel().jsondata.meet_steam_schedules) ==
-                null
-                ? void 0
-                : _.find((_) => _.schedule_id == _);
-            }),
+            _ = (0, _._)(() =>
+              _.GetEventModel().jsondata.meet_steam_schedules?.find(
+                (_) => _.schedule_id == _,
+              ),
+            ),
             [_, _, _] = (0, _._)(),
             _ = _.useCallback(() => {
               _(), _();
@@ -1846,15 +1835,8 @@
                         value: _ / _,
                         min: 5,
                         onChange: (_) => {
-                          var _, _;
                           const _ =
-                            ((_ = Number.parseInt(
-                              (_ = _ == null ? void 0 : _.currentTarget) == null
-                                ? void 0
-                                : _.value,
-                            )) != null
-                              ? _
-                              : 5) * _;
+                            (Number.parseInt(_?.currentTarget?.value) ?? 5) * _;
                           _.voter_min_playtime_seconds != _ &&
                             _({
                               ..._,
@@ -1915,15 +1897,8 @@
                         value: _ / _,
                         min: 1,
                         onChange: (_) => {
-                          var _, _;
                           const _ =
-                            ((_ = Number.parseInt(
-                              (_ = _ == null ? void 0 : _.currentTarget) == null
-                                ? void 0
-                                : _.value,
-                            )) != null
-                              ? _
-                              : 1) * _;
+                            (Number.parseInt(_?.currentTarget?.value) ?? 1) * _;
                           _.poll_end_days_since_start != _ &&
                             _({
                               ..._,
@@ -2066,11 +2041,9 @@
         }
         function _(_, _) {
           if (_) {
-            const _ = _._.GetEditModel().GetEventModel().jsondata.user_polls,
-              _ =
-                _ == null
-                  ? void 0
-                  : _.reduce((_, _) => _.concat(_.options), []);
+            const _ = _._.GetEditModel()
+              .GetEventModel()
+              .jsondata.user_polls?.reduce((_, _) => _.concat(_.options), []);
             let _ = 0;
             do _ = Math.floor(1e4 + Math.random() * 9e4);
             while (_ && _.findIndex((_) => _.option_id == _) >= 0);
@@ -2140,12 +2113,11 @@
         function _(_) {
           const { focusView: _, removeNode: _, poll_id: _ } = _,
             _ = (0, _._)(),
-            _ = (0, _._)(() => {
-              var _;
-              return (_ = _.GetEventModel().jsondata.user_polls) == null
-                ? void 0
-                : _.find((_) => _.poll_id == _);
-            }),
+            _ = (0, _._)(() =>
+              _.GetEventModel().jsondata.user_polls?.find(
+                (_) => _.poll_id == _,
+              ),
+            ),
             [_, _, _] = (0, _._)(),
             _ = _.useCallback(() => {
               _(), _();
@@ -2325,17 +2297,13 @@
                 }),
                 (0, _.jsx)(_._, {
                   items: _,
-                  render: (_) => {
-                    var _, _;
-                    return (0, _.jsx)("div", {
+                  render: (_) =>
+                    (0, _.jsx)("div", {
                       children:
-                        ((_ = _.localized_option) == null ? void 0 : _[_]) ||
-                        ((_ = _.localized_option) == null
-                          ? void 0
-                          : _[_.Bhc]) ||
+                        _.localized_option?.[_] ||
+                        _.localized_option?.[_.Bhc] ||
                         "",
-                    });
-                  },
+                    }),
                   onReorder: (_) => _(_),
                 }),
               ],
@@ -2644,7 +2612,7 @@
               },
               [_, _, _, _],
             );
-          if ((_ == null ? void 0 : _.GetClanAccountID()) == (0, _._)())
+          if (_?.GetClanAccountID() == (0, _._)())
             return (0, _.jsxs)(_.Fragment, {
               children: [
                 _ &&
@@ -2683,7 +2651,7 @@
               },
               [_, _, _, _],
             );
-          if ((_ == null ? void 0 : _.GetClanAccountID()) == (0, _._)())
+          if (_?.GetClanAccountID() == (0, _._)())
             return (0, _.jsxs)(_.Fragment, {
               children: [
                 _ &&
@@ -2784,13 +2752,10 @@
         function _(_, _, _, _) {
           let _ = _.GetDescription(_);
           return (
-            (_ =
-              _ == null
-                ? void 0
-                : _.replace(
-                    _._.GetUnvalidatedEmoticonReplaceRegex(),
-                    "[emoticon]$1[/emoticon]",
-                  )),
+            (_ = _?.replace(
+              _._.GetUnvalidatedEmoticonReplaceRegex(),
+              "[emoticon]$1[/emoticon]",
+            )),
             new _._(_, _, (_) => _.SetDescription(_, _), {
               parser: {
                 fnProcessText: (_) =>

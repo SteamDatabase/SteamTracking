@@ -2531,18 +2531,6 @@
           FullReviewLink: "_3_8G-9J9Ck495Bbx1AtzXb",
           FullReviewAnchor: "_3pWCNXNZaWp_KqFU6n38sy",
           FullReviewDomain: "_2R37NZqjmxkImiPnoElHtm",
-          BackgroundAnimation: "_3mJ9erLLVEMyDp_3pY3KTp",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ulNFI0sHkRk8TBa3fDFoS",
-          "ItemFocusAnim-darkerGrey": "OAwSuqlAeZPXQNLFz_zLx",
-          "ItemFocusAnim-darkGreySettings": "_1vwA5-HGmaz4WDUPfeIMXw",
-          "ItemFocusAnim-darkGrey": "_16cDR36DBbspxGZ8MxxB4Z",
-          "ItemFocusAnim-grey": "oS4oWYqe5S8U6CukOBsBi",
-          "ItemFocusAnim-translucent-white-10": "_1jj4yrDY55YFShmQZ8VANk",
-          "ItemFocusAnim-translucent-white-20": "TqUMJDChgbfs4XXKTa2UZ",
-          "ItemFocusAnimBorder-darkGrey": "_35LQt0hozt0Fu6IHh1i9gW",
-          "ItemFocusAnim-green": "_2cU5wBvJhWpmq45gjPgBx_",
-          focusAnimation: "XfHabgjmzuwMo5SRyzbkv",
-          hoverAnimation: "_2qskIW3iRVBxrrqQ3Sel07",
         };
       },
       chunkid: (module) => {

@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Poista ketjun lukitus (%1$s)",
     "moderation_actions_sustain": "Pidä moderointitoimi voimassa",
     "moderation_actions_sustain_multiple": "Pidä moderointitoimi voimassa (%1$s)",
+    "moderation_actions_sustain_short": "Hyväksy",
     "moderation_actions_suspicious": "Merkitse epäilyttäväksi",
     "moderation_actions_suspicious_multiple": "Merkitse epäilyttäväksi (%1$s)",
     "moderation_actions_unknown": "Tuntematon",

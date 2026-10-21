@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Odblokuj wątek (%1$s)",
     "moderation_actions_sustain": "Podtrzymaj moderację",
     "moderation_actions_sustain_multiple": "Podtrzymaj moderację (%1$s)",
+    "moderation_actions_sustain_short": "Podtrzymaj",
     "moderation_actions_suspicious": "Oznacz jako podejrzane",
     "moderation_actions_suspicious_multiple": "Oznacz jako podejrzane (%1$s)",
     "moderation_actions_unknown": "Nieznana",

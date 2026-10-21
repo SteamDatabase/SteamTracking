@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "فتح الموضوع (%1$s)",
     "moderation_actions_sustain": "الاحتفاظ بالقرار",
     "moderation_actions_sustain_multiple": "الاحتفاظ بالقرار (%1$s)",
+    "moderation_actions_sustain_short": "تأييد",
     "moderation_actions_suspicious": "إبلاغ كمحتوى مشبوه",
     "moderation_actions_suspicious_multiple": "إبلاغ كمحتوى مشبوه (%1$s)",
     "moderation_actions_unknown": "غير معروف",

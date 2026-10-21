@@ -45,82 +45,78 @@
           ))(_ || {});
         class _ {
           constructor() {
-            (this.rgFilterState = new Map()),
-              (this.commentFilter = {
-                type: 0,
-                setItemTypes: new Set([]),
-                fnFilter: () => !0,
-              }),
-              (this.k_rgFilterCheckboxes = [
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_Comments"),
-                  hash: "comments",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_Wishlist"),
-                  hash: "wishlist",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_FriendRequest"),
-                  hash: "invites",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_Gifts"),
-                  hash: "gifts",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_Inventory"),
-                  hash: "inventory",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_AsyncGame"),
-                  hash: "asyncgame",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_HelpRequest"),
-                  hash: "help",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_TradeOffer"),
-                  hash: "trade",
-                },
-                {
-                  type: _._._,
-                  display: (0, _._)("#NotificationsFilters_General"),
-                  hash: "general",
-                },
-              ]),
-              (this.k_rgCommentFilters = [
-                {
-                  type: 0,
-                  display: (0, _._)("#NotificationsList_CommentFilters_All"),
-                  fnFilter: () => !0,
-                },
-                {
-                  type: 1,
-                  display: (0, _._)(
-                    "#NotificationsList_CommentFilters_YourItems",
-                  ),
-                  fnFilter: this.IsCommentOwned,
-                },
-                {
-                  type: 2,
-                  display: (0, _._)(
-                    "#NotificationsList_CommentFilters_Subscribed",
-                  ),
-                  fnFilter: this.IsCommentSubscribed,
-                },
-              ]),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          rgFilterState = new Map();
+          commentFilter = {
+            type: 0,
+            setItemTypes: new Set([]),
+            fnFilter: () => !0,
+          };
+          k_rgFilterCheckboxes = [
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_Comments"),
+              hash: "comments",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_Wishlist"),
+              hash: "wishlist",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_FriendRequest"),
+              hash: "invites",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_Gifts"),
+              hash: "gifts",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_Inventory"),
+              hash: "inventory",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_AsyncGame"),
+              hash: "asyncgame",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_HelpRequest"),
+              hash: "help",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_TradeOffer"),
+              hash: "trade",
+            },
+            {
+              type: _._._,
+              display: (0, _._)("#NotificationsFilters_General"),
+              hash: "general",
+            },
+          ];
+          k_rgCommentFilters = [
+            {
+              type: 0,
+              display: (0, _._)("#NotificationsList_CommentFilters_All"),
+              fnFilter: () => !0,
+            },
+            {
+              type: 1,
+              display: (0, _._)("#NotificationsList_CommentFilters_YourItems"),
+              fnFilter: this.IsCommentOwned,
+            },
+            {
+              type: 2,
+              display: (0, _._)("#NotificationsList_CommentFilters_Subscribed"),
+              fnFilter: this.IsCommentSubscribed,
+            },
+          ];
           IsCommentOwned(_, _) {
             return _.bis_owner || _.owner_steam_id.ConvertTo64BitString() == _;
           }
@@ -155,26 +151,19 @@
               this.UpdateLocationHash();
           }
           SetCommentFilter(_) {
-            var _;
             (this.commentFilter = _),
-              (this.commentFilter.fnFilter =
-                (_ = this.k_rgCommentFilters.find((_) => _.type == _.type)) ==
-                null
-                  ? void 0
-                  : _.fnFilter),
+              (this.commentFilter.fnFilter = this.k_rgCommentFilters.find(
+                (_) => _.type == _.type,
+              )?.fnFilter),
               this.UpdateLocationHash();
           }
           UpdateLocationHash() {
             let _ = "";
             this.rgFilterState.forEach((_, _) => {
-              var _;
               _ &&
                 (_ +=
                   (_ ? "," : "") +
-                  ((_ = this.k_rgFilterCheckboxes.find((_) => _.type == _)) ==
-                  null
-                    ? void 0
-                    : _.hash));
+                  this.k_rgFilterCheckboxes.find((_) => _.type == _)?.hash);
             }),
               this.rgFilterState.has(_._._) &&
                 this.commentFilter.setItemTypes.forEach(
@@ -207,13 +196,7 @@
             _ = (0, _._)();
           return (
             _.map((_) => {
-              var _;
-              _.item.hidden ||
-                (0, _._)(
-                  _,
-                  _.type,
-                  (_ = _.rgunread) == null ? void 0 : _.length,
-                );
+              _.item.hidden || (0, _._)(_, _.type, _.rgunread?.length);
             }),
             (0, _._)(_)
           );

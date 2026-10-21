@@ -9282,7 +9282,7 @@
               path: "/",
               secure: !0,
               httpOnly: !1,
-              maxAge: 3600 * 24 * 7 * 365,
+              maxAge: 1e3 * 3600 * 24 * 365,
             },
             preferenceControls: {
               isTechnicallyNecessary: !0,
@@ -9340,7 +9340,7 @@
           if (_ && _[2]) return decodeURIComponent(_[2]);
         }
         function _(_, _) {
-          if (!document.cookie || !(0, _._)(_)) return;
+          if (!("document" in globalThis) || !(0, _._)(_)) return;
           const _ = _.options?.path ?? "/";
           let _ = "";
           _.options?.expires
@@ -9564,7 +9564,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _,
               disabledRoot: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
               "flow-children": _,
               ..._
             } = _,
@@ -9583,7 +9583,7 @@
                 onGlobalButtonDown: _,
                 disableFocusClasses: _,
                 disabledRoot: _,
-                excludeFromScrollRegionSearch: _,
+                excludeTreeFromScrollRegionSearch: _,
                 "flow-children": _,
                 ..._,
                 ..._,
@@ -9612,7 +9612,7 @@
               onGlobalButtonDown: _,
               disableFocusClasses: _ = !1,
               disabledRoot: _ = !1,
-              excludeFromScrollRegionSearch: _ = !1,
+              excludeTreeFromScrollRegionSearch: _ = !1,
               "flow-children": _,
               ..._
             } = _,
@@ -9627,7 +9627,7 @@
               virtualFocus: _,
               modal: _,
               historyMode: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
             });
           (0, _._)(_.OnActivateCallbacks, _),
             (0, _._)(_.OnDeactivateCallbacks, _),
@@ -9658,7 +9658,7 @@
               navID: _,
               parentEmbeddedNavTree: _,
               disabledRoot: _,
-              excludeFromScrollRegionSearch: _,
+              excludeTreeFromScrollRegionSearch: _,
               enabled: _,
               navTreeRef: _,
               onGlobalButtonDown: _,
@@ -10016,6 +10016,7 @@
               scrollIntoViewType: _,
               resetNavOnEntry: _,
               scrollRegionToStartOrEnd: _,
+              excludeFromScrollRegionSearch: _,
               ..._
             } = _,
             { gamepadEvents: _, actionDescriptions: _, props: _ } = _(_),
@@ -10043,6 +10044,7 @@
               scrollIntoViewType: _,
               resetNavOnEntry: _,
               scrollRegionToStartOrEnd: _,
+              excludeFromScrollRegionSearch: _,
               actionDescriptionMap: {
                 ..._,
                 ..._,
@@ -10626,7 +10628,6 @@
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(module_exports, {
-          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
@@ -11960,17 +11961,17 @@
                 (_ != _ &&
                   _.Element &&
                   _.m_Properties?.scrollRegionToStartOrEnd &&
-                  _(_.Element, _, _),
+                  _(_.Element, _, _, _ == _.Tree.Root),
                 _ == _)
               );
               _ = _.GetNavParentCrossingTrees()
             );
         }
-        function _(_, _, _) {
+        function _(_, _, _, _) {
           let _ = _,
             _ = _.ownerDocument;
           if (
-            (_ == _.body &&
+            ((_ || _ == _.body) &&
               _.defaultView &&
               !(0, _._)(_, _) &&
               (_ = _.defaultView),
@@ -12928,6 +12929,8 @@
             if (_ && _) {
               let _ = _.GetWrappedTree();
               if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+              for (let _ = _; _ && _ != this; _ = _.m_Parent)
+                if (_.m_Properties?.excludeFromScrollRegionSearch) return !1;
             }
             return !!_;
           }
@@ -23846,7 +23849,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -28085,6 +28088,7 @@
         var _ = {};
         __webpack_require__._(_),
           __webpack_require__._(_, {
+            _: () => _,
             _: () => _,
             _: () => _,
             _: () => _,
@@ -33607,6 +33611,7 @@
               {
                 bConstMethod: !0,
                 ePrivilege: 1,
+                rgBrowserAPISites: ["help"],
               },
             );
           }
@@ -39676,6 +39681,11 @@
                     },
                     include_family_licenses: {
                       _: 9,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    include_all_free_games: {
+                      _: 10,
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
@@ -49725,7 +49735,7 @@
                 bConstMethod: !0,
                 ePrivilege: 1,
                 eWebAPIKeyRequirement: 2,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -50196,7 +50206,7 @@
             return _.SendMsg("Player.GetNicknameList#1", (0, _._)(_, _, _), _, {
               bConstMethod: !0,
               ePrivilege: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetNicknameList = _;
@@ -50248,7 +50258,7 @@
               _,
               {
                 ePrivilege: 1,
-                rgBrowserAPISites: ["partner"],
+                rgBrowserAPISites: ["partner", "help"],
               },
             );
           }
@@ -62083,6 +62093,11 @@
                       _: _._.readEnum,
                       _: _._.writeEnum,
                     },
+                    has_community_hub: {
+                      _: 33,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
                   },
                 }),
               _.sm_m
@@ -65650,7 +65665,7 @@
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 1,
-              rgBrowserAPISites: ["partner"],
+              rgBrowserAPISites: ["partner", "help"],
             });
           }
           _.GetItems = _;
@@ -66694,6 +66709,7 @@
           _ = 20,
           _ = 21,
           _ = 22,
+          _ = 23,
           _ = 30,
           _ = 31,
           _ = 32,
@@ -66703,7 +66719,8 @@
           _ = 0,
           _ = 1,
           _ = 2,
-          _ = 3;
+          _ = 3,
+          _ = 4;
         function _(_) {
           return "unknown EStoreQuerySort ( " + _ + " )";
         }
@@ -73116,7 +73133,8 @@
           _ = ((_) => (
             (_[(_.None = 0)] = "None"),
             (_[(_.Header = 1)] = "Header"),
-            (_[(_.Fallback = 2)] = "Fallback"),
+            (_[(_.Measured = 2)] = "Measured"),
+            (_[(_.Guess = 3)] = "Guess"),
             _
           ))(_ || {});
         const _ = (0, _.createContext)({});
@@ -73124,33 +73142,36 @@
           const [_] = useState(ComputeClientHints);
           return (
             useEffect(() => {
-              const _ = [];
-              if (
-                _.viewportWidth?.source === 2 ||
-                _.viewportHeight?.source === 2
-              ) {
-                const _ = () =>
-                  WriteClientHintsToCookie({
-                    ..._,
-                    viewportWidth:
-                      _.viewportWidth?.source === 2
-                        ? {
-                            value: window.innerWidth,
-                            source: 2,
-                          }
-                        : _.viewportWidth,
-                    viewportHeight:
-                      _.viewportHeight?.source === 2
-                        ? {
-                            value: window.innerHeight,
-                            source: 2,
-                          }
-                        : _.viewportHeight,
-                  });
-                document.addEventListener("resize", _),
-                  _.push(() => document.removeEventListener("resize", _));
-              }
-              return () => _.forEach((_) => _());
+              const _ = _.viewportWidth?.source !== 1,
+                _ = _.viewportHeight?.source !== 1;
+              if (!_ && !_) return () => {};
+              const _ = () =>
+                WriteClientHintsToCookie({
+                  ..._,
+                  viewportWidth: _
+                    ? {
+                        value: window.innerWidth,
+                        source: 2,
+                      }
+                    : _.viewportWidth,
+                  viewportHeight: _
+                    ? {
+                        value: window.innerHeight,
+                        source: 2,
+                      }
+                    : _.viewportHeight,
+                });
+              _();
+              let _;
+              const _ = () => {
+                clearTimeout(_), (_ = setTimeout(_, 250));
+              };
+              return (
+                window.addEventListener("resize", _),
+                () => {
+                  clearTimeout(_), window.removeEventListener("resize", _);
+                }
+              );
             }, [_]),
             jsx(_, {
               value: _,
@@ -75846,29 +75867,26 @@
             } = _;
           if (!_) return null;
           const _ = _ && !_;
-          return (
-            console.log(_, _),
-            (0, _.jsxs)(_, {
-              percentage: _,
-              original_price: _,
-              final_price: _,
-              hide_discount_pct: _,
-              size: _,
-              transparent: _,
-              legacy: _,
-              children: [
-                _ > 0 &&
-                  (0, _.jsx)(_, {
-                    percentage: _,
-                    hide_discount_pct: _,
-                  }),
+          return (0, _.jsxs)(_, {
+            percentage: _,
+            original_price: _,
+            final_price: _,
+            hide_discount_pct: _,
+            size: _,
+            transparent: _,
+            legacy: _,
+            children: [
+              _ > 0 &&
                 (0, _.jsx)(_, {
-                  final_price: _,
-                  original_price: _ ? _ : void 0,
+                  percentage: _,
+                  hide_discount_pct: _,
                 }),
-              ],
-            })
-          );
+              (0, _.jsx)(_, {
+                final_price: _,
+                original_price: _ ? _ : void 0,
+              }),
+            ],
+          });
         });
         function _(_) {
           const { final_price: _, original_price: _ } = _;
@@ -76585,6 +76603,9 @@
               ),
               _.included_items?.included_bundles?.forEach((_) =>
                 _(_, _, _.included_item_data_request, _),
+              ),
+              _.included_items?.included_creators?.forEach((_) =>
+                _(_, _, _.included_item_data_request, _),
               )));
         }
         const _ = [
@@ -76700,7 +76721,7 @@
                       _ = _ !== void 0 ? (0, _._)(_, _.gid() ?? _._()) : _[_];
                     _ && _.set(_, _);
                   }),
-                _ && _(_, _, _, _),
+                _ && _(_, _, _, _.included_item_data_request, _),
                 _.map((_) => {
                   const [_] = (0, _._)(_, "|"),
                     _ = _.get(_);
@@ -76721,7 +76742,7 @@
           );
           return (_.cacheScope = (0, _._)(_)), _;
         }
-        function _(_, _, _, _) {
+        function _(_, _, _, _, _) {
           _.forEach((_, _) => {
             const _ = _.get(_);
             if (((0, _._)(_, `Missing request data for ${_}`), !_)) return;
@@ -76741,6 +76762,15 @@
               _.included_item_data_request = _;
             }
             _ && _(_, _);
+            const _ = _.included_items(!1);
+            if (_.has("include_included_items") && _ && _)
+              for (const _ of [
+                ..._.included_apps(),
+                ..._.included_packages(),
+                ..._.included_bundles(),
+                ..._.included_creators(),
+              ])
+                _(_, _);
           });
         }
         var _ = __webpack_require__("chunkid");
@@ -76965,11 +76995,24 @@
             _ = (0, _._)();
           return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
         }
+        function _(_) {
+          return `LocalizedTagNames2_${_}`;
+        }
+        function _(_) {
+          const _ = {};
+          return (
+            (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
+          );
+        }
+        async function _(_, _) {
+          const _ = await _.GetObject(_(_));
+          return _ ? _(_) : void 0;
+        }
         function _(_, _, _) {
           return {
             queryKey: ["LocalizedTagNames", _],
             queryFn: async () => {
-              const _ = `LocalizedTagNames2_${_}`,
+              const _ = _(_),
                 _ = await _.GetObject(_),
                 _ = _._.Init(_._);
               _.Body().set_language(_),
@@ -76986,11 +77029,7 @@
                 ),
                   (_ = _);
               else throw _.GetErrorMessage();
-              const _ = {};
-              return (
-                (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)),
-                _
-              );
+              return _(_);
             },
             staleTime: 3600 * 1e3,
           };
@@ -77299,13 +77338,13 @@
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           if (_.bIncludeUnpublished) return "partner-unpublished";
           if (_.bUsePartnerAPI) return "partner";
-          if (_.bFixedCountry) return `country-${_.country}`;
         }
         function _(_, _) {
           _.Body().set_context(_(_));
@@ -81108,6 +81147,7 @@
           function _(_, _, _) {
             return _.SendMsg("Parental.ValidateToken#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.ValidateToken = _;
@@ -81443,7 +81483,7 @@
               _.Body().set_steamid(_),
                 _.Body().set_include_appinfo(!0),
                 _.Body().set_include_free_sub(!0),
-                _.Body().set_include_played_free_games(!0),
+                _.Body().set_include_all_free_games(!0),
                 _.Body().set_skip_unvetted_apps(!1),
                 _.Body().set_language(Config.LANGUAGE);
               const _ = await PlayerService.GetOwnedGames(_, _);
@@ -82544,6 +82584,8 @@
               "TransparentParentWindow"),
             (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
             (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible"),
+            (_[(_.NoWindowTransitions = 33554432)] = "NoWindowTransitions"),
+            (_[(_.StartBelowSplash = 67108864)] = "StartBelowSplash"),
             _
           ))(_ || {}),
           _ = ((_) => (
@@ -84040,7 +84082,7 @@
                     : (this.m_ulSteamID = _._.UZERO);
           }
           static InitFromAccountID(_) {
-            return new _(Number(_), _._.EUNIVERSE, _.W19, _.keb);
+            return _ ? new _(Number(_), _._.EUNIVERSE, _.W19, _.keb) : new _();
           }
           static InitFromClanID(_) {
             return new _(Number(_), _._.EUNIVERSE, _.P3F, 0);
@@ -100692,6 +100734,10 @@
             ],
           });
         }
+        const _ =
+            "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+          _ =
+            "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z";
         function _(_) {
           const { alert: _, urgent: _, ..._ } = _;
           return _
@@ -100743,19 +100789,47 @@
                       (0, _.jsx)("path", {
                         fillRule: "evenodd",
                         clipRule: "evenodd",
-                        _: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                        _: _,
                         fill: "currentColor",
                       }),
                       (0, _.jsx)("path", {
                         className: "SVGIcon_Notification_Uvula",
                         fillRule: "evenodd",
                         clipRule: "evenodd",
-                        _: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                        _: _,
                         fill: "currentColor",
                       }),
                     ],
                   }),
                 });
+        }
+        function _(_) {
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: _,
+              fill: "currentColor",
+            }),
+          });
+        }
+        function _(_) {
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: _,
+              fill: "currentColor",
+            }),
+          });
         }
         function _(_) {
           return (0, _.jsx)("svg", {
@@ -101728,9 +101802,9 @@
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -101743,6 +101817,13 @@
                         fillRule: "evenodd",
                         clipRule: "evenodd",
                         _: "M39 6H0V30H39V22H42V14H39V6ZM36 9H3V27H36V9Z",
+                        fill: "currentColor",
+                      }),
+                    _ &&
+                      jsx("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
                         fill: "currentColor",
                       }),
                     jsx("svg", {
@@ -101773,12 +101854,6 @@
                 _ &&
                   jsxs(Fragment, {
                     children: [
-                      jsx("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        _: "M38.4774 6H0V30H39V22H42V18.4895C39.6953 17.5151 38.08 15.2509 38.08 12.6132C38.08 11.4277 38.4063 10.3177 38.9747 9.36634L38.4774 6ZM36 9H3V27H36V9Z",
-                        fill: "currentColor",
-                      }),
                       jsx("path", {
                         _: "M42.676 7.16846L41.6276 0H47.667L46.6544 7.16846H42.676Z",
                         fill: "#FFC82C",
@@ -101881,9 +101956,9 @@
                         _: "M-2 20C7 22 9.1 28.17 11.18 33.34l-1.89.66l-.95-2.3c-.48.17-.98.3-1.34.3C-4 32 -7 15 -7 15c1 2 8 2.25 13 3.25S13 23.5 13 25.5s-1.75 3.75-1.75 3.75C8 20 -2 20 -2 20",
                         fill: "none",
                         stroke: "#000000",
-                        "stroke-width": "6",
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
+                        strokeWidth: "6",
+                        strokeLinecap: "round",
+                        strokeLinejoin: "round",
                       }),
                     ],
                   }),
@@ -115775,8 +115850,8 @@
                                 _: "29.8083",
                                 transform: "matrix(-1 0 0 1 368.941 110.949)",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               jsxs("g", {
@@ -115801,7 +115876,7 @@
                                     _: "18",
                                     transform: "matrix(-1 0 0 1 357 123)",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   jsxs("g", {
                                     _: "Stick Fuzz",
@@ -115814,7 +115889,7 @@
                                         transform:
                                           "matrix(-1 0 0 1 367.182 112.818)",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       jsx("circle", {
@@ -115824,8 +115899,8 @@
                                         _: "31",
                                         transform: "matrix(-1 0 0 1 370 110)",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -115843,8 +115918,8 @@
                                 _: "140.758",
                                 _: "29.8083",
                                 stroke: "white",
-                                "stroke-opacity": "0.3",
-                                "stroke-width": "0.5",
+                                strokeOpacity: "0.3",
+                                strokeWidth: "0.5",
                                 onClick: _,
                               }),
                               jsxs("g", {
@@ -115866,7 +115941,7 @@
                                     _: "141",
                                     _: "18",
                                     stroke: "white",
-                                    "stroke-width": "0.5",
+                                    strokeWidth: "0.5",
                                   }),
                                   jsxs("g", {
                                     _: "Stick Fuzz_2",
@@ -115877,7 +115952,7 @@
                                         _: "141",
                                         _: "28.1818",
                                         className: _,
-                                        "stroke-linecap": "round",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                       jsx("circle", {
@@ -115886,8 +115961,8 @@
                                         _: "141",
                                         _: "31",
                                         className: _,
-                                        "stroke-width": "0.5",
-                                        "stroke-linecap": "round",
+                                        strokeWidth: "0.5",
+                                        strokeLinecap: "round",
                                         onClick: _,
                                       }),
                                     ],
@@ -118076,6 +118151,19 @@
             ],
           });
         }
+        function _(_) {
+          const { colored: _, ..._ } = _;
+          return jsx("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 -4 36 36",
+            fill: "none",
+            ..._,
+            children: jsx("path", {
+              _: "M9 9C25.2 12.6 28.98 23.71 32.72 33.01l-3.4 1.19l-1.71-4.14c-.86 .31-1.76 .54-2.41 .54C5.4 30.6 0 0 0 0c1.8 3.6 14.4 4.05 23.4 5.85S36 15.3 36 18.9s-3.15 6.75-3.15 6.75C27 9 9 9 9 9",
+              fill: _ ? "#59BF40" : "#5f6468",
+            }),
+          });
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -119197,6 +119285,10 @@
           }
           ShowModal(_) {
             return this.ShowModalInternal(_);
+          }
+          CloseLegacyModals() {
+            for (const _ of this.m_rgModals.filter((_) => _ instanceof _._))
+              this.RemoveModal(_);
           }
           RemoveModal(_) {
             let _ = this.m_rgModals.indexOf(_);
@@ -121963,6 +122055,33 @@
               className: "playTriangle",
               _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
             }),
+          });
+        }
+        function _() {
+          return jsxs("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_PlayInCircle",
+            width: "20px",
+            height: "20px",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            children: [
+              jsx("circle", {
+                className: "playCircle",
+                _: "10",
+                _: "10",
+                _: "9.5",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "1",
+              }),
+              jsx("path", {
+                className: "playTriangle",
+                transform: "matrix(0.0421875 0 0 0.0421875 4.7875 4.6)",
+                fill: "currentColor",
+                _: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
+              }),
+            ],
           });
         }
         function _() {
@@ -137551,12 +137670,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _.lazy(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -143353,6 +143470,7 @@ Status Code:` +
                     onFocusWithin: _,
                     onMoveDown: _,
                     onMoveUp: _,
+                    excludeFromScrollRegionSearch: !0,
                     children: (0, _.jsx)(_.Provider, {
                       value: _,
                       children: _,
@@ -143764,7 +143882,7 @@ Status Code:` +
                   navID: "StoreMenu",
                   ref: _,
                   className: _.StoreMenuNavWrapper,
-                  excludeFromScrollRegionSearch: !0,
+                  excludeTreeFromScrollRegionSearch: !0,
                   children: (0, _.jsx)(_, {
                     refPage: _,
                   }),
@@ -143820,8 +143938,6 @@ Status Code:` +
         }
         const _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -143912,16 +144028,6 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
@@ -143934,40 +144040,23 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144017,25 +144106,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144115,26 +144189,6 @@ Status Code:` +
             Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144149,10 +144203,7 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
+              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144176,8 +144227,25 @@ Status Code:` +
             Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            __webpack_require__
+              ._("chunkid")
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144195,43 +144263,6 @@ Status Code:` +
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144266,6 +144297,42 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144287,6 +144354,85 @@ Status Code:` +
               __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
+          _ = _(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(async () => ({
+            default: (
+              await Promise.all([
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+                __webpack_require__._("chunkid"),
+              ]).then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+            ).GameRatingBlock,
+          })),
           _ = _(() =>
             Promise.all([
               __webpack_require__._("chunkid"),
@@ -144341,12 +144487,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144387,42 +144531,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144477,63 +144589,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-          ),
-          _ = _(() =>
-            Promise.all([
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144608,6 +144667,40 @@ Status Code:` +
             Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
@@ -144625,11 +144718,53 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
               __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          ),
+          _ = _(() =>
+            Promise.all([
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -144681,7 +144816,6 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
@@ -144699,12 +144833,10 @@ Status Code:` +
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
-              __webpack_require__._("chunkid"),
             ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
           ),
           _ = _(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -145001,6 +145133,18 @@ Status Code:` +
                                             ..._,
                                           }),
                                         }),
+                                      "game-rating-block": () =>
+                                        (0, _.jsx)(_, {
+                                          _: {
+                                            packageid:
+                                              Number.parseInt(
+                                                _.match.params.subid,
+                                              ) || 0,
+                                          },
+                                          eLayout: "details",
+                                          bRatingAllowed: !0,
+                                          bHideRatingTitle: !1,
+                                        }),
                                     },
                                   }),
                               }),
@@ -145028,6 +145172,18 @@ Status Code:` +
                                           children: (0, _.jsx)(_, {
                                             ..._,
                                           }),
+                                        }),
+                                      "game-rating-block": () =>
+                                        (0, _.jsx)(_, {
+                                          _: {
+                                            bundleid:
+                                              Number.parseInt(
+                                                _.match.params.bundleid,
+                                              ) || 0,
+                                          },
+                                          eLayout: "details",
+                                          bRatingAllowed: !0,
+                                          bHideRatingTitle: !1,
                                         }),
                                     },
                                   }),
@@ -145971,18 +146127,6 @@ Status Code:` +
           CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
           CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
           BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
-          BackgroundAnimation: "_1TATspVTr5lY95m0_0i0Vf",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2CB48X5cYsrkjFcKDfha7c",
-          "ItemFocusAnim-darkerGrey": "_2KRTS0ETRuyJHyKwMCeHe6",
-          "ItemFocusAnim-darkGreySettings": "_1uyHQTDdZX0NI5x53ty8ZK",
-          "ItemFocusAnim-darkGrey": "_2ZWRnP1nc-Ag3kGW2f5YPR",
-          "ItemFocusAnim-grey": "QiQBf3jp2XsRo_jVQOg_h",
-          "ItemFocusAnim-translucent-white-10": "Fg76-fdDLz4Jk_AJTCl7Y",
-          "ItemFocusAnim-translucent-white-20": "dnuLIScTJaETckf5_0-NE",
-          "ItemFocusAnimBorder-darkGrey": "O3QvEIDCywxFRSG7HCADU",
-          "ItemFocusAnim-green": "noc6VD7z6rRTLox71D5wD",
-          focusAnimation: "D5YIeK0lvywGpe-HvgpM6",
-          hoverAnimation: "_30ROJZLtg44YEWZtnK2bbE",
         };
       },
       chunkid: (module) => {
@@ -146005,18 +146149,6 @@ Status Code:` +
           ExtraMargin: "_2ljgJpZbuQPGf3VlOWj4wR",
           ExtraPadding: "_2qoUV7t1K6Z7H23Kz8voOB",
           TopAlign: "_FWKBhuzEgLPrJrDeoa5o",
-          BackgroundAnimation: "_2MX3kbnJioxB5jacT14lA9",
-          "ItemFocusAnim-darkerGrey-nocolor": "_9xy0YQDkEbu857gsdInCv",
-          "ItemFocusAnim-darkerGrey": "l-J8MCegTsaUMRJT8b3TK",
-          "ItemFocusAnim-darkGreySettings": "_2KLibXC8O5wlDeEw_cXRh7",
-          "ItemFocusAnim-darkGrey": "_2aqmSY30NPpsbdKY1uvoj9",
-          "ItemFocusAnim-grey": "_1MQWbXSwGrC4QjIkWup2g",
-          "ItemFocusAnim-translucent-white-10": "_2UXD3XCfCdr57JBIS0dila",
-          "ItemFocusAnim-translucent-white-20": "_6XLLBJw8r-HcpK90UY2Zx",
-          "ItemFocusAnimBorder-darkGrey": "_2mP3u34eLuG-lXQjoulEET",
-          "ItemFocusAnim-green": "_2WxxoxD_VK4UhznzHZauVK",
-          focusAnimation: "_1Omq_6jixSqfkKLiND3K8m",
-          hoverAnimation: "_3vpR1RgidPuJSvdG20HMxw",
         };
       },
       chunkid: (module) => {
@@ -146080,18 +146212,6 @@ Status Code:` +
           LeftColumn: "_2mvz1stG3mdVukklUl35CV",
           RightColumn: "_3LsK4VSA6PZ96b2Yu-i-W9",
           RecommendationLinkColumn: "_3IuHjKAi2Q9E5QyD_-gc9w",
-          BackgroundAnimation: "mOOp1yYMcvPkiXfXrJAev",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1_QKXCzq4JtGuuYl_nYE_0",
-          "ItemFocusAnim-darkerGrey": "_2vlTuK8r8gX5dGKrGOmjCH",
-          "ItemFocusAnim-darkGreySettings": "zIlMgTDvHYTkn86NgS3Nq",
-          "ItemFocusAnim-darkGrey": "_1RGaJkQAEEPpoL2_ApiNLp",
-          "ItemFocusAnim-grey": "_3AfdGc4v_HPbqY4lpF0Fv2",
-          "ItemFocusAnim-translucent-white-10": "BF4H4NXLkYOUHtuiZEedd",
-          "ItemFocusAnim-translucent-white-20": "_2Anyxx88uyhFT8AgCDwIbh",
-          "ItemFocusAnimBorder-darkGrey": "_95Vw9AT5_0tMC4POHvyOg",
-          "ItemFocusAnim-green": "_2qrqXdvqgtTOecWA2PKury",
-          focusAnimation: "_1vk5MHApEi6hJit4m_hDAE",
-          hoverAnimation: "yjGXd3cs9RA-Lmiga2Hy9",
         };
       },
       chunkid: (module) => {
@@ -146171,18 +146291,6 @@ Status Code:` +
           Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
           ValveOnlyNotice: "_15mDm5FgO9il_6z-qj2UnK",
           NoSectionTitleSpacer: "_59vcPMi2m2JzS43mL89Ob",
-          BackgroundAnimation: "_3BqEIOIwfCRzoXF4qLahIX",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3M1e0qgxxi0Tk0UOD_Nwf8",
-          "ItemFocusAnim-darkerGrey": "_2MpeuS-yfzJzeRh7pleCd-",
-          "ItemFocusAnim-darkGreySettings": "_1YACQVo9FPLutCISweScXS",
-          "ItemFocusAnim-darkGrey": "_3eadGLQIzUrAcDSMGFHzU0",
-          "ItemFocusAnim-grey": "_2aiuwzRH5XfBMzjS6zhgL5",
-          "ItemFocusAnim-translucent-white-10": "_2f0Y6v74cTLRTrlNF9nvIg",
-          "ItemFocusAnim-translucent-white-20": "_2J4poZKa2N-gkwV2UCWla-",
-          "ItemFocusAnimBorder-darkGrey": "_20Z4c95G947qvgo-27cRH0",
-          "ItemFocusAnim-green": "_38LKX3Vj9-yD5jMPE2SoMd",
-          focusAnimation: "_129mSECd2G2VccqGUnWFCN",
-          hoverAnimation: "_2FnVZgQesTjWBpiqy4Zzwd",
         };
       },
       chunkid: (module) => {
@@ -146262,18 +146370,6 @@ Status Code:` +
           ForceDesktop: "_3qIuY9S_vXm3IQS-uE9SRS",
           PopoutSubMenu: "Baq37ml_4RsqEDikF0aIo",
           PopoutSubMenuItems: "_2fZ_eG4hoUgJoNBzVAW8wq",
-          BackgroundAnimation: "_3mu2U32Y_2WuSVGodurd6a",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1oGSmxXXFpN5G7Jn9ZvEQS",
-          "ItemFocusAnim-darkerGrey": "_3lg1LMj3mXezJ7ascb4yGV",
-          "ItemFocusAnim-darkGreySettings": "_1uSUbmC-8W1-FADNfUsSBP",
-          "ItemFocusAnim-darkGrey": "_2wO0UJLCBVNzypL_1QtVVs",
-          "ItemFocusAnim-grey": "_7GGFchhgqc71nZ8eL_lya",
-          "ItemFocusAnim-translucent-white-10": "_3ZLBhyvDidB4Rfz45C_SYe",
-          "ItemFocusAnim-translucent-white-20": "_3tuAQj0tTIvILlQs8SVJ6O",
-          "ItemFocusAnimBorder-darkGrey": "_2ndsTZA8rKNYYxX6q4X62O",
-          "ItemFocusAnim-green": "_3dGZBujqGTb6MvSpwfXt-u",
-          focusAnimation: "_1eQxz4PDgw0-4zeOxZc9zb",
-          hoverAnimation: "uLTwa30_-yxoQKi5qqCAw",
         };
       },
       chunkid: (module) => {
@@ -146302,18 +146398,6 @@ Status Code:` +
           ContextMenuSeparator: "ixiWPQKqTMxnq43WgT3vj",
           Label: "_18C7xpEWME7W-bxMsvyXdi",
           Arrow: "_2T7n7sepVsm6k4PqM9hZ_U",
-          BackgroundAnimation: "_39R4lbKGgs6tgliKRKaOGu",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3-ckPZrQQ4AcL8Jk8U_Jks",
-          "ItemFocusAnim-darkerGrey": "_1oxeJwH0ZuJGWZzFpl0Hna",
-          "ItemFocusAnim-darkGreySettings": "_9s04vs5aAvePxj8LGCHP4",
-          "ItemFocusAnim-darkGrey": "_2pGKXMC5Yvn04wv6_5ayhi",
-          "ItemFocusAnim-grey": "_97AO_Lq9HLtpPQgpBcZeI",
-          "ItemFocusAnim-translucent-white-10": "_2huw7WWVJBokivVlIjoa92",
-          "ItemFocusAnim-translucent-white-20": "NsTryIHdHWU8LOl4XCrhk",
-          "ItemFocusAnimBorder-darkGrey": "_1sLQsQ-IbGQ7xqKTw3uc-M",
-          "ItemFocusAnim-green": "QGN9mnAcP2r3B9mKyCmrp",
-          focusAnimation: "_3R-0H7Rl4MTvs97q_ecWuK",
-          hoverAnimation: "_115JS_717vFpl6zVBnieg5",
         };
       },
       chunkid: (module) => {
@@ -146407,33 +146491,12 @@ Status Code:` +
           BottomButtons: "UeBsDJo7ibrubT7WwDoHM",
           TextareaWrapper: "eNk_O4LrQEvG8jC82EB6M",
           Textarea: "_35YPSEBHIjTxOt0SyTpGld",
-          BackgroundAnimation: "_3PwEEPVt8AFlTzaPsr2aMs",
-          "ItemFocusAnim-darkerGrey-nocolor": "OLaBYXIY9KoOmv591HQ4C",
-          "ItemFocusAnim-grey": "_2cC0LcFydJUHm4XLEOIfH_",
-          "ItemFocusAnim-translucent-white-10": "_2ZXhFZ3yMelM_EaCuFUVCU",
-          "ItemFocusAnim-translucent-white-20": "_3FYJQQRKVuF4an6YLTaAH-",
-          "ItemFocusAnimBorder-darkGrey": "_2bQL7sqLJxz3iErp2xkuDu",
-          "ItemFocusAnim-green": "_3YEiBS4FQvAJ5_DCKWaJ9h",
-          focusAnimation: "_27hQac2edmP4A9XEJkh6QX",
-          hoverAnimation: "_1n0zrqn96vmI5hvxZBwflw",
         };
       },
       chunkid: (module) => {
         module.exports = {
           "duration-app-launch": "800ms",
           DropDownControlButton: "v8oJcDOQF6xmlVTw4VhOr",
-          BackgroundAnimation: "_39ftBgrwHL79vzBWzTUNIg",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1uRxKXzp4hyFG853DRpRmG",
-          "ItemFocusAnim-darkerGrey": "gmgYjyVXiyoE4dXuiyvRe",
-          "ItemFocusAnim-darkGreySettings": "BHeZLoGSQeMbyP_u3BOyv",
-          "ItemFocusAnim-darkGrey": "_wAkIFq95RDIO0BaFscJ-",
-          "ItemFocusAnim-grey": "_2EU0bFj-iDnGzS3y22Pm1n",
-          "ItemFocusAnim-translucent-white-10": "zCo-rS_8G4PFjVNj2HddR",
-          "ItemFocusAnim-translucent-white-20": "_3dLS4qNfRaL3VlHxF0assn",
-          "ItemFocusAnimBorder-darkGrey": "_2qWT6FmefGsz6vW4GyAN1d",
-          "ItemFocusAnim-green": "VJdx426NYwPhzacwDjqUy",
-          focusAnimation: "_1VSndovYnDm2jbIx6FU3Nq",
-          hoverAnimation: "_2tJDT6WmelyKdUlLq2gtna",
         };
       },
       chunkid: (module) => {
@@ -146473,18 +146536,6 @@ Status Code:` +
           Exit: "_3XxqhmpembnJZkU_CDSCQR",
           ExitActive: "_13X1O22Ge1JqHS5s4seC4A",
           Down: "_1C1JjI4inJUtodtSWKAPoE",
-          BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
-          "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
-          "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-          "ItemFocusAnim-darkGreySettings": "BvE4zAUWrioZv0MShImce",
-          "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
-          "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
-          "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
-          "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
-          "ItemFocusAnimBorder-darkGrey": "_21sRAofE89wu3ZgopiNdvZ",
-          "ItemFocusAnim-green": "_1JVe0k01JB6eRezb8eqqjg",
-          focusAnimation: "_2mE4Zqk74DYf-Fl8qNzR_1",
-          hoverAnimation: "_2TiOQH2-wZVvDubR_9gMF1",
         };
       },
       chunkid: (module) => {
@@ -146538,18 +146589,6 @@ Status Code:` +
           CompoundSliderSubSliderLabelInternal: "_38VX50q_XUUeqEdEgxC5no",
           DefaultValueTickContainer: "_2aCoHO7mXYYdPXMN0USBAW",
           DefaultValueTick: "_1NgUy7a2LKuF-moe-rzsiH",
-          BackgroundAnimation: "_34goutNBSou3YR_kTuPeXo",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3uBtlQHaoF-Fdvf-44fdfj",
-          "ItemFocusAnim-darkerGrey": "_1so9RRpNCSzFaLUuFaAoTQ",
-          "ItemFocusAnim-darkGreySettings": "_3xDgicGGM7zf4FDtrZTsrg",
-          "ItemFocusAnim-darkGrey": "_3rHHM0QPQeBnxSX9SsyTAv",
-          "ItemFocusAnim-grey": "_3bS2YJzXbd_HJcslwwJonb",
-          "ItemFocusAnim-translucent-white-10": "_1eyjVbw17bPbJY8cd6MyX2",
-          "ItemFocusAnim-translucent-white-20": "_1iqNj4v83-vYdxWouoYIbw",
-          "ItemFocusAnimBorder-darkGrey": "_2Pzyj6rGS2MYa48LGSbRdv",
-          "ItemFocusAnim-green": "_2C-5CyKHqs57xJb0nU1LnG",
-          focusAnimation: "_3aA7B5vDTJc5xq6IfXhQ2H",
-          hoverAnimation: "_12ndx-pa_lUGfXXWOFQVSY",
         };
       },
       chunkid: (module) => {
@@ -146579,18 +146618,6 @@ Status Code:` +
           Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
           HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
           ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
-          BackgroundAnimation: "_31dp93HtW4YaAIrv5kQNht",
-          "ItemFocusAnim-darkerGrey-nocolor": "_34v5-JW2L6fQ4YmSbk9AaR",
-          "ItemFocusAnim-darkerGrey": "_2hiPwZ5sHjd1palQvy9OrL",
-          "ItemFocusAnim-darkGreySettings": "_1Er_w8LQhe6MyIC6NfUM3V",
-          "ItemFocusAnim-darkGrey": "_8LuF4KlRbCw_drO7e2TC7",
-          "ItemFocusAnim-grey": "_2xSXLf_M9pyhcs0Up0YB3t",
-          "ItemFocusAnim-translucent-white-10": "_3XpUY5O65d5iC8QOTibOTo",
-          "ItemFocusAnim-translucent-white-20": "TtpwXKTKHcg8dU-yHafz8",
-          "ItemFocusAnimBorder-darkGrey": "_1XsIqwGv6cpC9wDe_vUw01",
-          "ItemFocusAnim-green": "Sv4pIC9tV5_-yNVWid_iZ",
-          focusAnimation: "W2aVTuNiYbD-L-tBboMKB",
-          hoverAnimation: "_2L5cxouAMAylE7_T3HQoRf",
         };
       },
       chunkid: (module) => {
@@ -146731,18 +146758,6 @@ Status Code:` +
           SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
           SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
           FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
-          BackgroundAnimation: "amz8jVfJ2MOIPnaUYMOgI",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3pY66EiNnfad09UHGMqtd4",
-          "ItemFocusAnim-darkerGrey": "_2JoqRmzZpoTtL_KIVWXd0a",
-          "ItemFocusAnim-darkGreySettings": "_1a5-ibcS0HyYhRO2QR7x_f",
-          "ItemFocusAnim-darkGrey": "NmpWlMoGlon2VMO2kUZxr",
-          "ItemFocusAnim-grey": "_1uq0bG0F5JVFzWlPHYMXB7",
-          "ItemFocusAnim-translucent-white-10": "_3xDNjaNkQ-uP0-lcJ8G7gP",
-          "ItemFocusAnim-translucent-white-20": "vYKrwRtlsPCKPnSf3CU-7",
-          "ItemFocusAnimBorder-darkGrey": "_3h8yQpj5B4lqfo4rvQXD4p",
-          "ItemFocusAnim-green": "_2JSjyAe00zqEy25fUVQS5H",
-          focusAnimation: "_19xVMCOSnHPfsYR_llwrJD",
-          hoverAnimation: "_26wdGOzkKTLjBLc0bu8-gV",
         };
       },
       chunkid: (module) => {

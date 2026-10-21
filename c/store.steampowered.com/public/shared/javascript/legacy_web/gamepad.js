@@ -1595,17 +1595,20 @@
             (_ != _ &&
               _.Element &&
               _.m_Properties?.scrollRegionToStartOrEnd &&
-              _(_.Element, _, _),
+              _(_.Element, _, _, _ == _.Tree.Root),
             _ != _);
             _ = _.GetNavParentCrossingTrees()
           );
         })(_, _);
       }
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         let _ = _,
           _ = _.ownerDocument;
         if (
-          (_ == _.body && _.defaultView && !_(_, _) && (_ = _.defaultView),
+          ((!_ && _ != _.body) ||
+            !_.defaultView ||
+            _(_, _) ||
+            (_ = _.defaultView),
           !_(_, _))
         )
           return;
@@ -2543,6 +2546,8 @@
           if (_ && _) {
             let _ = __webpack_require__.GetWrappedTree();
             if (_ && _.GetExcludeFromScrollRegionSearch()) return !1;
+            for (let _ = _; _ && _ != this; _ = _.m_Parent)
+              if (_.m_Properties?.excludeFromScrollRegionSearch) return !1;
           }
           return !!_;
         }

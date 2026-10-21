@@ -422,6 +422,386 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          };
+        let _ = class extends _.Component {
+          static get hoverClass() {
+            return _().hoverParent;
+          }
+          render() {
+            const {
+              persona: _,
+              animating: _,
+              className: _,
+              size: _,
+              dim: _,
+              ..._
+            } = this.props;
+            let _ = "";
+            return (
+              _ == "medium"
+                ? (_ = _().Medium)
+                : _ == "large" && (_ = _().Large),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _().SnoozeContainer,
+                  _.online_state,
+                  _,
+                  _ && _().animating,
+                  _,
+                  _ && _().Dim,
+                ),
+                ..._,
+                children: [
+                  (0, _.jsx)("div", {
+                    "data-text": "Z",
+                    className: (0, _._)(_().SnoozeZ, _()._),
+                    children: "Z",
+                  }),
+                  (0, _.jsx)("div", {
+                    "data-text": "Z",
+                    className: (0, _._)(_().SnoozeZ, _()._),
+                    children: "Z",
+                  }),
+                  (0, _.jsx)("div", {
+                    "data-text": "Z",
+                    className: (0, _._)(_().SnoozeZ, _()._),
+                    children: "Z",
+                  }),
+                ],
+              })
+            );
+          }
+        };
+        _ = _([_._], _);
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid");
+        const _ = (0, _._)((_) => {
+          const { persona: _, className: _, ..._ } = _;
+          if (!_ || !_.is_online) return null;
+          const _ = _.HasStateFlag(_._),
+            _ = _.HasStateFlag(_._),
+            _ = _.m_eGamingDeviceType == _.LS$,
+            _ = _.m_eGamingDeviceType == _.ppM,
+            _ = !_ && !_ && !_ && _.HasStateFlag(_._);
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _,
+                    _().PersonaStatusIcon,
+                    _().MobilePhoneIcon,
+                    (0, _._)(_),
+                  ),
+                  title: (0, _._)("#Platform_Hint_Mobile"),
+                  ..._,
+                  children: (0, _.jsx)(_._, {}),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _,
+                    _().PersonaStatusIcon,
+                    _().VRIcon,
+                    (0, _._)(_),
+                  ),
+                  title: (0, _._)("#Platform_Hint_VR"),
+                  ..._,
+                  children: (0, _.jsx)(_.MUh, {}),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _,
+                    _().PersonaStatusIcon,
+                    _().BigPictureIcon,
+                    (0, _._)(_),
+                  ),
+                  title: (0, _._)("#Platform_Hint_BigPicture"),
+                  ..._,
+                  children: (0, _.jsx)(_.bPr, {}),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _,
+                    _().PersonaStatusIcon,
+                    _().SteamDeckIcon,
+                    (0, _._)(_),
+                  ),
+                  title: (0, _._)("#Platform_Hint_SteamDeck"),
+                  ..._,
+                  children: (0, _.jsx)(_.DQe, {}),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _,
+                    _().PersonaStatusIcon,
+                    _().SteamDeckIcon,
+                    (0, _._)(_),
+                  ),
+                  title: (0, _._)("#Platform_Hint_LegionGoS"),
+                  ..._,
+                  children: (0, _.jsx)(_.DQe, {}),
+                }),
+            ],
+          });
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = Object.defineProperty,
+          _ = Object.getOwnPropertyDescriptor,
+          _ = (_, _, _, _) => {
+            for (
+              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
+              _ >= 0;
+              _--
+            )
+              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
+            return _ && _ && _(_, _, _), _;
+          };
+        function _(_) {
+          return (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("span", {
+                className: _().partyBeaconJoin,
+                children: (0, _._)("#User_WantsToPlay"),
+              }),
+              "\xA0\u2013\xA0",
+              _.persona.GetCurrentGameName(),
+            ],
+          });
+        }
+        let _ = class extends _.Component {
+          render() {
+            const {
+              className: _,
+              onContextMenu: _,
+              persona: _,
+              eFriendRelationship: _,
+              bIsSelf: _,
+              bParenthesizeNicknames: _,
+              strNickname: _,
+              bCompactView: _,
+              bHideGameName: _,
+              bHideEnhancedRichPresenceLabel: _,
+              bHideSnooze: _,
+              bHideStatus: _,
+              renderStatus: _,
+              renderRichPresence: _,
+              bHidePersona: _,
+              bDNDSet: _,
+              bHasPartyBeacon: _,
+              bHasGamePrivacy: _,
+              bNoMask: _,
+              bEllipsisName: _,
+              bDropPadding: _,
+              ..._
+            } = this.props;
+            let _ = null,
+              _ = null,
+              _ = null,
+              _ = [
+                _,
+                _().personaNameAndStatusLabel,
+                (0, _._)(_),
+                _ ? _().compactView : void 0,
+                _ ? _().NoMask : void 0,
+              ];
+            _ || _.has_public_party_beacon
+              ? (_ = (0, _.jsx)(_, {
+                  persona: _,
+                }))
+              : (0, _.aPS)(_)
+                ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
+                : _.is_ingame
+                  ? (!_.is_in_nonsteam_game || _ || (0, _.S$u)(_)
+                      ? (_ = _.GetCurrentGameName())
+                      : (_ = (0, _._)("#PersonaStateInNonSteamGame")),
+                    !_ && !_
+                      ? (_ = _.GetCurrentGameRichPresence())
+                      : _ &&
+                        _.is_awayOrSnooze &&
+                        (_ = (0, _._)("#PersonaStateAway")))
+                  : _.m_broadcastAccountId &&
+                    (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
+              _ || (_ = _.GetLocalizedOnlineStatus()),
+              _ && (_ = _());
+            let _ = !_ && !_;
+            _ === !1 && (_ = !0),
+              _.is_awayOrSnooze &&
+                _ &&
+                (_ = (0, _.jsx)(_, {
+                  persona: _,
+                }));
+            let _ = (0, _.jsx)(_.Fragment, {});
+            _
+              ? (_ = (0, _.jsx)("div", {
+                  className: "ContextMenuButton",
+                  onClick: _,
+                  children: (0, _.jsx)(_.GB9, {}),
+                }))
+              : _.push(_().noContextMenu),
+              _ && _.push(_().hidePersona),
+              _ && (_ = _()),
+              (_ || !_) && _.push(_().twoLine);
+            const _ = !_.is_ingame && !_,
+              _ = !_ && _,
+              _ = _ && (!_ || !_),
+              _ = (0, _.IDH)(_._.LAUNCHER_TYPE);
+            let _ = _ && !_,
+              _ = _ ? _ : _.m_strPlayerName,
+              _ = !_ && (_ || _) && _;
+            return (0, _.jsxs)("div", {
+              ..._,
+              className: (0, _._)(..._),
+              onContextMenu: _,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(
+                    _().statusAndName,
+                    _ ? _().threeLines : void 0,
+                  ),
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(
+                        _().playerName,
+                        _ ? _().EllipsisName : void 0,
+                      ),
+                      children: [
+                        _ || "\xA0",
+                        _ &&
+                          _ &&
+                          (0, _.jsxs)("span", {
+                            className: _().playerNickname,
+                            children: ["(", _, ")"],
+                          }),
+                      ],
+                    }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().DNDContainer,
+                        title: (0, _._)("#User_ToggleDoNotDisturb"),
+                        children: (0, _.jsx)(_.Aj0, {}),
+                      }),
+                    _ &&
+                      (0, _.jsx)("span", {
+                        className: _().playerNicknameBracket,
+                        title: (0, _._)("#isNickname"),
+                        children: " *",
+                      }),
+                    (0, _.jsx)(_, {
+                      persona: _,
+                    }),
+                    _,
+                    (_.m_bPlayerNamePending || _.m_bAvatarPending) &&
+                      _ &&
+                      (0, _.jsx)("div", {
+                        className: _().PendingPersona,
+                        title: (0, _._)("#SteamChina_PendingPersonaName"),
+                        children: (0, _.jsx)(_.zD7, {}),
+                      }),
+                    _,
+                  ],
+                }),
+                !_ &&
+                  (0, _.jsxs)("div", {
+                    className: _().richPresenceContainer,
+                    children: [
+                      (_ || _) &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _().gameName,
+                            _ ? _().threeLines : void 0,
+                            _().richPresenceLabel,
+                            _ && _().dropPadding,
+                            "no-drag",
+                          ),
+                          children: [
+                            _ &&
+                              (0, _.jsx)("div", {
+                                className: _().gameIsPrivateIcon,
+                                title: (0, _._)("#User_GameInfoHidden"),
+                                children: (0, _.jsx)(_.jZl, {}),
+                              }),
+                            _,
+                          ],
+                        }),
+                      _ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            _().richPresenceLabel,
+                            _ && _().dropPadding,
+                            "no-drag",
+                          ),
+                          children: [_, " "],
+                        }),
+                    ],
+                  }),
+              ],
+            });
+          }
+        };
+        _ = _([_._], _);
+        const _ = (0, _._)((_) => {
+          const {
+            persona: _,
+            bParenthesizeNicknames: _,
+            strNickname: _,
+            bIgnorePersonaStatus: _,
+            bDisableColoring: _,
+            className: _,
+            ..._
+          } = _;
+          let _ = _ && !_ ? _ : _.m_strPlayerName;
+          return (0, _.jsx)("span", {
+            ..._,
+            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
+            children: (0, _.jsxs)("span", {
+              className: _().playerName,
+              children: [
+                _ || "\xA0",
+                _ &&
+                  _ &&
+                  (0, _.jsxs)("span", {
+                    className: _().playerNickname,
+                    children: ["(", _, ")"],
+                  }),
+              ],
+            }),
+          });
+        });
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
         });
@@ -470,7 +850,44 @@
           }
         }
         const _ = _.memo(function (_) {
-          const {
+            const {
+                strAvatarURL: _,
+                size: _ = "Medium",
+                className: _,
+                statusStyle: _,
+                statusPosition: _,
+                children: _,
+                ..._
+              } = _,
+              _ = _.useMemo(() => {
+                const _ = [];
+                return _ && _.push(_), _.push(_(_)), _;
+              }, [_, _]);
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  rgSources: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
+          }),
+          _ = _.memo(function (_) {
+            const {
               strAvatarURL: _,
               size: _ = "Medium",
               className: _,
@@ -478,34 +895,30 @@
               statusPosition: _,
               children: _,
               ..._
-            } = _,
-            _ = _.useMemo(() => {
-              const _ = [];
-              return _ && _.push(_), _.push(_(_)), _;
-            }, [_, _]);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              _,
-              _,
-            ),
-            ..._,
-            children: [
-              (0, _.jsx)("div", {
-                className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-                style: _,
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_().avatar, "avatar"),
-                rgSources: _,
-                draggable: !1,
-              }),
-              _,
-            ],
+            } = _;
+            return (0, _.jsxs)("div", {
+              className: (0, _._)(
+                _().avatarHolder,
+                "avatarHolder",
+                "no-drag",
+                _,
+                _,
+              ),
+              ..._,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().avatarStatus, "avatarStatus", _),
+                  style: _,
+                }),
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().avatar, "avatar"),
+                  src: _,
+                  draggable: !1,
+                }),
+                _,
+              ],
+            });
           });
-        });
         let _ = class extends _.Component {
           render() {
             const {
@@ -1162,6 +1575,157 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Settings, {})
+            : jsx(SVG.Settings, {});
+        }
+        function _(_) {
+          const _ = _.filled ?? !0;
+          return useInGamepadUI()
+            ? _
+              ? jsx(GamepadSVG.Star, {})
+              : jsx(GamepadSVG.EmptyStar, {})
+            : jsx(SVG.Star, {});
+        }
+        function _(_) {
+          const _ = _.filled ?? !0;
+          return useInGamepadUI()
+            ? _
+              ? jsx(GamepadSVG.Heart, {})
+              : jsx(GamepadSVG.HeartEmpty, {})
+            : jsx(SVG.Heart, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.ControllerStatus, {})
+            : jsx(SVG.BigPicture, {});
+        }
+        function _(_) {
+          return (0, _._)()
+            ? (0, _.jsx)(_.MGO, {
+                ..._,
+              })
+            : (0, _.jsx)(_.Jlk, {
+                ..._,
+              });
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Carat, {
+                direction: "down",
+              })
+            : jsx(SVG.FlatArrow, {
+                angle: 180,
+              });
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Information, {})
+            : jsx(SVG.Information, {});
+        }
+        function _(_) {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Lock, {})
+            : jsx(SVG.Lock, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Download, {})
+            : jsx(SVG.Download, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Play, {})
+            : jsx(SVG.Play, {});
+        }
+        function _(_) {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Achievement, {})
+            : jsx(SVG.AwardIcon, {});
+        }
+        function _(_) {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.ThumbsUp, {})
+            : jsx(SVG.ThumbsUpUserNews, {
+                className: _.className,
+              });
+        }
+        function _(_) {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.ThumbsDown, {})
+            : jsx(SVG.ThumbsUpUserNews, {
+                className: _.className,
+              });
+        }
+        function _(_) {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.CommentThread, {
+                className: _.className,
+              })
+            : jsx(SVG.CommentThread, {
+                className: _.className,
+              });
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Pause, {})
+            : jsx(SVG.Pause, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Reload, {})
+            : jsx(SVG.Reload, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Update, {})
+            : jsx(SVG.Update, {});
+        }
+        function _() {
+          return jsx(GamepadSVG.Globe, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Close, {})
+            : jsx(SVG.X_Line, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Trash, {})
+            : jsx(SVG.Trash, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Dynamic, {})
+            : jsx(SVG.DynamicCollection, {});
+        }
+        function _() {
+          return jsx(GamepadSVG.Add, {});
+        }
+        function _() {
+          return useInGamepadUI()
+            ? jsx(GamepadSVG.Edit, {})
+            : jsx(SVG.Edit, {});
+        }
+        function _() {
+          return (0, _.jsx)(_.rfv, {});
+        }
+        function _() {
+          return (0, _._)() ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_.jZW, {});
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -1543,6 +2107,7 @@
                         bHideCreatorType: !0,
                         bSmallFormat: !0,
                         bMinimalDisplay: _,
+                        bCompact: !0,
                       },
                       "creat" + _,
                     ),
@@ -3456,7 +4021,10 @@
         }
         function _() {
           const _ = (0, _._)();
-          return (0, _._)({
+          return (0, _._)(_(_));
+        }
+        function _(_) {
+          return {
             queryKey: _(),
             queryFn: async () =>
               ((await _(_)).line_items ?? []).reduce(
@@ -3467,7 +4035,7 @@
               ),
             enabled: _._.logged_in,
             placeholderData: () => ({}),
-          });
+          };
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
@@ -4407,6 +4975,60 @@
         module.exports = {
           strMaxCartPartResponsiveWidth: "840px",
           CartCard: "tVR7nCVynuzImpvF9viMI",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          narrowWidth: "500px",
+          SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
+          SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
+          none: "T3Fb5KTXwIHM2B-ThTvEs",
+          Medium: "_1iYPlsChibPe7Ga9B3c5Wm",
+          Large: "_3BESV4eFnr4EnaSaJSdk6T",
+          Dim: "rpZ9bKyFXYvNQvgtKn5GV",
+          _: "_2hnF3M_l4xdIdQ4CkN7LYB",
+          _: "VmQTOrz5MPOWte5C9K7YS",
+          _: "_29mtadjX8N6pRn5TX1nA0o",
+          hoverParent: "_3-8cByP2koYzHwgZqjvFA",
+          animating: "_2rXc7hLg6bohWZ-JpRcYEB",
+          Snoring: "_38wIVgo1WjvGqL5ZsmpmiX",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "duration-app-launch": "800ms",
+          narrowWidth: "500px",
+          statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
+          threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
+          blocked: "VTxPkslK1CSpKNFMgKg7d",
+          richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
+          playerName: "nOdcT-MoOaXGePXLyPe0H",
+          playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+          EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
+          DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
+          playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
+          richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
+          gameName: "_1cB0qtF0paHWWyj1XNcnbG",
+          dropPadding: "_3tEPYJ6xjX0d6akU-hhrs4",
+          NoMask: "_2dAj6KfWRAxoYPr6tgXd6t",
+          twoLine: "_1BbOegz8bYL7iPzgYpOgQI",
+          DNDContainer: "_3IswZMeeD6ORStUjgv6Xh8",
+          partyBeaconJoin: "_3BnDsXrefFJrt_8frF2wvB",
+          hidePersona: "_3ZJkOzmqed_i-p74uF3hus",
+          compactView: "_3bbRZyUiK-bfc5Qov6xukI",
+          noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
+          gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
+          PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          "duration-app-launch": "800ms",
+          narrowWidth: "500px",
+          PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
+          MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+          SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+          VRIcon: "_368tz9TSOLGiG2mNMLScMz",
         };
       },
       chunkid: (module) => {

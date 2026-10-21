@@ -51,7 +51,7 @@
         function _(_) {
           const { children: _, className: _, ref: _, label: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _ == null ? void 0 : _.floating.refs.setFloating]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]);
           if (!_)
             return (
               console.error(
@@ -195,15 +195,7 @@
             strategy: "fixed",
             platform: {
               ..._._,
-              getOffsetParent: (_) => {
-                var _, _;
-                return (_ =
-                  (_ = _ == null ? void 0 : _.ownerDocument) == null
-                    ? void 0
-                    : _.defaultView) != null
-                  ? _
-                  : window;
-              },
+              getOffsetParent: (_) => _?.ownerDocument?.defaultView ?? window,
             },
           });
         }
@@ -295,7 +287,6 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(
@@ -305,10 +296,7 @@
               },
               _,
             ),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)(_, {
               ref: _,
               ..._,
@@ -531,30 +519,18 @@
             {
               prop: "color",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    _,
-                    (_ = (0, _._)(_.contrast, _)) != null ? _ : "body",
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
+              ],
             },
             {
               prop: "contrast",
               responsive: !0,
-              cssProperty: (_, _, _) => {
-                var _;
-                return [
-                  "--text-color",
-                  (0, _._)(
-                    (_ = (0, _._)(_.color, _)) != null ? _ : "text-body",
-                    _,
-                  ),
-                ];
-              },
+              cssProperty: (_, _, _) => [
+                "--text-color",
+                (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
+              ],
             },
             {
               prop: "truncate",
@@ -618,13 +594,9 @@
           },
         ];
         function _(_) {
-          var _;
           const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
             _ = (0, _._)(),
-            _ =
-              (_ = _ != null ? _ : _ == null ? void 0 : _.focusable) != null
-                ? _
-                : !!_.onClick,
+            _ = _ ?? _?.focusable ?? !!_.onClick,
             _ = (0, _.jsx)("span", {
               role: "button",
               ...(0, _._)(
@@ -841,9 +813,7 @@
           let { href: _, ..._ } = _;
           const _ = (0, _._)();
           return (
-            _ != null &&
-              _.startsWith(_._.STORE_BASE_URL) &&
-              (_ = (0, _._)(_, _)),
+            _?.startsWith(_._.STORE_BASE_URL) && (_ = (0, _._)(_, _)),
             (0, _.jsx)(_._, {
               href: _,
               color: "dull-11",
@@ -1246,9 +1216,7 @@
           let { href: _, ..._ } = _;
           const _ = (0, _._)();
           return (
-            _ != null &&
-              _.startsWith(_._.STORE_BASE_URL) &&
-              (_ = (0, _._)(_, _)),
+            _?.startsWith(_._.STORE_BASE_URL) && (_ = (0, _._)(_, _)),
             (0, _.jsx)(_._, {
               href: _,
               color: "dull-11",

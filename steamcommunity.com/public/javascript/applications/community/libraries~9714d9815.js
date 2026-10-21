@@ -114,7 +114,7 @@
           }
           function bi(a) {
             if (
-              (typeof Symbol != "undefined" && a[Symbol.iterator] != null) ||
+              (typeof Symbol < "u" && a[Symbol.iterator] != null) ||
               a["@@iterator"] != null
             )
               return Array.from(a);
@@ -160,9 +160,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             var t = Di(a, "string");
             return typeof t == "symbol" ? t : String(t);
           }
-          var ct =
-              typeof window != "undefined" &&
-              typeof window.document != "undefined",
+          var ct = typeof window < "u" && typeof window.document < "u",
             k = ct ? window : {},
             vt =
               ct && k.document.documentElement
@@ -267,7 +265,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             return t > 0 && t < 1 / 0;
           };
           function Nt(a) {
-            return typeof a == "undefined";
+            return typeof a > "u";
           }
           function G(a) {
             return gt(a) === "object" && a !== null;

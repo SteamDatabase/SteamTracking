@@ -580,6 +580,7 @@
     "Workshop_ItemAdmin_Incompatible_UnsetConfirm": "您确定要将此项目设为兼容吗？",
     "Workshop_ItemAdmin_Ban_Set": "封禁项目",
     "Workshop_ItemAdmin_Ban_Unset": "解除项目封禁",
+    "Workshop_ItemAdmin_Ban_Sustain": "维持封禁",
     "Workshop_ItemAdmin_Ban_Reason": "请提供原因：",
     "Workshop_ItemAdmin_Ban_Reason_Unselected": "点击以选择…",
     "Workshop_ItemAdmin_Ban_Presets": "预设：",

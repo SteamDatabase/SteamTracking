@@ -1343,11 +1343,11 @@
         (function (e) {
           const n = Object.prototype.toString;
           function i(l) {
-            return typeof l != "undefined";
+            return typeof l < "u";
           }
           e.defined = i;
           function r(l) {
-            return typeof l == "undefined";
+            return typeof l > "u";
           }
           e.undefined = r;
           function t(l) {
@@ -1560,9 +1560,7 @@
             );
         }
         function Lt(e) {
-          return (
-            typeof e.insert != "undefined" && typeof e.replace != "undefined"
-          );
+          return typeof e.insert < "u" && typeof e.replace < "u";
         }
         function Rt(e) {
           const n = d.languages.CompletionItemKind;
@@ -1762,15 +1760,14 @@
           return "children" in e;
         }
         function at(e) {
-          var n, i, r;
           return {
             name: e.name,
-            detail: (n = e.detail) != null ? n : "",
+            detail: e.detail ?? "",
             kind: st(e.kind),
             range: m(e.range),
             selectionRange: m(e.selectionRange),
-            tags: (i = e.tags) != null ? i : [],
-            children: ((r = e.children) != null ? r : []).map((t) => at(t)),
+            tags: e.tags ?? [],
+            children: (e.children ?? []).map((n) => at(n)),
           };
         }
         function st(e) {
@@ -1912,9 +1909,7 @@
                   if (t)
                     return t.map((o) => {
                       const s = { start: o.startLine + 1, end: o.endLine + 1 };
-                      return (
-                        typeof o.kind != "undefined" && (s.kind = Nt(o.kind)), s
-                      );
+                      return typeof o.kind < "u" && (s.kind = Nt(o.kind)), s;
                     });
                 });
             }

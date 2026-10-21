@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Topic heropenen (%1$s)",
     "moderation_actions_sustain": "Moderatie handhaven",
     "moderation_actions_sustain_multiple": "Moderatie handhaven (%1$s)",
+    "moderation_actions_sustain_short": "Handhaven",
     "moderation_actions_suspicious": "Markeren als verdacht",
     "moderation_actions_suspicious_multiple": "Markeren als verdacht (%1$s)",
     "moderation_actions_unknown": "Onbekend",

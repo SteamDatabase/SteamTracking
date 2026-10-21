@@ -1170,6 +1170,71 @@ function LocUpdateLangThatHaveText( id )
 	}
 }
 
+//
+// Required field markers (see HTMLUtils::RequiredStatus). Swaps the asterisk for a green checkmark once the field is complete.
+//
+
+// fields that need more than "any watched input has a value" register a check function by marker id
+var g_mapRequiredStatusChecks = {};
+function RegisterRequiredStatusCheck( id, fnCheck )
+{
+	g_mapRequiredStatusChecks[id] = fnCheck;
+}
+
+// fancy checkboxes store their state in a hidden input as "true"/"1" or "", so treat those like any other input
+function BRequiredStatusInputHasValue( el )
+{
+	if ( el.type == 'checkbox' || el.type == 'radio' )
+		return el.checked;
+
+	var strValue = ( el.value || '' ).trim();
+	return strValue !== '' && strValue != 'false' && strValue != '0';
+}
+
+function BRequiredStatusAnyInputHasValue( strSelector )
+{
+	return $J( strSelector ).toArray().some( BRequiredStatusInputHasValue );
+}
+
+function UpdateRequiredStatuses()
+{
+	$J( '.required_status' ).each( function()
+	{
+		var fnCheck = g_mapRequiredStatusChecks[ this.id ];
+		var strSelector = this.getAttribute( 'data-required-watch' );
+		if ( fnCheck )
+			$J( this ).toggleClass( 'required_set', !!fnCheck() );
+		else if ( strSelector )
+			$J( this ).toggleClass( 'required_set', BRequiredStatusAnyInputHasValue( strSelector ) );
+		// markers with neither only change when the page is saved
+	} );
+}
+
+$J( function()
+{
+	if ( !$J( '.required_status' ).length )
+		return;
+
+	// batch updates, typing and React re-renders can fire a lot of these
+	var bUpdateQueued = false;
+	var fnQueueUpdate = function()
+	{
+		if ( bUpdateQueued )
+			return;
+		bUpdateQueued = true;
+		window.requestAnimationFrame( function()
+		{
+			bUpdateQueued = false;
+			UpdateRequiredStatuses();
+		} );
+	};
+
+	$J( document ).on( 'input change keyup paste', fnQueueUpdate );
+
+	// React editors and some of our own scripts set hidden input values directly without firing events
+	new MutationObserver( fnQueueUpdate ).observe( document.body, { subtree: true, childList: true, attributes: true, attributeFilter: [ 'value', 'checked' ] } );
+} );
+
 function ShowAdditionalLanguage( selectId, selectValue )
 {
 	var langContainer = $( 'additional_language_' + selectValue );

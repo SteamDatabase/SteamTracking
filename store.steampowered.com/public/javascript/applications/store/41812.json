@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Ez a termék nem kompatibilis az Intel processzorokat használó macOS-rendszerekkel. További információkért <1>kattints ide</1>.",
     "AppPage_PurchaseNote_Mod_Title": "Közösség készítette mod",
     "AppPage_PurchaseNote_Mod_LearnMore": "További információkért modokról a Steamen <1>kattints ide</1>.",
+    "AppPage_Franchise_SeeAll": "Nézd meg a teljes %1$s gyűjteményt a Steamen.",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "A teljes %1$s megnézése a Steamen",
     "AppPage_Series_ContentTitle": "Sorozattartalom",
     "AppPage_Series_ExtraContent": "Extra tartalom",
     "AppPage_Series_SeasonName_Season": "%1$s. évad",

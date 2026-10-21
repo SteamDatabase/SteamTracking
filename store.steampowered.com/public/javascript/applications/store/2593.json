@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Etkileşimli Unsurlar",
     "GameRating_OnlineMusicNotice": "Çevrimiçi müzikler ESRB tarafından derecelendirilmez.",
     "GameRating_OnlineInteractionsNotice": "Çevrimiçi etkileşimler ESRB tarafından derecelendirilmez.",
-    "GameRating_ContentCategoryDescriptor_64": "Filtrelenmiş oyun içi sohbet"
+    "GameRating_ContentCategoryDescriptor_64": "Filtrelenmiş oyun içi sohbet",
+    "GameRating_ContentCategories_Title": "İçerik",
+    "GameRating_Ratings_Title": "Derecelendirmeler"
 }

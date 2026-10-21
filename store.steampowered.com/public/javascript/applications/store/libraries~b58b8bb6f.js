@@ -697,7 +697,7 @@
           var n = o(3316),
             s = o(54454),
             u = o(97827),
-            f = o(32279),
+            f = o(54660),
             h = /[\\^$.*+?()[\]{}|]/g,
             v = /^\[object .+?Constructor\]$/,
             x = Function.prototype,
@@ -1361,7 +1361,7 @@
             f = o(64507),
             h = o(47285),
             v = o(78714),
-            x = o(32279),
+            x = o(54660),
             d = "[object Map]",
             m = "[object Object]",
             S = "[object Promise]",
@@ -1914,7 +1914,7 @@
           }
           c.exports = u;
         },
-        32279: (c) => {
+        54660: (c) => {
           var g = Function.prototype,
             o = g.toString;
           function n(s) {

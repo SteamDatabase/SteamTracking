@@ -13333,9 +13333,19 @@
           if (_.section_type === "crosspromotesalepage")
             return _.sale_page_cross_promo_event_gid || void 0;
         }
+        function _(_) {
+          return _.GetSaleSections().flatMap((_) =>
+            _.disable_section || _.hide_section ? [] : (_(_) ?? []),
+          );
+        }
+        function _(_) {
+          return (
+            _.section_type === "crosspromotesalepage" && _.capsules.length > 0
+          );
+        }
         function _(_, _) {
           return !_.sale_page_cross_promo_event_gid ||
-            !_.sale_page_cross_promo_featured_app_tagid
+            (!_.sale_page_cross_promo_featured_app_tagid && !_(_))
             ? "setup"
             : !_ || !_.BIsVisibleEvent()
               ? "missing"
@@ -13348,6 +13358,474 @@
                 _.GetNameWithFallback(_) ?? "",
               )
             : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = 4;
+        function _(_) {
+          return _.GetSaleSections().filter(
+            (_) =>
+              (0, _._)(_.section_type) &&
+              (0, _._)(_) === "personalized_carousel",
+          );
+        }
+        function _(_) {
+          return _(_)[0];
+        }
+        function _(_) {
+          if (_.appid())
+            return {
+              _: _.appid(),
+              type: "game",
+            };
+          if (_.bundleid())
+            return {
+              _: _.bundleid(),
+              type: "bundle",
+            };
+          if (_.packageid())
+            return {
+              _: _.packageid(),
+              type: "sub",
+            };
+        }
+        function _(_, _, _, _, _, _) {
+          const _ = _(_),
+            _ = {
+              rgSections: _.map((_) => ({
+                eSort: _.smart_section_personalized_carousel_sort ?? _._._,
+                nMinItems: _.smart_section_personalized_carousel_min_items ?? _,
+                bRandomize: !!_.smart_section_personalized_carousel_randomize,
+                bIncludePackages: _.smart_section_include_packages,
+                bIncludeBundles: _.smart_section_include_bundles,
+                bIncludeDLC: _.smart_section_include_dlc,
+                nMinDiscountPercent:
+                  _.smart_section_min_discount_percent !== void 0
+                    ? (0, _._)(_)
+                    : void 0,
+              })),
+              storePageFilter: (0, _._)(_, !!_[0]?.prioritize_discounts, _),
+              strStoreFilterJSON: _[0] ? (0, _._)(_[0]) : void 0,
+              strTabStoreFilterJSON: _ ? JSON.stringify(_) : void 0,
+            };
+          return {
+            queryKey: [
+              "SaleTech",
+              "PersonalizedCarousels",
+              _,
+              _.country,
+              _.language,
+              JSON.stringify(_),
+            ],
+            queryFn: () => _(_, _, _, _),
+            staleTime: 1 / 0,
+          };
+        }
+        async function _(_, _, _, _) {
+          if (!_ || _.rgSections.length === 0) return [];
+          const _ = _._.Init(_._);
+          for (const _ of _.rgSections) {
+            const _ = _.Body().add_sections();
+            _.set_sort(_.eSort),
+              _.set_min_items(_.nMinItems),
+              _.set_randomize(_.bRandomize),
+              _.set_include_packages(!!_.bIncludePackages),
+              _.set_include_bundles(!!_.bIncludeBundles),
+              _.set_include_dlc(_.bIncludeDLC),
+              _.set_min_discount_percent(_.nMinDiscountPercent);
+          }
+          _.Body().set_context((0, _._)(_)),
+            _.Body().set_filters((0, _._)(_.storePageFilter, !1)),
+            _.strStoreFilterJSON &&
+              _.Body()
+                .filters(!0)
+                .add_store_filters()
+                .set_filter_json(_.strStoreFilterJSON),
+            _.strTabStoreFilterJSON &&
+              _.Body()
+                .filters(!0)
+                .add_store_filters()
+                .set_filter_json(_.strTabStoreFilterJSON);
+          const _ = await _._.GetItemsByUserRecommendedTags(_, _);
+          if (_.GetEResult() != _._)
+            throw new Error(
+              `GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`,
+            );
+          return _.Body()
+            .sections()
+            .map((_) => ({
+              strTagName: _.tag_name() ?? "",
+              rgCapsules: _.store_item_ids().flatMap((_) => {
+                const _ = _(_);
+                return _ ? [_] : [];
+              }),
+            }));
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = {
+            popularity: {
+              eType: "game",
+              bDropsOwned: !1,
+            },
+            wishlist: {
+              eType: "game",
+              bDropsOwned: !0,
+            },
+            interactive_recommender: {
+              eType: "game",
+              bDropsOwned: !0,
+            },
+            wishlist_onsale: {
+              eType: "game",
+              bDropsOwned: !0,
+            },
+            interactive_recommender_onsale: {
+              eType: "game",
+              bDropsOwned: !0,
+            },
+            dlc_onsale: {
+              eType: "dlc",
+              bDropsOwned: !0,
+            },
+            dlc_music_onsale: {
+              eType: "music",
+              bDropsOwned: !0,
+            },
+          },
+          _ = 24,
+          _ = 100,
+          _ = 500;
+        function _(_) {
+          return Math.max(1, _.smart_section_min_discount_percent ?? 1);
+        }
+        function _(_) {
+          return _(_) && _[_].bDropsOwned;
+        }
+        function _(_) {
+          return _ !== void 0 && _ in _;
+        }
+        function _(_, _, _, _) {
+          const _ = GetSaleSectionSmartSectionType(_),
+            _ =
+              _ === "tag"
+                ? {
+                    tagid: _.smart_section_tag,
+                  }
+                : _ === "top_n"
+                  ? {
+                      top_n_sellers: _,
+                    }
+                  : {};
+          (_.min_discount_percent = _(_)),
+            (_.include_packages = _.smart_section_include_packages),
+            (_.include_bundles = _.smart_section_include_bundles),
+            (_.include_dlc = _.smart_section_include_dlc),
+            _ && (_.store_filter_json = JSON.stringify(_));
+          const _ =
+            _ === "tag" && _.random_from_entire_set
+              ? _
+              : _.smart_section_max_apps || _;
+          return GetDiscountedItemsQuery(_, _, _, _);
+        }
+        function _(_, _) {
+          if (BCrossPromoSaleListsOwnItems(_)) return "manual";
+          if (_.section_type !== "items") return;
+          const _ = GetSaleSectionSmartSectionType(_);
+          if (_.enable_faceted_browsing)
+            return _ === void 0 ? "faceted" : void 0;
+          if (_ === void 0) return "manual";
+          if (
+            (_ === "deck_compatibility" || _ === "frame_compatibility") &&
+            _.smart_section_data_source === "popularity"
+          )
+            return "popularity";
+          if (
+            ((_ === "wishlist" || _ === "interactive_recommender") &&
+              _.jsondata.item_source_type !==
+                ESaleItemSource_t.k_EContentHub) ||
+            _ === "wishlist_onsale" ||
+            _ === "interactive_recommender_onsale" ||
+            _ === "dlc_onsale" ||
+            _ === "dlc_music_onsale"
+          )
+            return _;
+          if (_ === "tag" && _.smart_section_tag) return "tag";
+          if (_ === "top_n") return "top_n";
+          if (_ === "all_discounted") return "all_discounted";
+          if (_ === "personalized_carousel") return "personalized_carousel";
+        }
+        function _(_, _, _) {
+          const _ = _.GetDayIndexFromEventStart(_);
+          return _.capsules.filter(
+            (_) => _.visibility_index === void 0 || _.visibility_index === _,
+          );
+        }
+        function _(_, _, _) {
+          return _(_, _, _).flatMap((_) => {
+            const _ = ConvertSaleCapsuleToStoreItemKey(_);
+            return _ ? [_] : [];
+          });
+        }
+        function _(_, _, _, _, _) {
+          const _ = _(_),
+            _ = _(_, _);
+          if (_(_)) {
+            const _ = _[_].eType;
+            return (
+              _.tabStoreFilter ? _.tabFilteredAppIDs : _(_, _, _, _)
+            )?.map((_) => ({
+              _: _,
+              type: _,
+            }));
+          }
+          switch (_) {
+            case "manual": {
+              const _ = _(_, _, _);
+              if (!_.tabStoreFilter) return _;
+              if (!_.tabFilteredItems) return;
+              const _ = new Set(_.tabFilteredItems.map(StringifyItemKey));
+              return _.filter((_) => {
+                const _ = ConvertSaleCapsuleToStoreItemKey(_);
+                return _ !== void 0 && _.has(StringifyItemKey(_));
+              });
+            }
+            case "tag":
+            case "top_n":
+            case "all_discounted": {
+              if (!_.discountedItems) return;
+              const _ = _.discountedItems
+                .map(ConvertStoreItemKeyToSaleCapsule)
+                .filter((_) => !!_);
+              return _ === "tag" && _.random_from_entire_set
+                ? PickSaleCapsulesWithSeed(_, _, _, _)
+                : _.slice(0, _);
+            }
+            case "personalized_carousel":
+              return _(_, _, _.personalizedCarousels)?.rgCapsules.slice(0, _);
+            default:
+              return;
+          }
+        }
+        function _(_, _, _, _) {
+          const _ = _(_, _);
+          if (_(_))
+            switch (_) {
+              case "popularity":
+                return (
+                  _.compatAppList &&
+                  GetAppsForSectionCompatCategory(_, _.compatAppList).slice(
+                    0,
+                    _,
+                  )
+                );
+              case "wishlist":
+                return _(
+                  _.wishlistAppIDs,
+                  GetAppIDsAcrossSaleSections(_, _.GetTaggedItems()),
+                  _.ownedAppIDs,
+                  _,
+                );
+              case "interactive_recommender":
+                return _(
+                  _.recommendedAppIDs,
+                  GetAppIDsAcrossSaleSections(_, _.GetTaggedItems()),
+                  _.ownedAppIDs,
+                  _,
+                );
+              case "wishlist_onsale":
+                return _(_.wishlistOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+              case "interactive_recommender_onsale":
+                return _(_.recommendedOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+              case "dlc_onsale":
+                return _(_.ownedDLCOnSaleAppIDs, void 0, _.ownedAppIDs, _);
+              case "dlc_music_onsale":
+                return _(
+                  _.ownedSoundtracksOnSaleAppIDs,
+                  void 0,
+                  _.ownedAppIDs,
+                  _,
+                );
+              default:
+                AssertNever(
+                  _,
+                  "GetSaleItemSectionAppList: fixed-list flavor with no list",
+                );
+                return;
+            }
+        }
+        function _(_) {
+          return _.smart_section_max_apps || _;
+        }
+        function _(_, _, _) {
+          if (_) return _[(0, _._)(_, _).nSectionIndex] ?? null;
+        }
+        function _(_, _) {
+          const _ = _(_, _) === "personalized_carousel";
+          return _(_, GetFirstPersonalizedCarouselSection(_) ?? _, _);
+        }
+        function _(_) {
+          return _(_, GetFirstPersonalizedCarouselSection(_), !1);
+        }
+        function _(_, _, _) {
+          const _ = useActiveServiceTransport(),
+            _ = useQueryClient(),
+            { storeBrowseContext: _ } = useStoreBrowseCacheContext(),
+            _ = useOpenSaleTab(_),
+            [_] = useSaleTabTagSelection(_),
+            _ = _ ? GetSaleSectionTabStoreFilter(_, _, _, _) : void 0,
+            { data: _, isSuccess: _ } = useQuery({
+              ...GetClanInfoByAccountIDQuery(_.clanSteamID.GetAccountID(), _),
+              enabled: _,
+            }),
+            { data: _ } = useQuery({
+              ...GetPersonalizedCarouselsQuery(
+                _,
+                _,
+                _,
+                BIsCreatorHomeSalePageGameLock(_, _),
+                UserConfig.accountid,
+                _,
+              ),
+              enabled: _ && _,
+            });
+          return _;
+        }
+        function _(_, _, _, _) {
+          if (!(!_ || !_))
+            return PickSaleSectionAppsFromUserList(_, _, (_) => _.has(_), _);
+        }
+        function _(_, _) {
+          const _ = useEventRTimeNow(),
+            _ = useSaleShuffleSeed(),
+            _ = _(_, _),
+            _ = useActiveServiceTransport(),
+            _ = useQueryClient(),
+            { storeBrowseContext: _, dataLoader: _ } =
+              useStoreBrowseCacheContext(),
+            _ = useSaleSectionTabStoreFilter(_, _),
+            _ = _(_),
+            { data: _ } = useQuery({
+              ...PopularCompatListQuery(GetSaleItemSectionCompatDevice(_)),
+              enabled: _ === "popularity",
+            }),
+            { data: _ } = useQuery({
+              ...GetWishlistAppsQuery(_, UserConfig.accountid),
+              enabled: _ === "wishlist",
+            }),
+            { data: _ } = useQuery({
+              ...GetRecommendedAppsQuery(_, UserConfig.accountid),
+              enabled: _ === "interactive_recommender",
+            }),
+            { data: _ } = useQuery({
+              ...GetWishlistAppsOnSaleQuery(_, _, UserConfig.accountid, _),
+              enabled: _ === "wishlist_onsale",
+            }),
+            { data: _ } = useQuery({
+              ...GetRecommendedAppsOnSaleQuery(
+                _,
+                _,
+                _,
+                UserConfig.accountid,
+                _,
+              ),
+              enabled: _ === "interactive_recommender_onsale",
+            }),
+            { data: _ } = useQuery({
+              ...GetOwnedDLCOnSaleQuery(
+                _,
+                _,
+                _,
+                UserConfig.accountid,
+                "dlc",
+                _,
+              ),
+              enabled: _ === "dlc_onsale",
+            }),
+            { data: _ } = useQuery({
+              ...GetOwnedDLCOnSaleQuery(
+                _,
+                _,
+                _,
+                UserConfig.accountid,
+                "music",
+                _,
+              ),
+              enabled: _ === "dlc_music_onsale",
+            }),
+            { data: _ } = useQuery({
+              ..._(_, _, _, _),
+              enabled: _ === "tag" || _ === "top_n" || _ === "all_discounted",
+            }),
+            _ = _(_, _),
+            { data: _ } = useQuery({
+              ...GetOwnedAppsQuery(_, UserConfig.accountid),
+              enabled: _(_),
+            }),
+            _ = useMemo(
+              () => ({
+                compatAppList: _,
+                wishlistAppIDs: _,
+                recommendedAppIDs: _,
+                wishlistOnSaleAppIDs: _,
+                recommendedOnSaleAppIDs: _,
+                ownedDLCOnSaleAppIDs: _,
+                ownedSoundtracksOnSaleAppIDs: _,
+                discountedItems: _,
+                personalizedCarousels: _,
+                ownedAppIDs: _,
+                tabStoreFilter: _,
+              }),
+              [_, _, _, _, _, _, _, _, _, _, _],
+            ),
+            _ = !!_ && _(_),
+            _ = useMemo(() => (_ ? _(_, _, _, 1 / 0) : void 0), [_, _, _, _]),
+            { data: _ } = useQuery({
+              ...GetStoreFilterPassingAppsQuery(_, _, _, _, _(_)),
+              enabled: _ && _ !== void 0,
+            }),
+            _ = !!_ && _ === "manual",
+            _ = useMemo(() => (_ ? _(_, _, _) : void 0), [_, _, _, _]),
+            { data: _ } = useQuery({
+              ...GetStoreFilterPassingItemsQuery(_, _, _, _, _?.length ?? 0),
+              enabled: _ && _ !== void 0,
+            });
+          return useMemo(() => {
+            const _ = _(
+              _,
+              _,
+              _,
+              {
+                ..._,
+                tabFilteredAppIDs: _,
+                tabFilteredItems: _,
+              },
+              _,
+            );
+            return _ && ShuffleSaleCapsulesWithSeed(_, _, _, _);
+          }, [_, _, _, _, _, _, _]);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -13545,7 +14023,13 @@
             _
           ))(_ || {});
         function _(_) {
-          const { event: _, subMenu: _, language: _, styleVariation: _ } = _,
+          const {
+              event: _,
+              subMenu: _,
+              language: _,
+              styleVariation: _,
+              personalizedCarousels: _,
+            } = _,
             _ = (0, _._)(),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _.useRef)(null),
@@ -13600,6 +14084,7 @@
                       clanAccountID: _.clanSteamID.GetAccountID(),
                       event: _,
                       styleVariation: _,
+                      personalizedCarousels: _,
                     }),
                   },
                   "submenuitem" + _.unique_id,
@@ -13616,6 +14101,7 @@
               clanAccountID: _,
               event: _,
               styleVariation: _,
+              personalizedCarousels: _,
             } = _,
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)(),
@@ -13634,7 +14120,7 @@
               ""
             ).trim();
             if (_ && !_ && _) {
-              const _ = (0, _._)(_, _, _, _, _.eLocation, !0);
+              const _ = (0, _._)(_, _, _, _, _.eLocation, !0, _);
               _ = (typeof _ == "string" ? _.trim() : "") || _;
             }
             const _ =
@@ -13800,6 +14286,29 @@
               children: _,
             })
           );
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+        });
+        function _(_, _, _) {
+          return {
+            nSaleTagID: _.BUsesContentHubForItemSource()
+              ? void 0
+              : _.featured_app_tagid,
+            strContentHubType: _.GetContentHubType(),
+            strContentHubCategory: _.GetContentHubCategory(),
+            nContentHubTagID: _.GetContentHubTag(),
+            bDiscountsOnly: _.BContentHubDiscountedOnly(),
+            bPrioritizeDiscounts: _,
+            strOptInName: _.jsondata.prune_list_optin_name,
+            nOptInTagID: _.jsondata.optin_tagid,
+            nPruneTagID: _.jsondata.optin_prune_tagid,
+            bOptInOnly: _.jsondata.optin_only,
+            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
+          };
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -20003,220 +20512,6 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = 4;
-        function _(_) {
-          return _.GetSaleSections().filter(
-            (_) =>
-              BIsSaleSectionTypeItemsLike(_.section_type) &&
-              GetSaleSectionSmartSectionType(_) === "personalized_carousel",
-          );
-        }
-        function _(_) {
-          if (_.appid())
-            return {
-              _: _.appid(),
-              type: "game",
-            };
-          if (_.bundleid())
-            return {
-              _: _.bundleid(),
-              type: "bundle",
-            };
-          if (_.packageid())
-            return {
-              _: _.packageid(),
-              type: "sub",
-            };
-        }
-        function _(_, _, _, _, _) {
-          const _ = _(_),
-            _ = {
-              rgSections: _.map((_) => ({
-                eSort:
-                  _.smart_section_personalized_carousel_sort ??
-                  EStoreQuerySort.k_EStoreQuerySort_GlobalLongTermSalesRank,
-                nMinItems: _.smart_section_personalized_carousel_min_items ?? _,
-                bRandomize: !!_.smart_section_personalized_carousel_randomize,
-              })),
-              storePageFilter: GetSaleStorePageFilter(
-                _,
-                !!_[0]?.prioritize_discounts,
-                _,
-              ),
-              strStoreFilterJSON: _[0]
-                ? GetSaleSectionStoreFilter(_[0])
-                : void 0,
-            };
-          return {
-            queryKey: [
-              "SaleTech",
-              "PersonalizedCarousels",
-              _,
-              _.country,
-              _.language,
-              JSON.stringify(_),
-            ],
-            queryFn: () => _(_, _, _, _),
-            staleTime: 1 / 0,
-          };
-        }
-        async function _(_, _, _, _) {
-          if (!_ || _.rgSections.length === 0) return [];
-          const _ = CProtoBufMsg.Init(
-            CStoreQuery_GetItemsByUserRecommendedTags_Request,
-          );
-          for (const {
-            eSort: _,
-            nMinItems: _,
-            bRandomize: _,
-          } of _.rgSections) {
-            const _ = _.Body().add_sections();
-            _.set_sort(_), _.set_min_items(_), _.set_randomize(_);
-          }
-          _.Body().set_context(GetStoreBrowseContext(_)),
-            _.Body().set_filters(
-              GetStorePageFilterProto(_.storePageFilter, !1),
-            ),
-            _.strStoreFilterJSON &&
-              _.Body()
-                .filters(!0)
-                .add_store_filters()
-                .set_filter_json(_.strStoreFilterJSON);
-          const _ = await StoreQueryService.GetItemsByUserRecommendedTags(_, _);
-          if (_.GetEResult() != k_EResultOK)
-            throw new Error(
-              `GetItemsByUserRecommendedTags failed: ${_.GetEResult()}`,
-            );
-          return _.Body()
-            .sections()
-            .map((_) => ({
-              strTagName: _.tag_name() ?? "",
-              rgCapsules: _.store_item_ids().flatMap((_) => {
-                const _ = _(_);
-                return _ ? [_] : [];
-              }),
-            }));
-        }
-        var _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _, _) => {
-            for (
-              var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
-              _ >= 0;
-              _--
-            )
-              (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
-            return _ && _ && _(_, _, _), _;
-          };
-        const _ = class _ {
-          m_serviceTransport;
-          m_loadPromise = new Map();
-          m_mapLoadedData = new Map();
-          constructor() {
-            (0, _._)(this);
-            const _ = (0, _._)("loyalty_webapi_token", "application_config"),
-              _ = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _ || void 0));
-            this.m_serviceTransport = _.GetServiceTransport();
-          }
-          static GetRelevantSections(_) {
-            return _.GetSaleSections().filter(
-              (_) =>
-                (0, _._)(_.section_type) &&
-                (0, _._)(_) == "personalized_carousel",
-            );
-          }
-          static GetSectionIndex(_, _) {
-            return _.GetRelevantSections(_).findIndex(
-              (_) => _.unique_id == _.unique_id,
-            );
-          }
-          GetTagNameForSaleSection(_, _) {
-            const _ = _.GetSectionIndex(_, _);
-            if (!_.GID) return;
-            const _ = this.m_mapLoadedData.get(_.GID);
-            if (_) return _[_]?.sTagName;
-            this.GetCapsulesForSaleSection(_, _);
-          }
-          async GetCapsulesForSaleSection(_, _) {
-            const _ = _.GetSectionIndex(_, _);
-            if (!_.GID) return;
-            if (this.m_loadPromise.has(_.GID))
-              return (await this.m_loadPromise.get(_.GID))?.[_];
-            const _ = this.LoadData(_);
-            this.m_loadPromise.set(_.GID, _);
-            const _ = await _;
-            return _ && this.m_mapLoadedData.set(_.GID, _), _?.[_];
-          }
-          async LoadData(_) {
-            const _ = _._.Init(_._),
-              _ = _.GetRelevantSections(_);
-            for (const _ of _) {
-              const _ = _.Body().add_sections();
-              _.set_sort(_.smart_section_personalized_carousel_sort ?? _._._),
-                _.set_min_items(
-                  _.smart_section_personalized_carousel_min_items ?? 4,
-                ),
-                _.set_randomize(
-                  _.smart_section_personalized_carousel_randomize,
-                );
-            }
-            const _ = !!_[0].prioritize_discounts,
-              _ = (0, _._)(_, _);
-            if (
-              (_.Body().set_context((0, _._)(!1)),
-              _.Body().set_filters((0, _._)(_, !1)),
-              _[0].store_filter)
-            ) {
-              const _ = _.Body().filters()?.add_store_filters();
-              _ &&
-                (_.set_filter_json((0, _._)(_[0])),
-                _.set_cache_key((_[0].unique_id ?? "").toString()));
-            }
-            const _ = await _._.GetItemsByUserRecommendedTags(
-              this.m_serviceTransport,
-              _,
-            );
-            if (_.GetEResult() != _._) {
-              console.error(
-                "GetItemsByUserRecommendedTags failed with error" +
-                  _.GetEResult(),
-              );
-              return;
-            }
-            return _.Body()
-              .sections()
-              .map((_) => ({
-                sTagName: _.tag_name() ?? "",
-                rgCapsules: _.store_item_ids().flatMap((_) => {
-                  const _ = _(_);
-                  return _ ? [_] : [];
-                }),
-              }));
-          }
-          static s_Singleton;
-          static Get() {
-            return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-          }
-        };
-        _([_._], _.prototype, "m_mapLoadedData", 2);
-        let _ = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
@@ -20525,7 +20820,6 @@
           _ = __webpack_require__("chunkid");
         const _ = _.lazy(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -22015,6 +22309,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _, _) {
+          return (0, _._)(_, _, _)?.strTagName || void 0;
+        }
+        function _(_, _, _, _) {
           const _ = _ == _._ || _ == _._ || _ == _._,
             _ = () => {
               const _ = (0, _._)(_.smart_section_creator_listid);
@@ -22043,7 +22340,7 @@
                     _,
                   );
                 }
-                const _ = _._.Get().GetTagNameForSaleSection(_, _);
+                const _ = _(_, _, _);
                 if (!_ && _ == _._) {
                   const { nSectionIndex: _, nNumSections: _ } = (0, _._)(_, _);
                   return (0, _._)(
@@ -22086,18 +22383,18 @@
           }
           return null;
         }
-        function _(_, _, _) {
-          const _ = _(_, _, _);
+        function _(_, _, _, _) {
+          const _ = _(_, _, _, _);
           return _ !== null ? (_ && _.startsWith("#") ? (0, _._)(_) : _) : null;
         }
-        function _(_, _, _, _, _, _) {
+        function _(_, _, _, _, _, _, _) {
           if (!_) return "";
           if (_.section_type === "crosspromotesalepage") {
             const _ = (0, _._)(_),
               _ = _ ? _._.GetClanEventModel(_) : void 0;
             return (0, _._)(_, _);
           }
-          const _ = _(_, _, _),
+          const _ = _(_, _, _, _),
             _ = _._.GetWithFallback(_.localized_label, _),
             _ =
               _ ||
@@ -22149,11 +22446,11 @@
             });
           } else return _;
         }
-        function _(_, _) {
+        function _(_, _, _) {
           if ((0, _._)(_.section_type))
             switch ((0, _._)(_)) {
               case "personalized_carousel":
-                const _ = _._.Get().GetTagNameForSaleSection(_, _);
+                const _ = _(_, _, _);
                 return _
                   ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
                   : null;
@@ -22162,8 +22459,8 @@
             }
           return null;
         }
-        function _(_, _, _) {
-          const _ = _(_, _);
+        function _(_, _, _, _) {
+          const _ = _(_, _, _);
           return _ !== null
             ? _ && _.startsWith("#")
               ? (0, _._)(_)
@@ -22323,7 +22620,6 @@
         __webpack_require__._(module_exports, {
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22332,25 +22628,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_, _, _) {
-          return {
-            nSaleTagID: _.BUsesContentHubForItemSource()
-              ? void 0
-              : _.featured_app_tagid,
-            strContentHubType: _.GetContentHubType(),
-            strContentHubCategory: _.GetContentHubCategory(),
-            nContentHubTagID: _.GetContentHubTag(),
-            bDiscountsOnly: _.BContentHubDiscountedOnly(),
-            bPrioritizeDiscounts: _,
-            strOptInName: _.jsondata.prune_list_optin_name,
-            nOptInTagID: _.jsondata.optin_tagid,
-            nPruneTagID: _.jsondata.optin_prune_tagid,
-            bOptInOnly: _.jsondata.optin_only,
-            nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
-          };
-        }
-        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -22405,7 +22685,7 @@
           const _ = _._.GetClanInfoByClanAccountID(
             _.clanSteamID.GetAccountID(),
           );
-          return _(_, _ || !1, (0, _._)(_, _));
+          return (0, _._)(_, _ || !1, (0, _._)(_, _));
         }
         function _(_, _) {
           const _ = _(_, _.prioritize_discounts),
@@ -22971,6 +23251,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -23050,14 +23331,18 @@
               bShowSeeMoreHint: _,
               bUseGamepadLinkHint: _,
               onLinkResolved: _,
+              personalizedCarousels: _,
+              promotedSale: _,
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
+            _ = _ !== void 0,
             { eventModel: _ } = (0, _._)(
-              _.sale_page_cross_promo_clan_account_id,
-              _.sale_page_cross_promo_event_gid,
+              _ ? void 0 : _.sale_page_cross_promo_clan_account_id,
+              _ ? void 0 : _.sale_page_cross_promo_event_gid,
               !1,
             ),
+            _ = _ ? (_ ?? void 0) : _,
             _ = _.link || _(_) || (0, _._)(_);
           if (
             (_.useEffect(() => {
@@ -23068,9 +23353,13 @@
           )
             return null;
           const _ =
-            _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
+            _ ||
+            (_ && _.section_type === "crosspromotesalepage"
+              ? (0, _._)(_, _)
+              : "") ||
+            (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation, !1, _);
           if (!_) return null;
-          const _ = _ || (0, _._)(_, _, _);
+          const _ = _ || (0, _._)(_, _, _, _);
           let _ = (0, _.jsx)("div", {
               className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
               style: _(_, _, _),
@@ -23371,6 +23660,78 @@
               }),
             ],
           });
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(module_exports, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        let _;
+        function _() {
+          if (!_) {
+            const _ = (0, _._)("loyalty_webapi_token", "application_config");
+            _ = (0, _._)(
+              new _._(_._.WEBAPI_BASE_URL, _ || void 0),
+            ).GetServiceTransport();
+          }
+          return _;
+        }
+        async function _(_) {
+          try {
+            const _ = await (0, _._)(_.clanSteamID.GetAccountID(), _._);
+            return await _._.fetchQuery(
+              (0, _._)(
+                _(),
+                {
+                  country: _._.COUNTRY,
+                  language: _._.LANGUAGE,
+                },
+                _,
+                (0, _._)(_, _),
+                _._.accountid,
+              ),
+            );
+          } catch (_) {
+            console.error("Failed to load the personalized carousels", _);
+            return;
+          }
+        }
+        function _(_, _) {
+          const _ = _ && !!_._.logged_in,
+            { data: _, isSuccess: _ } = (0, _._)(
+              {
+                ...(0, _._)(_.clanSteamID.GetAccountID(), _._),
+                enabled: _,
+              },
+              _._,
+            ),
+            { data: _ } = (0, _._)(
+              {
+                ...(0, _._)(
+                  _(),
+                  {
+                    country: _._.COUNTRY,
+                    language: _._.LANGUAGE,
+                  },
+                  _,
+                  (0, _._)(_, _),
+                  _._.accountid,
+                ),
+                enabled: _ && _,
+              },
+              _._,
+            );
+          return _;
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -24540,23 +24901,30 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = 700;
+        function _() {
+          return !(0, _._)(_);
+        }
         function _(_) {
           const { partnerTakeoverData: _ } = _,
-            _ = (0, _._)();
+            _ = (0, _._)(),
+            _ = _();
           if (!_?.strPageBackgroundURL) return null;
           let _ = _.strPageBackgroundTarget;
           _ == null && (_ = `${_._.STORE_BASE_URL}app/${_.takeoverAppID}`);
-          const _ = (0, _._)()
+          const _ = _
               ? _.nPageBackgroundOffsetHeightMobile
               : _.nPageBackgroundOffsetHeight,
             _ = _.strPageBackgroundColorLeft,
             _ = _.strPageBackgroundColorRight;
           (_ = _?.replace("http://", "https://")),
-            (_ = (0, _._)(_, {
-              ..._,
-              feature: "promo-takeover",
-            }));
+            (_ = (0, _._)(
+              _.domain ? _ : _._.GetDefaultParams(),
+              _,
+              "promo-takeover",
+            ));
           const _ = {
               height: (_ || 0) + "px",
             },
@@ -24594,13 +24962,12 @@
         }
         function _(_) {
           const { partnerTakeoverData: _ } = _,
-            _ = (0, _._)()
-              ? _.strPageBackgroundMobileURL
-              : _.strPageBackgroundURL,
+            _ = _(),
+            _ = _ ? _.strPageBackgroundMobileURL : _.strPageBackgroundURL,
             _ = (0, _.useRef)(null);
           return (
             (0, _._)(_),
-            (0, _._)() && (_?.strPageBackgroundMobileWebM?.length ?? 0) > 0
+            _ && (_?.strPageBackgroundMobileWebM?.length ?? 0) > 0
               ? (0, _.jsxs)("video", {
                   className: _.fullscreen_bg__video_mobile,
                   poster: _,
@@ -24621,7 +24988,7 @@
                       }),
                   ],
                 })
-              : !(0, _._)() && _?.strPageBackgroundWebM?.length
+              : !_ && _?.strPageBackgroundWebM?.length
                 ? (0, _.jsxs)("video", {
                     className: _.fullscreen_bg__video,
                     poster: _,
@@ -24644,6 +25011,7 @@
                   })
                 : (0, _.jsx)("img", {
                     src: _,
+                    alt: "",
                   })
           );
         }
@@ -25782,7 +26150,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = "trailercarousel";
         var _ = ((_) => (
@@ -26459,7 +26826,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
@@ -28964,6 +29330,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { event: _, section: _, language: _ } = _,
@@ -30053,7 +30420,131 @@
               });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _ = "", _ = 0) {
+          if (_.enable_faceted_browsing && _ > 0)
+            return {
+              feature: "salefacetbrowse" + _,
+              depth: _,
+            };
+          if ((0, _._)(_) && _.section_type != "crosspromotesalepage") {
+            const _ = (0, _._)(_);
+            if (_)
+              switch (_) {
+                case "wishlist":
+                  return {
+                    feature: "salesmartwishlist" + _,
+                  };
+                case "wishlist_onsale":
+                  return {
+                    feature: "salesmartwishlist_allsale" + _,
+                  };
+                case "interactive_recommender":
+                  return {
+                    feature: "salesmartir" + _,
+                  };
+                case "interactive_recommender_onsale":
+                  return {
+                    feature: "salesmartir_allsale" + _,
+                  };
+                case "ml_wishlist_recommender":
+                  return {
+                    feature: "salesmartwr" + _,
+                  };
+                case "ml_playtime_recommender":
+                  return {
+                    feature: "salesmartpr" + _,
+                  };
+                case "dlc":
+                case "dlc_onsale":
+                case "dlc_music_onsale":
+                  return {
+                    feature: "salesmartdlc" + _,
+                  };
+                case "tag_recommender":
+                  return {
+                    feature: "salesmarttagrec" + _,
+                  };
+                case "personalized_carousel":
+                  return {
+                    feature: "salesmartpersonalizedcarousel" + _,
+                    depth: (0, _._)(_, _).nSectionIndex,
+                  };
+                case "tag":
+                  return {
+                    feature: "autopopulatetag" + _,
+                  };
+                case "category":
+                  return {
+                    feature: "autopopulatecategory" + _,
+                  };
+                default:
+                  return {
+                    feature: "salesmart" + _ + _,
+                  };
+              }
+          }
+          switch (_.section_type) {
+            case "sale_events":
+            case "events":
+              return {
+                feature: "saleeventsection" + _,
+              };
+            case "links":
+              return {
+                feature: "salesectionlinks" + _,
+              };
+            case "title_image":
+              return {
+                feature: "salesectiontitle" + _,
+              };
+            case "discoveryqueue":
+              return {
+                feature: "discoveryqueue2022" + _,
+              };
+            case "trailercarousel":
+              return {
+                feature: "trailercarousel" + _,
+              };
+            case "rewards":
+              return {
+                feature: "rewardshelf" + _,
+              };
+            case "event_description":
+            case "text_section":
+              return {
+                feature: "salesectiontext" + _,
+              };
+            case "event_schedule":
+              return {
+                feature: "saleeventsched" + _,
+              };
+            case "broadcast":
+              return {
+                feature: "salesectionbroadcast" + _,
+              };
+            case "dlc_for_you":
+              return {
+                feature: "saledlcforyou" + _,
+              };
+            case "calendar":
+              return {
+                feature: "salecalendar" + _,
+              };
+            case "itemdef":
+              return {
+                feature: "saleitemdef" + _,
+              };
+            case "crosspromotesalepage":
+              return {
+                feature: "crosspromotesalepage" + _,
+              };
+          }
+          return {
+            feature: "salesection" + _,
+          };
+        }
+        var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = 5;
         function _(_, _, _) {
@@ -30094,7 +30585,8 @@
           }, [_, _]);
         }
         function _(_) {
-          const { event: _, section: _, language: _ } = _,
+          const { event: _, section: _, language: _, activeTab: _ } = _,
+            { feature: _, depth: _ } = _(_, _, _?.GetActiveTabSNRPostFix()),
             _ = (0, _._)(),
             [_, _] = (0, _._)(() => [
               _.rewards.reward_items,
@@ -30138,7 +30630,8 @@
           return _ && !_._.logged_in
             ? null
             : (0, _.jsx)(_._, {
-                feature: "rewardshelf",
+                feature: _,
+                depth: _,
                 children: (0, _.jsxs)(_._, {
                   placeholderHeight: "100vh",
                   rootMargin: _._,
@@ -30518,8 +31011,8 @@
               bInGamepadUI: _,
               placeholderHeight: _,
               nHiddenCapsules: _,
-              title: _,
-              subtitle: _,
+              personalizedCarousels: _,
+              promotedSale: _,
               children: _,
             } = _,
             [_, _] = _.useState(void 0),
@@ -30554,8 +31047,8 @@
                     event: _,
                     language: _,
                     nHiddenCapsules: _,
-                    title: _,
-                    subtitle: _,
+                    personalizedCarousels: _,
+                    promotedSale: _,
                     bShowSeeMoreHint: _,
                     bUseGamepadLinkHint: !0,
                     onLinkResolved: (_) => _(_ ?? void 0),
@@ -30649,9 +31142,12 @@
             const _ = (0, _.useRef)(null),
               _ = (_) => {
                 _.preventDefault();
-                const _ = _.current;
-                if (!_) return;
-                const _ = _.getBoundingClientRect().top + window.scrollY;
+                const _ = _.current,
+                  _ =
+                    _?.closest(".SaleSectionForCustomCSS") ?? _?.parentElement;
+                if (!_ || !_) return;
+                const _ = parseFloat(window.getComputedStyle(_).top) || 0,
+                  _ = _.getBoundingClientRect().top + window.scrollY - _;
                 window.scrollTo(0, _);
               },
               _ = (0, _.useCallback)(() => {
@@ -31185,127 +31681,7 @@
                   ],
                 });
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _, _ = "", _ = 0) {
-          if (_.enable_faceted_browsing && _ > 0)
-            return {
-              feature: "salefacetbrowse" + _,
-              depth: _,
-            };
-          if ((0, _._)(_) && _.section_type != "crosspromotesalepage") {
-            const _ = (0, _._)(_);
-            if (_)
-              switch (_) {
-                case "wishlist":
-                  return {
-                    feature: "salesmartwishlist" + _,
-                  };
-                case "wishlist_onsale":
-                  return {
-                    feature: "salesmartwishlist_allsale" + _,
-                  };
-                case "interactive_recommender":
-                  return {
-                    feature: "salesmartir" + _,
-                  };
-                case "interactive_recommender_onsale":
-                  return {
-                    feature: "salesmartir_allsale" + _,
-                  };
-                case "ml_wishlist_recommender":
-                  return {
-                    feature: "salesmartwr" + _,
-                  };
-                case "ml_playtime_recommender":
-                  return {
-                    feature: "salesmartpr" + _,
-                  };
-                case "dlc":
-                case "dlc_onsale":
-                case "dlc_music_onsale":
-                  return {
-                    feature: "salesmartdlc" + _,
-                  };
-                case "tag_recommender":
-                  return {
-                    feature: "salesmarttagrec" + _,
-                  };
-                case "personalized_carousel":
-                  return {
-                    feature: "salesmartpersonalizedcarousel" + _,
-                    depth: (0, _._)(_, _).nSectionIndex,
-                  };
-                case "tag":
-                  return {
-                    feature: "autopopulatetag" + _,
-                  };
-                case "category":
-                  return {
-                    feature: "autopopulatecategory" + _,
-                  };
-                default:
-                  return {
-                    feature: "salesmart" + _ + _,
-                  };
-              }
-          }
-          switch (_.section_type) {
-            case "sale_events":
-            case "events":
-              return {
-                feature: "saleeventsection" + _,
-              };
-            case "links":
-              return {
-                feature: "salesectionlinks" + _,
-              };
-            case "title_image":
-              return {
-                feature: "salesectiontitle" + _,
-              };
-            case "discoveryqueue":
-              return {
-                feature: "discoveryqueue2022" + _,
-              };
-            case "trailercarousel":
-              return {
-                feature: "trailercarousel" + _,
-              };
-            case "rewards":
-              return {
-                feature: "salesectionrewards" + _,
-              };
-            case "event_description":
-            case "text_section":
-              return {
-                feature: "salesectiontext" + _,
-              };
-            case "event_schedule":
-              return {
-                feature: "salesectioneventschedule" + _,
-              };
-            case "broadcast":
-              return {
-                feature: "salesectionbroadcast" + _,
-              };
-            case "dlc_for_you":
-              return {
-                feature: "saledlcforyou" + _,
-              };
-            case "itemdef":
-              return {
-                feature: "saleitemdef" + _,
-              };
-            case "crosspromotesalepage":
-              return {
-                feature: "crosspromotesalepage" + _,
-              };
-          }
-          return {
-            feature: "salesection" + _,
-          };
-        }
+        var _ = __webpack_require__("chunkid");
         function _(_, _ = null) {
           return _?.BUsesContentHubForItemSource()
             ? _._.Get().BIsStoreItemOwned(_)
@@ -31724,6 +32100,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           return (0, _._)(_) === "frame_compatibility" ? "frame" : "deck";
@@ -32010,7 +32387,7 @@
                   bMoreRemaining: !1,
                 };
               } else if (_._.logged_in && _ == "personalized_carousel") {
-                const _ = await _._.Get().GetCapsulesForSaleSection(_, _);
+                const _ = (0, _._)(_, _, await (0, _._)(_));
                 if (_ && _.BIsTabFilteringEnabled()) {
                   let _ =
                     _?.rgCapsules
@@ -32543,7 +32920,12 @@
             ),
             _ = (0, _._)(),
             _ = (0, _._)(),
-            [_] = (0, _._)(_._, void 0);
+            [_] = (0, _._)(_._, void 0),
+            _ = (0, _._)(
+              _,
+              (0, _._)(_.section.section_type) &&
+                (0, _._)(_.section) === "personalized_carousel",
+            );
           (0, _.useEffect)(() => {
             const _ = new AbortController();
             return (
@@ -32714,6 +33096,7 @@
                 bInGamepadUI: _,
                 placeholderHeight: _(_) + "px",
                 nHiddenCapsules: _,
+                personalizedCarousels: _,
                 children: _.enable_faceted_browsing
                   ? (0, _.jsx)(_, {
                       language: _,
@@ -32764,7 +33147,13 @@
             [_, _] = (0, _.useState)(_.section.calendar_section_data.day_count),
             _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (0, _._)();
+            _ = (0, _._)(),
+            { feature: _, depth: _ } = _(
+              _.section,
+              _,
+              _?.GetActiveTabSNRPostFix(),
+            ),
+            _ = (0, _._)(_._.STORE_BASE_URL + "personalcalendar", _, _);
           return (
             (0, _.useEffect)(() => {
               const _ = new AbortController();
@@ -32842,82 +33231,88 @@
               })();
             }, [_.section.calendar_section_data, _, _]),
             _.section.calendar_section_data?.forward
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleSection,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: _().SaleSectionTitleCtn,
-                      children: [
-                        (0, _.jsx)(_._, {
-                          section: _.section,
-                          event: _.event,
-                          language: _.language,
-                          title: (0, _._)("#SaleSectionCalendar_Upcoming"),
-                          subtitle: (0, _._)(
-                            "#SaleSectionCalendar_Upcoming_Sub",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().EventSectionViewAllCtn,
-                          children: (0, _.jsx)(_._, {
-                            onClick: (_) =>
-                              (0, _._)(
-                                _,
-                                _._.STORE_BASE_URL + "personalcalendar",
-                              ),
-                            children: (0, _._)("#SaleSectionCalendar_SeeFull"),
-                          }),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().SaleSectionInner,
-                      children: (0, _.jsxs)("div", {
-                        className: _().SaleSectionCalendar,
+              ? (0, _.jsx)(_._, {
+                  feature: _,
+                  depth: _,
+                  children: (0, _.jsxs)("div", {
+                    className: _().SaleSection,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: _().SaleSectionTitleCtn,
                         children: [
-                          (0, _.jsx)(_, {
-                            appIDsByDay: _,
-                            dayTimestamps: _,
-                            height: _.section.calendar_section_data?.height,
-                            bPreferAssetWithoutOverride:
-                              !!_.section.prefer_assets_without_overrides,
+                          (0, _.jsx)(_._, {
+                            section: _.section,
+                            event: _.event,
+                            language: _.language,
+                            title: (0, _._)("#SaleSectionCalendar_Upcoming"),
+                            subtitle: (0, _._)(
+                              "#SaleSectionCalendar_Upcoming_Sub",
+                            ),
                           }),
-                          _ < 28 &&
-                            (0, _.jsx)("div", {
-                              className: _().EventSectionViewAllCtn,
-                              children: (0, _.jsx)(_._, {
-                                onClick: () => _(28),
-                                children: (0, _._)(
-                                  "#SaleSectionCalendar_ShowMore",
-                                ),
-                              }),
+                          (0, _.jsx)("div", {
+                            className: _().EventSectionViewAllCtn,
+                            children: (0, _.jsx)(_._, {
+                              onClick: (_) => (0, _._)(_, _),
+                              children: (0, _._)(
+                                "#SaleSectionCalendar_SeeFull",
+                              ),
                             }),
+                          }),
                         ],
                       }),
-                    }),
-                  ],
+                      (0, _.jsx)("div", {
+                        className: _().SaleSectionInner,
+                        children: (0, _.jsxs)("div", {
+                          className: _().SaleSectionCalendar,
+                          children: [
+                            (0, _.jsx)(_, {
+                              appIDsByDay: _,
+                              dayTimestamps: _,
+                              height: _.section.calendar_section_data?.height,
+                              bPreferAssetWithoutOverride:
+                                !!_.section.prefer_assets_without_overrides,
+                            }),
+                            _ < 28 &&
+                              (0, _.jsx)("div", {
+                                className: _().EventSectionViewAllCtn,
+                                children: (0, _.jsx)(_._, {
+                                  onClick: () => _(28),
+                                  children: (0, _._)(
+                                    "#SaleSectionCalendar_ShowMore",
+                                  ),
+                                }),
+                              }),
+                          ],
+                        }),
+                      }),
+                    ],
+                  }),
                 })
-              : (0, _.jsxs)("div", {
-                  className: _().SaleSection,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      section: _.section,
-                      event: _.event,
-                      language: _.language,
-                      title: (0, _._)("#SaleSectionCalendar_Recent"),
-                      subtitle: (0, _._)(
-                        "#SaleSectionCalendar_Recent_Sub",
-                        _.section.calendar_section_data?.day_count,
-                      ),
-                    }),
-                    (0, _.jsx)(_, {
-                      appIDs: _,
-                      dayCount: _.section.calendar_section_data?.day_count,
-                      height: _.section.calendar_section_data?.height,
-                      bPreferAssetWithoutOverride:
-                        !!_.section.prefer_assets_without_overrides,
-                    }),
-                  ],
+              : (0, _.jsx)(_._, {
+                  feature: _,
+                  depth: _,
+                  children: (0, _.jsxs)("div", {
+                    className: _().SaleSection,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        section: _.section,
+                        event: _.event,
+                        language: _.language,
+                        title: (0, _._)("#SaleSectionCalendar_Recent"),
+                        subtitle: (0, _._)(
+                          "#SaleSectionCalendar_Recent_Sub",
+                          _.section.calendar_section_data?.day_count,
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        appIDs: _,
+                        dayCount: _.section.calendar_section_data?.day_count,
+                        height: _.section.calendar_section_data?.height,
+                        bPreferAssetWithoutOverride:
+                          !!_.section.prefer_assets_without_overrides,
+                      }),
+                    ],
+                  }),
                 })
           );
         }
@@ -35363,8 +35758,14 @@
               )
                 break;
             }
+            const { feature: _, depth: _ } = _(
+              _,
+              this.props.event,
+              _?.GetActiveTabSNRPostFix(),
+            );
             return (0, _.jsx)(_._, {
-              feature: "saleeventsched",
+              feature: _,
+              depth: _,
               children: (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().SaleSection,
@@ -37649,6 +38050,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           const { event: _, section: _ } = _,
@@ -37697,6 +38099,10 @@
             _ = (0, _._)(_, "library_capsule"),
             _ = (0, _._)(_, "library_hero"),
             _ = (0, _._)(_),
+            { strStoreURL: _ } = (0, _._)(
+              _ ?? void 0,
+              _.prefer_demo_store_page,
+            ),
             [_, _] = _.useState(void 0),
             { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_),
             _ = _.useMemo(() => _.filter((_, _) => !!_[_]?.packageid), [_, _]);
@@ -37761,7 +38167,7 @@
                           },
                           children: _
                             ? (0, _.jsx)(_._, {
-                                href: (0, _._)(_, _.prefer_demo_store_page),
+                                href: _,
                                 children: (0, _.jsx)("img", {
                                   className: _().FullGameArtwork,
                                   src: _,
@@ -37857,6 +38263,20 @@
           });
         }
         var _ = __webpack_require__("chunkid");
+        function _(_) {
+          const { feature: _, depth: _ } = _(
+            _.section,
+            _.event,
+            _.activeTab?.GetActiveTabSNRPostFix(),
+          );
+          return (0, _.jsx)(_._, {
+            feature: _,
+            depth: _,
+            children: (0, _.jsx)(_, {
+              ..._,
+            }),
+          });
+        }
         function _(_) {
           const { event: _, section: _, activeTab: _ } = _,
             _ = _(_),
@@ -40720,6 +41140,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -40768,6 +41189,7 @@
               rgTabs: _,
               activeTab: _,
               onTabSelected: _,
+              personalizedCarousels: _,
               children: _,
             } = _,
             _ = (0, _._)(),
@@ -40856,6 +41278,7 @@
                   subMenu: _,
                   bIsPreview: _,
                   styleVariation: _._.k_JumpList,
+                  personalizedCarousels: _,
                 }),
               _,
             ],
@@ -40972,6 +41395,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { section: _, event: _ } = _,
@@ -40998,6 +41422,7 @@
               _.unique_id,
             ]),
             _ = (0, _._)().eLocation,
+            _ = (0, _._)(_, !!(0, _._)(_)),
             _ = _.useCallback(
               (_) => {
                 let _ = "";
@@ -41009,10 +41434,10 @@
                         (_) => _.type === _.type && _._ === _._,
                       ) &&
                       (_ && (_ += "; "),
-                      (_ += (0, _._)(_, _, _, _.GetAccountID(), _, !0))));
+                      (_ += (0, _._)(_, _, _, _.GetAccountID(), _, !0, _))));
                 return _;
               },
-              [_, _, _, _, _, _],
+              [_, _, _, _, _, _, _],
             );
           if (!_ || !_.capsules || !_.capsules.length)
             return (0, _.jsx)("div", {
@@ -41124,6 +41549,7 @@
             [_, _] = (0, _._)(),
             _ = _(_.tabs, _, _, _),
             _ = _(_),
+            _ = (0, _._)(_, !!(0, _._)(_)),
             _ = (0, _._)(),
             _ = _ && !!_.tab_tag_filter,
             _ = (0, _._)(),
@@ -41142,6 +41568,7 @@
             rgTabs: _,
             activeTab: _,
             onTabSelected: _,
+            personalizedCarousels: _,
             children:
               _ &&
               (0, _.jsx)(_, {
@@ -44315,18 +44742,6 @@
           FacetedBrowsePopupLabel: "_3g-gE0SQgJmZnZYl0hBgM4",
           FacetedBrowsePopup: "_2GtRf47OHOUjGEYC0deTj5",
           FacetedBrowseFeedbackLink: "_1HPypyEI_09xAzGdNZ0zgZ",
-          BackgroundAnimation: "S0cJEFYopcL8y4dzbI4_9",
-          "ItemFocusAnim-darkerGrey-nocolor": "EK4B-KDQgX4wX7H4_hnah",
-          "ItemFocusAnim-darkerGrey": "_22_FiTE9s7m2AHQWlfdJMc",
-          "ItemFocusAnim-darkGreySettings": "T5IrD1JlD3E42c6jsDMOa",
-          "ItemFocusAnim-darkGrey": "_2Sr0BQr868FybKNtaAsFqQ",
-          "ItemFocusAnim-grey": "_3jcW2cqHIRlwt_k8f1o8b0",
-          "ItemFocusAnim-translucent-white-10": "_1KHe23_L3iKQ7AvjoxZuTt",
-          "ItemFocusAnim-translucent-white-20": "_1Xu8CbVm6FDBxJT_XDE-5A",
-          "ItemFocusAnimBorder-darkGrey": "_2gDkl3Cwx5QAQql22NxDUd",
-          "ItemFocusAnim-green": "_2Q8saU7lNHX9AvIv1ChPrZ",
-          focusAnimation: "_3Bbh8swT96qeJJWW_w0h2p",
-          hoverAnimation: "_1KpYOL01C2UJ2VEEQrVi7",
         };
       },
       chunkid: (module) => {
@@ -44401,18 +44816,6 @@
           narrowWidth: "500px",
           "duration-app-launch": "800ms",
           SaleBackgroundOverlay: "_1WrAYASFyV0qtWIbXSGoo6",
-          BackgroundAnimation: "_3MYFEzuIRKobkUk2lRYnMK",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2kV5gJ25r4jzVp6GOhkWG-",
-          "ItemFocusAnim-darkerGrey": "_1mVubTLYQisF99MISwRIo",
-          "ItemFocusAnim-darkGreySettings": "_1Tb26ceanbGuyZ6jycWrEs",
-          "ItemFocusAnim-darkGrey": "_3_oq3m-Z6TMDFjOzy3surq",
-          "ItemFocusAnim-grey": "_3xhE-V84LKk359-l85lTcw",
-          "ItemFocusAnim-translucent-white-10": "_3ZQWNeAUeyaGGIpkI8ItwX",
-          "ItemFocusAnim-translucent-white-20": "T8pyOoTErPPL9ypljGgDt",
-          "ItemFocusAnimBorder-darkGrey": "_3DAx8b_2vO-TIKy_r_wh9E",
-          "ItemFocusAnim-green": "py_GNxYoVsLhd_dl_9gET",
-          focusAnimation: "_2A2n77Lo9bIUZQZPHboK--",
-          hoverAnimation: "_3_yvF83bH1kD4VUltagePZ",
         };
       },
       chunkid: (module) => {
@@ -44435,18 +44838,6 @@
           "duration-app-launch": "800ms",
           ShowContentsContainer: "_2x2AVOEhNG0VTutCmj92Ae",
           ShowContentsButton: "_2_XaQn0OkqO-ANKJtzRmLZ",
-          BackgroundAnimation: "_2kFixnelgYVyRKFCYQoRWp",
-          "ItemFocusAnim-darkerGrey-nocolor": "_13KcN3vD9NXCXy237qwaLG",
-          "ItemFocusAnim-darkerGrey": "_3Lgimh2v4u-nRDyxxqBT3A",
-          "ItemFocusAnim-darkGreySettings": "_2VPOJmNqgetdyDpFE4bllq",
-          "ItemFocusAnim-darkGrey": "_3Lvlegmwn9YEoWyzBwD8sr",
-          "ItemFocusAnim-grey": "_2q1zpV3mttH-R5gqHwT1mC",
-          "ItemFocusAnim-translucent-white-10": "_2tuGihqMFSxlr-sQRkqM06",
-          "ItemFocusAnim-translucent-white-20": "m_Qke_AWkwjhp-iRPUqGQ",
-          "ItemFocusAnimBorder-darkGrey": "VWIRjrZbRoG1gl1Id-htG",
-          "ItemFocusAnim-green": "_2TgNqvDWm-J8Y0c1YifrWP",
-          focusAnimation: "_21lEBZV29mPW7bFIzaMfnE",
-          hoverAnimation: "hQdw7eDYdBDGDfOEBkhrw",
         };
       },
       chunkid: (module) => {
@@ -44464,18 +44855,6 @@
           slide: "joT_tHr8omRv5iyuhRWEX",
           SaleTab: "_3lNJcyQgaabRXK1WgdWlxp",
           SaleTabLabel: "_15YsWZ-QoAU0kWY8lnRMia",
-          BackgroundAnimation: "GrhvakYN0S6rdtfyYJiS0",
-          "ItemFocusAnim-darkerGrey-nocolor": "Cocp20rYT-XohM6UiFPdS",
-          "ItemFocusAnim-darkerGrey": "_3FsCOShpQRW6I5b1fx7jYb",
-          "ItemFocusAnim-darkGreySettings": "_18SobDnpmEfoSxaLmA_bkO",
-          "ItemFocusAnim-darkGrey": "cIX3CvrEXNX5u4hk3bsjc",
-          "ItemFocusAnim-grey": "oeG8AFtCrpCPZEs4sHQ7r",
-          "ItemFocusAnim-translucent-white-10": "cSv3-Gt-swNiGOqCzquqJ",
-          "ItemFocusAnim-translucent-white-20": "IDRBlhRO-o9oqlWe2mRhi",
-          "ItemFocusAnimBorder-darkGrey": "_2LU9nP3nX3RaQQXiBq6nQm",
-          "ItemFocusAnim-green": "_2ogT8rJiHsoWIayUtwesiz",
-          focusAnimation: "_3tQhjvZ3ef9L9_vw3SGKfr",
-          hoverAnimation: "_1ny7ooW3r0wOp5IJ2uywPY",
         };
       },
       chunkid: (module) => {
@@ -44486,18 +44865,6 @@
           JumpListOuterCtn: "_1qM3MD9Kxqxlpfh2enyaRn",
           SubMenuCtn: "_314msMWfcNmSDKm5G66IZi",
           SubMenuItemCtn: "_1DLVtv7GoYUpK-rwql1XOw",
-          BackgroundAnimation: "_6jFajm5oSsDCakzmQUBjs",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2xLwduE60Jczb3eD7-16pM",
-          "ItemFocusAnim-darkerGrey": "_1v5uoyav_s6AkBtqSV_xsh",
-          "ItemFocusAnim-darkGreySettings": "_16d0zmD7HaTy00za_ZnEHI",
-          "ItemFocusAnim-darkGrey": "mJJnjMXQw_zqMgD2_vK5C",
-          "ItemFocusAnim-grey": "_138NxcZy8rSQtaF1A-9jcN",
-          "ItemFocusAnim-translucent-white-10": "aroDEq70mXeRS5UgTxaB1",
-          "ItemFocusAnim-translucent-white-20": "c3hjUgCd-crxQ_zLQASBU",
-          "ItemFocusAnimBorder-darkGrey": "_3Uo890w8blA9DaaWqRURZF",
-          "ItemFocusAnim-green": "_17fP3PJ-2fdBkLfYqfFUAM",
-          focusAnimation: "_2YX4gcYKNIrb-SVdV6eFla",
-          hoverAnimation: "_34Xcqw6oj_gW04qaO-AGR0",
         };
       },
       chunkid: (module) => {
@@ -44508,18 +44875,6 @@
           TabTagFilterOption: "_26_RdOr7_b2aVX_J3BPTQ8",
           Secondary: "wIPouP1hPRRKgNVlMc-JW",
           TabTagFilterOptionSelected: "KwAcYWz5FoAcRIIjvcFgW",
-          BackgroundAnimation: "_1VHk4B5OfXm6O8NogkVpRB",
-          "ItemFocusAnim-darkerGrey-nocolor": "cVX5s0-O8-FYD-kSowzIA",
-          "ItemFocusAnim-darkerGrey": "_3k3S2saAhaP0VhJZao5oWy",
-          "ItemFocusAnim-darkGreySettings": "_1TBoCRlK13ws2BaoebRHFV",
-          "ItemFocusAnim-darkGrey": "_340-cHLA0bd4tS5d-PlXCb",
-          "ItemFocusAnim-grey": "_3zBs4WUvMD9QV0scuBgSHR",
-          "ItemFocusAnim-translucent-white-10": "_1yHRe6sF9kJgHAYoEQHlO2",
-          "ItemFocusAnim-translucent-white-20": "_3bh0_OBtbuv5uq8uWRWzES",
-          "ItemFocusAnimBorder-darkGrey": "_2bYXEAOuB-rRIg2KE-IUU3",
-          "ItemFocusAnim-green": "_3XpEEgA24uCf0grAsgQYcI",
-          focusAnimation: "_1Lju3qza3bH2Iiz4NYjw0i",
-          hoverAnimation: "_3d2DuYMA7ZEISVYv8Ncq1X",
         };
       },
       chunkid: (module) => {
@@ -44534,18 +44889,6 @@
           CapsuleCtnOverride: "_2YNmsOz2phP8ss67xqftMV",
           Info: "_3wnfYKWMVy4IzwkuD-ZTnX",
           Description: "_3e9HuimWWVFAai6O2krwKA",
-          BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
-          "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
-          "ItemFocusAnim-darkGreySettings": "_1KeeNieYRA1IvOs_hjx2Fk",
-          "ItemFocusAnim-darkGrey": "_2Gt-Rn_dZpXo5pADmd7xgt",
-          "ItemFocusAnim-grey": "_1NQuzlTuuuY5E17W1_Dnvp",
-          "ItemFocusAnim-translucent-white-10": "qPLst3oEHDXrPYy7-xr5r",
-          "ItemFocusAnim-translucent-white-20": "_2RPOy0hbLhHHYOoGti8CRw",
-          "ItemFocusAnimBorder-darkGrey": "_1bwrUjQwfSOh-ossMdGObJ",
-          "ItemFocusAnim-green": "_3DJ7-ozfbmWiW9sFiyrIsz",
-          focusAnimation: "_4EfsGVQ9T6jp3Au9FW6bc",
-          hoverAnimation: "_1F117LcLa8O5wSOCVaeow0",
         };
       },
       chunkid: (module) => {
@@ -44561,18 +44904,6 @@
           Title: "_2BhcS1KAkFef-tf0ECF0S",
           PriceFormatted: "Y2Qy5QpQjJLjG4RYUG6go",
           Description: "_2i9W9vMPyF-hF1wf5HCLxE",
-          BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
-          "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
-          "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
-          "ItemFocusAnim-darkGreySettings": "_3Ufmk5x68umUvjrbPjHwoq",
-          "ItemFocusAnim-darkGrey": "fojjsnGqkNFh7TEC5Ed2g",
-          "ItemFocusAnim-grey": "dXvi2hnxKE2qCZdVqrR-d",
-          "ItemFocusAnim-translucent-white-10": "_3o6uxDJJj4OaDSP8EcAvO2",
-          "ItemFocusAnim-translucent-white-20": "_2I86Qve6ZB0MtINyL05lyE",
-          "ItemFocusAnimBorder-darkGrey": "_35rf_zG7ShhTHPT_a13fN",
-          "ItemFocusAnim-green": "_1Qgsj5QhH-IG4ADf6QONPF",
-          focusAnimation: "_1yNGVGnRAlDmRQ7l8iSCA-",
-          hoverAnimation: "_1G3IJTzCPPT8WHbsHmy_MJ",
         };
       },
       chunkid: (module) => {
@@ -44596,18 +44927,6 @@
           AutoplayCheckboxCtn: "_2J3J__8l3sk6LI4mpUfWDT",
           AOWarning: "_2IxWvaCkHcMl0aL8NM8v6T",
           Text: "_1r5F1Fy8uG639opEIjyS5Z",
-          BackgroundAnimation: "_1G9QIfwsMh2XRR-bMBE97j",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2bun2taA5e3StPJT3cs6jH",
-          "ItemFocusAnim-darkerGrey": "_39J4X61tugDHvSmGBzKD7p",
-          "ItemFocusAnim-darkGreySettings": "_13-B6AE59KUQ-ABnyKYXkP",
-          "ItemFocusAnim-darkGrey": "_2xXdz148UoxpJlfyVlUo0D",
-          "ItemFocusAnim-grey": "_3-Rh6nRz4sRZLRVEQKPefw",
-          "ItemFocusAnim-translucent-white-10": "_1b0mYc5KheDLRLQoHqAqhU",
-          "ItemFocusAnim-translucent-white-20": "_3WVHjFeBrJOv0Xsqd7X2Vp",
-          "ItemFocusAnimBorder-darkGrey": "_1TaBFa6F_r2oTJvni2yNqQ",
-          "ItemFocusAnim-green": "_1dPdL7c_2dvq8gAaWTSq04",
-          focusAnimation: "_3BX0kUvHLGH3mZJG4BP4cc",
-          hoverAnimation: "_1om-YMcnj-8DLjL_ek0CxW",
           "capsule-trans-out": "YvTbl9XD-HkAs9W3pcEgp",
         };
       },
@@ -44626,18 +44945,6 @@
           UndoIgnoreButton: "_1rPGVQftqLzqjH04tebuaT",
           UndoButton: "_1nz7pkRvV4rRrybZrUZu0R",
           Disabled: "_2JvEs3_qRtYncXG7WCALur",
-          BackgroundAnimation: "_64dUS3S7fOwtNFhEALHhx",
-          "ItemFocusAnim-darkerGrey-nocolor": "UXmjEpq-9pbtC7T5d0MPv",
-          "ItemFocusAnim-darkerGrey": "_1olTI2tKYS6IUSkIpca3Qo",
-          "ItemFocusAnim-darkGreySettings": "_3JjCik6ZoOCqrb2F2DUuI1",
-          "ItemFocusAnim-darkGrey": "_37RRjG54p7sk3Yvb-5BDVv",
-          "ItemFocusAnim-grey": "yOH4BAo3sriSZckG9yR1g",
-          "ItemFocusAnim-translucent-white-10": "_1USieHqb4yVt2P3Okqs7hF",
-          "ItemFocusAnim-translucent-white-20": "_2MtHgIAnILIt8d4PMuS5mi",
-          "ItemFocusAnimBorder-darkGrey": "_dHmntK-X7hqNpoiZplVM",
-          "ItemFocusAnim-green": "_3CT6dHnuA3SYWZrgk1Sf1Y",
-          focusAnimation: "_34YOI6hVEDmEAWHAHlUXon",
-          hoverAnimation: "_1UXiQtSunyxlP1LxWHXACi",
         };
       },
       chunkid: (module) => {
@@ -44678,18 +44985,6 @@
           Left: "_2nAcihHr2E0zYAMHUTyfzS",
           AutoAdvanceRow: "_32z4GoJsXCS80wyW69zA-A",
           Enabled: "_1GUowcpveRrVvRp2xDu2FD",
-          BackgroundAnimation: "DPcB3JZoFdcOBHDlLyCv9",
-          "ItemFocusAnim-darkerGrey-nocolor": "_11Wy1F82sk419IXfqBDRj8",
-          "ItemFocusAnim-darkerGrey": "_3OVXNQKO9QPj2zbA0hUuMJ",
-          "ItemFocusAnim-darkGreySettings": "_3H7SAno3lY8E38Exwjsqzc",
-          "ItemFocusAnim-darkGrey": "XUVZTmVNXW8RKab45ITLx",
-          "ItemFocusAnim-grey": "SmcuQRsRT__vs57A2tptx",
-          "ItemFocusAnim-translucent-white-10": "_3VKuwWD9nlFH01mCUMTDvK",
-          "ItemFocusAnim-translucent-white-20": "_3RaLWLAklw1LP1hdRVCRdi",
-          "ItemFocusAnimBorder-darkGrey": "_29lnqqqVCq5Lw_sCaMzp2O",
-          "ItemFocusAnim-green": "LPaF39CQaEZUuXprNxsV3",
-          focusAnimation: "_1Ft2SQ6ZEO2ew3FReWOEcD",
-          hoverAnimation: "_3l4BnEkizRIsz_bM86LgDg",
         };
       },
       chunkid: (module) => {
@@ -44738,18 +45033,6 @@
         module.exports = {
           "duration-app-launch": "800ms",
           TrailerCarouselApp: "_3olpRSXr66ohyQFxmzqokI",
-          BackgroundAnimation: "_2Si3s9AMZo3G3PNFeyF410",
-          "ItemFocusAnim-darkerGrey-nocolor": "Jepw2U5yCjXuQaD9GNy9I",
-          "ItemFocusAnim-darkerGrey": "_1KTjwdebdzpOWcR7v-ASHd",
-          "ItemFocusAnim-darkGreySettings": "_2wNIBB1zc7I0kzNubVuspq",
-          "ItemFocusAnim-darkGrey": "_26_GPi_u8yOfyv0CLxZgjQ",
-          "ItemFocusAnim-grey": "_3X-YvqmKMxmmdA75nG5Oov",
-          "ItemFocusAnim-translucent-white-10": "_10oNTN-UmUNRMAzKyzDgPT",
-          "ItemFocusAnim-translucent-white-20": "_29KVLtytEtUMFtoMD-4N1M",
-          "ItemFocusAnimBorder-darkGrey": "wI-drbZXtFceoooAvNFGb",
-          "ItemFocusAnim-green": "_3qYt1gEp_NOp7orHzuhMRy",
-          focusAnimation: "_28wf-kwSrDfb45NfKvqlpv",
-          hoverAnimation: "_3JOMRUypZE2OLVliYMSUZI",
         };
       },
       chunkid: (module) => {
@@ -44768,18 +45051,6 @@
           SteamLabsNumber: "JzQLHAAFmbD1rWaCnqWZr",
           SteamLabsButton: "_3vFL5TuDkasXODhCN8Rp9c",
           ReducedMotionToggleCtn: "_182sEaT7DgwPKoXlxOZjc4",
-          BackgroundAnimation: "_15xQUUqj7qcbJuv9NFxFOj",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2NRljfOn9Bd5Z5IG7T4Epx",
-          "ItemFocusAnim-darkerGrey": "_1jOANrTQ1AakQtclgFxP4",
-          "ItemFocusAnim-darkGreySettings": "_3wMBQj1rLpOf0ba_gLqlH-",
-          "ItemFocusAnim-darkGrey": "_2-duIrOzfzCQHG3_UJ7jSC",
-          "ItemFocusAnim-grey": "_2xdvUl8e7TUDI3bqiX9kbo",
-          "ItemFocusAnim-translucent-white-10": "aoPzySIAG6FOtxxmcsyDp",
-          "ItemFocusAnim-translucent-white-20": "_2_j31tedrHpVF6oLGDTUec",
-          "ItemFocusAnimBorder-darkGrey": "_3GQGHDoQqWN7mvhuZYaxx3",
-          "ItemFocusAnim-green": "_1MLOQhoDBybx0Ri8qGl0SO",
-          focusAnimation: "_3VW4XG-nYkJ-vnJ4ZT82Ze",
-          hoverAnimation: "_1CJqpfE-2H1wqaHrGgo327",
         };
       },
       chunkid: (module) => {
@@ -44817,18 +45088,6 @@
           Reserved: "_2YgtWF6Ux_wURu2pJW2AZ0",
           DeltaPrice: "_19cEcW8racpIPjmEfKrMAt",
           StaticPrice: "_1g6IBbR3A2XedjQnaIcG8x",
-          BackgroundAnimation: "_3Rgx01F8-zIdFrK990U9SP",
-          "ItemFocusAnim-darkerGrey-nocolor": "mRVbrH5MtUlWtFC3UGbM7",
-          "ItemFocusAnim-darkerGrey": "_18AEYwk8ONaiyGDU91C0Pl",
-          "ItemFocusAnim-darkGreySettings": "_2So-dCYDfn1qkYFMZ_Wzw8",
-          "ItemFocusAnim-darkGrey": "_1tCxZZuuq9_W9OiIiGXOqT",
-          "ItemFocusAnim-grey": "_2VUiOdzJWx4inOaNfgkVl8",
-          "ItemFocusAnim-translucent-white-10": "_1BmVBVlnV8ICW5NQYxjSVa",
-          "ItemFocusAnim-translucent-white-20": "_1KGSkSXifM3q0YkW5b0JaV",
-          "ItemFocusAnimBorder-darkGrey": "_3N9hl7uH2VANLcLW2uW7EG",
-          "ItemFocusAnim-green": "_2sP6Jfz-Pn-iIANnfO5Qu8",
-          focusAnimation: "NCcNuvZsnMp1KvnlwcT5S",
-          hoverAnimation: "lkdp-Wy33p37LQA19lWkZ",
         };
       },
       chunkid: (module) => {
@@ -44856,18 +45115,6 @@
           Link: "_1vJHwybFjHBbNcBpxq2vJO",
           ReservationPSULessAddToCart: "_2HaOvkwPHDjo-tw2MojOhW",
           ReservationPSULessOutOfStock: "Cnrm19fZ6RQr1qL0tAjK9",
-          BackgroundAnimation: "_1xm0qUdmOPB5fFuOJowf-6",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1B7CatJQljUauJ8s1n-ljZ",
-          "ItemFocusAnim-darkerGrey": "_6ssa6UMKDgZzlmkNC_YVR",
-          "ItemFocusAnim-darkGreySettings": "_3zdVJjpFzFXizWMqJTanXL",
-          "ItemFocusAnim-darkGrey": "_30_M6ppan1_ulIlPEXgIJl",
-          "ItemFocusAnim-grey": "_3GYj5W9eacowkuiHIeomMp",
-          "ItemFocusAnim-translucent-white-10": "_3hWi_Bpp8nC9QUW0w7vdoF",
-          "ItemFocusAnim-translucent-white-20": "_2tLGUDqcBXOft1XNfwfowc",
-          "ItemFocusAnimBorder-darkGrey": "_3lwkegIBcstdeNMYHVQcIL",
-          "ItemFocusAnim-green": "iNSUXIvhm2XWFZAz-czyp",
-          focusAnimation: "sCYIjlY_RF-rJsQ-OC8Vo",
-          hoverAnimation: "_3fUy8YNvjnAprZfdUIuwu5",
         };
       },
       chunkid: (module) => {
@@ -44897,18 +45144,6 @@
           ListTitle: "Y5WM5dCZr3LoTjCGywWrh",
           ListDesc: "_2hKcgZ7bMBkH1XAfznVSJ7",
           ListLink: "Bg57PSnh0GLxOdxgXThQA",
-          BackgroundAnimation: "_9eScBs0QLgLg6VMskUG44",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1uEHEXdxI0bl8BOMg0qJKG",
-          "ItemFocusAnim-darkerGrey": "kb_mKEW1Trrm9nSwJMvBA",
-          "ItemFocusAnim-darkGreySettings": "_1kVXULGIgIT2L7XpUEOZ3T",
-          "ItemFocusAnim-darkGrey": "_2VF8pxWWbLemKsq4puU1Wr",
-          "ItemFocusAnim-grey": "_3FPCibIlrpZF1BA75jCWUj",
-          "ItemFocusAnim-translucent-white-10": "_3_HSK9IXZsjy9nj2VWiJi9",
-          "ItemFocusAnim-translucent-white-20": "_3cEqzhAAjzdhZxWlg4v6aJ",
-          "ItemFocusAnimBorder-darkGrey": "_9BlylSD1wVmbJDoUSCAi1",
-          "ItemFocusAnim-green": "_1H65rLcVzOc1_iF0L_OtA4",
-          focusAnimation: "_1oP9KXcvdY8GxIytduMtyd",
-          hoverAnimation: "_32bdGh_ES8zJ2julyrw_T8",
         };
       },
       chunkid: (module) => {
@@ -44934,18 +45169,6 @@
           QueryTerm: "_3qC2vrNpgJjfzDrkysII0q",
           Name: "_3G6UxIJ7FZVBIRxqDPtK2l",
           WGTesterLink: "_3SHhZFzZm_ZJ39MEcrzKmf",
-          BackgroundAnimation: "_1jkwQ_5dtvUqcR17Ni8gH7",
-          "ItemFocusAnim-darkerGrey-nocolor": "eJD8k-9VTnfw5SKDeQlGl",
-          "ItemFocusAnim-darkerGrey": "_1baqDGxThcAePgI3jhhJkS",
-          "ItemFocusAnim-darkGreySettings": "_12880UgR1fxST3Wm0d9Ew3",
-          "ItemFocusAnim-darkGrey": "_1UwkCmGYqqKEAek4YGnKP_",
-          "ItemFocusAnim-grey": "nQumUwdpEoKiUzjyDI3lo",
-          "ItemFocusAnim-translucent-white-10": "_2o8r_8LAMGBe_v0EG0wG6-",
-          "ItemFocusAnim-translucent-white-20": "_2O5AtpqLCvV_ePoyEYLHbL",
-          "ItemFocusAnimBorder-darkGrey": "_2P93o36Qnj6V_9NA0vWvNb",
-          "ItemFocusAnim-green": "_1S3DYfZnJWF-RqDhc1N2GQ",
-          focusAnimation: "_2VdM4IkqbPfPQjG0aKJeER",
-          hoverAnimation: "_1UpAmMLVIGsyyvnogRzgOW",
         };
       },
       chunkid: (module) => {
@@ -44966,18 +45189,6 @@
           ControllerFilterIcon: "_2WsSC1nJzj0YMxaWBm64jL",
           ControllerFilterName: "YQenZlzu-njiQXC1bp54B",
           FilterHeading: "_2qi36YGqcEnNxc0SLC3vqR",
-          BackgroundAnimation: "_1yMm_mTIDmBvJKeCv0umgv",
-          "ItemFocusAnim-darkerGrey-nocolor": "egyi2eVoAnG85NUOofeNG",
-          "ItemFocusAnim-darkerGrey": "qXZt3LJP32658eNH5LunZ",
-          "ItemFocusAnim-darkGreySettings": "_21rtsL9xHjvsEMm3sZQAg4",
-          "ItemFocusAnim-darkGrey": "uj8Xd4dFY6rbvtVvhTfXM",
-          "ItemFocusAnim-grey": "_3uxF9dglNUFm-sYeIoYw9D",
-          "ItemFocusAnim-translucent-white-10": "_2Yt3xxreXLPaY7JVPihcb5",
-          "ItemFocusAnim-translucent-white-20": "_1ey-5OrdgVgkWeYw_HgA7E",
-          "ItemFocusAnimBorder-darkGrey": "_1d3j6VMKb8xsr_TzPSuvVU",
-          "ItemFocusAnim-green": "_1kKvTRJdDHXBz4B-p0Xtmn",
-          focusAnimation: "_2rSQ9iIVVZuiUtR9uxPXzK",
-          hoverAnimation: "_26mHIup1rr0OVnBo8VNr_w",
         };
       },
       chunkid: (module) => {
@@ -45048,18 +45259,6 @@
           NextStop: "KdgpVSfXU5BQa2BcYkJRw",
           Title: "OhR_CZ0RXCy-aKnI3v9dA",
           Timer: "gxKX9N8KXrZV81yX38eyP",
-          BackgroundAnimation: "_2holOneB70LvCFJe2r1g9e",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3r1v3otuzMbNJnjxSL-5v7",
-          "ItemFocusAnim-darkerGrey": "_1Pz-mADDSz8Fpzz7oTuCvR",
-          "ItemFocusAnim-darkGreySettings": "_2bN4Yf2daAATVe-idmqX8F",
-          "ItemFocusAnim-darkGrey": "_3sncBNWLivrnj23D5ketFk",
-          "ItemFocusAnim-grey": "B7JcTATlUFsQZSQlhyIAo",
-          "ItemFocusAnim-translucent-white-10": "_7UnHbXS3CAyfX2N-aWCiv",
-          "ItemFocusAnim-translucent-white-20": "_1nQrA3J5irmsdC9JrgQa0E",
-          "ItemFocusAnimBorder-darkGrey": "_3two6UDn7XNSHsCZL2EQ0",
-          "ItemFocusAnim-green": "_2gPiB59s9zUxgTuQhxMcRs",
-          focusAnimation: "_2D5OVrkn1a2er_--T93q2v",
-          hoverAnimation: "Li7-iOahGthCZ2U4IkUs-",
         };
       },
       chunkid: (module) => {
@@ -45097,18 +45296,6 @@
           ExplorationModeToggle: "jCg8gWGML1DAedhv9S7Bz",
           OptionDisabled: "qeM14TZHm0uJ8srLTpEO4",
           ExplorationModeDescription: "_1rgWiRelyItuYoOZELdZSD",
-          BackgroundAnimation: "oscebphohVuDQvUcFu66a",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3bvl0AXCzxsDrlce5z13v4",
-          "ItemFocusAnim-darkerGrey": "_2kmVhDqHE4at0CkzXuXsyB",
-          "ItemFocusAnim-darkGreySettings": "_3C1Pfm2sTCYNiFgrxZFkXL",
-          "ItemFocusAnim-darkGrey": "Nk3aA9WAhoyp0_21SNcAg",
-          "ItemFocusAnim-grey": "MdGdjFG8pQnft1fZhzFD5",
-          "ItemFocusAnim-translucent-white-10": "_9WIF1egGyToTu88VftV-H",
-          "ItemFocusAnim-translucent-white-20": "_2NYJd6ULCFlXERCl6XwkqJ",
-          "ItemFocusAnimBorder-darkGrey": "v-5dEEogcOs5uavWsNmi0",
-          "ItemFocusAnim-green": "_1_twvv7hCCmZoxnUFrTCaS",
-          focusAnimation: "_2BR4y7GphMeeAo5LIz0vYJ",
-          hoverAnimation: "_2rjmewvvUGDAPkXjTZwfBB",
         };
       },
       chunkid: (module) => {
@@ -45130,18 +45317,6 @@
           PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
           PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
           PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
-          BackgroundAnimation: "_21xdD3y0DJeYvUehUMcPwg",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3rNPhT088-82kayyY9jWT9",
-          "ItemFocusAnim-darkerGrey": "HqpHRy29WMHs-c-YLSIrq",
-          "ItemFocusAnim-darkGreySettings": "_3pULdRtegOO_LMg25FyoCA",
-          "ItemFocusAnim-darkGrey": "_2-jSn0eV92zh4AG5bspmdQ",
-          "ItemFocusAnim-grey": "_1pfDYeJhusNZse6yV1ylkM",
-          "ItemFocusAnim-translucent-white-10": "BNT9Di7wydWf5sVgthF_S",
-          "ItemFocusAnim-translucent-white-20": "_1QPxw8wOP6YhLlQW4sIJE0",
-          "ItemFocusAnimBorder-darkGrey": "_3mWm9Hgt668bAAVs1xVbYf",
-          "ItemFocusAnim-green": "_1xGreWqJx-NR2CIsj6pfW7",
-          focusAnimation: "_3lmbTG6XwECS6W6OOXg1GG",
-          hoverAnimation: "_2PjejhtUq-V0Ljvu91OxDn",
         };
       },
       chunkid: (module) => {
@@ -45196,36 +45371,12 @@
           SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
           SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
           ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
-          BackgroundAnimation: "_3CxKZ4N0RhDFwPqdzAtrMl",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3pZA6QmunSvkjmZI9Ndmcu",
-          "ItemFocusAnim-darkerGrey": "_3BffASPCHFV0VAgmPVl_kc",
-          "ItemFocusAnim-darkGreySettings": "qkh264Vz9Pv5rr6YfKhh1",
-          "ItemFocusAnim-darkGrey": "qD2mZ6w2eEWm1PhMc6xb6",
-          "ItemFocusAnim-grey": "_2mW-vk-aE8tlHuAW0uXkit",
-          "ItemFocusAnim-translucent-white-10": "_2b2eos74MIDM6zKt-lSfM4",
-          "ItemFocusAnim-translucent-white-20": "_1SYQ3QCW-iVm5eavl1lcD4",
-          "ItemFocusAnimBorder-darkGrey": "owLhAm1zN4SxTDUzDAzAc",
-          "ItemFocusAnim-green": "_1EuR8NR_c4-zx1TryKcZ2Q",
-          focusAnimation: "uz9ci2kXU2o-q-PstyP5_",
-          hoverAnimation: "_1_iqutzmsp1osmwqWLLqoV",
         };
       },
       chunkid: (module) => {
         module.exports = {
           "duration-app-launch": "800ms",
           TrailerCarouselCtn: "_30Yfh62g3YeDgzOL-z9BnJ",
-          BackgroundAnimation: "_2NvCWp6KWza717c2q7D6ko",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2POOztmd1ONGjK8fHCV5iD",
-          "ItemFocusAnim-darkerGrey": "_3X7A1Ec0LK2lN02eH5nbEi",
-          "ItemFocusAnim-darkGreySettings": "_3MbAGf606eAnNA_kucsuEn",
-          "ItemFocusAnim-darkGrey": "_3AcX9y0dDWaCFiXq2jIcU_",
-          "ItemFocusAnim-grey": "_3N1W0jPMb91CnnuRmTxLeO",
-          "ItemFocusAnim-translucent-white-10": "_3tNx72scoGHqNU1o7HM5I1",
-          "ItemFocusAnim-translucent-white-20": "_2dZAfh-J0P60Cg_qByXgMd",
-          "ItemFocusAnimBorder-darkGrey": "XfxPjTQ1cjewIUGzdPT6g",
-          "ItemFocusAnim-green": "_1WHgaMTy6yF3J6b84Awj28",
-          focusAnimation: "_3YBQEb-j4CfjYXYBcsvITs",
-          hoverAnimation: "_3PZuUDo5OFF7yl4pQ9TeLC",
         };
       },
       chunkid: (module) => {
@@ -45397,18 +45548,6 @@
           TitleSubDescVAlignCenter: "_3S3o87MCy5HvHZnto1F9VB",
           TitleSubDescVAlignBottom: "ZVmHAf8nZRO-hqEMsQN20",
           MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
-          BackgroundAnimation: "_2-SCxC1my6FrH3aDEzPwlp",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3imOd9Zme0cKg033W9R6vV",
-          "ItemFocusAnim-darkerGrey": "_39CSDSVCyQTDyfQlZX_eMG",
-          "ItemFocusAnim-darkGreySettings": "_3vaD1GloPppN9D4XWfGnw2",
-          "ItemFocusAnim-darkGrey": "_2onns6LUXpYqxhK4fGf3NX",
-          "ItemFocusAnim-grey": "_4Kw4wiHjF-6BJhWxpY1ny",
-          "ItemFocusAnim-translucent-white-10": "_3OJltj5_RbXofYDZrl6cfP",
-          "ItemFocusAnim-translucent-white-20": "_2iSnPT5YZkvzcB23-fE7zG",
-          "ItemFocusAnimBorder-darkGrey": "_3pIONAPllhax7yGHHir6pC",
-          "ItemFocusAnim-green": "_3SW5eGNFX7TP1agT_MdhUT",
-          focusAnimation: "_2idhdO9Lm0fQOQniqQJZEY",
-          hoverAnimation: "_1hIT8okWY9wohrR8ouUw67",
         };
       },
       chunkid: (module) => {
@@ -45437,18 +45576,6 @@
           BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
           TextSectionScaling: "_1JcmAfIR_1398hfU7MCSJc",
           MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
-          BackgroundAnimation: "_1rhJfCNCZyBG_ErjP8cbJN",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2Wn0xk5y_QYuqwvMUgCS_q",
-          "ItemFocusAnim-darkerGrey": "_1If8jrRruIrjSp8OaAnnTv",
-          "ItemFocusAnim-darkGreySettings": "_2n4FOOcmVUKefrAz9nzF7g",
-          "ItemFocusAnim-darkGrey": "_18vHojgZL-LOjT6CdBetmW",
-          "ItemFocusAnim-grey": "_3tz51q-WjCFwQbG3Z3idxV",
-          "ItemFocusAnim-translucent-white-10": "eMzjYbN-S8IR6m_x4JUhk",
-          "ItemFocusAnim-translucent-white-20": "_3ZxIsJnHzjAUkCqEto-9jp",
-          "ItemFocusAnimBorder-darkGrey": "C0DjnlP9_Kp_tYSQFD91s",
-          "ItemFocusAnim-green": "_1vQT4lsIEAlTW_twYJy9XP",
-          focusAnimation: "_2-XhJ9ApAE8gtNIVxEYY3s",
-          hoverAnimation: "_1rBjcrxSJ5WLabil5qrtin",
         };
       },
       chunkid: () => {},
@@ -45513,18 +45640,6 @@
           PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
           PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
           NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
-          BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
-          "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
-          "ItemFocusAnim-darkGreySettings": "XvVy1qhFrJwjYK25wo2O6",
-          "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
-          "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
-          "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
-          "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
-          "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
-          "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
-          focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
-          hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
         };
       },
       chunkid: (module) => {
@@ -45644,18 +45759,6 @@
           SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
           RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
           SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
-          BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
-          "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
-          "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
-          "ItemFocusAnim-darkGreySettings": "_3bomS6MjDv4c5XbYu2Caqu",
-          "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
-          "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
-          "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
-          "ItemFocusAnim-translucent-white-20": "_1fugsBQAve_CPDYfcK5fou",
-          "ItemFocusAnimBorder-darkGrey": "_1X5xeHixS4XJusrPGRQ4nL",
-          "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
-          focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
-          hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
         };
       },
       chunkid: (module) => {
@@ -45666,18 +45769,6 @@
           ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
           ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
           ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
-          BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
-          "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
-          "ItemFocusAnim-darkGreySettings": "_3UqXfp4k1blu2wv57exkEd",
-          "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
-          "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
-          "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
-          "ItemFocusAnim-translucent-white-20": "_1VijReQZ-moslCOSkJYKIt",
-          "ItemFocusAnimBorder-darkGrey": "_1HaTvS9ANJY56lTVTb35I3",
-          "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
-          focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
-          hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
         };
       },
     },

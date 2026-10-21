@@ -99,8 +99,7 @@
         function _(_) {
           const _ = (0, _.useRef)(null);
           (0, _.useEffect)(() => {
-            var _;
-            (_ = _.current) == null || _.showModal();
+            _.current?.showModal();
             const _ = document.body.style.overflow;
             return (
               (document.body.style.overflow = "hidden"),
@@ -563,7 +562,6 @@
             [_],
           );
           const _ = _.useCallback(async () => {
-              var _;
               try {
                 const _ = _._.InitFromClanID(_.clanAccountID),
                   _ = await _._.AsyncGetImageResolution(
@@ -577,7 +575,7 @@
                 if (_.success != _._ || !_.width || !_.height) {
                   console.error(
                     "LocalizedImageDialog : failed to determine the primary image resolution. " +
-                      ((_ = _.err_msg) != null ? _ : ""),
+                      (_.err_msg ?? ""),
                   ),
                     _({
                       strMsg: _.err_msg,
@@ -615,7 +613,7 @@
             _ = _ ? ` - ${_.width}x${_.height}` : "",
             _ = (0, _._)(_.file_type).slice(1),
             _ =
-              _ != null && _.width && _ != null && _.height
+              _?.width && _?.height
                 ? {
                     width: _.width,
                     height: _.height,
@@ -659,7 +657,7 @@
                         (0, _.jsx)("div", {
                           children: (0, _._)("#Error_Message"),
                         }),
-                        !!(_ != null && _.strMsg) &&
+                        !!_?.strMsg &&
                           (0, _.jsx)("div", {
                             children: _.strMsg,
                           }),
@@ -748,7 +746,6 @@
           _ = __webpack_require__("chunkid");
         const _ = 30;
         function _(_) {
-          var _, _;
           const {
               event: _,
               imageURLOverride: _,
@@ -763,23 +760,14 @@
             _ = (0, _._)(),
             _ = _ || (0, _.sfN)(_._.LANGUAGE),
             _ =
-              (_ = (0, _._)(
+              (0, _._)(
                 _ !== void 0 ? void 0 : _,
                 "capsule",
                 _,
                 _._.capsule_main,
-              )) != null
-                ? _
-                : _,
+              ) ?? _,
             _ =
-              (_ = (0, _._)(
-                _ !== void 0 ? void 0 : _,
-                "capsule",
-                _,
-                _._.full,
-              )) != null
-                ? _
-                : _,
+              (0, _._)(_ !== void 0 ? void 0 : _, "capsule", _, _._.full) ?? _,
             [_, _, _, _] = (0, _._)(() => [
               _.GetNameWithFallback(_) || "",
               _.GetCategoryAsString(),
@@ -958,18 +946,18 @@
                   (0, _.jsxs)("span", {
                     className: (0, _._)(
                       _().AppCapsulePrice,
-                      _ != null && _.discount_pct ? _().Discounted : "",
+                      _?.discount_pct ? _().Discounted : "",
                     ),
                     children: [
-                      !!(_ != null && _.discount_pct && _) &&
+                      !!(_?.discount_pct && _) &&
                         (0, _.jsx)("div", {
                           className: _().DiscountIconCtn,
                           children: (0, _.jsx)(_.XH_, {}),
                         }),
-                      !!(_ != null && _.discount_pct && !_) &&
+                      !!(_?.discount_pct && !_) &&
                         (0, _.jsx)("span", {
                           className: _().StoreSaleDiscountBox,
-                          children: `-${_ == null ? void 0 : _.discount_pct}%`,
+                          children: `-${_?.discount_pct}%`,
                         }),
                       _ &&
                         _.final_price_in_cents &&
@@ -1040,15 +1028,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -1057,13 +1036,12 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
+          m_curLocImageGroup = null;
+          m_curLocImageGroupType = null;
           constructor() {
-            _(this, "m_curLocImageGroup", null),
-              _(this, "m_curLocImageGroupType", null),
-              (0, _._)(this);
+            (0, _._)(this);
           }
           static async BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _) {
             let _ =
@@ -1100,10 +1078,7 @@
               )));
           }
           GetPrimaryImageForImageGroup() {
-            var _;
-            return (_ = this.m_curLocImageGroup) == null
-              ? void 0
-              : _.primaryImage;
+            return this.m_curLocImageGroup?.primaryImage;
           }
           ClearImageGroup() {
             (this.m_curLocImageGroup = null),
@@ -1113,30 +1088,24 @@
             return this.m_curLocImageGroup;
           }
           GetLocalizedImageGroupForEditAsURL(_, _) {
-            var _;
             if (this.m_curLocImageGroup) {
               let _ = this.m_curLocImageGroup.primaryImage;
               return this.m_curLocImageGroup.localized_images[_]
                 ? this.m_curLocImageGroup.localized_images[_]
-                : _._.GenerateURLFromHashAndExt(
-                    _,
-                    (_ = _._.GetHashAndExt(_)) != null ? _ : "",
-                  );
+                : _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? "");
             }
             return null;
           }
           async DetermineAvailableLocalizationForGroup(_) {
-            var _;
             if (!this.m_curLocImageGroup) return;
             const _ = this.m_curLocImageGroup.primaryImage,
               _ = _._.InitFromClanID(_.clanAccountID),
-              _ = (_ = _._.GetHashAndExt(_)) != null ? _ : "",
+              _ = _._.GetHashAndExt(_) ?? "",
               _ = [];
             for (let _ = _.Bhc; _ < _.bP9; ++_)
               _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
             const _ = await Promise.all(_);
             (0, _._)(() => {
-              var _;
               for (let _ = _.Bhc; _ < _.bP9; ++_)
                 _[_] &&
                   (this.m_curLocImageGroup.localized_images[_] =
@@ -1145,12 +1114,11 @@
                       _,
                       _._.full,
                       _,
-                      (_ = this.m_curLocImageGroupType) != null ? _ : void 0,
+                      this.m_curLocImageGroupType ?? void 0,
                     ));
             });
           }
           SetLocalizedImageGroupAtLang(_, _, _) {
-            var _;
             this.m_curLocImageGroup &&
               (this.m_curLocImageGroup.localized_images[_] = _
                 ? _._.GenerateURLFromHashAndExtAndLang(
@@ -1158,15 +1126,14 @@
                     _,
                     _._.full,
                     _,
-                    (_ = this.m_curLocImageGroupType) != null ? _ : void 0,
+                    this.m_curLocImageGroupType ?? void 0,
                   )
                 : null);
           }
           AddLocalizeImageUploaded(_, _) {
-            var _;
             if (!this.m_curLocImageGroup) return;
             let _ = this.m_curLocImageGroup.primaryImage;
-            if ((_ == null ? void 0 : _.image_hash) == _) {
+            if (_?.image_hash == _) {
               const _ = _._.InitFromClanID(_.clanAccountID),
                 _ = _._.GetHashAndExt(_);
               _ &&
@@ -1176,7 +1143,7 @@
                     _,
                     _._.full,
                     _,
-                    (_ = this.m_curLocImageGroupType) != null ? _ : void 0,
+                    this.m_curLocImageGroupType ?? void 0,
                   ));
             }
           }
@@ -1243,14 +1210,10 @@
             [_, _] = _.useState(!1),
             _ = _.useCallback(
               async (_, _) => {
-                var _, _;
                 if (!_) {
                   _(!0);
                   try {
-                    const { language: _ } = (0, _._)(
-                        (_ = _.file_name) != null ? _ : "",
-                        _,
-                      ),
+                    const { language: _ } = (0, _._)(_.file_name ?? "", _),
                       _ = (0, _._)(_, _, _);
                     await _.AddExistingClanImage(_, _);
                   } catch (_) {
@@ -1260,7 +1223,7 @@
                         (0, _.jsx)(_._, {
                           strDescription: (0, _._)(
                             "#EventError_Code",
-                            (_ = _.strErrorMsg) != null ? _ : "",
+                            _.strErrorMsg ?? "",
                           ),
                         }),
                         window,
@@ -1290,17 +1253,13 @@
               [_, _, _],
             ),
             _ = (_) => {
-              var _;
               for (const _ of _) {
                 const _ = _.uploadResult;
-                if (_ != null && _.origimagehash) {
+                if (_?.origimagehash) {
                   const _ = (0, _._)(_.language, _, _);
                   _._.AddLocalizeImageUploaded(_.origimagehash, _);
                 } else {
-                  const _ = _._.GetClanImageByImageHash(
-                      _,
-                      (_ = _ == null ? void 0 : _.image_hash) != null ? _ : "",
-                    ),
+                  const _ = _._.GetClanImageByImageHash(_, _?.image_hash ?? ""),
                     _ = _.image.GetCurrentImageOption();
                   if (_ && _) {
                     const _ = (0, _._)(_.image.language, _, _);
@@ -1486,7 +1445,6 @@
                 });
             },
             _ = (_) => {
-              var _, _;
               (0, _._)(
                 (0, _.jsx)(_._, {
                   strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
@@ -1499,7 +1457,7 @@
                       (0, _.jsx)("div", {
                         children: (0, _._)(
                           "#ImagePicker_DeleteAreYouSure",
-                          (_ = _.file_name) != null ? _ : "",
+                          _.file_name ?? "",
                         ),
                       }),
                       (0, _.jsx)("br", {}),
@@ -1510,7 +1468,7 @@
                     ],
                   }),
                 }),
-                (_ = (0, _._)(_)) != null ? _ : window,
+                (0, _._)(_) ?? window,
               );
             },
             _ = (_) => {
@@ -1623,11 +1581,11 @@
               bDeleting: _,
             } = _,
             { data: _ } = (0, _._)(_.clanAccountID);
-          return _ || !(_ != null && _.valve_admin)
+          return _ || !_?.valve_admin
             ? null
             : (0, _.jsx)("span", {
                 className: (0, _._)(_().Localized, _().ValveOnlyBackground),
-                onClick: () => (_ == null ? void 0 : _(_)),
+                onClick: () => _?.(_),
                 children: "(VO) " + (0, _._)("#ImagePicker_Localized"),
               });
         }
@@ -1676,7 +1634,7 @@
           const { clanSteamID: _, closeModal: _, OnClanImageSelected: _ } = _,
             _ = _.useCallback(
               (_, _) => {
-                _ == null || _(_, _), _ == null || _();
+                _?.(_, _), _?.();
               },
               [_, _],
             ),
@@ -1724,13 +1682,12 @@
                 _: "clanimagedialog",
                 type: "button",
                 onClick: (_) => {
-                  var _;
                   (0, _._)(
                     (0, _.jsx)(_, {
                       clanSteamID: _,
                       OnClanImageSelected: _,
                     }),
-                    (_ = (0, _._)(_)) != null ? _ : window,
+                    (0, _._)(_) ?? window,
                   );
                 },
               }),
@@ -1875,12 +1832,11 @@
             ]),
             _ = _.useCallback(
               async (_) => {
-                var _;
                 let _ = Array.from(_),
                   _ = !0;
                 for (let _ = 0; _ < _.length; _++) {
                   const _ = _[_],
-                    { language: _ } = (0, _._)(_ == null ? void 0 : _.name, _);
+                    { language: _ } = (0, _._)(_?.name, _);
                   try {
                     const _ = (0, _._)(_, _, _);
                     (_ = await _.AddImageForLanguage(_, _)),
@@ -1910,7 +1866,7 @@
                         (0, _.jsx)(_._, {
                           strDescription: (0, _._)(
                             "#EventError_Code",
-                            (_ = _.strErrorMsg) != null ? _ : "",
+                            _.strErrorMsg ?? "",
                           ),
                         }),
                         window,
@@ -1944,7 +1900,7 @@
           );
           const _ = async () => {
             const _ = await _.UploadAllImages(_);
-            _ == null || _(_);
+            _?.(_);
           };
           return (0, _.jsxs)(_._, {
             onDropFiles: _,
@@ -2035,7 +1991,6 @@
         }
         const _ = (0, _._)(_);
         function _(_) {
-          var _, _, _, _, _;
           const _ = (_) => {
               if (_ instanceof _._) {
                 _.ResetImage();
@@ -2057,29 +2012,26 @@
                 );
             },
             { asset: _, fnOnRemove: _, languageRealms: _ } = _,
-            _ =
-              (_ = _.ImageOptions) == null
-                ? void 0
-                : _.map((_) => {
-                    let _ = _ == null ? void 0 : _.fnGetLabelText(),
-                      _;
-                    _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
-                      _.bDeprecated &&
-                        ((_ += ` ${(0, _._)("#ImageUpload_Deprecated")}`),
-                        (_ = (0, _._)("#ImageUpload_Deprecated_ttip")));
-                    let _;
-                    return (
-                      (_.BIsOriginalMinimumDimensions(_) &&
-                        _.FileTypeMatchesImageTypes(_)) ||
-                        (_ = _().ImageDimensionTooSmall),
-                      {
-                        label: _,
-                        data: _,
-                        strOptionClass: _,
-                        tooltip: _,
-                      }
-                    );
-                  }).filter((_) => !_.data.bHiddenFromDropdown),
+            _ = _.ImageOptions?.map((_) => {
+              let _ = _?.fnGetLabelText(),
+                _;
+              _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
+                _.bDeprecated &&
+                  ((_ += ` ${(0, _._)("#ImageUpload_Deprecated")}`),
+                  (_ = (0, _._)("#ImageUpload_Deprecated_ttip")));
+              let _;
+              return (
+                (_.BIsOriginalMinimumDimensions(_) &&
+                  _.FileTypeMatchesImageTypes(_)) ||
+                  (_ = _().ImageDimensionTooSmall),
+                {
+                  label: _,
+                  data: _,
+                  strOptionClass: _,
+                  tooltip: _,
+                }
+              );
+            }).filter((_) => !_.data.bHiddenFromDropdown),
             _ = {
               pending: (0, _._)("#ImageUpload_Pending"),
               waiting: (0, _._)("#ImageUpload_Waiting"),
@@ -2089,11 +2041,7 @@
               failed: (0, _._)("#ImageUpload_Failed"),
             },
             _ = _.BSupportsLanguages()
-              ? _(
-                  _._.GetLanguageListForRealms(
-                    _ != null ? _ : [_._.k_ESteamRealmGlobal],
-                  ),
-                )
+              ? _(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
               : null,
             _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
             _ = _.status == "pending";
@@ -2105,15 +2053,8 @@
           let _;
           const _ = _.GetCurrentImageOption();
           return (
-            _ &&
-              (_ =
-                (_ =
-                  _ == null ? void 0 : _.find((_) => _.data.sKey == _.sKey)) ==
-                null
-                  ? void 0
-                  : _.data),
-            _ ||
-              (_ = (_ = _ == null ? void 0 : _[0]) == null ? void 0 : _.data),
+            _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data),
+            _ || (_ = _?.[0]?.data),
             (0, _.jsxs)("div", {
               className: _().UploadPreview,
               children: [
@@ -2134,7 +2075,7 @@
                     disabled: !_,
                   }),
                 _ &&
-                  (_ == null ? void 0 : _.length) > 1 &&
+                  _?.length > 1 &&
                   (0, _.jsx)(_._, {
                     label: _.GetImageOptionLabel(),
                     rgOptions: _,
@@ -2143,31 +2084,27 @@
                     disabled: !_,
                   }),
                 _ &&
-                  ((_ = _.warnings) == null
-                    ? void 0
-                    : _.map((_, _) =>
-                        (0, _.jsx)(
-                          "div",
-                          {
-                            className: _().UploadPreviewWarning,
-                            children: _,
-                          },
-                          `warning${_}`,
-                        ),
-                      )),
+                  _.warnings?.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().UploadPreviewWarning,
+                        children: _,
+                      },
+                      `warning${_}`,
+                    ),
+                  ),
                 _ &&
-                  ((_ = _.messages) == null
-                    ? void 0
-                    : _.map((_, _) =>
-                        (0, _.jsx)(
-                          "div",
-                          {
-                            className: _().UploadPreviewMessage,
-                            children: _,
-                          },
-                          `message${_}`,
-                        ),
-                      )),
+                  _.messages?.map((_, _) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _().UploadPreviewMessage,
+                        children: _,
+                      },
+                      `message${_}`,
+                    ),
+                  ),
                 (0, _.jsxs)("div", {
                   className: (0, _._)({
                     [_().FlexColumnContainer]: !0,
@@ -2332,7 +2269,6 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
           const {
               event: _,
               spotlightURLOverride: _,
@@ -2362,11 +2298,8 @@
               : "localized_store_app_spotlight"),
             (_ = _._.full));
           let _ =
-            (_ = (0, _._)(_ !== void 0 ? void 0 : _, _, _, _)) != null
-              ? _
-              : _ !== void 0
-                ? [_]
-                : [];
+            (0, _._)(_ !== void 0 ? void 0 : _, _, _, _) ??
+            (_ !== void 0 ? [_] : []);
           _ && _ && (_ = _(_));
           const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
           return (0, _.jsx)(_.Fragment, {
@@ -2441,7 +2374,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
-          var _;
           const {
               langOverride: _,
               artworkType: _,
@@ -2544,10 +2476,7 @@
                     (0, _.jsx)("img", {
                       className: _.PreviewImg,
                       src:
-                        (_ = _._.GetLocalizedImageGroupForEditAsURL(_, _)) !=
-                        null
-                          ? _
-                          : void 0,
+                        _._.GetLocalizedImageGroupForEditAsURL(_, _) ?? void 0,
                     }),
                   _ === "product_banner" &&
                     (0, _.jsx)(_, {
@@ -2577,10 +2506,7 @@
                     fnOnArtworkLangChange: _,
                     realms: _,
                     fnLangHasData: _,
-                    fnGetImageHash: (_) => {
-                      var _;
-                      return (0, _._)((_ = _(_, _)) != null ? _ : "");
-                    },
+                    fnGetImageHash: (_) => (0, _._)(_(_, _) ?? ""),
                   }),
                 ],
               });
@@ -2668,7 +2594,7 @@
             children: (0, _.jsx)(_._, {
               event: _,
               imageURLOverride: _,
-              langOverride: _ != null ? _ : _,
+              langOverride: _ ?? _,
             }),
           });
         }
@@ -2771,19 +2697,17 @@
           });
         }
         const _ = (_) => {
-            var _;
             const [_] = (0, _._)(_.event.appid, {
               include_assets: !0,
             });
             if (!_) return null;
             const _ = _.GetName(),
-              _ =
-                (_ = _.GetAssets()) == null ? void 0 : _.GetCommunityIconURL();
+              _ = _.GetAssets()?.GetCommunityIconURL();
             return (0, _.jsx)("div", {
               className: _().SpotlightExample,
               children: (0, _.jsx)(_, {
                 event: _.event,
-                strDisplayName: _ != null ? _ : "",
+                strDisplayName: _ ?? "",
                 gameIconUrl: _,
                 spotlightURLOverride: _.imgURL,
                 langOverride: _.lang,
@@ -2846,11 +2770,9 @@
               }),
             });
         function _(_, _) {
-          var _, _;
           let _ = 0;
           for (let _ = _.Bhc; _ < _.bP9; ++_)
-            ((_ = (_ = _(_, _)) == null ? void 0 : _.length) != null ? _ : 0) >
-              0 && (_ += 1);
+            (_(_, _)?.length ?? 0) > 0 && (_ += 1);
           return _;
         }
         var _ = Object.defineProperty,
@@ -2874,7 +2796,6 @@
           _
         ))(_ || {});
         function _(_) {
-          var _, _;
           const {
               artworkType: _,
               headerHint: _,
@@ -2891,8 +2812,8 @@
               include_assets: !0,
             }),
             [_, _] = (0, _._)(() => [
-              _ == null ? void 0 : _.GetEventType(),
-              _ == null ? void 0 : _.BHasTag("vo_marketing_message"),
+              _?.GetEventType(),
+              _?.BHasTag("vo_marketing_message"),
             ]),
             _ = _ == _.ajI;
           let _ = null;
@@ -3083,10 +3004,7 @@
                               (0, _.jsx)("p", {
                                 children: (0, _._)("#selectimage_tip_hero_1"),
                               }),
-                              !(
-                                (_ = _.GetAssets()) != null &&
-                                _.GetLibraryHeroURL()
-                              ) &&
+                              !_.GetAssets()?.GetLibraryHeroURL() &&
                                 (0, _.jsx)("p", {
                                   className: _.ErrorStylesBackground,
                                   children: (0, _._)(
@@ -3321,12 +3239,11 @@
                     !!_.fnRemoveAllArtwork &&
                       (0, _.jsx)(_._, {
                         onClick: (_) => {
-                          var _;
                           (0, _._)(
                             (0, _.jsx)(_, {
                               fnRemoveAllArtwork: _.fnRemoveAllArtwork,
                             }),
-                            (_ = (0, _._)(_)) != null ? _ : window,
+                            (0, _._)(_) ?? window,
                           );
                         },
                         children: (0, _._)("#Sale_RemoveAll"),
@@ -3336,7 +3253,7 @@
               !_.bIsMinimized &&
                 (0, _.jsx)(_, {
                   clanSteamID: _.clanSteamID,
-                  title: (_ = _.title) != null ? _ : "",
+                  title: _.title ?? "",
                   eventModel: _,
                   artworkType: _.artworkType,
                   realms: _,
@@ -3355,7 +3272,7 @@
             strTitle: (0, _._)("#Sale_RemoveAll"),
             strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
             onOK: () => {
-              _ == null || _(), _ == null || _();
+              _?.(), _?.();
             },
             onCancel: _,
           });
@@ -3399,9 +3316,7 @@
             _ = _.useCallback(
               (_, _, _) => {
                 (0, _._)(() => {
-                  var _;
-                  (0, _._)((_ = _(_, _)) != null ? _ : "") == _.image_hash &&
-                    _(_, null, _),
+                  (0, _._)(_(_, _) ?? "") == _.image_hash && _(_, null, _),
                     _(_, _, _),
                     _(_, _, !1);
                 });
@@ -3482,7 +3397,6 @@
             const { list: _ } = this.props;
             return (
               _.forEach((_) => {
-                var _;
                 const { clanImage: _, lang: _ } = _;
                 let _ = (0, _._)("#Language_" + (0, _.LgB)(_));
                 _.push(
@@ -3494,7 +3408,7 @@
                         (0, _.jsx)("span", {
                           children: (0, _._)(
                             "#ImageUpload_Success_Mapping",
-                            (_ = _.file_name) != null ? _ : "",
+                            _.file_name ?? "",
                             _,
                           ),
                         }),
@@ -3810,17 +3724,13 @@
             } = _,
             [_, _] = (0, _.useState)(_),
             _ = _._.InitFromClanID(_.clanAccountID),
-            _ = (0, _._)(() => {
-              var _;
-              return _._.GenerateURLFromHashAndExt(
-                _,
-                (_ = _._.GetHashAndExt(_)) != null ? _ : "",
-              );
-            });
+            _ = (0, _._)(() =>
+              _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_) ?? ""),
+            );
           return (0, _.jsx)(_._, {
             strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
             strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
-            onOK: () => (_ == null ? void 0 : _(_, _, _)),
+            onOK: () => _?.(_, _, _),
             onCancel: _,
             closeModal: _,
             children: (0, _.jsxs)("div", {
@@ -3873,8 +3783,7 @@
                 if (_._.logged_in) {
                   const _ = _._.Init(_.w_T),
                     _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
-                  _ != null &&
-                    _.nicknames &&
+                  _?.nicknames &&
                     _.nicknames.length > 0 &&
                     _.nicknames.forEach((_) => {
                       _.accountid &&
@@ -3888,7 +3797,6 @@
           return _ ? _.get(_) : null;
         }
         async function _(_) {
-          var _, _, _, _;
           if (!_ || _.length == 0) return [];
           const _ =
             (0, _._)() == "community"
@@ -3905,8 +3813,8 @@
             if (
               !_ ||
               _.status != 200 ||
-              ((_ = _.data) == null ? void 0 : _.success) != _._ ||
-              !((_ = _.data) != null && _.userinfo)
+              _.data?.success != _._ ||
+              !_.data?.userinfo
             )
               throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
             return [_.data.userinfo];
@@ -3921,8 +3829,8 @@
             if (
               !_ ||
               _.status != 200 ||
-              ((_ = _.data) == null ? void 0 : _.success) != _._ ||
-              !((_ = _.data) != null && _.userinfos)
+              _.data?.success != _._ ||
+              !_.data?.userinfos
             )
               throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
             const _ = new Map();
@@ -3939,8 +3847,11 @@
           }),
           _ = "avatarandpersonas";
         function _(_) {
+          return [_, _];
+        }
+        function _(_) {
           const { data: _, isLoading: _ } = (0, _._)({
-            queryKey: [_, _],
+            queryKey: _(_),
             queryFn: () => _.load(_),
           });
           return [_, _];
@@ -3960,15 +3871,14 @@
                   _
                 );
               },
-              enabled: (_ == null ? void 0 : _.length) > 0,
+              enabled: _?.length > 0,
             }),
             _ = useMemo(() => {
               const _ = new Array();
               return (
-                _ == null ||
-                  _.forEach((_) => {
-                    _ instanceof Error || _.push(_);
-                  }),
+                _?.forEach((_) => {
+                  _ instanceof Error || _.push(_);
+                }),
                 _
               );
             }, [_]);
@@ -4063,19 +3973,8 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
+          _ = __webpack_require__._(_);
+        class _ {
           static ParseCSVFile(_, _) {
             return new Promise((_, _) => {
               const _ = {
@@ -4094,11 +3993,7 @@
           static ReadFile(_) {
             return new Promise((_, _) => {
               const _ = new FileReader();
-              (_.onload = () => {
-                var _;
-                return _((_ = _.result) != null ? _ : "");
-              }),
-                _.readAsText(_);
+              (_.onload = () => _(_.result ?? "")), _.readAsText(_);
             });
           }
           static WriteFile(_, _) {
@@ -4135,6 +4030,7 @@
               _,
             );
           }
+          static m_DummyValueForQuestionHack = 0;
           static WriteXMLToFile(_, _) {
             const _ = () =>
               this.m_DummyValueForQuestionHack ? "never returned" : "?";
@@ -4153,9 +4049,7 @@
                 _,
               );
           }
-        };
-        _(_, "m_DummyValueForQuestionHack", 0);
-        let _ = _;
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -4212,9 +4106,7 @@
             _ = _ ? _ : void 0,
             _ = _.useCallback(
               (_) => {
-                var _;
-                (_ = _.dataTransfer.files) != null &&
-                  _.length &&
+                _.dataTransfer.files?.length &&
                   (_(_.dataTransfer.files, _),
                   _.preventDefault(),
                   _.stopPropagation()),
@@ -4477,18 +4369,6 @@
           MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
           MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
           AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
-          BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
-          "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
-          "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
-          "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
-          "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
-          "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
-          "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
-          "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
-          "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
-          focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
-          hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
         };
       },
       chunkid: (module) => {

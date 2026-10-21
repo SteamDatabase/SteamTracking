@@ -4,353 +4,356 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [58987, 6953],
     {
-      58679: (y, R, e) => {
+      58679: (D, h, e) => {
         "use strict";
-        e.d(R, { ff: () => u, iM: () => N, iV: () => r, pC: () => m });
+        e.d(h, { ff: () => m, iM: () => B, iV: () => F, pC: () => _ });
         var s = e(7850),
-          I = e(90626),
-          o = e(20803),
-          O = e.n(o),
+          y = e(90626),
+          u = e(20803),
+          v = e.n(u),
           f = e(36118),
-          M = e(18210),
-          T = e(2289),
-          E = e(36707),
-          C = e(46943),
-          g = e(76559),
-          L = e(4874),
+          R = e(18210),
+          L = e(2289),
+          P = e(36707),
+          O = e(46943),
+          M = e(76559),
+          C = e(4874),
           U = e(35098),
-          p = e(42993),
-          D = e(58612),
-          x = e(93125),
-          A = e(9852),
-          F = e(53107),
+          j = e(42993),
+          g = e(58612),
+          p = e(93125),
+          x = e(9852),
+          S = e(53107),
           K = e(98609),
-          _ = e(99412);
-        function B(n) {
+          E = e(99412);
+        function A(r) {
           return (0, s.jsx)(f.d1w, {});
         }
-        function W(n) {
+        function W(r) {
           return (0, s.jsx)(f.Bir, {});
         }
-        function N(n) {
+        function B(r) {
           return (0, s.jsx)("div", {
-            className: (0, E.A)(o.RoleIcon, n.className),
-            children: n.role == T.PQ.sf ? (0, s.jsx)(W, {}) : (0, s.jsx)(B, {}),
+            className: (0, P.A)(u.RoleIcon, r.className),
+            children: r.role == L.PQ.sf ? (0, s.jsx)(W, {}) : (0, s.jsx)(A, {}),
           });
         }
-        function r(n) {
-          const { steamid: t } = n,
+        function F(r) {
+          const { steamid: t } = r,
             a = (0, U.js)(t),
-            i = (0, D.M8)(),
-            l = (0, A.T)(),
-            c = i.data?.get(new g.b(t).GetAccountID()),
-            d = l.data?.preferences().parenthesize_nicknames();
+            i = (0, g.M8)(),
+            c = (0, x.T)(),
+            l = i.data?.get(new M.b(t).GetAccountID()),
+            d = c.data?.preferences().parenthesize_nicknames();
           return (0, s.jsxs)(s.Fragment, {
             children: [
               a.data?.m_strPlayerName || "\xA0",
               " ",
               d &&
-                c &&
+                l &&
                 (0, s.jsxs)("span", {
-                  className: o.playerNickname,
-                  children: ["(", c, ")"],
+                  className: u.playerNickname,
+                  children: ["(", l, ")"],
                 }),
             ],
           });
         }
-        function h(n) {
-          const { role: t, persona: a, isSelf: i } = n;
-          let l = n.size || "Large";
-          const c = (0, D.M8)(),
-            d = (0, A.T)(),
-            j = c.data?.get(a.GetAccountID()),
-            S = d.data?.preferences().parenthesize_nicknames();
+        function n(r) {
+          const { role: t, persona: a, isSelf: i } = r;
+          let c = r.size || "Large";
+          const l = (0, g.M8)(),
+            d = (0, x.T)(),
+            T = l.data?.get(a.GetAccountID()),
+            N = d.data?.preferences().parenthesize_nicknames();
           return (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsxs)("div", {
-                className: o.ProfileLink,
+                className: u.ProfileLink,
                 children: [
-                  (0, s.jsx)(C.i8, {
-                    className: o.Avatar,
+                  (0, s.jsx)(O.i8, {
+                    className: u.Avatar,
                     persona: a,
-                    size: l,
+                    size: c,
                     statusPosition: "right",
                   }),
-                  (0, s.jsx)(x.D, {
-                    className: o.PlayerName,
+                  (0, s.jsx)(p.D, {
+                    className: u.PlayerName,
                     bIsSelf: i,
                     bHideStatus: !1,
                     bHidePersona: !1,
-                    bParenthesizeNicknames: S,
+                    bParenthesizeNicknames: N,
                     bCompactView: !1,
                     persona: a,
-                    strNickname: j,
-                    eFriendRelationship: _._UC,
+                    strNickname: T,
+                    eFriendRelationship: E._UC,
                     bEllipsisName: !0,
                   }),
                 ],
               }),
               (0, s.jsxs)("div", {
-                className: o.RoleAndIcon,
+                className: u.RoleAndIcon,
                 children: [
-                  (0, s.jsx)(N, { className: o.ProfileRoleIcon, role: t }),
+                  (0, s.jsx)(B, { className: u.ProfileRoleIcon, role: t }),
                   (0, s.jsx)("div", {
-                    className: o.RoleName,
-                    children: (0, M.we)(`#FamilyManagement_Role_${t}`),
+                    className: u.RoleName,
+                    children: (0, R.we)(`#FamilyManagement_Role_${t}`),
                   }),
                 ],
               }),
             ],
           });
         }
-        function m(n) {
-          const t = (0, I.useContext)(L.IN);
+        function _(r) {
+          const t = (0, y.useContext)(C.IN);
           return t.errorMessage
             ? (0, s.jsx)("div", {
-                className: o.FamilyErrorDisplay,
+                className: u.FamilyErrorDisplay,
                 children: t.errorMessage,
               })
             : null;
         }
-        function u(n) {
-          const { persona: t, role: a, invitePending: i } = n,
-            c = (0, p.LH)() == t.GetSteamIDAsString();
+        function m(r) {
+          const { persona: t, role: a, invitePending: i } = r,
+            l = (0, j.LH)() == t.GetSteamIDAsString();
           return (0, s.jsxs)("div", {
-            className: o.FamilyMemberStatus,
+            className: u.FamilyMemberStatus,
             children: [
-              (0, s.jsx)(h, { role: a, persona: t, isSelf: c }),
+              (0, s.jsx)(n, { role: a, persona: t, isSelf: l }),
               i &&
                 (0, s.jsx)("div", {
-                  className: o.InvitePending,
-                  children: (0, M.we)("#FamilyManagement_InvitePending"),
+                  className: u.InvitePending,
+                  children: (0, R.we)("#FamilyManagement_InvitePending"),
                 }),
-              c &&
+              l &&
                 (0, s.jsx)("span", {
-                  className: o.MeBadge,
-                  children: (0, M.we)("#FamilyManagement_Me"),
+                  className: u.MeBadge,
+                  children: (0, R.we)("#FamilyManagement_Me"),
                 }),
             ],
           });
         }
-        function P(n) {
-          const { steamID: t, role: a } = n,
+        function o(r) {
+          const { steamID: t, role: a } = r,
             i = usePlayerSummary(t);
           useQuerySetMessageOnErrorEffect(
             i,
             "#FamilyManagement_ErrorLoadFamilyGeneric",
           );
-          const l = useCallback(
-            (c) => {
+          const c = useCallback(
+            (l) => {
               let d = `${Config.COMMUNITY_BASE_URL}profiles/${t}`;
-              OpenLinkInNewWindow(c, d);
+              OpenLinkInNewWindow(l, d);
             },
             [t],
           );
           return i.isSuccess
             ? jsx(Panel, {
                 className: classnames(styles.FamilyMemberRow, styles.InfoRow),
-                onActivate: l,
-                children: jsx(u, { persona: i.data, role: a }),
+                onActivate: c,
+                children: jsx(m, { persona: i.data, role: a }),
               })
             : null;
         }
       },
-      54407: (y, R, e) => {
+      54407: (D, h, e) => {
         "use strict";
-        e.d(R, { B3: () => W, KM: () => A, KT: () => B });
+        e.d(h, { B3: () => B, KM: () => x, KT: () => W });
         var s = e(41735),
-          I = e.n(s),
-          o = e(58632),
-          O = e.n(o),
+          y = e.n(s),
+          u = e(58632),
+          v = e.n(u),
           f = e(90626),
-          M = e(80902),
-          T = e(75233),
-          E = e(72604),
-          C = e(76559),
-          g = e(34592),
-          L = e(3166),
+          R = e(80902),
+          L = e(75233),
+          P = e(72604),
+          O = e(76559),
+          M = e(34592),
+          C = e(3166),
           U = e(35038),
-          p = e(27386),
-          D = e(68312);
-        const x = "nicknames";
-        function A(r) {
-          const h = (0, D.KV)(),
-            { data: m, isLoading: u } = (0, M.I)({
-              queryKey: [x],
+          j = e(27386),
+          g = e(68312);
+        const p = "nicknames";
+        function x(n) {
+          const _ = (0, g.KV)(),
+            { data: m, isLoading: o } = (0, R.I)({
+              queryKey: [p],
               queryFn: async () => {
-                const P = new Map();
-                if (L.iA.logged_in) {
-                  const n = U.w.Init(p.w_T),
-                    a = (await p.xtC.GetNicknameList(h, n)).Body().toObject();
-                  a?.nicknames &&
-                    a.nicknames.length > 0 &&
-                    a.nicknames.forEach((i) => {
-                      i.accountid &&
-                        i.nickname &&
-                        P.set(i.accountid, i.nickname);
+                const r = new Map();
+                if (C.iA.logged_in) {
+                  const t = U.w.Init(j.w_T),
+                    i = (await j.xtC.GetNicknameList(_, t)).Body().toObject();
+                  i?.nicknames &&
+                    i.nicknames.length > 0 &&
+                    i.nicknames.forEach((c) => {
+                      c.accountid &&
+                        c.nickname &&
+                        r.set(c.accountid, c.nickname);
                     });
                 }
-                return P;
+                return r;
               },
             });
-          return m ? m.get(r) : null;
+          return m ? m.get(n) : null;
         }
-        async function F(r) {
-          if (!r || r.length == 0) return [];
-          const h =
-            (0, L.yK)() == "community"
-              ? L.TS.COMMUNITY_BASE_URL
-              : L.TS.STORE_BASE_URL;
-          if (r.length == 1) {
-            const m = { accountid: r[0], origin: self.origin },
-              u = await I().get(`${h}actions/ajaxgetavatarpersona`, {
+        async function S(n) {
+          if (!n || n.length == 0) return [];
+          const _ =
+            (0, C.yK)() == "community"
+              ? C.TS.COMMUNITY_BASE_URL
+              : C.TS.STORE_BASE_URL;
+          if (n.length == 1) {
+            const m = { accountid: n[0], origin: self.origin },
+              o = await y().get(`${_}actions/ajaxgetavatarpersona`, {
                 params: m,
               });
             if (
-              !u ||
-              u.status != 200 ||
-              u.data?.success != E.R ||
-              !u.data?.userinfo
+              !o ||
+              o.status != 200 ||
+              o.data?.success != P.R ||
+              !o.data?.userinfo
             )
-              throw `Load single avatar/persona failed ${((0, g.H))(u).strErrorMsg}`;
-            return [u.data.userinfo];
+              throw `Load single avatar/persona failed ${((0, M.H))(o).strErrorMsg}`;
+            return [o.data.userinfo];
           } else {
-            const m = { accountids: r.join(","), origin: self.origin },
-              u = await I().get(`${h}actions/ajaxgetmultiavatarpersona`, {
+            const m = { accountids: n.join(","), origin: self.origin },
+              o = await y().get(`${_}actions/ajaxgetmultiavatarpersona`, {
                 params: m,
               });
             if (
-              !u ||
-              u.status != 200 ||
-              u.data?.success != E.R ||
-              !u.data?.userinfos
+              !o ||
+              o.status != 200 ||
+              o.data?.success != P.R ||
+              !o.data?.userinfos
             )
-              throw `Load single avatar/persona failed ${((0, g.H))(u).strErrorMsg}`;
-            const P = new Map();
+              throw `Load single avatar/persona failed ${((0, M.H))(o).strErrorMsg}`;
+            const r = new Map();
             return (
-              u.data.userinfos.forEach((n) =>
-                P.set(new C.b(n.steamid).GetAccountID(), n),
+              o.data.userinfos.forEach((t) =>
+                r.set(new O.b(t.steamid).GetAccountID(), t),
               ),
-              r.map((n) => P.get(n))
+              n.map((t) => r.get(t))
             );
           }
         }
-        const K = new (O())((r) => F(r), { cache: !1 }),
-          _ = "avatarandpersonas";
-        function B(r) {
-          const { data: h, isLoading: m } = (0, M.I)({
-            queryKey: [_, r],
-            queryFn: () => K.load(r),
-          });
-          return [h, m];
+        const K = new (v())((n) => S(n), { cache: !1 }),
+          E = "avatarandpersonas";
+        function A(n) {
+          return [E, n];
         }
-        function W(r) {
-          const h = (0, T.jE)(),
-            { data: m, isLoading: u } = (0, M.I)({
-              queryKey: [_, r],
+        function W(n) {
+          const { data: _, isLoading: m } = (0, R.I)({
+            queryKey: A(n),
+            queryFn: () => K.load(n),
+          });
+          return [_, m];
+        }
+        function B(n) {
+          const _ = (0, L.jE)(),
+            { data: m, isLoading: o } = (0, R.I)({
+              queryKey: [E, n],
               queryFn: async () => {
-                const n = await K.loadMany(r);
+                const t = await K.loadMany(n);
                 return (
-                  n.forEach((t) => {
-                    if (t instanceof Error) return;
-                    const a = [_, new C.b(t.steamid).GetAccountID()];
-                    h.setQueryData(a, t);
+                  t.forEach((a) => {
+                    if (a instanceof Error) return;
+                    const i = [E, new O.b(a.steamid).GetAccountID()];
+                    _.setQueryData(i, a);
                   }),
-                  n
+                  t
                 );
               },
-              enabled: r?.length > 0,
+              enabled: n?.length > 0,
             }),
-            P = (0, f.useMemo)(() => {
-              const n = new Array();
+            r = (0, f.useMemo)(() => {
+              const t = new Array();
               return (
-                m?.forEach((t) => {
-                  t instanceof Error || n.push(t);
+                m?.forEach((a) => {
+                  a instanceof Error || t.push(a);
                 }),
-                n
+                t
               );
             }, [m]);
-          return u ? null : P;
+          return o ? null : r;
         }
-        function N(r) {
-          return ReactQueryClient.getQueryData([_, r]);
+        function F(n) {
+          return ReactQueryClient.getQueryData([E, n]);
         }
       },
-      9852: (y, R, e) => {
+      9852: (D, h, e) => {
         "use strict";
-        e.d(R, { T: () => T });
+        e.d(h, { T: () => L });
         var s = e(72604),
-          I = e(35038),
-          o = e(27386),
-          O = e(80902),
+          y = e(35038),
+          u = e(27386),
+          v = e(80902),
           f = e(68312);
-        function M(E) {
+        function R(P) {
           return {
             queryKey: ["communitypreferences"],
             queryFn: async () => {
-              const C = I.w.Init(o.tzK),
-                g = await o.xtC.GetCommunityPreferences(E, C);
-              if (g.GetEResult() != s.R)
+              const O = y.w.Init(u.tzK),
+                M = await u.xtC.GetCommunityPreferences(P, O);
+              if (M.GetEResult() != s.R)
                 throw new Error(
-                  `Error from GetCommunityPreferences: ${g.GetEResult()} ${g.GetErrorMessage()}`,
+                  `Error from GetCommunityPreferences: ${M.GetEResult()} ${M.GetErrorMessage()}`,
                 );
-              return g.Body();
+              return M.Body();
             },
             staleTime: 300 * 1e3,
           };
         }
-        function T() {
-          const E = (0, f.KV)();
-          return (0, O.I)(M(E));
+        function L() {
+          const P = (0, f.KV)();
+          return (0, v.I)(R(P));
         }
       },
-      46296: (y, R, e) => {
+      46296: (D, h, e) => {
         "use strict";
-        e.r(R), e.d(R, { default: () => o });
+        e.r(h), e.d(h, { default: () => u });
         var s = e(7850),
-          I = e(6953);
-        function o(O) {
-          const { familyGroupID: f } = O;
-          return (0, s.jsx)(I.PurchaseRequestSimpleInfoPage, {
+          y = e(6953);
+        function u(v) {
+          const { familyGroupID: f } = v;
+          return (0, s.jsx)(y.PurchaseRequestSimpleInfoPage, {
             familyGroupID: f,
             headerLocToken: "#PurchaseRequested_Header",
             infoLocToken: "#PurchaseRequested_Info",
           });
         }
       },
-      6953: (y, R, e) => {
+      6953: (D, h, e) => {
         "use strict";
-        e.r(R),
-          e.d(R, { PurchaseRequestSimpleInfoPage: () => P, default: () => W });
+        e.r(h),
+          e.d(h, { PurchaseRequestSimpleInfoPage: () => o, default: () => W });
         var s = e(7850),
-          I = e(9843),
-          o = e(83665),
-          O = e(23366),
+          y = e(9843),
+          u = e(83665),
+          v = e(23366),
           f = e(90626),
-          M = e(75233),
-          T = e(42993),
-          E = e(4874),
-          C = e(58679),
-          g = e(76559),
-          L = e(54407),
+          R = e(75233),
+          L = e(42993),
+          P = e(4874),
+          O = e(58679),
+          M = e(76559),
+          C = e(54407),
           U = e(16412),
-          p = e(85599),
-          D = e(18210),
-          x = e(98609),
-          A = e(66372);
-        function F(t) {
+          j = e(85599),
+          g = e(18210),
+          p = e(98609),
+          x = e(66372);
+        function S(t) {
           const { familyGroupID: a } = t,
-            i = (0, E.Hs)(a),
-            c = (0, E.BO)(a).data?.requests()?.length;
-          if (!c) return null;
-          const d = (0, D.Yp)("#PurchaseRequestBanner_PendingRequest", c);
+            i = (0, P.Hs)(a),
+            l = (0, P.BO)(a).data?.requests()?.length;
+          if (!l) return null;
+          const d = (0, g.Yp)("#PurchaseRequestBanner_PendingRequest", l);
           return (0, s.jsx)("div", {
-            className: A.PurchaseRequestBanner,
-            children: (0, D.PP)(
+            className: x.PurchaseRequestBanner,
+            children: (0, g.PP)(
               "#PurchaseRequestBanner_YouHavePendingRequestsForFamilyName",
               (0, s.jsx)("a", {
                 href:
-                  x.TS.STORE_BASE_URL + "account/familymanagement?tab=requests",
+                  p.TS.STORE_BASE_URL + "account/familymanagement?tab=requests",
                 children: d,
               }),
               (0, s.jsx)("span", { children: i.data?.name() }),
@@ -358,132 +361,132 @@
           });
         }
         var K = e(91721),
-          _ = e.n(K),
-          B = e(49311);
+          E = e.n(K),
+          A = e(49311);
         function W(t) {
           const { familyGroupID: a, requestID: i } = t,
-            [l, c] = f.useState(),
-            d = (0, E.Qn)(a, i),
-            j = (0, B.useInitCartLocalization)(),
-            S = (0, T.LH)(),
-            G = (0, M.jE)(),
-            v = d.data;
+            [c, l] = f.useState(),
+            d = (0, P.Qn)(a, i),
+            T = (0, A.useInitCartLocalization)(),
+            N = (0, L.LH)(),
+            G = (0, R.jE)(),
+            I = d.data;
           return (
             (0, f.useEffect)(() => {
-              if (v) {
+              if (I) {
                 const H = {
                     type: "request",
-                    gid: v.gidshoppingcart,
-                    requestID: v.request_id,
+                    gid: I.gidshoppingcart,
+                    requestID: I.request_id,
                   },
-                  q = (0, O.Vh)();
+                  q = (0, v.Vh)();
                 q?.requestcartgid === H.gid &&
                   q.requestcart &&
-                  (0, o.LN)(G, H, (0, I.qS)(q.requestcart)),
-                  c(H);
+                  (0, u.LN)(G, H, (0, y.qS)(q.requestcart)),
+                  l(H);
               }
-            }, [v, G]),
+            }, [I, G]),
             d.isError
-              ? (0, s.jsx)(N, { familyGroupID: a })
-              : d.isLoading || !j || (v && !l)
-                ? (0, s.jsx)(r, {})
-                : v
-                  ? v.is_completed
-                    ? (0, s.jsx)(m, { familyGroupID: a })
-                    : v.requester_steamid === S
-                      ? (0, s.jsx)(u, { familyGroupID: a })
-                      : (0, s.jsx)(n, { request: v, cartID: l })
-                  : (0, s.jsx)(h, { familyGroupID: a })
+              ? (0, s.jsx)(B, { familyGroupID: a })
+              : d.isLoading || !T || (I && !c)
+                ? (0, s.jsx)(F, {})
+                : I
+                  ? I.is_completed
+                    ? (0, s.jsx)(_, { familyGroupID: a })
+                    : I.requester_steamid === N
+                      ? (0, s.jsx)(m, { familyGroupID: a })
+                      : (0, s.jsx)(r, { request: I, cartID: c })
+                  : (0, s.jsx)(n, { familyGroupID: a })
           );
         }
-        function N(t) {
+        function B(t) {
           const { familyGroupID: a } = t;
-          return (0, s.jsx)(P, {
+          return (0, s.jsx)(o, {
             familyGroupID: a,
             headerLocToken: "#PurchaseRequest_RequestErrorHeader",
           });
         }
-        function r() {
+        function F() {
           return (0, s.jsx)("div", {
-            className: _().PurchaseRequestInfoPage,
-            children: (0, s.jsx)(p.t, { size: "medium", msDelayAppear: 300 }),
+            className: E().PurchaseRequestInfoPage,
+            children: (0, s.jsx)(j.t, { size: "medium", msDelayAppear: 300 }),
           });
         }
-        function h(t) {
+        function n(t) {
           const { familyGroupID: a } = t;
-          return (0, s.jsx)(P, {
+          return (0, s.jsx)(o, {
             familyGroupID: a,
             headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
           });
         }
-        function m(t) {
+        function _(t) {
           const { familyGroupID: a } = t;
-          return (0, s.jsx)(P, {
+          return (0, s.jsx)(o, {
             familyGroupID: a,
             headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
           });
         }
-        function u(t) {
+        function m(t) {
           const { familyGroupID: a } = t;
-          return (0, s.jsx)(P, {
+          return (0, s.jsx)(o, {
             familyGroupID: a,
             headerLocToken: "#PurchaseRequest_RequestPendingHeader",
             infoLocToken: "#PurchaseRequest_RequestPendingInfo",
           });
         }
-        function P(t) {
-          const { familyGroupID: a, headerLocToken: i, infoLocToken: l } = t,
-            [c, d] = f.useState(null),
-            j = () => {
-              window.location.assign(x.TS.STORE_BASE_URL);
+        function o(t) {
+          const { familyGroupID: a, headerLocToken: i, infoLocToken: c } = t,
+            [l, d] = f.useState(null),
+            T = () => {
+              window.location.assign(p.TS.STORE_BASE_URL);
             };
           return (0, s.jsx)("div", {
-            className: _().PurchaseRequestInfoPage,
-            children: (0, s.jsxs)(E.IN.Provider, {
-              value: { errorMessage: c, setErrorMessage: d },
+            className: E().PurchaseRequestInfoPage,
+            children: (0, s.jsxs)(P.IN.Provider, {
+              value: { errorMessage: l, setErrorMessage: d },
               children: [
                 (0, s.jsx)("div", {
-                  className: _().Header,
-                  children: (0, D.we)(i),
+                  className: E().Header,
+                  children: (0, g.we)(i),
                 }),
-                (0, s.jsx)(C.pC, {}),
-                (0, s.jsx)(F, { familyGroupID: a }),
-                !!l &&
+                (0, s.jsx)(O.pC, {}),
+                (0, s.jsx)(S, { familyGroupID: a }),
+                !!c &&
                   (0, s.jsx)("div", {
-                    className: _().Info,
-                    children: (0, D.we)(l),
+                    className: E().Info,
+                    children: (0, g.we)(c),
                   }),
                 (0, s.jsx)("div", {
-                  className: _().ButtonContainer,
+                  className: E().ButtonContainer,
                   children: (0, s.jsx)(U.jn, {
-                    className: _().PrimaryButton,
-                    onClick: j,
-                    children: (0, D.we)("#PurchaseRequested_ReturnToStore"),
+                    className: E().PrimaryButton,
+                    onClick: T,
+                    children: (0, g.we)("#PurchaseRequested_ReturnToStore"),
                   }),
                 }),
               ],
             }),
           });
         }
-        function n(t) {
+        function r(t) {
           const { request: a, cartID: i } = t,
-            l = new g.b(a.requester_steamid).GetAccountID(),
-            [c] = (0, L.KT)(l),
-            [d, j] = f.useState({ accountid_giftee: l }),
-            S = f.useRef(() => {}).current,
-            G = (0, D.we)("#Cart_PurchaseRequestTitle", c?.persona_name);
-          return (0, s.jsx)(B.BaseCartPage, {
+            c = new M.b(a.requester_steamid).GetAccountID(),
+            [l] = (0, C.KT)(c),
+            [d, T] = f.useState({ accountid_giftee: c }),
+            N = f.useRef(() => {}).current,
+            G = (0, g.we)("#Cart_PurchaseRequestTitle", l?.persona_name);
+          return (0, s.jsx)(A.BaseCartPage, {
             cartID: i,
             step: "gifts",
-            onStepChange: S,
+            onStepChange: N,
             title: G,
             cartWideGiftInfo: d,
-            onCartWideGiftInfoChange: j,
+            onCartWideGiftInfoChange: T,
           });
         }
       },
-      20803: (y) => {
-        y.exports = {
+      20803: (D) => {
+        D.exports = {
           narrowWidth: "500px",
           RoleIcon: "_1uvKF_UbD6VhnVdaRkXhbu",
           ProfileLink: "_2oSTSohQ1CZIgVn7E6_0Ft",
@@ -498,15 +501,15 @@
           InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         };
       },
-      66372: (y) => {
-        y.exports = {
+      66372: (D) => {
+        D.exports = {
           strMaxCartPartResponsiveWidth: "840px",
           CartCard: "_1xIt8XUBQEbK-xSRQhbtW0",
           PurchaseRequestBanner: "_-0ewDwG8C2PYKGJDqSP40",
         };
       },
-      91721: (y) => {
-        y.exports = {
+      91721: (D) => {
+        D.exports = {
           PurchaseRequestInfoPage: "_2vUK2Ij_I2rOkqw9wZ2Diy",
           Header: "kw7cBqn_8NJ4l9R4nkZXE",
           ButtonContainer: "_2TQ_WuHwPbieu3aZfxn2TN",

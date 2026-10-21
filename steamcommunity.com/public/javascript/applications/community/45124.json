@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Відчинити (%1$s)",
     "moderation_actions_sustain": "Підтримати рішення модератора",
     "moderation_actions_sustain_multiple": "Підтримати рішення модератора (%1$s)",
+    "moderation_actions_sustain_short": "Підтримати",
     "moderation_actions_suspicious": "Позначити як підозрілий",
     "moderation_actions_suspicious_multiple": "Позначити як підозрілий (%1$s)",
     "moderation_actions_unknown": "Невідомо",

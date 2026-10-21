@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
-  <circle fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" cx="128" cy="75.835" r="17.679"/>
-  <path fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M98.821,116.865c0,0,0.159,11,2.71,16.407 c2.451,5.198,8.789,2.938,8.789,10.33c0,13.388,0,42.604,0,42.604s-1.065,10.435,6,10.652c7.065,0.216,29.358,0,29.358,0 s0-50.383,0-68.859c0-5.181-6.328-11.135-11.848-11.135C123.181,116.865,98.821,116.865,98.821,116.865z"/>
-  <circle fill="none" stroke="#000000" stroke-width="10" stroke-miterlimit="10" cx="128" cy="128" r="122.334"/>
-</svg>

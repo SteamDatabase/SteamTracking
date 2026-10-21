@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Elemen yang Interaktif",
     "GameRating_OnlineMusicNotice": "Musik Online tidak Dirating oleh ESRB",
     "GameRating_OnlineInteractionsNotice": "Interaksi Online tidak Dirating oleh ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Obrolan di dalam game yang difilter"
+    "GameRating_ContentCategoryDescriptor_64": "Obrolan di dalam game yang difilter",
+    "GameRating_ContentCategories_Title": "Konten",
+    "GameRating_Ratings_Title": "Rating"
 }

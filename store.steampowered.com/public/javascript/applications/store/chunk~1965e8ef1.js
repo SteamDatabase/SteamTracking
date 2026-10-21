@@ -4,38 +4,24 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [98028],
     {
-      25279: (H, z, l) => {
+      87498: (H, z, l) => {
         "use strict";
         l.d(z, {
-          Ek: () => B,
-          Fj: () => R,
-          Ho: () => D,
-          Kf: () => M,
-          N_: () => X,
+          Fj: () => v,
+          Ek: () => U,
+          yu: () => K,
+          s4: () => j,
           XY: () => Y,
+          N_: () => X,
+          vz: () => V,
+          Kf: () => M,
           dM: () => m,
           qj: () => r,
-          s4: () => j,
-          vz: () => V,
-          yu: () => K,
+          Ho: () => D,
         });
         var n = l(72849);
-        const h = 622,
-          C = 1920,
-          v = 450,
-          U = 800,
-          L = 460,
-          G = 2108,
-          w = 300,
-          P = 800,
-          g = 300,
-          u = 644,
-          A = 337,
-          _ = 155,
-          d = 433,
-          y = 199,
-          I = ["app_header_capsule", "app_main_capsule"],
-          s = [
+        const h = ["app_header_capsule", "app_main_capsule"],
+          C = [
             "sale_header",
             "sale_logo",
             "capsule",
@@ -43,8 +29,8 @@
             "product_mobile_banner",
             "localized_title_image",
           ],
-          f = ["takeunder_art", "takeunder_mobile_art"],
-          c = [
+          R = ["takeunder_art", "takeunder_mobile_art"],
+          B = [
             "takeover_art",
             "takeover_mobile_art",
             "takeover_webm_art",
@@ -52,12 +38,27 @@
             "takeover_webm_mobile_art",
             "takeover_mp4_mobile_art",
           ],
-          p = ["marketingmessage_art", "marketingmessage_art_2"],
-          t = [
+          L = ["marketingmessage_art", "marketingmessage_art_2"],
+          G = [
             "marketingmessage_art_eventcapsule",
             "marketingmessage_art_2_eventcapsule",
           ],
-          e = ["spotlight_art_hero"],
+          w = ["spotlight_art_hero"],
+          P = [...h, ...C, ...R, ...B, ...L, ...G, ...w],
+          g = 622,
+          u = 1920,
+          T = 450,
+          d = 800,
+          _ = 460,
+          y = 2108,
+          I = 300,
+          s = 800,
+          f = 300,
+          c = 644,
+          p = 337,
+          t = 155,
+          e = 433,
+          o = 199,
           i = [
             "spotlight",
             "background",
@@ -96,7 +97,8 @@
             "sale_store_capsule_small",
             "sale_store_capsule_main",
             "sale_store_capsule_vertical",
-            ...[...I, ...s, ...f, ...c, ...p, ...t, ...e],
+            "sale_cross_promo_background",
+            ...P,
           ];
         function r(O) {
           return Array.isArray(O) ? O[0] : O;
@@ -113,20 +115,20 @@
           a = [n.bg.iS, n.bg.dU],
           D = [n.bg.pJ, n.bg.nn],
           E = [n.bg.pi, n.bg.k7],
-          T = [n.bg.iS, n.bg.dU, n.bg.CK, n.bg.wD, n.bg.pJ, n.bg.nn],
-          R = {
-            capsule: { width: U, height: v, rgAcceptableTypes: a },
+          A = [n.bg.iS, n.bg.dU, n.bg.CK, n.bg.wD, n.bg.pJ, n.bg.nn],
+          v = {
+            capsule: { width: d, height: T, rgAcceptableTypes: a },
             marketingmessage_art_2_eventcapsule: {
-              width: U,
-              height: v,
+              width: d,
+              height: T,
               rgAcceptableTypes: a,
             },
             marketingmessage_art_eventcapsule: {
-              width: U,
-              height: v,
+              width: d,
+              height: T,
               rgAcceptableTypes: a,
             },
-            spotlight: { width: G, height: L, rgAcceptableTypes: a },
+            spotlight: { width: y, height: _, rgAcceptableTypes: a },
             localized_store_app_spotlight: {
               width: 1200,
               height: 260,
@@ -138,27 +140,27 @@
               rgAcceptableTypes: a,
             },
             localized_title_image: {
-              width: C,
-              height: h,
+              width: u,
+              height: g,
               rgAcceptableTypes: a,
             },
-            background: { width: C, height: h, rgAcceptableTypes: a },
+            background: { width: u, height: g, rgAcceptableTypes: a },
             hero: {
               width: 0,
               height: 0,
               bDisableEnforceDimensions: !0,
               rgAcceptableTypes: a,
             },
-            email_full: { width: P, height: w, rgAcceptableTypes: a },
-            email_centered: { width: u, height: g, rgAcceptableTypes: a },
+            email_full: { width: s, height: I, rgAcceptableTypes: a },
+            email_centered: { width: c, height: f, rgAcceptableTypes: a },
             broadcast_left: {
-              width: [y, _],
-              height: [d, A],
+              width: [o, t],
+              height: [e, p],
               rgAcceptableTypes: a,
             },
             broadcast_right: {
-              width: [y, _],
-              height: [d, A],
+              width: [o, t],
+              height: [e, p],
               rgAcceptableTypes: a,
             },
             sale_header: {
@@ -304,7 +306,7 @@
               width: 0,
               height: 0,
               bDisableEnforceDimensions: !0,
-              rgAcceptableTypes: T,
+              rgAcceptableTypes: A,
             },
             user_poll_background: {
               width: 0,
@@ -330,6 +332,12 @@
             sale_store_capsule_vertical: {
               width: 748,
               height: 896,
+              rgAcceptableTypes: a,
+            },
+            sale_cross_promo_background: {
+              width: 940,
+              height: 400,
+              bDisableEnforceDimensions: !0,
               rgAcceptableTypes: a,
             },
             spotlight_art: { width: 306, height: 260, rgAcceptableTypes: b },
@@ -396,7 +404,7 @@
               rgAcceptableTypes: a,
             },
           };
-        function B(O, k, F, W) {
+        function U(O, k, F, W) {
           let x = null;
           if (Array.isArray(F)) {
             if (
@@ -417,15 +425,15 @@
           return !0;
         }
         function K(O, k, F, W) {
-          const x = R[F];
+          const x = v[F];
           return x
             ? x.bDisableEnforceDimensions
               ? !!W
-              : B(O, k, x.width, x.height)
+              : U(O, k, x.width, x.height)
             : !1;
         }
         function j(O, k, F) {
-          const W = R[F];
+          const W = v[F];
           if (!W) return !1;
           if (W.bDisableEnforceDimensions) return !0;
           if (Array.isArray(W.width)) {
@@ -439,7 +447,7 @@
           return !0;
         }
         function Y(O) {
-          const k = R[O];
+          const k = v[O];
           return (
             k.rgAcceptableTypes.includes(n.bg.k7) ||
             k.rgAcceptableTypes.includes(n.bg.pi)
@@ -449,7 +457,7 @@
           return k.filter((F) => X(O, F));
         }
         function X(O, k) {
-          return R[k].rgAcceptableTypes.includes(O);
+          return v[k].rgAcceptableTypes.includes(O);
         }
       },
       9472: (H, z, l) => {
@@ -458,16 +466,16 @@
         var n = l(14947),
           h = l(72849),
           C = l(6658),
-          v = Object.defineProperty,
-          U = Object.getOwnPropertyDescriptor,
-          L = (P, g, u, A) => {
+          R = Object.defineProperty,
+          B = Object.getOwnPropertyDescriptor,
+          L = (P, g, u, T) => {
             for (
-              var _ = A > 1 ? void 0 : A ? U(g, u) : g, d = P.length - 1, y;
-              d >= 0;
-              d--
+              var d = T > 1 ? void 0 : T ? B(g, u) : g, _ = P.length - 1, y;
+              _ >= 0;
+              _--
             )
-              (y = P[d]) && (_ = (A ? y(g, u, _) : y(_)) || _);
-            return A && _ && v(g, u, _), _;
+              (y = P[_]) && (d = (T ? y(g, u, d) : y(d)) || d);
+            return T && d && R(g, u, d), d;
           };
         function G(P) {
           return P == "waiting" || P == "uploading" || P == "processing";
@@ -485,19 +493,19 @@
           filename;
           uploadTime;
           fileType;
-          constructor(g, u, A, _, d) {
+          constructor(g, u, T, d, _) {
             (0, n.Gn)(this),
               (this.file = g),
               (this.filename = u),
               (this.fileType = (0, C.yh)(u) ?? h.bg.w3),
-              (this.language = A),
+              (this.language = T),
               (this.uploadTime = Date.now()),
               (this.status = "pending"),
-              (this.m_originalSize = d),
-              (this.height = d.height),
-              (this.width = d.width),
-              (this.m_originalDataUrl = _),
-              (this.dataUrl = _);
+              (this.m_originalSize = _),
+              (this.height = _.height),
+              (this.width = _.width),
+              (this.m_originalDataUrl = d),
+              (this.dataUrl = d);
           }
           ResetImage() {
             (this.height = this.m_originalSize.height),
@@ -519,17 +527,17 @@
         var n = l(99412),
           h = l(71742),
           C = l(64868),
-          v = l(41735),
-          U = l.n(v),
+          R = l(41735),
+          B = l.n(R),
           L = l(14947),
           G = l(90626),
-          w = l(25279),
+          w = l(87498),
           P = l(53424),
           g = l(34592),
           u = l(27066),
-          A = l(82734),
-          _ = l(18210),
-          d = l(3166),
+          T = l(82734),
+          d = l(18210),
+          _ = l(3166),
           y = l(51746),
           I = l(29630),
           s = l(64),
@@ -538,28 +546,28 @@
           p = Object.getOwnPropertyDescriptor,
           t = (b, a, D, E) => {
             for (
-              var T = E > 1 ? void 0 : E ? p(a, D) : a, R = b.length - 1, B;
-              R >= 0;
-              R--
+              var A = E > 1 ? void 0 : E ? p(a, D) : a, v = b.length - 1, U;
+              v >= 0;
+              v--
             )
-              (B = b[R]) && (T = (E ? B(a, D, T) : B(T)) || T);
-            return E && T && c(a, D, T), T;
+              (U = b[v]) && (A = (E ? U(a, D, A) : U(A)) || A);
+            return E && A && c(a, D, A), A;
           };
         function e(b, a, D) {
           const E = (0, w.Kf)(a.width, D),
-            T = (0, w.Kf)(a.height, D);
+            A = (0, w.Kf)(a.height, D);
           return {
-            sKey: `${b}_${E}x${T}`,
+            sKey: `${b}_${E}x${A}`,
             width: E,
-            height: T,
+            height: A,
             bEnforceDimensions: !a.bDisableEnforceDimensions,
             artworkType: b,
             bHiddenFromDropdown: b === "hero",
             bDeprecated: (D ?? 0) >= 1,
             fnGetLabelText() {
               return this.artworkType == "spotlight"
-                ? (0, _.we)("#EventEditor_ArtworkType_store_spotlight")
-                : (0, _.we)("#EventEditor_ArtworkType_" + this.artworkType);
+                ? (0, d.we)("#EventEditor_ArtworkType_store_spotlight")
+                : (0, d.we)("#EventEditor_ArtworkType_" + this.artworkType);
             },
           };
         }
@@ -576,7 +584,7 @@
                 Array.isArray(D.width) ? D.width.length : 1,
                 Array.isArray(D.height) ? D.height.length : 1,
               );
-              return Array.from({ length: E }, (T, R) => e(a, D, R));
+              return Array.from({ length: E }, (A, v) => e(a, D, v));
             }
           });
         }
@@ -588,13 +596,13 @@
           m_rgImageOptions;
           m_localizedImageGroupPrimaryImage;
           m_lastError = void 0;
-          constructor(a, D, E, T) {
+          constructor(a, D, E, A) {
             super(),
               (0, L.Gn)(this),
               (this.m_clanSteamID = a),
               (this.m_rgImageOptions = o(D)),
               (this.m_localizedImageGroupPrimaryImage = E),
-              (this.m_clanImagesV2 = T ?? !1);
+              (this.m_clanImagesV2 = A ?? !1);
           }
           GetClanSteamID() {
             return this.m_clanSteamID;
@@ -604,11 +612,11 @@
             return this.AddImageForLanguage(a, E);
           }
           async AddImageForLanguage(a, D) {
-            if (!(0, y.aL)(a.type) && !(d.iA.is_support && (0, y.Uz)(a.type)))
+            if (!(0, y.aL)(a.type) && !(_.iA.is_support && (0, y.Uz)(a.type)))
               return !1;
             const E = await (0, y.zB)(a, (0, y.Uz)(a.type));
             if (!E) return !1;
-            const T = new s.M7(
+            const A = new s.M7(
               a,
               a.name,
               D,
@@ -618,18 +626,18 @@
               E,
               this.m_localizedImageGroupPrimaryImage,
             );
-            return (this.m_filesToUpload = [...this.m_filesToUpload, T]), !0;
+            return (this.m_filesToUpload = [...this.m_filesToUpload, A]), !0;
           }
           async AddExistingClanImage(a, D = n.Bhc) {
             const E = I.zU.GetHashAndExt(a);
             if (!E) return !1;
-            const T = I.zU.GenerateEditableURLFromHashAndExt(
+            const A = I.zU.GenerateEditableURLFromHashAndExt(
                 this.m_clanSteamID,
                 E,
               ),
-              R = await U()({ url: T, method: "GET", responseType: "blob" }),
-              B = (0, A.pE)(R.data, a.file_name);
-            return await this.AddImage(B, D);
+              v = await B()({ url: A, method: "GET", responseType: "blob" }),
+              U = (0, T.pE)(v.data, a.file_name);
+            return await this.AddImage(U, D);
           }
           DeleteUploadImageByIndex(a) {
             this.m_filesToUpload.splice(a, 1),
@@ -683,15 +691,15 @@
           BGetUploadsAreInSerial() {
             return !1;
           }
-          async UploadSingleImage(a, D, E, T) {
-            const R = a.file,
-              B = a.GetCurrentImageOption(),
+          async UploadSingleImage(a, D, E, A) {
+            const v = a.file,
+              U = a.GetCurrentImageOption(),
               K = a.GetResizeDimension(),
               j = new FormData();
-            j.append("clanimage", R, D),
-              j.append("sessionid", (0, d.KC)()),
+            j.append("clanimage", v, D),
+              j.append("sessionid", (0, _.KC)()),
               this.m_clanImagesV2 && j.append("clan_images_v2", "1"),
-              B?.artworkType && j.append("arttype", B.artworkType),
+              U?.artworkType && j.append("arttype", U.artworkType),
               K &&
                 K.length > 0 &&
                 j.append(
@@ -711,30 +719,30 @@
               (j.append("video_width", "" + a.width),
               j.append("video_height", "" + a.height));
             let O =
-                d.TS.COMMUNITY_BASE_URL +
+                _.TS.COMMUNITY_BASE_URL +
                 "/gid/" +
                 this.m_clanSteamID.ConvertTo64BitString() +
                 Y,
               k = {
-                cancelToken: T,
+                cancelToken: A,
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
               },
               F,
               W = !0;
             try {
-              (F = await U().post(O, j, k)), this.m_filesCompleted.push(R);
+              (F = await B().post(O, j, k)), this.m_filesCompleted.push(v);
             } catch (x) {
               (W = !1),
                 (this.m_lastError = {
-                  file: R,
+                  file: v,
                   status: x.response ? x.response.status : 500,
                   message: (0, g.H)(x).strErrorMsg,
                 }),
                 (F = x.response);
             }
             return (
-              V || (await this.handleUploadRefresh(T)),
+              V || (await this.handleUploadRefresh(A)),
               { bSuccess: W, result: F.data }
             );
           }
@@ -757,38 +765,38 @@
             super(a, D, E, !0);
           }
         }
-        async function M(b, a, D, E, T) {
-          let R =
-              d.TS.COMMUNITY_BASE_URL +
+        async function M(b, a, D, E, A) {
+          let v =
+              _.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               a.ConvertTo64BitString() +
               "/resizeimage/",
-            B = new FormData();
+            U = new FormData();
           return (
-            B.append("imagehash", D),
-            B.append("extension", E),
-            B.append(
+            U.append("imagehash", D),
+            U.append("extension", E),
+            U.append(
               "resize",
-              T.map((j) => j.width + "x" + j.height).join(","),
+              A.map((j) => j.width + "x" + j.height).join(","),
             ),
-            B.append("sessionid", (0, d.KC)()),
-            (await U().post(R, B, { cancelToken: b })).data.count
+            U.append("sessionid", (0, _.KC)()),
+            (await B().post(v, U, { cancelToken: b })).data.count
           );
         }
         function S(b, a, D) {
           const E = (0, C.wm)(a instanceof Array ? a : [a]),
-            T = b.ConvertTo64BitString();
-          return G.useMemo(() => new r(b, E, D), [T, E]);
+            A = b.ConvertTo64BitString();
+          return G.useMemo(() => new r(b, E, D), [A, E]);
         }
       },
       64: (H, z, l) => {
         "use strict";
         l.d(z, { K_: () => c, M7: () => f });
         var n = l(14947),
-          h = l(25279),
+          h = l(87498),
           C = l(18210),
-          v = l(9472),
-          U = l(21254),
+          R = l(9472),
+          B = l(21254),
           L = l(51746),
           G = Object.defineProperty,
           w = Object.getOwnPropertyDescriptor,
@@ -803,9 +811,9 @@
           };
         const g = 960,
           u = 311,
-          A = 480,
-          _ = 156;
-        class d extends v.q {
+          T = 480,
+          d = 156;
+        class _ extends R.q {
           m_rgImageOptions;
           m_currentImageOption = void 0;
           m_currentImageOptionKey = void 0;
@@ -840,54 +848,54 @@
                       this.m_rgImageOptions?.map((K) => K.artworkType) || [],
                     ).length == 0
                   : !1,
-              E = !!(0, U.t)(this.fileType);
-            let T = "",
-              R = !1,
-              B;
+              E = !!(0, B.t)(this.fileType);
+            let A = "",
+              v = !1,
+              U;
             return (
               M
                 ? D
-                  ? (T = (0, C.we)("#ImageUpload_InvalidFileType"))
+                  ? (A = (0, C.we)("#ImageUpload_InvalidFileType"))
                   : a
-                    ? (T = (0, C.we)(
+                    ? (A = (0, C.we)(
                         "#ImageUpload_InvalidFormat",
                         (0, L.EG)(o) ?? "",
                       ))
                     : !b && !E
-                      ? (T = (0, C.we)(
+                      ? (A = (0, C.we)(
                           "#ImageUpload_InvalidResolution",
                           (0, h.qj)(i),
                           (0, h.qj)(r),
                         ))
                       : S
                         ? !b && E
-                          ? ((T = (0, C.we)(
+                          ? ((A = (0, C.we)(
                               "#ImageUpload_InvalidDimensions",
                               (0, h.qj)(i),
                               (0, h.qj)(r),
                             )),
-                            (R = !0))
+                            (v = !0))
                           : ((Array.isArray(i) && this.width != (0, h.qj)(i)) ||
                               (Array.isArray(r) &&
                                 this.height != (0, h.qj)(r))) &&
-                            ((B = B ?? []),
-                            B.push(
+                            ((U = U ?? []),
+                            U.push(
                               (0, C.we)(
                                 "#ImageUpload_PreferredDimension",
                                 (0, h.qj)(i),
                                 (0, h.qj)(r),
                               ),
                             ))
-                        : (T = (0, C.we)(
+                        : (A = (0, C.we)(
                             "#ImageUpload_TooSmall",
                             (0, h.qj)(i),
                             (0, h.qj)(r),
                           ))
-                : (T = (0, C.we)("#ImageUpload_InvalidFormatSelected")),
+                : (A = (0, C.we)("#ImageUpload_InvalidFormatSelected")),
               {
-                error: T,
-                warnings: B,
-                needsCrop: R,
+                error: A,
+                warnings: U,
+                needsCrop: v,
                 match: this.GetCurrentImageOption(),
               }
             );
@@ -930,9 +938,9 @@
               (this.m_currentImageOptionKey = e?.sKey);
           }
         }
-        P([n.sH], d.prototype, "m_currentImageOption", 2),
-          P([n.sH], d.prototype, "m_currentImageOptionKey", 2);
-        class y extends d {
+        P([n.sH], _.prototype, "m_currentImageOption", 2),
+          P([n.sH], _.prototype, "m_currentImageOptionKey", 2);
+        class y extends _ {
           video;
           constructor(e, o, i, r, m, M, S) {
             super(e, o, i, r, m, M), (this.video = S);
@@ -952,7 +960,7 @@
           }
           GetResizeDimension() {}
         }
-        class I extends d {
+        class I extends _ {
           constructor(e, o, i, r) {
             super(e, o, i, r, URL.createObjectURL(e), { width: 0, height: 0 });
           }
@@ -971,7 +979,7 @@
           const e = t.split(".").pop()?.toLocaleLowerCase();
           return e == "webm" || e == "mp4";
         }
-        class f extends d {
+        class f extends _ {
           bCropped = !1;
           localizedImageGroupPrimaryImage;
           media;
@@ -1012,7 +1020,7 @@
           if (t === "background")
             return [
               { width: g, height: u },
-              { width: A, height: _ },
+              { width: T, height: d },
             ];
           if (t === "capsule")
             return [
@@ -1038,16 +1046,16 @@
       },
       38410: (H, z, l) => {
         "use strict";
-        l.d(z, { PD: () => u, Vr: () => g, jj: () => A });
+        l.d(z, { PD: () => u, Vr: () => g, jj: () => T });
         var n = l(32093),
           h = l(99412),
           C = l(18210),
-          v = l(41735),
-          U = l.n(v);
+          R = l(41735),
+          B = l.n(R);
         class L {}
-        function G(_, d, y) {
-          const I = _.filter((s) => {
-            const f = s.IsValidAssetType(d, y);
+        function G(d, _, y) {
+          const I = d.filter((s) => {
+            const f = s.IsValidAssetType(_, y);
             return s.status === "pending" && !f.error && !f.needsCrop;
           });
           return (
@@ -1057,12 +1065,12 @@
             I
           );
         }
-        async function w(_, d, y, I, s) {
-          const f = G(_, y, I),
+        async function w(d, _, y, I, s) {
+          const f = G(d, y, I),
             c = [];
           for (const p of f) {
             p.status = "uploading";
-            const t = await d(p, p.filename, p.language ?? h.xPp, s);
+            const t = await _(p, p.filename, p.language ?? h.xPp, s);
             (p.status = t.bSuccess ? "success" : "failed"),
               (p.message =
                 !t.bSuccess && t.elErrorMessage ? t.elErrorMessage : ""),
@@ -1074,8 +1082,8 @@
           }
           return c;
         }
-        async function P(_, d, y, I, s, f) {
-          const c = G(_, I, s),
+        async function P(d, _, y, I, s, f) {
+          const c = G(d, I, s),
             p = [];
           let t = 0;
           const e = async () => {
@@ -1090,7 +1098,7 @@
                   (p[i] = { image: r, uploadResult: m });
               }
             },
-            o = Array.from({ length: Math.floor(d) }, () => e());
+            o = Array.from({ length: Math.floor(_) }, () => e());
           return (
             await Promise.all(o),
             p.map((i) => ({
@@ -1102,8 +1110,8 @@
         }
         class g extends L {
           m_cancel = void 0;
-          async UploadAllImages(d, y) {
-            this.m_cancel = U().CancelToken.source();
+          async UploadAllImages(_, y) {
+            this.m_cancel = B().CancelToken.source();
             const I = this.BGetUploadsAreInSerial() ? 1 : 4;
             let s;
             const f = this.UploadSingleImage.bind(this);
@@ -1113,14 +1121,14 @@
                     this.GetUploadImages(),
                     I,
                     f,
-                    d,
+                    _,
                     y,
                     this.m_cancel.token,
                   ))
                 : (s = await w(
                     this.GetUploadImages(),
                     f,
-                    d,
+                    _,
                     y,
                     this.m_cancel.token,
                   )),
@@ -1131,33 +1139,33 @@
             this.m_cancel?.cancel((0, C.we)("#ImageUpload_CancelRequest"));
           }
         }
-        function u(_, d, y) {
-          if (((_ == null || _ == null) && (_ = d), !y || y.length === 0))
-            return _;
-          for (const I of y) if (C.A0.IsELanguageValidInRealm(_, I)) return _;
+        function u(d, _, y) {
+          if (((d == null || d == null) && (d = _), !y || y.length === 0))
+            return d;
           for (const I of y) if (C.A0.IsELanguageValidInRealm(d, I)) return d;
+          for (const I of y) if (C.A0.IsELanguageValidInRealm(_, I)) return _;
           return y.includes(n.TU.k_ESteamRealmGlobal) ? h.Bhc : h.ZLm;
         }
-        function A(_, d = h.Bhc) {
-          let y = _.lastIndexOf(".");
-          y != -1 && (_ = _.slice(0, y).toLowerCase());
+        function T(d, _ = h.Bhc) {
+          let y = d.lastIndexOf(".");
+          y != -1 && (d = d.slice(0, y).toLowerCase());
           let I = null,
             s = 0;
-          _.endsWith("korean") && ((I = h.Pn1), (s = 6));
+          d.endsWith("korean") && ((I = h.Pn1), (s = 6));
           for (let c = h.Bhc; c < h.bP9; ++c) {
             const p = (0, h.wwZ)(c);
             if (p.length <= s) continue;
-            if (_.endsWith(p) && _.length > p.length + 2) {
-              const e = _[_.length - p.length - 1];
+            if (d.endsWith(p) && d.length > p.length + 2) {
+              const e = d[d.length - p.length - 1];
               /\p{Alphabetic}|\p{Number}/u.test(e) || ((I = c), (s = p.length));
             }
             const t = (0, h.LgB)(c);
-            t.length <= s || (_.endsWith(t) && ((I = c), (s = t.length)));
+            t.length <= s || (d.endsWith(t) && ((I = c), (s = t.length)));
           }
           const f = (c) => c.replace(/[\s_-]+$/g, "");
           return {
-            language: I ?? d,
-            baseFilename: s > 0 ? f(_.substring(0, _.length - s)) : _,
+            language: I ?? _,
+            baseFilename: s > 0 ? f(d.substring(0, d.length - s)) : d,
           };
         }
       },
@@ -1167,24 +1175,24 @@
         var n = l(72604),
           h = l(41735),
           C = l.n(h),
-          v = l(14947),
-          U = l(90626),
+          R = l(14947),
+          B = l(90626),
           L = l(76559),
           G = l(47689),
           w = l(71742),
           P = l(8323),
           g = l(30096),
           u = l(3166),
-          A = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          d = (p, t, e, o) => {
+          T = Object.defineProperty,
+          d = Object.getOwnPropertyDescriptor,
+          _ = (p, t, e, o) => {
             for (
-              var i = o > 1 ? void 0 : o ? _(t, e) : t, r = p.length - 1, m;
+              var i = o > 1 ? void 0 : o ? d(t, e) : t, r = p.length - 1, m;
               r >= 0;
               r--
             )
               (m = p[r]) && (i = (o ? m(t, e, i) : m(i)) || i);
-            return o && i && A(t, e, i), i;
+            return o && i && T(t, e, i), i;
           };
         class y {
           success;
@@ -1192,7 +1200,7 @@
         }
         class I {
           constructor() {
-            (0, v.Gn)(this);
+            (0, R.Gn)(this);
           }
           m_mapClanToImages = new Map();
           m_mapClanImageLoadPromises = new Map();
@@ -1263,7 +1271,7 @@
                 m)
               ) {
                 for (let S of m.data.images) S.clanAccountID = i;
-                (0, v.h5)(() => {
+                (0, R.h5)(() => {
                   this.m_mapClanImageLoadState.set(i, { loaded: !0 }),
                     this.m_mapClanToImages.set(i, m.data.images),
                     this.GetImageListCallbackForClanAccountIDInternal(
@@ -1346,19 +1354,19 @@
             return this.DeleteClanImageByID(t, e.imageid);
           }
         }
-        d([v.sH], I.prototype, "m_mapClanToImages", 2),
-          d([v.sH], I.prototype, "m_mapClanImageLoadState", 2);
+        _([R.sH], I.prototype, "m_mapClanToImages", 2),
+          _([R.sH], I.prototype, "m_mapClanImageLoadState", 2);
         const s = new I();
         function f(p) {
-          const [t, e] = (0, U.useState)(s.GetClanImagesByAccount(p));
+          const [t, e] = (0, B.useState)(s.GetClanImagesByAccount(p));
           return (0, g.hL)(s.GetImageListCallbackForClanAccountID(p), e), t;
         }
         function c(p) {
           const t = L.b.InitFromClanID(p),
             e = (0, G.m)("useLoadClanImages"),
-            [o, i] = (0, U.useState)(() => s.BHasLoadedClanImages(t));
+            [o, i] = (0, B.useState)(() => s.BHasLoadedClanImages(t));
           return (
-            (0, U.useEffect)(() => {
+            (0, B.useEffect)(() => {
               const r = L.b.InitFromClanID(p);
               return (
                 s.BHasLoadedClanImages(r) ||
@@ -1376,28 +1384,28 @@
         var n = l(90626),
           h = l(72849);
         function C(P, g, u = !0) {
-          const A = new URLSearchParams({
+          const T = new URLSearchParams({
             ima: "fit",
             impolicy: "Letterbox",
             imcolor: "#000000",
           });
           return (
-            P && A.set("imw", Math.round(P).toString()),
-            g && A.set("imh", Math.round(g).toString()),
+            P && T.set("imw", Math.round(P).toString()),
+            g && T.set("imh", Math.round(g).toString()),
             !P || !g || !u
-              ? A.set("letterbox", "false")
-              : A.set("letterbox", "true"),
-            "?" + A.toString()
+              ? T.set("letterbox", "false")
+              : T.set("letterbox", "true"),
+            "?" + T.toString()
           );
         }
-        const v = null;
-        function U(P, g) {
+        const R = null;
+        function B(P, g) {
           let u;
-          for (let A of v)
+          for (let T of R)
             if (
               (u ? (u += ", ") : (u = ""),
-              (u += `${P}${C(A, 0)} ${A}w`),
-              A >= g)
+              (u += `${P}${C(T, 0)} ${T}w`),
+              T >= g)
             )
               break;
           return u;
@@ -1406,18 +1414,18 @@
           let {
             src: g,
             orig_width: u,
-            orig_height: A,
-            sizes: _,
-            default_width: d,
+            orig_height: T,
+            sizes: d,
+            default_width: _,
             ...y
           } = P;
-          _ || (_ = "95vw"), d || (d = 1024);
-          let I = `${g}${C(d, void 0)}`,
-            s = U(g, u);
+          d || (d = "95vw"), _ || (_ = 1024);
+          let I = `${g}${C(_, void 0)}`,
+            s = B(g, u);
           return React.createElement("img", {
             src: I,
             srcSet: s,
-            sizes: _,
+            sizes: d,
             ...y,
           });
         }
@@ -1425,23 +1433,23 @@
           const {
             width: g,
             height: u,
-            orig_width: A,
-            orig_height: _,
-            src: d,
+            orig_width: T,
+            orig_height: d,
+            src: _,
             ...y
           } = P;
-          let I = d + C(g, u),
+          let I = _ + C(g, u),
             s,
             f = 6;
           if (
-            (g && A && (f = Math.min(f, Math.ceil(A / g))),
-            u && _ && (f = Math.min(f, Math.ceil(_ / u))),
+            (g && T && (f = Math.min(f, Math.ceil(T / g))),
+            u && d && (f = Math.min(f, Math.ceil(d / u))),
             f)
           )
             for (let c of [2, 4, 6]) {
               if (c > f) break;
               s ? (s += ", ") : (s = ""),
-                (s += `${d}${C(g && g * c, u && u * c)} ${c}x`);
+                (s += `${_}${C(g && g * c, u && u * c)} ${c}x`);
             }
           return React.createElement("img", { ...y, src: I, srcSet: s });
         }
@@ -1466,24 +1474,24 @@
         var n = l(7850),
           h = l(90626),
           C = l(30096),
-          v = l(75844),
-          U = l(8323),
+          R = l(75844),
+          B = l(8323),
           L = l(18210),
           G = l(16412),
           w = l(36118),
           P = l(81315),
           g = l.n(P),
           u = l(13854),
-          A = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          d = (s, f, c, p) => {
+          T = Object.defineProperty,
+          d = Object.getOwnPropertyDescriptor,
+          _ = (s, f, c, p) => {
             for (
-              var t = p > 1 ? void 0 : p ? _(f, c) : f, e = s.length - 1, o;
+              var t = p > 1 ? void 0 : p ? d(f, c) : f, e = s.length - 1, o;
               e >= 0;
               e--
             )
               (o = s[e]) && (t = (p ? o(f, c, t) : o(t)) || t);
-            return p && t && A(f, c, t), t;
+            return p && t && T(f, c, t), t;
           },
           y = ((s) => (
             (s.topleft = "topleft"),
@@ -1504,7 +1512,7 @@
           m_nLocalOffsetYPct;
           m_fnMouseUp = null;
           m_fnMouseMove = null;
-          m_listeners = new U.Ji();
+          m_listeners = new B.Ji();
           m_strDescription = "";
           m_aspectRatio = 1;
           componentWillUnmount() {
@@ -1947,34 +1955,34 @@
             );
           }
         };
-        d([C.oI], I.prototype, "LinkRegionBoxRef", 1),
-          d([C.oI], I.prototype, "OnMouseDown", 1),
-          d([C.oI], I.prototype, "OnMouseMove", 1),
-          d([C.oI], I.prototype, "OnMouseUp", 1),
-          d([C.oI], I.prototype, "HandleDelete", 1),
-          d([C.oI], I.prototype, "OnSetLinkURLChange", 1),
-          d([C.oI], I.prototype, "OnSetLinkDescriptionChange", 1),
-          d([C.oI], I.prototype, "OnSaveLink", 1),
-          d([C.oI], I.prototype, "OnEditLink", 1),
-          (I = d([v.PA], I));
+        _([C.oI], I.prototype, "LinkRegionBoxRef", 1),
+          _([C.oI], I.prototype, "OnMouseDown", 1),
+          _([C.oI], I.prototype, "OnMouseMove", 1),
+          _([C.oI], I.prototype, "OnMouseUp", 1),
+          _([C.oI], I.prototype, "HandleDelete", 1),
+          _([C.oI], I.prototype, "OnSetLinkURLChange", 1),
+          _([C.oI], I.prototype, "OnSetLinkDescriptionChange", 1),
+          _([C.oI], I.prototype, "OnSaveLink", 1),
+          _([C.oI], I.prototype, "OnEditLink", 1),
+          (I = _([R.PA], I));
       },
       21254: (H, z, l) => {
         "use strict";
         l.d(z, { q: () => s, t: () => c });
         var n = l(7850),
           h = l(90626),
-          C = l(25279),
-          v = l(72849),
-          U = l(16412),
+          C = l(87498),
+          R = l(72849),
+          B = l(16412),
           L = l(79167),
           G = l(96538),
           w = l(36707),
           P = l(18210),
           g = l(30096),
           u = l(50666),
-          A = l.n(u),
-          _ = l(82734),
-          d = Object.defineProperty,
+          T = l.n(u),
+          d = l(82734),
+          _ = Object.defineProperty,
           y = Object.getOwnPropertyDescriptor,
           I = (p, t, e, o) => {
             for (
@@ -1983,7 +1991,7 @@
               r--
             )
               (m = p[r]) && (i = (o ? m(t, e, i) : m(i)) || i);
-            return o && i && d(t, e, i), i;
+            return o && i && _(t, e, i), i;
           };
         class s extends h.Component {
           state = {
@@ -2083,7 +2091,7 @@
               children: (0, n.jsxs)("div", {
                 className: (0, w.A)("DialogContent", "_DialogCenterVertically"),
                 children: [
-                  (0, n.jsx)(U.iK, {
+                  (0, n.jsx)(B.iK, {
                     children: (0, P.we)(
                       "#ImageUpload_CropModalTitleDims",
                       this.GetDestWidth(),
@@ -2132,7 +2140,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(U.jn, {
+                  (0, n.jsx)(B.jn, {
                     onClick: this.OnCrop,
                     children: (0, P.we)("#ImageUpload_CropAndContinue"),
                   }),
@@ -2156,7 +2164,7 @@
               E.getContext("2d")?.drawImage(t, e, o, i, r, 0, 0, m, M),
               E.toBlob((K) => {
                 const j = E.toDataURL(D);
-                if (S !== v.bg.dU && j.startsWith("data:image/png")) {
+                if (S !== R.bg.dU && j.startsWith("data:image/png")) {
                   a("Unable to encode into the requested file format");
                   return;
                 }
@@ -2164,7 +2172,7 @@
                   a("Unable to apply crop into image");
                   return;
                 }
-                (p.file = (0, _.pE)(K, p.filename)),
+                (p.file = (0, d.pE)(K, p.filename)),
                   (p.width = m),
                   (p.height = M),
                   (p.dataUrl = j),
@@ -2176,9 +2184,9 @@
         }
         function c(p) {
           switch (p) {
-            case v.bg.dU:
+            case R.bg.dU:
               return "image/png";
-            case v.bg.iS:
+            case R.bg.iS:
               return "image/jpeg";
           }
         }

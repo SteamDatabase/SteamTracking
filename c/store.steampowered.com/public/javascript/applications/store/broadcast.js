@@ -12958,13 +12958,13 @@
           m_nNudgeFactorMS = 0;
           m_nLastSleepMS = 0;
           m_bReconnecting = !1;
-          m_strChatURL;
+          m_strChatURL = "";
           m_unInstanceID = Math.floor(Math.random() * 4294967296);
           m_strUserSteamID = "";
-          m_regexUserEmoticons = null;
-          m_chatScheduledFunc = null;
-          m_steamInterface = null;
-          m_textFilterStore = null;
+          m_regexUserEmoticons;
+          m_chatScheduledFunc;
+          m_steamInterface;
+          m_textFilterStore;
           m_bHasAddedWelcomeChat = !1;
           m_mapMutedUsers = {};
           m_mapChannelModeratorUsers = new Map();
@@ -13045,7 +13045,7 @@
                     : _.result == _._
                       ? (_ = (0, _._)(
                           "#BroadcastChat_Cooldown",
-                          _.cooldown_time_seconds,
+                          _.cooldown_time_seconds ?? 0,
                         ))
                       : (_ = (0, _._)("#BroadcastChat_FailedToSendMsg", _)),
                     this.m_rgChatMessages.push({
@@ -13060,7 +13060,7 @@
                   return;
                 }
                 this.m_nRateLimitSeconds ||
-                  (this.m_nRateLimitSeconds = _.cooldown_time_seconds),
+                  (this.m_nRateLimitSeconds = _.cooldown_time_seconds ?? 0),
                   this.m_nRateLimitSeconds &&
                     ((this.m_bRateLimited = !0),
                     setTimeout(
@@ -13096,10 +13096,9 @@
               (!_ || !_.token.reason) &&
                 (0, _._)(() => {
                   const _ = _.data;
-                  (this.m_strChatURL = _.view_url_template),
-                    (this.m_ulChatID = _.chat_id),
-                    (this.m_strFlairGroupID =
-                      _.flair_group_ids && _.flair_group_ids[0]),
+                  (this.m_strChatURL = _.view_url_template ?? ""),
+                    (this.m_ulChatID = _.chat_id ?? ""),
+                    (this.m_strFlairGroupID = _.flair_group_ids?.[0] ?? ""),
                     _.blocked && console.log("User is blocked from chat"),
                     _.steamid && (this.m_strUserSteamID = _.steamid),
                     _.emoticons && this.SetOwnedEmoticons(_.emoticons),
@@ -13136,12 +13135,14 @@
                 this.m_steamInterface.GetServiceTransport(),
                 _,
               );
-              if (!_.Body().chat_id || !_.Body().view_url_template) {
+              const _ = _.Body().view_url_template(),
+                _ = _.Body().chat_id();
+              if (!_ || !_) {
                 console.log("Failed to join channel chat");
                 return;
               }
-              (this.m_strChatURL = _.Body().view_url_template()),
-                (this.m_ulChatID = _.Body().chat_id()),
+              (this.m_strChatURL = _),
+                (this.m_ulChatID = _),
                 (this.m_strFlairGroupID =
                   _.Body().flair_group_ids() && _.Body().flair_group_ids()[0]),
                 this.FetchChatModerators(),
@@ -13177,7 +13178,8 @@
                 .results(),
               _ = new Map();
             _.forEach((_) => {
-              _.set(_.steamid(), !0);
+              const _ = _.steamid();
+              _ && _.set(_, !0);
             }),
               (this.m_mapChannelModeratorUsers = _);
           }
@@ -13280,7 +13282,7 @@
               this.m_bReconnecting && (this.m_bReconnecting = !1),
                 (this.m_nLastSleepMS = _),
                 _ < 0 && (_ = 0),
-                this.m_chatScheduledFunc.Schedule(_, this.RequestLoop);
+                this.m_chatScheduledFunc?.Schedule(_, this.RequestLoop);
             } catch {
               if (
                 (console.log(
@@ -13313,7 +13315,7 @@
                   (this.m_bReconnecting = !0),
                   this.SyncChat();
               }
-              this.m_chatScheduledFunc.Schedule(_, this.RequestLoop);
+              this.m_chatScheduledFunc?.Schedule(_, this.RequestLoop);
             }
           }
           GetUserEmoticons() {
@@ -13597,6 +13599,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_) {
           const { latestAnnouncement: _ } = _;
@@ -13613,7 +13616,8 @@
               strActionButton: _,
               strActionClassname: _,
             } = _,
-            _ = _.winners_info?.length > 0 ? _.winners_info[0].accountid : 0,
+            _ = _.winners_info ?? [],
+            _ = _.length > 0 ? _[0].accountid : 0,
             [_, _] = _.useState(_),
             _ =
               "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
@@ -13622,8 +13626,13 @@
             ),
             _ = (0, _._)(
               `${_._.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
-            ),
-            _ = (0, _._)(_.giveaway_gid);
+            );
+          (0, _._)(
+            !!_.giveaway_gid,
+            "Giveaway draw announcement is missing its giveaway",
+            _,
+          );
+          const _ = (0, _._)(_.giveaway_gid);
           let _ =
             _.bLoadingGiveawayInfo || _.closed ? null : _.seconds_until_drawing;
           const _ = _ === _._.accountid;
@@ -13631,8 +13640,8 @@
             _ != _ && setTimeout(() => _(_), 1500);
           }, [_, _]);
           const _ =
-            _.winners_info?.length > 0 && _.winners_info[0].persona
-              ? _.winners_info[0].persona
+            _.length > 0 && _[0].persona
+              ? _[0].persona
               : (0, _._)("#GA2022_UnknownPersonaName");
           return (0, _.jsx)(_._, {
             href: _,
@@ -13675,7 +13684,7 @@
                           (0, _.jsx)("br", {}),
                         ),
                       }),
-                    _ > 0 &&
+                    !!(_ && _ > 0) &&
                       (0, _.jsx)("div", {
                         className: _().GiveawayWinnerCountdown,
                         children: (0, _._)("#GA2022_Congrats_NextDraw", _),
@@ -13698,15 +13707,17 @@
         function _(_, _) {
           const [_, _] = (0, _._)(() => [
               _?.steamid,
-              _._.GetBroadcast(_?.steamid)?.m_ulBroadcastID,
+              _?.steamid
+                ? _._.GetBroadcast(_.steamid)?.m_ulBroadcastID
+                : void 0,
             ]),
             [_, _] = _.useState(null);
           _.useEffect(() => {
             let _ = null;
             return (
-              (_ || _) &&
-                ((_ = _.Get().GetOrCreateChat(_, _)),
-                _.StartForSteamID(_, _),
+              _ &&
+                ((_ = _.Get().GetOrCreateChat(_ ?? "", _)),
+                _.StartForSteamID(_, _ ?? ""),
                 _(_)),
               () => {
                 _ && (_.Stop(), _(null));
@@ -13772,13 +13783,13 @@
         }
         const _ = (_) => {
             const { userType: _, msg: _, presenterInfo: _ } = _;
-            if (_ === "presenter")
+            if (_ === "presenter" && _)
               return (0, _.jsx)("span", {
                 children: (0, _.jsx)(_._, {
-                  name: _.name,
+                  name: _.name ?? "",
                   title: _.title,
                   photo: _.photo,
-                  company: _.company,
+                  company: _.company ?? "",
                   bioString: _.bio,
                   children: (0, _.jsx)("a", {
                     className: (0, _._)(_().MessageName, _().MessagePresenter),
@@ -13790,7 +13801,7 @@
                 }),
               });
             {
-              let _ = null;
+              let _;
               return (
                 _ === "broadcaster"
                   ? (_ = _().MessageBroadcaster)
@@ -13848,7 +13859,7 @@
           constructor(_) {
             super(_), (0, _._)(this);
           }
-          m_chat = null;
+          m_chat = void 0;
           messagesContainer = _.createRef();
           componentDidMount() {
             this.StartChat();
@@ -13866,22 +13877,20 @@
             this.m_chat && this.m_chat.Stop();
           }
           StartChat() {
-            if (
-              (this.m_chat && this.m_chat.Stop(),
-              (this.m_chat = _.Get().GetOrCreateChat(
-                this.props.broadcastChannelID,
-                this.props.steamID,
-              )),
-              this.props.broadcastChannelID)
-            )
-              this.m_chat.StartForChannel(this.props.broadcastChannelID);
+            this.m_chat && this.m_chat.Stop();
+            const _ = _.Get().GetOrCreateChat(
+              this.props.broadcastChannelID ?? "",
+              this.props.steamID ?? "",
+            );
+            if (((this.m_chat = _), this.props.broadcastChannelID))
+              _.StartForChannel(this.props.broadcastChannelID);
             else if (
               this.props.steamID &&
               this.props.steamID &&
               (this.props.broadcastID || this.props.globalChat)
             ) {
               let _ = this.props.broadcastID || "0";
-              this.m_chat.StartForSteamID(this.props.steamID, _),
+              _.StartForSteamID(this.props.steamID, _),
                 this.ScrollToNewestMessages();
             }
           }
@@ -13890,7 +13899,7 @@
           }
           AddLinksEmoticons(_, _) {
             let _ = _;
-            _ && (_ = this.m_chat.GetUserEmoticons());
+            _ && (_ = this.m_chat?.GetUserEmoticons());
             let _ = _.split(_);
             const _ = [];
             for (let _ = 0; _ < _.length; _ += 1)
@@ -13924,12 +13933,11 @@
                 : this.messagesContainer.current.scrollHeight);
           }
           OnContextMenu(_, _) {
-            if (_.type !== _._.Chat) return null;
+            const _ = this.m_chat;
+            if (!_ || _.type !== _._.Chat) return null;
             const _ = [],
-              _ = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
-              _ = this.m_chat.BIsUserBroadcastModerator(
-                this.m_chat.GetUserSteamID(),
-              );
+              _ = _.IsUserBroadcaster(_.GetUserSteamID()),
+              _ = _.BIsUserBroadcastModerator(_.GetUserSteamID());
             return (
               (_._ && _._.is_support) || _ || _
                 ? _.push(
@@ -13937,10 +13945,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.RemoveUserMessagesServer(
-                            _.steamid,
-                            _.persona_name,
-                          ),
+                          _.RemoveUserMessagesServer(_.steamid, _.persona_name),
                         children: (0, _._)("#BroadcastChat_RemoveMessages"),
                       },
                       "remove",
@@ -13949,7 +13954,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             12,
@@ -13964,7 +13969,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             24,
@@ -13979,7 +13984,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             168,
@@ -13994,7 +13999,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             0,
@@ -14009,7 +14014,7 @@
                       _._,
                       {
                         onSelected: () =>
-                          this.m_chat.UpdateUserChatBan(
+                          _.UpdateUserChatBan(
                             _.steamid,
                             _._._,
                             0,
@@ -14022,16 +14027,13 @@
                       "removeban",
                     ),
                   )
-                : this.m_chat.IsUserMutedLocally(_.steamid)
+                : _.IsUserMutedLocally(_.steamid)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UnmuteUserForSession(
-                              _.steamid,
-                              _.persona_name,
-                            ),
+                            _.UnmuteUserForSession(_.steamid, _.persona_name),
                           children: (0, _._)("#BroadcastChat_UnmuteLocal"),
                         },
                         "unmuteuser",
@@ -14042,25 +14044,22 @@
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.MuteUserForSession(
-                              _.steamid,
-                              _.persona_name,
-                            ),
+                            _.MuteUserForSession(_.steamid, _.persona_name),
                           children: (0, _._)("#BroadcastChat_MuteLocal"),
                         },
                         "muteuser",
                       ),
                     ),
               ((_._ && _._.is_support) ||
-                this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
+                _.IsUserBroadcaster(_.GetUserSteamID())) &&
                 _.steamid &&
-                (this.m_chat.BIsUserBroadcastModerator(_.steamid)
+                (_.BIsUserBroadcastModerator(_.steamid)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UpdateBroadcastChatModerator(
+                            _.UpdateBroadcastChatModerator(
                               _.steamid,
                               !1,
                               _.persona_name,
@@ -14075,7 +14074,7 @@
                         _._,
                         {
                           onSelected: () =>
-                            this.m_chat.UpdateBroadcastChatModerator(
+                            _.UpdateBroadcastChatModerator(
                               _.steamid,
                               !0,
                               _.persona_name,
@@ -14121,9 +14120,9 @@
               return this.AddLinksEmoticons(_, !1);
             } else return _.msg;
           }
-          RenderUserChatLine(_, _, _) {
-            let _ = _ ? _.get(_.steamid) : void 0;
-            const _ = _.type === _._.Chat ? _(_.steamid, this.m_chat, _) : "";
+          RenderUserChatLine(_, _, _, _) {
+            let _ = _?.get(_.steamid);
+            const _ = _.type === _._.Chat ? _(_.steamid, _, _) : "";
             return (0, _.jsxs)(
               "div",
               {
@@ -14146,13 +14145,13 @@
                       presenterInfo: _,
                     }),
                   _.type === _._.Chat &&
-                    this.m_chat.GetBroadcastSteamID() === _.steamid &&
+                    _.GetBroadcastSteamID() === _.steamid &&
                     (0, _.jsx)("span", {
                       className: `${_().MessageNotification} ${_().MessageContents}`,
                       children: ` (${(0, _._)("#BroadcastChat_Broadcaster")})`,
                     }),
                   _.type === _._.Chat &&
-                    this.m_chat.m_mapChannelModeratorUsers.get(_.steamid) &&
+                    _.m_mapChannelModeratorUsers.get(_.steamid) &&
                     (0, _.jsx)("span", {
                       className: `${_().MessageNotification} ${_().MessageContents}`,
                       children: ` (${(0, _._)("#BroadcastChat_Moderator")})`,
@@ -14161,7 +14160,7 @@
                     className: `${_().MessageContents} ${this.AddLinksEmoticons(_.msg, !1).filter((_) => _ && typeof _ == "string").length ? "" : _().EmoticonsOnly}`,
                     children: [
                       _.type === _._.Chat ? " : " : "",
-                      this.FormatMessage(_, this.m_chat.TextFilterStore),
+                      this.FormatMessage(_, _.TextFilterStore),
                     ],
                   }),
                 ],
@@ -14176,7 +14175,8 @@
                 bInvertLayout: _,
                 onSignIn: _,
               } = this.props,
-              _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
+              _ = this.m_chat,
+              _ = _ ? _.m_rgChatMessages : [],
               _ = _ ? _.reverse() : _,
               _ = this.m_chat
                 ? _._.GetPresenterMapForBroadcasterSteamID(
@@ -14211,7 +14211,8 @@
                   ),
                   onScroll: this.HandleScroll,
                   ref: this.messagesContainer,
-                  children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
+                  children:
+                    _ && _.map((_, _) => this.RenderUserChatLine(_, _, _, _)),
                 }),
                 (0, _.jsx)(_, {}),
                 !_ &&
@@ -14255,7 +14256,7 @@
         function _(_) {
           const { oChat: _, emoticonStore: _ } = _,
             [_, _] = _.useState(""),
-            _ = _.useRef(void 0),
+            _ = _.useRef(null),
             _ = (0, _._)(() => _.m_bRateLimited),
             _ = _.useCallback(
               (_) => {
@@ -14526,7 +14527,7 @@
             _ = !_ || !_.jsondata || !_.jsondata.broadcast_item_drops_enabled,
             _ = (0, _.useRef)(null),
             [_, _] = (0, _.useState)(
-              _ ? _._.GetCreatorHome(_.clanSteamID) : null,
+              _ ? _._.GetCreatorHome(_.clanSteamID) : void 0,
             );
           if (
             ((0, _.useEffect)(() => {
@@ -14547,32 +14548,25 @@
           )
             return null;
           const _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.jsondata.broadcast_item_drops_details_clan_accountid +
-            "/partnerevents/view/" +
-            _.jsondata.broadcast_item_drops_details_event_gid;
+              _._.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.jsondata.broadcast_item_drops_details_clan_accountid +
+              "/partnerevents/view/" +
+              _.jsondata.broadcast_item_drops_details_event_gid,
+            _ = _.jsondata.broadcast_item_drops_min_watch_time_minutes ?? 0;
           return (0, _.jsx)("div", {
             className: _().item_drop_ctn,
             children: (0, _.jsxs)("div", {
               children: [
                 (0, _._)(
                   _.GetName().length > 0
-                    ? _.jsondata.broadcast_item_drops_min_watch_time_minutes %
-                        60 ==
-                      0
+                    ? _ % 60 == 0
                       ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
                       : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
-                    : _.jsondata.broadcast_item_drops_min_watch_time_minutes %
-                          60 ==
-                        0
+                    : _ % 60 == 0
                       ? "#SalePage_WatchForDrop_Hours_Developer"
                       : "#SalePage_WatchForDrop_Minutes_Developer",
-                  _.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
-                    0
-                    ? _.jsondata.broadcast_item_drops_min_watch_time_minutes /
-                        60
-                    : _.jsondata.broadcast_item_drops_min_watch_time_minutes,
+                  _ % 60 == 0 ? _ / 60 : _,
                   _.GetName(),
                 ),
                 !!_.jsondata.broadcast_item_drops_details_clan_accountid &&
@@ -14663,7 +14657,7 @@
             _ = _.useCallback(
               (_) => {
                 _.current &&
-                  _.current.ownerDocument.defaultView.navigator.clipboard
+                  _.current.ownerDocument.defaultView?.navigator.clipboard
                     .writeText(_.current.value)
                     .then((_) => {
                       _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
@@ -14825,7 +14819,7 @@
                 }),
               await (this.props.bIsPreview &&
               this.props.accountIDs &&
-              !this.props.event.BUsesContentHubForItemSource()
+              !this.props.event?.BUsesContentHubForItemSource()
                 ? _._.Get().HintLoadEmbeddablePreviewStreams(this.props)
                 : _._.Get().HintLoadEmbeddableStreams(this.props)),
               this.props.nAppIDVOD &&
@@ -14850,10 +14844,11 @@
           }
           ToggleBroadcastExpandShrink() {
             let _ = _._.Get().GetPlayReadyStream(this.props);
+            if (!_) return;
             const _ = this.state.bExpanded,
               _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID;
             (0, _._)(_, _ ? _._._ : _._._, _.snr),
-              _ && (0, _._)() && (0, _._)().AddEvent(_._._),
+              _ && (0, _._)()?.AddEvent(_._._),
               window.setTimeout(
                 () =>
                   this.setState({
@@ -14886,7 +14881,7 @@
             this.setState({
               bStartMuted: !1,
             }),
-              _._.Get().GetPlayReadyStream(this.props).accountid !=
+              _._.Get().GetPlayReadyStream(this.props)?.accountid !=
                 _.accountid &&
                 (await _._.Get().AttemptToPlayStream(this.props, _));
           }
@@ -14894,18 +14889,14 @@
             this.setState({
               bStartMuted: !1,
             });
-            const _ = _._.Get()
-              .GetStreams(this.props)
-              .filter(
-                (_) =>
-                  !this.props.fnFilterStreams || this.props.fnFilterStreams(_),
-              );
+            const _ = (_._.Get().GetStreams(this.props) ?? []).filter(
+              (_) =>
+                !this.props.fnFilterStreams || this.props.fnFilterStreams(_),
+            );
             await _._.Get().PlayFromAvailableStreams(this.props, _, !0);
           }
           ConstructSidePanels(_, _) {
             let _ = {
-              leftPanel: null,
-              rightPanel: null,
               bRightPanelArtworkOrEmpty: !0,
             };
             if (this.props.bWidePlayer) return _;
@@ -14927,7 +14918,9 @@
               );
             const _ = 11;
             if (_ < _) {
-              const _ = _._.GetAppIDListForBroadcasterSteamID(_.steamid);
+              const _ = _.steamid
+                ? _._.GetAppIDListForBroadcasterSteamID(_.steamid)
+                : void 0;
               _ && _.length === 1 && (_ = _[0]);
             }
             return (
@@ -14972,36 +14965,36 @@
           }
           MarkBroadcastSeen() {
             this.m_bMarkedUsabilitySeen ||
-              ((this.m_bMarkedUsabilitySeen = !0),
-              (0, _._)() && (0, _._)().AddEvent(_._._));
+              ((this.m_bMarkedUsabilitySeen = !0), (0, _._)()?.AddEvent(_._._));
           }
           render() {
             if (this.state.bLoadingPreference) return null;
-            let _ = _._.Get().GetPlayReadyStream(this.props);
+            const _ = _._.Get().GetPlayReadyStream(this.props);
             if (_) {
               this.MarkBroadcastSeen();
               let _ = _._.Get().GetChatVisibility() === "show";
               const {
-                event: _,
-                language: _,
-                fnRenderBroadcastContext: _,
-              } = this.props;
-              _ &&
-                (_ = {
-                  ..._,
-                  left_panel: _.GetImageURL(
-                    "broadcast_left",
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  right_panel: _.GetImageURL(
-                    "broadcast_right",
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  store_title: _.GetBroadcastTitle(
-                    _ || (0, _.sfN)(_._.LANGUAGE),
-                  ),
-                  broadcast_chat_visibility: _.GetBroadcastChatVisibility(),
-                });
+                  event: _,
+                  language: _,
+                  fnRenderBroadcastContext: _,
+                } = this.props,
+                _ = _
+                  ? {
+                      ..._,
+                      left_panel: _.GetImageURL(
+                        "broadcast_left",
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      right_panel: _.GetImageURL(
+                        "broadcast_right",
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      store_title: _.GetBroadcastTitle(
+                        _ || (0, _.sfN)(_._.LANGUAGE),
+                      ),
+                      broadcast_chat_visibility: _.GetBroadcastChatVisibility(),
+                    }
+                  : _;
               let _ = this.ConstructSidePanels(_, _),
                 _ = _.store_title ? _.store_title : _.title,
                 _ = _._.Get().GetConcurrentStreams(this.props) > 1;
@@ -15110,11 +15103,10 @@
                           }),
                       ],
                     }),
-                    !!(
-                      _ &&
-                      _.jsondata &&
-                      _.jsondata.broadcast_item_drops_enabled
-                    ) &&
+                    !!_ &&
+                      !!(
+                        _.jsondata && _.jsondata.broadcast_item_drops_enabled
+                      ) &&
                       (0, _.jsx)(_, {
                         event: _,
                       }),
@@ -15149,7 +15141,7 @@
               this.props.stream.steamid,
             ).m_nAppID;
             (0, _._)(_, _._._, this.props.stream.snr),
-              (0, _._)() && (0, _._)().AddEvent(_._._),
+              (0, _._)()?.AddEvent(_._._),
               this.setState({
                 bPopout: !1,
                 bPreventPopup: !0,
@@ -15328,13 +15320,16 @@
                           (0, _.jsx)("a", {
                             href: "#",
                             className: _().ChatToggle,
-                            onClick: (_) =>
-                              (0, _._)(
-                                (0, _.jsx)(_, {
-                                  steamid: this.props.stream.steamid,
-                                }),
-                                (0, _._)(_),
-                              ),
+                            onClick: (_) => {
+                              const _ = (0, _._)(_);
+                              _ &&
+                                (0, _._)(
+                                  (0, _.jsx)(_, {
+                                    steamid: this.props.stream.steamid ?? "",
+                                  }),
+                                  _,
+                                );
+                            },
                             children: (0, _._)("#Broadcast_ShareBroadcast"),
                           }),
                         ],
@@ -15439,11 +15434,11 @@
               bShowCapsuleArt: _,
               broadcastEmbedContext: _,
             } = _,
-            _ = (0, _.useRef)(void 0),
+            _ = (0, _.useRef)(null),
             _ = (0, _.useMemo)(() => {
-              const _ = _._.Get()
-                .GetStreams(_)
-                .filter((_) => !_ || _(_));
+              const _ = (_._.Get().GetStreams(_) ?? []).filter(
+                (_) => !_ || _(_),
+              );
               return (0, _._)(_), _;
             }, [_, _]);
           return (
@@ -15509,7 +15504,7 @@
             { data: _ } = (0, _._)(_),
             { data: _ } = (0, _._)(_);
           if (!(0, _._)(_)) return null;
-          const _ = _ && _ && (0, _._)(_, "header"),
+          const _ = _ && _ ? (0, _._)(_, "header") : void 0,
             _ = Number.parseInt("" + _.viewer_count),
             _ = !Number.isNaN(_),
             _ = !!_.nAppIDVOD && _?.name;
@@ -15581,10 +15576,10 @@
         function _(_) {
           const { stream: _, orientation: _ } = _,
             _ = _ == "below",
-            [_, _] = (0, _._)(() => [
-              _._.GetBroadcast(_.steamid),
-              _._.GetBroadcast(_.steamid)?.m_ulBroadcastID,
-            ]),
+            [_, _] = (0, _._)(() => {
+              const _ = _.steamid ? _._.GetBroadcast(_.steamid) : void 0;
+              return [_, _?.m_ulBroadcastID];
+            }),
             _ = (0, _._)(() => _.steamid);
           return _
             ? (0, _.jsx)("div", {
@@ -18080,10 +18075,12 @@
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const _ = new _();
@@ -18122,10 +18119,11 @@
             );
           }
           GetNextDrawChangeCallback(_) {
+            let _ = this.m_mapNextDrawChangeCallback.get(_);
             return (
-              this.m_mapNextDrawChangeCallback.has(_) ||
-                this.m_mapNextDrawChangeCallback.set(_, new _._()),
-              this.m_mapNextDrawChangeCallback.get(_)
+              _ ||
+                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
+              _
             );
           }
           CopyToGiveaway(_, _) {
@@ -18141,41 +18139,31 @@
           async ReloadGiveaway(_, _) {
             if (!_) return null;
             let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = null,
               _ = {
                 origin: self.origin,
               };
-            return (
-              (_ = await _().get(_, {
+            const _ = await _().get(_, {
                 params: _,
-              })),
-              (0, _._)(() => {
+              }),
+              _ = (0, _._)(() => {
+                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                  ),
+                  (_ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
+                  this.CopyToGiveaway(_.data, _),
                   _ !== void 0)
                 ) {
                   const _ = this.GetKey(_, _);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      _,
-                      new _(),
-                    ),
-                    this.CopyToGiveaway(
-                      _.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                    );
+                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
+                  _ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
+                    this.CopyToGiveaway(_.data, _);
                 }
-              }),
-              this.GetNextDrawChangeCallback(_).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(_),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(_)
-            );
+                return _;
+              });
+            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
           }
           static s_Singleton;
           static Get() {
@@ -18222,12 +18210,18 @@
           SetupRefreshDataInterval(_, _) {
             if ((this.ClearRefreshInterval(), !_.closed)) {
               let _ =
-                _.seconds_until_drawing <= 0 && _.winner_count == 0 ? 6e4 : 5e3;
+                _.seconds_until_drawing !== void 0 &&
+                _.seconds_until_drawing <= 0 &&
+                _.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
               this.m_intervalID = window.setInterval(_, _);
             }
           }
           SetupCountDown(_, _) {
-            _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
+            _ !== void 0 &&
+              _ > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
           }
         };
         _([_._], _.prototype, "ClearRefreshInterval", 1),
@@ -18237,20 +18231,23 @@
         let _ = _;
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          (_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown();
+          !_ ||
+            _.seconds_until_drawing === void 0 ||
+            ((_.seconds_until_drawing -= 1),
+            _.seconds_until_drawing == 0 && _.ClearCountDown());
         }
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
           _ &&
             _.BIsValid() &&
+            _.seconds_until_drawing !== void 0 &&
             _.seconds_until_drawing <= 0 &&
             !_.closed &&
             (_.ClearCountDown(),
             _.Get()
               .ReloadGiveaway(_, _.m_myInstanceNumber)
               .then((_) => {
-                _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
+                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
               }));
         }
         function _(_) {
@@ -18261,9 +18258,10 @@
               _.Get()
                 .ReloadGiveaway(_, _.m_myInstanceNumber)
                 .then((_) => {
-                  _.SetupRefreshDataInterval(_, () => _(_, _)),
+                  _ &&
+                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
                     _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _();
+                    _());
                 }),
               () => {
                 _.ClearRefreshInterval(), _.ClearCountDown();

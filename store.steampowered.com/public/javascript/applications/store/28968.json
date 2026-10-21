@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktív elemek",
     "GameRating_OnlineMusicNotice": "Az ESRB az online zenét nem minősíti.",
     "GameRating_OnlineInteractionsNotice": "Az ESRB az online tevékenységet nem minősíti.",
-    "GameRating_ContentCategoryDescriptor_64": "Szűrt játékon belüli csevegés"
+    "GameRating_ContentCategoryDescriptor_64": "Szűrt játékon belüli csevegés",
+    "GameRating_ContentCategories_Title": "Tartalom",
+    "GameRating_Ratings_Title": "Értékelések"
 }

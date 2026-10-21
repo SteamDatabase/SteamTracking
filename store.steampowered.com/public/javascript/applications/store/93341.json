@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Interaktive elementer",
     "GameRating_OnlineMusicNotice": "Musikk på nett ikke vurdert av ESRB",
     "GameRating_OnlineInteractionsNotice": "Interaksjoner på nett ikke vurdert av ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Filtrert samtale i spillet"
+    "GameRating_ContentCategoryDescriptor_64": "Filtrert samtale i spillet",
+    "GameRating_ContentCategories_Title": "Innhold",
+    "GameRating_Ratings_Title": "Klassifiseringer"
 }

@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "Интерактивни елементи",
     "GameRating_OnlineMusicNotice": "Музиката на линия не е оценена от ESRB",
     "GameRating_OnlineInteractionsNotice": "Взаимодействията на линия не са оценени от ESRB",
-    "GameRating_ContentCategoryDescriptor_64": "Филтриран чат в игра"
+    "GameRating_ContentCategoryDescriptor_64": "Филтриран чат в игра",
+    "GameRating_ContentCategories_Title": "Съдържание",
+    "GameRating_Ratings_Title": "Оценки"
 }

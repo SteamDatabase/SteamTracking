@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "Sản phẩm này không tương thích với hệ điều hành macOS sử dụng vi xử lý Intel. <1>Nhấp vào đây</1> để tìm hiểu thêm.",
     "AppPage_PurchaseNote_Mod_Title": "Mod cộng đồng",
     "AppPage_PurchaseNote_Mod_LearnMore": "Nhấp vào <1>đây</1> để tìm hiểu về các bản mod trên Steam.",
+    "AppPage_Franchise_SeeAll": "Xem toàn bộ bộ sưu tập %1$s trên Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Xem toàn bộ %1$s trên Steam",
     "AppPage_Series_ContentTitle": "Nội dung sê-ri",
     "AppPage_Series_ExtraContent": "Nội dung tặng thêm",
     "AppPage_Series_SeasonName_Season": "Mùa %1$s",

@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Lås upp tråd (%1$s)",
     "moderation_actions_sustain": "Bibehåll moderering",
     "moderation_actions_sustain_multiple": "Bibehåll moderering (%1$s)",
+    "moderation_actions_sustain_short": "Upprätthåll",
     "moderation_actions_suspicious": "Markera som misstänkt",
     "moderation_actions_suspicious_multiple": "Markera som misstänkt (%1$s)",
     "moderation_actions_unknown": "Okänt",

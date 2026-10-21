@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Thema öffnen (%1$s)",
     "moderation_actions_sustain": "Moderation aufrechterhalten",
     "moderation_actions_sustain_multiple": "Moderation aufrechterhalten (%1$s)",
+    "moderation_actions_sustain_short": "Aufrechterhalten",
     "moderation_actions_suspicious": "Als verdächtig markieren",
     "moderation_actions_suspicious_multiple": "Als verdächtig markieren (%1$s)",
     "moderation_actions_unknown": "Unbekannt",

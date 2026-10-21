@@ -4,7 +4,7 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module_exports(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -18,28 +18,19 @@
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ extends _.Message {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -123,16 +114,16 @@
           getClassName() {
             return "CClanFAQSummary";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.language || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -195,16 +186,16 @@
           getClassName() {
             return "CClanFAQSummary_CLanguageInfo";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -292,16 +283,16 @@
           getClassName() {
             return "CClanFAQContent";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -364,16 +355,16 @@
           getClassName() {
             return "CClanFAQS_Create_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -426,16 +417,16 @@
           getClassName() {
             return "CClanFAQS_Create_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -493,9 +484,7 @@
           getClassName() {
             return "CClanFAQS_Delete_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -537,13 +526,15 @@
             return "CClanFAQS_Delete_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -606,9 +597,7 @@
           getClassName() {
             return "CClanFAQS_UpdateInternalName_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -650,13 +639,15 @@
             return "CClanFAQS_UpdateInternalName_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -719,9 +710,7 @@
           getClassName() {
             return "CClanFAQS_UpdateJsonData_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -763,13 +752,15 @@
             return "CClanFAQS_UpdateJsonData_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -837,9 +828,7 @@
           getClassName() {
             return "CClanFAQS_SetVisibility_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -881,13 +870,15 @@
             return "CClanFAQS_SetVisibility_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -960,16 +951,16 @@
           getClassName() {
             return "CClanFAQS_UpdateDraft_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.last_update_timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1022,16 +1013,16 @@
           getClassName() {
             return "CClanFAQS_UpdateDraft_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [3], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1097,16 +1088,16 @@
           getClassName() {
             return "CClanFAQS_PublishDraft_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.last_publish_timestamp || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1159,16 +1150,16 @@
           getClassName() {
             return "CClanFAQS_PublishDraft_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1231,16 +1222,16 @@
           getClassName() {
             return "CClanFAQS_PreviewDraft_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1292,16 +1283,16 @@
           getClassName() {
             return "CClanFAQS_PreviewDraft_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1359,16 +1350,16 @@
           getClassName() {
             return "CClanFAQS_GetFAQ_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1426,16 +1417,16 @@
           getClassName() {
             return "CClanFAQS_GetFAQ_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1503,16 +1494,16 @@
           getClassName() {
             return "CClanFAQS_GetFAQVersion_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1564,16 +1555,16 @@
           getClassName() {
             return "CClanFAQS_GetFAQVersion_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1631,16 +1622,16 @@
           getClassName() {
             return "CClanFAQS_GetAllDrafts_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.summary || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1698,16 +1689,16 @@
           getClassName() {
             return "CClanFAQS_GetAllDrafts_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1760,16 +1751,16 @@
           getClassName() {
             return "CClanFAQS_GetAllFAQsForClan_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1823,16 +1814,16 @@
           getClassName() {
             return "CClanFAQS_GetAllFAQsForClan_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1890,16 +1881,16 @@
           getClassName() {
             return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faqs || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1953,16 +1944,16 @@
           getClassName() {
             return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.steamid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2015,9 +2006,7 @@
           getClassName() {
             return "CClanFAQS_CheckFAQPermissions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2059,13 +2048,15 @@
             return "CClanFAQS_CheckFAQPermissions_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.search_text || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2, 5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2144,16 +2135,16 @@
           getClassName() {
             return "CClanFAQS_SearchFAQs_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faqs || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2217,16 +2208,16 @@
           getClassName() {
             return "CClanFAQS_SearchFAQs_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.articleid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [6], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2306,16 +2297,16 @@
           getClassName() {
             return "CClanFAQS_SearchFAQs_Response_CFAQSearchResult";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2378,9 +2369,7 @@
           getClassName() {
             return "CClanFAQs_FetchLocalizationFromCrowdIn_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -2422,13 +2411,15 @@
             return "CClanFAQs_FetchLocalizationFromCrowdIn_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.faq_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2486,16 +2477,16 @@
           getClassName() {
             return "CClanFAQs_GetCrowdInMetadata_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.crowdin_project_id || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2553,10 +2544,8 @@
           getClassName() {
             return "CClanFAQs_GetCrowdInMetadata_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        var _;
+        }
+        var module_exports;
         ((_) => {
           function _(_, _, _) {
             return _.SendMsg("ClanFAQS.Create#1", (0, _._)(_, _, _), _, {
@@ -2627,12 +2616,14 @@
           function _(_, _, _) {
             return _.SendMsg("ClanFAQS.GetFAQVersion#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.GetFAQVersion = _;
           function _(_, _, _) {
             return _.SendMsg("ClanFAQS.GetAllDrafts#1", (0, _._)(_, _, _), _, {
               ePrivilege: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.GetAllDrafts = _;
@@ -2674,6 +2665,7 @@
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
+              rgBrowserAPISites: ["help"],
             });
           }
           _.SearchFAQs = _;
@@ -2704,27 +2696,27 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module_exports(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = new Map([
-            ...Array.from(_._.entries()),
-            ...Array.from(_._.entries()),
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid");
+        const module_exports = new Map([
+            ...Array.from(_.module_exports.entries()),
+            ...Array.from(_.module_exports.entries()),
             [
               "section",
               {
@@ -2747,7 +2739,7 @@
               },
             ],
           ]),
-          _ = (_) => {
+          module_exports = (_) => {
             const { text: _, bShowErrorInfo: _, version: _, language: _ } = _,
               _ = _.useCallback(
                 (_) =>
@@ -2767,10 +2759,7 @@
                   ),
                 [],
               ),
-              _ = _.useMemo(
-                () => new _._(_, _, _ != null ? _ : _._.LANGUAGE),
-                [_, _],
-              );
+              _ = _.useMemo(() => new _._(_, _, _ ?? _._.LANGUAGE), [_, _]);
             return (0, _.jsx)("div", {
               className: _().FAQContainer,
               children: _.ParseBBCode(_, {
@@ -2800,15 +2789,10 @@
           });
         }
         function _(_) {
-          var _, _, _;
           const { showErrorInfo: _, version: _ } = _.context;
-          let _ =
-            (_ = _ == null ? void 0 : _.children) == null
-              ? void 0
-              : _.toString();
-          (_ == null || _ == null || _.length == 0) &&
-            (_ = (_ = _ == null ? void 0 : _.args) == null ? void 0 : _[""]);
-          const _ = (_ = _ == null ? void 0 : _.args) == null ? void 0 : _.alt,
+          let _ = _?.children?.toString();
+          (_ == null || _ == null || _.length == 0) && (_ = _?.args?.[""]);
+          const _ = _?.args?.alt,
             _ = (0, _._)(_, _.language, Number.parseInt(_));
           return _ == null
             ? null
@@ -2844,7 +2828,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module_exports(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -2854,31 +2838,22 @@
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _, _) => {
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__.module_exports(_),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = Object.defineProperty,
+          module_exports = Object.getOwnPropertyDescriptor,
+          module_exports = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -2886,14 +2861,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
+          m_summary = void 0;
+          m_mapStoredDrafts;
+          m_mapLocalUpdates = new Map();
           constructor(_, _) {
-            _(this, "m_summary"),
-              _(this, "m_mapStoredDrafts"),
-              _(this, "m_mapLocalUpdates", new Map()),
-              (0, _._)(this),
+            (0, _._)(this),
               (this.m_summary = _),
               (this.m_mapStoredDrafts = _),
               (this.m_mapLocalUpdates = new Map());
@@ -2910,9 +2884,8 @@
             );
           }
           async SaveDrafts() {
-            var _, _, _, _;
             (0, _._)(
-              !!((_ = this.m_summary) != null && _.faq_id),
+              !!this.m_summary?.faq_id,
               "Attempting to save when we lack a FaqID in the summary object",
             );
             let _ = _._,
@@ -2921,23 +2894,14 @@
               if (
                 (this.m_mapLocalUpdates.get(_).strTitle &&
                   this.m_mapLocalUpdates.get(_).strTitle !==
-                    ((_ = this.m_mapStoredDrafts.get(_)) == null
-                      ? void 0
-                      : _.title)) ||
+                    this.m_mapStoredDrafts.get(_)?.title) ||
                 (this.m_mapLocalUpdates.get(_).strContent &&
                   this.m_mapLocalUpdates.get(_).strContent !==
-                    ((_ = this.m_mapStoredDrafts.get(_)) == null
-                      ? void 0
-                      : _.content))
+                    this.m_mapStoredDrafts.get(_)?.content)
               ) {
                 const _ = this.GetDraftTitle(_),
                   _ = this.GetDraftContent(_),
-                  _ = _.Get().UpdateDraft(
-                    (_ = this.m_summary) == null ? void 0 : _.faq_id,
-                    _,
-                    _,
-                    _,
-                  );
+                  _ = _.Get().UpdateDraft(this.m_summary?.faq_id, _, _, _);
                 _.then((_) => {
                   _.eResult == _._
                     ? (0, _._)(() => {
@@ -2983,66 +2947,39 @@
             return await Promise.all(_), _;
           }
           GetFAQInternalName() {
-            var _;
-            return (_ = this.m_summary) == null ? void 0 : _.internal_name;
+            return this.m_summary?.internal_name;
           }
           GetDraftTitle(_) {
-            var _;
             return this.m_mapLocalUpdates.get(_).strTitle !== null &&
               this.m_mapLocalUpdates.get(_).strTitle !== void 0
               ? this.m_mapLocalUpdates.get(_).strTitle
-              : (_ = this.m_mapStoredDrafts.get(_)) == null
-                ? void 0
-                : _.title;
+              : this.m_mapStoredDrafts.get(_)?.title;
           }
           GetDraftContent(_) {
-            var _;
             return this.m_mapLocalUpdates.get(_).strContent !== null &&
               this.m_mapLocalUpdates.get(_).strContent !== void 0
               ? this.m_mapLocalUpdates.get(_).strContent
-              : (_ = this.m_mapStoredDrafts.get(_)) == null
-                ? void 0
-                : _.content;
+              : this.m_mapStoredDrafts.get(_)?.content;
           }
           GetDraftTitleWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-            var _, _, _, _, _, _;
             const _ = _ == _._.k_ESteamRealmChina ? _.NFp : _.Bhc;
-            return (_ =
-              (_ =
-                (_ =
-                  (_ = this.m_mapLocalUpdates.get(_).strTitle) != null
-                    ? _
-                    : this.m_mapLocalUpdates.get(_).strTitle) != null
-                  ? _
-                  : (_ = this.m_mapStoredDrafts.get(_)) == null
-                    ? void 0
-                    : _.title) != null
-                ? _
-                : (_ = this.m_mapStoredDrafts.get(_)) == null
-                  ? void 0
-                  : _.title) != null
-              ? _
-              : "";
+            return (
+              this.m_mapLocalUpdates.get(_).strTitle ??
+              this.m_mapLocalUpdates.get(_).strTitle ??
+              this.m_mapStoredDrafts.get(_)?.title ??
+              this.m_mapStoredDrafts.get(_)?.title ??
+              ""
+            );
           }
           GetDraftContentWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-            var _, _, _, _, _, _;
             const _ = _ == _._.k_ESteamRealmChina ? _.NFp : _.Bhc;
-            return (_ =
-              (_ =
-                (_ =
-                  (_ = this.m_mapLocalUpdates.get(_).strContent) != null
-                    ? _
-                    : this.m_mapLocalUpdates.get(_).strContent) != null
-                  ? _
-                  : (_ = this.m_mapStoredDrafts.get(_)) == null
-                    ? void 0
-                    : _.content) != null
-                ? _
-                : (_ = this.m_mapStoredDrafts.get(_)) == null
-                  ? void 0
-                  : _.content) != null
-              ? _
-              : "";
+            return (
+              this.m_mapLocalUpdates.get(_).strContent ??
+              this.m_mapLocalUpdates.get(_).strContent ??
+              this.m_mapStoredDrafts.get(_)?.content ??
+              this.m_mapStoredDrafts.get(_)?.content ??
+              ""
+            );
           }
           GetLastSavedDraftVersion(_) {
             return this.m_mapStoredDrafts.get(_);
@@ -3051,16 +2988,12 @@
             return !!(this.GetDraftContent(_) || this.GetDraftTitle(_));
           }
           SetDraftTitle(_, _) {
-            var _;
-            _ ===
-            ((_ = this.m_mapStoredDrafts.get(_)) == null ? void 0 : _.title)
+            _ === this.m_mapStoredDrafts.get(_)?.title
               ? (this.m_mapLocalUpdates.get(_).strTitle = null)
               : (this.m_mapLocalUpdates.get(_).strTitle = _);
           }
           SetDraftContent(_, _) {
-            var _;
-            _ ===
-            ((_ = this.m_mapStoredDrafts.get(_)) == null ? void 0 : _.content)
+            _ === this.m_mapStoredDrafts.get(_)?.content
               ? (this.m_mapLocalUpdates.get(_).strContent = null)
               : (this.m_mapLocalUpdates.get(_).strContent = _);
           }
@@ -3085,13 +3018,7 @@
             );
           }
           GetLastTimeLanguageUpdated(_) {
-            var _, _;
-            return (_ =
-              (_ = this.GetLastSavedDraftVersion(_)) == null
-                ? void 0
-                : _.timestamp) != null
-              ? _
-              : 0;
+            return this.GetLastSavedDraftVersion(_)?.timestamp ?? 0;
           }
           GetFAQID() {
             return this.m_summary.faq_id;
@@ -3100,20 +3027,14 @@
             return this.m_summary;
           }
           BLocalizeDraft() {
-            var _;
             return this.m_summary.json_data.length === 0
               ? !1
-              : (_ = JSON.parse(this.m_summary.json_data).localizeDraft) != null
-                ? _
-                : !1;
+              : (JSON.parse(this.m_summary.json_data).localizeDraft ?? !1);
           }
           BPushToCrowdIn() {
-            var _;
             return this.m_summary.json_data.length === 0
               ? !1
-              : (_ = JSON.parse(this.m_summary.json_data).pushToCrowdIn) != null
-                ? _
-                : !1;
+              : (JSON.parse(this.m_summary.json_data).pushToCrowdIn ?? !1);
           }
           GetJsonData() {
             return this.m_summary.json_data;
@@ -3125,25 +3046,16 @@
             );
           }
         }
-        _([_._], _.prototype, "m_summary", 2),
-          _([_._], _.prototype, "m_mapLocalUpdates", 2),
-          _([_._], _.prototype, "BHasSomeTextForLanguage", 1),
-          _([_._], _.prototype, "GetLastTimeLanguageUpdated", 1);
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _, _) => {
+        _([_.module_exports], _.prototype, "m_summary", 2),
+          _([_.module_exports], _.prototype, "m_mapLocalUpdates", 2),
+          _([_.module_exports], _.prototype, "BHasSomeTextForLanguage", 1),
+          _([_.module_exports], _.prototype, "GetLastTimeLanguageUpdated", 1);
+        var module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = __webpack_require__("chunkid"),
+          module_exports = Object.defineProperty,
+          module_exports = Object.getOwnPropertyDescriptor,
+          module_exports = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
               _ >= 0;
@@ -3151,28 +3063,27 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
-          constructor() {
-            _(this, "m_mapFAQSummaries", new Map()),
-              _(this, "m_mapFAQPublishedContent", new Map()),
-              _(this, "m_mapFAQDrafts", new Map()),
-              _(this, "m_bHasFAQEdit", !1),
-              _(this, "m_steamInterface", null),
-              (0, _._)(this),
-              _._.IN_STEAMUI ||
-                (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
-          }
+          };
+        const module_exports = class _ {
+          m_mapFAQSummaries = new Map();
+          m_mapFAQPublishedContent = new Map();
+          m_mapFAQDrafts = new Map();
+          m_bHasFAQEdit = !1;
+          m_steamInterface = null;
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
           static Init(_) {
             _.Get().m_steamInterface = _;
           }
+          constructor() {
+            (0, _._)(this),
+              _._.IN_STEAMUI ||
+                (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
+          }
           SetUpWebAPIInterface() {
-            const _ = (0, _._)("faqstore", "application_config"),
-              _ = _ == null ? void 0 : _.webapi_token;
+            const _ = (0, _._)("faqstore", "application_config")?.webapi_token;
             this.m_steamInterface = (0, _._)(new _._(_._.WEBAPI_BASE_URL, _));
           }
           ReadInitialPayload() {
@@ -3181,8 +3092,8 @@
               if (_.faqs)
                 for (const _ in _.faqs) {
                   const _ = _.faqs[_];
-                  (_ == null ? void 0 : _.faq_id) != _ ||
-                    (_ == null ? void 0 : _.language) === void 0 ||
+                  _?.faq_id != _ ||
+                    _?.language === void 0 ||
                     (this.m_mapFAQPublishedContent.has(_) ||
                       this.m_mapFAQPublishedContent.set(_, new Map()),
                     this.m_mapFAQPublishedContent.get(_).set(_.language, _));
@@ -3190,7 +3101,7 @@
               if (_.alldrafts)
                 for (const _ in _.alldrafts) {
                   const _ = _.alldrafts[_];
-                  if (!(_ != null && _.summary) || !_.draft) continue;
+                  if (!_?.summary || !_.draft) continue;
                   this.m_mapFAQSummaries.set(_, _.summary);
                   const _ = new Map();
                   for (const _ of _.draft) _.set(_.language, _);
@@ -3348,6 +3259,11 @@
             }
             return _;
           }
+          static sm_mapFallbackLanguages = new Map([
+            [_.HkE, _.FHN],
+            [_.FHN, _.HkE],
+            [_.ZLm, _.NFp],
+          ]);
           GetFAQPublishedContent(_, _) {
             const _ = this.m_mapFAQPublishedContent.get(_);
             if (!_) return null;
@@ -3457,17 +3373,15 @@
                     this.m_mapFAQPublishedContent.has(_) ||
                       this.m_mapFAQPublishedContent.set(_, new Map()),
                       _.per_language_info.forEach((_) => {
-                        var _;
                         const _ = _.language;
                         if (_.indexOf(_) >= 0) {
                           _.last_publish_timestamp = Math.max(
                             _.last_publish_timestamp,
                             _.Body().last_publish_timestamp(),
                           );
-                          const _ =
-                            (_ = this.m_mapFAQDrafts.get(_)) == null
-                              ? void 0
-                              : _.GetLastSavedDraftVersion(_);
+                          const _ = this.m_mapFAQDrafts
+                            .get(_)
+                            ?.GetLastSavedDraftVersion(_);
                           this.m_mapFAQPublishedContent.get(_).set(_, _);
                         }
                       });
@@ -3498,15 +3412,10 @@
               ).GetEResult()),
                 _ === _._
                   ? (0, _._)(() => {
-                      var _, _, _;
-                      (_ = this.m_mapFAQSummaries.get(_)) != null &&
-                        _.internal_name &&
+                      this.m_mapFAQSummaries.get(_)?.internal_name &&
                         (this.m_mapFAQSummaries.get(_).internal_name = _),
-                        (_ =
-                          (_ = this.m_mapFAQDrafts.get(_)) == null
-                            ? void 0
-                            : _.GetSummary()) != null &&
-                          _.internal_name &&
+                        this.m_mapFAQDrafts.get(_)?.GetSummary()
+                          ?.internal_name &&
                           (this.m_mapFAQDrafts
                             .get(_)
                             .GetSummary().internal_name = _);
@@ -3525,15 +3434,10 @@
             return Array.from(this.m_mapFAQDrafts.values());
           }
           RemoveAllDirtyDrafts() {
-            var _, _;
-            const _ =
-              (_ =
-                (_ = this.GetLoadedDraftObjs()) == null
-                  ? void 0
-                  : _.filter((_) => _.BNeedsSaving())) == null
-                ? void 0
-                : _.map((_) => _.GetFAQID());
-            _ == null || _.forEach((_) => this.m_mapFAQDrafts.delete(_));
+            this.GetLoadedDraftObjs()
+              ?.filter((_) => _.BNeedsSaving())
+              ?.map((_) => _.GetFAQID())
+              ?.forEach((_) => this.m_mapFAQDrafts.delete(_));
           }
           BHasFAQEdit() {
             return this.m_bHasFAQEdit;
@@ -3548,7 +3452,6 @@
             await _().get(_);
           }
           async ImportNonEnglishDraftsFromCrowdin(_, _, _) {
-            var _, _;
             const _ =
                 _._.COMMUNITY_BASE_URL +
                 "faqs/" +
@@ -3562,14 +3465,10 @@
             try {
               const _ = await _().post(_, _, {
                 withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
+                cancelToken: _?.token,
               });
-              if (
-                (_ == null ? void 0 : _.status) == 200 &&
-                ((_ = _.data) == null ? void 0 : _.success) == _._
-              ) {
-                const _ = _.data.updated,
-                  _ = (_ = _ == null ? void 0 : _[_]) != null ? _ : [];
+              if (_?.status == 200 && _.data?.success == _._) {
+                const _ = _.data.updated?.[_] ?? [];
                 return (
                   _.length > 0 &&
                     (this.m_mapFAQSummaries.has(_) ||
@@ -3606,34 +3505,21 @@
           GetNonEnglishDraftsToPublish(_) {
             return this.m_mapFAQSummaries
               .get(_)
-              .per_language_info.filter((_) => {
-                var _;
-                return (
+              .per_language_info.filter(
+                (_) =>
                   _.language != _.Bhc &&
-                  _.last_update_timestamp >
-                    ((_ = _.last_publish_timestamp) != null ? _ : 0)
-                );
-              })
+                  _.last_update_timestamp > (_.last_publish_timestamp ?? 0),
+              )
               .map((_) => _.language);
           }
         };
-        _(_, "s_Singleton"),
-          _(
-            _,
-            "sm_mapFallbackLanguages",
-            new Map([
-              [_.HkE, _.FHN],
-              [_.FHN, _.HkE],
-              [_.ZLm, _.NFp],
-            ]),
-          ),
-          _([_._], _.prototype, "m_mapFAQSummaries", 2),
-          _([_._], _.prototype, "RemoveAllDirtyDrafts", 1);
-        let _ = _;
-        const _ = /^[0-9a-fA-F]+$/;
+        _([_.module_exports], _.prototype, "m_mapFAQSummaries", 2),
+          _([_.module_exports], _.prototype, "RemoveAllDirtyDrafts", 1);
+        let module_exports = _;
+        const module_exports = /^[0-9a-fA-F]+$/;
         function _(_) {
-          const _ = _ == null ? void 0 : _.replace(/-/g, "");
-          return (_ == null ? void 0 : _.length) != 16 || !_.test(_)
+          const _ = _?.replace(/-/g, "");
+          return _?.length != 16 || !_.test(_)
             ? null
             : _._.fromString(_, !0, 16).toString();
         }

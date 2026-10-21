@@ -178,7 +178,7 @@
                 },
                 _,
               )),
-              (_ == null ? void 0 : _.length) > 0)
+              _?.length > 0)
             ) {
               (_ += _.length), _(_), (_ = _[_.length - 1].GID);
               const _ = _.filter(
@@ -195,7 +195,7 @@
                     _ = _.GetEndTimeAndDateUnixSeconds();
                   _.push({
                     appid: _.appid,
-                    app_name: (_ == null ? void 0 : _.GetName()) || "",
+                    app_name: _?.GetName() || "",
                     event_name: _.GetNameWithFallback(_),
                     event_type: _.GetEventTypeAsString(),
                     event_start_date: (0, _._)(_) + " @ " + (0, _._)(_),
@@ -343,7 +343,6 @@
             });
           },
           _ = (_) => {
-            var _;
             const { record: _ } = _,
               _ = _.useMemo(() => _._.InitFromClanID(_._.CLANACCOUNTID), []);
             return (0, _.jsxs)("div", {
@@ -378,10 +377,7 @@
                   }),
                 }),
                 (0, _.jsxs)("div", {
-                  children: [
-                    "tags: ",
-                    (_ = _.tags) == null ? void 0 : _.join(", "),
-                  ],
+                  children: ["tags: ", _.tags?.join(", ")],
                 }),
                 (0, _.jsx)("div", {
                   className: _.AuditItemStatsCtn,
@@ -505,7 +501,6 @@
           _ = "tabs_jumplist_",
           _ = "tabs_tagfilter_name_";
         function _(_, _, _, _) {
-          var _, _, _, _, _;
           let _ = new _._();
           if (_) {
             let _ = _.GetEventModel();
@@ -552,17 +547,15 @@
                 _.GetEventModel().jsondata.meet_steam_schedules &&
                   _.GetEventModel().jsondata.meet_steam_schedules.forEach(
                     (_) => {
-                      var _;
-                      (_ = _ == null ? void 0 : _.session_breaks) == null ||
-                        _.forEach((_) => {
-                          _.localized_break_description &&
-                            _._.Get(_.localized_break_description, _) &&
-                            _.SetLocalization(
-                              _ + _.schedule_id + "_" + _.break_id,
-                              _,
-                              _._.Get(_.localized_break_description, _),
-                            );
-                        });
+                      _?.session_breaks?.forEach((_) => {
+                        _.localized_break_description &&
+                          _._.Get(_.localized_break_description, _) &&
+                          _.SetLocalization(
+                            _ + _.schedule_id + "_" + _.break_id,
+                            _,
+                            _._.Get(_.localized_break_description, _),
+                          );
+                      });
                     },
                   );
           }
@@ -585,11 +578,8 @@
           }
           const _ = _.GetEventModel().jsondata;
           if (
-            _ != null &&
-            _.bBroadcastEnabled &&
-            ((_ = _ == null ? void 0 : _.localized_broadcast_title) == null
-              ? void 0
-              : _.length) > 0
+            _?.bBroadcastEnabled &&
+            _?.localized_broadcast_title?.length > 0
           ) {
             for (let _ = _.Bhc; _ < _.bP9; ++_)
               if (_._.Get(_.localized_broadcast_title, _)) {
@@ -599,9 +589,8 @@
           }
           if (
             (_ &&
-              ((_ = _.user_polls) == null ? void 0 : _.length) > 0 &&
+              _.user_polls?.length > 0 &&
               _.user_polls.forEach((_) => {
-                var _;
                 for (let _ = _.Bhc; _ < _.bP9; ++_)
                   _.localized_poll_description &&
                     _._.Get(_.localized_poll_description, _) &&
@@ -610,23 +599,19 @@
                       _,
                       _.localized_poll_description[_],
                     ),
-                    (_ = _ == null ? void 0 : _.options) == null ||
-                      _.forEach((_) => {
-                        _.localized_option &&
-                          _._.Get(_.localized_option, _) &&
-                          _.SetLocalization(
-                            _ + _.option_id,
-                            _,
-                            _.localized_option[_],
-                          );
-                      });
+                    _?.options?.forEach((_) => {
+                      _.localized_option &&
+                        _._.Get(_.localized_option, _) &&
+                        _.SetLocalization(
+                          _ + _.option_id,
+                          _,
+                          _.localized_option[_],
+                        );
+                    });
               }),
             _ && _.BHasSaleEnabled())
           ) {
-            if (
-              (_ = _ == null ? void 0 : _.sale_presenters) != null &&
-              _.length
-            )
+            if (_?.sale_presenters?.length)
               for (let _ = _.Bhc; _ < _.bP9; ++_)
                 _.sale_presenters.forEach((_) => {
                   if (_._.Get(_.localized_presenter_name, _)) {
@@ -634,18 +619,9 @@
                     _.SetLocalization(_ + _.unique_id, _, _);
                   }
                 });
-            ((_ = (_ = _.sale_sub_menu) == null ? void 0 : _.menu_items) == null
-              ? void 0
-              : _.length) > 0 &&
+            _.sale_sub_menu?.menu_items?.length > 0 &&
               _.sale_sub_menu.menu_items
-                .filter((_) => {
-                  var _;
-                  return (
-                    ((_ = _.localized_sub_menu_name) == null
-                      ? void 0
-                      : _.length) > 0
-                  );
-                })
+                .filter((_) => _.localized_sub_menu_name?.length > 0)
                 .map((_) => {
                   for (let _ = _.Bhc; _ < _.bP9; ++_)
                     _.localized_sub_menu_name &&
@@ -659,28 +635,6 @@
               _.GetSaleSections()
                 .filter((_) => !_.disable_localization)
                 .forEach((_) => {
-                  var _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _,
-                    _;
                   const _ = _.GetSaleSectionIndexByID(_.unique_id, !1);
                   for (let _ = _.Bhc; _ < _.bP9; ++_) {
                     if (
@@ -727,14 +681,9 @@
                             _.tab_jump_list.menu_items &&
                             _.tab_jump_list.menu_items.length > 0 &&
                             _.tab_jump_list.menu_items
-                              .filter((_) => {
-                                var _;
-                                return (
-                                  ((_ = _.localized_sub_menu_name) == null
-                                    ? void 0
-                                    : _.length) > 0
-                                );
-                              })
+                              .filter(
+                                (_) => _.localized_sub_menu_name?.length > 0,
+                              )
                               .map((_) => {
                                 for (let _ = _.Bhc; _ < _.bP9; ++_)
                                   _.localized_sub_menu_name &&
@@ -749,7 +698,7 @@
                             _,
                             _,
                             _ + _.unique_id + "_",
-                            (_ = _.tab_tag_filter) == null ? void 0 : _.rgNodes,
+                            _.tab_tag_filter?.rgNodes,
                           );
                     if (
                       (_.enable_faceted_browsing &&
@@ -788,17 +737,13 @@
                           });
                         })),
                       _.section_type == "vo_internal" &&
-                        ((_ = _.internal_section_data) == null
-                          ? void 0
-                          : _.internal_type) == "reservation_widget" &&
-                        (((_ = _.internal_section_data.reservation_options) ==
-                        null
-                          ? void 0
-                          : _.length) > 0 ||
+                        _.internal_section_data?.internal_type ==
+                          "reservation_widget" &&
+                        (_.internal_section_data.reservation_options?.length >
+                          0 ||
                           _.internal_section_data.reservation_layout) &&
-                        ((_ = _.internal_section_data.reservation_options) ==
-                          null ||
-                          _.forEach((_) => {
+                        (_.internal_section_data.reservation_options?.forEach(
+                          (_) => {
                             _.localized_reservation_desc &&
                               _._.Get(_.localized_reservation_desc, _) &&
                               _.SetLocalization(
@@ -831,14 +776,10 @@
                                   _,
                                   _.localized_delivery_override_desc[_],
                                 );
-                          }),
-                        (_ =
-                          (_ = _.internal_section_data.reservation_layout) ==
-                          null
-                            ? void 0
-                            : _.product_configs) == null ||
-                          _.forEach((_) => {
-                            var _;
+                          },
+                        ),
+                        _.internal_section_data.reservation_layout?.product_configs?.forEach(
+                          (_) => {
                             _.localized_product_config_title &&
                               _._.Get(_.localized_product_config_title, _) &&
                               _.SetLocalization(
@@ -846,31 +787,27 @@
                                 _,
                                 _.localized_product_config_title[_],
                               ),
-                              (_ = _.variations) == null ||
-                                _.forEach((_) => {
-                                  _.localized_variation_name &&
-                                    _._.Get(_.localized_variation_name, _) &&
-                                    _.SetLocalization(
-                                      _ +
-                                        _.unique_id +
-                                        "_" +
-                                        _.unique_id +
-                                        "_" +
-                                        _.unique_id,
-                                      _,
-                                      _.localized_variation_name[_],
-                                    );
-                                });
-                          })),
+                              _.variations?.forEach((_) => {
+                                _.localized_variation_name &&
+                                  _._.Get(_.localized_variation_name, _) &&
+                                  _.SetLocalization(
+                                    _ +
+                                      _.unique_id +
+                                      "_" +
+                                      _.unique_id +
+                                      "_" +
+                                      _.unique_id,
+                                    _,
+                                    _.localized_variation_name[_],
+                                  );
+                              });
+                          },
+                        )),
                       _.section_type == "vo_internal" &&
-                        ((_ = _.internal_section_data) == null
-                          ? void 0
-                          : _.internal_type) == "while_supplies_last" &&
-                        ((_ =
-                          _.internal_section_data.while_supplies_last_option) ==
-                        null
-                          ? void 0
-                          : _.length) > 0 &&
+                        _.internal_section_data?.internal_type ==
+                          "while_supplies_last" &&
+                        _.internal_section_data.while_supplies_last_option
+                          ?.length > 0 &&
                         _.internal_section_data.while_supplies_last_option.forEach(
                           (_) => {
                             _.localized_supply_desc &&
@@ -884,77 +821,65 @@
                         ),
                       (_.section_type == "quiz" ||
                         _.section_type == "template_faq") &&
-                        ((_ = (_ = _.quiz) == null ? void 0 : _.questions) ==
-                        null
-                          ? void 0
-                          : _.length) > 0 &&
-                        ((_ = _.quiz) == null ||
-                          _.questions.forEach((_) => {
-                            _.localized_question &&
-                              _._.Get(_.localized_question, _) &&
-                              _.SetLocalization(
-                                _ + _.unique_id + "_" + _.unique_id,
-                                _,
-                                _.localized_question[_],
-                              ),
-                              _ != null &&
-                                _.answers &&
-                                _.answers.forEach((_) => {
-                                  _.localized_answer &&
-                                    _._.Get(_.localized_answer, _) &&
-                                    _.SetLocalization(
-                                      _ + _.unique_id + "_" + _.unique_id,
-                                      _,
-                                      _.localized_answer[_],
-                                    );
-                                });
-                          })),
+                        _.quiz?.questions?.length > 0 &&
+                        _.quiz?.questions.forEach((_) => {
+                          _.localized_question &&
+                            _._.Get(_.localized_question, _) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_question[_],
+                            ),
+                            _?.answers &&
+                              _.answers.forEach((_) => {
+                                _.localized_answer &&
+                                  _._.Get(_.localized_answer, _) &&
+                                  _.SetLocalization(
+                                    _ + _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _.localized_answer[_],
+                                  );
+                              });
+                        }),
                       _.section_type == "template_techspec" &&
-                        ((_ =
-                          (_ = _.tech_specs) == null
-                            ? void 0
-                            : _.tech_spec_block_list) == null
-                          ? void 0
-                          : _.length) > 0 &&
-                        ((_ = _.tech_specs) == null ||
-                          _.tech_spec_block_list.forEach((_) => {
-                            _.localized_block_title &&
-                              _._.Get(_.localized_block_title, _) &&
-                              _.SetLocalization(
-                                _ + _.unique_id + "_" + _.unique_id,
-                                _,
-                                _.localized_block_title[_],
-                              ),
-                              _ != null &&
-                                _.spec_list &&
-                                _.spec_list.forEach((_) => {
-                                  if (
-                                    _.localized_spec_name &&
-                                    _._.Get(_.localized_spec_name, _)
-                                  ) {
-                                    const _ = _ + _.unique_id + _ + _.unique_id;
-                                    _.SetLocalization(
-                                      _,
-                                      _,
-                                      _.localized_spec_name[_],
-                                    );
-                                  }
-                                  if (
-                                    _.localized_spec_description &&
-                                    _._.Get(_.localized_spec_description, _)
-                                  ) {
-                                    const _ = _ + _.unique_id + _ + _.unique_id;
-                                    _.SetLocalization(
-                                      _,
-                                      _,
-                                      _.localized_spec_description[_].replace(
-                                        /\n/g,
-                                        "<br />",
-                                      ),
-                                    );
-                                  }
-                                });
-                          })),
+                        _.tech_specs?.tech_spec_block_list?.length > 0 &&
+                        _.tech_specs?.tech_spec_block_list.forEach((_) => {
+                          _.localized_block_title &&
+                            _._.Get(_.localized_block_title, _) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_block_title[_],
+                            ),
+                            _?.spec_list &&
+                              _.spec_list.forEach((_) => {
+                                if (
+                                  _.localized_spec_name &&
+                                  _._.Get(_.localized_spec_name, _)
+                                ) {
+                                  const _ = _ + _.unique_id + _ + _.unique_id;
+                                  _.SetLocalization(
+                                    _,
+                                    _,
+                                    _.localized_spec_name[_],
+                                  );
+                                }
+                                if (
+                                  _.localized_spec_description &&
+                                  _._.Get(_.localized_spec_description, _)
+                                ) {
+                                  const _ = _ + _.unique_id + _ + _.unique_id;
+                                  _.SetLocalization(
+                                    _,
+                                    _,
+                                    _.localized_spec_description[_].replace(
+                                      /\n/g,
+                                      "<br />",
+                                    ),
+                                  );
+                                }
+                              });
+                        }),
                       _.section_type == "badge_progress" && _.badge_progress)
                     ) {
                       const _ = _.badge_progress;
@@ -988,10 +913,7 @@
                           );
                     }
                     _.section_type == "quest" &&
-                      ((_ = (_ = _.quest) == null ? void 0 : _.door_info) ==
-                      null
-                        ? void 0
-                        : _.length) > 0 &&
+                      _.quest?.door_info?.length > 0 &&
                       _.quest.door_info.forEach((_) => {
                         _.localized_open_door_description &&
                           _._.Get(_.localized_open_door_description, _) &&
@@ -1009,11 +931,7 @@
                             );
                       }),
                       _.section_type == "rewards" &&
-                        ((_ =
-                          (_ = _.rewards) == null ? void 0 : _.reward_items) ==
-                        null
-                          ? void 0
-                          : _.length) > 0 &&
+                        _.rewards?.reward_items?.length > 0 &&
                         _.rewards.reward_items.forEach((_) => {
                           _.localized_reward_description &&
                             _._.Get(_.localized_reward_description, _) &&
@@ -1027,12 +945,8 @@
                             );
                         }),
                       _.section_type == "claim_item" &&
-                        ((_ =
-                          (_ = _.claim_item_section_data) == null
-                            ? void 0
-                            : _.localized_claim_button) == null
-                          ? void 0
-                          : _.length) > 0 &&
+                        _.claim_item_section_data?.localized_claim_button
+                          ?.length > 0 &&
                         _.claim_item_section_data.localized_claim_button &&
                         _._.Get(
                           _.claim_item_section_data.localized_claim_button,
@@ -1102,38 +1016,25 @@
                             );
                         }),
                       _.section_type == "template_media_content" &&
-                        ((_ =
-                          (_ = _.media_container) == null
-                            ? void 0
-                            : _.media_rows) == null ||
-                          _.forEach((_, _) => {
-                            var _;
-                            (_ = _ == null ? void 0 : _.media_columns) ==
-                              null ||
-                              _.forEach((_) => {
-                                _(_, _, _.unique_id + "_" + _.unique_id, _),
-                                  _.mobile_content_varient &&
-                                    _(
-                                      _,
-                                      _,
-                                      _.unique_id +
-                                        "_" +
-                                        _.unique_id +
-                                        "_mobile",
-                                      _.mobile_content_varient,
-                                    ),
-                                  _.tablet_content_varient &&
-                                    _(
-                                      _,
-                                      _,
-                                      _.unique_id +
-                                        "_" +
-                                        _.unique_id +
-                                        "_tablet",
-                                      _.tablet_content_varient,
-                                    );
-                              });
-                          })),
+                        _.media_container?.media_rows?.forEach((_, _) => {
+                          _?.media_columns?.forEach((_) => {
+                            _(_, _, _.unique_id + "_" + _.unique_id, _),
+                              _.mobile_content_varient &&
+                                _(
+                                  _,
+                                  _,
+                                  _.unique_id + "_" + _.unique_id + "_mobile",
+                                  _.mobile_content_varient,
+                                ),
+                              _.tablet_content_varient &&
+                                _(
+                                  _,
+                                  _,
+                                  _.unique_id + "_" + _.unique_id + "_tablet",
+                                  _.tablet_content_varient,
+                                );
+                          });
+                        }),
                       _.section_type == "template_media_overlay" &&
                         _.media_overlay &&
                         (_(_, _, _.unique_id + "_overlay", _.media_overlay),
@@ -1157,7 +1058,6 @@
           return _;
         }
         function _(_, _, _, _) {
-          var _;
           let _ = _.localized_media_title;
           _ && _._.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
             (_ = _.localized_media_subtitle),
@@ -1166,11 +1066,11 @@
             _ && _._.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
             (_ = _.localized_alt_text),
             _ && _._.Get(_, _) && _.SetLocalization(_ + _, _, _[_]),
-            (_ = (_ = _.title_media) == null ? void 0 : _.localized_alt_text),
+            (_ = _.title_media?.localized_alt_text),
             _ && _._.Get(_, _) && _.SetLocalization(_ + _, _, _[_]);
         }
         function _(_, _, _, _) {
-          for (const _ of _ != null ? _ : []) {
+          for (const _ of _ ?? []) {
             const _ = _ + (0, _._)(_);
             _._.Get(_.rgLocalizedNames, _) &&
               _.SetLocalization(_, _, _.rgLocalizedNames[_]),
@@ -1185,7 +1085,6 @@
               _.forEach((_) => {
                 let _ = !1;
                 _.forEach((_) => {
-                  var _, _, _, _, _;
                   const _ = _.GetLocalization(_, _) || "";
                   if (
                     (_ === _ &&
@@ -1219,14 +1118,11 @@
                       _.SetDirty(_._.jsondata_sales),
                       (_ = !0));
                   }
-                  if (_.startsWith(_)) {
-                    const _ = _.GetEventModel().jsondata;
-                    (_ = _ == null ? void 0 : _.user_polls) == null ||
-                      _.forEach((_) => {
-                        var _;
+                  if (
+                    (_.startsWith(_) &&
+                      _.GetEventModel().jsondata?.user_polls?.forEach((_) => {
                         _.startsWith(_)
-                          ? (_ = _.options) == null ||
-                            _.forEach((_) => {
+                          ? _.options?.forEach((_) => {
                               _ == _ + _.option_id &&
                                 (_ ||
                                   (_.localized_option &&
@@ -1252,11 +1148,9 @@
                             )),
                             _.SetDirty(_._.description),
                             (_ = !0));
-                      });
-                  }
-                  if (
+                      }),
                     _.startsWith(_) &&
-                    _.GetEventModel().jsondata.meet_steam_schedules
+                      _.GetEventModel().jsondata.meet_steam_schedules)
                   )
                     for (
                       let _ = 0;
@@ -1266,14 +1160,7 @@
                     ) {
                       const _ =
                         _.GetEventModel().jsondata.meet_steam_schedules[_];
-                      for (
-                        let _ = 0;
-                        _ <
-                        ((_ = _ == null ? void 0 : _.session_breaks) == null
-                          ? void 0
-                          : _.length);
-                        ++_
-                      ) {
+                      for (let _ = 0; _ < _?.session_breaks?.length; ++_) {
                         const _ = _.session_breaks[_];
                         if (_ == _ + _.schedule_id + "_" + _.break_id) {
                           (_ || _._.Get(_.localized_break_description, _)) &&
@@ -1372,8 +1259,7 @@
                   }
                   if (_.BHasSaleEnabled()) {
                     const _ = _.GetEventModel().jsondata;
-                    (_ = _ == null ? void 0 : _.sale_presenters) != null &&
-                      _.length &&
+                    _?.sale_presenters?.length &&
                       _.sale_presenters.forEach((_) => {
                         if (_ === _ + _.unique_id) {
                           (_ || _._.Get(_.localized_presenter_name, _)) &&
@@ -1389,21 +1275,9 @@
                           _.SetLocalization(_ + _.unique_id, _, _);
                         }
                       }),
-                      ((_ =
-                        (_ = _.sale_sub_menu) == null
-                          ? void 0
-                          : _.menu_items) == null
-                        ? void 0
-                        : _.length) > 0 &&
+                      _.sale_sub_menu?.menu_items?.length > 0 &&
                         _.sale_sub_menu.menu_items
-                          .filter((_) => {
-                            var _;
-                            return (
-                              ((_ = _.localized_sub_menu_name) == null
-                                ? void 0
-                                : _.length) > 0
-                            );
-                          })
+                          .filter((_) => _.localized_sub_menu_name?.length > 0)
                           .map((_) => {
                             if (_ === _ + _.unique_id) {
                               (_ || _._.Get(_.localized_sub_menu_name, _)) &&
@@ -1422,31 +1296,6 @@
                       _.GetSaleSections()
                         .filter((_) => !_.disable_localization)
                         .forEach((_) => {
-                          var _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _,
-                            _;
                           const _ = _.GetSaleSectionIndexByID(_.unique_id, !1);
                           if (
                             ((_ === _ + _ || _ === _ + _.unique_id) &&
@@ -1473,21 +1322,12 @@
                                 (_ || _.BHasSaleSectionTabName(_, _)) &&
                                 _.SetSaleSectionTabName(_, _, _) &&
                                 (_ = !0),
-                                ((_ =
-                                  (_ = _.tab_jump_list) == null
-                                    ? void 0
-                                    : _.menu_items) == null
-                                  ? void 0
-                                  : _.length) > 0 &&
+                                _.tab_jump_list?.menu_items?.length > 0 &&
                                   _.sale_sub_menu.menu_items
-                                    .filter((_) => {
-                                      var _;
-                                      return (
-                                        ((_ = _.localized_sub_menu_name) == null
-                                          ? void 0
-                                          : _.length) > 0
-                                      );
-                                    })
+                                    .filter(
+                                      (_) =>
+                                        _.localized_sub_menu_name?.length > 0,
+                                    )
                                     .map((_) => {
                                       if (
                                         _ ===
@@ -1523,9 +1363,7 @@
                                   _,
                                   _,
                                   _ + _.unique_id + "_",
-                                  (_ = _.tab_tag_filter) == null
-                                    ? void 0
-                                    : _.rgNodes,
+                                  _.tab_tag_filter?.rgNodes,
                                 ) && (_ = !0);
                           if (
                             (_.BHasSaleSectionTextLocalization(_) &&
@@ -1579,19 +1417,13 @@
                                   });
                               }),
                             _.section_type == "vo_internal" &&
-                              ((_ = _.internal_section_data) == null
-                                ? void 0
-                                : _.internal_type) == "reservation_widget" &&
-                              (((_ =
-                                _.internal_section_data.reservation_options) ==
-                              null
-                                ? void 0
-                                : _.length) > 0 ||
+                              _.internal_section_data?.internal_type ==
+                                "reservation_widget" &&
+                              (_.internal_section_data.reservation_options
+                                ?.length > 0 ||
                                 _.internal_section_data.reservation_layout) &&
-                              ((_ =
-                                _.internal_section_data.reservation_options) ==
-                                null ||
-                                _.forEach((_) => {
+                              (_.internal_section_data.reservation_options?.forEach(
+                                (_) => {
                                   _ === _ + _.unique_id + "_" + _.unique_id &&
                                     (_ ||
                                       (_.localized_reservation_desc &&
@@ -1667,15 +1499,10 @@
                                         )),
                                       _.SetDirty(_._.jsondata_sales),
                                       (_ = !0));
-                                }),
-                              (_ =
-                                (_ =
-                                  _.internal_section_data.reservation_layout) ==
-                                null
-                                  ? void 0
-                                  : _.product_configs) == null ||
-                                _.forEach((_) => {
-                                  var _;
+                                },
+                              ),
+                              _.internal_section_data.reservation_layout?.product_configs?.forEach(
+                                (_) => {
                                   _ === _ + _.unique_id + "_" + _.unique_id &&
                                     (_ ||
                                       (_.localized_product_config_title &&
@@ -1695,44 +1522,39 @@
                                       )),
                                     _.SetDirty(_._.jsondata_sales),
                                     (_ = !0)),
-                                    (_ = _.variations) == null ||
-                                      _.forEach((_) => {
-                                        _ ===
-                                          _ +
-                                            _.unique_id +
-                                            "_" +
-                                            _.unique_id +
-                                            "_" +
-                                            _.unique_id &&
-                                          (_ ||
-                                            (_.localized_variation_name &&
-                                              _._.Get(
-                                                _.localized_variation_name,
-                                                _,
-                                              ))) &&
-                                          _._.Get(
-                                            _.localized_variation_name,
-                                            _,
-                                          ) !== _ &&
-                                          ((_.localized_variation_name =
-                                            _._.Set(
-                                              _.localized_variation_name || [],
+                                    _.variations?.forEach((_) => {
+                                      _ ===
+                                        _ +
+                                          _.unique_id +
+                                          "_" +
+                                          _.unique_id +
+                                          "_" +
+                                          _.unique_id &&
+                                        (_ ||
+                                          (_.localized_variation_name &&
+                                            _._.Get(
+                                              _.localized_variation_name,
                                               _,
-                                              _,
-                                            )),
-                                          _.SetDirty(_._.jsondata_sales),
-                                          (_ = !0));
-                                      });
-                                })),
+                                            ))) &&
+                                        _._.Get(
+                                          _.localized_variation_name,
+                                          _,
+                                        ) !== _ &&
+                                        ((_.localized_variation_name = _._.Set(
+                                          _.localized_variation_name || [],
+                                          _,
+                                          _,
+                                        )),
+                                        _.SetDirty(_._.jsondata_sales),
+                                        (_ = !0));
+                                    });
+                                },
+                              )),
                             _.section_type == "vo_internal" &&
-                              ((_ = _.internal_section_data) == null
-                                ? void 0
-                                : _.internal_type) == "while_supplies_last" &&
-                              ((_ =
-                                _.internal_section_data
-                                  .while_supplies_last_option) == null
-                                ? void 0
-                                : _.length) > 0 &&
+                              _.internal_section_data?.internal_type ==
+                                "while_supplies_last" &&
+                              _.internal_section_data.while_supplies_last_option
+                                ?.length > 0 &&
                               _.internal_section_data.while_supplies_last_option.forEach(
                                 (_) => {
                                   _ === _ + _.unique_id + "_" + _.unique_id &&
@@ -1749,57 +1571,39 @@
                                     (_ = !0));
                                 },
                               ),
-                            ((_ =
-                              (_ = _.quiz) == null ? void 0 : _.questions) ==
-                            null
-                              ? void 0
-                              : _.length) > 0 &&
-                              ((_ = _.quiz) == null ||
-                                _.questions.forEach((_) => {
-                                  var _;
-                                  _ === _ + _.unique_id + "_" + _.unique_id
-                                    ? (_ ||
-                                        (_.localized_question &&
-                                          _._.Get(_.localized_question, _))) &&
-                                      _._.Get(_.localized_question, _) !== _ &&
-                                      ((_.localized_question = _._.Set(
-                                        _.localized_question || [],
-                                        _,
-                                        _,
-                                      )),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0))
-                                    : ((_ = _.answers) == null
-                                        ? void 0
-                                        : _.length) > 0 &&
-                                      _.answers.forEach((_) => {
-                                        _ ===
-                                          _ + _.unique_id + "_" + _.unique_id &&
-                                          (_ ||
-                                            (_.localized_answer &&
-                                              _._.Get(
-                                                _.localized_answer,
-                                                _,
-                                              ))) &&
-                                          _._.Get(_.localized_answer, _) !==
-                                            _ &&
-                                          ((_.localized_answer = _._.Set(
-                                            _.localized_answer || [],
-                                            _,
-                                            _,
-                                          )),
-                                          _.SetDirty(_._.jsondata_sales),
-                                          (_ = !0));
-                                      });
-                                })),
-                            ((_ =
-                              (_ = _.tech_specs) == null
-                                ? void 0
-                                : _.tech_spec_block_list) == null
-                              ? void 0
-                              : _.length) > 0 &&
+                            _.quiz?.questions?.length > 0 &&
+                              _.quiz?.questions.forEach((_) => {
+                                _ === _ + _.unique_id + "_" + _.unique_id
+                                  ? (_ ||
+                                      (_.localized_question &&
+                                        _._.Get(_.localized_question, _))) &&
+                                    _._.Get(_.localized_question, _) !== _ &&
+                                    ((_.localized_question = _._.Set(
+                                      _.localized_question || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0))
+                                  : _.answers?.length > 0 &&
+                                    _.answers.forEach((_) => {
+                                      _ ===
+                                        _ + _.unique_id + "_" + _.unique_id &&
+                                        (_ ||
+                                          (_.localized_answer &&
+                                            _._.Get(_.localized_answer, _))) &&
+                                        _._.Get(_.localized_answer, _) !== _ &&
+                                        ((_.localized_answer = _._.Set(
+                                          _.localized_answer || [],
+                                          _,
+                                          _,
+                                        )),
+                                        _.SetDirty(_._.jsondata_sales),
+                                        (_ = !0));
+                                    });
+                              }),
+                            _.tech_specs?.tech_spec_block_list?.length > 0 &&
                               _.tech_specs.tech_spec_block_list.forEach((_) => {
-                                var _;
                                 _ === _ + _.unique_id + "_" + _.unique_id
                                   ? (_ ||
                                       (_.localized_block_title &&
@@ -1812,9 +1616,7 @@
                                     )),
                                     _.SetDirty(_._.jsondata_sales),
                                     (_ = !0))
-                                  : ((_ = _.spec_list) == null
-                                      ? void 0
-                                      : _.length) > 0 &&
+                                  : _.spec_list?.length > 0 &&
                                     _.spec_list.forEach((_) => {
                                       _ === _ + _.unique_id + _ + _.unique_id
                                         ? (_ ||
@@ -1859,61 +1661,49 @@
                                           (_ = !0));
                                     });
                               }),
-                            ((_ =
-                              (_ = _.quest) == null ? void 0 : _.door_info) ==
-                            null
-                              ? void 0
-                              : _.length) > 0 &&
-                              ((_ = _.quest) == null ||
-                                _.door_info.forEach((_) => {
-                                  _ === _ + _.unique_id + "_" + _.unique_id
-                                    ? (_ ||
-                                        (_.localized_closed_door_description &&
-                                          _._.Get(
-                                            _.localized_closed_door_description,
-                                            _,
-                                          ))) &&
-                                      _._.Get(
-                                        _.localized_closed_door_description,
+                            _.quest?.door_info?.length > 0 &&
+                              _.quest?.door_info.forEach((_) => {
+                                _ === _ + _.unique_id + "_" + _.unique_id
+                                  ? (_ ||
+                                      (_.localized_closed_door_description &&
+                                        _._.Get(
+                                          _.localized_closed_door_description,
+                                          _,
+                                        ))) &&
+                                    _._.Get(
+                                      _.localized_closed_door_description,
+                                      _,
+                                    ) !== _ &&
+                                    ((_.localized_closed_door_description =
+                                      _._.Set(
+                                        _.localized_closed_door_description ||
+                                          [],
                                         _,
-                                      ) !== _ &&
-                                      ((_.localized_closed_door_description =
-                                        _._.Set(
-                                          _.localized_closed_door_description ||
-                                            [],
-                                          _,
-                                          _,
-                                        )),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0))
-                                    : _ ===
-                                        _ + _.unique_id + "_" + _.unique_id &&
-                                      (_ ||
-                                        (_.localized_open_door_description &&
-                                          _._.Get(
-                                            _.localized_open_door_description,
-                                            _,
-                                          ))) &&
-                                      _._.Get(
-                                        _.localized_open_door_description,
                                         _,
-                                      ) !== _ &&
-                                      ((_.localized_open_door_description =
-                                        _._.Set(
-                                          _.localized_open_door_description ||
-                                            [],
+                                      )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0))
+                                  : _ === _ + _.unique_id + "_" + _.unique_id &&
+                                    (_ ||
+                                      (_.localized_open_door_description &&
+                                        _._.Get(
+                                          _.localized_open_door_description,
                                           _,
-                                          _,
-                                        )),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0));
-                                })),
-                            ((_ =
-                              (_ = _.rewards) == null
-                                ? void 0
-                                : _.reward_items) == null
-                              ? void 0
-                              : _.length) > 0 &&
+                                        ))) &&
+                                    _._.Get(
+                                      _.localized_open_door_description,
+                                      _,
+                                    ) !== _ &&
+                                    ((_.localized_open_door_description =
+                                      _._.Set(
+                                        _.localized_open_door_description || [],
+                                        _,
+                                        _,
+                                      )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                              }),
+                            _.rewards?.reward_items?.length > 0 &&
                               _.rewards.reward_items.forEach((_) => {
                                 _ ===
                                   _ +
@@ -1936,12 +1726,8 @@
                                   _.SetDirty(_._.jsondata_sales),
                                   (_ = !0));
                               }),
-                            ((_ =
-                              (_ = _.claim_item_section_data) == null
-                                ? void 0
-                                : _.localized_claim_button) == null
-                              ? void 0
-                              : _.length) > 0 &&
+                            _.claim_item_section_data?.localized_claim_button
+                              ?.length > 0 &&
                               _ === _ + _.unique_id &&
                               (_ ||
                                 (_.claim_item_section_data
@@ -2049,115 +1835,111 @@
                               _.SetDirty(_._.jsondata_sales),
                               (_ = !0)),
                             _.section_type == "social_share" &&
-                              ((_ = _.social_share.content_options) == null ||
-                                _.forEach((_) => {
-                                  const _ = _.localized_option_fields;
+                              _.social_share.content_options?.forEach((_) => {
+                                const _ = _.localized_option_fields;
+                                _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.localized_header &&
+                                      _._.Get(_.localized_header, _))) &&
+                                  _._.Get(_.localized_header, _) !== _ &&
+                                  ((_.localized_header = _._.Set(
+                                    _.localized_header || [],
+                                    _,
+                                    _,
+                                  )),
+                                  _.SetDirty(_._.jsondata_sales),
+                                  (_ = !0)),
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                    (_ || (_.title && _._.Get(_.title, _))) &&
+                                    _._.Get(_.title, _) !== _ &&
+                                    ((_.title = _._.Set(_.title || [], _, _)),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0)),
                                   _ === _ + _.unique_id + "_" + _.unique_id &&
                                     (_ ||
-                                      (_.localized_header &&
-                                        _._.Get(_.localized_header, _))) &&
-                                    _._.Get(_.localized_header, _) !== _ &&
-                                    ((_.localized_header = _._.Set(
-                                      _.localized_header || [],
+                                      (_.description &&
+                                        _._.Get(_.description, _))) &&
+                                    _._.Get(_.description, _) !== _ &&
+                                    ((_.description = _._.Set(
+                                      _.description || [],
                                       _,
                                       _,
                                     )),
                                     _.SetDirty(_._.jsondata_sales),
                                     (_ = !0)),
-                                    _ === _ + _.unique_id + "_" + _.unique_id &&
-                                      (_ || (_.title && _._.Get(_.title, _))) &&
-                                      _._.Get(_.title, _) !== _ &&
-                                      ((_.title = _._.Set(_.title || [], _, _)),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0)),
-                                    _ === _ + _.unique_id + "_" + _.unique_id &&
-                                      (_ ||
-                                        (_.description &&
-                                          _._.Get(_.description, _))) &&
-                                      _._.Get(_.description, _) !== _ &&
-                                      ((_.description = _._.Set(
-                                        _.description || [],
-                                        _,
-                                        _,
-                                      )),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0)),
-                                    _ === _ + _.unique_id + "_" + _.unique_id &&
-                                      (_ || (_.image && _._.Get(_.image, _))) &&
-                                      _._.Get(_.image, _) !== _ &&
-                                      ((_.image = _._.Set(_.image || [], _, _)),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0)),
-                                    _ === _ + _.unique_id + "_" + _.unique_id &&
-                                      (_ ||
-                                        (_.twitter_alt_text &&
-                                          _._.Get(_.twitter_alt_text, _))) &&
-                                      _._.Get(_.twitter_alt_text, _) !== _ &&
-                                      ((_.twitter_alt_text = _._.Set(
-                                        _.twitter_alt_text || [],
-                                        _,
-                                        _,
-                                      )),
-                                      _.SetDirty(_._.jsondata_sales),
-                                      (_ = !0));
-                                })),
-                            _.section_type == "media_layout" &&
-                              ((_ = _.media_layout.media_content) == null ||
-                                _.forEach((_, _) => {
-                                  const _ = _.localized_media_desc;
-                                  _ === _ + _.unique_id + "_" + _ &&
-                                    (_ || (_ && _._.Get(_, _))) &&
-                                    _._.Get(_, _) !== _ &&
-                                    ((_.localized_media_desc = _._.Set(
-                                      _ || [],
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                    (_ || (_.image && _._.Get(_.image, _))) &&
+                                    _._.Get(_.image, _) !== _ &&
+                                    ((_.image = _._.Set(_.image || [], _, _)),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0)),
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                    (_ ||
+                                      (_.twitter_alt_text &&
+                                        _._.Get(_.twitter_alt_text, _))) &&
+                                    _._.Get(_.twitter_alt_text, _) !== _ &&
+                                    ((_.twitter_alt_text = _._.Set(
+                                      _.twitter_alt_text || [],
                                       _,
                                       _,
                                     )),
                                     _.SetDirty(_._.jsondata_sales),
                                     (_ = !0));
-                                })),
+                              }),
+                            _.section_type == "media_layout" &&
+                              _.media_layout.media_content?.forEach((_, _) => {
+                                const _ = _.localized_media_desc;
+                                _ === _ + _.unique_id + "_" + _ &&
+                                  (_ || (_ && _._.Get(_, _))) &&
+                                  _._.Get(_, _) !== _ &&
+                                  ((_.localized_media_desc = _._.Set(
+                                    _ || [],
+                                    _,
+                                    _,
+                                  )),
+                                  _.SetDirty(_._.jsondata_sales),
+                                  (_ = !0));
+                              }),
                             _.section_type == "template_media_content" &&
-                              ((_ = _.media_container.media_rows) == null ||
-                                _.forEach((_) => {
-                                  _ == null ||
-                                    _.media_columns.forEach((_) => {
-                                      let _ = _(
+                              _.media_container.media_rows?.forEach((_) => {
+                                _?.media_columns.forEach((_) => {
+                                  let _ = _(
+                                    _,
+                                    _,
+                                    _,
+                                    _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _,
+                                  );
+                                  (_ ||= _),
+                                    _.mobile_content_varient &&
+                                      ((_ = _(
                                         _,
                                         _,
                                         _,
-                                        _.unique_id + "_" + _.unique_id,
+                                        _.unique_id +
+                                          "_" +
+                                          _.unique_id +
+                                          "_mobile",
+                                        _,
+                                        _.mobile_content_varient,
+                                      )),
+                                      (_ ||= _)),
+                                    _.tablet_content_varient &&
+                                      ((_ = _(
                                         _,
                                         _,
-                                      );
-                                      _ || (_ = _),
-                                        _.mobile_content_varient &&
-                                          ((_ = _(
-                                            _,
-                                            _,
-                                            _,
-                                            _.unique_id +
-                                              "_" +
-                                              _.unique_id +
-                                              "_mobile",
-                                            _,
-                                            _.mobile_content_varient,
-                                          )),
-                                          _ || (_ = _)),
-                                        _.tablet_content_varient &&
-                                          ((_ = _(
-                                            _,
-                                            _,
-                                            _,
-                                            _.unique_id +
-                                              "_" +
-                                              _.unique_id +
-                                              "_tablet",
-                                            _,
-                                            _.tablet_content_varient,
-                                          )),
-                                          _ || (_ = _));
-                                    });
-                                })),
+                                        _,
+                                        _.unique_id +
+                                          "_" +
+                                          _.unique_id +
+                                          "_tablet",
+                                        _,
+                                        _.tablet_content_varient,
+                                      )),
+                                      (_ ||= _));
+                                });
+                              }),
                             _.section_type == "template_media_overlay" &&
                               _.media_overlay)
                           ) {
@@ -2170,7 +1952,7 @@
                               _.media_overlay,
                             );
                             if (
-                              (_ || (_ = _),
+                              ((_ ||= _),
                               _.media_overlay_mobile_content_varient)
                             ) {
                               let _ = _(
@@ -2181,7 +1963,7 @@
                                 _,
                                 _.media_overlay_mobile_content_varient,
                               );
-                              _ || (_ = _);
+                              _ ||= _;
                             }
                             if (_.media_overlay_tablet_content_varient) {
                               let _ = _(
@@ -2192,7 +1974,7 @@
                                 _,
                                 _.media_overlay_tablet_content_varient,
                               );
-                              _ || (_ = _);
+                              _ ||= _;
                             }
                           }
                         });
@@ -2249,7 +2031,7 @@
           return _;
         }
         function _(_, _, _, _, _, _) {
-          for (const _ of _ != null ? _ : []) {
+          for (const _ of _ ?? []) {
             const _ = _ + (0, _._)(_);
             if (_ === _)
               return _._.Get(_.rgLocalizedNames, _) === _
@@ -2305,15 +2087,12 @@
           });
         };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bShowCSV: !0,
-                bExportEventBody: !0,
-                bExportEmail: this.props.editModel.BHasEmailEnabled(),
-                bExportSale: this.props.editModel.BHasSaleEnabled(),
-              });
-          }
+          state = {
+            bShowCSV: !0,
+            bExportEventBody: !0,
+            bExportEmail: this.props.editModel.BHasEmailEnabled(),
+            bExportSale: this.props.editModel.BHasSaleEnabled(),
+          };
           GetLocalizationFilePrefix() {
             const { editModel: _ } = this.props;
             let _ = _.GetName(_.Bhc);
@@ -2396,8 +2175,7 @@
                           ],
                         }),
                         !!(
-                          _ != null &&
-                          _.support_user &&
+                          _?.support_user &&
                           (_.BHasSaleEnabled() || _.BHasEmailEnabled)
                         ) &&
                           (0, _.jsxs)("div", {
@@ -2748,12 +2526,8 @@
                     cancelToken: _.token,
                   })
                   .then((_) => {
-                    var _;
                     if (!_.token.reason) {
-                      const _ =
-                        ((_ = _ == null ? void 0 : _.data) == null
-                          ? void 0
-                          : _.success) == _._;
+                      const _ = _?.data?.success == _._;
                       _(
                         _
                           ? _.data.branches.sort((_, _) => _.date - _.date)
@@ -2794,10 +2568,9 @@
             [_, _] = _.useState(void 0),
             [_, _, _] = _(_),
             _ = () => {
-              _(_ == null ? void 0 : _.build_id, _ == null ? void 0 : _.branch),
-                _();
+              _(_?.build_id, _?.branch), _();
             };
-          if (_ != null && _.length && _ === void 0) {
+          if (_?.length && _ === void 0) {
             const _ = _.find((_) => _.branch == "");
             _ && _(_);
           }
@@ -2808,13 +2581,12 @@
               label: (0, _._)("#EventEditor_AssociateBuildClear"),
               data: null,
             }),
-            _ == null ||
-              _.forEach((_) => {
-                _.push({
-                  label: _(_),
-                  data: _,
-                });
-              }),
+            _?.forEach((_) => {
+              _.push({
+                label: _(_),
+                data: _,
+              });
+            }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 onEscKeypress: _,
@@ -2854,7 +2626,6 @@
         };
         var _ = __webpack_require__("chunkid");
         const _ = (0, _._)(function (_) {
-          var _;
           const {
               eventModel: _,
               appid_or_vanity_str: _,
@@ -2916,13 +2687,7 @@
             _ = _.visibility_state == _._.k_EEventStateUnlisted,
             _ = _.BShowLibrarySpotlight(!0),
             _ = _ && _ && !_;
-          _ &&
-            (_ =
-              (((_ = _._.Get().GetApp(_.appid)) == null
-                ? void 0
-                : _.GetName()) || "") +
-              ": " +
-              _);
+          _ && (_ = (_._.Get().GetApp(_.appid)?.GetName() || "") + ": " + _);
           const _ =
               _.BIsPartnerEvent() &&
               _.BIsVisibleEvent() &&
@@ -3346,9 +3111,8 @@
           const _ = new Array();
           return (
             Object.keys(_).forEach((_) => {
-              var _;
               const _ = _[_],
-                _ = ((_ = JSON.stringify(_)) == null ? void 0 : _.length) || 0;
+                _ = JSON.stringify(_)?.length || 0;
               _.push({
                 key: _,
                 size: _,
@@ -3367,9 +3131,8 @@
           );
         }
         const _ = (_) => {
-          var _, _;
           const { eventModel: _ } = _;
-          if (!(_ != null && _.jsondata)) return null;
+          if (!_?.jsondata) return null;
           const _ = _(_.jsondata, 3);
           return (
             _.sort((_, _) => _.size - _.size),
@@ -3379,12 +3142,9 @@
                 (0, _.jsxs)("div", {
                   children: [
                     "Total Size: ",
-                    (_ =
-                      (_ = JSON.stringify(_.jsondata)) == null
-                        ? void 0
-                        : _.length) == null
-                      ? void 0
-                      : _.toLocaleString((0, _._)()),
+                    JSON.stringify(_.jsondata)?.length?.toLocaleString(
+                      (0, _._)(),
+                    ),
                   ],
                 }),
                 _.slice(0, 10).map((_) =>
@@ -3442,25 +3202,17 @@
                 );
                 const _ = (_) => _ || _.GetEventType() != _.ajI,
                   _ = new Map(),
-                  _ =
-                    _ == null
-                      ? void 0
-                      : _.pages.flatMap((_) => _).map((_) => (0, _._)(_, _)),
-                  _ = _ == null ? void 0 : _.filter(_);
-                _ == null || _.forEach((_) => _.set(_.GID, _));
-                const _ = _ == null ? void 0 : _.filter(_);
-                _ == null || _.forEach((_) => _.set(_.GID, _));
-                const _ =
-                  (_ != null ? _ : []).length + (_ != null ? _ : []).length;
+                  _ = _?.pages.flatMap((_) => _).map((_) => (0, _._)(_, _)),
+                  _ = _?.filter(_);
+                _?.forEach((_) => _.set(_.GID, _));
+                const _ = _?.filter(_);
+                _?.forEach((_) => _.set(_.GID, _));
+                const _ = (_ ?? []).length + (_ ?? []).length;
                 return (
-                  _(
-                    _ -
-                      (_ != null ? _ : []).length -
-                      (_ != null ? _ : []).length,
-                  ),
+                  _(_ - (_ ?? []).length - (_ ?? []).length),
                   Array.from(_.values())
                 );
-              }, [_, _ == null ? void 0 : _.pages, _, _]);
+              }, [_, _?.pages, _, _]);
             _.useEffect(() => {
               const _ = _.filter(
                 (_) => !!(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
@@ -3483,22 +3235,19 @@
                 }
               }, [_, _]);
             const _ = (_, _) => {
-                var _;
                 const _ = [];
                 let _ = _;
-                if ((_ == null ? void 0 : _.length) > 0) {
-                  (_ = _.slice().filter((_) => {
-                    var _;
-                    return !(
-                      _.visibility_state !== _ ||
-                      (_ &&
-                        !(
-                          (_ = _.GetNameWithFallback(
-                            (0, _.sfN)(_._.LANGUAGE),
-                          )) != null && _.toLocaleLowerCase().includes(_)
-                        ))
-                    );
-                  })),
+                if (_?.length > 0) {
+                  (_ = _.slice().filter(
+                    (_) =>
+                      !(
+                        _.visibility_state !== _ ||
+                        (_ &&
+                          !_.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE))
+                            ?.toLocaleLowerCase()
+                            .includes(_))
+                      ),
+                  )),
                     _.sort(
                       (_, _) => (
                         (0, _._)(
@@ -3531,11 +3280,7 @@
                       ),
                     );
                 }
-                for (
-                  let _ = 0;
-                  _ < _ - ((_ = _ == null ? void 0 : _.length) != null ? _ : 0);
-                  _++
-                )
+                for (let _ = 0; _ < _ - (_?.length ?? 0); _++)
                   _.push(
                     (0, _.jsx)(
                       "div",
@@ -3558,9 +3303,7 @@
                 [_, _],
               );
             _.useEffect(() => {
-              _.Schedule(200, () =>
-                _(_ == null ? void 0 : _.trim().toLocaleLowerCase()),
-              );
+              _.Schedule(200, () => _(_?.trim().toLocaleLowerCase()));
             }, [_, _]);
             const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
               _ = _(_._.k_EEventStateStaged),
@@ -3856,7 +3599,7 @@
                   children: (0, _.jsx)(_, {
                     summary: _.m_stats,
                     clanSteamID: _,
-                    bIsAllowedInLibrary: _ == null ? void 0 : _.is_ogg,
+                    bIsAllowedInLibrary: _?.is_ogg,
                   }),
                 }),
               ],
@@ -3882,10 +3625,7 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.m_clanSteamID = new _._(_._.CLANSTEAMID));
-          }
+          m_clanSteamID = new _._(_._.CLANSTEAMID);
           componentDidMount() {
             _._.GetEditModel() &&
               this.props.mode === "view" &&
@@ -4310,14 +4050,9 @@
             _ = (0, _._)(
               () => _.jsondata.contenthub_dlc_for_your_flavor_override,
             ),
-            [_, _] = (0, _.useState)(() => {
-              var _;
-              return (
-                ((_ = _.jsondata.prune_list_optin_name) == null
-                  ? void 0
-                  : _.length) > 0
-              );
-            });
+            [_, _] = (0, _.useState)(
+              () => _.jsondata.prune_list_optin_name?.length > 0,
+            );
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -4554,7 +4289,7 @@
                   classNamePrefix: "react-select",
                   isDisabled: !_,
                   options: _,
-                  value: _ == null ? void 0 : _.find((_) => _.value === _),
+                  value: _?.find((_) => _.value === _),
                   onChange: (_) => {
                     (_.jsondata.source_content_hub = {
                       type: _.value,
@@ -4583,12 +4318,11 @@
                         classNamePrefix: "react-select",
                         isDisabled: !_,
                         options: _,
-                        value:
-                          _ == null ? void 0 : _.find((_) => _.value === _),
+                        value: _?.find((_) => _.value === _),
                         onChange: (_) => {
                           (_.jsondata.source_content_hub = {
                             type: _,
-                            category: _ == null ? void 0 : _.value,
+                            category: _?.value,
                           }),
                             _.SetDirty(_._.jsondata_sales);
                         },
@@ -4612,14 +4346,11 @@
                         classNamePrefix: "react-select",
                         isDisabled: !_,
                         options: _,
-                        value:
-                          _ == null
-                            ? void 0
-                            : _.find((_) => Number(_.value) === _),
+                        value: _?.find((_) => Number(_.value) === _),
                         onChange: (_) => {
                           (_.jsondata.source_content_hub = {
                             type: _,
-                            tagid: Number(_ == null ? void 0 : _.value),
+                            tagid: Number(_?.value),
                           }),
                             _.SetDirty(_._.jsondata_sales);
                         },
@@ -4666,7 +4397,7 @@
                     classNamePrefix: "react-select",
                     isDisabled: !_,
                     options: _,
-                    value: _ == null ? void 0 : _.find((_) => _.value === _),
+                    value: _?.find((_) => _.value === _),
                     onChange: (_) => {
                       (_.jsondata.prune_list_optin_name = _.value),
                         _.SetDirty(_._.jsondata_sales);
@@ -5253,16 +4984,12 @@
         var _ = __webpack_require__("chunkid");
         function _(_) {
           const { editModel: _ } = _,
-            [_, _, _] = (0, _._)(() => {
-              var _;
-              return [
-                _.GetEventModel().jsondata.sale_header_offset,
-                ((_ = _.GetEventModel().jsondata.localized_sale_logo) == null
-                  ? void 0
-                  : _.filter(Boolean).length) || 0,
-                _.GetEventModel().jsondata.sale_header_disable_top_margin,
-              ];
-            });
+            [_, _, _] = (0, _._)(() => [
+              _.GetEventModel().jsondata.sale_header_offset,
+              _.GetEventModel().jsondata.localized_sale_logo?.filter(Boolean)
+                .length || 0,
+              _.GetEventModel().jsondata.sale_header_disable_top_margin,
+            ]);
           return (0, _.jsxs)(_._, {
             requireAdmin: !0,
             clanSteamID: _.GetClanSteamID(),
@@ -5294,13 +5021,8 @@
                           (0, _.jsx)(_._, {
                             value: _,
                             onChange: (_) => {
-                              var _;
                               (_.GetEventModel().jsondata.sale_header_offset =
-                                Number(
-                                  (_ = _ == null ? void 0 : _.target) == null
-                                    ? void 0
-                                    : _.value,
-                                ) || 0),
+                                Number(_?.target?.value) || 0),
                                 _.SetDirty(_._.jsondata_sales);
                             },
                           }),
@@ -5398,12 +5120,7 @@
                       strTitle: (0, _._)("#Button_Confirm"),
                       strDescription: (0, _._)("#Sale_HeaderArtwork_Warning"),
                       onOK: () => _.SetNumSalesBackgroundHeader(_),
-                      onCancel: () => {
-                        var _;
-                        return (_ = _ == null ? void 0 : _.current) == null
-                          ? void 0
-                          : _.SetSelectedOption(_);
-                      },
+                      onCancel: () => _?.current?.SetSelectedOption(_),
                     }),
                     window,
                   );
@@ -5493,11 +5210,8 @@
               (0, _.jsx)(_._, {
                 label: (0, _._)("#Sale_BackgroundVideo_WebM"),
                 onChange: (_) => {
-                  var _;
                   (_.GetEventModel().jsondata.sale_background_video_webm =
-                    ((_ = _ == null ? void 0 : _.target) == null
-                      ? void 0
-                      : _.value) || ""),
+                    _?.target?.value || ""),
                     _.SetDirty(_._.jsondata_sales);
                 },
                 value: _,
@@ -5505,11 +5219,8 @@
               (0, _.jsx)(_._, {
                 label: (0, _._)("#Sale_BackgroundVideo_MP4"),
                 onChange: (_) => {
-                  var _;
                   (_.GetEventModel().jsondata.sale_background_video_mp4 =
-                    ((_ = _ == null ? void 0 : _.target) == null
-                      ? void 0
-                      : _.value) || ""),
+                    _?.target?.value || ""),
                     _.SetDirty(_._.jsondata_sales);
                 },
                 value: _,
@@ -5521,24 +5232,13 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
+          m_mapVisibleSections = new Map();
           constructor() {
-            _(this, "m_mapVisibleSections", new Map()),
-              (0, _._)(this, {
-                m_mapVisibleSections: _._,
-              });
+            (0, _._)(this, {
+              m_mapVisibleSections: _._,
+            });
           }
         }
         const _ = (0, _.createContext)(null);
@@ -5585,8 +5285,178 @@
             "eb_sale_sect_" + _,
           );
         }
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__._(_);
+        const _ = ["sale_cross_promo_background"];
+        function _(_) {
+          const { editModel: _ } = _,
+            { openColorPicker: _ } = (0, _._)(),
+            [_, _] = (0, _._)(() => [
+              _.GetEventModel().jsondata.sale_cross_promo_carousel_background,
+              _.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color,
+            ]),
+            _ = (0, _.useCallback)(
+              (_, _, _, _, _, _, _) => {
+                const _ = (0, _._)(_, _);
+                if (!_?.image) {
+                  (0, _._)(
+                    !1,
+                    "Cross-promote background conversion produced no image: " +
+                      _,
+                  );
+                  return;
+                }
+                (_.aspect_ratio = (0, _._)(_, _)),
+                  (0, _._)(() => {
+                    (_.GetEventModel().jsondata.sale_cross_promo_carousel_background =
+                      _),
+                      _.SetDirty(_._.jsondata_image);
+                  });
+              },
+              [_],
+            ),
+            _ = (0, _.useCallback)(
+              (_) => {
+                (0, _._)(() => {
+                  (_.GetEventModel().jsondata.sale_cross_promo_carousel_fade_color =
+                    _ || void 0),
+                    _.SetDirty(_._.jsondata_sales);
+                });
+              },
+              [_],
+            ),
+            _ = (0, _.useCallback)(() => {
+              (0, _._)(() => {
+                delete _.GetEventModel().jsondata
+                  .sale_cross_promo_carousel_background,
+                  _.SetDirty(_._.jsondata_image);
+              });
+            }, [_]),
+            _ = (0, _._)(_.GetClanAccountID(), _?.image),
+            _ = _._.sale_cross_promo_background;
+          return (0, _.jsxs)("div", {
+            className: _().ArtworkSelectorContainer,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().Title,
+                children:
+                  "(VO) " + (0, _._)("#EventEditor_CrossPromoArt_Title"),
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().SelectImageBlock, _().Tips),
+                children: (0, _.jsx)("p", {
+                  children: (0, _._)(
+                    "#EventEditor_CrossPromoArt_Tip",
+                    (0, _._)(_.width),
+                    (0, _._)(_.height),
+                  ),
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().SelectImageBlock, _().UploaderCtn),
+                children: (0, _.jsx)(_._, {
+                  rgRealmList: _.GetIncludedRealmList(),
+                  rgSupportArtwork: _,
+                  strUploadAjaxURL: (0, _._)(_.GetClanSteamID()),
+                  fnOnUploadSuccess: _,
+                  bTwoPhaseUpload: !0,
+                  bDirectTempStorageUpload: !0,
+                }),
+              }),
+              (0, _.jsxs)("div", {
+                className: _().ControlsRow,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _().FadeColorLabel,
+                    children: (0, _._)(
+                      "#EventEditor_CrossPromoArt_FadeColor_Label",
+                    ),
+                  }),
+                  (0, _.jsx)("span", {
+                    className: _().ColorSwatch,
+                    style: _
+                      ? {
+                          background: _,
+                        }
+                      : void 0,
+                  }),
+                  (0, _.jsx)("span", {
+                    className: _().FadeColorValue,
+                    children:
+                      _ ||
+                      (0, _._)("#EventEditor_CrossPromoArt_FadeColor_Unset"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().SmallBtn,
+                    onClick: (_) =>
+                      _(_, {
+                        color: _,
+                        onChange: _,
+                      }),
+                    children: (0, _._)("#EventEditor_CrossPromoArt_FadeColor"),
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      className: _().SmallBtn,
+                      onClick: () => _(void 0),
+                      children: (0, _._)(
+                        "#EventEditor_CrossPromoArt_FadeColor_Clear",
+                      ),
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      className: _().SmallBtn,
+                      onClick: _,
+                      children: (0, _._)("#EventEditor_CrossPromoArt_Remove"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                strBackgroundURL: _,
+                strFadeColor: _,
+              }),
+            ],
+          });
+        }
+        function _(_) {
+          const { strBackgroundURL: _, strFadeColor: _ } = _;
+          return (0, _.jsx)("div", {
+            className: _().PreviewCtn,
+            style: _
+              ? {
+                  backgroundColor: _,
+                }
+              : void 0,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)(_().PreviewArt, !_ && _().PreviewPlaceholder),
+              style: _
+                ? {
+                    backgroundImage: `url(${_})`,
+                  }
+                : void 0,
+              children: [
+                !_ &&
+                  (0, _.jsx)("div", {
+                    className: _().Empty,
+                    children: (0, _._)("#EventEditor_CrossPromoArt_None"),
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().PreviewFade,
+                    style: {
+                      "--cross-promo-fade-color": _,
+                    },
+                  }),
+              ],
+            }),
+          });
+        }
         const _ = (0, _._)((_) => {
-          var _, _, _, _;
           const { editModel: _ } = _,
             [_, _] = (0, _._)(() => [_.GetAppID(), _.GetEventType()]),
             _ = !!(
@@ -5602,24 +5472,13 @@
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ =
-              ((_ = _.GetEventModel().jsondata.localized_sale_product_banner) ==
-              null
-                ? void 0
-                : _.length) || 0,
+              _.GetEventModel().jsondata.localized_sale_product_banner
+                ?.length || 0,
             _ =
-              ((_ =
-                _.GetEventModel().jsondata
-                  .localized_sale_product_mobile_banner) == null
-                ? void 0
-                : _.length) || 0,
-            _ =
-              ((_ = _.GetEventModel().jsondata.localized_sale_logo) == null
-                ? void 0
-                : _.length) || 0,
-            _ =
-              ((_ = _.GetEventModel().jsondata.localized_sale_overlay) == null
-                ? void 0
-                : _.length) || 0,
+              _.GetEventModel().jsondata.localized_sale_product_mobile_banner
+                ?.length || 0,
+            _ = _.GetEventModel().jsondata.localized_sale_logo?.length || 0,
+            _ = _.GetEventModel().jsondata.localized_sale_overlay?.length || 0,
             _ = (0, _._)(_.GetEventModel().jsondata.sale_logo_url),
             _ = [];
           return (
@@ -5721,6 +5580,37 @@
                             className: _.ErrorStylesWithIcon,
                             children: _,
                           }),
+                        (0, _.jsxs)(_._, {
+                          clanSteamID: _.GetClanSteamID(),
+                          requireAdmin: !0,
+                          children: [
+                            (0, _.jsx)(_._, {
+                              label: (0, _._)(
+                                "#EventEditor_SaleLogo_CrossPromoOnly",
+                              ),
+                              tooltip: (0, _._)(
+                                "#EventEditor_SaleLogo_CrossPromoOnly_ttip",
+                              ),
+                              checked:
+                                !!_.GetEventModel().jsondata
+                                  .sale_logo_cross_promo_only,
+                              onChange: (_) => {
+                                (0, _._)(() => {
+                                  (_.GetEventModel().jsondata.sale_logo_cross_promo_only =
+                                    _ || void 0),
+                                    _.SetDirty(_._.jsondata_sales);
+                                });
+                              },
+                            }),
+                            _.GetEventModel().jsondata
+                              .sale_logo_cross_promo_only &&
+                              (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#EventEditor_SaleLogo_CrossPromoOnly_Note",
+                                ),
+                              }),
+                          ],
+                        }),
                       ],
                     }),
                   }),
@@ -5796,6 +5686,17 @@
                   }),
                 !_ &&
                   (0, _.jsx)(_, {
+                    strSectionId: "SalePageEdit_CrossPromoArt",
+                    children: (0, _.jsx)(_._, {
+                      clanSteamID: _.GetClanSteamID(),
+                      requireAdmin: !0,
+                      children: (0, _.jsx)(_, {
+                        editModel: _,
+                      }),
+                    }),
+                  }),
+                !_ &&
+                  (0, _.jsx)(_, {
                     strSectionId: "SalePageEdit_SaleOverlay",
                     children: (0, _.jsx)(_._, {
                       clanSteamID: _.GetClanSteamID(),
@@ -5843,7 +5744,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         async function _(_) {
-          var _, _;
           const _ = {
             accountid: _,
             origin: self.origin,
@@ -5858,8 +5758,8 @@
           if (
             !_ ||
             _.status != 200 ||
-            ((_ = _.data) == null ? void 0 : _.success) != _._ ||
-            !((_ = _.data) != null && _.partners)
+            _.data?.success != _._ ||
+            !_.data?.partners
           )
             throw `Load single user partner info failed ${((0, _._))(_).strErrorMsg}`;
           return _.data.partners;
@@ -5872,8 +5772,7 @@
           return _ ? null : _;
         }
         function _(_, _) {
-          const _ = _(_);
-          return _ == null ? void 0 : _.find((_) => _.partnerid === _);
+          return _(_)?.find((_) => _.partnerid === _);
         }
         function _(_) {
           const {
@@ -5886,7 +5785,7 @@
             _ = _(_),
             _ = (0, _.useMemo)(
               () =>
-                (_ == null ? void 0 : _.length) > 0
+                _?.length > 0
                   ? _.map((_) => ({
                       label: _.partner_name,
                       data: _.partnerid,
@@ -6035,7 +5934,6 @@
           );
         }
         function _(_) {
-          var _, _;
           const {
               clanSteamID: _,
               gidClanEvent: _,
@@ -6089,10 +5987,7 @@
                   (0, _._)(_),
                 );
               },
-              _ =
-                (_ = _ == null ? void 0 : _.jsonData) == null
-                  ? void 0
-                  : _.strSalePageApprovalHelpTicketReferenceCode;
+              _ = _?.jsonData?.strSalePageApprovalHelpTicketReferenceCode;
             return (0, _.jsxs)("div", {
               className: (0, _._)(
                 _.ApprovalRequiredCtn,
@@ -6138,7 +6033,7 @@
                   children: [
                     _
                       ? (0, _.jsx)(_._, {
-                          href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${((_ = _ == null ? void 0 : _.jsonData)) == null ? void 0 : _.strSalePageApprovalHelpTicketReferenceCode}`,
+                          href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_?.jsonData?.strSalePageApprovalHelpTicketReferenceCode}`,
                           className: (0, _._)(_.EditPreviewButton, _.Button),
                           bForceExternal: !0,
                           children: (0, _._)(
@@ -6170,7 +6065,7 @@
                             }),
                           ],
                         }),
-                        (_ == null ? void 0 : _.length) > 0 &&
+                        _?.length > 0 &&
                           (0, _.jsx)(_._, {
                             onClick: _,
                             children: (0, _._)(
@@ -6607,9 +6502,7 @@
             _ = (0, _._)(_.GetClanSteamID(), !0);
           if (!_) return (0, _.jsx)(_.Fragment, {});
           const _ = !!_;
-          return _ ||
-            (_ && (!_ || (_ == null ? void 0 : _.length) >= 1)) ||
-            _.GetEventType() == _.ajI
+          return _ || (_ && (!_ || _?.length >= 1)) || _.GetEventType() == _.ajI
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
               })
@@ -6708,13 +6601,10 @@
               strSalePageApprovalHelpTicketReferenceCode: _,
             } = (0, _._)(_.GetClanAccountID(), _.GetGID()),
             _ = (0, _._)(() => {
-              var _;
               const _ = _.GetEventModel().jsondata.sale_presenters;
               return (
-                (_ == null ? void 0 : _.length) > 0 &&
-                ((_ = _[0].localized_presenter_name) == null
-                  ? void 0
-                  : _.length) > 0 &&
+                _?.length > 0 &&
+                _[0].localized_presenter_name?.length > 0 &&
                 _[0].localized_presenter_name[0].length > 0
               );
             });
@@ -7066,7 +6956,6 @@
           });
         }
         function _(_) {
-          var _;
           const { closeModal: _ } = _,
             _ = _._.GetEditModel(),
             [_, _] = _.useState(!1),
@@ -7082,16 +6971,11 @@
             bOKDisabled:
               !_ &&
               (_.length == 0 ||
-                ((_ = _[0].url) == null ? void 0 : _.length) == 0 ||
+                _[0].url?.length == 0 ||
                 _.some((_) => !_._.validateUrl(_.url)) ||
-                _.some((_) => {
-                  var _;
-                  return !(
-                    ((_ = _.localized_presenter_name[_.Bhc]) == null
-                      ? void 0
-                      : _.length) > 0
-                  );
-                })),
+                _.some(
+                  (_) => !(_.localized_presenter_name[_.Bhc]?.length > 0),
+                )),
             onOK: () => {
               (_.GetEventModel().jsondata.sale_presenters = _),
                 _.SetDirty(_._.jsondata_sales),
@@ -7133,7 +7017,7 @@
                 },
                 children: (0, _._)("#EventDisclaimer_add"),
               }),
-              (_ == null ? void 0 : _.length) > 0 &&
+              _?.length > 0 &&
                 (0, _.jsxs)("div", {
                   className: _.PresenterPreviewCtn,
                   children: [
@@ -7192,17 +7076,6 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_.EditInfo = "apprighteditinfo"),
             (_.Publish = "apprightpublish"),
@@ -7232,11 +7105,105 @@
             (_.ManageLicensedSites = "pubrightmanagelicensedsites"),
             _
           ))(_ || {});
-        const _ = class _ {
+        class _ {
+          static AppRights = [
+            {
+              flag: 1,
+              token: "apprighteditinfo",
+            },
+            {
+              flag: 2,
+              token: "apprightpublish",
+            },
+            {
+              flag: 4,
+              token: "apprightviewerrordata",
+            },
+            {
+              flag: 8,
+              token: "apprightdownload",
+            },
+            {
+              flag: 16,
+              token: "apprightuploadcdkeys",
+            },
+            {
+              flag: 32,
+              token: "apprightgeneratecdkeys",
+            },
+            {
+              flag: 64,
+              token: "apprightviewfinancials",
+            },
+            {
+              flag: 128,
+              token: "apprightmanageceg",
+            },
+            {
+              flag: 256,
+              token: "apprightmanagesigning",
+            },
+            {
+              flag: 512,
+              token: "apprightmanagecdkeys",
+            },
+            {
+              flag: 1024,
+              token: "apprighteditmarketing",
+            },
+            {
+              flag: 2048,
+              token: "apprighteconomysupport",
+            },
+            {
+              flag: 4096,
+              token: "apprighteconomysupportsupervisor",
+            },
+            {
+              flag: 8192,
+              token: "appmanagepricing",
+            },
+            {
+              flag: 16384,
+              token: "apprightbroadcastlive",
+            },
+            {
+              flag: 32768,
+              token: "apprightviewmarketingtraffic",
+            },
+            {
+              flag: 65536,
+              token: "apprighteditstoredisplaycontent",
+            },
+          ];
+          static MapAppRights = _.ConstructAppRightsMap();
           static ConstructAppRightsMap() {
             const _ = new Map();
             return _.AppRights.forEach((_) => _.set(_.token, _)), _;
           }
+          static PubRights = [
+            {
+              flag: 1,
+              token: "pubrightmanageusers",
+            },
+            {
+              flag: 2,
+              token: "pubrightactualauthority",
+            },
+            {
+              flag: 4,
+              token: "pubrightviewfinancials",
+            },
+            {
+              flag: 8,
+              token: "pubrightapprovewalletfunding",
+            },
+            {
+              flag: 16,
+              token: "pubrightmanagelicensedsites",
+            },
+          ];
+          static MapPubRights = _.ConstructPubRightsMap();
           static ConstructPubRightsMap() {
             const _ = new Map();
             return _.PubRights.forEach((_) => _.set(_.token, _)), _;
@@ -7259,102 +7226,7 @@
               _
             );
           }
-        };
-        _(_, "AppRights", [
-          {
-            flag: 1,
-            token: "apprighteditinfo",
-          },
-          {
-            flag: 2,
-            token: "apprightpublish",
-          },
-          {
-            flag: 4,
-            token: "apprightviewerrordata",
-          },
-          {
-            flag: 8,
-            token: "apprightdownload",
-          },
-          {
-            flag: 16,
-            token: "apprightuploadcdkeys",
-          },
-          {
-            flag: 32,
-            token: "apprightgeneratecdkeys",
-          },
-          {
-            flag: 64,
-            token: "apprightviewfinancials",
-          },
-          {
-            flag: 128,
-            token: "apprightmanageceg",
-          },
-          {
-            flag: 256,
-            token: "apprightmanagesigning",
-          },
-          {
-            flag: 512,
-            token: "apprightmanagecdkeys",
-          },
-          {
-            flag: 1024,
-            token: "apprighteditmarketing",
-          },
-          {
-            flag: 2048,
-            token: "apprighteconomysupport",
-          },
-          {
-            flag: 4096,
-            token: "apprighteconomysupportsupervisor",
-          },
-          {
-            flag: 8192,
-            token: "appmanagepricing",
-          },
-          {
-            flag: 16384,
-            token: "apprightbroadcastlive",
-          },
-          {
-            flag: 32768,
-            token: "apprightviewmarketingtraffic",
-          },
-          {
-            flag: 65536,
-            token: "apprighteditstoredisplaycontent",
-          },
-        ]),
-          _(_, "MapAppRights", _.ConstructAppRightsMap()),
-          _(_, "PubRights", [
-            {
-              flag: 1,
-              token: "pubrightmanageusers",
-            },
-            {
-              flag: 2,
-              token: "pubrightactualauthority",
-            },
-            {
-              flag: 4,
-              token: "pubrightviewfinancials",
-            },
-            {
-              flag: 8,
-              token: "pubrightapprovewalletfunding",
-            },
-            {
-              flag: 16,
-              token: "pubrightmanagelicensedsites",
-            },
-          ]),
-          _(_, "MapPubRights", _.ConstructPubRightsMap());
-        let _ = _;
+        }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
@@ -7566,38 +7438,24 @@
           });
         }
         function _(_) {
-          var _, _;
           const _ = _._.GetEditModel(),
-            [_, _, _, _] = (0, _._)(() => {
-              var _, _, _;
-              return [
-                (_ = _.GetEventModel().jsondata.ownership_requirement_info) ==
-                null
-                  ? void 0
-                  : _.bLockedToAppOwners,
-                (_ = _.GetEventModel().jsondata.ownership_requirement_info) ==
-                null
-                  ? void 0
-                  : _.strRedirectURL,
-                _.GetEventModel().jsondata.sale_use_subscription_layout,
-                (_ = _.GetEventModel().jsondata.app_right_requirement_info) ==
-                null
-                  ? void 0
-                  : _.bLockedToPartnerAppRights,
-              ];
-            }),
+            [_, _, _, _] = (0, _._)(() => [
+              _.GetEventModel().jsondata.ownership_requirement_info
+                ?.bLockedToAppOwners,
+              _.GetEventModel().jsondata.ownership_requirement_info
+                ?.strRedirectURL,
+              _.GetEventModel().jsondata.sale_use_subscription_layout,
+              _.GetEventModel().jsondata.app_right_requirement_info
+                ?.bLockedToPartnerAppRights,
+            ]),
             [_, _] = _.useState(
               _.GetEventModel().BIsLockedToGameOwners()
-                ? (_ = _.GetEventModel().GetRequiredAppIDs()) == null
-                  ? void 0
-                  : _.join(",")
+                ? _.GetEventModel().GetRequiredAppIDs()?.join(",")
                 : "",
             ),
             [_, _] = _.useState(
               _.GetEventModel().BIsLockedToGameOwners()
-                ? (_ = _.GetEventModel().GetRequiredPackageIDs()) == null
-                  ? void 0
-                  : _.join(",")
+                ? _.GetEventModel().GetRequiredPackageIDs()?.join(",")
                 : "",
             );
           return (0, _.jsxs)(_.Fragment, {
@@ -8038,8 +7896,7 @@
               include_basic_info: !0,
             });
           if (_ || !_) return;
-          const _ =
-            _ != null && _.length ? _.GetStorePageURL() + "/" + _ : void 0;
+          const _ = _?.length ? _.GetStorePageURL() + "/" + _ : void 0;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -8251,7 +8108,7 @@
               fixItText: _,
               children: _,
             } = _;
-            if (!(_ == null ? void 0 : _(_.GetEventModel()))) return null;
+            if (!_?.(_.GetEventModel())) return null;
             const _ = () => {
               _(_.GetEventModel()), _.SetDirty(_._.jsondata_sales);
             };
@@ -8332,29 +8189,25 @@
                     _ &&
                     (0, _.jsx)(_._, {
                       onClick: () => _(),
-                      children: _ != null ? _ : "Fix it",
+                      children: _ ?? "Fix it",
                     }),
                 }),
               ],
             });
           }),
           _ = (0, _._)((_) => {
-            var _, _;
             const { editModel: _, fnOnOKCallback: _ } = _,
               _ = _.GetEventModel(),
               {
                 fnSetStorePublishingRequiresValveApproval: _,
                 fnSetUserWhoEnabledSalePage: _,
               } = (0, _._)(_.GetClanAccountID(), _.GetGID()),
-              [_, _] = _.useState(
-                (_ = _.jsondata.sale_vanity_id) != null ? _ : "",
-              ),
+              [_, _] = _.useState(_.jsondata.sale_vanity_id ?? ""),
               [_] = _.useState(new _._()),
               _ =
                 !_._.is_support &&
-                !(
-                  (_ = _._.GetCreatorHome(_.GetClanSteamID())) != null &&
-                  _.BHasClanAccountFlagSet(_._._)
+                !_._.GetCreatorHome(_.GetClanSteamID())?.BHasClanAccountFlagSet(
+                  _._._,
                 ),
               _ = Math.floor(Date.now() / 1e3),
               _ = new Date();
@@ -8373,7 +8226,7 @@
               _.setMinutes(0),
               _.setSeconds(0);
             const [_, _] = _.useState(
-                (_ == null ? void 0 : _.endTime) > Math.floor(_.getTime() / 1e3)
+                _?.endTime > Math.floor(_.getTime() / 1e3)
                   ? _.endTime
                   : Math.floor(_.getTime() / 1e3),
               ),
@@ -8473,13 +8326,10 @@
             });
           }),
           _ = (0, _._)((_) => {
-            var _;
             const { editModel: _, fnOnOKCallback: _ } = _,
               _ = _.GetEventModel(),
               [_, _] = _.useState(
-                (_ = _.jsondata.sale_update_landing_page_vanity_id) != null
-                  ? _
-                  : "",
+                _.jsondata.sale_update_landing_page_vanity_id ?? "",
               ),
               _ = () => {
                 (0, _._)(() => {
@@ -8550,12 +8400,10 @@
             ),
             _ = _.useRef(void 0),
             _ = (_) => {
-              var _;
               _(_),
-                (_ = _ == null ? void 0 : _.current) == null ||
-                  _.setState({
-                    checked: _,
-                  }),
+                _?.current?.setState({
+                  checked: _,
+                }),
                 (0, _._)(() => {
                   (_.GetEventModel().jsondata.bSaleEnabled = _),
                     _.SetDirty(_._.jsondata_sales);
@@ -8574,12 +8422,10 @@
               (0, _.jsx)(_._, {
                 ref: _,
                 onChange: (_) => {
-                  var _;
                   _ && _
-                    ? ((_ = _ == null ? void 0 : _.current) == null ||
-                        _.setState({
-                          checked: !1,
-                        }),
+                    ? (_?.current?.setState({
+                        checked: !1,
+                      }),
                       _(!1),
                       (0, _._)(
                         _ == _
@@ -8714,11 +8560,10 @@
           );
         }
         function _(_, _ = "") {
-          var _;
           return (
-            ((_ = _._.Get().GetStoreItem(_._, (0, _._)(_.type))) == null
-              ? void 0
-              : _.GetName()) || _
+            _._.Get()
+              .GetStoreItem(_._, (0, _._)(_.type))
+              ?.GetName() || _
           );
         }
         function _(_) {
@@ -8756,27 +8601,20 @@
                         _.capsules && _.capsules.filter(_).forEach(_);
                       });
                     const _ = (_) => {
-                      var _, _;
                       const _ = (_) => _._ == _._ && _.type == _.type;
                       let _ = new Array();
                       _.GetEventModel().jsondata.sale_sections.forEach((_) => {
-                        var _;
-                        ((_ = _.capsules) == null
-                          ? void 0
-                          : _.filter(_).length) > 0 && _.push(_);
+                        _.capsules?.filter(_).length > 0 && _.push(_);
                       });
                       let _ = new Array();
                       _ &&
-                        ((_ = _.tabs) == null ||
-                          _.forEach((_) => {
-                            _.capsules.filter(_).length > 0 && _.push(_);
-                          }));
+                        _.tabs?.forEach((_) => {
+                          _.capsules.filter(_).length > 0 && _.push(_);
+                        });
                       const _ =
-                        ((_ = _.GetEventModel().jsondata.tagged_items) == null
-                          ? void 0
-                          : _.findIndex(
-                              (_) => _ && _(_ == null ? void 0 : _.capsule),
-                            )) >= 0;
+                        _.GetEventModel().jsondata.tagged_items?.findIndex(
+                          (_) => _ && _(_?.capsule),
+                        ) >= 0;
                       _(_, _, _, _);
                     };
                     _.current = (0, _._)(
@@ -8926,47 +8764,41 @@
           };
         }
         function _() {
-          var _, _;
           const _ = [],
             _ = new Map(),
-            _ = _._.GetEditModel(),
-            _ = _.GetTabSaleSection();
+            _ = _._.GetEditModel();
           return (
-            (_ = _ == null ? void 0 : _.tabs) == null ||
-              _.forEach((_) => {
-                var _;
-                const _ = {
-                  type: "tab",
-                  unique_id: _.unique_id,
-                  strLabel: (0, _._)(
-                    ((_ = _.localized_label) == null ? void 0 : _[_.Bhc]) ||
-                      _.default_label,
-                  ),
-                };
-                _.push(_),
-                  _.capsules.forEach((_) => {
-                    const _ = _(_);
-                    _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
-                  });
-              }),
-            (_ = _.GetEventModel().jsondata.sale_sections) == null ||
-              _.forEach((_) => {
-                if (_.section_type != "items") return;
-                const _ = {
-                  type: "section",
-                  unique_id: _.unique_id,
-                  strLabel: (0, _._)(
-                    (0, _._)(_, _.GetEventModel(), _._) ||
-                      _.localized_label[_.Bhc] ||
-                      _.default_label,
-                  ),
-                };
-                _.push(_),
-                  _.capsules.forEach((_) => {
-                    const _ = _(_);
-                    _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
-                  });
-              }),
+            _.GetTabSaleSection()?.tabs?.forEach((_) => {
+              const _ = {
+                type: "tab",
+                unique_id: _.unique_id,
+                strLabel: (0, _._)(
+                  _.localized_label?.[_.Bhc] || _.default_label,
+                ),
+              };
+              _.push(_),
+                _.capsules.forEach((_) => {
+                  const _ = _(_);
+                  _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
+                });
+            }),
+            _.GetEventModel().jsondata.sale_sections?.forEach((_) => {
+              if (_.section_type != "items") return;
+              const _ = {
+                type: "section",
+                unique_id: _.unique_id,
+                strLabel: (0, _._)(
+                  (0, _._)(_, _.GetEventModel(), _._) ||
+                    _.localized_label[_.Bhc] ||
+                    _.default_label,
+                ),
+              };
+              _.push(_),
+                _.capsules.forEach((_) => {
+                  const _ = _(_);
+                  _.has(_) || _.set(_, new Set()), _.get(_).add(_.unique_id);
+                });
+            }),
             {
               mapItemLocations: _,
               rgSections: _,
@@ -8996,17 +8828,15 @@
             _ = (0, _._)("#Sale_GameExport_ContentSummary", _, _, _);
           }
           const _ = () => {
-              var _;
               const { mapItemLocations: _, rgSections: _ } = _,
                 _ = [];
               for (const _ of Array.from(_.keys())) {
                 const _ = _(_);
                 let _;
                 try {
-                  _ =
-                    (_ = _._.Get().GetStoreItem(_._, (0, _._)(_.type))) == null
-                      ? void 0
-                      : _.GetName();
+                  _ = _._.Get()
+                    .GetStoreItem(_._, (0, _._)(_.type))
+                    ?.GetName();
                 } catch {}
                 _.push([`${_.type}: ${_ || _._}`, _]);
               }
@@ -9284,15 +9114,14 @@
               url: _,
             });
           const _ = (_) => {
-              var _, _;
               const _ = _.find((_) => _.data == _),
-                _ = !((_ = _ == null ? void 0 : _.newWindow) != null && _);
+                _ = !(_?.newWindow ?? !1);
               _._.Get().ShowPreviewWindow(
-                (_ = _ == null ? void 0 : _.url) != null ? _ : _,
+                _?.url ?? _,
                 _,
                 _,
-                _ == null ? void 0 : _.size,
-                _ == null ? void 0 : _.queryParams,
+                _?.size,
+                _?.queryParams,
               );
             },
             _ = (0, _._)(),
@@ -9658,8 +9487,7 @@
             ]),
             [_, _] = _.useState(() => _ + "_custom.css"),
             _ = (_) => {
-              var _;
-              const _ = (_ = _.target.files) == null ? void 0 : _[0];
+              const _ = _.target.files?.[0];
               if (_) {
                 _(_.target.files[0].name);
                 const _ = new FileReader();
@@ -9876,7 +9704,7 @@
               _ = _.GetEventModel(),
               _ = _.GetEventType() == _.ajI,
               { creatorHome: _ } = (0, _._)(_.GetClanAccountID()),
-              _ = _ && (_ == null ? void 0 : _.GetLinkedEventGID()) == _.GID,
+              _ = _ && _?.GetLinkedEventGID() == _.GID,
               _ =
                 (_.GetVisibilityState() == _._.k_EEventStateVisible ||
                   _.BUnlisted()) &&
@@ -10169,7 +9997,6 @@
           const _ = (0, _._)({
             queryKey: ["useSocialMediaSupports"],
             queryFn: async () => {
-              var _;
               const _ = `${_._.COMMUNITY_BASE_URL}sale/ajaxgetsocialmediaeditsettings`,
                 _ = {
                   origin: self.origin,
@@ -10177,13 +10004,9 @@
                 _ = await _().get(_, {
                   params: _,
                 });
-              return (_ == null ? void 0 : _.status) == 200 &&
-                ((_ = _.data) == null ? void 0 : _.success) == _._
+              return _?.status == 200 && _.data?.success == _._
                 ? _.data
-                : (console.error(
-                    "useSocialMediaSupports:",
-                    _ == null ? void 0 : _.status,
-                  ),
+                : (console.error("useSocialMediaSupports:", _?.status),
                   {
                     success: _._,
                   });
@@ -10330,15 +10153,10 @@
         }
         function _(_) {
           const { editModel: _ } = _,
-            [_, _] = (0, _.useState)(() => {
-              var _;
-              return (
-                ((_ = _.GetEventModel().jsondata.sale_social_media_items) ==
-                null
-                  ? void 0
-                  : _.length) > 0
-              );
-            });
+            [_, _] = (0, _.useState)(
+              () =>
+                _.GetEventModel().jsondata.sale_social_media_items?.length > 0,
+            );
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)("p", {
@@ -10416,15 +10234,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -10433,16 +10242,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
-          constructor() {
-            _(this, "m_mapNewsCurators", new Map()),
-              _(this, "m_bIsLoadComplete", !1),
-              _(this, "m_mapLangToNewsCurators", new Map()),
-              _(this, "m_LoadingPromise", null),
-              (0, _._)(this);
-          }
+          static s_newsCuratorStore;
+          m_mapNewsCurators = new Map();
+          m_bIsLoadComplete = !1;
+          m_mapLangToNewsCurators = new Map();
+          m_LoadingPromise = null;
           static Get() {
             return (
               _.s_newsCuratorStore ||
@@ -10452,6 +10258,9 @@
                 (window.g_NewsCuratorStore = _.s_newsCuratorStore)),
               _.s_newsCuratorStore
             );
+          }
+          constructor() {
+            (0, _._)(this);
           }
           IsLoaded() {
             return this.m_bIsLoadComplete;
@@ -10488,7 +10297,6 @@
             });
           }
           HandleCuratorResponse(_) {
-            var _;
             if (
               (_.groupvanityinfo && _._.RegisterClanData(_.groupvanityinfo),
               _.newscuratorinfo)
@@ -10497,15 +10305,11 @@
                 if (this.m_mapNewsCurators.has(_.clanAccountID)) continue;
                 this.m_mapNewsCurators.set(_.clanAccountID, _);
                 const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
-                _ &&
-                  ((_ = this.m_mapLangToNewsCurators.get(_.rss_language)) ==
-                    null ||
-                    _.push(_));
+                _ && this.m_mapLangToNewsCurators.get(_.rss_language)?.push(_);
               }
           }
         };
-        _(_, "s_newsCuratorStore"),
-          _([_._], _.prototype, "m_mapNewsCurators", 2),
+        _([_._], _.prototype, "m_mapNewsCurators", 2),
           _([_._], _.prototype, "m_bIsLoadComplete", 2),
           _([_._], _.prototype, "m_mapLangToNewsCurators", 2),
           _([_._], _.prototype, "allNewsCurators", 1),
@@ -10516,15 +10320,6 @@
           _ = __webpack_require__._(_),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -10533,8 +10328,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         function _(_) {
           const _ = new Set();
           return (
@@ -10552,24 +10346,17 @@
         }
         const _ = 300;
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                strSearchString: "",
-                rgAppSuggestions: null,
-                rgCuratorSuggestions: null,
-              }),
-              _(this, "m_nHighestSentRequestID", 0),
-              _(
-                this,
-                "m_mapHighestReceivedRequestIDFromBackEnd",
-                new Map([
-                  ["apps", 0],
-                  ["curators", 0],
-                ]),
-              ),
-              _(this, "m_timerForChange", new _._());
-          }
+          state = {
+            strSearchString: "",
+            rgAppSuggestions: null,
+            rgCuratorSuggestions: null,
+          };
+          m_nHighestSentRequestID = 0;
+          m_mapHighestReceivedRequestIDFromBackEnd = new Map([
+            ["apps", 0],
+            ["curators", 0],
+          ]);
+          m_timerForChange = new _._();
           componentWillUnmount() {
             this.m_timerForChange.Cancel();
           }
@@ -10586,7 +10373,6 @@
               _.has("curators") && this.GetCuratorSuggestions(_);
           }
           async GetCuratorSuggestions(_) {
-            var _;
             const _ = _.Get().allNewsCurators,
               _ = [];
             for (const _ of _) {
@@ -10594,16 +10380,10 @@
                 _ = {
                   corpus: "curators",
                   _: _.clanAccountID,
-                  name: _ == null ? void 0 : _.group_name,
-                  img: _ == null ? void 0 : _.avatar_full_url,
+                  name: _?.group_name,
+                  img: _?.avatar_full_url,
                 };
-              if (
-                (
-                  ((_ = _ == null ? void 0 : _.group_name) == null
-                    ? void 0
-                    : _.toLocaleLowerCase()) || ""
-                ).indexOf(_) >= 0
-              ) {
+              if ((_?.group_name?.toLocaleLowerCase() || "").indexOf(_) >= 0) {
                 if (
                   (this.props.fnFilterSuggestion &&
                     !this.props.fnFilterSuggestion(_)) ||
@@ -10636,7 +10416,6 @@
               });
           }
           async GetAppSuggestionsFromServer(_) {
-            var _;
             const _ = this.m_nHighestSentRequestID,
               _ = [];
             this.props.rgCorporaToSearch.indexOf("games") >= 0 &&
@@ -10664,8 +10443,7 @@
               return;
             this.m_mapHighestReceivedRequestIDFromBackEnd.set("apps", _);
             let _;
-            (_ = _ == null ? void 0 : _.data) != null &&
-              _.length &&
+            _?.data?.length &&
               (_ = _.data.map((_) => {
                 const _ = {
                   corpus: _(_.type),
@@ -10696,7 +10474,7 @@
           async UpdateSuggestions(_) {
             const _ =
               _.target.value && _.target.value.trim().toLocaleLowerCase();
-            if ((this.m_nHighestSentRequestID++, !(_ != null && _.length))) {
+            if ((this.m_nHighestSentRequestID++, !_?.length)) {
               Array.from(_(this.props.rgCorporaToSearch)).forEach((_) =>
                 this.m_mapHighestReceivedRequestIDFromBackEnd.set(
                   _,
@@ -10731,8 +10509,8 @@
             return (
               _ + _ > _ && (_ = _ - Math.min(_, 2)),
               (_ = _ - _),
-              (_ = _ == null ? void 0 : _.slice(0, _)),
-              (_ = _ == null ? void 0 : _.slice(0, _)),
+              (_ = _?.slice(0, _)),
+              (_ = _?.slice(0, _)),
               {
                 rgAppSuggestions: _,
                 rgCuratorSuggestions: _,
@@ -10749,9 +10527,9 @@
               { strSearchString: _ } = this.state,
               { rgAppSuggestions: _, rgCuratorSuggestions: _ } =
                 this.GetLimitedSuggestions(),
-              _ = (_ == null ? void 0 : _.length) > 0,
-              _ = (_ == null ? void 0 : _.length) > 0,
-              _ = (_ == null ? void 0 : _.length) > 0,
+              _ = _?.length > 0,
+              _ = _?.length > 0,
+              _ = _?.length > 0,
               _ = _(_).size > 1,
               _ =
                 _ &&
@@ -11092,21 +10870,12 @@
                     }),
                     value: _,
                     placeholder: (0, _._)("#EventEditor_Name_Placeholder"),
-                    onFocus: (_) => {
-                      var _;
-                      return (_ = _ == null ? void 0 : _.target) == null
-                        ? void 0
-                        : _.select();
-                    },
-                    onChange: (_) => {
-                      var _;
-                      return _.SetName(
+                    onFocus: (_) => _?.target?.select(),
+                    onChange: (_) =>
+                      _.SetName(
                         _.GetCurEditLanguage(),
-                        ((_ = _ == null ? void 0 : _.currentTarget) == null
-                          ? void 0
-                          : _.value) || "",
-                      );
-                    },
+                        _?.currentTarget?.value || "",
+                      ),
                     maxLength: _._,
                   }),
                 }),
@@ -11168,21 +10937,12 @@
                   placeholder: (0, _._)(
                     "#EventEditor_Name_SubTitle_Placeholder",
                   ),
-                  onFocus: (_) => {
-                    var _;
-                    return (_ = _ == null ? void 0 : _.target) == null
-                      ? void 0
-                      : _.select();
-                  },
-                  onChange: (_) => {
-                    var _;
-                    return _.SetSubTitle(
+                  onFocus: (_) => _?.target?.select(),
+                  onChange: (_) =>
+                    _.SetSubTitle(
                       _.GetCurEditLanguage(),
-                      ((_ = _ == null ? void 0 : _.currentTarget) == null
-                        ? void 0
-                        : _.value) || "",
-                    );
-                  },
+                      _?.currentTarget?.value || "",
+                    ),
                   maxLength: _._,
                 }),
               }),
@@ -11248,21 +11008,12 @@
                     ),
                     value: _,
                     placeholder: _,
-                    onFocus: (_) => {
-                      var _;
-                      return (_ = _ == null ? void 0 : _.target) == null
-                        ? void 0
-                        : _.select();
-                    },
-                    onChange: (_) => {
-                      var _;
-                      return _.SetSummary(
+                    onFocus: (_) => _?.target?.select(),
+                    onChange: (_) =>
+                      _.SetSummary(
                         _.GetCurEditLanguage(),
-                        ((_ = _ == null ? void 0 : _.currentTarget) == null
-                          ? void 0
-                          : _.value) || "",
-                      );
-                    },
+                        _?.currentTarget?.value || "",
+                      ),
                     maxLength: _._,
                     cols: 40,
                     rows: 2,
@@ -11335,11 +11086,7 @@
             className: _.ResultRow,
             children: (0, _.jsxs)("div", {
               className: _.GameName,
-              children: [
-                " ",
-                (0, _._)((_ == null ? void 0 : _.GetName()) || "") + ` (${_})`,
-                " ",
-              ],
+              children: [" ", (0, _._)(_?.GetName() || "") + ` (${_})`, " "],
             }),
           });
         }
@@ -11404,15 +11151,11 @@
                 : (0, _.jsx)(_._, {
                     fnGetCurText: () =>
                       _.GetDescription(_.GetCurEditLanguage()),
-                    fnOnTextChange: (_) => {
-                      var _;
-                      return _.SetDescription(
+                    fnOnTextChange: (_) =>
+                      _.SetDescription(
                         _.GetCurEditLanguage(),
-                        ((_ = _ == null ? void 0 : _.currentTarget) == null
-                          ? void 0
-                          : _.value) || "",
-                      );
-                    },
+                        _?.currentTarget?.value || "",
+                      ),
                     fnSetText: (_) =>
                       _.SetDescription(_.GetCurEditLanguage(), _),
                     strPlaceholder: (0, _._)(
@@ -11431,10 +11174,7 @@
         }
         function _(_) {
           const _ = "partnerEventsRichEditorOptIn",
-            [_, _] = _.useState(() => {
-              var _;
-              return ((_ = localStorage.getItem(_)) != null ? _ : "1") == "1";
-            }),
+            [_, _] = _.useState(() => (localStorage.getItem(_) ?? "1") == "1"),
             _ = _.useCallback(
               (_) => {
                 localStorage.setItem(_, _ ? "1" : "0"), _(_);
@@ -11623,7 +11363,7 @@
             _ = _
               ? _.GetCreatorHomeURL(null) + "admin/creatorhome_link"
               : void 0,
-            _ = (_ == null ? void 0 : _.GetLinkedEventGID()) == _;
+            _ = _?.GetLinkedEventGID() == _;
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _.SelectedExplanationCtn,
@@ -11687,20 +11427,15 @@
         }
         function _(_) {
           const { editModel: _, mode: _ } = _,
-            [_, _, _, _, _, _, _] = (0, _._)(() => {
-              var _;
-              return [
-                _.GetEventType(),
-                _.GetEventModel().jsondata.sale_presenters,
-                _.GetEventModel().jsondata,
-                _.GetEventModel().clanSteamID,
-                _.GetGID(),
-                ((_ = _.GetEventModel().jsondata.sale_presenters) == null
-                  ? void 0
-                  : _.length) > 0,
-                _.BVisible(),
-              ];
-            }),
+            [_, _, _, _, _, _, _] = (0, _._)(() => [
+              _.GetEventType(),
+              _.GetEventModel().jsondata.sale_presenters,
+              _.GetEventModel().jsondata,
+              _.GetEventModel().clanSteamID,
+              _.GetGID(),
+              _.GetEventModel().jsondata.sale_presenters?.length > 0,
+              _.BVisible(),
+            ]),
             { creatorHome: _ } = (0, _._)(_.GetAccountID()),
             { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
             _ = _._.includes(_.GetAccountID()),
@@ -11896,7 +11631,6 @@
           });
         }
         function _(_) {
-          var _;
           const { editModel: _, mode: _ } = _,
             [_, _, _, _] = (0, _._)(() => [
               _.GetEventType(),
@@ -11924,9 +11658,7 @@
               strTitle: (0, _._)(
                 "#Sale_TaggedItemsSection",
                 _
-                  ? (_ = _ == null ? void 0 : _.length) != null
-                    ? _
-                    : 0
+                  ? (_?.length ?? 0)
                   : _.GetEventModel().GetTaggedItems().length,
               ),
               children: [
@@ -11954,7 +11686,6 @@
           });
         }
         function _(_) {
-          var _;
           const { editModel: _ } = _,
             _ = _.GetCurEditLanguage(),
             _ = _.GetEventModel(),
@@ -11968,32 +11699,22 @@
             }),
             [_, _] = _.useState(""),
             _ = (_) => {
-              var _, _;
-              const _ =
-                (_ = _ == null ? void 0 : _.trim().toLowerCase()) != null
-                  ? _
-                  : "";
+              const _ = _?.trim().toLowerCase() ?? "";
               if (
                 _.length == 0 ||
-                ((_ = _.internal_section_title) != null &&
-                  _.toLowerCase().includes(_)) ||
+                _.internal_section_title?.toLowerCase().includes(_) ||
                 _.section_type.includes(_)
               )
                 return !0;
               const _ = (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _._);
               return typeof _ == "string" && _.toLowerCase().includes(_);
             },
-            _ =
-              _ !== void 0 ||
-              ((_ = _ == null ? void 0 : _.trim()) == null
-                ? void 0
-                : _.length) > 0,
+            _ = _ !== void 0 || _?.trim()?.length > 0,
             _ = _.GetSaleSections().filter(
               (_, _) => (_ === void 0 || _ < _ || (0, _._)(_, _)) && _(_),
             ),
             _ = _(_),
             _ = (_, _) => {
-              var _;
               const _ = _._ + _.unique_id,
                 _ = (0, _._)(_.section_type) && _.get(_.section_type) > 1;
               return (0, _.jsx)(
@@ -12010,7 +11731,7 @@
                     editLanguage: _,
                   }),
                 },
-                _._ + ((_ = _.unique_id) != null ? _ : _),
+                _._ + (_.unique_id ?? _),
               );
             },
             _ = (_, _) => {
@@ -12451,9 +12172,6 @@
             ],
           });
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
         const _ = "vo_sale_store_capsules",
           _ = [
             {
@@ -12486,37 +12204,20 @@
           return "#EventEditor_ArtworkType_" + _.artworkType;
         }
         function _(_) {
-          var _;
-          return (_ = _.find((_) => _.artworkType === _)) == null
-            ? void 0
-            : _.type;
+          return _.find((_) => _.artworkType === _)?.type;
         }
         function _(_, _, _) {
-          var _, _;
-          return (_ =
-            (_ = _ == null ? void 0 : _[_]) == null ? void 0 : _[_]) != null
-            ? _
-            : null;
+          return _?.[_]?.[_] ?? null;
         }
         function _(_, _) {
           return _ ? `${_._.STORE_ITEM_BASE_URL}steam/clans/${_}/${_}` : void 0;
         }
         function _(_, _) {
-          const _ = _ == null ? void 0 : _[_];
-          return _
-            ? Array.from(_.keys()).filter((_) => {
-                var _;
-                return !!((_ = _[_]) != null && _.image);
-              })
-            : [];
+          const _ = _?.[_];
+          return _ ? Array.from(_.keys()).filter((_) => !!_[_]?.image) : [];
         }
         function _(_, _, _, _) {
-          var _;
-          const _ = _._(
-            [...((_ = _ == null ? void 0 : _[_]) != null ? _ : [])],
-            _.bP9,
-            null,
-          );
+          const _ = _._([...(_?.[_] ?? [])], _.bP9, null);
           return (
             (_[_] = _),
             {
@@ -12532,7 +12233,6 @@
           return delete _[_], _;
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         function _(_, _) {
@@ -12574,7 +12274,7 @@
                   return;
                 }
                 const _ = (0, _._)(_, _);
-                _ != null && _.image
+                _?.image
                   ? _(_, _, _)
                   : (0, _._)(
                       !1,
@@ -12644,9 +12344,8 @@
             _ = _.GetClanAccountID(),
             _ = (0, _.useCallback)(
               (_) => {
-                var _;
                 const _ = _(_, _.type, _);
-                return _ ? _(_, (_ = _.image_2x) != null ? _ : _.image) : null;
+                return _ ? _(_, _.image_2x ?? _.image) : null;
               },
               [_, _.type, _],
             ),
@@ -12717,8 +12416,9 @@
             return _ && _ && _(_, _, _), _;
           };
         class _ {
+          m_editModel = void 0;
           constructor(_) {
-            (this.m_editModel = void 0), (0, _._)(this), (this.m_editModel = _);
+            (0, _._)(this), (this.m_editModel = _);
           }
           GetJSONData() {
             return this.m_editModel.GetEventModel().jsondata;
@@ -12941,27 +12641,13 @@
           _([_._], _.prototype, "SetWidePlayerSupportChat", 1),
           _([_._], _.prototype, "SetChatAnnouncementGiveawayGID", 1);
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
-          constructor() {
-            _(this, "m_rgFriendsList", null);
-          }
+          _ = __webpack_require__("chunkid");
+        class _ {
+          m_rgFriendsList = null;
           GetFriendLiset() {
             return this.m_rgFriendsList;
           }
           async LoadFriendList() {
-            var _, _;
             let _ = null;
             if (this.m_rgFriendsList) return this.m_rgFriendsList;
             if (!_._.logged_in) return [];
@@ -12969,12 +12655,7 @@
               const _ = await _().get(
                 _._.COMMUNITY_BASE_URL + "actions/ajaxlistfriends",
               );
-              if (
-                (_ == null ? void 0 : _.status) == 200 &&
-                ((_ = _.data) == null ? void 0 : _.success) == _._ &&
-                (_ = _.data) != null &&
-                _.friends
-              )
+              if (_?.status == 200 && _.data?.success == _._ && _.data?.friends)
                 return (
                   (this.m_rgFriendsList = _.data.friends), this.m_rgFriendsList
                 );
@@ -12985,18 +12666,18 @@
             return (
               console.error(
                 "CSimpleFriendsListStore.LoadFriendList failed: " +
-                  (_ == null ? void 0 : _.strErrorMsg),
+                  _?.strErrorMsg,
                 _,
               ),
               []
             );
           }
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
-        };
-        _(_, "s_Singleton");
-        let _ = _;
+          constructor() {}
+        }
         function _() {
           const [_, _] = _.useState(_.Get().GetFriendLiset());
           return (
@@ -13055,18 +12736,14 @@
           });
         }
         function _(_) {
-          var _;
           const { editModel: _, broadcastEditModel: _ } = _,
-            _ = (0, _._)(() => (_ == null ? void 0 : _.GetPrerollTrailer())),
+            _ = (0, _._)(() => _?.GetPrerollTrailer()),
             _ = (0, _._)(_.strAppid ? Number.parseInt(_.strAppid) : void 0),
             _ = (0, _._)(
               _,
               _.strTrailerid ? Number.parseInt(_.strTrailerid) : void 0,
             ),
-            _ =
-              (_ = _ == null ? void 0 : _.microtrailer) == null
-                ? void 0
-                : _[0].filename;
+            _ = _?.microtrailer?.[0].filename;
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().FlexColumnContainer,
@@ -13082,13 +12759,11 @@
                 mustBeNumeric: !0,
                 rangeMin: 1,
                 value: _.strAppid || "",
-                onChange: (_) => {
-                  var _;
-                  return _.SetPrerollTrailer(
+                onChange: (_) =>
+                  _.SetPrerollTrailer(
                     _.target.value.trim(),
-                    (_ = _.strTrailerid) != null ? _ : "",
-                  );
-                },
+                    _.strTrailerid ?? "",
+                  ),
               }),
               (0, _.jsx)(_._, {
                 type: "text",
@@ -13112,7 +12787,7 @@
         }
         function _(_) {
           const { editModel: _, broadcastEditModel: _ } = _,
-            _ = (0, _._)(() => (_ == null ? void 0 : _.GetPrerollVideo()));
+            _ = (0, _._)(() => _?.GetPrerollVideo());
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().FlexColumnContainer,
@@ -13150,14 +12825,11 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                strCustomTitle: "",
-                customTitleLanguage: _.Bhc,
-                whitelistSteamID: "",
-              });
-          }
+          state = {
+            strCustomTitle: "",
+            customTitleLanguage: _.Bhc,
+            whitelistSteamID: "",
+          };
           GetBroadcastEditModel() {
             return new _(this.props.editModel);
           }
@@ -13208,7 +12880,7 @@
           OpenColorPopover(_, _) {
             const _ = this.props.editModel.GetEventModel().jsondata[_];
             let _ = null;
-            const _ = () => (_ == null ? void 0 : _.Hide());
+            const _ = () => _?.Hide();
             _ = (0, _._)(
               (0, _.jsx)(_._, {
                 color: _,
@@ -13948,25 +13620,11 @@
           });
         }
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = class _ {
-          constructor() {
-            _(this, "m_mapAppIDToDLCs", new Map()),
-              _(this, "m_mapAppIDToSoundTracks", new Map()),
-              _(this, "m_mapPromise", new Map()),
-              (0, _._)(this);
-          }
+          _ = __webpack_require__("chunkid");
+        class _ {
+          m_mapAppIDToDLCs = new Map();
+          m_mapAppIDToSoundTracks = new Map();
+          m_mapPromise = new Map();
           GetDLCForAppID(_) {
             return this.m_mapAppIDToDLCs.get(_);
           }
@@ -13997,7 +13655,7 @@
                   : (_ = _._.STORE_BASE_URL + "dlc/" + _ + "/ajaxgetdlclist");
                 let _ = await _().get(_, {
                     params: _,
-                    cancelToken: _ == null ? void 0 : _.token,
+                    cancelToken: _?.token,
                   }),
                   _ = Array();
                 _.data.dlcs &&
@@ -14038,12 +13696,14 @@
                 : [],
             };
           }
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
-        };
-        _(_, "s_Singleton");
-        let _ = _;
+          constructor() {
+            (0, _._)(this);
+          }
+        }
         function _(_) {
           const [_, _] = useState(_),
             [_, _] = useState(_.Get().GetDLCForAppID(_));
@@ -14079,20 +13739,14 @@
         function _(_) {
           const _ = _(_);
           return useMemo(
-            () =>
-              (_ == null
-                ? void 0
-                : _.filter((_) => !!_.is_released_somewhere)) || null,
+            () => _?.filter((_) => !!_.is_released_somewhere) || null,
             [_],
           );
         }
         function _(_) {
           const _ = _(_);
           return useMemo(
-            () =>
-              (_ == null
-                ? void 0
-                : _.filter((_) => !_.is_released_somewhere)) || null,
+            () => _?.filter((_) => !_.is_released_somewhere) || null,
             [_],
           );
         }
@@ -14272,13 +13926,10 @@
           _([_._], _.prototype, "OnRemoveSubSection", 1),
           (_ = _([_._], _));
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.m_cancelSignal = _().CancelToken.source()),
-              (this.state = {
-                dlcs: void 0,
-              });
-          }
+          m_cancelSignal = _().CancelToken.source();
+          state = {
+            dlcs: void 0,
+          };
           async LoadDLCForApp() {
             this.setState({
               dlcs: (
@@ -14457,15 +14108,10 @@
           _([_._], _.prototype, "OnChangeStorePageURL", 1),
           (_ = _([_._], _));
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bIsValid: _._.IsValidStoreURL(this.props.strExistingURL),
-                strURL: this.props.strExistingURL
-                  ? this.props.strExistingURL
-                  : "",
-              });
-          }
+          state = {
+            bIsValid: _._.IsValidStoreURL(this.props.strExistingURL),
+            strURL: this.props.strExistingURL ? this.props.strExistingURL : "",
+          };
           OnURLUpdate(_) {
             let _ = _.currentTarget.value;
             this.setState({
@@ -14555,13 +14201,12 @@
           });
         }
         let _ = class extends _.Component {
+          state = {
+            bDownloadFromClanImageStore: !1,
+          };
+          m_clanImageUploader = void 0;
           constructor(_) {
-            super(_),
-              (this.state = {
-                bDownloadFromClanImageStore: !1,
-              }),
-              (this.m_clanImageUploader = void 0),
-              this.RefreshUploader();
+            super(_), this.RefreshUploader();
           }
           componentDidUpdate(_) {
             (_.clanSteamID.GetAccountID() !=
@@ -14940,17 +14585,14 @@
         };
         _ = _([_._], _);
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                capabilities: void 0,
-                selectedCapability: void 0,
-                nDuplicatesRemoved: 0,
-              }),
-              (this.m_cancelSignal = _().CancelToken.source()),
-              (this.m_appFileInput = _.createRef()),
-              (this.m_pubFileInput = _.createRef());
-          }
+          state = {
+            capabilities: void 0,
+            selectedCapability: void 0,
+            nDuplicatesRemoved: 0,
+          };
+          m_cancelSignal = _().CancelToken.source();
+          m_appFileInput = _.createRef();
+          m_pubFileInput = _.createRef();
           componentWillUnmount() {
             this.m_cancelSignal.cancel("DevEventRecipientOptions cancelled");
           }
@@ -15386,19 +15028,8 @@
           _([_._], _.prototype, "ClearTargets", 1),
           (_ = _([_._], _));
         const _ =
-          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABo1JREFUeNrsWg1MVlUY/iDTElOcI9ZgZBorV8ywVFYGc05mZQbmMgoNk37NQq3IJZWoLf+l9eMqSQ1lpm4aWgStpauZYbl+wK3EssjKflYmtAyi59Hnbme3e7/v3o9PVtt9t2fnfPe+55x7z3Pe97znvV9cZ2dnKJD/pvTwqji5oLAPiuuAscBwYBDQR7dbgWZgP1APbN9UXXU8mN6uSVwkywEpyShKgTsMMiJJG1AJLAZJLcE0x5gckBKH4i5gCXBOlP3TesqACpAU+M9YkANieqN4GbgpRuPsYLcgqC2Y8i6QI2I4maNjPNYHwJhgL4qSHLmyzcCNUfTVAewGPtHvoUA2EG/o1DKoAEF/B1PvP1q7P0pidjFgwKR/YbPCdBQviSTKOOAR4Mlg6n1YDiYyBQUn92yffbwJXC/L4R6Va1ynFZ4B7FQITvkTyLATGci/xXQ5ZVEQw/NNkeo1wBxgr8D6awDZv026lF7AY8HUe7QcWE1/1I8AZ/lsvxYWMA3t6Q4n0jrw+y9ZIl1mHbAN157G73WoTzX2p1Rc/97D4XegiL4SSAR+VHCxBu0/ls5CFJdG6KoG+muk/wKKc130jkLvTofn4KKqAs4EGqCzyOV556IYCRyEzoMuOv0UDcfrPWpwrQD1nnw//H7dtJyJURBjRWBW+6UWMRTU23kNyNOlvUY7urrJHoi5GAUJuA8YpqwEX3wm8D7uD5DqKOCGCMgwus4No5fr8jh03ZOkU4axE130RkpnDnQud9HhgT5feoOhd772/1vNM6UVEIyNgpgTis5Ccoe/O+jwWm/V2233OGZFhDEYPPRV25kiipZUCHyGBfCz9J6hhapOEm5XfQHwi+r7Hfpnqmmjw8HZSYqMei9N5LMRnr/UflYEEbS8B2x6fI8kvcdgOznDoyDncUxOo+rvArcYZFlSaFy7yHbvCg9jDFTZjLFWq74HqMZLxhtWusV4+TyDnErc+ypM/024v9aDBZ+nSNN6V1rqdA/kTELbCzHGQeMayUo1lXj2g95WVGlp6+3kJPsk5j25LEsWA/swwAqU1iTSb19D4uWv7dmGZFxPwIO1hhnncyCHxEJ3h1ZWPdp0xOis1Fd7miktcsmmTJErJtGz5c4z0XYYdD8Kt6cDDykNZonjPoR+DqM47BSt8QEfBg55zJdN5QQZHR9FkSUX9JZAn5yle/Ptq0WSGGGsJ0Knst0UZsTfYOCCSVkQxuf7kWnAlzakhnFpm/A+DTpyhAwLdZK3Ae7BRbI8WuAYFJcBJPQ3T6E0BvwJoCWka7UzBHZbmSXQPeTA/BGgGEgTihl54IHmy/f6FvapTMMs4FNdZpQ1D/jQCAhOm2CMESiGWI+kstpy27jvFkh9A2xQBFaia7NVPuU7QyBXwRRLLQZNk2sqFlF8oANWOBrmZZK0h2XqfJMeRv1XDwTR7a0i0Pcl2uTzFbkxNF/ZhblntrzEg3VZZ7ocPEOOYfH9lFHZ4NJ2qebgbrTjgr9WVsf95UU/h1D7pHwNcIWmaSJITgYGmcG9woWY8SgalRFYGIGYHyLsN+wvQecl65kabZFO0mm2GlpFgX4maCGsVJrLkulh5rBJh3O6++26vMTrftnDw8o9oSo3/DbtTVwJV+HeMb0EQ+nlwD0+3n2fBx1OwgytuiaFsAXG/YYuzj83dbvlHMN7VaqeJ+s4OanAH4beUN0fjT4GObl6w4VNAAbooL/eV+JT4SeTk8+Hy3lpJXCD2yg/Wo56psx6iM+JqfegczOQ4kJ6nbEao5VsIylrCSOmSlsgwDNVqc2qUnWIjFNgMM9lzvZAd7fGWWEsds+Ws0tuaxY6YqT1nNId7S7tuC/lQzdLbXv6nJQOY3MNJ+N0VuK3pQsUznKFblHqyMk9fGeQ5vZxry5c+sbwBq3qa6vDpLdAp0LP1d+4ZWVCzBCbi2uEntuSnXKVzV6y0qtt8fi3iu/fsX9ihu5y5ZgOiEi/UoU+pwSpTe97ziKRYaVbUpQ+4QphFvkVnQPGKwLhSlgXxZj8ZFAeTH1kMVMgjMsftd3PVfi3TMm6zSLlauWWRkUxZnnwLce/5YSUiMzWOcKSVUoq8nzTIh+7TKT5lVqvB7BAgj94/D/cmuHe2rSvvBrDcU6SHRDTRXIMgnjGuDfk/J3GqxxXXmxC8J+1GLg1hxQGPyfM1UHL6z8/g7/jdgc5Zp4rdOpTrflHdivHZv6RnYfYbYEL60ZyAul++UeAAQDyv2dSS4HffQAAAABJRU5ErkJggg==";
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
-        const _ = (_) => {
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABo1JREFUeNrsWg1MVlUY/iDTElOcI9ZgZBorV8ywVFYGc05mZQbmMgoNk37NQq3IJZWoLf+l9eMqSQ1lpm4aWgStpauZYbl+wK3EssjKflYmtAyi59Hnbme3e7/v3o9PVtt9t2fnfPe+55x7z3Pe97znvV9cZ2dnKJD/pvTwqji5oLAPiuuAscBwYBDQR7dbgWZgP1APbN9UXXU8mN6uSVwkywEpyShKgTsMMiJJG1AJLAZJLcE0x5gckBKH4i5gCXBOlP3TesqACpAU+M9YkANieqN4GbgpRuPsYLcgqC2Y8i6QI2I4maNjPNYHwJhgL4qSHLmyzcCNUfTVAewGPtHvoUA2EG/o1DKoAEF/B1PvP1q7P0pidjFgwKR/YbPCdBQviSTKOOAR4Mlg6n1YDiYyBQUn92yffbwJXC/L4R6Va1ynFZ4B7FQITvkTyLATGci/xXQ5ZVEQw/NNkeo1wBxgr8D6awDZv026lF7AY8HUe7QcWE1/1I8AZ/lsvxYWMA3t6Q4n0jrw+y9ZIl1mHbAN157G73WoTzX2p1Rc/97D4XegiL4SSAR+VHCxBu0/ls5CFJdG6KoG+muk/wKKc130jkLvTofn4KKqAs4EGqCzyOV556IYCRyEzoMuOv0UDcfrPWpwrQD1nnw//H7dtJyJURBjRWBW+6UWMRTU23kNyNOlvUY7urrJHoi5GAUJuA8YpqwEX3wm8D7uD5DqKOCGCMgwus4No5fr8jh03ZOkU4axE130RkpnDnQud9HhgT5feoOhd772/1vNM6UVEIyNgpgTis5Ccoe/O+jwWm/V2233OGZFhDEYPPRV25kiipZUCHyGBfCz9J6hhapOEm5XfQHwi+r7Hfpnqmmjw8HZSYqMei9N5LMRnr/UflYEEbS8B2x6fI8kvcdgOznDoyDncUxOo+rvArcYZFlSaFy7yHbvCg9jDFTZjLFWq74HqMZLxhtWusV4+TyDnErc+ypM/024v9aDBZ+nSNN6V1rqdA/kTELbCzHGQeMayUo1lXj2g95WVGlp6+3kJPsk5j25LEsWA/swwAqU1iTSb19D4uWv7dmGZFxPwIO1hhnncyCHxEJ3h1ZWPdp0xOis1Fd7miktcsmmTJErJtGz5c4z0XYYdD8Kt6cDDykNZonjPoR+DqM47BSt8QEfBg55zJdN5QQZHR9FkSUX9JZAn5yle/Ptq0WSGGGsJ0Knst0UZsTfYOCCSVkQxuf7kWnAlzakhnFpm/A+DTpyhAwLdZK3Ae7BRbI8WuAYFJcBJPQ3T6E0BvwJoCWka7UzBHZbmSXQPeTA/BGgGEgTihl54IHmy/f6FvapTMMs4FNdZpQ1D/jQCAhOm2CMESiGWI+kstpy27jvFkh9A2xQBFaia7NVPuU7QyBXwRRLLQZNk2sqFlF8oANWOBrmZZK0h2XqfJMeRv1XDwTR7a0i0Pcl2uTzFbkxNF/ZhblntrzEg3VZZ7ocPEOOYfH9lFHZ4NJ2qebgbrTjgr9WVsf95UU/h1D7pHwNcIWmaSJITgYGmcG9woWY8SgalRFYGIGYHyLsN+wvQecl65kabZFO0mm2GlpFgX4maCGsVJrLkulh5rBJh3O6++26vMTrftnDw8o9oSo3/DbtTVwJV+HeMb0EQ+nlwD0+3n2fBx1OwgytuiaFsAXG/YYuzj83dbvlHMN7VaqeJ+s4OanAH4beUN0fjT4GObl6w4VNAAbooL/eV+JT4SeTk8+Hy3lpJXCD2yg/Wo56psx6iM+JqfegczOQ4kJ6nbEao5VsIylrCSOmSlsgwDNVqc2qUnWIjFNgMM9lzvZAd7fGWWEsds+Ws0tuaxY6YqT1nNId7S7tuC/lQzdLbXv6nJQOY3MNJ+N0VuK3pQsUznKFblHqyMk9fGeQ5vZxry5c+sbwBq3qa6vDpLdAp0LP1d+4ZWVCzBCbi2uEntuSnXKVzV6y0qtt8fi3iu/fsX9ihu5y5ZgOiEi/UoU+pwSpTe97ziKRYaVbUpQ+4QphFvkVnQPGKwLhSlgXxZj8ZFAeTH1kMVMgjMsftd3PVfi3TMm6zSLlauWWRkUxZnnwLce/5YSUiMzWOcKSVUoq8nzTIh+7TKT5lVqvB7BAgj94/D/cmuHe2rSvvBrDcU6SHRDTRXIMgnjGuDfk/J3GqxxXXmxC8J+1GLg1hxQGPyfM1UHL6z8/g7/jdgc5Zp4rdOpTrflHdivHZv6RnYfYbYEL60ZyAul++UeAAQDyv2dSS4HffQAAAABJRU5ErkJggg==",
+          _ = (_) => {
             const [_, _] = (0, _.useState)(_ ? void 0 : !1);
             return (
               (0, _.useEffect)(() => {
@@ -15417,49 +15048,40 @@
               }, [_]),
               !!_
             );
-          },
-          _ = class _ {
-            constructor() {
-              _(this, "m_mapAppToSCVisibility", new Map());
-            }
-            BIsAppReleasedInSteamChina(_) {
-              return !!this.m_mapAppToSCVisibility.get(_);
-            }
-            async HintLoadIsAppReleaseInSteamChina(_, _) {
-              var _;
-              if (this.m_mapAppToSCVisibility.has(_))
-                return this.m_mapAppToSCVisibility.get(_);
-              const _ = _._.COMMUNITY_BASE_URL + `ogg/${_}/ajaxisvisibleinsc`;
-              try {
-                const _ = await _().get(_, {
-                  withCredentials: !0,
-                  cancelToken: _.token,
-                });
-                if (
-                  ((_ = _ == null ? void 0 : _.data) == null
-                    ? void 0
-                    : _.success) == _._ &&
-                  !_.token.reason
-                )
-                  return (
-                    this.m_mapAppToSCVisibility.set(_, !!_.data.visible),
-                    !!_.data.visible
-                  );
-              } catch (_) {
-                const _ = (0, _._)(_);
-                console.error(
-                  "HintLoadIsAppReleaseInSteamChina: " + _.strErrorMsg,
-                  _,
-                );
-              }
-              return !1;
-            }
-            static Get() {
-              return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-            }
           };
-        _(_, "s_Singleton");
-        let _ = _;
+        class _ {
+          m_mapAppToSCVisibility = new Map();
+          BIsAppReleasedInSteamChina(_) {
+            return !!this.m_mapAppToSCVisibility.get(_);
+          }
+          async HintLoadIsAppReleaseInSteamChina(_, _) {
+            if (this.m_mapAppToSCVisibility.has(_))
+              return this.m_mapAppToSCVisibility.get(_);
+            const _ = _._.COMMUNITY_BASE_URL + `ogg/${_}/ajaxisvisibleinsc`;
+            try {
+              const _ = await _().get(_, {
+                withCredentials: !0,
+                cancelToken: _.token,
+              });
+              if (_?.data?.success == _._ && !_.token.reason)
+                return (
+                  this.m_mapAppToSCVisibility.set(_, !!_.data.visible),
+                  !!_.data.visible
+                );
+            } catch (_) {
+              const _ = (0, _._)(_);
+              console.error(
+                "HintLoadIsAppReleaseInSteamChina: " + _.strErrorMsg,
+                _,
+              );
+            }
+            return !1;
+          }
+          static s_Singleton;
+          static Get() {
+            return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+          }
+        }
         function _(_) {
           const { editModel: _ } = _,
             _ = (0, _._)(),
@@ -15519,8 +15141,7 @@
           return _.BHasEmailEnabled() ||
             _.clanSteamID.GetAccountID() == (0, _._)()
             ? !0
-            : (_._.IS_OGG || _._.IS_VALVE_GROUP) &&
-                !!(_ != null && _.valve_admin);
+            : (_._.IS_OGG || _._.IS_VALVE_GROUP) && !!_?.valve_admin;
         }
         const _ = (0, _._)((_) => {
             const { editModel: _ } = _,
@@ -15638,13 +15259,10 @@
                 })
               : null;
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSettingUp: !1,
-              }),
-              (this.m_cancelSignal = _().CancelToken.source());
-          }
+          state = {
+            bSettingUp: !1,
+          };
+          m_cancelSignal = _().CancelToken.source();
           componentWillUnmount() {
             this.m_cancelSignal.cancel("EventEmailControlBar cancelled");
           }
@@ -15826,14 +15444,14 @@
                   ],
                 }),
                 _ &&
-                  (_ == null ? void 0 : _.valve_admin) &&
+                  _?.valve_admin &&
                   (0, _.jsx)("a", {
                     onClick: this.OnSetupAndFireEmailConfirm,
                     className: _().EditPreviewButton,
                     children: "(VO) Setup and Fire Email",
                   }),
                 _ &&
-                  !(_ != null && _.valve_admin) &&
+                  !_?.valve_admin &&
                   (0, _.jsx)("div", {
                     children: (0, _._)("#EventEmail_Ready_ValveRequiredToSend"),
                   }),
@@ -15856,9 +15474,8 @@
         const _ = (0, _._)((_) => {
           const { editModel: _ } = _,
             _ = (_) => {
-              var _;
               let _ = Array(),
-                _ = (_ = _._.Get().GetApp(_)) == null ? void 0 : _.GetName();
+                _ = _._.Get().GetApp(_)?.GetName();
               return (
                 _._.forEach((_) =>
                   _.push(
@@ -15901,8 +15518,8 @@
             _ = "#EventEmail_Reason_Played",
             _ = !1,
             _ = "#EventEmail_Footer_Reason_Played",
-            _ = _ == null ? void 0 : _.GetStorePageURL(),
-            _ = _ == null ? void 0 : _.GetName();
+            _ = _?.GetStorePageURL(),
+            _ = _?.GetName();
           if (!_.BIsTargetingGamePlayers()) {
             if (_.BIsTargetingGameFollowers())
               (_ = "#EventEmail_Reason_Follow"),
@@ -16077,9 +15694,7 @@
           });
         });
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments), (this.state = {});
-          }
+          state = {};
           GetEmailEditModel() {
             return new _._(this.props.editModel);
           }
@@ -16097,7 +15712,7 @@
           }
           render() {
             const { editModel: _, permissions: _ } = this.props;
-            if (!(_ != null && _.support_user)) return null;
+            if (!_?.support_user) return null;
             if (!this.state.clanInfo)
               return (0, _.jsx)(_._, {
                 string: (0, _._)("#Loading"),
@@ -16154,13 +15769,10 @@
         _([_._], _.prototype, "OnControlGroupSpinnerChange", 1),
           (_ = _([_._], _));
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bLoadingCreator: !0,
-              }),
-              (this.m_cancelSignal = _().CancelToken.source());
-          }
+          state = {
+            bLoadingCreator: !0,
+          };
+          m_cancelSignal = _().CancelToken.source();
           async LoadCreatorHome() {
             this.state.bLoadingCreator ||
               this.setState({
@@ -16244,8 +15856,7 @@
                         "RecipientToggle_" + _.clan_account_id,
                       ),
                     ),
-                      _ != null &&
-                        _.support_user &&
+                      _?.support_user &&
                         ((_ = (0, _.jsx)(_, {
                           valveOnly: !0,
                           label: (0, _._)(
@@ -16392,12 +16003,9 @@
           }
         }
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                state: this.props.editModel.BIsDirty() ? "unsaved" : "loading",
-              });
-          }
+          state = {
+            state: this.props.editModel.BIsDirty() ? "unsaved" : "loading",
+          };
           componentDidMount() {
             const { editModel: _ } = this.props;
             if (this.state.state == "loading") {
@@ -16521,13 +16129,11 @@
         _([_._], _.prototype, "OnLockEmail", 1), (_ = _([_._], _));
         const _ = 300;
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                rtimeLastRefresh: 0,
-                bRefreshing: !1,
-              });
-          }
+          state = {
+            rtimeLastRefresh: 0,
+            bRefreshing: !1,
+          };
+          autoRefreshInterval;
           RefreshIfNeeded() {
             let _ = Math.floor(Date.now() / 1e3);
             const { editModel: _ } = this.props;
@@ -16589,7 +16195,6 @@
               (this.autoRefreshInterval = void 0));
           }
           render() {
-            var _, _, _, _, _, _, _, _, _, _;
             const { editModel: _ } = this.props;
             if (!_.GetEventModel().jsondata.email_setting.force_feature_id)
               return (0, _.jsx)("div", {});
@@ -16685,56 +16290,39 @@
                           (0, _.jsx)("div", {
                             children: (0, _._)(
                               "#EventEmail_Stats_Examined",
-                              (_ =
-                                (_ = _.accounts_examined) == null
-                                  ? void 0
-                                  : _.toLocaleString((0, _._)())) != null
-                                ? _
-                                : 0,
+                              _.accounts_examined?.toLocaleString((0, _._)()) ??
+                                0,
                             ),
                           }),
                           (0, _.jsx)("div", {
                             children: (0, _._)(
                               "#EventEmail_Stats_Duplicates",
-                              (_ =
-                                (_ = _.accounts_duplicates) == null
-                                  ? void 0
-                                  : _.toLocaleString((0, _._)())) != null
-                                ? _
-                                : 0,
+                              _.accounts_duplicates?.toLocaleString(
+                                (0, _._)(),
+                              ) ?? 0,
                             ),
                           }),
                           (0, _.jsx)("div", {
                             children: (0, _._)(
                               "#EventEmail_Stats_Emailed",
-                              (_ =
-                                (_ = _.accounts_emailed) == null
-                                  ? void 0
-                                  : _.toLocaleString((0, _._)())) != null
-                                ? _
-                                : 0,
+                              _.accounts_emailed?.toLocaleString((0, _._)()) ??
+                                0,
                             ),
                           }),
                           (0, _.jsx)("div", {
                             children: (0, _._)(
                               "#EventEmail_Stats_Skipped",
-                              (_ =
-                                (_ = _.accounts_not_emailed) == null
-                                  ? void 0
-                                  : _.toLocaleString((0, _._)())) != null
-                                ? _
-                                : 0,
+                              _.accounts_not_emailed?.toLocaleString(
+                                (0, _._)(),
+                              ) ?? 0,
                             ),
                           }),
                           (0, _.jsx)("div", {
                             children: (0, _._)(
                               "#EventEmail_Stats_Failed",
-                              (_ =
-                                (_ = _.accounts_email_failed) == null
-                                  ? void 0
-                                  : _.toLocaleString((0, _._)())) != null
-                                ? _
-                                : 0,
+                              _.accounts_email_failed?.toLocaleString(
+                                (0, _._)(),
+                              ) ?? 0,
                             ),
                           }),
                         ],
@@ -16763,41 +16351,37 @@
           const _ = (0, _._)({
             queryKey: ["demoappdetailsforbase", _],
             queryFn: async () => {
-              var _;
               const _ = `${_._.COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo`,
                 _ = {
                   appid: _,
                   origin: self.origin,
-                },
-                _ = await _().get(_, {
-                  params: _,
-                });
+                };
               return (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.demos) || []
+                (
+                  await _().get(_, {
+                    params: _,
+                  })
+                )?.data?.demos || []
               );
             },
             enabled: !!_,
           });
-          return _ != null && _.isLoading ? null : _.data;
+          return _?.isLoading ? null : _.data;
         }
         function _(_, _) {
           return useMutation({
             mutationFn: async () => {
-              var _;
               const _ = `${Config.COMMUNITY_BASE_URL}demos/ajaxensuredemohasogg`,
                 _ = new FormData();
-              _.append("sessionid", GetSessionID()),
-                _.append("appid", "" + _),
-                _.append("demo_appid", "" + _);
-              const _ = await axios.post(_, _, {
-                withCredentials: !0,
-              });
               return (
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.ogg_clan_account_id) || null
+                _.append("sessionid", GetSessionID()),
+                _.append("appid", "" + _),
+                _.append("demo_appid", "" + _),
+                (
+                  await axios.post(_, _, {
+                    withCredentials: !0,
+                  })
+                )?.data?.ogg_clan_account_id || null
               );
             },
           });
@@ -16840,7 +16424,7 @@
                   (0, _.jsx)(_, {
                     editModel: _,
                   }),
-                  (!_ || (_ == null ? void 0 : _.valve_admin)) &&
+                  (!_ || _?.valve_admin) &&
                     (0, _.jsx)(_, {
                       editModel: _,
                     }),
@@ -16874,14 +16458,10 @@
                         strDescription:
                           "Showing on the library home page will pin this event into the first spot in the 'Whats New' section for ALL Steam Library. Are you sure this is an Steam update that applies to all Steam Library users? Be thoughtful.",
                         onOK: () => _.ClearTags(["hide_library_overview"]),
-                        onCancel: () => {
-                          var _;
-                          return (_ = _ == null ? void 0 : _.current) == null
-                            ? void 0
-                            : _.setState({
-                                checked: !_.current.checked,
-                              });
-                        },
+                        onCancel: () =>
+                          _?.current?.setState({
+                            checked: !_.current.checked,
+                          }),
                       }),
                       window,
                     )
@@ -17014,11 +16594,7 @@
         const _ = (0, _._)((_) => {
           const { editModel: _ } = _,
             { data: _ } = (0, _._)(_.GetClanAccountID());
-          if (
-            !!!(_ != null && _.valve_admin) ||
-            _._.IS_OGG ||
-            !_.BHasSaleEnabled()
-          )
+          if (!!!_?.valve_admin || _._.IS_OGG || !_.BHasSaleEnabled())
             return null;
           const _ = _._.STORE_BASE_URL + "specials/";
           return (0, _.jsx)("div", {
@@ -17084,7 +16660,7 @@
         const _ = (0, _._)((_) => {
           const { editModel: _ } = _,
             { data: _ } = (0, _._)(_.GetClanAccountID()),
-            _ = !!(_ != null && _.valve_admin);
+            _ = !!_?.valve_admin;
           let _ = _.useRef(void 0);
           const _ = _.GetEventType(),
             [_] = (0, _._)(() => [
@@ -17329,13 +16905,10 @@
           });
         });
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bSending: !1,
-              }),
-              (this.m_cancelSignal = _().CancelToken.source());
-          }
+          state = {
+            bSending: !1,
+          };
+          m_cancelSignal = _().CancelToken.source();
           TestFireEvent() {
             const { editModel: _ } = this.props;
             this.setState(
@@ -17580,7 +17153,7 @@
               nAccountApproved: _,
             } = (0, _._)(_.GetAccountID(), _);
           _.useEffect(() => {
-            _ && _ != null && _.current && _.current.click();
+            _ && _?.current && _.current.click();
           }, [_]);
           const _ = _.GetEventType() == _.ajI,
             _ = _.GetAccountID() == (0, _._)() || _,
@@ -17755,14 +17328,12 @@
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            (this.m_mapVisibilityUpdateRounds = new Map()),
-              (this.m_mapVisibilityUpdateLoadPromises = new Map()),
-              (this.m_mapVisibilityUpdateChangeCallback = new Map()),
-              (this.m_mapVisibilityLaunchRounds = new Map()),
-              (this.m_mapVisibilityLaunchLoadPromises = new Map()),
-              (this.m_mapVisibilityLaunchChangeCallback = new Map());
-          }
+          m_mapVisibilityUpdateRounds = new Map();
+          m_mapVisibilityUpdateLoadPromises = new Map();
+          m_mapVisibilityUpdateChangeCallback = new Map();
+          m_mapVisibilityLaunchRounds = new Map();
+          m_mapVisibilityLaunchLoadPromises = new Map();
+          m_mapVisibilityLaunchChangeCallback = new Map();
           GetVisibilityRounds(_, _) {
             return _ == _._._
               ? this.m_mapVisibilityUpdateRounds.get(_)
@@ -17786,7 +17357,6 @@
             );
           }
           async InternalLoadVisibilityRounds(_, _) {
-            var _;
             let _ = null;
             try {
               const _ = `${_._.COMMUNITY_BASE_URL}ogg/${_}/ajaxgetappvisibilityrounds`,
@@ -17797,12 +17367,7 @@
                   params: _,
                   withCredentials: !0,
                 });
-              if (
-                (_ == null ? void 0 : _.status) == 200 &&
-                ((_ = _ == null ? void 0 : _.data) == null
-                  ? void 0
-                  : _.success) == _._
-              ) {
+              if (_?.status == 200 && _?.data?.success == _._) {
                 const _ =
                     _ == _._._
                       ? this.m_mapVisibilityUpdateRounds
@@ -17821,12 +17386,13 @@
             return (
               console.error(
                 "CVisibilityRoundsStore.InternalLoadVisibilityRounds failed: " +
-                  (_ == null ? void 0 : _.strErrorMsg),
+                  _?.strErrorMsg,
                 _,
               ),
               null
             );
           }
+          static s_Singleton;
           static Get() {
             return (
               _.s_Singleton ||
@@ -17834,6 +17400,7 @@
               _.s_Singleton
             );
           }
+          constructor() {}
           Init() {}
         }
         function _(_, _) {
@@ -17856,7 +17423,6 @@
           _ = __webpack_require__("chunkid");
         const _ = 100;
         function _(_) {
-          var _;
           const { editModel: _ } = _,
             [_, _, _] = (0, _._)(() => [
               _.GetEventState(),
@@ -17865,9 +17431,7 @@
             ]),
             _ = (0, _._)("EventReplacePublishingControls"),
             { rgClanEventData: _ } = (0, _._)(_, _, _);
-          return !_ ||
-            !((_ = _ == null ? void 0 : _.pages) != null && _.length) ||
-            _ != _._.k_EEventStateUnpublished
+          return !_ || !_?.pages?.length || _ != _._.k_EEventStateUnpublished
             ? null
             : (0, _.jsxs)("div", {
                 className: (0, _._)(_().FlexColumnContainer, _().PublishOption),
@@ -17952,13 +17516,13 @@
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
             [_, _, _] = (0, _._)(() => [
-              _ == null ? void 0 : _.GetClanSteamID(),
-              _ == null ? void 0 : _.GetEventModel().GetNameWithFallback(_),
-              _ == null ? void 0 : _.GetEventModel().GetLastUpdateTime(),
+              _?.GetClanSteamID(),
+              _?.GetEventModel().GetNameWithFallback(_),
+              _?.GetEventModel().GetLastUpdateTime(),
             ]);
           (0, _.useEffect)(() => {
             _ &&
-              (_ == null ? void 0 : _.GetGID()) != _ &&
+              _?.GetGID() != _ &&
               _.LoadEditorModel(_.GetClanSteamID(), _).then((_) => {
                 _(_);
               }),
@@ -17987,7 +17551,7 @@
                   closeModal: _,
                   bReplaceEventMode: !0,
                   elSuccessDisplayLinks: (0, _.jsx)("a", {
-                    href: `${_._.COMMUNITY_BASE_URL}/gid/${_ == null ? void 0 : _.ConvertTo64BitString()}/partnerevents/edit/${_}`,
+                    href: `${_._.COMMUNITY_BASE_URL}/gid/${_?.ConvertTo64BitString()}/partnerevents/edit/${_}`,
                     children: (0, _._)("#EventEdit_Replacing_Open"),
                   }),
                 })
@@ -18113,7 +17677,6 @@
         }
         const _ = 3;
         function _(_) {
-          var _, _;
           const { editModel: _ } = _,
             [_, _, _] = (0, _._)(() => [
               _.BHasTag("vo_marketing_message"),
@@ -18121,38 +17684,22 @@
               _.GetGID(),
             ]),
             _ = (0, _._)(_, _),
-            [_, _] = (0, _.useState)(() => {
-              var _, _;
-              return (_ =
-                (_ = _ == null ? void 0 : _.oPrivateData) == null
-                  ? void 0
-                  : _.jsonData) == null
-                ? void 0
-                : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode;
-            }),
+            [_, _] = (0, _.useState)(
+              () =>
+                _?.oPrivateData?.jsonData
+                  ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+            ),
             [_, _] = (0, _.useState)(null);
           (0, _.useEffect)(() => {
-            var _, _, _, _;
-            (_ =
-              (_ = _ == null ? void 0 : _.oPrivateData) == null
-                ? void 0
-                : _.jsonData) != null &&
-              _.strMarketingMessageMajorUpdateHelpTicketReferenceCode &&
+            _?.oPrivateData?.jsonData
+              ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode &&
               _(
-                (_ =
-                  (_ = _ == null ? void 0 : _.oPrivateData) == null
-                    ? void 0
-                    : _.jsonData) == null
-                  ? void 0
-                  : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+                _?.oPrivateData?.jsonData
+                  ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
               );
           }, [
-            (_ =
-              (_ = _ == null ? void 0 : _.oPrivateData) == null
-                ? void 0
-                : _.jsonData) == null
-              ? void 0
-              : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+            _?.oPrivateData?.jsonData
+              ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
           ]);
           const [_, _, _] = (0, _._)(!1);
           return (0, _.jsxs)("div", {
@@ -18352,14 +17899,9 @@
           });
         }
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bLoadingClanInfo: !_._.BHasClanInfoLoaded(
-                  this.props.clanSteamID,
-                ),
-              });
-          }
+          state = {
+            bLoadingClanInfo: !_._.BHasClanInfoLoaded(this.props.clanSteamID),
+          };
           async componentDidMount() {
             this.state.bLoadingClanInfo &&
               (await _._.LoadClanInfoForClanSteamID(this.props.clanSteamID),
@@ -18380,7 +17922,7 @@
               _ = _._.GetClanInfoByClanAccountID(
                 _.GetClanSteamID().GetAccountID(),
               );
-            if (!(_ != null && _.can_edit)) return (0, _.jsx)(_.Fragment, {});
+            if (!_?.can_edit) return (0, _.jsx)(_.Fragment, {});
             let _ = _.BHasSaleEnabled() || _.is_ogg;
             const _ =
               (_.BWillShowOnLibraryOverviewDueToSettings() ||
@@ -18886,7 +18428,6 @@
           });
         }
         function _(_) {
-          var _;
           const { bInitiatePublishDialog: _, clanSteamID: _ } = _,
             _ = (0, _._)("EventInputPane"),
             _ = (0, _._)(),
@@ -18909,7 +18450,7 @@
                 : !1;
             }, [_]),
             { data: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
-            _ = !!(_ != null && _.valve_admin),
+            _ = !!_?.valve_admin,
             _ = (0, _._)(_, _),
             _ = (0, _._)(() => (0, _._)(_)),
             _ = (0, _._)(_, _),
@@ -18921,10 +18462,8 @@
           );
           const _ = !_(_.GetEventModel(), _);
           _._.LoadClanInfoForClanSteamID(_);
-          const _ = !!(
-              (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) != null &&
-              _.has_rss_feed
-            ),
+          const _ = !!_._.GetClanInfoByClanAccountID(_.GetAccountID())
+              ?.has_rss_feed,
             _ = (_) =>
               window.sessionStorage.setItem(
                 "editorCurrentTab",
@@ -19033,7 +18572,7 @@
                 status: (0, _.jsx)(_, {
                   fnGetStatus: () => _,
                 }),
-                statusToolTip: _ == null ? void 0 : _.ttip,
+                statusToolTip: _?.ttip,
                 hidden: !_.bVisible,
                 vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
                 contents: (0, _.jsx)(_._, {
@@ -19052,7 +18591,7 @@
                 status: (0, _.jsx)(_, {
                   fnGetStatus: () => _,
                 }),
-                statusToolTip: _ == null ? void 0 : _.ttip,
+                statusToolTip: _?.ttip,
                 hidden: !_.bVisible,
                 vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
                 contents: (0, _.jsx)(_._, {
@@ -19138,7 +18677,6 @@
             });
           }),
           _ = (0, _._)((_) => {
-            var _;
             (0, _.useEffect)(() => {
               _._.LoadOGGClanInfoForIdentifier(_.appid_or_vanity_str);
             }, [_.appid_or_vanity_str]);
@@ -19150,9 +18688,7 @@
                 appid_or_vanity_str: _,
               } = _,
               _ = !(_._.IS_CREATOR_HOME || _._.IS_CURATOR)
-                ? (_ = _._.Get().GetApp(_)) == null
-                  ? void 0
-                  : _.GetName()
+                ? _._.Get().GetApp(_)?.GetName()
                 : _._.VANITY_ID,
               _ = _._.GetEditModel();
             return (0, _.jsx)(_._, {
@@ -19261,7 +18797,7 @@
             [_, _] = (0, _.useState)(!1);
           return (
             (0, _.useEffect)(() => {
-              if (!(_ != null && _.BTagsNeedResync())) return;
+              if (!_?.BTagsNeedResync()) return;
               let _ = !1;
               return (
                 (0, _._)(_, _)
@@ -19292,7 +18828,7 @@
               );
             }, [_, _]),
             {
-              bResyncing: !!(_ != null && _.BTagsNeedResync()) && !_,
+              bResyncing: !!_?.BTagsNeedResync() && !_,
               bFailed: _,
             }
           );
@@ -19325,9 +18861,9 @@
           }),
           _ = (0, _._)(_);
         class _ extends _.Component {
+          m_bRedirect = !1;
           constructor(_) {
             super(_),
-              (this.m_bRedirect = !1),
               (this.m_bRedirect =
                 _._.GetEditModel() === void 0 ||
                 _._.GetEditModel().GetCategoryAsType() == _.DRF);
@@ -19628,11 +19164,11 @@
         function _(_, _) {
           switch (_) {
             case _._:
-              return _ == null ? void 0 : _.playable;
+              return _?.playable;
             case _._:
-              return _ == null ? void 0 : _.unsupported;
+              return _?.unsupported;
             default:
-              return _ == null ? void 0 : _.verified;
+              return _?.verified;
           }
         }
         var _ = __webpack_require__("chunkid"),
@@ -19645,22 +19181,15 @@
           const { event: _ } = _.context,
             _ = Number.parseInt((0, _._)(_.args)),
             _ = _.useMemo(() => {
-              var _;
               if (_)
-                return (_ = _.jsondata.sale_sections) == null
-                  ? void 0
-                  : _.find((_) => {
-                      var _, _;
-                      return (
-                        _.section_type == "vo_internal" &&
-                        (((_ = _.internal_section_data) == null
-                          ? void 0
-                          : _.internal_type) == "reservation_widget" ||
-                          ((_ = _.internal_section_data) == null
-                            ? void 0
-                            : _.internal_type) == "while_supplies_last")
-                      );
-                    });
+                return _.jsondata.sale_sections?.find(
+                  (_) =>
+                    _.section_type == "vo_internal" &&
+                    (_.internal_section_data?.internal_type ==
+                      "reservation_widget" ||
+                      _.internal_section_data?.internal_type ==
+                        "while_supplies_last"),
+                );
             }, [_]);
           if (_ && _) {
             const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -19757,7 +19286,7 @@
                         reservedHardwareDetail: _,
                       }),
                     _ &&
-                      (_ == null ? void 0 : _.allow_purchase_in_country) &&
+                      _?.allow_purchase_in_country &&
                       (0, _.jsx)(_._, {
                         reservationDef: _[0],
                         hardwareDetail: _,
@@ -19864,8 +19393,7 @@
               });
         }
         function _(_) {
-          var _;
-          const _ = (_ = _.args[""]) == null ? void 0 : _.trim();
+          const _ = _.args[""]?.trim();
           return _
             ? (0, _.jsx)("div", {
                 className: _,
@@ -19898,9 +19426,7 @@
         }
         function _(_) {
           const { event: _ } = _.context,
-            _ =
-              Number(_.args.groupid) ||
-              (_ == null ? void 0 : _.clanSteamID.GetAccountID());
+            _ = Number(_.args.groupid) || _?.clanSteamID.GetAccountID();
           if (!_) return null;
           const _ = (0, _._)(_.args.color, "black"),
             _ = (0, _._)(_.args.bgcolor, "white");
@@ -20089,17 +19615,13 @@
         function _(_) {
           const { eventModel: _, nEventBadgeID: _ } = _,
             _ = (0, _._)(_);
-          if ((_ == null ? void 0 : _.level) > 0) {
+          if (_?.level > 0) {
             let _ = _.level;
-            if (_ != null && _.BHasSaleEnabled()) {
+            if (_?.BHasSaleEnabled()) {
               const _ = _.GetSaleSectionsByType("badge_progress");
-              if ((_ == null ? void 0 : _.length) == 1) {
+              if (_?.length == 1) {
                 const _ = _[0].badge_progress;
-                if (
-                  (_ == null ? void 0 : _.event_badgeid) == _ &&
-                  _ != null &&
-                  _.granted_by_discovery_queue
-                ) {
+                if (_?.event_badgeid == _ && _?.granted_by_discovery_queue) {
                   const _ = _.levels[_.levels.length - 1].level;
                   return (0, _.jsx)(_, {
                     eventModel: _,
@@ -20122,7 +19644,7 @@
               const _ = _.GetSaleSections().filter(
                 (_) => _.section_type == "discoveryqueue",
               );
-              return (_ == null ? void 0 : _.length) > 0 ? _[0] : null;
+              return _?.length > 0 ? _[0] : null;
             }, [_]),
             { storePageFilter: _, eStoreDiscoveryQueueType: _ } = _.useMemo(
               () => (0, _._)(_, _),
@@ -20201,17 +19723,12 @@
         }
         const _ = (0, _._)(_._);
         function _(_) {
-          var _, _;
           const _ = Number.parseInt((0, _._)(_.args)),
             { event: _, showErrorInfo: _ } = _.context;
           if (_) {
-            const _ =
-              (_ =
-                (_ = _ == null ? void 0 : _.jsondata) == null
-                  ? void 0
-                  : _.sale_sections) == null
-                ? void 0
-                : _.findIndex((_) => _.unique_id == _);
+            const _ = _?.jsondata?.sale_sections?.findIndex(
+              (_) => _.unique_id == _,
+            );
             if (_ >= 0) {
               const _ = _.GetDayIndexFromEventStart();
               return (0, _.jsx)(_._, {
@@ -20361,23 +19878,22 @@
           });
         }
         function _(_) {
-          var _, _, _, _;
           const _ = (0, _._)(_._.accountid, "library");
           if (!_)
             return (0, _.jsx)(_._, {
               size: "small",
             });
           const _ = Number.parseInt((0, _._)(_.args));
-          let _ = ((_ = _.verifiedList) == null ? void 0 : _.length) || 0;
+          let _ = _.verifiedList?.length || 0;
           switch (_) {
             case _._:
-              _ = ((_ = _.playableList) == null ? void 0 : _.length) || 0;
+              _ = _.playableList?.length || 0;
               break;
             case _._:
-              _ = ((_ = _.unsupportedList) == null ? void 0 : _.length) || 0;
+              _ = _.unsupportedList?.length || 0;
               break;
             case _._:
-              _ = ((_ = _.unknownList) == null ? void 0 : _.length) || 0;
+              _ = _.unknownList?.length || 0;
               break;
           }
           return (0, _.jsx)("span", {
@@ -20450,12 +19966,9 @@
             return _ && _ && _(_, _, _), _;
           };
         let _ = class extends _._ {
-          constructor() {
-            super(...arguments),
-              (this.state = {
-                bLoading: !0,
-              });
-          }
+          state = {
+            bLoading: !0,
+          };
           GetRedirectRender() {
             return (0, _.jsx)(_._, {
               push: !0,
@@ -20467,15 +19980,16 @@
           }
           render() {
             let _ = super.render();
-            return _ != null
-              ? _
-              : (0, _.jsx)(_, {
-                  appid: _._.APPID,
-                  appid_or_vanity_str:
-                    this.props.match.params.appid_or_vanity_str,
-                  gid: "",
-                  clanSteamID: this.m_clanSteamID,
-                });
+            return (
+              _ ??
+              (0, _.jsx)(_, {
+                appid: _._.APPID,
+                appid_or_vanity_str:
+                  this.props.match.params.appid_or_vanity_str,
+                gid: "",
+                clanSteamID: this.m_clanSteamID,
+              })
+            );
           }
         };
         _ = _([_._], _);
@@ -20743,7 +20257,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const { editModel: _ } = _,
             [_, _] = _.useState(_.xPp),
             [_, _] = _.useState(!1),
@@ -20762,10 +20275,8 @@
             [, _] = _.useReducer((_) => _ + 1, 0),
             _ =
               _.isSuccess &&
-              (_ = _.data) != null &&
-              _.crowdin_project_id &&
-              (_ = _.data) != null &&
-              _.crowdin_file_id
+              _.data?.crowdin_project_id &&
+              _.data?.crowdin_file_id
                 ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
                 : null,
             _ = (_) => {
@@ -20900,9 +20411,7 @@
             _ = _.useRef(null),
             [_, _] = _.useState(""),
             _ = () => {
-              var _;
-              const _ =
-                (_ = _.current) == null ? void 0 : _.ownerDocument.defaultView;
+              const _ = _.current?.ownerDocument.defaultView;
               !_.current ||
                 !_ ||
                 _.navigator.clipboard
@@ -20922,9 +20431,7 @@
                 children: [
                   (0, _.jsx)("span", {
                     className: _().LinkInputLabel,
-                    children: (0, _._)(
-                      _ != null ? _ : "#EventDisplay_Share_Link",
-                    ),
+                    children: (0, _._)(_ ?? "#EventDisplay_Share_Link"),
                   }),
                   (0, _.jsx)("input", {
                     className: _().LinkInput,
@@ -20971,15 +20478,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -20988,26 +20486,27 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = class _ {
           constructor() {
-            _(this, "giveaway_id"),
-              _(this, "seconds_until_drawing"),
-              _(this, "rtime_start"),
-              _(this, "rtime_end"),
-              _(this, "closed"),
-              _(this, "winner_count"),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          giveaway_id = void 0;
+          seconds_until_drawing = void 0;
+          rtime_start = void 0;
+          rtime_end = void 0;
+          closed = void 0;
+          winner_count = void 0;
           BIsValid() {
             return this.giveaway_id !== void 0 && this.giveaway_id !== null;
           }
           BStarted() {
-            return (
-              this.BIsValid() &&
-              (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-            );
+            return this.BIsValid()
+              ? this.seconds_until_drawing !== void 0 &&
+                this.seconds_until_drawing >= 0
+                ? !0
+                : this.winner_count !== void 0 && this.winner_count > 0
+              : !1;
           }
           clone() {
             const _ = new _();
@@ -21031,12 +20530,12 @@
         let _ = _;
         const _ = class _ {
           constructor() {
-            _(this, "m_mapGiveawayIDToNextDrawInfo", new Map()),
-              _(this, "m_mapGiveawayIDAndInstanceToNextDrawInfo", new Map()),
-              _(this, "m_bLoadedFromConfig", !1),
-              _(this, "m_mapNextDrawChangeCallback", new Map()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapGiveawayIDToNextDrawInfo = new Map();
+          m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
+          m_bLoadedFromConfig = !1;
+          m_mapNextDrawChangeCallback = new Map();
           GetKey(_, _) {
             return _ + "_" + _;
           }
@@ -21046,10 +20545,11 @@
             );
           }
           GetNextDrawChangeCallback(_) {
+            let _ = this.m_mapNextDrawChangeCallback.get(_);
             return (
-              this.m_mapNextDrawChangeCallback.has(_) ||
-                this.m_mapNextDrawChangeCallback.set(_, new _._()),
-              this.m_mapNextDrawChangeCallback.get(_)
+              _ ||
+                ((_ = new _._()), this.m_mapNextDrawChangeCallback.set(_, _)),
+              _
             );
           }
           CopyToGiveaway(_, _) {
@@ -21065,42 +20565,33 @@
           async ReloadGiveaway(_, _) {
             if (!_) return null;
             let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-              _ = null,
               _ = {
                 origin: self.origin,
               };
-            return (
-              (_ = await _().get(_, {
+            const _ = await _().get(_, {
                 params: _,
-              })),
-              (0, _._)(() => {
+              }),
+              _ = (0, _._)(() => {
+                let _ = this.m_mapGiveawayIDToNextDrawInfo.get(_);
                 if (
-                  (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                  ),
+                  (_ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(_, _)),
+                  this.CopyToGiveaway(_.data, _),
                   _ !== void 0)
                 ) {
                   const _ = this.GetKey(_, _);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      _,
-                      new _(),
-                    ),
-                    this.CopyToGiveaway(
-                      _.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                    );
+                  let _ = this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_);
+                  _ ||
+                    ((_ = new _()),
+                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, _)),
+                    this.CopyToGiveaway(_.data, _);
                 }
-              }),
-              this.GetNextDrawChangeCallback(_).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(_),
-              ),
-              this.m_mapGiveawayIDToNextDrawInfo.get(_)
-            );
+                return _;
+              });
+            return this.GetNextDrawChangeCallback(_).Dispatch(_), _;
           }
+          static s_Singleton;
           static Get() {
             return (
               _.s_Singleton ||
@@ -21120,16 +20611,16 @@
             }
           }
         };
-        _(_, "s_Singleton"),
-          _([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
+        _([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", 2),
           _([_._], _.prototype, "CopyToGiveaway", 1);
         let _ = _;
         const _ = class _ {
+          m_intervalID;
+          m_intervalCountDownID;
+          static s_GlobalInstance = 0;
+          m_myInstanceNumber = 0;
           constructor() {
-            _(this, "m_intervalID"),
-              _(this, "m_intervalCountDownID"),
-              _(this, "m_myInstanceNumber", 0),
-              (this.m_myInstanceNumber = _.s_GlobalInstance),
+            (this.m_myInstanceNumber = _.s_GlobalInstance),
               (_.s_GlobalInstance += 1);
           }
           ClearRefreshInterval() {
@@ -21145,36 +20636,44 @@
           SetupRefreshDataInterval(_, _) {
             if ((this.ClearRefreshInterval(), !_.closed)) {
               let _ =
-                _.seconds_until_drawing <= 0 && _.winner_count == 0 ? 6e4 : 5e3;
+                _.seconds_until_drawing !== void 0 &&
+                _.seconds_until_drawing <= 0 &&
+                _.winner_count == 0
+                  ? 60 * 1e3
+                  : 5 * 1e3;
               this.m_intervalID = window.setInterval(_, _);
             }
           }
           SetupCountDown(_, _) {
-            _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
+            _ !== void 0 &&
+              _ > 0 &&
+              (this.m_intervalCountDownID = window.setInterval(_, 1e3));
           }
         };
-        _(_, "s_GlobalInstance", 0),
-          _([_._], _.prototype, "ClearRefreshInterval", 1),
+        _([_._], _.prototype, "ClearRefreshInterval", 1),
           _([_._], _.prototype, "ClearCountDown", 1),
           _([_._], _.prototype, "SetupRefreshDataInterval", 1),
           _([_._], _.prototype, "SetupCountDown", 1);
         let _ = _;
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-          (_.seconds_until_drawing -= 1),
-            _.seconds_until_drawing == 0 && _.ClearCountDown();
+          !_ ||
+            _.seconds_until_drawing === void 0 ||
+            ((_.seconds_until_drawing -= 1),
+            _.seconds_until_drawing == 0 && _.ClearCountDown());
         }
         function _(_, _) {
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
           _ &&
             _.BIsValid() &&
+            _.seconds_until_drawing !== void 0 &&
             _.seconds_until_drawing <= 0 &&
             !_.closed &&
             (_.ClearCountDown(),
             _.Get()
               .ReloadGiveaway(_, _.m_myInstanceNumber)
               .then((_) => {
-                _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
+                _ && _.SetupCountDown(_.seconds_until_drawing, () => _(_, _));
               }));
         }
         function _(_) {
@@ -21185,9 +20684,10 @@
               _.Get()
                 .ReloadGiveaway(_, _.m_myInstanceNumber)
                 .then((_) => {
-                  _.SetupRefreshDataInterval(_, () => _(_, _)),
+                  _ &&
+                    (_.SetupRefreshDataInterval(_, () => _(_, _)),
                     _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                    _();
+                    _());
                 }),
               () => {
                 _.ClearRefreshInterval(), _.ClearCountDown();
@@ -21197,9 +20697,9 @@
           );
           const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber),
             [_, _, _] = (0, _._)(() => [
-              _ == null ? void 0 : _.winner_count,
-              _ == null ? void 0 : _.closed,
-              _ == null ? void 0 : _.seconds_until_drawing,
+              _?.winner_count,
+              _?.closed,
+              _?.seconds_until_drawing,
             ]);
           return {
             bLoadingGiveawayInfo:
@@ -21234,15 +20734,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -21251,14 +20742,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
           constructor() {
-            _(this, "m_mapProfiles", new Map()),
-              _(this, "m_mapProfilesLoading", new Map()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapProfiles = new Map();
+          m_mapProfilesLoading = new Map();
           async LoadProfiles(_, _) {
             (0, _._)(
               _.length <= 500,
@@ -21275,7 +20765,7 @@
                   steamids: _.join(","),
                 },
                 withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
+                cancelToken: _?.token,
               });
             _.forEach((_) => this.m_mapProfilesLoading.set(_, _));
             let _ = await _;
@@ -21372,15 +20862,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -21389,18 +20870,14 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                invite_token: "",
-                input_search: "",
-                friend_code_copied: !1,
-                invite_copied: !1,
-              });
-          }
+          state = {
+            invite_token: "",
+            input_search: "",
+            friend_code_copied: !1,
+            invite_copied: !1,
+          };
           async componentDidMount() {
             const _ = await _().get(
               _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
@@ -21633,16 +21110,13 @@
           _([_._], _.prototype, "OnSearchKeyDown", 1),
           _([_._], _.prototype, "OnSearchSubmit", 1);
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                input_friend_code: "",
-                disable_send_invite: !1,
-                searchResult: null,
-                invite_status: "pending",
-              }),
-              _(this, "m_currentRequest", 0);
-          }
+          state = {
+            input_friend_code: "",
+            disable_send_invite: !1,
+            searchResult: null,
+            invite_status: "pending",
+          };
+          m_currentRequest = 0;
           async OnFriendCodeChange(_) {
             const _ = _.target.value.split(",")[0];
             this.setState({
@@ -22190,22 +21664,9 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "m_mapTokens", new Map());
-          }
+          m_mapTokens = new Map();
           GetLocalization(_, _) {
             const _ = this.m_mapTokens.get(_);
             if (!(!_ || !_[_])) return _[_];
@@ -22259,34 +21720,18 @@
         }
         class _ {
           DetectAndFormatCSV(_) {
-            var _, _, _, _, _, _;
             let _ = null;
             return (
-              ((_ =
-                (_ = _ == null ? void 0 : _.meta) == null
-                  ? void 0
-                  : _.fields) == null
-                ? void 0
-                : _.length) >= 3 &&
+              _?.meta?.fields?.length >= 3 &&
               _.meta.fields[0] === "field" &&
               _.meta.fields[1] === "language" &&
               _.meta.fields[2] === "value"
                 ? (_ = this.ReadLocalizationData_CSV_TokenLanguageList(_))
-                : ((_ =
-                      (_ = _ == null ? void 0 : _.meta) == null
-                        ? void 0
-                        : _.fields) == null
-                      ? void 0
-                      : _.length) >= 2 &&
+                : _?.meta?.fields?.length >= 2 &&
                     _.meta.fields[0] === "field" &&
                     (0, _.sfN)(_.meta.fields[1], _.xPp) != _.xPp
                   ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
-                  : ((_ =
-                      (_ = _ == null ? void 0 : _.meta) == null
-                        ? void 0
-                        : _.fields) == null
-                      ? void 0
-                      : _.length) >= 2 &&
+                  : _?.meta?.fields?.length >= 2 &&
                     _.meta.fields[0] === "language" &&
                     (_ = this.ReadLocalizationData_CSV_LanguageRows(_)),
               _
@@ -22473,6 +21918,21 @@
           Ctn: "BTMmbSI5WdBvCQVAgf3-i",
           ButtonIcon: "_21IZDNymOVDf4u4Ont7WVA",
           SalePageTOCPlacement: "_3swQ-bhpt-4JFhKZu9FvNW",
+        };
+      },
+      chunkid: (module) => {
+        module.exports = {
+          UploaderCtn: "_2pUza_pnbgUythyKOjqxzo",
+          ControlsRow: "_3_gnpCxErTMQb0psyMNlVR",
+          FadeColorLabel: "_3qyY3cTQWHxeyBMVLidq9m",
+          ColorSwatch: "_2ExdJKlXoLbv3dpXCYivJp",
+          FadeColorValue: "oM9dArrfzKNMmCWJjniBS",
+          SmallBtn: "EH1UVP6JohkAOVavQxOEF",
+          PreviewCtn: "_2frpp5o_RADaM2yEuWdDO4",
+          PreviewArt: "_3gL2tdNsAa8cNXf1HxCWKm",
+          PreviewPlaceholder: "_3LNtkSgj8P6uG4al16RF5s",
+          Empty: "_16yHi2sJaW9QaDg4Zh6KX5",
+          PreviewFade: "_3w3hfJYQwizAonvS6PbqxS",
         };
       },
       chunkid: (module) => {
@@ -22733,18 +22193,6 @@
           FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
           FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
           FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
-          BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
-          "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
-          "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
-          "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
-          "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
-          "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
-          "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
-          "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
-          "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
-          focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
-          hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
         };
       },
       chunkid: (module) => {
@@ -22805,18 +22253,6 @@
           SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
           WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
           BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
-          BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
-          "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
-          "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
-          "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
-          "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
-          "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
-          "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
-          "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
-          "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
-          "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
-          focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
-          hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
         };
       },
       chunkid: (module) => {
@@ -22842,18 +22278,6 @@
           Success: "zNkywkFbUJio86FBwBWwx",
           FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
           SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
-          BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
-          "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
-          "ItemFocusAnim-darkGreySettings": "_3HZYqGe5_hsFFJcgBTMMSW",
-          "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
-          "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
-          "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
-          "ItemFocusAnim-translucent-white-20": "_1TV5evTLXXGDV16o8ltkb7",
-          "ItemFocusAnimBorder-darkGrey": "_2N1KfmpWvdxv64J5Rs82CX",
-          "ItemFocusAnim-green": "_3UU3hyYWsBPGsxljxX3hbB",
-          focusAnimation: "_2u4UlTYeTMTUGVGicBx0My",
-          hoverAnimation: "_16_WHz1Oh5Jy0J3qvG4rto",
         };
       },
       chunkid: (module) => {

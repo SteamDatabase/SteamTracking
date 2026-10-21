@@ -10,8 +10,7 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        const _ =
-          typeof document != "undefined" ? _.useLayoutEffect : _.useEffect;
+        const _ = typeof document < "u" ? _.useLayoutEffect : _.useEffect;
         function _(_) {
           const _ = _.useReducer(() => ({}), {})[1],
             _ = {
@@ -40,13 +39,11 @@
         }
         function _(_) {
           return _({
-            getScrollElement: () =>
-              typeof document != "undefined" ? window : null,
+            getScrollElement: () => (typeof document < "u" ? window : null),
             observeElementRect: observeWindowRect,
             observeElementOffset: observeWindowOffset,
             scrollToFn: windowScroll,
-            initialOffset: () =>
-              typeof document != "undefined" ? window.scrollY : 0,
+            initialOffset: () => (typeof document < "u" ? window.scrollY : 0),
             ..._,
           });
         }
@@ -60,8 +57,7 @@
           _: () => _,
         });
         function _(_, _, _) {
-          var _;
-          let _ = (_ = _.initialDeps) != null ? _ : [],
+          let _ = _.initialDeps ?? [],
             _;
           function _() {
             var _, _, _, _;
@@ -90,12 +86,10 @@
             font-size: .6rem;
             font-weight: bold;
             color: hsl(${Math.max(0, Math.min(120 - 120 * _, 120))}deg 100% 31%);`,
-                _ == null ? void 0 : _.key,
+                _?.key,
               );
             }
-            return (
-              (_ = _ == null ? void 0 : _.onChange) == null || _.call(_, _), _
-            );
+            return (_ = _?.onChange) == null || _.call(_, _), _;
           }
           return (
             (_.updateDeps = (_) => {
@@ -147,7 +141,7 @@
             const _ = new _.ResizeObserver((_) => {
               const _ = () => {
                 const _ = _[0];
-                if (_ != null && _.borderBoxSize) {
+                if (_?.borderBoxSize) {
                   const _ = _.borderBoxSize[0];
                   if (_) {
                     _({
@@ -192,7 +186,7 @@
               }
             );
           },
-          _ = typeof window == "undefined" ? !0 : "onscrollend" in window,
+          _ = typeof window > "u" ? !0 : "onscrollend" in window,
           _ = (_, _) => {
             const _ = _.scrollElement;
             if (!_) return;
@@ -261,7 +255,7 @@
             );
           },
           _ = (_, _, _) => {
-            if (_ != null && _.borderBoxSize) {
+            if (_?.borderBoxSize) {
               const _ = _.borderBoxSize[0];
               if (_)
                 return Math.round(
@@ -340,7 +334,7 @@
               (this.range = null),
               (this.setOptions = (_) => {
                 Object.entries(_).forEach(([_, _]) => {
-                  typeof _ == "undefined" && delete _[_];
+                  typeof _ > "u" && delete _[_];
                 }),
                   (this.options = {
                     debug: !1,
@@ -410,7 +404,6 @@
               }),
               (this._willUpdate = () => {
                 var _;
-                var _;
                 const _ = this.options.enabled
                   ? this.options.getScrollElement()
                   : null;
@@ -424,12 +417,9 @@
                       ? (this.targetWindow =
                           this.scrollElement.ownerDocument.defaultView)
                       : (this.targetWindow =
-                          (_ =
-                            (_ = this.scrollElement) == null
-                              ? void 0
-                              : _.window) != null
-                            ? _
-                            : null),
+                          ((_ = this.scrollElement) == null
+                            ? void 0
+                            : _.window) ?? null),
                     this.elementsCache.forEach((_) => {
                       this.observer.observe(_);
                     }),
@@ -457,30 +447,23 @@
                     );
                 }
               }),
-              (this.getSize = () => {
-                var _;
-                return this.options.enabled
+              (this.getSize = () =>
+                this.options.enabled
                   ? ((this.scrollRect =
-                      (_ = this.scrollRect) != null
-                        ? _
-                        : this.options.initialRect),
+                      this.scrollRect ?? this.options.initialRect),
                     this.scrollRect[
                       this.options.horizontal ? "width" : "height"
                     ])
-                  : ((this.scrollRect = null), 0);
-              }),
-              (this.getScrollOffset = () => {
-                var _;
-                return this.options.enabled
+                  : ((this.scrollRect = null), 0)),
+              (this.getScrollOffset = () =>
+                this.options.enabled
                   ? ((this.scrollOffset =
-                      (_ = this.scrollOffset) != null
-                        ? _
-                        : typeof this.options.initialOffset == "function"
-                          ? this.options.initialOffset()
-                          : this.options.initialOffset),
+                      this.scrollOffset ??
+                      (typeof this.options.initialOffset == "function"
+                        ? this.options.initialOffset()
+                        : this.options.initialOffset)),
                     this.scrollOffset)
-                  : ((this.scrollOffset = null), 0);
-              }),
+                  : ((this.scrollOffset = null), 0)),
               (this.getFurthestMeasurement = (_, _) => {
                 const _ = new Map(),
                   _ = new Map();
@@ -659,11 +642,9 @@
                     this.resizeItem(_, this.options.measureElement(_, _, this));
               }),
               (this.resizeItem = (_, _) => {
-                var _;
                 const _ = this.measurementsCache[_];
                 if (!_) return;
-                const _ =
-                    (_ = this.itemSizeCache.get(_.key)) != null ? _ : _.size,
+                const _ = this.itemSizeCache.get(_.key) ?? _.size,
                   _ = _ - _;
                 _ !== 0 &&
                   ((this.shouldAdjustScrollPositionOnItemSizeChange !== void 0
@@ -814,15 +795,11 @@
               }),
               (this.getTotalSize = () => {
                 var _;
-                var _;
                 const _ = this.getMeasurements();
                 let _;
                 if (_.length === 0) _ = this.options.paddingStart;
                 else if (this.options.lanes === 1)
-                  _ =
-                    (_ = (_ = _[_.length - 1]) == null ? void 0 : _.end) != null
-                      ? _
-                      : 0;
+                  _ = ((_ = _[_.length - 1]) == null ? void 0 : _.end) ?? 0;
                 else {
                   const _ = Array(this.options.lanes).fill(null);
                   let _ = _.length - 1;

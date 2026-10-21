@@ -1022,9 +1022,6 @@
         module.exports = __webpack_require__("chunkid").sortBy;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
-        module.exports = __webpack_require__("chunkid").throttle;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
         module.exports = __webpack_require__("chunkid").uniqBy;
       },
       chunkid: (_, _) => {
@@ -1407,59 +1404,6 @@
             : [];
         }
         module_exports.uniqBy = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        Object.defineProperty(module_exports, Symbol.toStringTag, {
-          value: "Module",
-        });
-        const _ = __webpack_require__("chunkid");
-        function _(_, _ = 0, _ = {}) {
-          typeof _ != "object" && (_ = {});
-          const { leading: _ = !1, trailing: _ = !0, maxWait: _ } = _,
-            _ = Array(2);
-          _ && (_[0] = "leading"), _ && (_[1] = "trailing");
-          let _,
-            _ = null;
-          const _ = _.debounce(
-              function (..._) {
-                (_ = _.apply(this, _)), (_ = null);
-              },
-              _,
-              {
-                edges: _,
-              },
-            ),
-            _ = function (..._) {
-              return _ != null &&
-                (_ === null && (_ = Date.now()), Date.now() - _ >= _)
-                ? ((_ = _.apply(this, _)),
-                  (_ = Date.now()),
-                  _.cancel(),
-                  _.schedule(),
-                  _)
-                : (_.apply(this, _), _);
-            },
-            _ = () => (_.flush(), _);
-          return (_.cancel = _.cancel), (_.flush = _), _;
-        }
-        module_exports.debounce = _;
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        Object.defineProperty(module_exports, Symbol.toStringTag, {
-          value: "Module",
-        });
-        const _ = __webpack_require__("chunkid");
-        function _(_, _ = 0, _ = {}) {
-          const { leading: _ = !0, trailing: _ = !0 } = _;
-          return _.debounce(_, _, {
-            leading: _,
-            maxWait: _,
-            trailing: _,
-          });
-        }
-        module_exports.throttle = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -1992,56 +1936,6 @@
           return _ && _.push(_), _;
         }
         _.toPath = _;
-      },
-      chunkid: (_, _) => {
-        "use strict";
-        Object.defineProperty(_, Symbol.toStringTag, {
-          value: "Module",
-        });
-        function _(_, _, { signal: _, edges: _ } = {}) {
-          let _,
-            _ = null;
-          const _ = _ != null && _.includes("leading"),
-            _ = _ == null || _.includes("trailing"),
-            _ = () => {
-              _ !== null && (_.apply(_, _), (_ = void 0), (_ = null));
-            },
-            _ = () => {
-              _ && _(), _();
-            };
-          let _ = null;
-          const _ = () => {
-              _ != null && clearTimeout(_),
-                (_ = setTimeout(() => {
-                  (_ = null), _();
-                }, _));
-            },
-            _ = () => {
-              _ !== null && (clearTimeout(_), (_ = null));
-            },
-            _ = () => {
-              _(), (_ = void 0), (_ = null);
-            },
-            _ = () => {
-              _();
-            },
-            _ = function (..._) {
-              if (_?.aborted) return;
-              (_ = this), (_ = _);
-              const _ = _ == null;
-              _(), _ && _ && _();
-            };
-          return (
-            (_.schedule = _),
-            (_.cancel = _),
-            (_.flush = _),
-            _?.addEventListener("abort", _, {
-              once: !0,
-            }),
-            _
-          );
-        }
-        _.debounce = _;
       },
       chunkid: (_, _) => {
         "use strict";
@@ -4801,7 +4695,31 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
+          _ = !1,
+          _ = function (_, _) {
+            for (
+              var _ = arguments.length, _ = new Array(_ > 2 ? _ - 2 : 0), _ = 2;
+              _ < _;
+              _++
+            )
+              _[_ - 2] = arguments[_];
+            if (
+              _ &&
+              typeof console < "u" &&
+              console.warn &&
+              (_ === void 0 &&
+                console.warn("LogUtils requires an error message argument"),
+              !_)
+            )
+              if (_ === void 0)
+                console.warn(
+                  "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
+                );
+              else {
+                var _ = 0;
+                console.warn(_.replace(/%s/g, () => _[_++]));
+              }
+          },
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -5210,7 +5128,7 @@
                 },
                 _ ? !0 : _,
               );
-            (0, _._)(
+            _(
               Array.isArray(_),
               "horizontalCoordinatesGenerator should return Array but instead it returned [".concat(
                 typeof _,
@@ -5238,7 +5156,7 @@
                 },
                 _ ? !0 : _,
               );
-            (0, _._)(
+            _(
               Array.isArray(_),
               "verticalCoordinatesGenerator should return Array but instead it returned [".concat(
                 typeof _,
@@ -5772,7 +5690,7 @@
         }
         var _ = (_, _) => {
             var { _: _, _: _ } = _,
-              { _: _, _ } = _;
+              { _: _, _: _ } = _;
             return {
               _: Math.min(_, _),
               _: Math.min(_, _),
@@ -5923,7 +5841,7 @@
         }
         function _(_, _, _) {
           var _ = _ === "width",
-            { _: _, _, width: _, height: _ } = _;
+            { _: _, _: _, width: _, height: _ } = _;
           return _ === 1
             ? {
                 start: _ ? _ : _,
@@ -7549,21 +7467,21 @@
             }
             if (_ === "center")
               return {
-                _: _,
+                _,
                 _: _,
                 textAnchor: "middle",
                 verticalAnchor: "middle",
               };
             if (_ === "centerTop")
               return {
-                _: _,
+                _,
                 _: _,
                 textAnchor: "middle",
                 verticalAnchor: "start",
               };
             if (_ === "centerBottom")
               return {
-                _: _,
+                _,
                 _: _,
                 textAnchor: "middle",
                 verticalAnchor: "end",
@@ -8606,69 +8524,7 @@
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
-          _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = (_, _, _) => {
-            var {
-                width: _ = "100%",
-                height: _ = "100%",
-                aspect: _,
-                maxHeight: _,
-              } = _,
-              _ = (0, _._)(_) ? _ : Number(_),
-              _ = (0, _._)(_) ? _ : Number(_);
-            return (
-              _ &&
-                _ > 0 &&
-                (_ ? (_ = _ / _) : _ && (_ = _ * _), _ && _ > _ && (_ = _)),
-              {
-                calculatedWidth: _,
-                calculatedHeight: _,
-              }
-            );
-          },
-          _ = {
-            width: 0,
-            height: 0,
-            overflow: "visible",
-          },
-          _ = {
-            width: 0,
-            overflowX: "visible",
-          },
-          _ = {
-            height: 0,
-            overflowY: "visible",
-          },
-          _ = {},
-          _ = (_) => {
-            var { width: _, height: _ } = _,
-              _ = (0, _._)(_),
-              _ = (0, _._)(_);
-            return _ && _ ? _ : _ ? _ : _ ? _ : _;
-          };
-        function _(_) {
-          var { width: _, height: _, aspect: _ } = _,
-            _ = _,
-            _ = _;
-          return (
-            _ === void 0 && _ === void 0
-              ? ((_ = "100%"), (_ = "100%"))
-              : _ === void 0
-                ? (_ = _ && _ > 0 ? void 0 : "100%")
-                : _ === void 0 && (_ = _ && _ > 0 ? void 0 : "100%"),
-            {
-              width: _,
-              height: _,
-            }
-          );
-        }
         var _ = __webpack_require__("chunkid");
         function _() {
           return (
@@ -8752,7 +8608,7 @@
         });
         function _(_) {
           var { children: _, width: _, height: _ } = _,
-            _ = (0, _.useMemo)(
+            _ = useMemo(
               () => ({
                 width: _,
                 height: _,
@@ -8761,7 +8617,7 @@
             );
           return _ <= 0 || _ <= 0
             ? null
-            : _.createElement(
+            : React.createElement(
                 _.Provider,
                 {
                   value: _,
@@ -8770,163 +8626,8 @@
               );
         }
         var _ = () => (0, _.useContext)(_),
-          _ = (0, _.forwardRef)((_, _) => {
-            var {
-                aspect: _,
-                initialDimension: _ = {
-                  width: -1,
-                  height: -1,
-                },
-                width: _,
-                height: _,
-                minWidth: _ = 0,
-                minHeight: _,
-                maxHeight: _,
-                children: _,
-                debounce: _ = 0,
-                _: _,
-                className: _,
-                onResize: _,
-                style: _ = {},
-              } = _,
-              _ = (0, _.useRef)(null),
-              _ = (0, _.useRef)();
-            (_.current = _), (0, _.useImperativeHandle)(_, () => _.current);
-            var [_, _] = (0, _.useState)({
-                containerWidth: _.width,
-                containerHeight: _.height,
-              }),
-              _ = (0, _.useCallback)((_, _) => {
-                _((_) => {
-                  var _ = Math.round(_),
-                    _ = Math.round(_);
-                  return _.containerWidth === _ && _.containerHeight === _
-                    ? _
-                    : {
-                        containerWidth: _,
-                        containerHeight: _,
-                      };
-                });
-              }, []);
-            (0, _.useEffect)(() => {
-              var _ = (_) => {
-                var _,
-                  { width: _, height: _ } = _[0].contentRect;
-                _(_, _),
-                  (_ = _.current) === null || _ === void 0 || _.call(_, _, _);
-              };
-              _ > 0 &&
-                (_ = _()(_, _, {
-                  trailing: !0,
-                  leading: !1,
-                }));
-              var _ = new ResizeObserver(_),
-                { width: _, height: _ } = _.current.getBoundingClientRect();
-              return (
-                _(_, _),
-                _.observe(_.current),
-                () => {
-                  _.disconnect();
-                }
-              );
-            }, [_, _]);
-            var { containerWidth: _, containerHeight: _ } = _;
-            (0, _._)(
-              !_ || _ > 0,
-              "The aspect(%s) must be greater than zero.",
-              _,
-            );
-            var { calculatedWidth: _, calculatedHeight: _ } = _(_, _, {
-              width: _,
-              height: _,
-              aspect: _,
-              maxHeight: _,
-            });
-            return (
-              (0, _._)(
-                _ > 0 || _ > 0,
-                `The width(%s) and height(%s) of chart should be greater than 0,
-       please check the style of container, or the props width(%s) and height(%s),
-       or add a minWidth(%s) or minHeight(%s) or use aspect(%s) to control the
-       height and width.`,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  _: _ ? "".concat(_) : void 0,
-                  className: (0, _._)("recharts-responsive-container", _),
-                  style: _(
-                    _({}, _),
-                    {},
-                    {
-                      width: _,
-                      height: _,
-                      minWidth: _,
-                      minHeight: _,
-                      maxHeight: _,
-                    },
-                  ),
-                  ref: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    style: _({
-                      width: _,
-                      height: _,
-                    }),
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      width: _,
-                      height: _,
-                    },
-                    _,
-                  ),
-                ),
-              )
-            );
-          }),
-          _ = (0, _.forwardRef)((_, _) => {
-            var _ = _();
-            if ((0, _._)(_.width) && (0, _._)(_.height)) return _.children;
-            var { width: _, height: _ } = _({
-                width: _.width,
-                height: _.height,
-                aspect: _.aspect,
-              }),
-              { calculatedWidth: _, calculatedHeight: _ } = _(void 0, void 0, {
-                width: _,
-                height: _,
-                aspect: _.aspect,
-                maxHeight: _.maxHeight,
-              });
-            return (0, _._)(_) && (0, _._)(_)
-              ? _.createElement(
-                  _,
-                  {
-                    width: _,
-                    height: _,
-                  },
-                  _.children,
-                )
-              : _.createElement(
-                  _,
-                  _({}, _, {
-                    width: _,
-                    height: _,
-                    ref: _,
-                  }),
-                );
-          });
+          _ = null,
+          _ = null;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -25225,6 +24926,7 @@ ${_.current.stack}
         "use strict";
         __webpack_require__._(module_exports, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_, _, _) {
@@ -25414,8 +25116,7 @@ ${_.current.stack}
           },
           _ = (_) => {
             var _ = _(_({}, _), _);
-            _.cacheSize !== _.cacheSize && (_ = new LRUCache(_.cacheSize)),
-              (_ = _);
+            _.cacheSize !== _.cacheSize && (_ = new _(_.cacheSize)), (_ = _);
           },
           _ = () => _({}, _),
           _ = () => {
@@ -25540,37 +25241,6 @@ ${_.current.stack}
           _ = {
             devToolsEnabled: !1,
             isSsr: _(),
-          };
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = !1,
-          _ = function (_, _) {
-            for (
-              var _ = arguments.length, _ = new Array(_ > 2 ? _ - 2 : 0), _ = 2;
-              _ < _;
-              _++
-            )
-              _[_ - 2] = arguments[_];
-            if (
-              _ &&
-              typeof console < "u" &&
-              console.warn &&
-              (_ === void 0 &&
-                console.warn("LogUtils requires an error message argument"),
-              !_)
-            )
-              if (_ === void 0)
-                console.warn(
-                  "Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.",
-                );
-              else {
-                var _ = 0;
-                console.warn(_.replace(/%s/g, () => _[_++]));
-              }
           };
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -27005,246 +26675,6 @@ ${_.current.stack}
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__("chunkid");
-      },
-      chunkid: (module) => {
-        "use strict";
-        var _ = (function () {
-            function _(_, _) {
-              if (typeof _ != "function")
-                throw new TypeError(
-                  "DataLoader must be constructed with a function which accepts " +
-                    ("Array<key> and returns Promise<Array<value>>, but got: " +
-                      _ +
-                      "."),
-                );
-              (this._batchLoadFn = _),
-                (this._maxBatchSize = _(_)),
-                (this._batchScheduleFn = _(_)),
-                (this._cacheKeyFn = _(_)),
-                (this._cacheMap = _(_)),
-                (this._batch = null);
-            }
-            var _ = _.prototype;
-            return (
-              (_.load = function (_) {
-                if (_ == null)
-                  throw new TypeError(
-                    "The loader.load() function must be called with a value, " +
-                      ("but got: " + String(_) + "."),
-                  );
-                var _ = _(this),
-                  _ = this._cacheMap,
-                  _ = this._cacheKeyFn(_);
-                if (_) {
-                  var _ = _.get(_);
-                  if (_) {
-                    var _ = _.cacheHits || (_.cacheHits = []);
-                    return new Promise(function (_) {
-                      _.push(function () {
-                        _(_);
-                      });
-                    });
-                  }
-                }
-                _.keys.push(_);
-                var _ = new Promise(function (_, _) {
-                  _.callbacks.push({
-                    resolve: _,
-                    reject: _,
-                  });
-                });
-                return _ && _.set(_, _), _;
-              }),
-              (_.loadMany = function (_) {
-                if (!_(_))
-                  throw new TypeError(
-                    "The loader.loadMany() function must be called with Array<key> " +
-                      ("but got: " + _ + "."),
-                  );
-                for (var _ = [], _ = 0; _ < _.length; _++)
-                  _.push(
-                    this.load(_[_]).catch(function (_) {
-                      return _;
-                    }),
-                  );
-                return Promise.all(_);
-              }),
-              (_.clear = function (_) {
-                var _ = this._cacheMap;
-                if (_) {
-                  var _ = this._cacheKeyFn(_);
-                  _.delete(_);
-                }
-                return this;
-              }),
-              (_.clearAll = function () {
-                var _ = this._cacheMap;
-                return _ && _.clear(), this;
-              }),
-              (_.prime = function (_, _) {
-                var _ = this._cacheMap;
-                if (_) {
-                  var _ = this._cacheKeyFn(_);
-                  if (_.get(_) === void 0) {
-                    var _;
-                    _ instanceof Error
-                      ? ((_ = Promise.reject(_)), _.catch(function () {}))
-                      : (_ = Promise.resolve(_)),
-                      _.set(_, _);
-                  }
-                }
-                return this;
-              }),
-              _
-            );
-          })(),
-          _ =
-            typeof process == "object" && typeof process.nextTick == "function"
-              ? function (_) {
-                  _ || (_ = Promise.resolve()),
-                    _.then(function () {
-                      process.nextTick(_);
-                    });
-                }
-              : typeof setImmediate == "function"
-                ? function (_) {
-                    setImmediate(_);
-                  }
-                : function (_) {
-                    setTimeout(_);
-                  },
-          _;
-        function _(_) {
-          var _ = _._batch;
-          if (
-            _ !== null &&
-            !_.hasDispatched &&
-            _.keys.length < _._maxBatchSize &&
-            (!_.cacheHits || _.cacheHits.length < _._maxBatchSize)
-          )
-            return _;
-          var _ = {
-            hasDispatched: !1,
-            keys: [],
-            callbacks: [],
-          };
-          return (
-            (_._batch = _),
-            _._batchScheduleFn(function () {
-              _(_, _);
-            }),
-            _
-          );
-        }
-        function _(_, _) {
-          if (((_.hasDispatched = !0), _.keys.length === 0)) {
-            _(_);
-            return;
-          }
-          var _ = _._batchLoadFn(_.keys);
-          if (!_ || typeof _.then != "function")
-            return _(
-              _,
-              _,
-              new TypeError(
-                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did " +
-                  ("not return a Promise: " + String(_) + "."),
-              ),
-            );
-          _.then(function (_) {
-            if (!_(_))
-              throw new TypeError(
-                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did " +
-                  ("not return a Promise of an Array: " + String(_) + "."),
-              );
-            if (_.length !== _.keys.length)
-              throw new TypeError(
-                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys." +
-                  (`
-
-Keys:
-` +
-                    String(_.keys)) +
-                  (`
-
-Values:
-` +
-                    String(_)),
-              );
-            _(_);
-            for (var _ = 0; _ < _.callbacks.length; _++) {
-              var _ = _[_];
-              _ instanceof Error
-                ? _.callbacks[_].reject(_)
-                : _.callbacks[_].resolve(_);
-            }
-          }).catch(function (_) {
-            _(_, _, _);
-          });
-        }
-        function _(_, _, _) {
-          _(_);
-          for (var _ = 0; _ < _.keys.length; _++)
-            _.clear(_.keys[_]), _.callbacks[_].reject(_);
-        }
-        function _(_) {
-          if (_.cacheHits)
-            for (var _ = 0; _ < _.cacheHits.length; _++) _.cacheHits[_]();
-        }
-        function _(_) {
-          var _ = !_ || _.batch !== !1;
-          if (!_) return 1;
-          var _ = _ && _.maxBatchSize;
-          if (_ === void 0) return 1 / 0;
-          if (typeof _ != "number" || _ < 1)
-            throw new TypeError("maxBatchSize must be a positive number: " + _);
-          return _;
-        }
-        function _(_) {
-          var _ = _ && _.batchScheduleFn;
-          if (_ === void 0) return _;
-          if (typeof _ != "function")
-            throw new TypeError("batchScheduleFn must be a function: " + _);
-          return _;
-        }
-        function _(_) {
-          var _ = _ && _.cacheKeyFn;
-          if (_ === void 0)
-            return function (_) {
-              return _;
-            };
-          if (typeof _ != "function")
-            throw new TypeError("cacheKeyFn must be a function: " + _);
-          return _;
-        }
-        function _(_) {
-          var _ = !_ || _.cache !== !1;
-          if (!_) return null;
-          var _ = _ && _.cacheMap;
-          if (_ === void 0) return new Map();
-          if (_ !== null) {
-            var _ = ["get", "set", "delete", "clear"],
-              _ = _.filter(function (_) {
-                return _ && typeof _[_] != "function";
-              });
-            if (_.length !== 0)
-              throw new TypeError(
-                "Custom cacheMap missing methods: " + _.join(", "),
-              );
-          }
-          return _;
-        }
-        function _(_) {
-          return (
-            typeof _ == "object" &&
-            _ !== null &&
-            typeof _.length == "number" &&
-            (_.length === 0 ||
-              (_.length > 0 &&
-                Object.prototype.hasOwnProperty.call(_, _.length - 1)))
-          );
-        }
-        module.exports = _;
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";

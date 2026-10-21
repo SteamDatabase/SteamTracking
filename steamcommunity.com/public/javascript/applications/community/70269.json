@@ -582,6 +582,7 @@
     "Workshop_ItemAdmin_Incompatible_UnsetConfirm": "Er du sikker på at du vil angi denne gjenstanden som kompatibel?",
     "Workshop_ItemAdmin_Ban_Set": "Utesteng gjenstand",
     "Workshop_ItemAdmin_Ban_Unset": "Opphev utestengelse av gjenstand",
+    "Workshop_ItemAdmin_Ban_Sustain": "Oppretthold utestengelse",
     "Workshop_ItemAdmin_Ban_Reason": "Oppgi en grunn:",
     "Workshop_ItemAdmin_Ban_Reason_Unselected": "Trykk for å velge …",
     "Workshop_ItemAdmin_Ban_Presets": "Forhåndsinnstillinger:",

@@ -5,65 +5,55 @@
   (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
     [90146],
     {
-      90146: (F, B, h) => {
-        h.r(B),
-          h.d(B, {
-            CGameRecordingStore: () => n,
-            default: () => O,
-            k_strGRFAQ: () => w,
+      90146: (A, G, g) => {
+        g.r(G),
+          g.d(G, {
+            CGameRecordingStore: () => s,
+            default: () => w,
+            k_strGRFAQ: () => b,
           });
-        var u = h(14947),
-          c = h(54963),
-          x = h(35038),
-          p = h(72604),
-          a = h(86578),
-          S = h(21196),
-          G = h(85958),
-          m = h(85443),
-          E = h(34843),
-          _ = h(71742),
-          T = h(98609),
-          b = h(18210),
-          R = ((s) => (
-            (s[(s.Invalid = 0)] = "Invalid"),
-            (s[(s.Success = 1)] = "Success"),
-            (s[(s.Failed = 2)] = "Failed"),
-            (s[(s.InvalidParam = 3)] = "InvalidParam"),
-            (s[(s.InputNotFound = 4)] = "InputNotFound"),
-            (s[(s.ErrorReadingInput = 5)] = "ErrorReadingInput"),
-            (s[(s.ErrorWritingOuput = 6)] = "ErrorWritingOuput"),
-            (s[(s.NoHardwareEncoder = 7)] = "NoHardwareEncoder"),
-            (s[(s.UnsupportedSourceCodec = 8)] = "UnsupportedSourceCodec"),
-            (s[(s.UnsupportedTargetCodec = 9)] = "UnsupportedTargetCodec"),
-            (s[(s.DiskFull = 10)] = "DiskFull"),
-            (s[(s.ResolutionTooLarge = 11)] = "ResolutionTooLarge"),
-            (s[(s.ConverterBusy = 12)] = "ConverterBusy"),
-            s
-          ))(R || {}),
-          L = Object.defineProperty,
-          v = Object.getOwnPropertyDescriptor,
-          k = (s, e, t) =>
-            e in s
-              ? L(s, e, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: t,
-                })
-              : (s[e] = t),
-          l = (s, e, t, i) => {
+        var h = g(14947),
+          c = g(54963),
+          T = g(35038),
+          p = g(72604),
+          a = g(86578),
+          C = g(21196),
+          S = g(85958),
+          m = g(85443),
+          L = g(34843),
+          u = g(71742),
+          B = g(98609),
+          x = g(18210),
+          f = ((l) => (
+            (l[(l.Invalid = 0)] = "Invalid"),
+            (l[(l.Success = 1)] = "Success"),
+            (l[(l.Failed = 2)] = "Failed"),
+            (l[(l.InvalidParam = 3)] = "InvalidParam"),
+            (l[(l.InputNotFound = 4)] = "InputNotFound"),
+            (l[(l.ErrorReadingInput = 5)] = "ErrorReadingInput"),
+            (l[(l.ErrorWritingOuput = 6)] = "ErrorWritingOuput"),
+            (l[(l.NoHardwareEncoder = 7)] = "NoHardwareEncoder"),
+            (l[(l.UnsupportedSourceCodec = 8)] = "UnsupportedSourceCodec"),
+            (l[(l.UnsupportedTargetCodec = 9)] = "UnsupportedTargetCodec"),
+            (l[(l.DiskFull = 10)] = "DiskFull"),
+            (l[(l.ResolutionTooLarge = 11)] = "ResolutionTooLarge"),
+            (l[(l.ConverterBusy = 12)] = "ConverterBusy"),
+            l
+          ))(f || {}),
+          E = Object.defineProperty,
+          k = Object.getOwnPropertyDescriptor,
+          n = (l, e, t, i) => {
             for (
-              var r = i > 1 ? void 0 : i ? v(e, t) : e, o = s.length - 1, d;
+              var r = i > 1 ? void 0 : i ? k(e, t) : e, o = l.length - 1, d;
               o >= 0;
               o--
             )
-              (d = s[o]) && (r = (i ? d(e, t, r) : d(r)) || r);
-            return i && r && L(e, t, r), r;
-          },
-          g = (s, e, t) => k(s, typeof e != "symbol" ? e + "" : e, t);
-        const w = "23B7-49AD-4A28-9590";
-        function A(s, e) {
-          switch (s) {
+              (d = l[o]) && (r = (i ? d(e, t, r) : d(r)) || r);
+            return i && r && E(e, t, r), r;
+          };
+        const b = "23B7-49AD-4A28-9590";
+        function v(l, e) {
+          switch (l) {
             case a.QX.qK:
               return !e;
             case a.QX.sd:
@@ -77,33 +67,33 @@
               return !0;
           }
         }
-        class n {
+        class s {
           constructor() {
-            g(this, "m_rgAppsWithBackgroundVideo", []),
-              g(this, "m_mapTimelineLoaders", new Map()),
-              g(this, "m_mapClipLoaders", new Map()),
-              g(this, "m_mapSharedClipLoaders", new Map()),
-              g(this, "m_mapActiveTimelines", new Map()),
-              g(this, "m_mapManualRecordingCallbacks", new Map()),
-              g(this, "m_fnGetAchievementInfo"),
-              g(this, "m_strLastClipID"),
-              g(this, "m_bEnableH265Recording", !1),
-              g(this, "m_transport"),
-              g(this, "m_bLoadingClips", !0),
-              g(this, "m_bLoadingAppsWithBackgroundVideo", !0),
-              g(this, "m_bClipLoadingTriggered", !1),
-              g(this, "m_clips", new Map()),
-              g(this, "m_clipsGroupByGame", new Map()),
-              g(this, "m_clipExportProgress", new Map()),
-              g(this, "m_currentlyExportingClip", null),
-              g(this, "m_recordingState", null),
-              g(this, "m_bEnoughDiskSpace", !1),
-              (0, u.Gn)(this);
+            (0, h.Gn)(this);
           }
+          m_rgAppsWithBackgroundVideo = [];
+          m_mapTimelineLoaders = new Map();
+          m_mapClipLoaders = new Map();
+          m_mapSharedClipLoaders = new Map();
+          m_mapActiveTimelines = new Map();
+          m_mapManualRecordingCallbacks = new Map();
+          m_fnGetAchievementInfo;
+          m_strLastClipID;
+          m_bEnableH265Recording = !1;
+          m_transport;
+          m_bLoadingClips = !0;
+          m_bLoadingAppsWithBackgroundVideo = !0;
+          m_bClipLoadingTriggered = !1;
+          m_clips = new Map();
+          m_clipsGroupByGame = new Map();
+          m_clipExportProgress = new Map();
+          m_currentlyExportingClip = null;
+          m_recordingState = null;
+          m_bEnoughDiskSpace = !1;
           async Init(e, t) {
             (this.m_transport = e),
               (this.m_fnGetAchievementInfo = t),
-              T.TS.IN_STEAMUI &&
+              B.TS.IN_STEAMUI &&
                 (a.xM.RegisterForNotifyTimelineChanged(this.OnTimelineChanged),
                 a.xM.RegisterForNotifyRecordingSessionChanged(
                   this.OnRecordingSessionChanged,
@@ -123,15 +113,13 @@
                 await this.UpdateState());
           }
           async UpdateState() {
-            var e;
-            const t = await a.xM.GetState({});
-            if (!t.BSuccess()) {
+            const e = await a.xM.GetState({});
+            if (!e.BSuccess()) {
               console.warn("Failed to initialize game recording state");
               return;
             }
-            const i = t.Body().toObject();
-            this.m_bEnableH265Recording =
-              (e = i == null ? void 0 : i.is_h265_enabled) != null ? e : !1;
+            const t = e.Body().toObject();
+            this.m_bEnableH265Recording = t?.is_h265_enabled ?? !1;
           }
           OnStateChanged() {
             return this.UpdateState(), p.R;
@@ -143,10 +131,10 @@
             return this.m_bEnableH265Recording;
           }
           GetTimelineLoaderForGame(e) {
-            (0, _.wT)(e, "Invalid GameID: " + e);
+            (0, u.wT)(e, "Invalid GameID: " + e);
             let t = this.m_mapTimelineLoaders.get(e);
             if (!t) {
-              let r = new G.SX();
+              let r = new S.SX();
               r.LoadTimelinesForBackgroundVideo(e),
                 (t = { loader: r, nRefCount: 0 }),
                 this.m_mapTimelineLoaders.set(e, t);
@@ -167,10 +155,10 @@
             return { loader: t.loader, release: i };
           }
           GetTimelineLoaderForClip(e) {
-            (0, _.wT)(e, "Invalid ClipID: " + e);
+            (0, u.wT)(e, "Invalid ClipID: " + e);
             let t = this.m_mapClipLoaders.get(e);
             if (!t) {
-              let r = new G.SX();
+              let r = new S.SX();
               r.LoadTimelinesForClip(e),
                 (t = { loader: r, nRefCount: 0 }),
                 this.m_mapClipLoaders.set(e, t);
@@ -183,10 +171,10 @@
             return { loader: t.loader, release: i };
           }
           GetTimelineLoaderForSharedClip(e) {
-            (0, _.wT)(e, "Invalid clip");
+            (0, u.wT)(e, "Invalid clip");
             let t = this.m_mapSharedClipLoaders.get(e.clip_id);
             if (!t) {
-              let r = new G.SX();
+              let r = new S.SX();
               r.LoadTimelinesForSharedClip(e),
                 (t = { loader: r, nRefCount: 0 }),
                 this.m_mapClipLoaders.set(e.clip_id, t);
@@ -251,7 +239,7 @@
           OnTimelineEntryChanged(e) {
             if (!e.Body().entry(!1))
               return (
-                (0, _.wT)(
+                (0, u.wT)(
                   !1,
                   "OnTimelineEntryChanged received an invalid protobuf",
                 ),
@@ -260,7 +248,7 @@
             const { entry: t } = e.Body().toObject();
             if (!t)
               return (
-                (0, _.wT)(
+                (0, u.wT)(
                   !1,
                   "OnTimelineEntryChanged received an invalid protobuf after conversion",
                 ),
@@ -320,9 +308,9 @@
             });
             let d;
             if (o.GetEResult() == p.R) {
-              const y = o.Body().summary().toObject();
-              this.InternalAddClipSummary(y),
-                (d = `${T.TS.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${y.published_file_id}`);
+              const _ = o.Body().summary().toObject();
+              this.InternalAddClipSummary(_),
+                (d = `${B.TS.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${_.published_file_id}`);
             }
             return { eResult: o.GetEResult(), strURL: d };
           }
@@ -334,7 +322,7 @@
                 return;
               }
               (0, m.q_)(`Loaded ${e.Body().apps().length} apps with timelines`),
-                (0, u.h5)(() => {
+                (0, h.h5)(() => {
                   (this.m_bLoadingAppsWithBackgroundVideo = !1),
                     (this.m_rgAppsWithBackgroundVideo = e
                       .Body()
@@ -357,7 +345,7 @@
                 this.m_rgAppsWithBackgroundVideo.findIndex(
                   (o) => o.game_id == t,
                 ) >= 0;
-            A(i, r) && this.LoadAppsWithBackgroundVideo();
+            v(i, r) && this.LoadAppsWithBackgroundVideo();
           }
           InternalAddClipSummary(e) {
             if (
@@ -375,27 +363,27 @@
                 this.m_clipsGroupByGame.set(e.game_id, []),
               this.m_clipsGroupByGame.get(e.game_id).push(e);
           }
-          async SaveClip(e, t, i, r, o, d, y) {
-            const f = await a.xM.SaveClip({
+          async SaveClip(e, t, i, r, o, d, _) {
+            const y = await a.xM.SaveClip({
               game_id: e,
               start: r,
               end: o,
               name: i,
               src_clip_id: t,
               temporary: d,
-              force_thumbnail: y,
+              force_thumbnail: _,
             });
-            if (f.GetEResult() == p.R) {
-              const C = f.Body().summary().toObject();
+            if (y.GetEResult() == p.R) {
+              const R = y.Body().summary().toObject();
               return (
-                this.InternalAddClipSummary(C),
-                (0, m.tG)("Saved clip", C),
-                (this.m_strLastClipID = C.clip_id),
-                { clipSummary: C, result: p.R }
+                this.InternalAddClipSummary(R),
+                (0, m.tG)("Saved clip", R),
+                (this.m_strLastClipID = R.clip_id),
+                { clipSummary: R, result: p.R }
               );
             } else
               return (
-                (0, m.tH)("Failed to save clip"), { result: f.GetEResult() }
+                (0, m.tH)("Failed to save clip"), { result: y.GetEResult() }
               );
           }
           async DeleteClip(e) {
@@ -413,7 +401,7 @@
             if (this.m_currentlyExportingClip)
               return (
                 (0, m.tH)("Export in progress, cannot start another one", e),
-                R.ConverterBusy
+                f.ConverterBusy
               );
             this.m_clipExportProgress.set(e, {
               exportPath: t,
@@ -427,9 +415,9 @@
                 settings: i,
                 use_unique_filename: r,
               }),
-              d = o.GetEResult() != p.R ? R.Failed : o.Body().result();
+              d = o.GetEResult() != p.R ? f.Failed : o.Body().result();
             return (
-              d == R.Success
+              d == f.Success
                 ? ((0, m.tG)(`Exporting clip ${e} to ${t}`),
                   (this.m_currentlyExportingClip = null),
                   this.m_clipExportProgress.set(e, {
@@ -498,7 +486,7 @@
               try {
                 this.m_bClipLoadingTriggered = !0;
                 const e = await a.xM.GetClips({});
-                (0, u.h5)(() => {
+                (0, h.h5)(() => {
                   e
                     .Body()
                     .clip()
@@ -517,18 +505,16 @@
             return this.m_bLoadingAppsWithBackgroundVideo;
           }
           GetClipIDs(e) {
-            var t;
             if ((this.LazyLoadClips(), e)) {
-              const r = new E.VS(e);
+              const i = new L.VS(e);
               return (
-                ((t = this.m_clipsGroupByGame.get(r.ConvertTo64BitString())) ==
-                null
-                  ? void 0
-                  : t.map((o) => o.clip_id)) || []
+                this.m_clipsGroupByGame
+                  .get(i.ConvertTo64BitString())
+                  ?.map((r) => r.clip_id) || []
               );
             }
-            const i = [];
-            return this.m_clips.forEach((r) => i.push(r.clip_id)), i;
+            const t = [];
+            return this.m_clips.forEach((i) => t.push(i.clip_id)), t;
           }
           GetClipSummary(e) {
             if ((this.LazyLoadClips(), this.m_clips.has(e)))
@@ -633,7 +619,7 @@
                 recording_id: e,
                 clip_id: t,
                 timeline_id: i,
-                start_offset_us: r.map((f) => Math.floor(f).toString()),
+                start_offset_us: r.map((y) => Math.floor(y).toString()),
                 major_axis: o,
                 time_precision: d ? a.$C.v : a.$C.E,
               })
@@ -642,10 +628,7 @@
               .thumbnails();
           }
           GetAchievementInfo(e, t) {
-            var i;
-            return (i = this.m_fnGetAchievementInfo) == null
-              ? void 0
-              : i.call(this, e, t);
+            return this.m_fnGetAchievementInfo?.(e, t);
           }
           GetLastClip() {
             if (this.m_strLastClipID)
@@ -653,7 +636,7 @@
           }
           GetBestClipTitle(e) {
             const t = this.GetClipSummary(e);
-            return t ? t.name || (0, b.$z)(t.date_recorded) : "";
+            return t ? t.name || (0, x.$z)(t.date_recorded) : "";
           }
           ManuallyDeleteRecordingForApps(e) {
             a.xM.ManuallyDeleteRecordingsForApps({ game_ids: e });
@@ -678,7 +661,7 @@
             (0, m.q_)(
               `ReportClipShare ${JSON.stringify(e)} ${t} ${i} ${r} ${o}`,
             ),
-              S._5.ReportClipShare(this.m_transport, {
+              C._5.ReportClipShare(this.m_transport, {
                 gameid: e.ConvertTo64BitString(),
                 share_method: t,
                 seconds: i,
@@ -688,7 +671,7 @@
           }
           ReportClipRange(e, t, i, r, o) {
             (0, m.q_)("ReportClipRange", JSON.stringify(e), t, i, r, o);
-            const d = x.w.Init(S.IR);
+            const d = T.w.Init(C.IR);
             d.Body().set_gameid(e.ConvertTo64BitString()),
               d.Body().set_original_range_method(t),
               d.Body().set_seconds(i),
@@ -698,7 +681,7 @@
               d.Body().end().set_original_range_method(o.originalRangeMethod),
               d.Body().end().set_latest_range_method(o.latestRangeMethod),
               d.Body().end().set_delta_ms(Math.ceil(o.relativeMS)),
-              S._5.ReportClipRange(this.m_transport, d);
+              C._5.ReportClipRange(this.m_transport, d);
           }
           GetRecordingState() {
             return this.m_recordingState;
@@ -730,42 +713,42 @@
             ).map((o) => o.toObject());
           }
         }
-        l([u.sH.shallow], n.prototype, "m_rgAppsWithBackgroundVideo", 2),
-          l([u.sH], n.prototype, "m_bLoadingClips", 2),
-          l([u.sH], n.prototype, "m_bLoadingAppsWithBackgroundVideo", 2),
-          l([u.sH], n.prototype, "m_clips", 2),
-          l([u.sH], n.prototype, "m_clipsGroupByGame", 2),
-          l([u.sH], n.prototype, "m_clipExportProgress", 2),
-          l([u.sH], n.prototype, "m_currentlyExportingClip", 2),
-          l([u.sH], n.prototype, "m_recordingState", 2),
-          l([u.sH], n.prototype, "m_bEnoughDiskSpace", 2),
-          l([c.oI], n.prototype, "OnStateChanged", 1),
-          l([c.oI], n.prototype, "GetTimelineLoaderForGame", 1),
-          l([c.oI], n.prototype, "GetTimelineLoaderForClip", 1),
-          l([c.oI], n.prototype, "GetTimelineLoaderForSharedClip", 1),
-          l([c.oI], n.prototype, "OnTimelineChanged", 1),
-          l([c.oI], n.prototype, "OnRecordingSessionChanged", 1),
-          l([c.oI], n.prototype, "OnTimelineEntryChanged", 1),
-          l([c.oI], n.prototype, "OnTimelineEntryRemoved", 1),
-          l([c.oI], n.prototype, "OnClipCreated", 1),
-          l([c.oI], n.prototype, "UploadClip", 1),
-          l([c.oI], n.prototype, "SaveClip", 1),
-          l([c.oI], n.prototype, "DeleteClip", 1),
-          l([c.oI], n.prototype, "ExportClip", 1),
-          l([c.oI], n.prototype, "UpdateClipExportPath", 1),
-          l([c.oI], n.prototype, "OnExportProgress", 1),
-          l([c.oI], n.prototype, "TakeScreenshot", 1),
-          l([c.oI], n.prototype, "RegisterManualRecordingCallback", 1),
-          l([c.oI], n.prototype, "StartRecording", 1),
-          l([c.oI], n.prototype, "StopRecording", 1),
-          l([c.oI], n.prototype, "SwitchRecordedGame", 1),
-          l([c.oI], n.prototype, "CreateUserTimelineMarkers", 1),
-          l([c.oI], n.prototype, "UpdateUserTimelineMarkers", 1),
-          l([c.oI], n.prototype, "RemoveUserTimelineMarker", 1),
-          l([c.oI], n.prototype, "LoadThumbnails", 1),
-          l([c.oI], n.prototype, "GetAchievementInfo", 1),
-          l([c.oI], n.prototype, "OnLowDiskSpace", 1);
-        const O = n;
+        n([h.sH.shallow], s.prototype, "m_rgAppsWithBackgroundVideo", 2),
+          n([h.sH], s.prototype, "m_bLoadingClips", 2),
+          n([h.sH], s.prototype, "m_bLoadingAppsWithBackgroundVideo", 2),
+          n([h.sH], s.prototype, "m_clips", 2),
+          n([h.sH], s.prototype, "m_clipsGroupByGame", 2),
+          n([h.sH], s.prototype, "m_clipExportProgress", 2),
+          n([h.sH], s.prototype, "m_currentlyExportingClip", 2),
+          n([h.sH], s.prototype, "m_recordingState", 2),
+          n([h.sH], s.prototype, "m_bEnoughDiskSpace", 2),
+          n([c.oI], s.prototype, "OnStateChanged", 1),
+          n([c.oI], s.prototype, "GetTimelineLoaderForGame", 1),
+          n([c.oI], s.prototype, "GetTimelineLoaderForClip", 1),
+          n([c.oI], s.prototype, "GetTimelineLoaderForSharedClip", 1),
+          n([c.oI], s.prototype, "OnTimelineChanged", 1),
+          n([c.oI], s.prototype, "OnRecordingSessionChanged", 1),
+          n([c.oI], s.prototype, "OnTimelineEntryChanged", 1),
+          n([c.oI], s.prototype, "OnTimelineEntryRemoved", 1),
+          n([c.oI], s.prototype, "OnClipCreated", 1),
+          n([c.oI], s.prototype, "UploadClip", 1),
+          n([c.oI], s.prototype, "SaveClip", 1),
+          n([c.oI], s.prototype, "DeleteClip", 1),
+          n([c.oI], s.prototype, "ExportClip", 1),
+          n([c.oI], s.prototype, "UpdateClipExportPath", 1),
+          n([c.oI], s.prototype, "OnExportProgress", 1),
+          n([c.oI], s.prototype, "TakeScreenshot", 1),
+          n([c.oI], s.prototype, "RegisterManualRecordingCallback", 1),
+          n([c.oI], s.prototype, "StartRecording", 1),
+          n([c.oI], s.prototype, "StopRecording", 1),
+          n([c.oI], s.prototype, "SwitchRecordedGame", 1),
+          n([c.oI], s.prototype, "CreateUserTimelineMarkers", 1),
+          n([c.oI], s.prototype, "UpdateUserTimelineMarkers", 1),
+          n([c.oI], s.prototype, "RemoveUserTimelineMarker", 1),
+          n([c.oI], s.prototype, "LoadThumbnails", 1),
+          n([c.oI], s.prototype, "GetAchievementInfo", 1),
+          n([c.oI], s.prototype, "OnLowDiskSpace", 1);
+        const w = s;
       },
     },
   ]);

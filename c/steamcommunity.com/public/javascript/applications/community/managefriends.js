@@ -62,15 +62,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -79,14 +70,13 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ {
           constructor() {
-            _(this, "m_mapProfiles", new Map()),
-              _(this, "m_mapProfilesLoading", new Map()),
-              (0, _._)(this);
+            (0, _._)(this);
           }
+          m_mapProfiles = new Map();
+          m_mapProfilesLoading = new Map();
           async LoadProfiles(_, _) {
             (0, _._)(
               _.length <= 500,
@@ -103,7 +93,7 @@
                   steamids: _.join(","),
                 },
                 withCredentials: !0,
-                cancelToken: _ == null ? void 0 : _.token,
+                cancelToken: _?.token,
               });
             _.forEach((_) => this.m_mapProfilesLoading.set(_, _));
             let _ = await _;
@@ -200,15 +190,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -217,18 +198,14 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                invite_token: "",
-                input_search: "",
-                friend_code_copied: !1,
-                invite_copied: !1,
-              });
-          }
+          state = {
+            invite_token: "",
+            input_search: "",
+            friend_code_copied: !1,
+            invite_copied: !1,
+          };
           async componentDidMount() {
             const _ = await _().get(
               _._.COMMUNITY_BASE_URL + "invites/ajaxgetall",
@@ -461,16 +438,13 @@
           _([_._], _.prototype, "OnSearchKeyDown", 1),
           _([_._], _.prototype, "OnSearchSubmit", 1);
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                input_friend_code: "",
-                disable_send_invite: !1,
-                searchResult: null,
-                invite_status: "pending",
-              }),
-              _(this, "m_currentRequest", 0);
-          }
+          state = {
+            input_friend_code: "",
+            disable_send_invite: !1,
+            searchResult: null,
+            invite_status: "pending",
+          };
+          m_currentRequest = 0;
           async OnFriendCodeChange(_) {
             const _ = _.target.value.split(",")[0];
             this.setState({
@@ -694,18 +668,6 @@
           Success: "zNkywkFbUJio86FBwBWwx",
           FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
           SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
-          BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
-          "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
-          "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
-          "ItemFocusAnim-darkGreySettings": "_3HZYqGe5_hsFFJcgBTMMSW",
-          "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
-          "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
-          "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
-          "ItemFocusAnim-translucent-white-20": "_1TV5evTLXXGDV16o8ltkb7",
-          "ItemFocusAnimBorder-darkGrey": "_2N1KfmpWvdxv64J5Rs82CX",
-          "ItemFocusAnim-green": "_3UU3hyYWsBPGsxljxX3hbB",
-          focusAnimation: "_2u4UlTYeTMTUGVGicBx0My",
-          hoverAnimation: "_16_WHz1Oh5Jy0J3qvG4rto",
         };
       },
     },

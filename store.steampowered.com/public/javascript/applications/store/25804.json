@@ -178,5 +178,7 @@
     "GameRating_InteractiveElements_Title": "互動元素",
     "GameRating_OnlineMusicNotice": "ESRB 不對線上音樂分級",
     "GameRating_OnlineInteractionsNotice": "ESRB 不對線上互動分級",
-    "GameRating_ContentCategoryDescriptor_64": "已過濾的遊戲內聊天"
+    "GameRating_ContentCategoryDescriptor_64": "已過濾的遊戲內聊天",
+    "GameRating_ContentCategories_Title": "內容",
+    "GameRating_Ratings_Title": "分級"
 }

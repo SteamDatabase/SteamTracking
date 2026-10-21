@@ -1308,12 +1308,6 @@ h2.incomplete {
         color: #acb2b8;
     }
 
-	.modal p.notice {
-	color: #e66e34;
-	font-size: 14px;
-	margin-left: 0;
-	}
-
 	.modal .hr {
 		background-color: #4c4c4c;
 		height: 1px;
@@ -4048,4 +4042,47 @@ div#webapi_panel a.webapi_key_unsecured {
 .tableAction p.EmptyTableKeyManagementHack {
 	transform: translateY( -22px );
 	margin-bottom: 0px;
+}
+
+.checkboxRow {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	align-items: start;
+	margin-bottom: 4px;
+}
+
+.checkboxRow b {
+	color: #d8dce0;
+}
+
+.checkboxDetails {
+	margin-left: 24px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 14px;
+}
+
+.emphasis,
+.modal p.emphasis {
+	font-style: italic;
+	color: #dfd1a4;
+	border-left: solid 2px #dfd1a4;
+	padding-left: 16px;
+	margin-left: 4px;
+}
+
+.feature_list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.feature_tag {
+	font-size: 13px;
+	color: #dfd1a4;
+	padding: 1px 4px;
+	background: #dfd1a447;
+	border-radius: 2px;
 }

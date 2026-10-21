@@ -608,6 +608,8 @@
     "AppPage_PurchaseNote_MacAppleSilicon": "este produto não é compatível com computadores Mac com processadores Intel. <a href=\"https://support.apple.com/pt-br/HT211814\">Clique aqui</a> para mais informações.",
     "AppPage_PurchaseNote_Mod_Title": "Mod criada pela comunidade",
     "AppPage_PurchaseNote_Mod_LearnMore": "Clique <1>aqui</1> para saber mais sobre mods no Steam.",
+    "AppPage_Franchise_SeeAll": "Confira tudo de %1$s no Steam",
+    "AppPage_Franchise_SeeAll_NamedFranchise": "Confira tudo de %1$s no Steam",
     "AppPage_Series_ContentTitle": "Conteúdo de série",
     "AppPage_Series_ExtraContent": "Conteúdo extra",
     "AppPage_Series_SeasonName_Season": "%1$sª temporada",

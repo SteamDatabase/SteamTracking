@@ -70,37 +70,25 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const _ = (
-              (_ =
-                (_ = (0, _._)({
-                  subject_type: _._,
-                  topic: _.topicId,
-                }).data) == null
-                  ? void 0
-                  : _.subjects) != null
-                ? _
-                : []
-            ).find((_) => {
-              var _;
-              return (
-                ((_ = _.coordinates) == null ? void 0 : _.comment) ===
-                _.subjectId
-              );
-            }),
+              (0, _._)({
+                subject_type: _._,
+                topic: _.topicId,
+              }).data?.subjects ?? []
+            ).find((_) => _.coordinates?.comment === _.subjectId),
             _ = _(
               _.clanSteamId,
               _.forumId,
               _.topicId,
               _.subjectId,
-              _ == null ? void 0 : _.reported_content_id,
+              _?.reported_content_id,
             ),
             _ = _(
               _.clanSteamId,
               _.forumId,
               _.topicId,
               _.subjectId,
-              _ == null ? void 0 : _.reported_content_id,
+              _?.reported_content_id,
             );
           return (0, _.jsx)(_._, {
             sanctionMutation: _,

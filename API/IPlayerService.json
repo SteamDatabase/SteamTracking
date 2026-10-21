@@ -141,6 +141,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Also return games the player has played via a family share without owning them.  These are flagged with family_shared."
+                },
+                {
+                    "name": "include_all_free_games",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return all free games, including unplayed ones (e.g. demos).  Only honored if the requester can see the player's playtime."
                 }
             ]
         },

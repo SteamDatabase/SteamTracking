@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Téma feloldása (%1$s)",
     "moderation_actions_sustain": "Moderálás fenntartása",
     "moderation_actions_sustain_multiple": "Moderálás fenntartása (%1$s)",
+    "moderation_actions_sustain_short": "Fenntartás",
     "moderation_actions_suspicious": "Megjelölés gyanúsként",
     "moderation_actions_suspicious_multiple": "Megjelölés gyanúsként (%1$s)",
     "moderation_actions_unknown": "Ismeretlen",

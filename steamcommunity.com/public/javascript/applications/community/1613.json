@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Abrir hilo (%1$s)",
     "moderation_actions_sustain": "Mantener la moderación",
     "moderation_actions_sustain_multiple": "Mantener la moderación (%1$s)",
+    "moderation_actions_sustain_short": "Mantener",
     "moderation_actions_suspicious": "Marcar como sospechoso",
     "moderation_actions_suspicious_multiple": "Marcar como sospechoso (%1$s)",
     "moderation_actions_unknown": "Desconocida",

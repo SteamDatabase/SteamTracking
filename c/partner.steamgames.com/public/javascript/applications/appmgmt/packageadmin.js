@@ -1,1082 +1,887 @@
-(() => {
-  (self.webpackChunkappmgmt_storeadmin =
-    self.webpackChunkappmgmt_storeadmin || []).push([
-    [8590],
-    {
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
-            default: () => _,
+import { _, _, _, _, _, _ } from "./mobx.esm.js?contenthash=CuqnC1HA";
+import { _, _, _, _, _, _, _, _ } from "./dialogs.js?contenthash=Ef6x5QZW";
+import { _ } from "./long.js?contenthash=BCeVig72";
+import { _, _, _, _ } from "./react-router.js?contenthash=BY_BIsGq";
+import { _ } from "./currencyformat.js?contenthash=lqE5xB1s";
+import { _, _, _, _ } from "./pricingguidelineobject.js?contenthash=zLI3iiBM";
+import { _ } from "./modals.js?contenthash=BkJN1F7L";
+import { _, _ } from "./render.js?contenthash=DtkfYyDz";
+import { _ } from "./text.js?contenthash=Cyl0Hm-O";
+import { _, _ } from "./button.js?contenthash=DOIwfHfd";
+import { _ } from "./heading.js?contenthash=BTG9Wh20";
+import { _ } from "./textlink.js?contenthash=6V1PXkY-";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./tabulatorutils.js?contenthash=DjJCijIL";
+import { _ } from "./throbber.js?contenthash=DT0j8i1L";
+import { _, _, _, _, _ } from "./currencyutils.js?contenthash=DLilGjyJ";
+import { _, _, _, _ } from "./pricinggridcell.js?contenthash=DiY9Ygmu";
+import { _ } from "./phpintegration.js?contenthash=CHDQW7hW";
+import { _ } from "./unknownroute.js?contenthash=BBdYiwN1";
+import { _, _ } from "./fancytable.js?contenthash=BrwA4o0C";
+import { _, _ } from "./profilestore.js?contenthash=_1Ae-7Wi";
+import { _ } from "./localization2.js?contenthash=DWWvuCzj";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./saveprices.js?contenthash=Dv7n3JSX";
+import { _, _ } from "./localization3.js?contenthash=B0mVjA4G";
+var _ = {};
+(_.arabic = () =>
+  _(
+    () => import(`./currency_arabic.js?contenthash=gFBHoyni`),
+    [],
+    import.meta.url,
+  )),
+  (_.brazilian = () =>
+    _(
+      () => import(`./currency_brazilian.js?contenthash=KjHxyFBf`),
+      [],
+      import.meta.url,
+    )),
+  (_.bulgarian = () =>
+    _(
+      () => import(`./currency_bulgarian.js?contenthash=CmZniUHH`),
+      [],
+      import.meta.url,
+    )),
+  (_.czech = () =>
+    _(
+      () => import(`./currency_czech.js?contenthash=Brld-NkF`),
+      [],
+      import.meta.url,
+    )),
+  (_.danish = () =>
+    _(
+      () => import(`./currency_danish.js?contenthash=Dyd8FMZa`),
+      [],
+      import.meta.url,
+    )),
+  (_.dutch = () =>
+    _(
+      () => import(`./currency_dutch.js?contenthash=jt7JKRbR`),
+      [],
+      import.meta.url,
+    )),
+  (_.english = () =>
+    _(
+      () => import(`./currency_english.js?contenthash=DcNS618d`),
+      [],
+      import.meta.url,
+    )),
+  (_.finnish = () =>
+    _(
+      () => import(`./currency_finnish.js?contenthash=BOsgMjY5`),
+      [],
+      import.meta.url,
+    )),
+  (_.french = () =>
+    _(
+      () => import(`./currency_french.js?contenthash=CWYifI2w`),
+      [],
+      import.meta.url,
+    )),
+  (_.german = () =>
+    _(
+      () => import(`./currency_german.js?contenthash=D8O0Qd5l`),
+      [],
+      import.meta.url,
+    )),
+  (_.greek = () =>
+    _(
+      () => import(`./currency_greek.js?contenthash=C_30d4Wv`),
+      [],
+      import.meta.url,
+    )),
+  (_.hungarian = () =>
+    _(
+      () => import(`./currency_hungarian.js?contenthash=KrE9bPHA`),
+      [],
+      import.meta.url,
+    )),
+  (_.indonesian = () =>
+    _(
+      () => import(`./currency_indonesian.js?contenthash=GLv7lpUi`),
+      [],
+      import.meta.url,
+    )),
+  (_.italian = () =>
+    _(
+      () => import(`./currency_italian.js?contenthash=2ZJWmGPn`),
+      [],
+      import.meta.url,
+    )),
+  (_.japanese = () =>
+    _(
+      () => import(`./currency_japanese.js?contenthash=DVpUjcez`),
+      [],
+      import.meta.url,
+    )),
+  (_.koreana = () =>
+    _(
+      () => import(`./currency_koreana.js?contenthash=CWk_iEjY`),
+      [],
+      import.meta.url,
+    )),
+  (_.latam = () =>
+    _(
+      () => import(`./currency_latam.js?contenthash=Q9Q8vP40`),
+      [],
+      import.meta.url,
+    )),
+  (_.malay = () =>
+    _(
+      () => import(`./currency_malay.js?contenthash=fhaBO-Xv`),
+      [],
+      import.meta.url,
+    )),
+  (_.norwegian = () =>
+    _(
+      () => import(`./currency_norwegian.js?contenthash=Bc0SPDDJ`),
+      [],
+      import.meta.url,
+    )),
+  (_.polish = () =>
+    _(
+      () => import(`./currency_polish.js?contenthash=BOF_IGdx`),
+      [],
+      import.meta.url,
+    )),
+  (_.portuguese = () =>
+    _(
+      () => import(`./currency_portuguese.js?contenthash=DEBVwj_9`),
+      [],
+      import.meta.url,
+    )),
+  (_.romanian = () =>
+    _(
+      () => import(`./currency_romanian.js?contenthash=1c0yX7xS`),
+      [],
+      import.meta.url,
+    )),
+  (_.russian = () =>
+    _(
+      () => import(`./currency_russian.js?contenthash=DcouFg8i`),
+      [],
+      import.meta.url,
+    )),
+  (_.sc_schinese = () =>
+    _(
+      () => import(`./currency_sc_schinese.js?contenthash=-HVyXZH3`),
+      [],
+      import.meta.url,
+    )),
+  (_.schinese = () =>
+    _(
+      () => import(`./currency_schinese.js?contenthash=B6q7gqNk`),
+      [],
+      import.meta.url,
+    )),
+  (_.spanish = () =>
+    _(
+      () => import(`./currency_spanish.js?contenthash=Dg5T0oJY`),
+      [],
+      import.meta.url,
+    )),
+  (_.swedish = () =>
+    _(
+      () => import(`./currency_swedish.js?contenthash=D9qGtxR2`),
+      [],
+      import.meta.url,
+    )),
+  (_.tchinese = () =>
+    _(
+      () => import(`./currency_tchinese.js?contenthash=CqKmq7sE`),
+      [],
+      import.meta.url,
+    )),
+  (_.thai = () =>
+    _(
+      () => import(`./currency_thai.js?contenthash=3CA5Hupg`),
+      [],
+      import.meta.url,
+    )),
+  (_.turkish = () =>
+    _(
+      () => import(`./currency_turkish.js?contenthash=BsgHcKs7`),
+      [],
+      import.meta.url,
+    )),
+  (_.ukrainian = () =>
+    _(
+      () => import(`./currency_ukrainian.js?contenthash=C7AI--qO`),
+      [],
+      import.meta.url,
+    )),
+  (_.vietnamese = () =>
+    _(
+      () => import(`./currency_vietnamese.js?contenthash=CKVM5eDv`),
+      [],
+      import.meta.url,
+    ));
+async function _(_) {
+  if (_[_]) return await _[_]();
+}
+var _ = _(_);
+function _(_) {
+  return _.Localize(`#CurrencyCodeDescription_${_(_)}`);
+}
+var _ = _(_(), 1),
+  _ = _();
+function _(_) {
+  return _(_.getValue());
+}
+function _(_) {
+  let _ = _.getValue(),
+    _ = _(_),
+    _ = _.Localize(`#Region_Pricing_Tooltip_${_}`);
+  return (0, _.jsxs)(`span`, {
+    children: [
+      _,
+      ` `,
+      (0, _.jsx)(_, {
+        tooltip: _,
+      }),
+    ],
+  });
+}
+var _ = {
+    PriceEdit: (_) => `/packages/pricing/${_}`,
+  },
+  _ = _(_());
+function _(_, _, _) {
+  let _ = _(),
+    _ = _();
+  return (0, _.useMemo)(() => {
+    let _ = [],
+      _ = [],
+      _ = [];
+    if (_) {
+      let _ = _(1).toUpperCase(),
+        _ = _(_, _) || _(_, _) || _(_, _);
+      for (let _ = 1; _ < 48; ++_) {
+        if (!_.BIsSupportCurrencyAndOrRegion(_)) continue;
+        let _ = _(_).toUpperCase(),
+          _ = _(_, _),
+          _ = _(_, _),
+          _ = _(_, _),
+          _ = _.GetScaledRecommendedPrice(_, _, void 0, _).price;
+        _.push({
+          packageID: _,
+          strPriceKey: _,
+          eCurrencyCode: _,
+          eRegionCode: void 0,
+          strCountryOverride: void 0,
+          nPublishedPrice: _,
+          nProposedPrice: _,
+          nLocalPrice: _,
+          nSuggestedPrice: _,
+          bCanSetToFree: !!_,
+          appids: _,
+        });
+      }
+      for (let _ = 1; _ < 5; ++_) {
+        if (!_.BIsSupportCurrencyAndOrRegion(1, _)) continue;
+        let _ = _(1, _).toUpperCase(),
+          _ = _(_, _),
+          _ = _(_, _),
+          _ = _(_, _),
+          _ = _.GetScaledRecommendedPrice(_, 1, _, _).price;
+        _.push({
+          packageID: _,
+          strPriceKey: _,
+          eCurrencyCode: 1,
+          eRegionCode: _,
+          strCountryOverride: void 0,
+          nPublishedPrice: _,
+          nProposedPrice: _,
+          nLocalPrice: _,
+          nSuggestedPrice: _,
+          bCanSetToFree: !1,
+          appids: _,
+        });
+      }
+      let _ = _(_);
+      _.length > 0 &&
+        _.forEach((_) => {
+          let { eCurrencyCode: _, strCountryCode: _ } = _(_),
+            _ = _(_);
+          _(
+            _ == _,
+            `Unexpected currency ${_} for country ${_} when expecting ${_} `,
+          );
+          let _ = _(_, _);
+          _.push({
+            packageID: _,
+            strPriceKey: _,
+            eCurrencyCode: _,
+            eRegionCode: void 0,
+            strCountryOverride: _,
+            nPublishedPrice: _(_, _),
+            nProposedPrice: _,
+            nLocalPrice: _(_, _),
+            nSuggestedPrice: void 0,
+            bCanSetToFree: !1,
+            appids: _,
           });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        let _ = {
-          PriceEdit: (_) => `/packages/pricing/${_}`,
-        };
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 33347, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 13183, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 55400, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 48942, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 16306, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22199, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 52781, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 72746, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 59427, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 35585, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 68157, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 36204, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 90367, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 2061, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64124, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 76614, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 98542, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64797, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 27841, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 19894, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 97806, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22224, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 35544, 19))),
-          (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 57906, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 58875, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 91661, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 4140, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 87208, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 54925, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64885, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 89271, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 35404, 19)));
-        async function _(_) {
-          if (_[_]) return _[_]();
-        }
-        var _ = __webpack_require__("chunkid");
-        const _ = (0, _._)(_);
-        function _(_) {
-          return _.Localize(`#CurrencyCodeDescription_${(0, _._)(_)}`);
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return _(_.getValue());
-        }
-        function _(_) {
-          const _ = _.getValue(),
-            _ = (0, _._)(_),
-            _ = _.Localize(`#Region_Pricing_Tooltip_${_}`);
-          return (0, _.jsxs)("span", {
-            children: [
-              _,
-              " ",
-              (0, _.jsx)(_._, {
-                tooltip: _,
-              }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_, _, _) {
-          const _ = (0, _._)(),
-            _ = (0, _._)();
-          return (0, _.useMemo)(() => {
-            let _ = new Array(),
-              _ = new Array(),
-              _ = new Array();
-            if (_) {
-              const _ = (0, _._)(_._).toUpperCase(),
-                _ = (0, _._)(_, _) || (0, _._)(_, _) || (0, _._)(_, _);
-              for (let _ = _._; _ < _._; ++_) {
-                if (!_.BIsSupportCurrencyAndOrRegion(_)) continue;
-                const _ = (0, _._)(_).toUpperCase(),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = _.GetScaledRecommendedPrice(_, _, void 0, _).price;
-                _.push({
-                  packageID: _,
-                  strPriceKey: _,
-                  eCurrencyCode: _,
-                  eRegionCode: void 0,
-                  strCountryOverride: void 0,
-                  nPublishedPrice: _,
-                  nProposedPrice: _,
-                  nLocalPrice: _,
-                  nSuggestedPrice: _,
-                  bCanSetToFree: !!_,
-                  appids: _,
-                });
-              }
-              for (let _ = _._; _ < _._; ++_) {
-                if (!_.BIsSupportCurrencyAndOrRegion(_._, _)) continue;
-                const _ = (0, _._)(_._, _).toUpperCase(),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = _.GetScaledRecommendedPrice(_, _._, _, _).price;
-                _.push({
-                  packageID: _,
-                  strPriceKey: _,
-                  eCurrencyCode: _._,
-                  eRegionCode: _,
-                  strCountryOverride: void 0,
-                  nPublishedPrice: _,
-                  nProposedPrice: _,
-                  nLocalPrice: _,
-                  nSuggestedPrice: _,
-                  bCanSetToFree: !1,
-                  appids: _,
-                });
-              }
-              const _ = (0, _._)(_);
-              _.length > 0 &&
-                _.forEach((_) => {
-                  const { eCurrencyCode: _, strCountryCode: _ } = (0, _._)(_),
-                    _ = (0, _._)(_);
-                  (0, _._)(
-                    _ == _,
-                    `Unexpected currency ${_} for country ${_} when expecting ${_} `,
-                  );
-                  const _ = (0, _._)(_, _);
-                  _.push({
-                    packageID: _,
-                    strPriceKey: _,
-                    eCurrencyCode: _,
-                    eRegionCode: void 0,
-                    strCountryOverride: _,
-                    nPublishedPrice: (0, _._)(_, _),
-                    nProposedPrice: _,
-                    nLocalPrice: (0, _._)(_, _),
-                    nSuggestedPrice: void 0,
-                    bCanSetToFree: !1,
-                    appids: _,
-                  });
-                });
-            }
-            return {
-              rgCurrencyRows: _,
-              rgRegionRows: _,
-              rgCountryOverrideRows: _,
-            };
-          }, [_, _, _, _, _]);
-        }
-        function _(_, _) {
-          const _ = useActiveConversionMethod(),
-            _ =
-              ECurrencyCodeToProposedCurrencyCode(
-                k_ECurrencyCodeUSD,
-              ).toUpperCase(),
-            _ = usePriceInCurrency(_, _).nPriceInCents;
-          let _ = !1;
-          if (_ && _ > 0) {
-            for (let _ = k_ECurrencyCodeGBP; _ < k_ECurrencyCodeMax; ++_) {
-              if (!_.BIsSupportCurrencyAndOrRegion(_)) continue;
-              const _ = ECurrencyCodeToProposedCurrencyCode(_).toUpperCase(),
-                _ = PricingStore_GetPublishedPrice(_, _),
-                _ = PricingStore_GetProposedPrice(_, _),
-                _ = PricingStore_GetLocalOverridePrice(_, _),
-                _ = _.GetScaledRecommendedPrice(_, _, void 0, _).price;
-              _ ||= _ != (_ ?? _ ?? _);
-            }
-            for (let _ = k_ERegionCodeCIS; _ < k_ERegionCodeMax; ++_) {
-              if (!_.BIsSupportCurrencyAndOrRegion(k_ECurrencyCodeUSD, _))
-                continue;
-              const _ = ECurrencyCodeToProposedCurrencyCode(
-                  k_ECurrencyCodeUSD,
-                  _,
-                ).toUpperCase(),
-                _ = PricingStore_GetPublishedPrice(_, _),
-                _ = PricingStore_GetProposedPrice(_, _),
-                _ = PricingStore_GetLocalOverridePrice(_, _),
-                _ = _.GetScaledRecommendedPrice(
-                  _,
-                  k_ECurrencyCodeUSD,
-                  _,
-                  _,
-                ).price;
-              _ ||= _ != (_ ?? _ ?? _);
-            }
-          }
-          return _;
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)(_._, {
-                paddingBottom: "4",
-                children: [
-                  (0, _.jsx)(_._, {
-                    _: "p",
-                    size: "4",
-                    color: "text-body",
-                    contrast: "subtitle",
-                    children: _._.Localize("#SinglePricingPackage_Intro_1"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    _: "p",
-                    size: "4",
-                    color: "text-body",
-                    contrast: "subtitle",
-                    children: _._.Localize("#SinglePricingPackage_Intro_2"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    size: "4",
-                    color: "text-body",
-                    contrast: "subtitle",
-                    children: (0, _.jsxs)("ol", {
-                      children: [
-                        (0, _.jsx)("li", {
-                          children: _._.Localize(
-                            "#SinglePricingPackage_Intro_2a",
-                          ),
-                        }),
-                        (0, _.jsx)("li", {
-                          children: _._.Localize(
-                            "#SinglePricingPackage_Intro_2b",
-                          ),
-                        }),
-                      ],
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsx)(_._, {
-                paddingBottom: "4",
-                children: (0, _.jsx)(_._, {
-                  children: _._.LocalizeReact(
-                    "#SinglePricingPackage_Desc_2",
-                    (0, _.jsx)(_._, {
-                      href: _,
-                      children: _._.LocalizeReact(
-                        "#SinglePricingPackage_Desc_2_Link",
-                      ),
-                    }),
-                  ),
-                }),
-              }),
-              (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  children: _._.Localize("#SinglePricingPackage_Desc_3"),
-                }),
-              }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          return _.getValue() == -1 || !_.getValue()
-            ? "--"
-            : (0, _._)(_.getValue(), _.row.original.eCurrencyCode);
-        }
-        function _(_) {
-          const _ = _.row.original;
-          if (_.nProposedPrice == -1 || !_.nProposedPrice) return "--";
-          const _ = !_.nPublishedPrice;
-          return (0, _.jsx)("span", {
-            className: (0, _._)({
-              [_().NewPrice]: _,
-              [_().HigherPrice]: !_ && _.nProposedPrice > _.nPublishedPrice,
-              [_().LowerPrice]: !_ && _.nProposedPrice < _.nPublishedPrice,
-            }),
-            children: (0, _._)(_.nProposedPrice, _.eCurrencyCode),
-          });
-        }
-        function _(_) {
-          return (0, _._)(_.row.original.strCountryOverride);
-        }
-        function _(_) {
-          const {
-              packageID: _,
-              strPriceKey: _,
-              eRegionCode: _,
-              eCurrencyCode: _,
-            } = _.row.original,
-            { nPriceInCents: _, nProposedPriceInCents: _ } = (0, _._)(_, _),
-            _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = (0, _._)(_._).toUpperCase(),
-            _ = (0, _._)(_, _) || (0, _._)(_, _) || (0, _._)(_, _),
-            { nGuidelinesLevel: _ } = (0, _._)(_, _, _, _, _),
-            _ = (0, _._)(_, _ ?? _, _, !0);
-          return _ == -1 || !_
-            ? "--"
-            : (0, _.jsxs)("span", {
-                className: (0, _._)({}),
-                children: [_, " %"],
-              });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { nPackageID: _ } = _;
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)(_._, {
-                direction: "column",
-                align: "start",
-                paddingBottom: "4",
-                children: [
-                  (0, _.jsx)(_._, {
-                    href: `${_._.PARTNER_BASE_URL}pricing/dashboard/?pn=${_}`,
-                    children: _._.Localize("#SinglePackagePricing_Right_Edit"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: _._.Localize(
-                      "#SinglePackagePricing_Right_Edit_desc",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                direction: "column",
-                paddingBottom: "4",
-                children: [
-                  (0, _.jsx)(_._, {
-                    size: "7",
-                    children: _._.Localize(
-                      "#SinglePackagePricing_Right_Help_Title",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: _._.Localize(
-                      "#SinglePackagePricing_Right_Help_Desc",
-                    ),
-                  }),
-                  (0, _.jsx)(_._, {
-                    href: `${_._.PARTNER_BASE_URL}doc/store/pricing`,
-                    children: _._.Localize("#SinglePackagePricing_Right_Link"),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_._, {
-                direction: "column",
-                children: [
-                  (0, _.jsx)(_._, {
-                    size: "7",
-                    children: _._.Localize("#SinglePackagePricing_Right_FAQ"),
-                  }),
-                  (0, _.jsxs)(_._, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        size: "4",
-                        weight: "medium",
-                        children: _._.Localize(
-                          "#SinglePackagePricing_Right_FAQ_switching",
-                        ),
-                      }),
-                      (0, _.jsx)("br", {}),
-                      (0, _.jsx)(_._, {
-                        children: _._.LocalizeReact(
-                          "#SinglePackagePricing_Right_FAQ_switching_answer",
-                          (0, _.jsx)(_._, {
-                            href: `${_._.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
-                            children: _._.Localize(
-                              "#SinglePackagePricing_Right_FAQ_switching_answer_link",
-                            ),
-                          }),
-                        ),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          });
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { nPackageID: _ } = _,
-            _ = (0, _._)(_),
-            [_, _, _] = (0, _._)(),
-            _ = (0, _._)(_),
-            [_, _] = (0, _.useState)(!1);
-          return _
-            ? (0, _.jsxs)("div", {
-                className: (0, _._)(_().ToolbarInfo, _().Visible),
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().ProposalStatus,
-                    children: (0, _.jsx)(_._, {
-                      packageID: _,
-                    }),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().Buttons,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        packageID: _,
-                        bShowCancel: !1,
-                      }),
-                      (0, _.jsx)(_._, {
-                        onClick: _,
-                        className: (0, _._)(_().Button),
-                        children: (0, _._)(
-                          "#PricingDashboard_CancelPriceProposal",
-                        ),
-                      }),
-                      (0, _.jsx)(_._, {
-                        active: _,
-                        children: (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#PricingDashboard_CancelPriceProposal",
-                          ),
-                          strDescription: (0, _._)("#Dialog_AreYouSure"),
-                          closeModal: _,
-                          onOK: async () => {
-                            _(!0), await _(), _(!1), window.location.reload();
-                          },
-                          children:
-                            _ &&
-                            (0, _.jsx)(_._, {
-                              string: (0, _._)("#ImageUpload_Processing"),
-                            }),
-                        }),
-                      }),
-                    ],
-                  }),
-                ],
-              })
-            : null;
-        }
-        const _ = (0, _._)();
-        function _(_) {
-          const { nPackageID: _, appids: _ } = _,
-            _ = (0, _._)();
-          (0, _._)(_);
-          const _ = (0, _._)(),
-            _ = Number.parseInt(_),
-            _ = (0, _._)();
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)(_._, {
-              fnBLocalChangesExist: _,
-              fnWarnUser: _,
+        });
+    }
+    return {
+      rgCurrencyRows: _,
+      rgRegionRows: _,
+      rgCountryOverrideRows: _,
+    };
+  }, [_, _, _, _, _]);
+}
+function _(_) {
+  let _ = `${_.PARTNER_BASE_URL}doc/finance/taxfaq`;
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsxs)(_, {
+        paddingBottom: `4`,
+        children: [
+          (0, _.jsx)(_, {
+            _: `p`,
+            size: `4`,
+            color: `text-body`,
+            contrast: `subtitle`,
+            children: _.Localize(`#SinglePricingPackage_Intro_1`),
+          }),
+          (0, _.jsx)(_, {
+            _: `p`,
+            size: `4`,
+            color: `text-body`,
+            contrast: `subtitle`,
+            children: _.Localize(`#SinglePricingPackage_Intro_2`),
+          }),
+          (0, _.jsx)(_, {
+            size: `4`,
+            color: `text-body`,
+            contrast: `subtitle`,
+            children: (0, _.jsxs)(`ol`, {
               children: [
-                (0, _.jsxs)("div", {
-                  className: "adminTwoColCtn",
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: "adminLeftCol",
-                      children: (0, _.jsx)("div", {
-                        className: "colSection",
-                        children: (0, _.jsx)(_, {}),
-                      }),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: "adminRightCol",
-                      children: (0, _.jsx)("div", {
-                        className: "panel",
-                        children: (0, _.jsx)(_, {
-                          nPackageID: _,
-                        }),
-                      }),
-                    }),
-                  ],
+                (0, _.jsx)(`li`, {
+                  children: _.Localize(`#SinglePricingPackage_Intro_2a`),
                 }),
-                (0, _.jsx)("div", {
-                  className: "",
-                  children: (0, _.jsx)(_, {
-                    nPackageID: _,
-                    appids: _.map(Number.parseInt),
-                  }),
+                (0, _.jsx)(`li`, {
+                  children: _.Localize(`#SinglePricingPackage_Intro_2b`),
                 }),
               ],
             }),
-          });
-        }
-        function _(_) {
-          const { nPackageID: _, appids: _ } = _,
-            _ = (0, _._)(),
-            {
-              rgCurrencyRows: _,
-              rgRegionRows: _,
-              rgCountryOverrideRows: _,
-            } = _(_, _, _),
-            _ = (0, _._)(_),
-            _ = !!_,
-            _ = _?.eState == _._,
-            { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
-          (0, _.useEffect)(() => {
-            (0, _._)([_]);
-          }, [_]);
-          const _ = [
-            _.accessor("nPublishedPrice", {
-              header: (0, _._)("#PackagePricing_Col_CurPrice"),
-              meta: {
-                cellClassname: _()(_().CurrentPrice),
-              },
-              size: 120,
-              cell: _,
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        paddingBottom: `4`,
+        children: (0, _.jsx)(_, {
+          children: _.LocalizeReact(
+            `#SinglePricingPackage_Desc_2`,
+            (0, _.jsx)(_, {
+              href: _,
+              children: _.LocalizeReact(`#SinglePricingPackage_Desc_2_Link`),
             }),
-            _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
-              header: (0, _._)(
-                _
-                  ? "#PackagePricing_Col_Approved"
-                  : "#PackagePricing_Col_Proposal",
-              ),
-              meta: {
-                cellClassname: _()(_().ProposedPrice),
-              },
-              size: 280,
-              cell: _ ? _ : _._,
-            }),
-            _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
-              _: "nMaxDiscount",
-              header: (0, _._)("#PackagePricing_Col_MaxDiscount"),
-              meta: {
-                cellClassname: _()(_().MaxDiscount),
-                strHeaderTooltip: (0, _._)(
-                  "#PackagePricing_Col_MaxDiscount_ttip",
-                ),
-              },
-              size: 150,
-              cell: _,
-            }),
-          ];
-          return _.length == 0 || _.length == 0
-            ? null
-            : (0, _.jsxs)(_.Fragment, {
-                children: [
-                  _
-                    ? (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsx)("div", {
-                          className: "colSection",
-                          children: (0, _.jsx)(_._, {
-                            packageID: _,
-                          }),
-                        }),
-                      })
-                    : (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsx)("div", {
-                          className: "colSection",
-                          children: (0, _.jsxs)(_._, {
-                            direction: "row",
-                            gap: "5",
-                            children: [
-                              (0, _.jsx)(_._, {
-                                fnConversionMethodSelected: (_) => {
-                                  _(_, (0, _._)(_, "USD"), _);
-                                },
-                              }),
-                              (0, _.jsxs)(_._, {
-                                direction: "column",
-                                children: [
-                                  (0, _.jsx)(_._, {
-                                    size: "3",
-                                    children: _._.Localize(
-                                      "#PricingDashboard_Select_Price",
-                                    ),
-                                  }),
-                                  (0, _.jsx)(_, {
-                                    usdRow: _[_._],
-                                  }),
-                                ],
-                              }),
-                              (0, _.jsxs)(_._, {
-                                direction: "column",
-                                align: "start",
-                                children: [
-                                  (0, _.jsxs)(_._, {
-                                    size: "3",
-                                    children: [
-                                      (0, _._)(
-                                        "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
-                                      ),
-                                      (0, _.jsx)(_._, {
-                                        tooltip: (0, _._)(
-                                          "#PricingDashboard_ApplyGuidelinesDialog_Context",
-                                        ),
-                                      }),
-                                    ],
-                                  }),
-                                  (0, _.jsx)(_, {
-                                    nPackageID: _,
-                                    oPricingGuideline: _,
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        }),
-                      }),
-                  (0, _.jsxs)("div", {
-                    className: "colSection",
-                    children: [
-                      (0, _.jsx)(_._, {
-                        data: _,
-                        className: _()(
-                          _().DefaultFancyTable,
-                          _().NoColumnBorders,
-                          _().PackagePricingContext,
-                        ),
-                        columns: [
-                          _.accessor("eCurrencyCode", {
-                            header: (0, _._)("#PackagePricing_Col_Currency"),
-                            size: 200,
-                            cell: _,
-                          }),
-                          ..._,
-                        ],
-                        getRowKey: (_, _) => `${_.eCurrencyCode}`,
-                        nItemHeight: 20,
-                        stickyHeader: !0,
-                      }),
-                      (0, _.jsx)(_._, {
-                        data: _,
-                        className: _()(
-                          _().DefaultFancyTable,
-                          _().NoColumnBorders,
-                          _().PackagePricingContext,
-                        ),
-                        columns: [
-                          _.accessor("eRegionCode", {
-                            header: (0, _._)("#PackagePricing_Col_Region"),
-                            size: 200,
-                            cell: _,
-                          }),
-                          _.accessor("eCurrencyCode", {
-                            header: (0, _._)("#PackagePricing_Col_Currency"),
-                            size: 100,
-                            cell: _,
-                          }),
-                          ..._,
-                        ],
-                        getRowKey: (_, _) => `${_.eRegionCode}`,
-                        nItemHeight: 20,
-                        stickyHeader: !0,
-                      }),
-                      _.length > 0 &&
-                        (0, _.jsx)(_._, {
-                          data: _,
-                          className: _()(
-                            _().DefaultFancyTable,
-                            _().NoColumnBorders,
-                            _().PackagePricingContext,
-                          ),
-                          columns: [
-                            _.accessor("strCountryOverride", {
-                              header: (0, _._)("#PackagePricing_Col_Country"),
-                              size: 200,
-                              cell: _,
-                            }),
-                            _.accessor("eCurrencyCode", {
-                              header: (0, _._)("#PackagePricing_Col_Currency"),
-                              size: 100,
-                              cell: _,
-                            }),
-                            ..._,
-                          ],
-                          getRowKey: (_, _) => `${_.strCountryOverride}`,
-                          nItemHeight: 20,
-                          stickyHeader: !0,
-                        }),
-                      (0, _.jsx)(_._, {
-                        bReloadPageOnSave: !0,
-                      }),
-                      (0, _.jsx)(_, {
-                        nPackageID: _,
-                      }),
-                    ],
-                  }),
-                ],
-              });
-        }
-        function _(_) {
-          const { usdRow: _ } = _,
-            { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
-          return (0, _.jsx)(_._, {
-            strButton: _._.Localize("#PricingDashboard_Select_Price_button"),
-            strTooltip: _._.Localize(
-              "#PricingDashboard_Select_Price_button_ttip",
-            ),
-            fnGetUSDPriceInCents: () => (0, _._)(_.packageID, "USD"),
-            fnOnUpdate: (_) => _(_.packageID, _),
-            strDescription: _._.Localize(
-              "#PricingDashboard_GuidelinesPickerDescription_New",
-            ),
-            appids: _.appids,
-            nPackageID: _.packageID,
-            bCanSetToFree: _.bCanSetToFree,
-          });
-        }
-        function _(_) {
-          const { nPackageID: _, oPricingGuideline: _ } = _,
-            [_, _, _] = (0, _._)(),
-            _ = (0, _._)();
-          return (0, _.jsxs)(_.Fragment, {
+          ),
+        }),
+      }),
+      (0, _.jsx)(_, {
+        children: (0, _.jsx)(_, {
+          children: _.Localize(`#SinglePricingPackage_Desc_3`),
+        }),
+      }),
+    ],
+  });
+}
+var _ = `wo2GzPtQoTA-`,
+  _ = `Pa6ALJGOpwk-`,
+  _ = `A9X1dzkhLiA-`,
+  _ = `TSvnB8--gSk-`,
+  _ = `G35ZSKlRwJg-`,
+  _ = `vp56-md-DzE-`;
+function _(_) {
+  return _.getValue() == -1 || !_.getValue()
+    ? `--`
+    : _(_.getValue(), _.row.original.eCurrencyCode);
+}
+function _(_) {
+  let _ = _.row.original;
+  if (_.nProposedPrice == -1 || !_.nProposedPrice) return `--`;
+  let _ = !_.nPublishedPrice;
+  return (0, _.jsx)(`span`, {
+    className: _({
+      [_]: _,
+      [_]: !_ && _.nProposedPrice > _.nPublishedPrice,
+      [_]: !_ && _.nProposedPrice < _.nPublishedPrice,
+    }),
+    children: _(_.nProposedPrice, _.eCurrencyCode),
+  });
+}
+function _(_) {
+  return _(_.row.original.strCountryOverride);
+}
+function _(_) {
+  let {
+      packageID: _,
+      strPriceKey: _,
+      eRegionCode: _,
+      eCurrencyCode: _,
+    } = _.row.original,
+    { nPriceInCents: _, nProposedPriceInCents: _ } = _(_, _),
+    _ = _(),
+    _ = _(),
+    _ = _(1).toUpperCase(),
+    _ = _(_, _) || _(_, _) || _(_, _),
+    { nGuidelinesLevel: _ } = _(_, _, _, _, _),
+    _ = _(_, _ ?? _, _, !0);
+  return _ == -1 || !_
+    ? `--`
+    : (0, _.jsxs)(`span`, {
+        className: _({}),
+        children: [_, ` %`],
+      });
+}
+function _(_) {
+  let { nPackageID: _ } = _;
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsxs)(_, {
+        direction: `column`,
+        align: `start`,
+        paddingBottom: `4`,
+        children: [
+          (0, _.jsx)(_, {
+            href: `${_.PARTNER_BASE_URL}pricing/dashboard/?pn=${_}`,
+            children: _.Localize(`#SinglePackagePricing_Right_Edit`),
+          }),
+          (0, _.jsx)(_, {
+            children: _.Localize(`#SinglePackagePricing_Right_Edit_desc`),
+          }),
+        ],
+      }),
+      (0, _.jsxs)(_, {
+        direction: `column`,
+        paddingBottom: `4`,
+        children: [
+          (0, _.jsx)(_, {
+            size: `7`,
+            children: _.Localize(`#SinglePackagePricing_Right_Help_Title`),
+          }),
+          (0, _.jsx)(_, {
+            children: _.Localize(`#SinglePackagePricing_Right_Help_Desc`),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.PARTNER_BASE_URL}doc/store/pricing`,
+            children: _.Localize(`#SinglePackagePricing_Right_Link`),
+          }),
+        ],
+      }),
+      (0, _.jsxs)(_, {
+        direction: `column`,
+        children: [
+          (0, _.jsx)(_, {
+            size: `7`,
+            children: _.Localize(`#SinglePackagePricing_Right_FAQ`),
+          }),
+          (0, _.jsxs)(_, {
             children: [
-              (0, _.jsx)(_._, {
-                onClick: _,
-                children: (0, _._)(
-                  "#PricingDashboard_ApplyGuidelinesDialog_Button",
+              (0, _.jsx)(_, {
+                size: `4`,
+                weight: `medium`,
+                children: _.Localize(
+                  `#SinglePackagePricing_Right_FAQ_switching`,
                 ),
               }),
-              (0, _.jsx)(_._, {
+              (0, _.jsx)(`br`, {}),
+              (0, _.jsx)(_, {
+                children: _.LocalizeReact(
+                  `#SinglePackagePricing_Right_FAQ_switching_answer`,
+                  (0, _.jsx)(_, {
+                    href: `${_.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
+                    children: _.Localize(
+                      `#SinglePackagePricing_Right_FAQ_switching_answer_link`,
+                    ),
+                  }),
+                ),
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { nPackageID: _ } = _,
+    _ = _(_),
+    [_, _, _] = _(),
+    _ = _(_),
+    [_, _] = (0, _.useState)(!1);
+  return _
+    ? (0, _.jsxs)(`div`, {
+        className: _(_, _),
+        children: [
+          (0, _.jsx)(`div`, {
+            className: _,
+            children: (0, _.jsx)(_, {
+              packageID: _,
+            }),
+          }),
+          (0, _.jsxs)(`div`, {
+            className: _,
+            children: [
+              (0, _.jsx)(_, {
+                packageID: _,
+                bShowCancel: !1,
+              }),
+              (0, _.jsx)(_, {
+                onClick: _,
+                className: _(_),
+                children: _(`#PricingDashboard_CancelPriceProposal`),
+              }),
+              (0, _.jsx)(_, {
                 active: _,
-                children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  strTitle: _(`#PricingDashboard_CancelPriceProposal`),
+                  strDescription: _(`#Dialog_AreYouSure`),
                   closeModal: _,
-                  fnOnApply: _,
-                  singlePackage: !0,
+                  onOK: async () => {
+                    _(!0), await _(), _(!1), window.location.reload();
+                  },
+                  children:
+                    _ &&
+                    (0, _.jsx)(_, {
+                      string: _(`#ImageUpload_Processing`),
+                    }),
                 }),
               }),
             ],
-          });
-        }
-        var _ = __webpack_require__("chunkid");
-        function _(_) {
-          return (
-            _.use((0, _._)()),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsxs)(_._, {
-                children: [
-                  (0, _.jsx)(_._, {
-                    path: _.PriceEdit(":packageid"),
-                    children: (0, _.jsx)(_._, {
-                      config: {
-                        "packageadmin-price-editor": (_) =>
-                          (0, _.jsx)(_, {
-                            ..._,
-                          }),
-                      },
-                    }),
-                  }),
-                  (0, _.jsx)(_._, {
-                    component: _._,
-                  }),
-                ],
+          }),
+        ],
+      })
+    : null;
+}
+var _ = _();
+function _(_) {
+  let { nPackageID: _, appids: _ } = _,
+    _ = _();
+  _(_);
+  let _ = _(),
+    _ = Number.parseInt(_);
+  return (
+    _(),
+    (0, _.jsx)(_, {
+      children: (0, _.jsxs)(_, {
+        fnBLocalChangesExist: _,
+        fnWarnUser: _,
+        children: [
+          (0, _.jsxs)(`div`, {
+            className: `adminTwoColCtn`,
+            children: [
+              (0, _.jsx)(`div`, {
+                className: `adminLeftCol`,
+                children: (0, _.jsx)(`div`, {
+                  className: `colSection`,
+                  children: (0, _.jsx)(_, {}),
+                }),
               }),
-            })
-          );
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { depth: _ } = useContext(_);
-          return jsx(_.Provider, {
-            value: {
-              depth: _ + 1,
-            },
-            children: jsx(Box, {
-              ..._,
+              (0, _.jsx)(`div`, {
+                className: `adminRightCol`,
+                children: (0, _.jsx)(`div`, {
+                  className: `panel`,
+                  children: (0, _.jsx)(_, {
+                    nPackageID: _,
+                  }),
+                }),
+              }),
+            ],
+          }),
+          (0, _.jsx)(`div`, {
+            className: ``,
+            children: (0, _.jsx)(_, {
+              nPackageID: _,
+              appids: _.map(Number.parseInt),
             }),
-          });
-        }
-        const _ = _.createContext({
-          depth: 0,
-        });
-        function _() {
-          return (0, _.useContext)(_).depth;
-        }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
-        function _(_) {
-          const { level: _ = "auto", className: _, color: _ } = _,
-            _ = _(),
-            _ = _(_, _);
-          return (0, _.jsx)(_, {
-            ...(0, _._)(
-              {
-                ..._,
-                className: _()((0, _._)(), _.Heading, _),
-              },
-              _,
-            ),
-          });
-        }
-        const _ = [
-          ..._._,
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`HeadingSize-${_}`],
-          },
-        ];
-        function _(_, _) {
-          if (_ === "auto" && _ === 0) return "h1";
-          const _ = _ === "auto" ? _.toString() : _;
-          return /^[1-6]$/.test(_)
-            ? "h" + _
-            : _ === "auto"
-              ? (console.error(
-                  '<Section> nesting has exceeded "h6" for headings.',
-                ),
-                "h6")
-              : (console.error(
-                  `Attempt to render invalid heading level, "${_}".`,
-                ),
-                "h1");
-        }
+          }),
+        ],
+      }),
+    })
+  );
+}
+function _(_) {
+  let { nPackageID: _, appids: _ } = _,
+    _ = _(),
+    {
+      rgCurrencyRows: _,
+      rgRegionRows: _,
+      rgCountryOverrideRows: _,
+    } = _(_, _, _),
+    _ = _(_),
+    _ = !!_,
+    _ = _?.eState == 4,
+    { fnApplyGuidelines: _ } = _(_());
+  (0, _.useEffect)(() => {
+    _([_]);
+  }, [_]);
+  let _ = [
+    _.accessor(`nPublishedPrice`, {
+      header: _(`#PackagePricing_Col_CurPrice`),
+      meta: {
+        cellClassname: (0, _.default)(_),
       },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _(_) {
-          const { underline: _ = "auto", ..._ } = _,
-            _ = (0, _._)(
-              {
-                ..._,
-                underline: _,
-                className: _.TextLink,
-              },
-              _,
-            );
-          return (0, _.jsx)(_._, {
-            ..._,
-          });
-        }
-        const _ = [
-          ..._._,
-          {
-            prop: "underline",
-            className: (_) => _[`Underline-${_}`],
-          },
-        ];
-        function _(_) {
-          const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
-            _ = (0, _._)(),
-            _ = _ ?? _?.focusable ?? !!_.onClick,
-            _ = (0, _.jsx)("span", {
-              role: "button",
-              ...(0, _._)(
-                {
-                  ..._,
-                  underline: _,
-                  className: _.TextLinkButton,
-                },
-                _,
-              ),
-            });
-          return _ && (_ || _)
-            ? (0, _.jsx)(_._, {
-                ...(_ || {}),
-                focusable: _,
-                children: _,
+      size: 120,
+      cell: _,
+    }),
+    _.accessor(_ ? `nProposedPrice` : `strPriceKey`, {
+      header: _(
+        _ ? `#PackagePricing_Col_Approved` : `#PackagePricing_Col_Proposal`,
+      ),
+      meta: {
+        cellClassname: (0, _.default)(_),
+      },
+      size: 280,
+      cell: _ ? _ : _,
+    }),
+    _.accessor(_ ? `nProposedPrice` : `strPriceKey`, {
+      _: `nMaxDiscount`,
+      header: _(`#PackagePricing_Col_MaxDiscount`),
+      meta: {
+        cellClassname: (0, _.default)(_),
+        strHeaderTooltip: _(`#PackagePricing_Col_MaxDiscount_ttip`),
+      },
+      size: 150,
+      cell: _,
+    }),
+  ];
+  return _.length == 0 || _.length == 0
+    ? null
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          _
+            ? (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)(`div`, {
+                  className: `colSection`,
+                  children: (0, _.jsx)(_, {
+                    packageID: _,
+                  }),
+                }),
               })
-            : _;
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(module_exports, {
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid");
-        const _ = {};
-        (_.arabic = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 67062, 19))),
-          (_.brazilian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 56144, 19))),
-          (_.bulgarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 79311, 19))),
-          (_.czech = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 20949, 19))),
-          (_.danish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 98935, 19))),
-          (_.dutch = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 78064, 19))),
-          (_.english = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 17110, 19))),
-          (_.finnish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 2581, 19))),
-          (_.french = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 39078, 19))),
-          (_.german = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 6840, 19))),
-          (_.greek = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 69242, 19))),
-          (_.hungarian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 13595, 19))),
-          (_.indonesian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 52666, 19))),
-          (_.italian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 69814, 19))),
-          (_.japanese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22329, 19))),
-          (_.koreana = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 60033, 19))),
-          (_.latam = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 32313, 19))),
-          (_.malay = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 35186, 19))),
-          (_.norwegian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 86498, 19))),
-          (_.polish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 5383, 19))),
-          (_.portuguese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 93451, 19))),
-          (_.romanian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 47265, 19))),
-          (_.russian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 22115, 19))),
-          (_.sc_schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 3913, 19))),
-          (_.schinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64698, 19))),
-          (_.spanish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 64230, 19))),
-          (_.swedish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 83999, 19))),
-          (_.tchinese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 23465, 19))),
-          (_.thai = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 74692, 19))),
-          (_.turkish = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 89430, 19))),
-          (_.ukrainian = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 73792, 19))),
-          (_.vietnamese = () =>
-            __webpack_require__._("chunkid").then(_._.bind(_, 21305, 19)));
-        async function _(_) {
-          if (_[_]) return _[_]();
-        }
-        const _ = (0, _._)(_);
-        function _(_) {
-          return _.Localize(`#Steam_Country_${_}`);
-        }
-      },
-      chunkid: (module) => {
-        module.exports = {
-          NewPrice: "_3xrKIJ4u3oGwIbDNHLiE3U",
-          HigherPrice: "rdMe4z7G3RiS3aOmPBXjp",
-          LowerPrice: "HFkBG6GEWlzLQZ3MWCZfy",
-          FlexColGroup: "_98APa3FIHhT6HoHQPTdP-",
-          CurrentPrice: "_2GBqA5FVPnXDKN337UQTQF",
-          ProposedPrice: "_1lW7HuIHz1dVNCRWv6gDDu",
-          MaxDiscount: "x7PYG4YYyYUVdJCTlosQh",
-          PriceUpdateOptionsGroup: "_29xcvKUrOD3qIkctp2Fo_N",
-          FreeSettingCtn: "_1kDnDjWEynufWnYI9AFl3l",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          Heading: "_12ldq1_X5RuLWAAs_ODwt7",
-          "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
-          "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
-          "HeadingSize-3": "_2jvih9p3Mc3zUn2nnxzDv7",
-          "HeadingSize-4": "_1zvMJY9dUjwMSI0j5QoEdq",
-          "HeadingSize-5": "_1196Oisy8jDA4szPu-KrKP",
-          "HeadingSize-6": "R1W-zMFN4WGw9JK48Yqez",
-          "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
-          "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
-          "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
-          TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
-          Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
-          "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
-          "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
-          "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
-          "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
-        };
-      },
-      chunkid: (module) => {
-        module.exports = {
-          DefaultFancyTable: "_3OVilOdb2tSBtG90cwqGUo",
-          NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
-        };
-      },
-    },
-  ]);
-})();
+            : (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsx)(`div`, {
+                  className: `colSection`,
+                  children: (0, _.jsxs)(_, {
+                    direction: `row`,
+                    gap: `5`,
+                    children: [
+                      (0, _.jsx)(_, {
+                        fnConversionMethodSelected: (_) => {
+                          _(_, _(_, `USD`), _);
+                        },
+                      }),
+                      (0, _.jsxs)(_, {
+                        direction: `column`,
+                        children: [
+                          (0, _.jsx)(_, {
+                            size: `3`,
+                            children: _.Localize(
+                              `#PricingDashboard_Select_Price`,
+                            ),
+                          }),
+                          (0, _.jsx)(_, {
+                            usdRow: _[1],
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)(_, {
+                        direction: `column`,
+                        align: `start`,
+                        children: [
+                          (0, _.jsxs)(_, {
+                            size: `3`,
+                            children: [
+                              _(
+                                `#PricingDashboard_ApplyGuidelinesDialog_Context_Short`,
+                              ),
+                              (0, _.jsx)(_, {
+                                tooltip: _(
+                                  `#PricingDashboard_ApplyGuidelinesDialog_Context`,
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)(_, {
+                            nPackageID: _,
+                            oPricingGuideline: _,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+          (0, _.jsxs)(`div`, {
+            className: `colSection`,
+            children: [
+              (0, _.jsx)(_, {
+                data: _,
+                className: (0, _.default)(
+                  _.DefaultFancyTable,
+                  _.NoColumnBorders,
+                  _,
+                ),
+                columns: [
+                  _.accessor(`eCurrencyCode`, {
+                    header: _(`#PackagePricing_Col_Currency`),
+                    size: 200,
+                    cell: _,
+                  }),
+                  ..._,
+                ],
+                getRowKey: (_, _) => `${_.eCurrencyCode}`,
+                nItemHeight: 20,
+                stickyHeader: !0,
+              }),
+              (0, _.jsx)(_, {
+                data: _,
+                className: (0, _.default)(
+                  _.DefaultFancyTable,
+                  _.NoColumnBorders,
+                  _,
+                ),
+                columns: [
+                  _.accessor(`eRegionCode`, {
+                    header: _(`#PackagePricing_Col_Region`),
+                    size: 200,
+                    cell: _,
+                  }),
+                  _.accessor(`eCurrencyCode`, {
+                    header: _(`#PackagePricing_Col_Currency`),
+                    size: 100,
+                    cell: _,
+                  }),
+                  ..._,
+                ],
+                getRowKey: (_, _) => `${_.eRegionCode}`,
+                nItemHeight: 20,
+                stickyHeader: !0,
+              }),
+              _.length > 0 &&
+                (0, _.jsx)(_, {
+                  data: _,
+                  className: (0, _.default)(
+                    _.DefaultFancyTable,
+                    _.NoColumnBorders,
+                    `XslZzcoK48s-`,
+                  ),
+                  columns: [
+                    _.accessor(`strCountryOverride`, {
+                      header: _(`#PackagePricing_Col_Country`),
+                      size: 200,
+                      cell: _,
+                    }),
+                    _.accessor(`eCurrencyCode`, {
+                      header: _(`#PackagePricing_Col_Currency`),
+                      size: 100,
+                      cell: _,
+                    }),
+                    ..._,
+                  ],
+                  getRowKey: (_, _) => `${_.strCountryOverride}`,
+                  nItemHeight: 20,
+                  stickyHeader: !0,
+                }),
+              (0, _.jsx)(_, {
+                bReloadPageOnSave: !0,
+              }),
+              (0, _.jsx)(_, {
+                nPackageID: _,
+              }),
+            ],
+          }),
+        ],
+      });
+}
+function _(_) {
+  let { usdRow: _ } = _,
+    { fnApplyGuidelines: _ } = _(_());
+  return (0, _.jsx)(_, {
+    strButton: _.Localize(`#PricingDashboard_Select_Price_button`),
+    strTooltip: _.Localize(`#PricingDashboard_Select_Price_button_ttip`),
+    fnGetUSDPriceInCents: () => _(_.packageID, `USD`),
+    fnOnUpdate: (_) => _(_.packageID, _),
+    strDescription: _.Localize(
+      `#PricingDashboard_GuidelinesPickerDescription_New`,
+    ),
+    appids: _.appids,
+    nPackageID: _.packageID,
+    bCanSetToFree: _.bCanSetToFree,
+  });
+}
+function _(_) {
+  let { nPackageID: _, oPricingGuideline: _ } = _,
+    [_, _, _] = _(),
+    _ = _();
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        onClick: _,
+        children: _(`#PricingDashboard_ApplyGuidelinesDialog_Button`),
+      }),
+      (0, _.jsx)(_, {
+        active: _,
+        children: (0, _.jsx)(_, {
+          closeModal: _,
+          fnOnApply: _,
+          singlePackage: !0,
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  return (
+    _.use(_()),
+    (0, _.jsx)(_, {
+      children: (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(_, {
+            path: _.PriceEdit(`:packageid`),
+            children: (0, _.jsx)(_, {
+              config: {
+                "packageadmin-price-editor": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
+              },
+            }),
+          }),
+          (0, _.jsx)(_, {
+            component: _,
+          }),
+        ],
+      }),
+    })
+  );
+}
+export { _ as default };

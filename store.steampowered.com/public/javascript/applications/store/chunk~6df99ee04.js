@@ -4,10 +4,10 @@
   (self.webpackChunkstore = self.webpackChunkstore || []).push([
     [75976],
     {
-      22673: (m, P, t) => {
+      22673: (d, B, t) => {
         "use strict";
-        t.d(P, { u: () => I, c: () => p });
-        var f = t(37901);
+        t.d(B, { u: () => C, c: () => f });
+        var P = t(37901);
         const a = {};
         (a.arabic = () => t.e(98135).then(t.t.bind(t, 98135, 19))),
           (a.brazilian = () => t.e(32427).then(t.t.bind(t, 32427, 19))),
@@ -44,155 +44,159 @@
         async function D(o) {
           if (a[o]) return a[o]();
         }
-        const p = (0, f.l)(D);
-        function I(o, c, g, B, ...r) {
-          const s = `${c}${g ? "_second" : "_third"}`;
+        const f = (0, P.l)(D);
+        function C(o, i, c, p, ...m) {
+          const s = `${i}${c ? "_second" : "_third"}`;
           if (o.HasKey(s))
-            return g ? o.LocalizeReact(s, ...r) : o.LocalizeReact(s, B, ...r);
-          if (o.HasKey(c)) return o.LocalizeReact(c, ...r);
+            return c ? o.LocalizeReact(s, ...m) : o.LocalizeReact(s, p, ...m);
+          if (o.HasKey(i)) return o.LocalizeReact(i, ...m);
         }
       },
-      1012: (m, P, t) => {
+      1012: (d, B, t) => {
         "use strict";
-        t.d(P, { b: () => B });
-        var f = t(90626),
+        t.d(B, { b: () => m });
+        var P = t(90626),
           a = t(84797),
           D = t(68622),
-          p = t(32339),
-          I = t(4452);
-        const o = { 2022: a, 2023: D, 2024: p, 2025: I },
-          c = Object.values(o).reduce((r, s) => ({ ...r, ...s }), {}),
-          g = 2022;
-        function B(r) {
-          return (0, f.useMemo)(() => {
-            const s = o[r] ?? o[g];
-            return { ...c, ...s };
-          }, [r]);
+          f = t(32339),
+          C = t(4452),
+          o = t(90281);
+        const i = { 2022: a, 2023: D, 2024: f, 2025: C, 2026: o },
+          c = Object.values(i).reduce((s, y) => ({ ...s, ...y }), {}),
+          p = 2022;
+        function m(s) {
+          return (0, P.useMemo)(() => {
+            const y = i[s] ?? i[p];
+            return { ...c, ...y };
+          }, [s]);
         }
       },
-      54407: (m, P, t) => {
+      54407: (d, B, t) => {
         "use strict";
-        t.d(P, { B3: () => R, KM: () => O, KT: () => F });
-        var f = t(41735),
-          a = t.n(f),
+        t.d(B, { B3: () => F, KM: () => M, KT: () => R });
+        var P = t(41735),
+          a = t.n(P),
           D = t(58632),
-          p = t.n(D),
-          I = t(90626),
+          f = t.n(D),
+          C = t(90626),
           o = t(80902),
-          c = t(75233),
-          g = t(72604),
-          B = t(76559),
-          r = t(34592),
+          i = t(75233),
+          c = t(72604),
+          p = t(76559),
+          m = t(34592),
           s = t(3166),
-          v = t(35038),
-          G = t(27386),
-          M = t(68312);
-        const S = "nicknames";
-        function O(n) {
-          const l = (0, M.KV)(),
-            { data: i, isLoading: e } = (0, o.I)({
-              queryKey: [S],
+          y = t(35038),
+          I = t(27386),
+          T = t(68312);
+        const O = "nicknames";
+        function M(n) {
+          const g = (0, T.KV)(),
+            { data: l, isLoading: e } = (0, o.I)({
+              queryKey: [O],
               queryFn: async () => {
-                const A = new Map();
+                const h = new Map();
                 if (s.iA.logged_in) {
-                  const d = v.w.Init(G.w_T),
-                    y = (await G.xtC.GetNicknameList(l, d)).Body().toObject();
-                  y?.nicknames &&
-                    y.nicknames.length > 0 &&
-                    y.nicknames.forEach((C) => {
-                      C.accountid &&
-                        C.nickname &&
-                        A.set(C.accountid, C.nickname);
+                  const r = y.w.Init(I.w_T),
+                    G = (await I.xtC.GetNicknameList(g, r)).Body().toObject();
+                  G?.nicknames &&
+                    G.nicknames.length > 0 &&
+                    G.nicknames.forEach((u) => {
+                      u.accountid &&
+                        u.nickname &&
+                        h.set(u.accountid, u.nickname);
                     });
                 }
-                return A;
+                return h;
               },
             });
-          return i ? i.get(n) : null;
+          return l ? l.get(n) : null;
         }
         async function L(n) {
           if (!n || n.length == 0) return [];
-          const l =
+          const g =
             (0, s.yK)() == "community"
               ? s.TS.COMMUNITY_BASE_URL
               : s.TS.STORE_BASE_URL;
           if (n.length == 1) {
-            const i = { accountid: n[0], origin: self.origin },
-              e = await a().get(`${l}actions/ajaxgetavatarpersona`, {
-                params: i,
+            const l = { accountid: n[0], origin: self.origin },
+              e = await a().get(`${g}actions/ajaxgetavatarpersona`, {
+                params: l,
               });
             if (
               !e ||
               e.status != 200 ||
-              e.data?.success != g.R ||
+              e.data?.success != c.R ||
               !e.data?.userinfo
             )
-              throw `Load single avatar/persona failed ${((0, r.H))(e).strErrorMsg}`;
+              throw `Load single avatar/persona failed ${((0, m.H))(e).strErrorMsg}`;
             return [e.data.userinfo];
           } else {
-            const i = { accountids: n.join(","), origin: self.origin },
-              e = await a().get(`${l}actions/ajaxgetmultiavatarpersona`, {
-                params: i,
+            const l = { accountids: n.join(","), origin: self.origin },
+              e = await a().get(`${g}actions/ajaxgetmultiavatarpersona`, {
+                params: l,
               });
             if (
               !e ||
               e.status != 200 ||
-              e.data?.success != g.R ||
+              e.data?.success != c.R ||
               !e.data?.userinfos
             )
-              throw `Load single avatar/persona failed ${((0, r.H))(e).strErrorMsg}`;
-            const A = new Map();
+              throw `Load single avatar/persona failed ${((0, m.H))(e).strErrorMsg}`;
+            const h = new Map();
             return (
-              e.data.userinfos.forEach((d) =>
-                A.set(new B.b(d.steamid).GetAccountID(), d),
+              e.data.userinfos.forEach((r) =>
+                h.set(new p.b(r.steamid).GetAccountID(), r),
               ),
-              n.map((d) => A.get(d))
+              n.map((r) => h.get(r))
             );
           }
         }
-        const T = new (p())((n) => L(n), { cache: !1 }),
-          u = "avatarandpersonas";
-        function F(n) {
-          const { data: l, isLoading: i } = (0, o.I)({
-            queryKey: [u, n],
-            queryFn: () => T.load(n),
-          });
-          return [l, i];
+        const S = new (f())((n) => L(n), { cache: !1 }),
+          v = "avatarandpersonas";
+        function E(n) {
+          return [v, n];
         }
         function R(n) {
-          const l = (0, c.jE)(),
-            { data: i, isLoading: e } = (0, o.I)({
-              queryKey: [u, n],
+          const { data: g, isLoading: l } = (0, o.I)({
+            queryKey: E(n),
+            queryFn: () => S.load(n),
+          });
+          return [g, l];
+        }
+        function F(n) {
+          const g = (0, i.jE)(),
+            { data: l, isLoading: e } = (0, o.I)({
+              queryKey: [v, n],
               queryFn: async () => {
-                const d = await T.loadMany(n);
+                const r = await S.loadMany(n);
                 return (
-                  d.forEach((h) => {
-                    if (h instanceof Error) return;
-                    const y = [u, new B.b(h.steamid).GetAccountID()];
-                    l.setQueryData(y, h);
+                  r.forEach((A) => {
+                    if (A instanceof Error) return;
+                    const G = [v, new p.b(A.steamid).GetAccountID()];
+                    g.setQueryData(G, A);
                   }),
-                  d
+                  r
                 );
               },
               enabled: n?.length > 0,
             }),
-            A = (0, I.useMemo)(() => {
-              const d = new Array();
+            h = (0, C.useMemo)(() => {
+              const r = new Array();
               return (
-                i?.forEach((h) => {
-                  h instanceof Error || d.push(h);
+                l?.forEach((A) => {
+                  A instanceof Error || r.push(A);
                 }),
-                d
+                r
               );
-            }, [i]);
-          return e ? null : A;
+            }, [l]);
+          return e ? null : h;
         }
-        function E(n) {
-          return ReactQueryClient.getQueryData([u, n]);
+        function x(n) {
+          return ReactQueryClient.getQueryData([v, n]);
         }
       },
-      84797: (m) => {
-        m.exports = {
+      84797: (d) => {
+        d.exports = {
           new_games_color: "#3cdf6a",
           used_games_color: "#4df",
           old_games_color: "#e496ff",
@@ -278,8 +282,8 @@
           OtherYearLink: "_1i52pDXbOiguTescoinJBz",
         };
       },
-      68622: (m) => {
-        m.exports = {
+      68622: (d) => {
+        d.exports = {
           new_games_color: "#d67070",
           used_games_color: "#683db4",
           old_games_color: "#3898b0",
@@ -363,8 +367,8 @@
           OtherYearLink: "_1fHTilDQDzxqV57h1u1xHI",
         };
       },
-      32339: (m) => {
-        m.exports = {
+      32339: (d) => {
+        d.exports = {
           "duration-app-launch": "800ms",
           new_games_color: "#34f3fe",
           used_games_color: "#cc6670",
@@ -443,22 +447,10 @@
           ViewPageButton: "_8vh-tS_EH62zvZbZzF6Bq",
           Description: "_1ImcGBhCVlOyWddPGdtGz9",
           OtherYearLink: "_3LrPDKdIcbQ34J2OlNHDXh",
-          BackgroundAnimation: "_1iXipF4ysagEImD280CprP",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1rmm8RPOlAxQMFUAP8bygH",
-          "ItemFocusAnim-darkerGrey": "_3Ws16JxP5tjYQMyhOCZPyl",
-          "ItemFocusAnim-darkGreySettings": "_1U1iTefDLSbKqIp4V19WVn",
-          "ItemFocusAnim-darkGrey": "_1Z34B8hAZCLKdCS-fIrGZl",
-          "ItemFocusAnim-grey": "_25oYhp1kwf6zZ5vtnsQBgc",
-          "ItemFocusAnim-translucent-white-10": "_12q-BgpP8S8I4o8Y7tVgP5",
-          "ItemFocusAnim-translucent-white-20": "LBhH9gPpgXf2pY0_Lc3Al",
-          "ItemFocusAnimBorder-darkGrey": "_3V_jsm1ATEfbvpDr6TIw3R",
-          "ItemFocusAnim-green": "_1CWlcSJ0K4nB9z9UY1GJO7",
-          focusAnimation: "xxHDLCKk6ZGZZcwkKMJ_o",
-          hoverAnimation: "_1JpeZ-3CBjNXMpN8RezwCI",
         };
       },
-      4452: (m) => {
-        m.exports = {
+      4452: (d) => {
+        d.exports = {
           "duration-app-launch": "800ms",
           new_games_color: "#34f3fe",
           used_games_color: "#cc6670",
@@ -537,18 +529,88 @@
           ViewPageButton: "g4FuYY6kNOhx6ps41n66o",
           Description: "_3ZFqletUdCzkvW-BpBfk0",
           OtherYearLink: "_3_I-YXo6WE2pSgpSqOe90G",
-          BackgroundAnimation: "pim2eKmSTb2NQIYFR8-kO",
-          "ItemFocusAnim-darkerGrey-nocolor": "_34ksdmLRP6M-DL55A02DbT",
-          "ItemFocusAnim-darkerGrey": "_1rk5lOTR37WlC5N5CRPD_3",
-          "ItemFocusAnim-darkGreySettings": "_3fTyTKz8tIlcCsQ-iKdny7",
-          "ItemFocusAnim-darkGrey": "_1hxhmw8W2ifnYr2qLY4uPy",
-          "ItemFocusAnim-grey": "_3O7xVUyXHUO3jznnaVQkCj",
-          "ItemFocusAnim-translucent-white-10": "_3cPKti68OjsijubFhK8nJh",
-          "ItemFocusAnim-translucent-white-20": "_2WYaf97De-ZJ0mFANrqtDV",
-          "ItemFocusAnimBorder-darkGrey": "_2WH9L3RX3P6NaqBc2WQPlc",
-          "ItemFocusAnim-green": "_3YKGX14tVZ6u6O9dDCD9Sb",
-          focusAnimation: "_16qKuIfVUjk7_3Q-w67mSd",
-          hoverAnimation: "_2uOutcDfkb2CPTKk4_5i7l",
+        };
+      },
+      90281: (d) => {
+        d.exports = {
+          "duration-app-launch": "800ms",
+          new_games_color: "#34f3fe",
+          used_games_color: "#cc6670",
+          old_games_color: "#f4d760",
+          pie_windows: "#d67070",
+          pie_linux: "#aa3db4",
+          pie_deck: "#3898b0",
+          pie_mac: "#46ab46",
+          pie_vr: "#c7b84e",
+          topApp_0: "#d67070",
+          topApp_1: "#70d670",
+          topApp_2: "#683db4",
+          topApp_3: "#3898b0",
+          topApp_4: "#ab4646",
+          topApp_5: "#46ab46",
+          topApp_6: "#3d138a",
+          topApp_7: "#0e6e86",
+          monthOthersColor: "#7d98aa",
+          chartAccentColor: "#fff",
+          chartAccentColorAlt: "#1a9ffe",
+          ImagesCtn: "_3qfrEV4P5n9CJA4fb67Ivk",
+          scaleBackground: "_1asdXTPODzbO-2QXQO6WAH",
+          SingleGame: "_3JNzDk8F1B_qfLvLEbGF0w",
+          ImageTint: "_3MysN90Bv6ZGMqE-53bTjk",
+          Section: "_1nMgdrh3b7SnNqAuCUSd5B",
+          LongestStreakBgImage: "_1Qowl03yseKqKcs2EJ9R5B",
+          StreakSizeFullBar: "_2vD9i17C3uyA2E-Lc5ZD1p",
+          Tab: "SZ0_9YmipDQwyGOG0_Lyo",
+          UserName: "_24R8ZXGY7hQ-Ks8ohHHsAg",
+          ConclusionName: "_3BsoOI8x1uO1St_NhhCDER",
+          SummaryCtnShadow: "_3aYoqZ-kU1IC4ofgURpf8Z",
+          GridItem: "_2NJAVHR6X8vgcPy_GfrSaQ",
+          BackgroundImage: "ofddh0rXpDM-xmXZBuqwo",
+          FriendCtn: "_2uK59bPxX5xKInWVyU0-14",
+          TopGameBlockContainer: "hEBeg6-TyTxrg1mstm3aC",
+          BackgroundImageFull: "kzZidZh6aYGn3bn_WKn9y",
+          OddGradient: "nyhJZNdc2qDfObTqbg5_V",
+          EvenGradient: "_1ilWtwoOsjkBpHG0P161l5",
+          TopMostGame: "_30VoxC11Evp39uKXKaJIk5",
+          GamePlayDetails: "_1nlVKI0xEqZCCxnONysiPG",
+          PlatformChartsCtn: "_3jQEyHHejM_PGp5oGTQiU6",
+          gradient: "_1a2vqCFwrlIP5b099t6GB2",
+          TopHonorsSection: "_2GauVFqXt-1xtlxH5bafrF",
+          SectionDesc: "BzafxDuUuwRUd-EbKhPS1",
+          IconAchievement: "_100QTztjCgQ6Ec1GG1x6kH",
+          IconGamesPlayed: "_2reoH-63NnzcVazXA6yWz2",
+          IconStreak: "_3PLNtoeyKHF-LlbCOnU3PX",
+          PlayBehaviorContainer: "le8GHD3i0ZbMMfhEaN3Z_",
+          ProgressBarFilled: "_1PRouV1B3pFdJFb922rA17",
+          ProgressBarFilledGradient: "_3zxg0_a4VpWGIvPKu4MGxL",
+          GameNewnessTitle: "_3SOhyodTjBF2shwNmCvXjc",
+          NewActive: "_3zs_8IKbGbN6NQO0_ip-iI",
+          DataBoxArrow: "_3IsVB9M_J54G5wcgTcABtK",
+          Background: "jd1jSGBDgPIOiLo-0UL2t",
+          UserData: "_2DStrlh-5vNQokJuDrvYYv",
+          DataBox: "_1jKidlXls-ShFDPsJszsID",
+          SteamData: "_1K1a5UW5LDDvNuaAOAg2oH",
+          Border: "U1_r2xoaXkwmeMcK-bE4S",
+          PercentageLabel: "Usvr16pFedAPpc1T1WImS",
+          Color: "uMFwfqH-LCnjuu2-K-WAw",
+          PercentageDescriptionLabel: "_1qQag4e-w9Uvky-e5b7C00",
+          UsedActive: "ylQoO4yC7rFohZbK7-8GN",
+          OldActive: "_1PHZ7uTA_a7irFg0tx4wnw",
+          AllGamesBGImage: "_2XCB2VMS4Zp4noju8hRoAW",
+          SeeRewindButton: "aeg2cQEW3bbblSjU_Vhle",
+          MMFrame: "WOL99d-O5uORA7bp71sgN",
+          MMOverride: "_2Wj6Fwcc2clxtYsmggPoBa",
+          Header: "_1hHDYVXh8ungX8yBXqNcat",
+          YearSubtitle: "_1xnYDYiJsksgxN-GB9fHRP",
+          ReplayLogo: "jongsCRlAaNtmFJRpZff_",
+          ReplayLogoAccent: "_1KxCtZOpQbsoSziZ-qP8qc",
+          Hashtag: "_2RFzUFstcUTJcUP_sN1DcS",
+          Avatar: "_1Mg9Utab_OyDLSw5C3l5tx",
+          DataBlock: "fzOKfZTBSTLP3bDjK2B8n",
+          PersonaName: "iZ3wg9DR-v5dEFzVF9zOb",
+          ViewPageButton: "_2JO64VYmQchU6JCuRgrPXE",
+          Description: "_2fAruegE1HEEZAQmW9eRN6",
+          OtherYearLink: "_8ITEbBmyY2eAFhbFfw2Iv",
         };
       },
     },

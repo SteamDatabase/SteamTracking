@@ -10,22 +10,9 @@
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            _(this, "reactNodes", []);
-          }
+          reactNodes = [];
           AppendText(_, _ = !1) {
             _.length &&
               (_
@@ -50,9 +37,9 @@
           }
         }
         class _ {
+          m_decoratedAccumulator;
           constructor(_) {
-            _(this, "m_decoratedAccumulator"),
-              (0, _._)(_, "decorated accumulator cannot be null"),
+            (0, _._)(_, "decorated accumulator cannot be null"),
               (this.m_decoratedAccumulator = _);
           }
           AppendText(_, _ = !1) {
@@ -104,11 +91,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _;
-          const _ =
-            (_ = _ == null ? void 0 : _.jsondata) == null
-              ? void 0
-              : _.read_more_link;
+          const _ = _?.jsondata?.read_more_link;
           if (!_) return;
           const _ = (0, _._)(_).toLocaleLowerCase();
           return _ ? [_] : void 0;
@@ -168,24 +151,13 @@
           _ = 1,
           _ = 2,
           _ = 3;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         class _ {
+          m_fnAccumulatorFactory;
+          m_dictComponents;
           constructor(_, _) {
-            _(this, "m_fnAccumulatorFactory"),
-              _(this, "m_dictComponents"),
-              _ instanceof Map
-                ? (this.m_dictComponents = _)
-                : (this.m_dictComponents = new Map(Object.entries(_))),
+            _ instanceof Map
+              ? (this.m_dictComponents = _)
+              : (this.m_dictComponents = new Map(Object.entries(_))),
               (this.m_fnAccumulatorFactory = _);
           }
           Parse(_, _, _ = !0) {
@@ -197,10 +169,7 @@
             const _ = [],
               _ = () => (_.length < 1 ? void 0 : _[_.length - 1]),
               _ = this.m_dictComponents,
-              _ = (_) => {
-                var _;
-                return !!(_.tag && (_ = _.get(_.tag)) != null && _.autocloses);
-              };
+              _ = (_) => !!(_.tag && _.get(_.tag)?.autocloses);
             let _ = !1,
               _ = !0;
             const _ = (_, _) => {
@@ -230,7 +199,6 @@
             };
             for (
               _.forEach((_, _) => {
-                var _, _;
                 if (_.type == _) {
                   const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
                   _.AppendText(_, _), (_ = !1);
@@ -253,7 +221,7 @@
                     }),
                       (_ = this.m_fnAccumulatorFactory(_)),
                       (_ = !!_.skipInternalNewline),
-                      (_ = (_ = _.allowWrapTextForCopying) != null ? _ : !1);
+                      (_ = _.allowWrapTextForCopying ?? !1);
                   }
                 } else if (_.type == _) {
                   let _ = _.text.toLowerCase();
@@ -261,7 +229,7 @@
                     const _ = _.pop();
                     _(_, _.node);
                   }
-                  if (((_ = _()) == null ? void 0 : _.node.tag) == _) {
+                  if (_()?.node.tag == _) {
                     const _ = _.pop();
                     _(_, _);
                   } else _.AppendText("[/" + _.text + "]", _.length == 0);
@@ -277,7 +245,7 @@
         }
         function _(_, _, _ = !1) {
           let _ = "[" + _;
-          _ != null && _[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
+          _?.[""] && (_ += `=${_ ? "" + _[""] : _("" + _[""])}`);
           for (const _ in _) _ !== "" && (_ += ` ${_(_)}=${_("" + _[_])}`);
           return (_ += "]"), _;
         }
@@ -326,18 +294,16 @@
           };
         }
         function _(_) {
-          var _;
           let _ = "";
           return (
             _.type == _ ? (_ = "[/") : _.type == _ && (_ = "["),
             {
               type: _,
-              text: _ + ((_ = _.text) != null ? _ : ""),
+              text: _ + (_.text ?? ""),
             }
           );
         }
         function _(_, _) {
-          var _, _, _;
           const _ = [];
           let _ = {
               type: _,
@@ -360,13 +326,8 @@
                 else if (_ == "[" && !_) (_ = _(_, _(_), _)), (_ = !0);
                 else if (_ == "]" && !_) {
                   const _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse",
-                    _ =
-                      _.type == _ &&
-                      ((_ = _.text) == null ? void 0 : _.toLocaleLowerCase()) ==
-                        "noparse";
+                      _.type == _ && _.text?.toLocaleLowerCase() == "noparse",
+                    _ = _.type == _ && _.text?.toLocaleLowerCase() == "noparse";
                   _ || (_ && !_)
                     ? ((_ = _(_)), (_.text += _))
                     : _
@@ -394,7 +355,7 @@
                 ? _.push(_(_))
                 : _.push({
                     type: _.type,
-                    text: (_ = _.text) != null ? _ : "",
+                    text: _.text ?? "",
                   })),
             _
           );
@@ -465,22 +426,11 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         class _ extends _._ {
+          m_renderingLanguage;
           constructor(_, _, _) {
-            super(_, _ != null ? _ : () => new _._()),
-              _(this, "m_renderingLanguage"),
+            super(_, _ ?? (() => new _._())),
               (this.m_renderingLanguage =
                 typeof _ == "string" ? (0, _.sfN)(_) : _);
           }
@@ -553,11 +503,10 @@
           Type: _.DynamicLink_Type,
         };
         function _(_) {
-          var _;
           return (0, _.jsx)("img", {
             className: _.DynamicLink_Preview,
             src: _.strURL || void 0,
-            alt: (_ = _.strAlt) != null ? _ : "",
+            alt: _.strAlt ?? "",
           });
         }
         function _(_) {
@@ -640,19 +589,10 @@
           return {
             queryKey: _(_),
             queryFn: async () => {
-              var _, _, _;
               const _ = await _({
                   youtubevideoids: _,
                 }),
-                _ =
-                  (_ =
-                    (_ = _.youtube) == null
-                      ? void 0
-                      : _.find((_) => _.videoid == _)) != null
-                    ? _
-                    : (_ = _.youtube) == null
-                      ? void 0
-                      : _[0];
+                _ = _.youtube?.find((_) => _.videoid == _) ?? _.youtube?.[0];
               if (!_) throw new Error(`no metadata for youtube video ${_}`);
               return {
                 ..._,
@@ -675,19 +615,12 @@
           return {
             queryKey: _(_),
             queryFn: async () => {
-              var _, _, _;
               const _ = await _({
                   sharedfileids: _,
                 }),
                 _ =
-                  (_ =
-                    (_ = _.sharedfiles) == null
-                      ? void 0
-                      : _.find((_) => _.sharedfileid == _)) != null
-                    ? _
-                    : (_ = _.sharedfiles) == null
-                      ? void 0
-                      : _[0];
+                  _.sharedfiles?.find((_) => _.sharedfileid == _) ??
+                  _.sharedfiles?.[0];
               if (!_) throw new Error(`no metadata for shared file ${_}`);
               return {
                 ..._,
@@ -743,7 +676,6 @@
               );
         }
         function _(_) {
-          var _, _, _;
           const {
               videoID: _,
               bShowVideoImmediately: _,
@@ -754,12 +686,9 @@
             [_, _] = (0, _.useState)(!_),
             { data: _, isSuccess: _ } = (0, _._)(_, _);
           if (_) {
-            const _ =
-                (_ = _ == null ? void 0 : _.title) != null
-                  ? _
-                  : (0, _._)("#Loading"),
-              _ = (_ = _ == null ? void 0 : _.views) != null ? _ : "0",
-              _ = (_ = _ == null ? void 0 : _.description) != null ? _ : "",
+            const _ = _?.title ?? (0, _._)("#Loading"),
+              _ = _?.views ?? "0",
+              _ = _?.description ?? "",
               _ = () => _(!1),
               _ = (_) => {
                 (_.key == "Enter" || _.key == " ") && (_.preventDefault(), _());
@@ -814,7 +743,7 @@
                   }),
                   (0, _.jsx)(_._, {
                     video: _,
-                    autoplay: _ != null ? _ : !1,
+                    autoplay: _ ?? !1,
                     startSeconds: _,
                     controls: !0,
                     playsInline: !0,
@@ -828,13 +757,13 @@
         function _(_, _) {
           if (_._.EREALM === _._.k_ESteamRealmChina) return null;
           const _ = (0, _._)(_);
-          return (_ == null ? void 0 : _.strVideoID) !== void 0
+          return _?.strVideoID !== void 0
             ? (0, _.jsx)(_, {
                 videoID: _.strVideoID,
                 nStartSeconds: _.nStartSeconds,
                 bShowVideoImmediately: !1,
               })
-            : (0, _._)(_, _ == null ? void 0 : _.event);
+            : (0, _._)(_, _?.event);
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -998,17 +927,6 @@
           _ = 2,
           _ = 3,
           _ = 4;
-        var _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
         function _(_) {
           return "unknown EVirtualItemRewardEvent ( " + _ + " )";
         }
@@ -1045,13 +963,15 @@
         function _(_) {
           return "unknown ESummerSale2021StoryChoice ( " + _ + " )";
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.communityitemid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [5], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1140,16 +1060,16 @@
           getClassName() {
             return "CQuest_CommunityItem";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.attributeid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1207,16 +1127,16 @@
           getClassName() {
             return "CQuest_CommunityItem_Attribute";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.filter_appids || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1272,16 +1192,16 @@
           getClassName() {
             return "CQuest_GetCommunityInventory_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.items || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1335,16 +1255,16 @@
           getClassName() {
             return "CQuest_GetCommunityInventory_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1417,16 +1337,16 @@
           getClassName() {
             return "CQuest_GetCommunityItemDefinitions_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_definitions || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1480,16 +1400,16 @@
           getClassName() {
             return "CQuest_GetCommunityItemDefinitions_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.item_type || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1647,16 +1567,16 @@
           getClassName() {
             return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.appid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1719,9 +1639,7 @@
           getClassName() {
             return "CQuest_ActivateProfileModifierItem_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -1763,13 +1681,15 @@
             return "CQuest_ActivateProfileModifierItem_Response";
           }
         }
-        const _ = class _ extends _.Message {
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.timestamp_start || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1829,16 +1749,16 @@
           getClassName() {
             return "CQuest_GetNumTradingCardsEarned_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.num_trading_cards || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1891,16 +1811,16 @@
           getClassName() {
             return "CQuest_GetNumTradingCardsEarned_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eventid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -1958,16 +1878,16 @@
           getClassName() {
             return "CQuest_VirtualItemRewardDefinition_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eventid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2095,16 +2015,16 @@
           getClassName() {
             return "CVirtualItemRewardDefinition";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.rewards || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [1], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2158,16 +2078,16 @@
           getClassName() {
             return "CQuest_VirtualItemRewardDefinition_Response";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
-        const _ = class _ extends _.Message {
+        }
+        class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
               _.prototype.eventid || _._(_._()),
               _.Message.initialize(this, _, 0, -1, [2], null);
           }
+          static sm_m;
+          static sm_mbf;
           static M() {
             return (
               _.sm_m ||
@@ -2231,9 +2151,7 @@
           getClassName() {
             return "CQuest_SetVirtualItemRewardDefinition_Request";
           }
-        };
-        _(_, "sm_m"), _(_, "sm_mbf");
-        let _ = _;
+        }
         function _(_) {
           return (
             "unknown CQuest_SetVirtualItemRewardDefinition_Request_EActionType ( " +
@@ -2400,7 +2318,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_, _) {
-          var _, _, _;
           switch (_.preference_state) {
             case _._._:
             case _._._:
@@ -2411,15 +2328,11 @@
             default:
               switch (_) {
                 case "youtube":
-                  return (_ = _.third_party_content) == null
-                    ? void 0
-                    : _.youtube;
+                  return _.third_party_content?.youtube;
                 case "vimeo":
-                  return (_ = _.third_party_content) == null ? void 0 : _.vimeo;
+                  return _.third_party_content?.vimeo;
                 case "sketchfab":
-                  return (_ = _.third_party_content) == null
-                    ? void 0
-                    : _.sketchfab;
+                  return _.third_party_content?.sketchfab;
                 case "generic":
                   return !1;
               }
@@ -2502,18 +2415,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = Object.defineProperty,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          _ = __webpack_require__("chunkid");
         function _(_) {
           return !(
             (!(0, _._)(_.sPoster) && !(0, _._)(_.sPoster)) ||
@@ -2522,11 +2424,9 @@
             (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
           );
         }
-        const _ = class _ {
-          constructor() {
-            _(this, "m_bUserHasVolumePreference", !1),
-              _(this, "m_flVolumePreference", 0);
-          }
+        class _ {
+          m_bUserHasVolumePreference = !1;
+          m_flVolumePreference = 0;
           BUserHasVolumePreference() {
             return this.m_bUserHasVolumePreference;
           }
@@ -2540,12 +2440,11 @@
           BVolumePreferenceMuted() {
             return this.m_flVolumePreference < 0.001;
           }
+          static s_Singleton;
           static Get() {
             return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
           }
-        };
-        _(_, "s_Singleton");
-        let _ = _;
+        }
         const _ = (0, _.forwardRef)(function (_, _) {
           const {
               video: _,
@@ -2559,13 +2458,13 @@
               onClick: _,
               altText: _,
             } = _,
-            _ = (0, _.useMemo)(() => {
-              var _;
-              return !!(
-                (_ = _.rgVideoTracks) != null &&
-                _.some((_) => _.sKind == "subtitles" || _.sKind == "captions")
-              );
-            }, [_.rgVideoTracks]),
+            _ = (0, _.useMemo)(
+              () =>
+                !!_.rgVideoTracks?.some(
+                  (_) => _.sKind == "subtitles" || _.sKind == "captions",
+                ),
+              [_.rgVideoTracks],
+            ),
             [_, _] = _.useState(!1),
             _ = _();
           if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
@@ -3172,7 +3071,7 @@
               : _ === void 0 ||
                   (typeof _ == "string" && _.length > 0 && _[0] == "#")
                 ? (0, _.jsx)("a", {
-                    href: _ != null ? _ : null,
+                    href: _ ?? null,
                     _: _,
                     children: _.children,
                   })
@@ -3202,7 +3101,7 @@
         }
         const _ = (_) => {
           const { href: _, ..._ } = _;
-          let _ = (0, _._)(_ != null ? _ : ""),
+          let _ = (0, _._)(_ ?? ""),
             _;
           (0, _._)(_)
             ? ((_ =
@@ -3409,7 +3308,6 @@
           }
         }
         function _(_) {
-          var _;
           const _ = !!_(_.args, "expanded"),
             [_, _] = _.useState(_),
             _ = _(_.args, "title"),
@@ -3419,7 +3317,7 @@
           return (0, _.jsxs)("div", {
             className: (0, _._)({
               [_().ExpandSectionBlock]: !0,
-              [(_ = _.style) != null ? _ : ""]: _.style != null,
+              [_.style ?? ""]: _.style != null,
               [_().ExpandSectionExpanded]: _,
               [_().ExpandSectionCollapsed]: !_,
               BBCodeExpanded: _,
@@ -3448,13 +3346,12 @@
           });
         }
         function _(_) {
-          var _, _, _, _, _;
           const _ = _(_.args, "title"),
-            _ = (_ = _(_.args, "start")) != null ? _ : _(_.args, "datetime"),
-            _ = (_ = _(_.args, "end")) != null ? _ : _(_.args, "datetime"),
-            _ = (_ = _(_.args, "body")) != null ? _ : null,
-            _ = (_ = _(_.args, "location")) != null ? _ : null,
-            _ = (_ = _(_.args, "id")) != null ? _ : "",
+            _ = _(_.args, "start") ?? _(_.args, "datetime"),
+            _ = _(_.args, "end") ?? _(_.args, "datetime"),
+            _ = _(_.args, "body") ?? null,
+            _ = _(_.args, "location") ?? null,
+            _ = _(_.args, "id") ?? "",
             _ = new Date(_),
             _ = _.getUTCFullYear(),
             _ = ("0" + (_.getUTCMonth() + 1)).slice(-2),
@@ -3675,33 +3572,22 @@
           return !!_(_);
         }
         function _(_) {
-          const _ =
-            (_ == null ? void 0 : _.length) < _
-              ? void 0
-              : _.exec(_) || _.exec(_) || _.exec(_);
-          return _ == null ? void 0 : _[1];
+          return (
+            _?.length < _ ? void 0 : _.exec(_) || _.exec(_) || _.exec(_)
+          )?.[1];
+        }
+        function _(_) {
+          return _.exec(_)?.[1];
         }
         function _(_) {
           const _ = _.exec(_);
-          return _ == null ? void 0 : _[1];
-        }
-        function _(_) {
-          const _ = _.exec(_);
-          if (
-            !(
-              (_ != null && _[1]) ||
-              (_ != null && _[2]) ||
-              (_ != null && _[3]) ||
-              (_ != null && _[4])
-            )
-          )
-            return;
-          if (_ != null && _[4]) return parseInt(_ == null ? void 0 : _[4]);
+          if (!(_?.[1] || _?.[2] || _?.[3] || _?.[4])) return;
+          if (_?.[4]) return parseInt(_?.[4]);
           let _ = 0;
           return (
-            _ != null && _[1] && (_ += 3600 * parseInt(_[1])),
-            _ != null && _[2] && (_ += 60 * parseInt(_[2])),
-            _ != null && _[3] && (_ += parseInt(_[3])),
+            _?.[1] && (_ += 3600 * parseInt(_[1])),
+            _?.[2] && (_ += 60 * parseInt(_[2])),
+            _?.[3] && (_ += parseInt(_[3])),
             _
           );
         }
@@ -3744,19 +3630,17 @@
             [_, _] = useState(null),
             [_, _] = _(_, _, _);
           useEffect(() => {
-            (_ == null ? void 0 : _.GetAppType()) ===
-              EStoreAppType.k_EStoreAppType_Demo && _(_.GetParentAppID());
+            _?.GetAppType() === EStoreAppType.k_EStoreAppType_Demo &&
+              _(_.GetParentAppID());
           }, [_]);
-          let _ =
-            _ != null && _.GetShortDescription()
-              ? StripBBCodeTags(_.GetShortDescription())
-              : "";
+          let _ = _?.GetShortDescription()
+            ? StripBBCodeTags(_.GetShortDescription())
+            : "";
           (!_ || _.length === 0) &&
             _ &&
-            (_ =
-              _ != null && _.GetShortDescription()
-                ? StripBBCodeTags(_.GetShortDescription())
-                : "");
+            (_ = _?.GetShortDescription()
+              ? StripBBCodeTags(_.GetShortDescription())
+              : "");
           const _ = _ == _ && (!_ || _ == _);
           return [_, _];
         }
@@ -3822,13 +3706,9 @@
                   _._.Get()
                     .QueueStoreItemRequest(_, _, _)
                     .then((_) => {
-                      !(_ != null && _.token.reason) &&
-                        _.current === _ &&
-                        _(_ == _._),
-                        _();
+                      !_?.token.reason && _.current === _ && _(_ == _._), _();
                     })),
-                () =>
-                  _ == null ? void 0 : _.cancel("useStoreItemCache: unmounting")
+                () => _?.cancel("useStoreItemCache: unmounting")
               );
             }, [
               _,
@@ -3874,15 +3754,14 @@
           return _(_, _._._, _, _);
         }
         function _(_, _, _) {
-          var _;
           const [_, _] = _(_, _, _);
           let _;
-          (_ == null ? void 0 : _.GetStoreItemType()) == _._._ &&
-            !((_ = _.GetAssets()) != null && _.GetHeaderURL()) &&
-            (_ == null ? void 0 : _.GetIncludedAppIDs().length) == 1 &&
+          _?.GetStoreItemType() == _._._ &&
+            !_.GetAssets()?.GetHeaderURL() &&
+            _?.GetIncludedAppIDs().length == 1 &&
             (_ = _.GetIncludedAppIDs()[0]);
           const [_, _] = _(_, _);
-          return _ && _ != null && _.BIsVisible() ? [_, _] : [_, _];
+          return _ && _?.BIsVisible() ? [_, _] : [_, _];
         }
         function _(_, _, _, _) {
           const _ = (0, _._)(),
@@ -4022,9 +3901,7 @@
         }
         function _(_) {
           const { text: _, languageOverride: _ } = _,
-            [_] = (0, _.useState)(
-              new _._(_(), _, _ != null ? _ : _._.LANGUAGE),
-            );
+            [_] = (0, _.useState)(new _._(_(), _, _ ?? _._.LANGUAGE));
           return (0, _.jsx)(_.Fragment, {
             children: _.ParseBBCode(_, {}),
           });
@@ -4111,7 +3988,6 @@
         const _ = 1576780700;
         let _ = class extends _.Component {
           OnEmoticonClick(_) {
-            var _;
             const {
                 emoticonStore: _,
                 strFlairGroupID: _,
@@ -4136,11 +4012,7 @@
                     onRoomEffectSelected: _,
                     onStickerSelected: _,
                   }))
-                : _ &&
-                    _.flair_list &&
-                    ((_ = _.GetFlairListByGroupID(_)) == null
-                      ? void 0
-                      : _.length) > 0
+                : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
                   ? (_ = (0, _.jsx)(_._, {
                       emoticonStore: this.props.emoticonStore,
                       strFlairGroupID: this.props.strFlairGroupID,
@@ -4474,15 +4346,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -4491,8 +4354,7 @@
             )
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
-          },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _);
+          };
         const _ = 1e3;
         function _(_) {
           return _.recent_emoticons;
@@ -4603,9 +4465,9 @@
           );
         });
         let _ = class extends _.Component {
+          m_disposeEmoticonStore;
           constructor(_) {
             super(_),
-              _(this, "m_disposeEmoticonStore"),
               (this.state = {
                 strSearchText: "",
               });
@@ -4694,9 +4556,9 @@
         };
         _ = _([_._], _);
         class _ extends _.Component {
+          m_disposeEmoticonStore;
           constructor(_) {
             super(_),
-              _(this, "m_disposeEmoticonStore"),
               (this.state = {
                 strSearchText: "",
               });
@@ -4735,9 +4597,9 @@
           }
         }
         class _ extends _.Component {
+          m_disposeEmoticonStore;
           constructor(_) {
             super(_),
-              _(this, "m_disposeEmoticonStore"),
               (this.state = {
                 strSearchText: "",
               });
@@ -4776,12 +4638,9 @@
           }
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const {
                 store: _,
@@ -4843,12 +4702,9 @@
           }
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
               { filter: _ } = this.state,
@@ -4906,12 +4762,9 @@
           });
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const { store: _, onItemSelect: _ } = this.props,
               { filter: _ } = this.state,
@@ -4962,12 +4815,9 @@
           }
         }
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
               { filter: _ } = this.state,
@@ -5019,12 +4869,9 @@
           }
         }
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
               { filter: _ } = this.state,
@@ -5081,12 +4928,9 @@
         };
         _ = _([_._], _);
         let _ = class extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                filter: "",
-              });
-          }
+          state = {
+            filter: "",
+          };
           render() {
             const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
               { filter: _ } = this.state;
@@ -5133,13 +4977,10 @@
           });
         };
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                showHover: !1,
-              }),
-              _(this, "m_ref", _.createRef());
-          }
+          state = {
+            showHover: !1,
+          };
+          m_ref = _.createRef();
           render() {
             const { sticker: _, className: _, ..._ } = this.props,
               _ = _(_._.COMMUNITY_CDN_URL, _.name);
@@ -5189,7 +5030,7 @@
           return (0, _.jsx)(_._, {
             target: _,
             title: _,
-            subtitle: _ == null ? void 0 : _.GetName(),
+            subtitle: _?.GetName(),
             children: (0, _.jsx)("img", {
               src: _(_._.COMMUNITY_CDN_URL, _),
               className: _().StickerHoverSticker,
@@ -5197,13 +5038,10 @@
           });
         });
         class _ extends _.Component {
-          constructor() {
-            super(...arguments),
-              _(this, "state", {
-                showHover: !1,
-              }),
-              _(this, "m_ref", _.createRef());
-          }
+          state = {
+            showHover: !1,
+          };
+          m_ref = _.createRef();
           render() {
             const {
                 effect: _,
@@ -5256,7 +5094,7 @@
           return (0, _.jsx)(_._, {
             target: _,
             title: _,
-            subtitle: _ == null ? void 0 : _.GetName(),
+            subtitle: _?.GetName(),
             children: (0, _.jsx)("div", {
               className: _().EffectHoverEffect,
               children: _.renderEffectIcon(),
@@ -5505,7 +5343,6 @@
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { text: _ = "", style: _, children: _ } = _;
@@ -5538,7 +5375,6 @@
             );
         }
         function _(_) {
-          var _;
           let _ = _.cloneContents(),
             _ = "",
             _ = "",
@@ -5592,7 +5428,7 @@
                   (_ += `
 `),
                 (_ || _) && (_ += "		"));
-            let _ = (_ = _.getAttribute("data-copytext")) != null ? _ : "";
+            let _ = _.getAttribute("data-copytext") ?? "";
             _.length == 0
               ? (_ = _.innerText)
               : _ && _.innerText.length > 0
@@ -5741,8 +5577,7 @@
             : jsx(SVG.Settings, {});
         }
         function _(_) {
-          var _;
-          const _ = (_ = _.filled) != null ? _ : !0;
+          const _ = _.filled ?? !0;
           return useInGamepadUI()
             ? _
               ? jsx(GamepadSVG.Star, {})
@@ -5750,8 +5585,7 @@
             : jsx(SVG.Star, {});
         }
         function _(_) {
-          var _;
-          const _ = (_ = _.filled) != null ? _ : !0;
+          const _ = _.filled ?? !0;
           return useInGamepadUI()
             ? _
               ? jsx(GamepadSVG.Heart, {})
@@ -5914,7 +5748,7 @@
             }, [_, _, _]),
             _ = _.useCallback(
               (_) => {
-                _ == null || _(_, _[_], _);
+                _?.(_, _[_], _);
                 const _ = _ + 1;
                 _ >= _.length && _ && _(_), _ < _.length && _(_);
               },
@@ -5933,7 +5767,7 @@
             ),
             _.useEffect(() => {
               const _ = _.current;
-              _ != null && _.complete && _.naturalWidth == 0 && (_.src = _.src);
+              _?.complete && _.naturalWidth == 0 && (_.src = _.src);
             }, []),
             (0, _.jsx)(
               "img",
@@ -5970,15 +5804,6 @@
           _ = __webpack_require__("chunkid"),
           _ = Object.defineProperty,
           _ = Object.getOwnPropertyDescriptor,
-          _ = (_, _, _) =>
-            _ in _
-              ? _(_, _, {
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-                  value: _,
-                })
-              : (_[_] = _),
           _ = (_, _, _, _) => {
             for (
               var _ = _ > 1 ? void 0 : _ ? _(_, _) : _, _ = _.length - 1, _;
@@ -5988,7 +5813,6 @@
               (_ = _[_]) && (_ = (_ ? _(_, _, _) : _(_)) || _);
             return _ && _ && _(_, _, _), _;
           },
-          _ = (_, _, _) => _(_, typeof _ != "symbol" ? _ + "" : _, _),
           _ = ((_) => (
             (_[(_.NotLoaded = 0)] = "NotLoaded"),
             (_[(_.Loading = 1)] = "Loading"),
@@ -5998,7 +5822,6 @@
         let _ = 0,
           _ = [];
         function _(_) {
-          var _;
           if (_ == 2) {
             _ && _();
             return;
@@ -6007,7 +5830,7 @@
             let _ = document.createElement("script");
             _.src = "https://www.youtube.com/iframe_api";
             let _ = document.getElementsByTagName("script")[0];
-            (_ = _.parentNode) == null || _.insertBefore(_, _),
+            _.parentNode?.insertBefore(_, _),
               (window.onYouTubeIframeAPIReady = _);
           }
           _ && (_.includes(_) || _.push(_));
@@ -6027,12 +5850,13 @@
           _ = [];
         }
         const _ = class _ extends _.Component {
+          m_strPlayerID = "";
+          m_player = null;
+          m_playerContainer = null;
+          m_bPlayerReady = !1;
+          static s_nPlayerIndex = 0;
           constructor(_) {
             super(_),
-              _(this, "m_strPlayerID", ""),
-              _(this, "m_player", null),
-              _(this, "m_playerContainer", null),
-              _(this, "m_bPlayerReady", !1),
               (this.m_strPlayerID = "YoutubePlayer_" + _.s_nPlayerIndex++),
               (this.state = {
                 bYoutubeLoaded: !1,
@@ -6122,7 +5946,6 @@
             (this.m_bPlayerReady = !1), (this.m_player = new _.Player(_, _));
           }
           OnPlayerReady(_) {
-            var _, _;
             if (
               ((this.m_bPlayerReady = !0),
               this.props.onVideoInfoChanged && this.m_player)
@@ -6140,12 +5963,10 @@
             }
             this.props.width &&
               this.props.height &&
-              ((_ = this.m_player) == null ||
-                _.setSize(this.props.width, this.props.height)),
+              this.m_player?.setSize(this.props.width, this.props.height),
               this.props.forcePause
                 ? this.ApplyForcePause()
-                : this.props.autoplay &&
-                  ((_ = this.m_player) == null || _.playVideo()),
+                : this.props.autoplay && this.m_player?.playVideo(),
               this.props.onPlayerReady && this.props.onPlayerReady();
           }
           OnPlayerStateChange(_) {
@@ -6201,8 +6022,7 @@
             });
           }
         };
-        _(_, "s_nPlayerIndex", 0),
-          _([_._], _.prototype, "BindPlayerContainer", 1),
+        _([_._], _.prototype, "BindPlayerContainer", 1),
           _([_._], _.prototype, "OnYoutubeScriptsReady", 1),
           _([_._], _.prototype, "CreatePlayer", 1),
           _([_._], _.prototype, "OnPlayerReady", 1),
@@ -6240,10 +6060,7 @@
           const { video: _, autopause: _, className: _ } = _,
             _ = _.useRef(null),
             _ = _.useRef(null),
-            _ = _.useCallback(() => {
-              var _;
-              return (_ = _.current) == null ? void 0 : _.pauseVideo();
-            }, []),
+            _ = _.useCallback(() => _.current?.pauseVideo(), []),
             _ = (0, _._)({
               onLeave: _ ? _ : void 0,
             }),
@@ -6451,18 +6268,6 @@
           FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
           FilterInput: "_2l4z-U60lABvd9XWArGjAf",
           AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
-          BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
-          "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
-          "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
-          "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
-          "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
-          "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
-          "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
-          "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
-          "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
-          "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
-          focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
-          hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
         };
       },
       chunkid: (module) => {

@@ -130,7 +130,7 @@
         }
         function _() {
           if (
-            typeof Reflect == "undefined" ||
+            typeof Reflect > "u" ||
             !Reflect.construct ||
             Reflect.construct.sham
           )
@@ -207,7 +207,7 @@
         }
         function _(_) {
           if (
-            (typeof Symbol != "undefined" && _[Symbol.iterator] != null) ||
+            (typeof Symbol < "u" && _[Symbol.iterator] != null) ||
             _["@@iterator"] != null
           )
             return Array.from(_);
@@ -701,7 +701,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           });
         var _ = _(function (_, _) {
             var _ = {}.toString,
-              _ = typeof window != "undefined" ? window.Node : Function;
+              _ = typeof window < "u" ? window.Node : Function;
             _.exports = _ = function (_) {
               var _ = typeof _;
               if (_ != "object") return _;
@@ -4492,7 +4492,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 );
               return [
                 _,
-                (_) => (0, _._)(this, _, _).call(this, _ != null ? _ : _, _),
+                (_) => (0, _._)(this, _, _).call(this, _ ?? _, _),
                 () => (0, _._)(this, _, _).call(this, _, _),
               ];
             }
@@ -4646,7 +4646,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               })
             );
           });
-          if (_ != null && _.error) throw _.error;
+          if (_?.error) throw _.error;
           return _(_());
         }
       },

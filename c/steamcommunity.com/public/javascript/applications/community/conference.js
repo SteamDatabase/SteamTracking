@@ -19,12 +19,11 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            this.m_mapConferences = _._.map();
-          }
+          m_mapConferences = _._.map();
           GetConferenceInfo(_) {
             return this.m_mapConferences.get(_);
           }
+          static s_Singleton;
           static Get() {
             return (
               _.s_Singleton ||
@@ -52,16 +51,8 @@
                   youtubeVideoID: _.youtubeVideoID,
                 };
               this.m_mapConferences.set(_.vanity, _);
-              const _ = await (0, _._)(
-                  _.localized_logo,
-                  _,
-                  _ == null ? void 0 : _.timestamp,
-                ),
-                _ = await (0, _._)(
-                  _.localized_mobile_logo,
-                  _,
-                  _ == null ? void 0 : _.timestamp,
-                );
+              const _ = await (0, _._)(_.localized_logo, _, _?.timestamp),
+                _ = await (0, _._)(_.localized_mobile_logo, _, _?.timestamp);
               this.m_mapConferences.set(_.vanity, {
                 ..._,
                 strLocalizedLogos: typeof _ == "string" ? [_] : _,
@@ -155,9 +146,7 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
-          constructor() {
-            this.m_inFlight = null;
-          }
+          m_inFlight = null;
           async LoadInitialCalendarData(_, _) {
             return (
               this.m_inFlight ||
@@ -176,9 +165,11 @@
             _ && (await _.RegisterCalendarEventsAndModels(_)),
               _.SetFilteredView((_) => !0);
           }
+          static m_singleton;
           static Get() {
             return _.m_singleton || (_.m_singleton = new _()), _.m_singleton;
           }
+          constructor() {}
         }
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -585,7 +576,6 @@
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
-          var _, _;
           const {
               eventModel: _,
               calendarEvent: _,
@@ -599,7 +589,7 @@
             _ = (0, _._)(_.GetAppIDOrReferenceAppID());
           (0, _._)(_);
           const _ = (0, _._)(_);
-          (0, _._)((_ = _.clanInfo) == null ? void 0 : _.clanid);
+          (0, _._)(_.clanInfo?.clanid);
           const _ = (0, _.sfN)(_._.LANGUAGE),
             _ = "capsule",
             [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
@@ -620,7 +610,7 @@
             ),
             _ = (0, _._)(),
             _ = !!(_ && _ && _),
-            _ = (_ = (0, _._)(_ ? void 0 : _, _, _, _, _)) != null ? _ : _,
+            _ = (0, _._)(_ ? void 0 : _, _, _, _, _) ?? _,
             _ = _(_, _),
             _ = (0, _._)(_),
             _ = _()[`EventType${_}`],
@@ -1124,7 +1114,7 @@
             },
             [_, _, _] = (0, _._)(() => [
               Math.max(0, _.nVotesUp - _.nVotesDown),
-              _.GetDiscussionURL(_ == null ? void 0 : _.vanity_url),
+              _.GetDiscussionURL(_?.vanity_url),
               _.nCommentCount,
             ]),
             _ = _(_),

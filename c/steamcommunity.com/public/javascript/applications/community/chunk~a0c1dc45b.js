@@ -281,7 +281,7 @@
               fullmonthname: _ = !1,
               bUseRelativeNames: _ = !0,
               bIncludeDayName: _ = !1,
-            } = _ != null ? _ : {},
+            } = _ ?? {},
             _ = new Date(),
             _ = new Date(_ * 1e3);
           if (_.getFullYear() != _.getFullYear())
@@ -337,9 +337,7 @@
             },
             _ = (0, _._)(),
             _ = {
-              ...((_ == null ? void 0 : _.bForce24HourClock) || _(_[0])
-                ? _
-                : _),
+              ...(_?.bForce24HourClock || _(_[0]) ? _ : _),
               ..._,
             };
           return _.toLocaleTimeString(_, _);
@@ -481,7 +479,7 @@
           _ = _ ? 0 - _ : _;
           const _ = _(_),
             _ = _.fraction.toFixed(2).split(".")[1],
-            _ = _ != null ? _ : !0;
+            _ = _ ?? !0;
           let _ = !_ || _ == "00";
           _ &&
             _.hours == 0 &&
@@ -526,7 +524,7 @@
           const _ = _(_),
             _ = _(_.seconds.toString(), 2, "0"),
             _ = _.fraction.toFixed(2).split(".")[1],
-            _ = _ != null ? _ : !0;
+            _ = _ ?? !0;
           let _ = !_ || _ == "00";
           _ &&
             _.hours == 0 &&

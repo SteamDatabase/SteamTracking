@@ -44,6 +44,7 @@
     "moderation_actions_unlockthread_multiple": "Déverrouiller le sujet (%1$s)",
     "moderation_actions_sustain": "Confirmer la modération",
     "moderation_actions_sustain_multiple": "Confirmer la modération (%1$s)",
+    "moderation_actions_sustain_short": "Confirmer",
     "moderation_actions_suspicious": "Définir comme suspect",
     "moderation_actions_suspicious_multiple": "Définir comme suspect (%1$s)",
     "moderation_actions_unknown": "Indéterminé",
