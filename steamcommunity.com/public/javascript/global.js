@@ -471,6 +471,9 @@ function ReportProfile( steamID )
 		var $DialogHTML = $J( data );
 		$Content.replaceWith( $DialogHTML );
 		$Modal.SetMaxHeight( '850' );
+	}).fail( function () {
+		$Modal.Dismiss();
+		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.' );
 	} );
 }
 
