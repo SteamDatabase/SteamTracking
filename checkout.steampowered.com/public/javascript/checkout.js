@@ -1226,6 +1226,9 @@ function OnAuthenticationFail()
 
 function OnPayPalSuccess( gidTransID )
 {
+		if ( g_bPurchaseComplete === true )
+		return;
+
 		if ( gidTransID && $('transaction_id').value != gidTransID )
 		return;
 
@@ -5505,6 +5508,9 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 {
 	try
 	{
+  	  	if ( g_bPurchaseComplete === true )
+	  	return;
+    
 		var error_text = '';
 
 		if ( sErrorText && sErrorText != '' )
@@ -5684,8 +5690,11 @@ function NukeCartCookie()
 	}
 }
 
+var g_bPurchaseComplete = false;
 function OnPurchaseSuccess( result )
 {
+	g_bPurchaseComplete = true;
+
 	try
 	{
 		if ( g_bIsUpdateBillingInfoForm )
@@ -6247,6 +6256,9 @@ function FinalizeTransaction()
 {
 	var method = $('payment_method');
 		if ( g_bFinalizeTransactionInProgress || g_timeoutPoll )
+		return;
+
+		if ( g_bPurchaseComplete === true )
 		return;
 
 		if ( BStoredCreditCardRequiresSecurityCode( method.value ) && $('security_code_cached').value == '' )
