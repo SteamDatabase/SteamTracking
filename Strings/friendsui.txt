@@ -370,7 +370,6 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGcrE
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -561,7 +560,6 @@ $ORIGIN
 01/01/00
 0123456789
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789abcdef
 0x%llx
 1 Mbps
@@ -1038,7 +1036,6 @@ $ORIGIN
 20CControllerConfigMsg
 20CGetTouchIconDataMsg
 20CHTMLBaseProtoBufMsg
-20CInputLatencyTestMsg
 20CInputMouseMotionMsg
 20CJSMethodCallHandlerI11CHTMLWindowJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI11CHTMLWindowJb9CSmartPtrI18CJSCallbackPromiseEEE
@@ -1198,6 +1195,7 @@ $ORIGIN
 27CMsgProcessInfoNotification
 27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
+27CSetSupportedColorspacesMsg
 27CSharedConnectionController
 27CSteamUIMessagingController
 27ListPanelColumnSelectButton

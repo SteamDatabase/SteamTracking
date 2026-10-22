@@ -2134,7 +2134,7 @@ SDL not built with OpenXR support
 SDL not built with camera support
 SDL offscreen video driver
 SDL revision: %s
-SDL-release-3.4.0-1576-gab5541ec5
+SDL-release-3.4.0-1616-g3b2bc9515
 SDL.app.metadata.copyright
 SDL.app.metadata.creator
 SDL.app.metadata.identifier
@@ -2782,6 +2782,7 @@ SDL_EVENT_WINDOW_SAFE_AREA_CHANGED
 SDL_EVENT_WINDOW_SETTINGS_CHANGED
 SDL_EVENT_WINDOW_SHOWN
 SDL_EnableScreenSaver
+SDL_EncodeURL
 SDL_EndGPUComputePass
 SDL_EndGPUComputePass_REAL
 SDL_EndGPUCopyPass
@@ -3146,6 +3147,7 @@ SDL_GetRenderDrawBlendMode
 SDL_GetRenderDrawColor
 SDL_GetRenderDrawColorFloat
 SDL_GetRenderDriver
+SDL_GetRenderHDRHeadroom
 SDL_GetRenderLogicalPresentation
 SDL_GetRenderLogicalPresentationRect
 SDL_GetRenderMetalCommandEncoder
@@ -3830,6 +3832,7 @@ SDL_SetRenderColorScale
 SDL_SetRenderDrawBlendMode
 SDL_SetRenderDrawColor
 SDL_SetRenderDrawColorFloat
+SDL_SetRenderHDRHeadroom
 SDL_SetRenderLogicalPresentation
 SDL_SetRenderScale
 SDL_SetRenderTarget
@@ -4554,6 +4557,7 @@ VK_ERROR_VALIDATION_FAILED_EXT
 VK_EVENT_RESET
 VK_EVENT_SET
 VK_EXT_debug_utils
+VK_EXT_hdr_metadata
 VK_EXT_headless_surface
 VK_EXT_headless_surface extension is not enabled in the Vulkan instance.
 VK_EXT_swapchain_colorspace
@@ -5593,6 +5597,7 @@ graphics_pipeline
 guide
 handle
 haptic
+headroom
 height
 height * pitch would overflow
 height + 1 would overflow
@@ -5877,6 +5882,7 @@ other color
 out.var.COLOR0
 out.var.SV_Target
 out.var.TEXCOORD0
+output_type
 pa_channel_map_init_auto
 pa_context_connect
 pa_context_disconnect
@@ -6120,7 +6126,6 @@ row-resize
 s-resize
 sampler0
 sampler1
-scRGB_output
 scalbn
 scalbnf
 scale
@@ -6744,6 +6749,7 @@ vkResetDescriptorPool
 vkResetFences
 vkResetFences()
 vkSetDebugUtilsObjectNameEXT
+vkSetHdrMetadataEXT
 vkUnmapMemory
 vkUpdateDescriptorSets
 vkWaitForFences

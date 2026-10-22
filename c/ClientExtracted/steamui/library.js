@@ -329,6 +329,7 @@
             mv5: () => _,
             n4o: () => _,
             nHq: () => _,
+            oBF: () => _,
             oYe: () => _,
             ocM: () => _,
             oez: () => _,
@@ -28711,8 +28712,10 @@
             _: () => _,
             _: () => _,
             _: () => _,
+            _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid");
           const _ = void 0;
           function _(_) {
@@ -28722,7 +28725,52 @@
             _ = window.UserConfig ?? _._,
             _ = window.Config ? () => Promise.resolve() : _._;
           window.Config && Object.assign(_._, window.Config),
-            window.UserConfig && Object.assign(_._, window.UserConfig);
+            window.UserConfig && Object.assign(_._, window.UserConfig),
+            window.WebConfig && Object.assign(_._, window.WebConfig);
+          const _ = {
+            LAUNCHER_TYPE: _.oBF,
+            ON_FRAME: !1,
+            IS_STEAMOS: !1,
+            IN_GAMESCOPE: !1,
+            ON_STEAMOS_CLIENT_BRANCH: !1,
+            FORCED_DISPLAY_MODE: void 0,
+            ARCH: "",
+            IN_CHROMEOS: !1,
+            USE_LONGEST_LOC_STRING: !1,
+            SILENT_STARTUP: !1,
+            DEV_MODE: !1,
+            LOCAL_HOSTNAME: "",
+            PACKAGE_CL: "",
+            CLIENT_SESSION: 0,
+          };
+          function _(_) {
+            return (
+              console.assert(
+                !_ || _.IN_STEAMUI,
+                "SteamUIConfig expected but does not exist in the current context!",
+              ),
+              _.IN_STEAMUI ? _ : void 0
+            );
+          }
+          const _ = _();
+          function _() {
+            return window.WebConfig
+              ? window.WebConfig
+              : {
+                  get WEBSITE_ID() {
+                    return _._.WEBSITE_ID;
+                  },
+                };
+          }
+          function _(_) {
+            return (
+              console.assert(
+                !_ || !_.IN_STEAMUI,
+                "WebConfig expected but does not exist in the current context!",
+              ),
+              _.IN_STEAMUI ? void 0 : _
+            );
+          }
         },
         chunkid: (module, module_exports, __webpack_require__) => {
           "use strict";
@@ -29067,9 +29115,12 @@
             _: () => _,
           });
           var _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid");
           function _() {
-            return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
+            return (
+              _._.IN_CLIENT && (0, _.DOG)((0, _._)()?.LAUNCHER_TYPE ?? _.oBF)
+            );
           }
         },
         chunkid: (module, module_exports, __webpack_require__) => {
@@ -33247,6 +33298,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid");
           const _ = _.createContext({}),
             _ = (_) => {
@@ -33326,25 +33378,25 @@
             return _._.PLATFORM == "linux";
           }
           function _() {
-            return _._.ARCH == "arm64";
+            return (0, _._)()?.ARCH == "arm64";
           }
           function _() {
-            return _._.IN_CHROMEOS;
+            return (0, _._)()?.IN_CHROMEOS ?? !1;
           }
           function _() {
-            return _._.IN_GAMESCOPE && _();
+            return ((0, _._)()?.IN_GAMESCOPE ?? !1) && _();
           }
           function _() {
-            return _._.FORCED_DISPLAY_MODE === "steamdeck";
+            return (0, _._)()?.FORCED_DISPLAY_MODE === "steamdeck";
           }
           function _() {
-            return _._.FORCED_DISPLAY_MODE === "steammachine";
+            return (0, _._)()?.FORCED_DISPLAY_MODE === "steammachine";
           }
           function _(_) {
             return _?.IN_GAMEPADUI;
           }
           function _() {
-            return _._.IS_STEAMOS;
+            return (0, _._)()?.IS_STEAMOS ?? !1;
           }
           async function _(_, _, _) {
             if (_?.config) {
@@ -33412,7 +33464,6 @@
               MEDIA_CDN_COMMUNITY_URL: "",
               MEDIA_CDN_URL: "",
               CLAN_CDN_ASSET_URL: "",
-              COMMUNITY_ASSETS_BASE_URL: "",
               VIDEO_CDN_URL: "",
               COMMUNITY_CDN_URL: "",
               COMMUNITY_CDN_ASSET_URL: "",
@@ -33425,7 +33476,6 @@
               STORE_CHECKOUT_BASE_URL: "",
               LOGIN_BASE_URL: "",
               SUPPORT_BASE_URL: "",
-              STORE_ICON_BASE_URL: "",
               STORE_ITEM_BASE_URL: "",
               IMG_URL: "",
               STEAMTV_BASE_URL: "",
@@ -33433,21 +33483,12 @@
               PARTNER_BASE_URL: "",
               STATS_BASE_URL: "",
               INTERNAL_STATS_BASE_URL: "",
-              BASE_URL_STORE_CDN_ASSETS: "",
               IN_CLIENT: !1,
-              USE_POPUPS: !1,
               IN_MOBILE: !1,
               IN_MOBILE_WEBVIEW: !1,
-              IN_TENFOOT: !1,
               PLATFORM: "",
-              ARCH: "",
               SNR: "",
-              LAUNCHER_TYPE: 0,
               EREALM: 0,
-              IN_CHROMEOS: !1,
-              TESLA: !1,
-              LOCAL_HOSTNAME: "",
-              PACKAGE_CL: "",
               WEBAPI_BASE_URL: "",
               TOKEN_URL: "",
               BUILD_TIMESTAMP: 0,
@@ -33455,15 +33496,6 @@
               FROM_WEB: !1,
               WEBSITE_ID: "Unknown",
               IN_STEAMUI: !1,
-              FORCED_DISPLAY_MODE: void 0,
-              ON_FRAME: !1,
-              IS_STEAMOS: !1,
-              ON_STEAMOS_CLIENT_BRANCH: !1,
-              IN_GAMESCOPE: !1,
-              USE_LONGEST_LOC_STRING: !1,
-              SILENT_STARTUP: !1,
-              DEV_MODE: !1,
-              CLIENT_SESSION: 0,
               NOW: 0,
             },
             _ = {
@@ -33813,6 +33845,7 @@
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid"),
+            _ = __webpack_require__("chunkid"),
             _ = __webpack_require__("chunkid");
           const _ = "steam-dev-configparams";
           function _() {
@@ -33828,7 +33861,8 @@
                   console.log("Loading previous config params", _)),
               _)
             ) {
-              const _ = _.parse(_.slice(1));
+              const _ = _.parse(_.slice(1)),
+                _ = (0, _._)(!0);
               for (const _ in _)
                 Object.getOwnPropertyNames(_._).indexOf(_) !== -1
                   ? (_._[_] = _(_[_]))
@@ -33836,7 +33870,9 @@
                     ? (_._[_] = _(_[_]))
                     : Object.getOwnPropertyNames(_._).indexOf(_) !== -1
                       ? (_._[_] = _(_[_]))
-                      : console.error("Got unknown config property", _);
+                      : Object.getOwnPropertyNames(_).indexOf(_) !== -1
+                        ? (_[_] = _(_[_]))
+                        : console.error("Got unknown config property", _);
               const _ = (0, _._)();
               console.log("setting locale:", _),
                 _ &&
@@ -33844,7 +33880,7 @@
                   _._.SetPreferredLocales([_]));
             }
             _._.EREALM == _._.k_ESteamRealmUnknown &&
-              (_._.EREALM = (0, _.IDH)(_._.LAUNCHER_TYPE)
+              (_._.EREALM = (0, _.IDH)((0, _._)(!0).LAUNCHER_TYPE)
                 ? _._.k_ESteamRealmChina
                 : _._.k_ESteamRealmGlobal),
               _._.country_code || (_._.country_code = _._.COUNTRY);
@@ -34031,8 +34067,8 @@
           }
           function _() {
             (window._ = new _._()),
-              _(),
               (_._.IN_STEAMUI = !0),
+              _(),
               (0, _._)(window._);
             const _ = document.getElementById("root");
             _.createRoot(_).render(
@@ -34459,7 +34495,7 @@
           3356: "afa2a541f6285d3355cc",
           3366: "3b73a2149467675c48c9",
           3473: "39d4b3c920237e005dd6",
-          3569: "3f9c9ff9adf98b9f3483",
+          3569: "c2efd7fb650c32ccec9b",
           3578: "d4cea363e2b77b9e059d",
           3583: "e43edc0ea1d97c2fbc71",
           3585: "d77e5eb8bb0b31b581e0",
@@ -34470,7 +34506,7 @@
           3675: "8ebf24a9c963f051387d",
           3695: "a960106da5dfe25daade",
           3706: "2981a5b26c56041f9fde",
-          3714: "681b34098a975f20bf23",
+          3714: "66cd5f82651037f07d79",
           3744: "c148f9eca0dc29755464",
           3834: "2bb6b1f9d42051f43c24",
           3864: "5b8f25d6a7c8fc3ae2c8",

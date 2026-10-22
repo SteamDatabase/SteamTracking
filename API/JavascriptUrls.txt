@@ -5,7 +5,6 @@ ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${filename}
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
-${BASE_URL_SHARED_CDN}community_assets/
 ${BASE_URL_SHARED_CDN}community_assets/images/apps/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
@@ -908,7 +907,6 @@ ${MEDIA_CDN_URL}${}${}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
-${MEDIA_CDN_URL}store/
 ${MEDIA_CDN_URL}store/promo/${}
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip

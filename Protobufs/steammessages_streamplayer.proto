@@ -14,4 +14,6 @@ message CStreamPlayerConfig {
 	optional bool wants_touch_input = 8;
 	optional float window_curvature_OBSOLETE = 10;
 	optional string window_settings = 11;
+	optional float sdr_video_brightness = 12;
+	optional float hdr_video_brightness = 13;
 }

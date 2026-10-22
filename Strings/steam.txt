@@ -79,7 +79,7 @@
  --enable-duplicate-detection
  --filename=console-linux.txt
  --force
- --label '%s'
+ --label
  --log-directory="%s"
  --sh-syntax --background --parse-level-prefix -t steam
  -foreground
@@ -551,7 +551,7 @@ $ORIGIN
 %s (%1.2fms)
 %s (emsg=%d)
 %s - locked by 0x%p
-%s --device %s
+%s --device
 %s --slot %d
 %s --supports-duplicate-detection
 %s -P -F upnR -i TCP@%s
@@ -632,6 +632,7 @@ $ORIGIN
 %s: failed to create steam config path: '%s'\n
 %s: failed to find steam root directory: '%s'\n
 %s: failed to fork\n
+%s: failed to open %s: %s\n
 %s: failed to re-execute steam\n
 %s: failed to read child stdout\n
 %s: failed to run command: %s\n
@@ -1329,7 +1330,6 @@ $ORIGIN
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
@@ -1380,7 +1380,6 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEF`
 0123456789abcdef
 1 Mbps
 1.2.11
@@ -1879,10 +1878,6 @@ $ORIGIN
 20IHTTPRedirectHandler
 20ISSLThreadedSendSink
 20IUniformRandomStream
-21:54:48
-21:57:03
-21:57:06
-21:57:08
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -1902,6 +1897,8 @@ $ORIGIN
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23:19:21
+23:19:28
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -6792,7 +6789,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 16 2026
+Oct 21 2026
 October
 Odia
 Offensive Avatar
@@ -8002,6 +7999,7 @@ SetDouble
 SetEnum
 SetEnumValue
 SetFloat
+SetHalfRateShading
 SetHostname
 SetInt32
 SetInt64
@@ -8232,7 +8230,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 16 2026 21:56:57
+Startup - updater built Oct 21 2026 23:19:28
 State
 StaticFileWriterThread()
 Steam
@@ -11726,8 +11724,7 @@ ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
 echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
 echo_console
 eckey_param2type
@@ -12208,6 +12205,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
+ggenh%<
 givenName
 glBegin
 glBindTexture
@@ -16831,7 +16829,7 @@ subtitles
 subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 superseded

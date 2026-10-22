@@ -179,7 +179,7 @@
  --controller-overlay-hotkey none
  --enable-duplicate-detection
  --force
- --label '%s'
+ --label
  --openvr
  --relay
  --sdr_config
@@ -1332,7 +1332,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s - received %d (%s) HTTP response
 %s - received 200 OK but empty response - converting to 404
 %s --add-section %s=%s %s
-%s --device %s
+%s --device
 %s --remove-section=%s %s
 %s --slot %d
 %s --supports-duplicate-detection
@@ -1622,6 +1622,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 %s: failed to create connection
 %s: failed to initialize udev connection
 %s: failed to launch compat processing job
+%s: failed to open %s: %s\n
 %s: failed to open udev_device for %s (sysfs path: %s)
 %s: failed to remove exising connection, possible duplicates may arise
 %s: failed to retrieve device list from NetworkManager
@@ -2507,6 +2508,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 --alongside-steam
 --compute-pipeline-range
 --control-fd
+--crl-sets-path=%s
 --device-index
 --device-scale-factor=1
 --disable
@@ -2917,10 +2919,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 ../clientdll/systemdockmanager_linux.cpp:337
 ../clientdll/systemdockmanager_linux.cpp:562
 ../clientdll/systemmanager.cpp
-../clientdll/systemmanager.cpp:2600
-../clientdll/systemmanager.cpp:2933
-../clientdll/systemmanager.cpp:4618
-../clientdll/systemmanager.cpp:5087
+../clientdll/systemmanager.cpp:2674
+../clientdll/systemmanager.cpp:3021
+../clientdll/systemmanager.cpp:4706
+../clientdll/systemmanager.cpp:5175
 ../clientdll/systemperfmanager.cpp
 ../clientdll/systemperfmanager_linux.cpp
 ../clientdll/systemperfmanager_linux.cpp:1185
@@ -3509,7 +3511,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
@@ -5254,7 +5255,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 12CProtoBufMsgI22CMsgCREItemVoteSummaryE
 12CProtoBufMsgI22CMsgClientChangeStatusE
 12CProtoBufMsgI22CMsgClientEmoticonListE
-12CProtoBufMsgI22CMsgClientGetUserStatsE
 12CProtoBufMsgI22CMsgClientInviteToGameE
 12CProtoBufMsgI22CMsgClientMMSJoinLobbyE
 12CProtoBufMsgI22CMsgClientMMSLobbyDataE
@@ -5371,7 +5371,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 12CProtoBufMsgI30CMsgClientCommentNotificationsE
 12CProtoBufMsgI30CMsgClientDPCheckSpecialSurveyE
 12CProtoBufMsgI30CMsgClientDeregisterWithServerE
-12CProtoBufMsgI30CMsgClientGetUserStatsResponseE
 12CProtoBufMsgI30CMsgClientMMSJoinLobbyResponseE
 12CProtoBufMsgI30CMsgClientUDSP2PSessionStartedE
 12CProtoBufMsgI30CMsgFSGetFollowerCountResponseE
@@ -6423,6 +6422,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 17CInternalCallbackI20CRemoteClientManager18AppUpdateStopped_tE
 17CInternalCallbackI20CRemoteClientManager21VRLinkInviteChanged_tE
 17CInternalCallbackI20CRemoteClientManager23AppInfoUpdateComplete_tE
+17CInternalCallbackI20CRemoteClientManager23DisplayHDRInfoChanged_tE
 17CInternalCallbackI20CRemoteClientManager26NetworkDeviceStateChange_tE
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
 17CInternalCallbackI20CRemoteClientManager27SystemResumingFromSuspend_tE
@@ -6966,7 +6966,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 20CGyroToJoystickModes
 20CHIDDeviceSDLGamepad
 20CHTMLBaseProtoBufMsg
-20CInputLatencyTestMsg
 20CInputMouseMotionMsg
 20CJobTestConnectivity
 20CLinearFunctionCurve
@@ -8141,6 +8140,7 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 27CRemoteClient_ClientDetails
 27CRemoteClient_DeviceDetails
 27CReservationPositionMessage
+27CSetSupportedColorspacesMsg
 27CShader_SendShader_Response
 27CSiteServerUICancelLoginJob
 27CSiteServerUIGetLanguageJob
@@ -10305,7 +10305,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 43CUserAccount_SetOptOutEmailOptions_Response
 43CUserAccount_ViewFriendInviteToken_Response
 43RemoteStorage_SteamCloudEnableStateChange_t
-43zV18
 443510
 44CAccountHardware_ManageSavedHardware_Request
 44CAudio_GetSpatializeSurroundEnabled_Response
@@ -11726,7 +11725,6 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 @uRemoteDiscoveryPortOverride
 @uRemoteDiscoveryPortTransmit
 @unMinimumShaderDownloadSizeInUI
-@unUserStatsTest
 @voice_minabs
 @voice_minavg
 @voice_spew_activity_check
@@ -12707,6 +12705,7 @@ BGetControllerConfigMessageForRemote
 BGetDLCDataByIndex
 BGetDepotBuildStatus
 BGetDiskSerialNumber
+BGetDisplayHDRInfo
 BGetDurationControlExtendedResults
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BGetFriendAvatarURL
@@ -20571,8 +20570,6 @@ Got a free license for tool AppID %u.
 Got a heartbeat
 Got a single shader of size %u; uploading in single message.
 Got an invalid bond when recording triton pair bond last used\n
-Got bad achievement times for StatID %hu for GameID %llu
-Got bad achievement times for StatID %hu for GameID %llu, The Stat's type is actually %d
 Got bond for slot %u (%u): %X %X %s\n
 Got call result for type %d, was expecting type %d
 Got callback for wrong request?
@@ -21313,7 +21310,6 @@ Incorrect connection ID
 Incorrect connection ID, when we do have a connection for this address.  Could be spoofed, ignoring.
 Incorrect connection ID.  Message is stale or could be spoofed, ignoring.
 Incorrect number of arguments.  %d arguments required, %d were given.\n
-Incorrect number of unlock times for achievement [%d]\n
 Incorrect routing secret.  (Packet spam, or relay using routing secret from previous server instance).
 IncreaseVolume
 Increasing target number of download connections to %d (rate was %.3f, now %.3f)
@@ -27746,6 +27742,7 @@ SetHTTPRequestRawPostBody
 SetHTTPRequestRedirectsEnabled
 SetHTTPRequestRequiresVerifiedCertificate
 SetHTTPRequestUserAgentInfo
+SetHalfRateShading
 SetHeartbeatInterval
 SetHostname
 SetIPv6Config: IPv6 libnm workaround: %d
@@ -29147,6 +29144,7 @@ StreamClientArgs
 StreamClientConfigUpdated_t
 StreamClientControllerMessageQueuedForLocal_t
 StreamClientControllerMessageQueuedForRemote_t
+StreamClientDisplayHDRInfoChanged_t
 StreamClientRaiseWindow_t
 StreamClientResult_t
 StreamClientSetControllerInputPaused_t
@@ -32143,7 +32141,6 @@ Zulu
 [AppID %u] Backup of AutoCloud files in preparation for path changes: complete
 [AppID %u] Backup of AutoCloud files in preparation for path changes: starting. . .
 [AppID %u] CAPIJobRequestUserStats - failed to init schema KV with data from server
-[AppID %u] CAPIJobRequestUserStats - failed to login and send message or get a reply
 [AppID %u] CAPIJobRequestUserStats - failed to write schema to disk
 [AppID %u] CAPIJobRequestUserStats - missing schema in response!
 [AppID %u] CAPIJobRequestUserStats - no connection to Steam
@@ -33213,7 +33210,6 @@ addProfessionInfo
 add_cert_dir
 add_key_share
 add_layer
-adddriver "%s"
 added
 adding object
 additional input too long
@@ -36408,8 +36404,7 @@ ecdsa_with_SHA3-224
 ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 echo_console
 eckey_param2type
 eckey_param_decode
@@ -40551,6 +40546,7 @@ m_bServerDebugTextPending
 m_bShutdownSystem
 m_bThreadActive != m_ThreadClient.IsAlive()
 m_bTrackCorruptChunks
+m_bValid
 m_bWirelessDongle == GetSteamController()->BIsControllerWirelessDongle( GetControllerIndex() )
 m_bitsMigratedBuckets
 m_bufAuthToken
@@ -40726,8 +40722,10 @@ m_fileReader
 m_fileReaderData
 m_flDurationSeconds
 m_flEndOffsetSeconds
+m_flHDRHeadroom
 m_flHistoryBuf
 m_flNewVolume
+m_flSDRWhiteLevel
 m_flStartOffsetSeconds
 m_flStartTime_PlatTime <= flNow
 m_flStartTime_PlatTime > 0.0f
@@ -41473,7 +41471,6 @@ m_pSSLConnectionData != NULL
 m_pSSLConnectionData && m_pSSLConnectionData->m_pSSLCallback
 m_pSSLContext
 m_pSSLSendState
-m_pSchema != NULL || clientMsg.Body().has_schema()
 m_pServer->m_nReplyTimeoutsSinceLastRecv == 0
 m_pSessionData
 m_pSetIntValue
@@ -45286,7 +45283,6 @@ removeFromCRL
 remove_layer
 removed
 removed from schedule
-removedriver "%s"
 rename
 render_ipc_connections
 renegotiate ext too long
@@ -45353,6 +45349,7 @@ resizeNumBits >= 0
 resolution_method
 resource
 resource-constraint
+resource/crl-set
 resource/voice_dialing.wav
 resource/voice_ringing.wav
 resp
@@ -45992,7 +45989,6 @@ set_led
 set_read_state
 set_string
 set_write_state
-setconfig "%s"
 setcontext
 setct-AcqCardCodeMsg
 setct-AcqCardCodeMsgTBE
@@ -46085,9 +46081,7 @@ setext-pinSecure
 setext-track2
 setlive
 setlocale
-setlog "%s"
 setmntent
-setruntime "%s"
 sets
 setsid
 setsockopt
@@ -46627,7 +46621,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 16 2026 21:56:25
+steam Oct 21 2026 23:19:27
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -47111,7 +47105,7 @@ subtreeMinimumQuality
 subtype mismatch
 success
 successful
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 sueaccoefjghi

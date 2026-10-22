@@ -142437,8 +142437,12 @@ Status Code:` +
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = ["Steam Main Client", "Steam Deck Main"],
-          _ = null,
-          _ = null;
+          _ = ["Steam Internal Beta Client", "Steam Deck Internal Beta"],
+          _ = [
+            "Steam Beta Update",
+            "\u84B8\u6C7D\u5E73\u53F0\u5BA2\u6237\u7AEF Beta",
+            "Steam Deck Beta",
+          ];
         function _() {
           return typeof navigator < "u" ? navigator.userAgent : void 0;
         }
@@ -142475,7 +142479,7 @@ Status Code:` +
         };
         function _() {
           const _ = (0, _._)(_);
-          return _ !== void 0 ? _ != "" && _ != "0" : _();
+          return _ !== void 0 ? _ != "" && _ != "0" : _() || _();
         }
         const _ = {
             include_assets: !0,

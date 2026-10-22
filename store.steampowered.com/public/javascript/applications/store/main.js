@@ -1191,7 +1191,7 @@
           CvG: () => d3,
           DEQ: () => q5,
           DFD: () => Vr,
-          DOG: () => te,
+          DOG: () => re,
           DRF: () => H3,
           E3D: () => P5,
           EPt: () => L5,
@@ -1289,10 +1289,10 @@
           eSB: () => L9,
           eY9: () => a9,
           egf: () => I6,
-          ey3: () => ee,
+          ey3: () => ie,
           f4X: () => A5,
           f7X: () => C4,
-          fLp: () => oe,
+          fLp: () => le,
           fui: () => Qe,
           g0U: () => j9,
           g5s: () => ar,
@@ -1320,7 +1320,7 @@
           pIh: () => _4,
           pmA: () => U2,
           ppM: () => z9,
-          q0f: () => ue,
+          q0f: () => fe,
           qaO: () => g7,
           r_E: () => s9,
           sC: () => s,
@@ -2366,13 +2366,13 @@
           q7 = 0,
           z7 = 1,
           G7 = 2,
-          G8 = 3,
+          _8 = 3,
           Kr = 4,
           _7 = 5,
           J6 = 6,
           y6 = 7,
           Rr = 8,
-          _8 = 9,
+          te = 9,
           Le = 10;
         function je(O1) {
           switch (O1) {
@@ -2383,7 +2383,7 @@
               return "pw_dota2";
             case G7:
               return "nexon_dota2";
-            case G8:
+            case _8:
               return "steamcmd";
             case Kr:
               return "pw_csgo";
@@ -2395,7 +2395,7 @@
               return "steamchina";
             case Rr:
               return "singleapp";
-            case _8:
+            case te:
               return "gameserver";
           }
         }
@@ -2411,7 +2411,7 @@
           }
           return !1;
         }
-        function te(O1) {
+        function re(O1) {
           switch (O1) {
             default:
               break;
@@ -2427,14 +2427,14 @@
           ze = 4,
           Ee = 8,
           Oe = 16,
-          re = 30,
+          ee = 30,
           t8 = 0,
           E7 = 1,
           O7 = 2,
           Yr = 3,
           Xr = 4,
           r8 = 5;
-        function ee(O1) {
+        function ie(O1) {
           switch (O1) {
             case t8:
               return "invalid";
@@ -2451,22 +2451,22 @@
           }
         }
         const e8 = -1,
-          ie = 0,
-          ne = 1,
-          se = 2,
+          ne = 0,
+          se = 1,
+          ae = 2,
           Q6 = 3,
           wr = 4,
           i8 = 5,
-          ae = 6,
+          oe = 6,
           n8 = 7,
           Te = 8;
-        function oe(O1) {
+        function le(O1) {
           switch (O1) {
-            case ie:
-              return "vgui";
             case ne:
-              return "tenfoot";
+              return "vgui";
             case se:
+              return "tenfoot";
+            case ae:
               return "mobile";
             case Q6:
               return "web";
@@ -2474,7 +2474,7 @@
               return "gamepad";
             case i8:
               return "mobilechat";
-            case ae:
+            case oe:
               return "embedded";
             case n8:
               return "desktop";
@@ -2483,17 +2483,17 @@
               return "unknown";
           }
         }
-        const le = 1,
-          ce = 2,
-          de = 6,
+        const ce = 1,
+          de = 2,
+          ue = 6,
           ke = 7,
           He = 8,
           Se = 9,
-          ue = 10,
+          fe = 10,
           We = 11,
-          fe = 13,
-          me = 14,
-          he = 15,
+          me = 13,
+          he = 14,
+          ge = 15,
           F9 = 16,
           D9 = 17,
           Fe = 18,
@@ -18612,7 +18612,7 @@
           b7 = 1463,
           u8 = 1464,
           f8 = 1465,
-          ge = 1468,
+          Me = 1468,
           S7 = 1469,
           m8 = 1470,
           W7 = 1471,
@@ -18625,62 +18625,62 @@
           h8 = 1478,
           Fr = 1479,
           g8 = 1480,
-          Me = 1481,
-          Ce = 1482,
+          Ce = 1481,
+          M8 = 1482,
           Be = 1483,
-          M8 = 1484,
-          C8 = 1485,
+          C8 = 1484,
+          B8 = 1485,
           F7 = 1486,
-          B8 = 1487,
-          w8 = 1494,
-          b8 = 1495,
-          p8 = 1496,
-          x8 = 1497,
+          w8 = 1487,
+          b8 = 1494,
+          p8 = 1495,
+          x8 = 1496,
+          L8 = 1497,
           D7 = 1498,
-          L8 = 1499,
+          j8 = 1499,
           Dr = 1500,
-          j8 = 1501,
-          v8 = 1502,
-          y8 = 1503,
-          z8 = 1504,
+          v8 = 1501,
+          y8 = 1502,
+          z8 = 1503,
+          E8 = 1504,
           x7 = 1505,
-          E8 = 1506,
-          O8 = 1510,
+          O8 = 1506,
+          T8 = 1510,
           U7 = 1511,
-          T8 = 1512,
+          k8 = 1512,
           A7 = 1513,
-          k8 = 1514,
+          H8 = 1514,
           N7 = 1515,
           K7 = 1516,
           R7 = 1517,
-          H8 = 1518,
+          S8 = 1518,
           $7 = 1519,
-          S8 = 1600,
-          W8 = 1601,
-          V8 = 1603,
-          I8 = 1612,
-          Z8 = 1615,
-          F8 = 1616,
+          W8 = 1600,
+          V8 = 1601,
+          I8 = 1603,
+          Z8 = 1612,
+          F8 = 1615,
+          D8 = 1616,
           Y7 = 1617,
           X7 = 1620,
-          D8 = 1621,
-          U8 = 1622,
-          A8 = 1623,
-          N8 = 1624,
-          K8 = 1628,
+          U8 = 1621,
+          A8 = 1622,
+          N8 = 1623,
+          K8 = 1624,
+          R8 = 1628,
           J7 = 1629,
-          R8 = 1631,
-          $8 = 1700,
-          Y8 = 1701,
-          X8 = 1702,
-          J8 = 1703,
-          Q8 = 1704,
-          P8 = 1705,
+          $8 = 1631,
+          Y8 = 1700,
+          X8 = 1701,
+          J8 = 1702,
+          Q8 = 1703,
+          P8 = 1704,
+          q8 = 1705,
           hr = 1706,
           L7 = 1707,
           Q7 = 2200,
           P7 = 2203,
-          q8 = 2206,
+          G8 = 2206,
           we = 2207,
           j7 = 2208,
           W = 2209,
@@ -18804,52 +18804,52 @@
           q7 = 4074,
           z7 = 4075,
           G7 = 4076,
-          G8 = 4077,
+          _8 = 4077,
           Kr = 4079,
           _7 = 4080,
           J6 = 4081,
           y6 = 4082,
           Rr = 4083,
-          _8 = 4084,
+          te = 4084,
           Le = 4085,
           je = 4086,
           $r = 4087,
-          te = 4090,
+          re = 4090,
           ve = 4091,
           ye = 4092,
           ze = 4095,
           Ee = 4096,
           Oe = 4097,
-          re = 4098,
+          ee = 4098,
           t8 = 4099,
           E7 = 4100,
           O7 = 4101,
           Yr = 4102,
           Xr = 4103,
           r8 = 4104,
-          ee = 4105,
+          ie = 4105,
           e8 = 4106,
-          ie = 4107,
-          ne = 4108,
-          se = 4110,
+          ne = 4107,
+          se = 4108,
+          ae = 4110,
           Q6 = 4111,
           wr = 4112,
           i8 = 4113,
-          ae = 4114,
+          oe = 4114,
           n8 = 4115,
           Te = 4116,
-          oe = 4117,
-          le = 4118,
-          ce = 4120,
-          de = 4121,
+          le = 4117,
+          ce = 4118,
+          de = 4120,
+          ue = 4121,
           ke = 4122,
           He = 4123,
           Se = 4124,
-          ue = 4125,
+          fe = 4125,
           We = 4126,
-          fe = 4127,
-          me = 4128,
-          he = 4140,
+          me = 4127,
+          he = 4128,
+          ge = 4140,
           F9 = 4143,
           D9 = 4144,
           Fe = 4145,
@@ -103644,7 +103644,7 @@
             ],
           });
         }
-        function ge(W) {
+        function Me(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -104009,7 +104009,7 @@
             ],
           });
         }
-        function Me(W) {
+        function Ce(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 144 101",
@@ -104089,7 +104089,7 @@
             ],
           });
         }
-        function Ce(W) {
+        function M8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 158 104",
@@ -105063,7 +105063,7 @@
             ],
           });
         }
-        function M8(W) {
+        function C8(W) {
           const [G1, d2] = useSvgId(),
             [E2, e4] = useSvgId();
           return jsxs("svg", {
@@ -105253,7 +105253,7 @@
             ],
           });
         }
-        function C8(W) {
+        function B8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105327,7 +105327,7 @@
             ],
           });
         }
-        function B8(W) {
+        function w8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105460,7 +105460,7 @@
             ],
           });
         }
-        function w8(W) {
+        function b8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105626,7 +105626,7 @@
             ],
           });
         }
-        function b8(W) {
+        function p8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105654,7 +105654,7 @@
             ],
           });
         }
-        function p8(W) {
+        function x8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105713,7 +105713,7 @@
             ],
           });
         }
-        function x8(W) {
+        function L8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105821,7 +105821,7 @@
             ],
           });
         }
-        function L8(W) {
+        function j8(W) {
           return jsxs("svg", {
             width: "36",
             height: "36",
@@ -105876,7 +105876,7 @@
             ],
           });
         }
-        function j8(W) {
+        function v8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 93 85",
@@ -105900,7 +105900,7 @@
             ],
           });
         }
-        function v8(W) {
+        function y8(W) {
           const [G1, d2] = useSvgId(),
             [E2, e4] = useSvgId();
           return jsxs("svg", {
@@ -106145,7 +106145,7 @@
             ],
           });
         }
-        function y8(W) {
+        function z8(W) {
           const { clickHandlers: G1, ...d2 } = W,
             {
               highlightViewButton: E2,
@@ -106539,7 +106539,7 @@
             ],
           });
         }
-        function z8(W) {
+        function E8(W) {
           const { clickHandlers: G1, ...d2 } = W;
           let {
             highlightViewButton: E2,
@@ -107221,7 +107221,7 @@
             ],
           });
         }
-        function E8(W) {
+        function O8(W) {
           const [G1, d2] = useSvgId();
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -107390,7 +107390,7 @@
             ],
           });
         }
-        function O8(W) {
+        function T8(W) {
           const {
               highlightViewButton: G1,
               highlightOptionsButton: d2,
@@ -107509,53 +107509,53 @@
             q7 = O5 ? N2 : c3,
             z7 = G5 ? N2 : c3,
             G7 = T5 ? N2 : c3,
-            G8 = ut ? N2 : c3,
+            _8 = ut ? N2 : c3,
             Kr = I5 ? I4 : D2,
             _7 = c5 ? I4 : D2,
             J6 = styles.ActivatableGradient,
             y6 = classnames(styles.ActivatableGradient, styles.Active),
             Rr = n5 ? y6 : J6,
-            _8 = N5 ? y6 : J6,
+            te = N5 ? y6 : J6,
             Le = J5 ? y6 : J6,
             je = _4 ? y6 : J6,
             $r = 30 / 2,
-            te = (N4 ?? 0) * $r,
+            re = (N4 ?? 0) * $r,
             ve = (C3 ?? 0) * $r,
             ye = (l5 ?? 0) * $r,
             ze = (Gt ?? 0) * $r,
-            Ee = `translate(${te} ${ve})`,
+            Ee = `translate(${re} ${ve})`,
             Oe = `translate(${ye} ${ze})`,
-            re = 208.867,
+            ee = 208.867,
             t8 = 140.758,
             E7 = 339.1327,
             O7 = 140.758,
             Yr = (R5 ?? 0) != 0 || ($5 ?? 0) != 0,
             Xr = (ct ?? 0) != 0 || (K5 ?? 0) != 0,
-            [r8, ee] = React.useState({ x: 0, y: 0 }),
-            [e8, ie] = React.useState({ x: 0, y: 0 });
+            [r8, ie] = React.useState({ x: 0, y: 0 }),
+            [e8, ne] = React.useState({ x: 0, y: 0 });
           React.useEffect(() => {
-            Yr && ee({ x: R5 ?? 0, y: $5 ?? 0 }),
-              Xr && ie({ x: ct ?? 0, y: K5 ?? 0 });
+            Yr && ie({ x: R5 ?? 0, y: $5 ?? 0 }),
+              Xr && ne({ x: ct ?? 0, y: K5 ?? 0 });
           }, [Yr, Xr, R5, $5, ct, K5]);
-          const ne = Yr ? y6 : J6,
-            se = Xr ? y6 : J6,
+          const se = Yr ? y6 : J6,
+            ae = Xr ? y6 : J6,
             Q6 = 94,
             wr = 94,
             i8 = 9.87378,
-            ae = 187.1384,
+            oe = 187.1384,
             n8 = 225.5083,
             Te = 360.8616,
-            oe = 225.5083;
-          function le(ue, We, fe = 6) {
-            const me = -Q6 / 2 + fe,
-              he = -wr / 2 + fe;
+            le = 225.5083;
+          function ce(fe, We, me = 6) {
+            const he = -Q6 / 2 + me,
+              ge = -wr / 2 + me;
             return {
-              x: RemapValClamped(ue, -1, 1, me, -me),
-              y: RemapValClamped(We, -1, 1, he, -he),
+              x: RemapValClamped(fe, -1, 1, he, -he),
+              y: RemapValClamped(We, -1, 1, ge, -ge),
             };
           }
-          const ce = le(r8.x ?? 0, r8.y ?? 0),
-            de = le(e8.x ?? 0, e8.y ?? 0),
+          const de = ce(r8.x ?? 0, r8.y ?? 0),
+            ue = ce(e8.x ?? 0, e8.y ?? 0),
             ke = RemapValClamped(yt, 0, 1, 1, 0.9),
             He = RemapValClamped(C5, 0, 1, 1, 0.9),
             Se = Ut ? styles.ShowXRay : void 0;
@@ -107949,7 +107949,7 @@
                               jsx("path", {
                                 id: "Fill_6",
                                 d: "M401.202 46.7267C391.642 46.4943 381.909 47.184 376.782 48.0442C373.195 50.0079 371.493 52.3114 371.523 53.9613C371.553 55.6113 373.235 69.2868 373.235 69.2868C377.887 78.9306 381.921 85.2822 392.963 88.4715C405.036 89.2202 430.857 88.2993 436.581 86.6617C439.92 85.857 439.897 85.7253 442.539 84.7365C443.144 76.1583 444.603 72.3713 444.161 66.8264C443.478 64.7997 441.256 60.0997 437.836 57.5131C428.178 50.7871 410.761 46.9592 401.202 46.7267Z",
-                                className: G8,
+                                className: _8,
                                 stroke: "white",
                                 strokeLinejoin: "round",
                                 onClick: $t ?? Yt,
@@ -108105,7 +108105,7 @@
                             onClick: $6,
                             children: [
                               jsxs("g", {
-                                transform: `translate(${Te} ${oe}) rotate(${-i8}) scale(${He})`,
+                                transform: `translate(${Te} ${le}) rotate(${-i8}) scale(${He})`,
                                 children: [
                                   jsx("g", {
                                     id: "TrackPad",
@@ -108124,12 +108124,12 @@
                                   }),
                                   jsx("ellipse", {
                                     id: "TouchFinger",
-                                    cx: de.x,
-                                    cy: de.y,
+                                    cx: ue.x,
+                                    cy: ue.y,
                                     rx: "9.22259",
                                     ry: "12.5669",
                                     fill: q2,
-                                    className: se,
+                                    className: ae,
                                   }),
                                 ],
                               }),
@@ -108151,7 +108151,7 @@
                             onClick: s6,
                             children: [
                               jsxs("g", {
-                                transform: `translate(${ae} ${n8}) rotate(${i8}) scale(${ke})`,
+                                transform: `translate(${oe} ${n8}) rotate(${i8}) scale(${ke})`,
                                 children: [
                                   jsx("g", {
                                     id: "TrackPad_3",
@@ -108170,12 +108170,12 @@
                                   }),
                                   jsx("ellipse", {
                                     id: "TouchFinger_2",
-                                    cx: ce.x,
-                                    cy: ce.y,
+                                    cx: de.x,
+                                    cy: de.y,
                                     rx: "9.22259",
                                     ry: "12.5669",
                                     fill: l4,
-                                    className: ne,
+                                    className: se,
                                   }),
                                 ],
                               }),
@@ -108281,7 +108281,7 @@
                               }),
                               jsxs("g", {
                                 id: "Moving Parts",
-                                transform: `translate(${re} ${t8}) ${Ee} translate(${-re} ${-t8})`,
+                                transform: `translate(${ee} ${t8}) ${Ee} translate(${-ee} ${-t8})`,
                                 children: [
                                   jsx("circle", {
                                     id: "Stick_2",
@@ -108433,7 +108433,7 @@
                                 jsx("path", {
                                   id: "Active Down",
                                   d: "M121.987 119.757C122.464 120.233 122.713 120.937 122.735 121.867C122.736 121.905 122.737 121.944 122.737 121.982L122.737 136.008C122.737 137.807 122.737 139.008 125.737 140.008C128.737 141.008 130.737 141.008 133.737 141.008L134.737 141.008C137.737 141.008 139.737 141.008 142.737 140.008C145.737 139.008 145.737 137.807 145.737 136.008L145.737 122.008C145.737 121.008 145.987 120.258 146.487 119.758L134.237 107.508L121.987 119.757Z",
-                                  className: _8,
+                                  className: te,
                                   fill: y1,
                                   onClick: n6,
                                 }),
@@ -108792,7 +108792,7 @@
             ],
           });
         }
-        function T8(W) {
+        function k8(W) {
           return jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 834 204",
@@ -108824,7 +108824,7 @@
             ],
           });
         }
-        function k8(W) {
+        function H8(W) {
           return jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -108890,7 +108890,7 @@
             ],
           });
         }
-        function H8(W) {
+        function S8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 165 295",
@@ -108955,7 +108955,7 @@
             ],
           });
         }
-        function S8(W) {
+        function W8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -108976,7 +108976,7 @@
             ],
           });
         }
-        function W8(W) {
+        function V8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 231 298",
@@ -109036,7 +109036,7 @@
             ],
           });
         }
-        function V8(W) {
+        function I8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 689 239",
@@ -109122,7 +109122,7 @@
             ],
           });
         }
-        function I8(W) {
+        function Z8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 258 329",
@@ -109142,7 +109142,7 @@
             ],
           });
         }
-        function Z8(W) {
+        function F8(W) {
           const { bColoredWifi: G1, ...d2 } = W,
             E2 = G1 ? "#1A9FFF" : "currentColor";
           return jsxs("svg", {
@@ -109187,7 +109187,7 @@
             ],
           });
         }
-        function F8(W) {
+        function D8(W) {
           const { bColoredWifi: G1, ...d2 } = W,
             E2 = G1 ? "#1A9FFF" : "currentColor";
           return jsxs("svg", {
@@ -109336,7 +109336,7 @@
             ],
           });
         }
-        function D8(W) {
+        function U8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 813 153",
@@ -109454,7 +109454,7 @@
             ],
           });
         }
-        function U8(W) {
+        function A8(W) {
           const { eGamingDeviceType: G1, ...d2 } = W;
           return G1 == ClientTypes.k_EGamingDeviceType_Fremont
             ? jsxs("svg", {
@@ -109573,7 +109573,7 @@
               })
             : jsx(X7, { ...d2 });
         }
-        function A8(W) {
+        function N8(W) {
           const { eGamingDeviceType: G1, ...d2 } = W;
           return G1 === ClientTypes.k_EGamingDeviceType_Fremont
             ? jsxs("svg", {
@@ -109703,7 +109703,7 @@
                 ],
               });
         }
-        function N8(W) {
+        function K8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 315 221",
@@ -109745,7 +109745,7 @@
             ],
           });
         }
-        function K8(W) {
+        function R8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 315 221",
@@ -109841,7 +109841,7 @@
             ],
           });
         }
-        function R8(W) {
+        function $8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 402 192",
@@ -109937,7 +109937,7 @@
             ],
           });
         }
-        function $8(W) {
+        function Y8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 811 147",
@@ -110041,7 +110041,7 @@
             ],
           });
         }
-        function Y8(W) {
+        function X8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 294 213",
@@ -110120,7 +110120,7 @@
             ],
           });
         }
-        function X8(W) {
+        function J8(W) {
           const { controllerProps: G1, ...d2 } = W;
           return G1.role == k_ControllerPairing_Role_Left
             ? jsxs("svg", {
@@ -110182,7 +110182,7 @@
                 ],
               });
         }
-        function J8(W) {
+        function Q8(W) {
           const { bIsLeftController: G1, ...d2 } = W;
           return G1
             ? jsx("svg", {
@@ -110206,7 +110206,7 @@
                 }),
               });
         }
-        function Q8(W) {
+        function P8(W) {
           const { bIsLeftController: G1, bIsComplete: d2, ...E2 } = W;
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
@@ -110241,7 +110241,7 @@
             ],
           });
         }
-        function P8(W) {
+        function q8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 176 175",
@@ -110281,7 +110281,7 @@
               break;
             default:
             case EWirelessEndpointStrength.Weak:
-              (p4 = "#D94126"), (H3 = jsx(q8, { ...e4 }));
+              (p4 = "#D94126"), (H3 = jsx(G8, { ...e4 }));
               break;
           }
           return jsxs("span", {
@@ -110404,7 +110404,7 @@
             ],
           });
         }
-        function q8(W) {
+        function G8(W) {
           return jsxs("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 36 36",
@@ -133061,7 +133061,7 @@ Status Code:` +
             U1
           );
         }
-        function ge(t1 = 10, x = void 0) {
+        function Me(t1 = 10, x = void 0) {
           const R = useActiveServiceTransport(),
             { storeBrowseContext: u1, cacheStoreItemData: y1 } =
               useStoreBrowseCacheContext();
@@ -133136,8 +133136,12 @@ Status Code:` +
         var V7 = i(76105),
           I7 = i(52438);
         const p7 = ["Steam Main Client", "Steam Deck Main"],
-          Zr = null,
-          Z7 = null;
+          Zr = ["Steam Internal Beta Client", "Steam Deck Internal Beta"],
+          Z7 = [
+            "Steam Beta Update",
+            "\u84B8\u6C7D\u5E73\u53F0\u5BA2\u6237\u7AEF Beta",
+            "Steam Deck Beta",
+          ];
         function mr() {
           return typeof navigator < "u" ? navigator.userAgent : void 0;
         }
@@ -133154,27 +133158,27 @@ Status Code:` +
         function g8(t1 = mr()) {
           return Fr(p7, t1);
         }
-        function Me(t1 = mr()) {
+        function Ce(t1 = mr()) {
           return Fr(Zr, t1);
         }
-        function Ce(t1 = mr()) {
+        function M8(t1 = mr()) {
           return Fr([...Z7, ...Zr], t1);
         }
         function Be(t1 = mr()) {
           return Fr([...Z7, ...Zr, ...p7], t1);
         }
-        const M8 = {
+        const C8 = {
           name: "search_edismax",
           options: { path: "/" },
           preferenceControls: { isTechnicallyNecessary: !0 },
         };
-        function C8() {
-          const t1 = (0, I7.j_)(M8);
-          return t1 !== void 0 ? t1 != "" && t1 != "0" : g8();
+        function B8() {
+          const t1 = (0, I7.j_)(C8);
+          return t1 !== void 0 ? t1 != "" && t1 != "0" : g8() || M8();
         }
         const F7 = { include_assets: !0, apply_user_filters: !0 },
-          B8 = { include_tags: !0, include_creators: !0 };
-        function w8(t1) {
+          w8 = { include_tags: !0, include_creators: !0 };
+        function b8(t1) {
           const {
             list: x,
             iActiveIndex: R,
@@ -133187,7 +133191,7 @@ Status Code:` +
                 title: x.strMainTitle,
                 children: x.rgMainItems.map(({ item_id: q2 }, z3) =>
                   (0, o.jsx)(
-                    y8,
+                    z8,
                     {
                       itemid: q2,
                       index: z3,
@@ -133202,10 +133206,10 @@ Status Code:` +
               x.eListType == "suggestions" &&
               (T1 = (0, o.jsx)(Dr, {
                 title: x.strMainTitle,
-                children: (0, o.jsx)(k8, {}),
+                children: (0, o.jsx)(H8, {}),
               })),
             x.rgTextItems?.length &&
-              (U1 = (0, o.jsx)(j8, {
+              (U1 = (0, o.jsx)(v8, {
                 title: x.strTextLinks,
                 items: x.rgTextItems,
               })),
@@ -133216,7 +133220,7 @@ Status Code:` +
                     horizontal: !0,
                     children: x.rgSubSectionItems.map(({ item_id: q2 }, z3) =>
                       (0, o.jsx)(
-                        T8,
+                        k8,
                         {
                           itemid: q2,
                           index: z3,
@@ -133231,7 +133235,7 @@ Status Code:` +
                     title: x.strSubSectionTitle,
                     children: x.rgSubSectionItems.map(({ item_id: q2 }, z3) =>
                       (0, o.jsx)(
-                        z8,
+                        E8,
                         {
                           itemid: q2,
                           index: z3,
@@ -133269,20 +133273,20 @@ Status Code:` +
             ],
           });
         }
-        function b8(t1 = !0) {
+        function p8(t1 = !0) {
           return m8(10, F7, t1);
         }
-        function p8(t1, x, R, u1 = !0) {
+        function x8(t1, x, R, u1 = !0) {
           const y1 = (0, fr.o)(t1),
             T1 = H7(),
             U1 = e.useMemo(
-              () => (0, ur.d7)({ ...B8, use_name_match_scoring: C8() }, T1),
+              () => (0, ur.d7)({ ...w8, use_name_match_scoring: B8() }, T1),
               [T1],
             ),
             p2 = (0, ur.Ew)(F7, 5, U1),
             j2 = f8(p2, T1 === void 0 ? "" : y1),
             P2 = x && t1 == "",
-            { data: q2 } = b8(P2),
+            { data: q2 } = p8(P2),
             { data: z3 } = o6(P2),
             { data: l4 } = E6(P2 && u1),
             a4 = e.useMemo(() => d3.fW(p0().slice()), []),
@@ -133317,9 +133321,9 @@ Status Code:` +
                 };
               } else return;
             }, [j2, q2, z3, l4, R, u1]);
-          return L8(c3);
+          return j8(c3);
         }
-        function x8(t1, x) {
+        function L8(t1, x) {
           const R = (0, g4.jE)(),
             u1 = (0, k.eG)(),
             y1 = (0, j.ru)(t1, x);
@@ -133339,14 +133343,14 @@ Status Code:` +
           strMainTitle: "",
           rgMainItems: [],
         };
-        function L8(t1) {
+        function j8(t1) {
           const [x, R] = e.useState(t1 || D7),
             [u1, y1] = e.useState({
               activeSection: "apps",
               iActiveIndex: void 0,
               eLastInputSource: void 0,
             }),
-            T1 = x8();
+            T1 = L8();
           e.useEffect(() => {
             R(t1 || D7);
           }, [t1]);
@@ -133515,7 +133519,7 @@ Status Code:` +
             ],
           });
         }
-        function j8(t1) {
+        function v8(t1) {
           const { title: x, items: R } = t1;
           return (0, o.jsx)("div", {
             className: B2()(U5.SuggestionSection),
@@ -133525,7 +133529,7 @@ Status Code:` +
                 (0, o.jsx)("div", { className: U5.SectionTitle, children: x }),
                 R.map(({ item_id: u1 }, y1) =>
                   (0, o.jsx)(
-                    v8,
+                    y8,
                     { itemid: u1, first: y1 == 0 },
                     (0, k4.ER)(u1),
                   ),
@@ -133534,7 +133538,7 @@ Status Code:` +
             }),
           });
         }
-        function v8(t1) {
+        function y8(t1) {
           const { itemid: x, first: R } = t1,
             { data: u1 } = (0, T3.J$)(x);
           return (0, o.jsxs)(o.Fragment, {
@@ -133549,7 +133553,7 @@ Status Code:` +
             ],
           });
         }
-        const y8 = e.memo(function (x) {
+        const z8 = e.memo(function (x) {
             const {
                 itemid: R,
                 index: u1,
@@ -133559,7 +133563,7 @@ Status Code:` +
               U1 = e.useMemo(() => y1("apps", u1), [y1, u1]);
             return (0, o.jsx)(u7, { itemid: R, active: T1, ...U1 });
           }),
-          z8 = e.memo(function (x) {
+          E8 = e.memo(function (x) {
             const { itemid: R, ...u1 } = x,
               { data: y1 } = (0, T3.J$)(R),
               T1 = (0, j.aL)(
@@ -133571,13 +133575,13 @@ Status Code:` +
                   itemid: R,
                   url: T1,
                   ...u1,
-                  children: (0, o.jsx)(E8, { itemid: R }),
+                  children: (0, o.jsx)(O8, { itemid: R }),
                 })
               : (0, o.jsx)(x7, {
                   itemid: R,
                   url: T1,
                   ...u1,
-                  children: (0, o.jsx)(O8, { itemid: R }),
+                  children: (0, o.jsx)(T8, { itemid: R }),
                 });
           });
         function x7(t1) {
@@ -133612,7 +133616,7 @@ Status Code:` +
             ],
           });
         }
-        function E8(t1) {
+        function O8(t1) {
           const { itemid: x } = t1,
             { data: R } = (0, T3.J$)(x),
             { data: u1 } = (0, T3.lv)(x);
@@ -133632,7 +133636,7 @@ Status Code:` +
             ],
           });
         }
-        function O8(t1) {
+        function T8(t1) {
           const { itemid: x } = t1,
             { data: R } = (0, T3.J$)(x);
           return (0, o.jsxs)(o.Fragment, {
@@ -133654,7 +133658,7 @@ Status Code:` +
                 ),
               });
         }
-        const T8 = e.memo(function (x) {
+        const k8 = e.memo(function (x) {
           const { itemid: R, ...u1 } = x,
             { data: y1 } = (0, T3.J$)(R),
             T1 = (0, j.aL)(
@@ -133684,7 +133688,7 @@ Status Code:` +
             }),
           });
         }
-        function k8() {
+        function H8() {
           return (0, o.jsx)("div", {
             className: U5.NoMatches,
             children: (0, v2.g)("#Menu_SearchBar_NoMatches"),
@@ -133697,7 +133701,7 @@ Status Code:` +
             className: U5.SearchBar,
             children: [
               !R && (0, o.jsx)(R7, { bBackdropActive: x }),
-              (0, o.jsx)(H8, {}),
+              (0, o.jsx)(S8, {}),
             ],
           });
         });
@@ -133782,7 +133786,7 @@ Status Code:` +
                       onMouseDown: D2,
                       onClick: N2,
                       "aria-label": (0, v2.g)("#Menu_ClearSearchTerm"),
-                      children: (0, o.jsx)(S8, {}),
+                      children: (0, o.jsx)(W8, {}),
                     }),
                 ],
               }),
@@ -133797,7 +133801,7 @@ Status Code:` +
             ],
           });
         });
-        function H8() {
+        function S8() {
           const {
               term: t1,
               setInputKeyDown: x,
@@ -133810,7 +133814,7 @@ Status Code:` +
             { nBackdropHeight: p2 } = f3(),
             j2 = p2 && p2 < 480 ? 3 : 4,
             P2 = !(p2 && p2 < 450),
-            { onKeyDown: q2, ...z3 } = p8(t1, u1, j2, P2),
+            { onKeyDown: q2, ...z3 } = x8(t1, u1, j2, P2),
             l4 = K7(U1),
             a4 = e.useCallback(
               (N2) => {
@@ -133838,7 +133842,7 @@ Status Code:` +
                 children: (0, o.jsx)("div", {
                   className: U5.Suggestions,
                   id: R,
-                  children: (0, o.jsx)(w8, { ...z3 }),
+                  children: (0, o.jsx)(b8, { ...z3 }),
                 }),
               }),
             })
@@ -133856,7 +133860,7 @@ Status Code:` +
               }),
             });
           }),
-          S8 = e.memo(function (x) {
+          W8 = e.memo(function (x) {
             return (0, o.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
@@ -133868,7 +133872,7 @@ Status Code:` +
               }),
             });
           }),
-          W8 = e.memo(function (x) {
+          V8 = e.memo(function (x) {
             const { refPage: R } = x,
               [u1, y1] = e.useState(),
               [T1, U1] = e.useState(() =>
@@ -133883,8 +133887,8 @@ Status Code:` +
               N2 = e.useCallback(() => {
                 z3.current?.TakeFocus(), y1(void 0);
               }, []),
-              { fnReturnFocusToPage: D2 } = V8(z3),
-              I4 = I8(z3),
+              { fnReturnFocusToPage: D2 } = I8(z3),
+              I4 = Z8(z3),
               G3 = e.useCallback(() => {
                 y1(void 0), q2();
               }, [q2]),
@@ -133907,7 +133911,7 @@ Status Code:` +
               submethod: "",
               feature: "",
               children: [
-                (0, o.jsxs)(Z8, {
+                (0, o.jsxs)(F8, {
                   bShowBackdrop: j2 || !!u1,
                   closePopoverAndSearch: G3,
                   refPage: R,
@@ -133928,7 +133932,7 @@ Status Code:` +
                           onMenuButton: () => !0,
                           onMenuActionDescription: null,
                           children: [
-                            c3 && (0, o.jsx)(N8, {}),
+                            c3 && (0, o.jsx)(K8, {}),
                             (0, o.jsxs)(X7, {
                               openPopover: o0,
                               activeSection: u1,
@@ -133947,9 +133951,9 @@ Status Code:` +
                             (0, o.jsxs)("div", {
                               className: f.RightButtons,
                               children: [
-                                !p2 && (0, o.jsx)(A8, {}),
-                                (0, o.jsx)(K8, {}),
+                                !p2 && (0, o.jsx)(N8, {}),
                                 (0, o.jsx)(R8, {}),
+                                (0, o.jsx)($8, {}),
                               ],
                             }),
                           ],
@@ -133963,11 +133967,11 @@ Status Code:` +
                     }),
                   ],
                 }),
-                (0, o.jsx)(J8, { openMoreSection: t0 }),
+                (0, o.jsx)(Q8, { openMoreSection: t0 }),
               ],
             });
           });
-        function V8(t1) {
+        function I8(t1) {
           const [x, R] = e.useState(),
             u1 = (0, t.Qn)();
           (0, e.useEffect)(() => {
@@ -134006,7 +134010,7 @@ Status Code:` +
           }, [x]);
           return { fnReturnFocusToPage: x ? y1 : void 0 };
         }
-        function I8(t1) {
+        function Z8(t1) {
           const x = (0, t.Qn)();
           return e.useCallback(
             (u1, y1) => {
@@ -134028,7 +134032,7 @@ Status Code:` +
             [t1, x],
           );
         }
-        function Z8(t1) {
+        function F8(t1) {
           const {
               bShowBackdrop: x,
               closePopoverAndSearch: R,
@@ -134092,7 +134096,7 @@ Status Code:` +
             (0, e.useEffect)(() => {
               c3 && P2((l0) => (l0 != "visible" ? "show" : l0));
             }, [c3]);
-          const w0 = F8(u1, p2),
+          const w0 = D8(u1, p2),
             m0 = (0, n4.wY)(
               e.useCallback((l0) => {
                 z3(l0.contentBoxSize[0].blockSize);
@@ -134156,7 +134160,7 @@ Status Code:` +
             }),
           });
         }
-        function F8(t1, x) {
+        function D8(t1, x) {
           const [R, u1] = e.useState(),
             y1 = e.useCallback((T1) => {
               u1(
@@ -134204,7 +134208,7 @@ Status Code:` +
               rgButtonWidths: q2,
               nContainerWidth: z3,
               refDynamicButtonContainer: l4,
-            } = D8(u1 !== void 0, j2.current),
+            } = U8(u1 !== void 0, j2.current),
             a4 = Y7(),
             c3 = Q3(),
             N2 = a4 && !c3;
@@ -134239,7 +134243,7 @@ Status Code:` +
               D2 = w0;
               const $0 = B0 ? (0, v2.g)("#Menu_Popover_Menu") : void 0;
               return (0, o.jsx)(
-                U8,
+                A8,
                 {
                   section: w0,
                   label: $0 ?? m0,
@@ -134273,7 +134277,7 @@ Status Code:` +
             ],
           });
         }
-        function D8(t1, x) {
+        function U8(t1, x) {
           const [R, u1] = e.useState(),
             [y1, T1] = e.useState();
           e.useLayoutEffect(() => {
@@ -134296,7 +134300,7 @@ Status Code:` +
             refDynamicButtonContainer: U1,
           };
         }
-        function U8(t1) {
+        function A8(t1) {
           const {
               section: x,
               openPopover: R,
@@ -134354,7 +134358,7 @@ Status Code:` +
             ],
           });
         }
-        function A8() {
+        function N8() {
           const t1 = (0, j.aL)(`${x2.TS.STORE_BASE_URL}search/`);
           return (0, o.jsxs)(Q1.Ii, {
             className: B2()(f.MenuButton),
@@ -134363,19 +134367,19 @@ Status Code:` +
             children: [(0, o.jsx)($7, {}), v2.d.Localize("#Menu_Search")],
           });
         }
-        function N8() {
+        function K8() {
           const t1 = (0, j.aL)(`${x2.TS.STORE_BASE_URL}vr/`);
           return (0, o.jsxs)(Q1.Ii, {
             className: B2()(f.MenuButton, f.VRButton, f.SafariOnly),
             focusClassName: f.ButtonFocus,
             href: t1,
             children: [
-              (0, o.jsx)(X8, { role: "presentation" }),
+              (0, o.jsx)(J8, { role: "presentation" }),
               v2.d.Localize("#Menu_VR"),
             ],
           });
         }
-        function K8() {
+        function R8() {
           const t1 = (0, $.LH)(),
             { data: x } = (0, T.hR)(t1),
             R = (0, j.aL)(`${x2.TS.STORE_BASE_URL}wishlist/`);
@@ -134385,7 +134389,7 @@ Status Code:` +
                 focusClassName: f.ButtonFocus,
                 href: R,
                 children: [
-                  (0, o.jsx)($8, { role: "presentation" }),
+                  (0, o.jsx)(Y8, { role: "presentation" }),
                   v2.d.Localize("#Menu_Wishlist"),
                   x !== void 0 &&
                     x > 0 &&
@@ -134400,7 +134404,7 @@ Status Code:` +
             children: t1.children,
           });
         }
-        function R8() {
+        function $8() {
           const { data: t1 } = (0, h3.aU)(),
             x = (0, j.aL)(`${x2.TS.STORE_BASE_URL}cart/`);
           return t1
@@ -134409,7 +134413,7 @@ Status Code:` +
                 focusClassName: f.ButtonFocus,
                 href: x,
                 children: [
-                  (0, o.jsx)(Y8, {}),
+                  (0, o.jsx)(X8, {}),
                   (0, o.jsx)("div", {
                     className: f.SafariOnly,
                     children: v2.d.Localize("#Menu_Cart"),
@@ -134423,7 +134427,7 @@ Status Code:` +
               })
             : null;
         }
-        function $8(t1) {
+        function Y8(t1) {
           return (0, o.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 14 14",
@@ -134449,7 +134453,7 @@ Status Code:` +
             ],
           });
         }
-        function Y8(t1) {
+        function X8(t1) {
           return (0, o.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             viewBox: "0 0 14 14",
@@ -134461,7 +134465,7 @@ Status Code:` +
             }),
           });
         }
-        function X8(t1) {
+        function J8(t1) {
           return (0, o.jsx)("svg", {
             viewBox: "0 0 48 48",
             fill: "none",
@@ -134472,7 +134476,7 @@ Status Code:` +
             }),
           });
         }
-        const J8 = e.memo(function (x) {
+        const Q8 = e.memo(function (x) {
           const { openMoreSection: R } = x,
             {
               setTerm: u1,
@@ -134520,8 +134524,8 @@ Status Code:` +
             null
           );
         });
-        var Q8 = i(75130);
-        function P8() {
+        var P8 = i(75130);
+        function q8() {
           const t1 = (0, C4.K)(v2.d),
             x = e.useRef(null),
             [R, u1] = e.useState(null);
@@ -134542,12 +134546,12 @@ Status Code:` +
             ),
             !t1 || !R
               ? null
-              : (0, o.jsx)(Q8.u, {
+              : (0, o.jsx)(P8.u, {
                   navID: "StoreMenu",
                   ref: y1,
                   className: f.StoreMenuNavWrapper,
                   excludeTreeFromScrollRegionSearch: !0,
-                  children: (0, o.jsx)(W8, { refPage: x }),
+                  children: (0, o.jsx)(V8, { refPage: x }),
                 })
           );
         }
@@ -134581,7 +134585,7 @@ Status Code:` +
             children: (0, o.jsx)(R7, { bBackdropActive: !1 }),
           });
         }
-        function q8() {
+        function G8() {
           return React.useCallback((t1) => jsx(L7, { children: t1 }), []);
         }
         function we(t1, x) {
@@ -136164,7 +136168,7 @@ Status Code:` +
                         "store-menu-v7": () =>
                           (0, o.jsx)(e.Suspense, {
                             fallback: null,
-                            children: (0, o.jsx)(P8, {}),
+                            children: (0, o.jsx)(q8, {}),
                           }),
                         "store-menu-responsive-search": () =>
                           (0, o.jsx)(e.Suspense, {

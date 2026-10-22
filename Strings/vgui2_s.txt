@@ -27,7 +27,7 @@
  +0000
  --enable-duplicate-detection
  --force
- --label '%s'
+ --label
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -349,7 +349,7 @@ $ORIGIN
 %s %s >%s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
-%s --device %s
+%s --device
 %s --slot %d
 %s --supports-duplicate-detection
 %s -P -F upnR -i TCP@%s
@@ -387,6 +387,7 @@ $ORIGIN
 %s: command exited unexpectedly\n
 %s: command failed: %d\n
 %s: display was not open yet, good\n
+%s: failed to open %s: %s\n
 %s: failed to retrieve system version details\n
 %s: failed to run command: %s\n
 %s: lseek %s: %s\n
@@ -473,7 +474,6 @@ $ORIGIN
 *pcubPlaintextData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGB
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 ++KEY_PAD_PLUS
@@ -677,7 +677,6 @@ $ORIGIN
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
@@ -705,7 +704,6 @@ $ORIGIN
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 1!KEY_1
 1.2.11
@@ -4613,6 +4611,7 @@ SetEnumValue
 SetFloat
 SetFocus
 SetForegroundWindow
+SetHalfRateShading
 SetHostname
 SetInt32
 SetInt64
@@ -7599,8 +7598,7 @@ ecdsa_with_SHA3-224
 ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 echo_console
 eckey_param2type
 eckey_param_decode
@@ -8013,7 +8011,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh@"
+ggen
 givenName
 glBegin
 glBindTexture
@@ -11166,7 +11164,7 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 successfullyAdded
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 superseded

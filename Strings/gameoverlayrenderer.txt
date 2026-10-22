@@ -49,7 +49,9 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGQ
 ++CCUNGstd::exception
+++CCUNGv
 ----------------------------\n
 /ValveIPCSHM_%d
 /bin/sh
@@ -288,6 +290,7 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
+NV12
 Need to force key focus to overlay key window 0x%lx\n
 Not enough room in mem stream for video frame\n
 One-time initialization: pid %d for game %llu\n
@@ -300,6 +303,7 @@ OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 Opening display '%s', process %d returned %p\n
 Overlay pid %d dpy %p: An X Error occurred\n
 OverlayFrameMark
+P010
 PDF128_
 PDF16_
 PDF16b

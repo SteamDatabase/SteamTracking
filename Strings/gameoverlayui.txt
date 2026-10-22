@@ -12,7 +12,7 @@
  +0000
  --enable-duplicate-detection
  --force
- --label '%s'
+ --label
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
@@ -319,7 +319,7 @@ $ORIGIN
 %s %s %s %s
 %s %s >%s %s
 %s (%d,%d,%d,%d)
-%s --device %s
+%s --device
 %s --slot %d
 %s --supports-duplicate-detection
 %s -P -F upnR -i TCP@%s
@@ -352,6 +352,7 @@ $ORIGIN
 %s: command exited unexpectedly: %s\n
 %s: command exited unexpectedly\n
 %s: command failed: %d\n
+%s: failed to open %s: %s\n
 %s: failed to run command: %s\n
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
@@ -433,6 +434,7 @@ $ORIGIN
 *pcubDecodedData
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG8
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
@@ -660,7 +662,6 @@ $ORIGIN
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
@@ -682,7 +683,6 @@ $ORIGIN
 01/01/00
 0123456789
 0123456789ABCDEF
-0123456789ABCDEF@
 0123456789abcdef
 0x%llx
 1 Mbps
@@ -1122,7 +1122,6 @@ $ORIGIN
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
-21:55:22
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CLogFileAsyncCallback
@@ -1148,6 +1147,7 @@ $ORIGIN
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
+23:19:29
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -4306,7 +4306,7 @@ OUT_OF_RANGE
 OXXO
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 16 2026
+Oct 21 2026
 October
 Odia
 Offensive Avatar
@@ -4891,6 +4891,7 @@ SetEvent failed for paint event\n
 SetFloat
 SetFocus
 SetFont
+SetHalfRateShading
 SetHostname
 SetInt32
 SetInt64
@@ -6534,8 +6535,7 @@ eaFO
 east
 ebay.com
 echar >= schar
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 edgenext
 edgio
 edit %s
@@ -8353,7 +8353,7 @@ subpattern name is too long (maximum 32 characters)
 subtabposition
 subtitles
 subtype mismatch
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 supplied row stride too small

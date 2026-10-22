@@ -73,7 +73,7 @@
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
  --enable-duplicate-detection
  --force
- --label '%s'
+ --label
  /bin/sh -c
  /runfunc %u %u %u %u
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -498,7 +498,7 @@ $ORIGIN
 %s (emsg=%d)
 %s - locked by 0x%p
 %s --add-section %s=%s %s
-%s --device %s
+%s --device
 %s --remove-section=%s %s
 %s --slot %d
 %s --supports-duplicate-detection
@@ -552,6 +552,7 @@ $ORIGIN
 %s: command exited unexpectedly: %s\n
 %s: command exited unexpectedly\n
 %s: command failed: %d\n
+%s: failed to open %s: %s\n
 %s: failed to run command: %s\n
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
@@ -726,7 +727,6 @@ $ORIGIN
 ((size_t)((buf)->end - (buf)->last)) >= datamax
 ((size_t)((buf)->end - (buf)->last)) >= padlen - 1
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
-(1@D8
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -815,6 +815,7 @@ $ORIGIN
 *pcubSignature > 0
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG[
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +automatic
@@ -1112,7 +1113,6 @@ $ORIGIN
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
@@ -1667,7 +1667,6 @@ $ORIGIN
 20IHTTPRedirectHandler
 20ISSLThreadedSendSink
 20IUniformRandomStream
-21:54:48
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -1691,6 +1690,7 @@ $ORIGIN
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:19:21
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -6174,7 +6174,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
-Oct 16 2026
+Oct 21 2026
 October
 Odia
 Offensive Avatar
@@ -7300,6 +7300,7 @@ SetDouble
 SetEnum
 SetEnumValue
 SetFloat
+SetHalfRateShading
 SetHostname
 SetInt32
 SetInt64
@@ -10758,8 +10759,7 @@ ecdsa_with_SHA3-224
 ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 echo_console
 eckey_param2type
 eckey_param_decode
@@ -15594,7 +15594,7 @@ subtitles
 subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 superseded

@@ -75,9 +75,8 @@
  (Unicast/Multicast)
  (Unknown SAFI %u)
  (VPLS)
- (capture)
- (convert)
  (decode)
+ (display)
  (dropped)
  (encode)
  (network)
@@ -106,7 +105,7 @@
  --current-password
  --enable-duplicate-detection
  --force
- --label '%s'
+ --label
  -cef-disable-gpu
  -cef-disable-sandbox
  -format %s
@@ -998,7 +997,7 @@ ${LANGUAGE}
 %s - failed to parse durations from mediaPresentationDuration
 %s - failed to parse durations from segment templates
 %s - locked by 0x%p
-%s --device %s
+%s --device
 %s --slot %d
 %s --supports-duplicate-detection
 %s -P -F upnR -i TCP@%s
@@ -1194,6 +1193,7 @@ ${LANGUAGE}
 %s: failed to get subscribed apps
 %s: failed to load platform app
 %s: failed to load platform app extended section
+%s: failed to open %s: %s\n
 %s: failed to refresh platform data
 %s: failed to retrieve system version details\n
 %s: failed to run command: %s\n
@@ -1231,6 +1231,7 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: skipping, current value already matches
+%s: skipping, powersave not supported on this hardware
 %s: skipping, value already sent
 %s: starting
 %s: starting enumerate devices
@@ -2257,13 +2258,13 @@ ${LANGUAGE}
 --alongside-steam
 --autofind-off --start-minimized
 --check-for-updates
+--control=%s
 --disable
 --edit-env-fd=%d
 --enable
 --error
 --forward-fd=%d
 --prep-by-serial
---redirect=vhui.log --control="%s"
 --show-all-devices
 --terminate-when-signaled
 --title
@@ -2712,7 +2713,7 @@ ${LANGUAGE}
 ../steamUI/sharedconnectioncontroller.cpp
 ../steamUI/startupmodemanager.cpp
 ../steamUI/steamoscontroller.cpp
-../steamUI/steamosmanager.cpp:305
+../steamUI/steamosmanager.cpp:340
 ../steamUI/steamuiapicallhelpers.h
 ../steamUI/steamuiappcontroller.cpp
 ../steamUI/steamuiappcontroller.cpp:2146
@@ -3004,7 +3005,6 @@ ${LANGUAGE}
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
-/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
 /usr/bin/steamos-polkit-helpers/steamos-set-hostname
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
@@ -3121,7 +3121,10 @@ ${LANGUAGE}
 10CUtlMemoryI14EStoreCategoryE
 10CUtlMemoryI14LaunchOption_tE
 10CUtlMemoryI14TLSTicketKey_tE
+10CUtlMemoryI15CFastFrameStatsE
 10CUtlMemoryI17CHTTPRequestParamE
+10CUtlMemoryI17EStreamAudioCodecE
+10CUtlMemoryI17EStreamVideoCodecE
 10CUtlMemoryI18InstalledAppInfo_sE
 10CUtlMemoryI19CECSigningPublicKeyE
 10CUtlMemoryI19ControllerDetails_tE
@@ -3393,6 +3396,7 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
 10CUtlMemoryIN12CHTTPHeaders8Header_tEE
+10CUtlMemoryIN13CStreamServer14DelayedInput_tEE
 10CUtlMemoryIN14CUDPConnection20ConnectPingResults_tEE
 10CUtlMemoryIN14CUpdateManager14AppTimestamp_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -3401,10 +3405,12 @@ ${LANGUAGE}
 10CUtlMemoryIN14CUtlLinkedListI13CallbackMsg_tiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI14CScheduledItemiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI15CFastFrameStatsiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI19NetPacketToDelete_tiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI22NetRecvThrottleGroup_tiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListI9ChartPt_tiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIN13CStreamServer11PingEntry_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN17CHTTPRequestCache19CachedFileLRUData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection13JobWakeData_tEiE10ListElem_tEE
 10CUtlMemoryIN14CUtlLinkedListIN18COpenSSLConnection20EncryptedSendChunk_tEiE10ListElem_tEE
@@ -3480,6 +3486,7 @@ ${LANGUAGE}
 10CUtlMemoryIP11CWorkThreadE
 10CUtlMemoryIP12ILogListenerE
 10CUtlMemoryIP13CJSMethodArgsE
+10CUtlMemoryIP13CStreamPacketE
 10CUtlMemoryIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiEE
 10CUtlMemoryIP15CBaseGameActionE
 10CUtlMemoryIP15CJSCallbackFuncE
@@ -3509,12 +3516,14 @@ ${LANGUAGE}
 10CUtlMemoryIPN4vgui8TreeNodeEE
 10CUtlMemoryIPN4vgui8URLLabelEE
 10CUtlMemoryIPcE
+10CUtlMemoryIPhE
 10CUtlMemoryIPwE
 10CUtlMemoryISt4pairI14CMetricsSymbol13MetricValue_tEE
 10CUtlMemoryISt4pairI14CMetricsSymbolS1_EE
 10CUtlMemoryISt4pairIj9CSmartPtrI18CJSCallbackPromiseEEE
 10CUtlMemoryISt4pairIyPKcEE
 10CUtlMemoryIcE
+10CUtlMemoryIfE
 10CUtlMemoryIhE
 10CUtlMemoryIiE
 10CUtlMemoryIjE
@@ -3606,7 +3615,10 @@ ${LANGUAGE}
 10CUtlVectorI14EStoreCategory10CUtlMemoryIS0_EE
 10CUtlVectorI14LaunchOption_t10CUtlMemoryIS0_EE
 10CUtlVectorI14TLSTicketKey_t10CUtlMemoryIS0_EE
+10CUtlVectorI15CFastFrameStats10CUtlMemoryIS0_EE
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
+10CUtlVectorI17EStreamAudioCodec10CUtlMemoryIS0_EE
+10CUtlVectorI17EStreamVideoCodec10CUtlMemoryIS0_EE
 10CUtlVectorI18InstalledAppInfo_s10CUtlMemoryIS0_EE
 10CUtlVectorI19CECSigningPublicKey10CUtlMemoryIS0_EE
 10CUtlVectorI19ControllerDetails_t10CUtlMemoryIS0_EE
@@ -3716,6 +3728,7 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIyj10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN12CHTTPHeaders8Header_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN13CStreamServer14DelayedInput_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CUDPConnection20ConnectPingResults_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN14CUpdateManager14AppTimestamp_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
@@ -3772,6 +3785,7 @@ ${LANGUAGE}
 10CUtlVectorIP11CWorkThread10CUtlMemoryIS1_EE
 10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
 10CUtlVectorIP13CJSMethodArgs10CUtlMemoryIS1_EE
+10CUtlVectorIP13CStreamPacket10CUtlMemoryIS1_EE
 10CUtlVectorIP14CUtlLinkedListIN10CIPCClient15ListUtlBuffer_tEiE10CUtlMemoryIS4_EE
 10CUtlVectorIP15CBaseGameAction10CUtlMemoryIS1_EE
 10CUtlVectorIP15CJSCallbackFunc10CUtlMemoryIS1_EE
@@ -3801,12 +3815,14 @@ ${LANGUAGE}
 10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
+10CUtlVectorIPh10CUtlMemoryIS0_EE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
 10CUtlVectorISt4pairI14CMetricsSymbol13MetricValue_tE10CUtlMemoryIS3_EE
 10CUtlVectorISt4pairI14CMetricsSymbolS1_E10CUtlMemoryIS2_EE
 10CUtlVectorISt4pairIj9CSmartPtrI18CJSCallbackPromiseEE10CUtlMemoryIS4_EE
 10CUtlVectorISt4pairIyPKcE10CUtlMemoryIS3_EE
 10CUtlVectorIc10CUtlMemoryIcEE
+10CUtlVectorIf10CUtlMemoryIfEE
 10CUtlVectorIh10CUtlMemoryIhEE
 10CUtlVectorIi10CUtlMemoryIiEE
 10CUtlVectorIj10CUtlMemoryIjEE
@@ -4900,7 +4916,6 @@ ${LANGUAGE}
 20CGameActionVerifyApp
 20CGetTouchIconDataMsg
 20CHTMLBaseProtoBufMsg
-20CInputLatencyTestMsg
 20CInputMouseMotionMsg
 20CJSMethodCallHandlerI11CHTMLWindowJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI11CHTMLWindowJb9CSmartPtrI18CJSCallbackPromiseEEE
@@ -5586,6 +5601,7 @@ ${LANGUAGE}
 24CCryptoKeyBase_RawBuffer
 24CDirWatcherPollingThread
 24CDisplayMarketingMessage
+24CDynamicBitrateEstimator
 24CECKeyExchangePrivateKey
 24CEconItem_AssetAccessory
 24CEnableHighResCaptureMsg
@@ -5853,6 +5869,7 @@ ${LANGUAGE}
 27CRemoteClient_ClientDetails
 27CRemoteClient_DeviceDetails
 27CReservationPositionMessage
+27CSetSupportedColorspacesMsg
 27CShader_SendShader_Response
 27CSharedConnectionController
 27CSteamTV_AddChatBan_Request
@@ -8442,9 +8459,11 @@ ${LANGUAGE}
 >/dev/null
 >= or is NULL
 >>> Audio deltas: first audio frame %0.6fs, first video frame %0.6fs, first video PTS %0.6fs. Resulting first audio sample is %lld (%0.6fs)
+>>> Capture SDR white level set to %.0f nits
 >>> Capture colorspace set to %s
 >>> Capture method set to %s
 >>> Capture resolution set to %dx%d
+>>> Client HDR display %s
 >>> Client video decoder set to %s
 >>> Closing session due to losing video stream
 >>> Closing session due to resolution change old=%ux%u, new=%ux%u
@@ -10839,6 +10858,7 @@ CGameStreamManager::OnCancelStreamingAudio
 CGameStreamManager::OnControllerActionSetChanged
 CGameStreamManager::OnControllerActionSetLayerChanged
 CGameStreamManager::OnControllerConfigLoaded
+CGameStreamManager::OnDisplayHDRInfoChanged
 CGameStreamManager::OnFocusWindowChanged
 CGameStreamManager::OnLicensesUpdated
 CGameStreamManager::OnPlaybackStatusHasChanged
@@ -10865,6 +10885,7 @@ CGameStreamManager::OnStopBigPictureForStreaming
 CGameStreamManager::OnStopStreamSession
 CGameStreamManager::OnStreamTransportSignal
 CGameStreamManager::OnStreamingControllerPersonalizationUpdated
+CGameStreamManager::OnSystemPerfStateUpdated
 CGameStreamManager::OnUnlockH264Result
 CGameStreamManager::OnVRConnectionReady
 CGameStreamManager::OnVRHeadsetStreamingEnabledChanged
@@ -17882,6 +17903,7 @@ Last-Modified
 LastInstallFolderIndex
 LastName
 Latam_Spanish
+Latching manual GPU clock: %d MHz
 Latin
 Latvian
 Launch
@@ -18612,11 +18634,13 @@ N18CGameStreamManager40CCallbackInternal_OnBroadcastUploadStartE
 N18CGameStreamManager40CCallbackInternal_OnBroadcastWebRTCStartE
 N18CGameStreamManager40CCallbackInternal_OnCancelStreamingAudioE
 N18CGameStreamManager40CCallbackInternal_OnShowOnScreenKeyboardE
+N18CGameStreamManager41CCallbackInternal_OnDisplayHDRInfoChangedE
 N18CGameStreamManager41CCallbackInternal_OnPrepareStreamingAudioE
 N18CGameStreamManager41CCallbackInternal_OnStreamTransportSignalE
 N18CGameStreamManager41CCallbackInternal_OnVRVRLinkActiveChangedE
 N18CGameStreamManager42CCallbackInternal_OnControllerConfigLoadedE
 N18CGameStreamManager42CCallbackInternal_OnRemotePlayInviteResultE
+N18CGameStreamManager42CCallbackInternal_OnSystemPerfStateUpdatedE
 N18CGameStreamManager43CCallbackInternal_OnAppLifetimeNotificationE
 N18CGameStreamManager43CCallbackInternal_OnRemoteClientStartStreamE
 N18CGameStreamManager44CCallbackInternal_OnPlaybackStatusHasChangedE
@@ -19608,7 +19632,7 @@ NVENC - Failed to get encoded frame: %d (NVIDIA graphics driver reset?)
 NVENC - Failed to lock input buffer: %d
 NVENC - Failed to unlock encoded frame: %d
 NVENC - Failed to unlock input buffer: %d
-NVENC - Failed to update encoder configuration: %d
+NVENC - Failed to update encoder configuration: %d (%s)
 NVENC - Missing queued value to make DTS with b-frames enabled
 NVENC - No CUDA support
 NVENC - No available input buffers
@@ -20007,7 +20031,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 16 2026 21:56:04
+Oct 21 2026 23:19:31
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -21558,6 +21582,7 @@ Request Timeout
 Request being dispatched not in m_mapRequestsAwaitingCompletion
 Request for %s, required conditional validation and found new data.\n
 Request for %s, required conditional validation, but is using cached data.\n
+Request for manual GPU clock is ignored while VR playtime mode is active
 Request has been canceled
 Request host %s with absolute URL %s appears invalid
 Request host %s with relative URL %s appears invalid
@@ -21625,6 +21650,7 @@ RestartNoSandbox
 RestartWebhelper
 Restarts Steam Windows service
 Restored data doesn't match checksum
+Restoring manual GPU clock: %d MHz
 Restricted country
 Restricted device
 ResultDetail
@@ -22615,10 +22641,7 @@ Set VRS enabled: %d
 Set battery charge limit enabled: %d
 Set battery charge limit: %d
 Set desktop session: %s
-Set manual gpu clock enabled: %d
-Set manual gpu clock hz: %d
 Set offline mode: %d
-Set platform performance profile: %s
 Set reload wifi driver on sleep: %d
 Set screen reader enabled: %d
 Set screen reader locale: %s
@@ -22671,6 +22694,7 @@ SetFont
 SetForceWPASupplicant
 SetForeignDefaultValueHandler
 SetHDRVisualization
+SetHalfRateShading
 SetHdmiCecEnabled: %u %u
 SetHostname
 SetInt32
@@ -22750,8 +22774,12 @@ Setting %s bitrate to %d Kbit/s
 Setting %s bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting %s needs to have both min and max set
 Setting LED brightness to: %d
+Setting auto GPU clock
 Setting capture only gameID to %llu\n
 Setting display state: %d
+Setting manual GPU clock: %d MHz
+Setting platform Performance Profile: %s
+Setting powersave GPU clock
 Setting target framerate: %.2f [timing: game %.2f, capture %.2f, convert %.2f, encode %.2f, network %.2f, decode %.2f, display %.2f%s]
 Setting target property: type: '%s' name: '%s'
 SettingChanged
@@ -26074,6 +26102,7 @@ YldSetExtendedCECSuspendTV
 YldSetExtendedCECWakeDevice
 YldSetExtendedCECWakeTV
 YldSetForceWpaSupplicant
+YldSetGPUPerformanceLevel
 YldSetLoginAdvertising
 YldSetLowPowerModeEnabled
 YldSetPlatformPerformanceProfile
@@ -30060,8 +30089,7 @@ ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
 echar >= schar
-echo "%s" | sudo -n tee "%s"
-echo %s | tee %s
+echo %s | sudo -n tee %s
 echo_console
 eckey_param2type
 eckey_param_decode
@@ -30592,6 +30620,7 @@ fr_FR
 fragmented client hello
 frame
 frame->hd.type == NGHTTP2_HEADERS
+frameStats.m_pList
 frame_brGrip
 frame_captiongrip
 frame_close
@@ -36333,6 +36362,7 @@ m_VecArgs[i].m_sName
 m_VecPFrameFunction[iFrameType]
 m_VecPVecFuncCallReturnBuffer
 m_VecURLLabels
+m_VirtualHere
 m_VisibleItems
 m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
 m_VisibleItems.IsValidIndex( iItem )
@@ -36359,16 +36389,20 @@ m_bServerDebugTextPending
 m_bSorted
 m_bSubmitted
 m_bVideoSourceHardwareEncodingActive == BIsEncodedBitstreamFormat( VideoFrame.m_Header.m_eFormat )
+m_bitrateEstimator
 m_bitsMigratedBuckets
 m_bufAudioCodecData
+m_bufAuthToken
 m_bufBlend
 m_bufBody
 m_bufBody.TellPut() == 0
 m_bufCodecData
+m_bufCombinedFrame
 m_bufCursor
 m_bufData
 m_bufDecryptedRecvBuffer
 m_bufFrameData
+m_bufFrameHeader
 m_bufIconData
 m_bufLastPPS
 m_bufLastSPS
@@ -36656,6 +36690,7 @@ m_mapWindows
 m_memMixedAudio
 m_memNodes
 m_memPSK
+m_memPyrowaveShards
 m_mixer
 m_mixer.GetBytesPerChannel() == m_pVoiceRecorder->GetBytesPerChannel()
 m_mixer.GetBytesPerChannel() == sizeof( opus_int16 )
@@ -36837,6 +36872,7 @@ m_pSettingsController
 m_pSettingsValidationController
 m_pSharedCaptureSync
 m_pSharedConnectionController
+m_pSharedMemoryInput
 m_pShortcut
 m_pShutdownController
 m_pSignaling == pSignaling
@@ -36907,6 +36943,7 @@ m_pchExistingText
 m_pfnCallback
 m_pfnOnLogonInfoChanged
 m_pfnOnMessageReceived
+m_pingEntries
 m_pkv
 m_pkvCommand
 m_pkvData
@@ -36974,6 +37011,7 @@ m_sCommunityCDNURL
 m_sCommunityImagesURL
 m_sCommunityURL
 m_sConfigName
+m_sConnectedString
 m_sCurrentFilename
 m_sCurrentURL
 m_sCustomImageFolder
@@ -36983,6 +37021,7 @@ m_sDeveloperName
 m_sDeveloperURL
 m_sDeviceName
 m_sDevicePath
+m_sDeviceVersion
 m_sDragURL
 m_sExtraMapping
 m_sFailureInfo
@@ -37018,6 +37057,7 @@ m_sProductName
 m_sRampDownImagePrefix
 m_sRampUpImagePrefix
 m_sRecoverInstallPath
+m_sRemoteAddress
 m_sScreenShotFolder
 m_sServerCaptureMethod
 m_sSettingName
@@ -37041,6 +37081,7 @@ m_sUserName
 m_sVROverlayKey
 m_sVanityURL
 m_sVersion
+m_sVirtualHereRemoteHostname
 m_sWaitDetails
 m_sWaitForProcessName
 m_sWorkItemName
@@ -37299,6 +37340,8 @@ m_vecCurrentUserDataChanged
 m_vecDashboardThumbnailChangeCallbacks
 m_vecDebugText
 m_vecDecryptedRecvBufferIndividualEnds
+m_vecDelayedInputs
+m_vecDelayedInputs[ iInput ].m_sText
 m_vecDesiredWindows
 m_vecDiagnosticInfoChangeHandlers
 m_vecDisplayBrightnessChangeHandlers
@@ -37367,6 +37410,7 @@ m_vecParentalSettingsChanged
 m_vecPendingAchievementsCallbacks
 m_vecPendingAppContentBetaRequests
 m_vecPendingClipRequests
+m_vecPendingDataPackets
 m_vecPendingJobPromises
 m_vecPendingManualGameRecordingDeletes
 m_vecPendingMessages
@@ -37383,8 +37427,14 @@ m_vecProcesses
 m_vecPromiseAwaitingConnect
 m_vecPromiseResolutions
 m_vecProxyOverrideExcludedHosts
+m_vecPyrowaveBlockParity
+m_vecPyrowaveBlockParityStart
+m_vecPyrowaveChunkSizes
+m_vecPyrowaveParityOrder
 m_vecPyrowaveParityOrder.Count() == nTotalParity
+m_vecPyrowaveShardPtrs
 m_vecQueued
+m_vecQueuedDevices
 m_vecQueuedMessages
 m_vecQueuedNotifications
 m_vecRedirectStack
@@ -37407,11 +37457,13 @@ m_vecSections.IsValidIndex(iSection)
 m_vecSections[i].m_sName
 m_vecSettingsChangeHandlers
 m_vecSettingsChangedCallbacks
+m_vecSharedDevices
 m_vecShortcutIconsToRefetch
 m_vecShowControllerLayoutPreviewCallbacks
 m_vecShowMessageDialogCallbacks
 m_vecShowPendingGiftDialogCallbacks
 m_vecSortedContents
+m_vecStartingPackets
 m_vecStartupErrorCallbacks
 m_vecSteamDeckCompatTestResults
 m_vecSteamFrameCompatTestResults
@@ -37421,7 +37473,9 @@ m_vecStoreCategories
 m_vecStoreTags
 m_vecStreamingSessions
 m_vecStyleChangedCallbacks
+m_vecSupportedAudioCodecs
 m_vecSupportedAudioCodecs.Count() > 0
+m_vecSupportedVideoCodecs
 m_vecSupportedVideoCodecs.Count() > 0
 m_vecTimeZoneChangedCallbacks
 m_vecURLChangeCallbacks
@@ -39262,6 +39316,7 @@ postdata
 power-saver-enabled
 power-state
 powered
+powersave
 powersaveGamescopeFrameratelimit
 powersaveGamescopeResolution
 powersaveSteamOSManagerCustomProfile
@@ -41013,12 +41068,12 @@ steam-pipewire-stream
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:'%s' string:'%s'
+steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.DisplayManager  /org/freedesktop/DisplayManager/Seat0 \t\torg.freedesktop.DisplayManager.Seat.SwitchToUser string:%s string:%s
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
 steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true
-steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone string:"%s" boolean:false
-steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone string:"%s"
+steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.freedesktop.timedate1 /org/freedesktop/timedate1 org.freedesktop.timedate1.SetTimezone %s boolean:false
+steam-runtime-launch-client --alongside-steam -- dbus-send --system --print-reply --dest=org.gnome.SettingsDaemon.DateTimeMechanism / org.gnome.SettingsDaemon.DateTimeMechanism.SetTimezone %s
 steam-runtime-launch-client --alongside-steam -- lsb_release -d -s
 steam-runtime-launch-client --alongside-steam -- lspci -mm -n
 steam-runtime-launch-client --alongside-steam -- steamos-session-select %s
@@ -41576,6 +41631,7 @@ string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool ena
 string literal
 string too long
 string too short
+string:%s
 string::string
 string=
 string_value
@@ -41631,7 +41687,7 @@ subtype mismatch
 success
 successful
 successful.\n
-sudo -n chmod a+w "%s"
+sudo -n chmod a+w %s
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
 suggested-default-performance-profile
