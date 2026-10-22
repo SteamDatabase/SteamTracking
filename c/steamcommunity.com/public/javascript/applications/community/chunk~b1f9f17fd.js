@@ -40502,11 +40502,13 @@
                 className: _().RemovedLink,
                 children: _,
               });
-          return (0, _.jsx)(_._, {
-            toolTipContent: (0, _.jsx)("p", {
+          return (0, _.jsx)("span", {
+            children: (0, _.jsx)(_._, {
+              toolTipContent: (0, _.jsx)("p", {
+                children: _,
+              }),
               children: _,
             }),
-            children: _,
           });
         }
         var _ = __webpack_require__("chunkid");

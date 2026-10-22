@@ -38122,9 +38122,11 @@
                 children: e,
               })
             : (0, t.jsx)("span", { className: Fn().RemovedLink, children: e });
-          return (0, t.jsx)(Cr.he, {
-            toolTipContent: (0, t.jsx)("p", { children: r }),
-            children: d,
+          return (0, t.jsx)("span", {
+            children: (0, t.jsx)(Cr.he, {
+              toolTipContent: (0, t.jsx)("p", { children: r }),
+              children: d,
+            }),
           });
         }
         var yp = a(43434);

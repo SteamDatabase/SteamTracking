@@ -75856,7 +75856,7 @@
               ..._
             } = _,
             _ = _?.appid,
-            _ = _(_);
+            _ = _(_, _, _);
           if (!_) return _;
           const _ = (0, _.jsx)(_._, {
             ..._,
@@ -142557,25 +142557,13 @@ Status Code:` +
                       ),
                     ),
                   })));
-          let _, _;
-          switch (_.eListType) {
-            case "suggestions":
-              _ = "search-suggestion";
-              break;
-            case "recent":
-              (_ = "popular"), (_ = "recent");
-              break;
-            default:
-              (0, _._)(_.eListType, `Unhandled list type ${_.eListType}`);
-          }
+          const { feature: _, mainFeature: _ } = _(_.eListType);
           return (0, _.jsxs)(_._, {
-            controller: "search",
-            method: "suggest",
-            submethod: "",
+            ..._,
             feature: _,
             children: [
               (0, _.jsx)(_._, {
-                feature: _ ?? _,
+                feature: _,
                 children: _,
               }),
               _,
@@ -142586,6 +142574,33 @@ Status Code:` +
               }),
             ],
           });
+        }
+        const _ = {
+          controller: "search",
+          method: "suggest",
+          submethod: "",
+        };
+        function _(_) {
+          switch (_) {
+            case "suggestions":
+              return {
+                feature: "search-suggestion",
+                mainFeature: "search-suggestion",
+              };
+            case "recent":
+              return {
+                feature: "recent",
+                mainFeature: "popular",
+              };
+            default:
+              return (
+                (0, _._)(_, `Unhandled list type ${_}`),
+                {
+                  feature: void 0,
+                  mainFeature: void 0,
+                }
+              );
+          }
         }
         function _(_ = !0) {
           return _(10, _, _);
@@ -142649,15 +142664,21 @@ Status Code:` +
             }, [_, _, _, _, _, _]);
           return _(_);
         }
-        function _(_, _) {
+        function _() {
           const _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (0, _._)(_, _);
+            _ = (0, _._)();
           return _.useCallback(
-            async (_) => {
+            async (_, _) => {
               const _ = await _.fetchQuery((0, _._)(_, _));
               return _
-                ? ((window.location.href = `${_._.STORE_BASE_URL}${_.store_url_path}?snr=${_}`),
+                ? ((window.location.href = (0, _._)(
+                    {
+                      ..._,
+                      ..._,
+                    },
+                    `${_._.STORE_BASE_URL}${_.store_url_path}`,
+                  )),
                   !0)
                 : !1;
             },
@@ -142809,8 +142830,25 @@ Status Code:` +
                 if (_ == "advancedsearch") return !1;
                 {
                   const _ = _ == "apps" ? _.rgMainItems : _.rgSubSectionItems;
-                  if (_ !== void 0 && _ && _ < _.length && _ === "keyboard")
-                    return _(_[_].item_id), !0;
+                  if (_ !== void 0 && _ && _ < _.length && _ === "keyboard") {
+                    const { feature: _, mainFeature: _ } = _(_.eListType),
+                      _ =
+                        _ == "apps"
+                          ? {
+                              feature: _,
+                              depth: _ + 1,
+                            }
+                          : {
+                              feature: _,
+                            };
+                    return (
+                      _(_[_].item_id, {
+                        ..._,
+                        ..._,
+                      }),
+                      !0
+                    );
+                  }
                 }
                 break;
               }
@@ -142893,10 +142931,13 @@ Status Code:` +
                 active: _ = !1,
               } = _,
               _ = _.useMemo(() => _("apps", _), [_, _]);
-            return (0, _.jsx)(_, {
-              itemid: _,
-              active: _,
-              ..._,
+            return (0, _.jsx)(_._, {
+              depth: _ + 1,
+              children: (0, _.jsx)(_, {
+                itemid: _,
+                active: _,
+                ..._,
+              }),
             });
           }),
           _ = _.memo(function (_) {
