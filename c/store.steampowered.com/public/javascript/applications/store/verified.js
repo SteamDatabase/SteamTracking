@@ -4,12 +4,12 @@
     {
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           const { strImageToken: _, language: _, strAltText: _ } = _,
             _ = (0, _._)(_, _);
@@ -28,28 +28,28 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_, _) {
           return `${_}/${_}`;
         }
-        const _ = {},
-          _ = _.createContext(_);
+        const module = {},
+          module = _.createContext(_);
         function _(_) {
           const { resolutions: _, children: _ } = _;
           return jsx(_.Provider, {
@@ -60,8 +60,8 @@
         function _() {
           return _.useContext(_);
         }
-        const _ = new RegExp(
-          `${_._.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
+        const module = new RegExp(
+          `${_.module.replace(/[{}]/g, "\\$&")}/(\\d+)/([0-9a-f]+\\.[a-z0-9]+)`,
           "gi",
         );
         function _(_) {
@@ -105,7 +105,7 @@
           }
           return _;
         }
-        const _ = {
+        const module = {
           GetBaseURL() {
             return `${_._.CLAN_CDN_ASSET_URL}images/`;
           },
@@ -273,7 +273,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
         });
@@ -289,7 +289,7 @@
           uploaded_time;
           loc_group_id;
         }
-        var _ = ((_) => (
+        var module = ((_) => (
           (_.full = ""),
           (_.background_main = "_960x311"),
           (_.background_mini = "_480x156"),
@@ -297,7 +297,7 @@
           (_.spotlight_main = "_1054x230"),
           _
         ))(_ || {});
-        const _ = [
+        const module = [
           "localized_image_group",
           "link_capsule",
           "product_mobile_banner_override",
@@ -309,7 +309,7 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
         });
         async function _(_) {
@@ -336,20 +336,20 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           if (_) {
             if ("appid" in _) return "app";
@@ -445,14 +445,14 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = {
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
+        const module = {
             name: "trailerPrefs",
             options: {
               path: "/",
@@ -463,7 +463,7 @@
               isTechnicallyNecessary: !0,
             },
           },
-          _ = {
+          module = {
             flVolume: 0.8,
             bMuted: !0,
           };
@@ -515,35 +515,35 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__.module(_),
+          module = __webpack_require__("chunkid");
         function _(_) {
           const { _: _, bPopOutTrailerPlayback: _ } = _,
             { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_),
+            _ = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
@@ -567,15 +567,13 @@
                 fnTogglePlayTrailer: _,
               })
             : null;
-          return !_ &&
-            !(_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
+          return !_ && !_?.length
             ? null
             : (0, _.jsxs)("div", {
                 className: (0, _._)(_().HilightGrid, _().MediaContainer),
                 children: [
                   (0, _.jsx)(_, {
                     elFeaturedInCenter: _,
-                    storeItemScreenshots: _,
                     trailer: _,
                     _: _,
                     name: _.name || "",
@@ -602,58 +600,54 @@
               _: _,
               name: _,
               trailer: _,
-              storeItemScreenshots: _,
               featureElementclassName: _,
               bUseTrailerAsFirstThumb: _,
               bNoScreenShotModals: _,
             } = _,
             [_, _] = _.useState(void 0),
             [_, _] = (0, _._)(),
-            _ = (0, _._)(),
+            _ = (0, _._)(_),
             _ = (0, _.useRef)(null),
             [_, _] = (0, _.useState)(0);
           if (!_) return null;
           const _ = _ || (_ !== void 0 && _ !== -1) ? _ : 0,
             _ = new Array(),
             _ = new Array();
-          _ &&
-            _ &&
-            (_.push(
-              (0, _.jsx)(
-                _,
-                {
-                  trailer: _,
-                  bPlayVideo: !1,
-                  fnTogglePlayTrailer: () => {},
-                  onMouseEnter: () => _(0),
-                  onMouseLeave: () => {
-                    const _ = _.current;
-                    _ && _(_.currentTime);
-                  },
-                },
-                "trail_thumb_",
-              ),
-            ),
-            _.push(
-              (0, _.jsx)(
-                _,
-                {
-                  ref: _,
-                  name: _,
-                  trailer: _,
-                  bControls: !1,
-                  bPlayVideo: !0,
-                  startTime: _,
-                  fnTogglePlayTrailer: () => {},
-                },
-                "trail_inline",
-              ),
-            ));
-          const _ = (
-            _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
-          )?.filter(Boolean);
           if (
-            (_?.forEach((_, _) => {
+            (_ &&
+              _ &&
+              (_.push(
+                (0, _.jsx)(
+                  _,
+                  {
+                    trailer: _,
+                    bPlayVideo: !1,
+                    fnTogglePlayTrailer: () => {},
+                    onMouseEnter: () => _(0),
+                    onMouseLeave: () => {
+                      const _ = _.current;
+                      _ && _(_.currentTime);
+                    },
+                  },
+                  "trail_thumb_",
+                ),
+              ),
+              _.push(
+                (0, _.jsx)(
+                  _,
+                  {
+                    ref: _,
+                    name: _,
+                    trailer: _,
+                    bControls: !1,
+                    bPlayVideo: !0,
+                    startTime: _,
+                    fnTogglePlayTrailer: () => {},
+                  },
+                  "trail_inline",
+                ),
+              )),
+            _?.forEach((_, _) => {
               if ((_ || _ > 0) && _.length < 3) {
                 const _ = (0, _._)(_, "thumb"),
                   _ = (0, _._)(_, "600x338"),
@@ -954,36 +948,36 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__.module(_),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           const {
               _: _,
@@ -1043,13 +1037,13 @@
               })
             : null;
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        const _ = (0, _._)((_) => {
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__.module(_),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
+        const module = (0, _.module)((_) => {
           const { _: _, type: _ } = _,
             _ = (0, _._)(_, _),
             {
@@ -1254,18 +1248,18 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
         });
-        const _ = "{STEAM_CLAN_IMAGE}",
-          _ = "{STEAM_CLAN_LOC_IMAGE}",
-          _ = "{STEAM_APP_IMAGE}";
+        const module = "{STEAM_CLAN_IMAGE}",
+          module = "{STEAM_CLAN_LOC_IMAGE}",
+          module = "{STEAM_APP_IMAGE}";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
           _: () => _,
           _: () => _,
@@ -1273,8 +1267,8 @@
           _: () => _,
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           const _ = _.toLowerCase();
           if (_.endsWith(".jpg") || _.endsWith(".jpeg")) return "image/jpeg";
@@ -1423,11 +1417,11 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           const {
               rgSources: _,
@@ -1495,20 +1489,20 @@
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
-        __webpack_require__._(module_exports),
-          __webpack_require__._(module_exports, {
+        __webpack_require__.module(module_exports),
+          __webpack_require__.module(module_exports, {
             default: () => _,
           });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid");
         function _(_) {
           return (0, _._)()
             ? (0, _.jsx)(_._, {
@@ -1523,19 +1517,19 @@
                   ..._,
                 });
         }
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_);
+        var module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__("chunkid"),
+          module = __webpack_require__.module(_);
         function _(_) {
           const { appid: _, strUrlOverride: _ } = _,
             _ = (0, _._)(_),

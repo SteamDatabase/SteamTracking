@@ -2905,7 +2905,7 @@
         function _(_) {
           const { _: _, bPopOutTrailerPlayback: _ } = _,
             { data: _ } = (0, _._)(_),
-            { data: _ } = (0, _._)(_),
+            _ = (0, _._)(_),
             { data: _ } = (0, _._)(_),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
@@ -2929,15 +2929,13 @@
                 fnTogglePlayTrailer: _,
               })
             : null;
-          return !_ &&
-            !(_ && _.all_ages_screenshots && _.all_ages_screenshots.length > 0)
+          return !_ && !_?.length
             ? null
             : (0, _.jsxs)("div", {
                 className: (0, _._)(_().HilightGrid, _().MediaContainer),
                 children: [
                   (0, _.jsx)(_, {
                     elFeaturedInCenter: _,
-                    storeItemScreenshots: _,
                     trailer: _,
                     _: _,
                     name: _.name || "",
@@ -2964,58 +2962,54 @@
               _: _,
               name: _,
               trailer: _,
-              storeItemScreenshots: _,
               featureElementclassName: _,
               bUseTrailerAsFirstThumb: _,
               bNoScreenShotModals: _,
             } = _,
             [_, _] = _.useState(void 0),
             [_, _] = (0, _._)(),
-            _ = (0, _._)(),
+            _ = (0, _._)(_),
             _ = (0, _.useRef)(null),
             [_, _] = (0, _.useState)(0);
           if (!_) return null;
           const _ = _ || (_ !== void 0 && _ !== -1) ? _ : 0,
             _ = new Array(),
             _ = new Array();
-          _ &&
-            _ &&
-            (_.push(
-              (0, _.jsx)(
-                _,
-                {
-                  trailer: _,
-                  bPlayVideo: !1,
-                  fnTogglePlayTrailer: () => {},
-                  onMouseEnter: () => _(0),
-                  onMouseLeave: () => {
-                    const _ = _.current;
-                    _ && _(_.currentTime);
-                  },
-                },
-                "trail_thumb_",
-              ),
-            ),
-            _.push(
-              (0, _.jsx)(
-                _,
-                {
-                  ref: _,
-                  name: _,
-                  trailer: _,
-                  bControls: !1,
-                  bPlayVideo: !0,
-                  startTime: _,
-                  fnTogglePlayTrailer: () => {},
-                },
-                "trail_inline",
-              ),
-            ));
-          const _ = (
-            _ ? _?.all_ages_screenshots : _?.mature_content_screenshots
-          )?.filter(Boolean);
           if (
-            (_?.forEach((_, _) => {
+            (_ &&
+              _ &&
+              (_.push(
+                (0, _.jsx)(
+                  _,
+                  {
+                    trailer: _,
+                    bPlayVideo: !1,
+                    fnTogglePlayTrailer: () => {},
+                    onMouseEnter: () => _(0),
+                    onMouseLeave: () => {
+                      const _ = _.current;
+                      _ && _(_.currentTime);
+                    },
+                  },
+                  "trail_thumb_",
+                ),
+              ),
+              _.push(
+                (0, _.jsx)(
+                  _,
+                  {
+                    ref: _,
+                    name: _,
+                    trailer: _,
+                    bControls: !1,
+                    bPlayVideo: !0,
+                    startTime: _,
+                    fnTogglePlayTrailer: () => {},
+                  },
+                  "trail_inline",
+                ),
+              )),
+            _?.forEach((_, _) => {
               if ((_ || _ > 0) && _.length < 3) {
                 const _ = (0, _._)(_, "thumb"),
                   _ = (0, _._)(_, "600x338"),
