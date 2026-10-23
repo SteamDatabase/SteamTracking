@@ -89310,13 +89310,11 @@
             _ = _._.Localize("#Achievements_Compare_FriendPickerPlaceholder"),
             _ = (0, _.useCallback)(
               (_, _) => {
-                const _ = new RegExp(_, "i"),
+                const _ = _.toLocaleLowerCase(),
                   _ = _[_];
                 return (
-                  (_?.name && _.test(_.name)) ||
-                  !1 ||
-                  (_?.nickname && _.test(_.nickname)) ||
-                  !1
+                  !!_?.name?.toLocaleLowerCase().includes(_) ||
+                  !!_?.nickname?.toLocaleLowerCase().includes(_)
                 );
               },
               [_],
@@ -91610,9 +91608,10 @@
             ),
             _ = (0, _.useCallback)((_) => _((_) => new Set(_).add(_)), []),
             _ = (0, _.useMemo)(() => {
-              const _ = new RegExp(`.*${_}.*`, "i");
+              const _ = _.toLocaleLowerCase();
               return (_) =>
-                _.test(_?.name ?? "") || _.test(_?.description ?? "");
+                (_?.name ?? "").toLocaleLowerCase().includes(_) ||
+                (_?.description ?? "").toLocaleLowerCase().includes(_);
             }, [_]),
             _ = (0, _._)(_),
             _ = (0, _.useMemo)(() => {
@@ -557611,6 +557610,7 @@ Status Code:` +
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -557710,6 +557710,11 @@ Status Code:` +
                     },
                     spatialize_surround: {
                       _: 6,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    per_device_mic_processing: {
+                      _: 7,
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
@@ -559821,6 +559826,490 @@ Status Code:` +
             return "CAudio_SetSpatializeSurroundEnabled_Response";
           }
         }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    builtin: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_GetEchoCancellationEnabledForDevice_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.enabled || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    enabled: {
+                      _: 1,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_GetEchoCancellationEnabledForDevice_Response";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    builtin: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    enabled: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_SetEchoCancellationEnabledForDevice_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_SetEchoCancellationEnabledForDevice_Response";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    builtin: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_GetNoiseSuppressionEnabledForDevice_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.enabled || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    enabled: {
+                      _: 1,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_GetNoiseSuppressionEnabledForDevice_Response";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    builtin: {
+                      _: 2,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    enabled: {
+                      _: 3,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_SetNoiseSuppressionEnabledForDevice_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CAudio_SetNoiseSuppressionEnabledForDevice_Response";
+          }
+        }
         var _;
         ((_) => {
           _.GetSupportedFeaturesHandler = {
@@ -560782,7 +561271,219 @@ Status Code:` +
                   )
             );
           }
-          _.SendMsgSetSpeakerConfiguration = _;
+          (_.SendMsgSetSpeakerConfiguration = _),
+            (_.GetEchoCancellationEnabledForDeviceHandler = {
+              name: "Audio.GetEchoCancellationEnabledForDevice#1",
+              request: _,
+              response: _,
+            });
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.GetEchoCancellationEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          _.GetEchoCancellationEnabledForDevice = _;
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.GetEchoCancellationEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          (_.SendMsgGetEchoCancellationEnabledForDevice = _),
+            (_.SetEchoCancellationEnabledForDeviceHandler = {
+              name: "Audio.SetEchoCancellationEnabledForDevice#1",
+              request: _,
+              response: _,
+            });
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.SetEchoCancellationEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          _.SetEchoCancellationEnabledForDevice = _;
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.SetEchoCancellationEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          (_.SendMsgSetEchoCancellationEnabledForDevice = _),
+            (_.GetNoiseSuppressionEnabledForDeviceHandler = {
+              name: "Audio.GetNoiseSuppressionEnabledForDevice#1",
+              request: _,
+              response: _,
+            });
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.GetNoiseSuppressionEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          _.GetNoiseSuppressionEnabledForDevice = _;
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.GetNoiseSuppressionEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          (_.SendMsgGetNoiseSuppressionEnabledForDevice = _),
+            (_.SetNoiseSuppressionEnabledForDeviceHandler = {
+              name: "Audio.SetNoiseSuppressionEnabledForDevice#1",
+              request: _,
+              response: _,
+            });
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.SetNoiseSuppressionEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          _.SetNoiseSuppressionEnabledForDevice = _;
+          function _(_, _) {
+            return (
+              (_ = _ || (0, _._)().GetDefaultTransport()),
+              _ == null
+                ? new Promise((_, _) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      _(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : _.SendMsg(
+                    "Audio.SetNoiseSuppressionEnabledForDevice#1",
+                    (0, _._)(_, _),
+                    _,
+                    {
+                      ePrivilege: 1,
+                      eClientExecutionSite: 1,
+                    },
+                  )
+            );
+          }
+          _.SendMsgSetNoiseSuppressionEnabledForDevice = _;
         })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -560837,6 +561538,8 @@ Status Code:` +
           m_bSupportsHdmiCec;
           m_bHdmiCecEnabled;
           m_bHdmiCecActive;
+          m_bEchoCancellationEnabled;
+          m_bNoiseSuppressionEnabled;
           m_mapVolumes = new Map();
           m_rtLastUpdate = void 0;
           m_VolumeChangedSubscribable = new _._();
@@ -560890,9 +561593,17 @@ Status Code:` +
               (this.m_bIsController = _.bIsController),
               (this.m_bSupportsHdmiCec = _.bSupportsHdmiCec),
               (this.m_bHdmiCecEnabled = _.bHdmiCecEnabled),
-              (this.m_bHdmiCecActive = _.bHdmiCecActive);
+              (this.m_bHdmiCecActive = _.bHdmiCecActive),
+              this.UpdateEchoCancellationEnabled(),
+              this.UpdateNoiseSuppressionEnabled();
           }
           Update(_) {
+            const _ =
+              _.sName != this.m_sName ||
+              (_.bHasInput && !this.m_bHasInput) ||
+              (_.bHasInput &&
+                (this.m_bEchoCancellationEnabled === void 0 ||
+                  this.m_bNoiseSuppressionEnabled == null));
             (this.m_sName = _.sName),
               (this.m_bHasInput = _.bHasInput),
               (this.m_bHasOutput = _.bHasOutput),
@@ -560904,7 +561615,10 @@ Status Code:` +
               (this.m_bSupportsHdmiCec = _.bSupportsHdmiCec),
               (this.m_bHdmiCecEnabled = _.bHdmiCecEnabled),
               (this.m_bHdmiCecActive = _.bHdmiCecActive),
-              (this.m_rtLastUpdate = Date.now() / 1e3);
+              (this.m_rtLastUpdate = Date.now() / 1e3),
+              _ &&
+                (this.UpdateEchoCancellationEnabled(),
+                this.UpdateNoiseSuppressionEnabled());
           }
           BOnboardAudio() {
             return _.includes(this.m_sName);
@@ -560988,6 +561702,38 @@ Status Code:` +
               (this.m_rtLastUpdate = Date.now() / 1e3),
               this.m_VolumeChangedSubscribable.Dispatch(_);
           }
+          get bEchoCancellationEnabled() {
+            return this.m_bEchoCancellationEnabled;
+          }
+          SetEchoCancellationEnabled(_) {
+            this.m_bEchoCancellationEnabled = _;
+          }
+          UpdateEchoCancellationEnabled() {
+            const _ = (0, _._)(!0).ON_FRAME && this.m_sName == "Built-in Audio";
+            _.GetEchoCancellationEnabledForDevice({
+              _: this.m_id,
+              builtin: _,
+            }).then((_) => {
+              _.BSuccess() &&
+                this.SetEchoCancellationEnabled(_.Body().enabled());
+            });
+          }
+          get bNoiseSuppressionEnabled() {
+            return this.m_bNoiseSuppressionEnabled;
+          }
+          SetNoiseSuppressionEnabled(_) {
+            this.m_bNoiseSuppressionEnabled = _;
+          }
+          UpdateNoiseSuppressionEnabled() {
+            const _ = (0, _._)(!0).ON_FRAME && this.m_sName == "Built-in Audio";
+            _.GetNoiseSuppressionEnabledForDevice({
+              _: this.m_id,
+              builtin: _,
+            }).then((_) => {
+              _.BSuccess() &&
+                this.SetNoiseSuppressionEnabled(_.Body().enabled());
+            });
+          }
         }
         _([_._], _.prototype, "m_rtLastUpdate", 2);
         class _ {
@@ -561055,6 +561801,7 @@ Status Code:` +
           m_bSupportsSpatializeSurround = !1;
           m_bSpatializeEnabled = !1;
           m_bSpatializeSurroundEnabled = !1;
+          m_bSupportsPerDeviceMicProcessing = !1;
           m_mapAudioDevices = new _._();
           m_mapAudioApps = new _._();
           m_VolumePressedSubscribable = new _._();
@@ -561105,6 +561852,8 @@ Status Code:` +
                 (this.m_bSupportsSpatialize = _.Body().spatialize()),
                 (this.m_bSupportsSpatializeSurround =
                   _.Body().spatialize_surround()),
+                (this.m_bSupportsPerDeviceMicProcessing =
+                  _.Body().per_device_mic_processing()),
                 this.m_bSupportsMonoDownmix &&
                   _.GetMonoDownmixEnabled({}).then((_) => {
                     _.BSuccess() &&
@@ -561174,6 +561923,9 @@ Status Code:` +
           }
           get bSupportsSpatializeSurround() {
             return this.m_bSupportsSpatializeSurround;
+          }
+          get bSupportsPerDeviceMicProcessing() {
+            return this.m_bSupportsPerDeviceMicProcessing;
           }
           get bSpatializeSurroundEnabled() {
             return this.m_bSpatializeSurroundEnabled;
@@ -561314,6 +562066,28 @@ Status Code:` +
               }),
               (this.m_bSpatializeSurroundEnabled = _);
           }
+          BEchoCancellationEnabled(_) {
+            return this.getDevice(_).bEchoCancellationEnabled || !1;
+          }
+          SetEchoCancellationEnabled(_, _, _) {
+            _.SetEchoCancellationEnabledForDevice({
+              _: _,
+              builtin: _,
+              enabled: _,
+            }),
+              this.getDevice(_).SetEchoCancellationEnabled(_);
+          }
+          BNoiseSuppressionEnabled(_) {
+            return this.getDevice(_).bNoiseSuppressionEnabled || !1;
+          }
+          SetNoiseSuppressionEnabled(_, _, _) {
+            _.SetNoiseSuppressionEnabledForDevice({
+              _: _,
+              builtin: _,
+              enabled: _,
+            }),
+              this.getDevice(_).SetNoiseSuppressionEnabled(_);
+          }
         }
         _([_._], _.prototype, "m_bAvailable", 2),
           _([_._], _.prototype, "m_activeOutputDeviceId", 2),
@@ -561331,6 +562105,7 @@ Status Code:` +
           _([_._], _.prototype, "m_bSupportsSpatializeSurround", 2),
           _([_._], _.prototype, "m_bSpatializeEnabled", 2),
           _([_._], _.prototype, "m_bSpatializeSurroundEnabled", 2),
+          _([_._], _.prototype, "m_bSupportsPerDeviceMicProcessing", 2),
           _([_._], _.prototype, "m_nSuppressVolumeOverlayRefCount", 2),
           _([_._.bound], _.prototype, "OnAudioDeviceAdded", 1),
           _([_._.bound], _.prototype, "OnAudioDeviceRemoved", 1),
@@ -561345,7 +562120,9 @@ Status Code:` +
           _([_._.bound], _.prototype, "SetBluetoothAudioPreference", 1),
           _([_._.bound], _.prototype, "ResetConfig", 1),
           _([_._.bound], _.prototype, "SetSpatializeEnabled", 1),
-          _([_._.bound], _.prototype, "SetSpatializeSurroundEnabled", 1);
+          _([_._.bound], _.prototype, "SetSpatializeSurroundEnabled", 1),
+          _([_._.bound], _.prototype, "SetEchoCancellationEnabled", 1),
+          _([_._.bound], _.prototype, "SetNoiseSuppressionEnabled", 1);
         const _ = new _();
         function _() {
           return (0, _._)(() => _.bAvailable);
@@ -561516,6 +562293,22 @@ Status Code:` +
                   ..._,
                 ]
               : _;
+        }
+        function _(_, _) {
+          const _ = (0, _._)(() => _.bSupportsPerDeviceMicProcessing),
+            _ = (0, _._)(() => _.BEchoCancellationEnabled(_)),
+            _ = (0, _._)(() => _.BNoiseSuppressionEnabled(_));
+          return [
+            _,
+            _,
+            _,
+            (_) => {
+              _.SetEchoCancellationEnabled(_, _, _);
+            },
+            (_) => {
+              _.SetNoiseSuppressionEnabled(_, _, _);
+            },
+          ];
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -701302,7 +702095,7 @@ Status Code:` +
               _.nSteamVersion > 0
                 ? _.nSteamVersion.toString()
                 : (0, _._)("#Settings_System_SteamLocalBuild"),
-            _ = parseInt(1792621704),
+            _ = parseInt(1792703754),
             _ = _ && (0, _._)(_, _, _),
             _ = _.sSteamBuildDate,
             _ = (0, _._)() ? " GMT+0000" : " GMT-0800",
@@ -732247,24 +733040,58 @@ Status Code:` +
               });
         }
         function _(_) {
-          const _ = _._.Input;
-          return (0, _._)(_).length == 0
+          const _ = _.device,
+            _ = _._.Input,
+            _ = (0, _._)(!0).ON_FRAME && _.GetName(_) == "Built-in Audio",
+            [_, _, _, _, _] = (0, _._)(_._, _),
+            _ = _;
+          return (0, _.jsxs)(_._, {
+            label: (0, _._)("#Audio_Header_Voice"),
+            children: [
+              (0, _.jsx)(_._, {
+                direction: _,
+              }),
+              (0, _.jsx)(_._, {
+                direction: _,
+                label: (0, _._)("#Audio_InputDevice"),
+              }),
+              _ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)("#Audio_EnableEchoCancellation"),
+                      description: (0, _._)(
+                        "#Audio_EnableEchoCancellation_Description",
+                      ),
+                      disabled: _,
+                      checked: _ || _,
+                      onChange: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)("#Audio_EnableNoiseSuppression"),
+                      description: (0, _._)(
+                        "#Audio_EnableNoiseSuppression_Description",
+                      ),
+                      checked: _,
+                      onChange: _,
+                    }),
+                  ],
+                }),
+            ],
+          });
+        }
+        function _(_) {
+          const _ = _._.Input,
+            _ = (0, _._)(_),
+            _ = (0, _._)(_);
+          return _.length == 0
             ? (0, _.jsx)(_._, {
                 disabled: !0,
                 icon: (0, _.jsx)(_.VolumeMuted, {}),
                 label: (0, _._)("#Audio_No_Input_Devices_Detected"),
               })
-            : (0, _.jsxs)(_._, {
-                label: (0, _._)("#Audio_Header_Voice"),
-                children: [
-                  (0, _.jsx)(_._, {
-                    direction: _,
-                  }),
-                  (0, _.jsx)(_._, {
-                    direction: _,
-                    label: (0, _._)("#Audio_InputDevice"),
-                  }),
-                ],
+            : _({
+                device: _,
               });
         }
         function _(_) {
@@ -741771,7 +742598,7 @@ Status Code:` +
             _ = (0, _._)(_),
             _ = !0,
             _ = _.nSteamVersion > 0 ? _.nSteamVersion.toString() : "local",
-            _ = parseInt(1792621704),
+            _ = parseInt(1792703754),
             _ = _ && (0, _._)(_, _, _),
             _ = ((_.nCPUHz || 0) / 1e3 / 1e3 / 1e3).toFixed(2) + " GHz",
             _ = (0, _._)(_.nSystemRAMSizeMB * 1024 * 1024, 0),

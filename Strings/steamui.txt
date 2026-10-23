@@ -1532,6 +1532,10 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE41CWebUIAudioSetBluetoothAudioPreferenceJob42CAudio_SetBluetoothAudioPreference_Request43CAudio_SetBluetoothAudioPreference_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE42CWebUIAudioGetSpatializeSurroundEnabledJob43CAudio_GetSpatializeSurroundEnabled_Request44CAudio_GetSpatializeSurroundEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE42CWebUIAudioSetSpatializeSurroundEnabledJob43CAudio_SetSpatializeSurroundEnabled_Request44CAudio_SetSpatializeSurroundEnabled_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE49CWebUIAudioGetEchoCancellationEnabledForDeviceJob50CAudio_GetEchoCancellationEnabledForDevice_Request51CAudio_GetEchoCancellationEnabledForDevice_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE49CWebUIAudioGetNoiseSuppressionEnabledForDeviceJob50CAudio_GetNoiseSuppressionEnabledForDevice_Request51CAudio_GetNoiseSuppressionEnabledForDevice_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE49CWebUIAudioSetEchoCancellationEnabledForDeviceJob50CAudio_SetEchoCancellationEnabledForDevice_Request51CAudio_SetEchoCancellationEnabledForDevice_ResponseE
+*18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE49CWebUIAudioSetNoiseSuppressionEnabledForDeviceJob50CAudio_SetNoiseSuppressionEnabledForDevice_Request51CAudio_SetNoiseSuppressionEnabledForDevice_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob32CSteamOSManager_GetState_Request33CSteamOSManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob36CSteamOSManager_FactoryReset_Request37CSteamOSManager_FactoryReset_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE37CWebUISteamOSManagerSetSteamVRPathJob38CSteamOSManager_SetSteamVRPath_Request39CSteamOSManager_SetSteamVRPath_ResponseE
@@ -1816,6 +1820,10 @@ ${LANGUAGE}
 *ZN22CSystemAudioController10InitializeEvE41CWebUIAudioSetBluetoothAudioPreferenceJob
 *ZN22CSystemAudioController10InitializeEvE42CWebUIAudioGetSpatializeSurroundEnabledJob
 *ZN22CSystemAudioController10InitializeEvE42CWebUIAudioSetSpatializeSurroundEnabledJob
+*ZN22CSystemAudioController10InitializeEvE49CWebUIAudioGetEchoCancellationEnabledForDeviceJob
+*ZN22CSystemAudioController10InitializeEvE49CWebUIAudioGetNoiseSuppressionEnabledForDeviceJob
+*ZN22CSystemAudioController10InitializeEvE49CWebUIAudioSetEchoCancellationEnabledForDeviceJob
+*ZN22CSystemAudioController10InitializeEvE49CWebUIAudioSetNoiseSuppressionEnabledForDeviceJob
 *ZN22CSystemAudioController10InitializeEvEUlRK26CAudio_ResetConfig_RequestR27CAudio_ResetConfig_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUlRK30CAudio_SupportsHdmiCec_RequestR31CAudio_SupportsHdmiCec_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUlRK32CAudio_GetHdmiCecEnabled_RequestR33CAudio_GetHdmiCecEnabled_ResponseE_
@@ -1835,6 +1843,10 @@ ${LANGUAGE}
 *ZN22CSystemAudioController10InitializeEvEUlRK42CAudio_SetBluetoothAudioPreference_RequestR43CAudio_SetBluetoothAudioPreference_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUlRK43CAudio_GetSpatializeSurroundEnabled_RequestR44CAudio_GetSpatializeSurroundEnabled_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUlRK43CAudio_SetSpatializeSurroundEnabled_RequestR44CAudio_SetSpatializeSurroundEnabled_ResponseE_
+*ZN22CSystemAudioController10InitializeEvEUlRK50CAudio_GetEchoCancellationEnabledForDevice_RequestR51CAudio_GetEchoCancellationEnabledForDevice_ResponseE_
+*ZN22CSystemAudioController10InitializeEvEUlRK50CAudio_GetNoiseSuppressionEnabledForDevice_RequestR51CAudio_GetNoiseSuppressionEnabledForDevice_ResponseE_
+*ZN22CSystemAudioController10InitializeEvEUlRK50CAudio_SetEchoCancellationEnabledForDevice_RequestR51CAudio_SetEchoCancellationEnabledForDevice_ResponseE_
+*ZN22CSystemAudioController10InitializeEvEUlRK50CAudio_SetNoiseSuppressionEnabledForDevice_RequestR51CAudio_SetNoiseSuppressionEnabledForDevice_ResponseE_
 *ZN22CSystemAudioController10InitializeEvEUljE0_
 *ZN22CSystemAudioController10InitializeEvEUljE_
 *ZN22CSystemAudioController27YldPlaySpeakerTestOnChannelERK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseEUlbE_
@@ -7795,6 +7807,10 @@ ${LANGUAGE}
 50CAccountHardware_SteamControllerGetConfig_Response
 50CAccountHardware_SteamControllerSetConfig_Response
 50CAccountHardware_VRCompatibilityCheck_Request_Pair
+50CAudio_GetEchoCancellationEnabledForDevice_Request
+50CAudio_GetNoiseSuppressionEnabledForDevice_Request
+50CAudio_SetEchoCancellationEnabledForDevice_Request
+50CAudio_SetNoiseSuppressionEnabledForDevice_Request
 50CAuthentication_AccessToken_GenerateForApp_Request
 50CAuthentication_GetAuthSessionsForAccount_Response
 50CAuthentication_NotifyRiskQuizResults_Notification
@@ -7839,6 +7855,10 @@ ${LANGUAGE}
 512K
 51CAccountHardware_DeRegisterSteamController_Response
 51CAccountHardware_VRCompatibilityCheck_Response_Pair
+51CAudio_GetEchoCancellationEnabledForDevice_Response
+51CAudio_GetNoiseSuppressionEnabledForDevice_Response
+51CAudio_SetEchoCancellationEnabledForDevice_Response
+51CAudio_SetNoiseSuppressionEnabledForDevice_Response
 51CAuthenticationSupport_MarkTokenCompromised_Request
 51CAuthentication_AccessToken_GenerateForApp_Response
 51CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
@@ -9652,8 +9672,10 @@ Audio recorder
 Audio source [%s]: Signal levels:
 Audio source [%s]: init=%lld, adjustment=%lld, through=%lld, last_start=%lld, mixed=%lld, drop_before=%lld, drop_after=%lld
 Audio.GetBluetoothAudioPreference#1
+Audio.GetEchoCancellationEnabledForDevice#1
 Audio.GetHdmiCecEnabled#1
 Audio.GetMonoDownmixEnabled#1
+Audio.GetNoiseSuppressionEnabledForDevice#1
 Audio.GetSpatializeEnabled#1
 Audio.GetSpatializeSurroundEnabled#1
 Audio.GetSupportedFeatures#1
@@ -9662,8 +9684,10 @@ Audio.PlaySpeakerTestOnChannel#1
 Audio.ResetConfig#1
 Audio.SendHdmiCecVolume#1
 Audio.SetBluetoothAudioPreference#1
+Audio.SetEchoCancellationEnabledForDevice#1
 Audio.SetHdmiCecEnabled#1
 Audio.SetMonoDownmixEnabled#1
+Audio.SetNoiseSuppressionEnabledForDevice#1
 Audio.SetSpatializeEnabled#1
 Audio.SetSpatializeSurroundEnabled#1
 Audio.SetSpeakerConfiguration#1
@@ -10930,6 +10954,7 @@ CGameStreamVideoStageOutput::ProcessData
 CGameStreamVideoStagePyrowave
 CGameStreamVideoStagePyrowave couldn't duplicate handle: %s
 CGameStreamVideoStagePyrowave: %s() failed: %d
+CGameStreamVideoStagePyrowave: can't convert 10-bit RGB DMA-BUF to colorspace 0x%x
 CGameStreamVideoStagePyrowave: can't convert RGB DMA-BUF to colorspace 0x%x
 CGameStreamVideoStagePyrowave: can't encode DMA-BUF (format 0x%x, modifier 0x%llx, capture %d,%d %dx%d of %dx%d)
 CGameStreamVideoStagePyrowave: created device on adapter %s with normal priority
@@ -10961,6 +10986,8 @@ CGameStreamVideoStageQueueThread::ProcessData
 CGameStreamVideoStageRaw
 CGameStreamVideoStageUpdateBitRate
 CGameStreamVideoStageVAAPI
+CGameStreamVideoStageVAAPI: Couldn't allocate mastering display metadata
+CGameStreamVideoStageVAAPI: Couldn't create an HDR encoder, disabling HDR
 CGameStreamVideoStageVAAPI: Error encoding: %s, re-creating the encoder
 CGameStreamVideoStageVAAPI: Failed to alloc device frames context
 CGameStreamVideoStageVAAPI: Failed to allocate DMABUF frame
@@ -10970,7 +10997,6 @@ CGameStreamVideoStageVAAPI: Failed to allocate staging frame
 CGameStreamVideoStageVAAPI: Failed to create codec context
 CGameStreamVideoStageVAAPI: Failed to create device context: %s
 CGameStreamVideoStageVAAPI: Failed to init device frames context: %s
-CGameStreamVideoStageVAAPI: Failed to mmap memory: %s\n
 CGameStreamVideoStageVAAPI: Failed to open codec: %s
 CGameStreamVideoStageVAAPI: Reinitializing %dx%d at %d Kbit/s and %.2f FPS with quality %d
 CGameStreamVideoStageVAAPI: av_buffer_ref failed
@@ -12366,18 +12392,18 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
 CUtlSymbolTable
-CVAAPIConvertRGBToNV12: Could not convert DRM format 0x%x to VA_FOURCC\n
-CVAAPIConvertRGBToNV12: Couldn't load VA-API functions\n
-CVAAPIConvertRGBToNV12: Create config failed: %s\n
-CVAAPIConvertRGBToNV12: Create context failed %s\n
-CVAAPIConvertRGBToNV12: Create pipeline failed: %s\n
-CVAAPIConvertRGBToNV12: Create surface failed: %s\n
-CVAAPIConvertRGBToNV12: vaBeginPicture failed: %s\n
-CVAAPIConvertRGBToNV12: vaEndPicture failed: %s\n
-CVAAPIConvertRGBToNV12: vaMapBuffer failed: %s\n
-CVAAPIConvertRGBToNV12: vaRenderPicture failed: %s\n
-CVAAPIConvertRGBToNV12: vaSyncSurface failed: %s\n
-CVAAPIConvertRGBToNV12: vaUnmapBuffer failed: %s\n
+CVAAPIVideoProcessor: Could not convert DRM format 0x%x to VA_FOURCC\n
+CVAAPIVideoProcessor: Couldn't load VA-API functions\n
+CVAAPIVideoProcessor: Create config failed: %s\n
+CVAAPIVideoProcessor: Create context failed %s\n
+CVAAPIVideoProcessor: Create pipeline failed: %s\n
+CVAAPIVideoProcessor: Create surface failed: %s\n
+CVAAPIVideoProcessor: vaBeginPicture failed: %s\n
+CVAAPIVideoProcessor: vaEndPicture failed: %s\n
+CVAAPIVideoProcessor: vaMapBuffer failed: %s\n
+CVAAPIVideoProcessor: vaRenderPicture failed: %s\n
+CVAAPIVideoProcessor: vaSyncSurface failed: %s\n
+CVAAPIVideoProcessor: vaUnmapBuffer failed: %s\n
 CVGUIApplicationSteamUI::RunFrame
 CVGUIFileOpenDialog
 CVProfLabel
@@ -13611,7 +13637,9 @@ Desktop OpenGL NV12
 Desktop OpenGL RGB
 Desktop PipeWire NV12
 Desktop PipeWire NV12 DMABUF
+Desktop PipeWire P010 DMABUF
 Desktop PipeWire RGB DMABUF
+Desktop PipeWire RGB10 DMABUF
 Desktop Placeholder
 Desktop Stream Thread
 Desktop Text
@@ -16180,6 +16208,7 @@ GetDesktopEntry
 GetDiscoveryFilters
 GetDouble
 GetDurationControl
+GetEchoCancellationEnabledForDevice( %d ): %u
 GetEncoder()->BSupportsCaptureResolutionChange()
 GetEnumValue
 GetFavoriteGame failed? %d/%d
@@ -16220,6 +16249,7 @@ GetMonoDownmix: %u
 GetName() && GetName()[ 0 ]
 GetNameFromOSType
 GetNextStage()->GetInputFormats() & k_EScreenshotImageFormat_NV12
+GetNoiseSuppressionEnabledForDevice( %d ): %u
 GetOSType
 GetPanelAnimationDictionary()
 GetPanelKeyBindingMapDictionary()
@@ -20031,7 +20061,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 21 2026 23:19:31
+Oct 22 2026 21:37:08
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -22684,6 +22714,7 @@ SetDevkitServiceState
 SetDiscoveryFilter
 SetDouble
 SetECLoggingEnabled
+SetEchoCancellationEnabledForDevice( %d ): %u
 SetEnabled
 SetEnum
 SetEnumValue
@@ -22710,6 +22741,7 @@ SetMiniDumpBuildID
 SetMiniDumpSteamID
 SetMonoDownmixEnabled: %u
 SetName
+SetNoiseSuppressionEnabledForDevice( %d ): %u
 SetPairing
 SetPlane
 SetPlatformPerformanceProfile
@@ -23872,6 +23904,7 @@ SupportsOculusVR
 SupportsOpenVROverlay
 SupportsOpenVRScene
 SupportsOpenXR
+SupportsPerDeviceMicProcessing: %u
 SupportsResetConfig: %u
 SupportsSpatialize: %u
 SupportsSpatializeSurround: %u
@@ -27393,6 +27426,7 @@ av_frame_alloc
 av_frame_copy_props
 av_frame_free
 av_frame_get_side_data
+av_frame_remove_side_data
 av_frame_unref
 av_free
 av_get_pix_fmt_name
@@ -27406,6 +27440,7 @@ av_hwframe_map
 av_hwframe_transfer_data
 av_log_set_callback
 av_mallocz_tracked
+av_mastering_display_metadata_create_side_data
 av_new_packet
 av_packet_alloc
 av_packet_free
@@ -39629,6 +39664,7 @@ pyrowave_encoder_encode_cpu
 pyrowave_encoder_encode_gpu
 pyrowave_encoder_encode_gpu_scaled
 pyrowave_encoder_packetize
+pyrowave_encoder_set_ycbcr_scaling_factor
 pyrowave_image_create
 pyrowave_image_destroy
 pyrowave_image_get_image_view

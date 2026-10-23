@@ -10719,6 +10719,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 50CAccountHardware_SteamControllerGetConfig_Response
 50CAccountHardware_SteamControllerSetConfig_Response
 50CAccountHardware_VRCompatibilityCheck_Request_Pair
+50CAudio_GetEchoCancellationEnabledForDevice_Request
+50CAudio_GetNoiseSuppressionEnabledForDevice_Request
+50CAudio_SetEchoCancellationEnabledForDevice_Request
+50CAudio_SetNoiseSuppressionEnabledForDevice_Request
 50CAuthentication_AccessToken_GenerateForApp_Request
 50CAuthentication_GetAuthSessionsForAccount_Response
 50CAuthentication_NotifyRiskQuizResults_Notification
@@ -10767,6 +10771,10 @@ $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
 512K
 51CAccountHardware_DeRegisterSteamController_Response
 51CAccountHardware_VRCompatibilityCheck_Response_Pair
+51CAudio_GetEchoCancellationEnabledForDevice_Response
+51CAudio_GetNoiseSuppressionEnabledForDevice_Response
+51CAudio_SetEchoCancellationEnabledForDevice_Response
+51CAudio_SetNoiseSuppressionEnabledForDevice_Response
 51CAuthenticationSupport_MarkTokenCompromised_Request
 51CAuthentication_AccessToken_GenerateForApp_Response
 51CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
@@ -46621,7 +46629,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 21 2026 23:19:27
+steam Oct 22 2026 21:37:05
 steam-runtime-launch-client
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &

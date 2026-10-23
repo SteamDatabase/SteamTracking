@@ -57,6 +57,7 @@ $ORIGIN
 -chromeosnopreallocate
 -chromeosverbose
 -clientbeta
+../common/audio/../../external/picojson/picojson.h
 ../common/audio/audiocontroller.cpp
 ../common/audio/audiosink_pulse.cpp
 ../common/audio/milesaudiodevice.cpp
@@ -370,13 +371,6 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio-surround false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.enable-spatial-audio-surround true
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
@@ -566,6 +560,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 __ctype_b_loc
 __ctype_tolower_loc
@@ -680,6 +675,7 @@ bluetooth
 bool
 boolean
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+builtin
 byte
 cActualReplacements == cReplacements
 card.profile.port
@@ -1018,6 +1014,8 @@ pthread_cond_wait
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+pw-metadata -n steamos-filters 0 %s "%s" Spa:String:JSON
+pw-metadata -n steamos-filters 0 %s | sed -E 's/ ([a-zA-Z0-9_]+:)/\n\1/g' | grep "^value:" | cut -d: -f2- | sed -E "s/^'+//; s/'+$//" | spa-json-dump
 pwrite64
 quality
 radio
@@ -1087,6 +1085,7 @@ std::ostream
 std::string
 stderr
 steam
+steam-runtime-launch-client --alongside-steam --
 steamos.supports-hdmi-cec
 strcasecmp
 strcasestr
@@ -1160,9 +1159,17 @@ vtable for
 wchar_t
 wpctl reset --all --yes
 wpctl reset --all --yes --dry-run
+wpctl settings --save monitor.alsa.enable-external-volume-control false
+wpctl settings --save monitor.alsa.enable-external-volume-control true
+wpctl settings --save node.stream.enable-spatial-audio false
+wpctl settings --save node.stream.enable-spatial-audio true
+wpctl settings --save node.stream.enable-spatial-audio-surround false
+wpctl settings --save node.stream.enable-spatial-audio-surround true
 wpctl settings monitor.alsa.enable-external-volume-control
 wpctl settings node.stream.enable-spatial-audio
 wpctl settings node.stream.enable-spatial-audio-surround
+wpctl settings steamos.mic-filters | grep "^Value: " | cut -d: -f2- | spa-json-dump
+wpctl settings steamos.mic-filters | grep ^Value:
 write
 write %s failed, errno = %d\n
 {default arg#

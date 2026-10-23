@@ -7,6 +7,15 @@ message CAudio_GetBluetoothAudioPreference_Response {
 	optional int32 preference = 1 [(.description) = "enum"];
 }
 
+message CAudio_GetEchoCancellationEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+}
+
+message CAudio_GetEchoCancellationEnabledForDevice_Response {
+	optional bool enabled = 1;
+}
+
 message CAudio_GetHdmiCecActive_Request {
 	optional int32 sink_id = 1;
 }
@@ -27,6 +36,15 @@ message CAudio_GetMonoDownmixEnabled_Request {
 }
 
 message CAudio_GetMonoDownmixEnabled_Response {
+	optional bool enabled = 1;
+}
+
+message CAudio_GetNoiseSuppressionEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+}
+
+message CAudio_GetNoiseSuppressionEnabledForDevice_Response {
 	optional bool enabled = 1;
 }
 
@@ -54,6 +72,7 @@ message CAudio_GetSupportedFeatures_Response {
 	optional bool bluetooth_audio_preference = 4;
 	optional bool spatialize = 5;
 	optional bool spatialize_surround = 6;
+	optional bool per_device_mic_processing = 7;
 }
 
 message CAudio_GetUseBluetoothForMic_Request {
@@ -92,6 +111,15 @@ message CAudio_SetBluetoothAudioPreference_Request {
 message CAudio_SetBluetoothAudioPreference_Response {
 }
 
+message CAudio_SetEchoCancellationEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+	optional bool enabled = 3;
+}
+
+message CAudio_SetEchoCancellationEnabledForDevice_Response {
+}
+
 message CAudio_SetHdmiCecEnabled_Request {
 	optional int32 sink_id = 1;
 	optional bool enabled = 2;
@@ -105,6 +133,15 @@ message CAudio_SetMonoDownmixEnabled_Request {
 }
 
 message CAudio_SetMonoDownmixEnabled_Response {
+}
+
+message CAudio_SetNoiseSuppressionEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+	optional bool enabled = 3;
+}
+
+message CAudio_SetNoiseSuppressionEnabledForDevice_Response {
 }
 
 message CAudio_SetSpatializeEnabled_Request {
@@ -158,11 +195,15 @@ service Audio {
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetBluetoothAudioPreference (.CAudio_GetBluetoothAudioPreference_Request) returns (.CAudio_GetBluetoothAudioPreference_Response);
 	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetEchoCancellationEnabledForDevice (.CAudio_GetEchoCancellationEnabledForDevice_Request) returns (.CAudio_GetEchoCancellationEnabledForDevice_Response);
+	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetHdmiCecActive (.CAudio_GetHdmiCecActive_Request) returns (.CAudio_GetHdmiCecActive_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetHdmiCecEnabled (.CAudio_GetHdmiCecEnabled_Request) returns (.CAudio_GetHdmiCecEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetMonoDownmixEnabled (.CAudio_GetMonoDownmixEnabled_Request) returns (.CAudio_GetMonoDownmixEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetNoiseSuppressionEnabledForDevice (.CAudio_GetNoiseSuppressionEnabledForDevice_Request) returns (.CAudio_GetNoiseSuppressionEnabledForDevice_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetSpatializeEnabled (.CAudio_GetSpatializeEnabled_Request) returns (.CAudio_GetSpatializeEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
@@ -180,9 +221,13 @@ service Audio {
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetBluetoothAudioPreference (.CAudio_SetBluetoothAudioPreference_Request) returns (.CAudio_SetBluetoothAudioPreference_Response);
 	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetEchoCancellationEnabledForDevice (.CAudio_SetEchoCancellationEnabledForDevice_Request) returns (.CAudio_SetEchoCancellationEnabledForDevice_Response);
+	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetHdmiCecEnabled (.CAudio_SetHdmiCecEnabled_Request) returns (.CAudio_SetHdmiCecEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetMonoDownmixEnabled (.CAudio_SetMonoDownmixEnabled_Request) returns (.CAudio_SetMonoDownmixEnabled_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetNoiseSuppressionEnabledForDevice (.CAudio_SetNoiseSuppressionEnabledForDevice_Request) returns (.CAudio_SetNoiseSuppressionEnabledForDevice_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetSpatializeEnabled (.CAudio_SetSpatializeEnabled_Request) returns (.CAudio_SetSpatializeEnabled_Response);
 	// ePrivilege=1, eClientExecutionSite=1

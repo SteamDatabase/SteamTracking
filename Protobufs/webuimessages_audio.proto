@@ -15,6 +15,7 @@ message CAudio_GetSupportedFeatures_Response {
 	optional bool bluetooth_audio_preference = 4;
 	optional bool spatialize = 5;
 	optional bool spatialize_surround = 6;
+	optional bool per_device_mic_processing = 7;
 }
 
 message CAudio_GetMonoDownmixEnabled_Request {
@@ -159,6 +160,42 @@ message CAudio_SetSpatializeSurroundEnabled_Request {
 message CAudio_SetSpatializeSurroundEnabled_Response {
 }
 
+message CAudio_GetEchoCancellationEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+}
+
+message CAudio_GetEchoCancellationEnabledForDevice_Response {
+	optional bool enabled = 1;
+}
+
+message CAudio_SetEchoCancellationEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+	optional bool enabled = 3;
+}
+
+message CAudio_SetEchoCancellationEnabledForDevice_Response {
+}
+
+message CAudio_GetNoiseSuppressionEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+}
+
+message CAudio_GetNoiseSuppressionEnabledForDevice_Response {
+	optional bool enabled = 1;
+}
+
+message CAudio_SetNoiseSuppressionEnabledForDevice_Request {
+	optional int32 id = 1;
+	optional bool builtin = 2;
+	optional bool enabled = 3;
+}
+
+message CAudio_SetNoiseSuppressionEnabledForDevice_Response {
+}
+
 service Audio {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
@@ -182,4 +219,8 @@ service Audio {
 	rpc ResetConfig (.CAudio_ResetConfig_Request) returns (.CAudio_ResetConfig_Response);
 	rpc PlaySpeakerTestOnChannel (.CAudio_PlaySpeakerTestOnChannel_Request) returns (.CAudio_PlaySpeakerTestOnChannel_Response);
 	rpc SetSpeakerConfiguration (.CAudio_SetSpeakerConfiguration_Request) returns (.CAudio_SetSpeakerConfiguration_Response);
+	rpc GetEchoCancellationEnabledForDevice (.CAudio_GetEchoCancellationEnabledForDevice_Request) returns (.CAudio_GetEchoCancellationEnabledForDevice_Response);
+	rpc SetEchoCancellationEnabledForDevice (.CAudio_SetEchoCancellationEnabledForDevice_Request) returns (.CAudio_SetEchoCancellationEnabledForDevice_Response);
+	rpc GetNoiseSuppressionEnabledForDevice (.CAudio_GetNoiseSuppressionEnabledForDevice_Request) returns (.CAudio_GetNoiseSuppressionEnabledForDevice_Response);
+	rpc SetNoiseSuppressionEnabledForDevice (.CAudio_SetNoiseSuppressionEnabledForDevice_Request) returns (.CAudio_SetNoiseSuppressionEnabledForDevice_Response);
 }

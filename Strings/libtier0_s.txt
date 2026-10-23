@@ -114,7 +114,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-23:19:23
+21:37:00
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -350,7 +350,7 @@ No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
 OUT OF MEMORY
 Object
-Oct 21 2026
+Oct 22 2026
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
